@@ -162,6 +162,7 @@ data = PackedVector3Array(1.6569, 5.8698, 8.4031, 3.4124, 3.5265, 10.24, 3.4124,
 navigation_mesh = SubResource("NavigationMesh_swyoh")
 
 [node name="Cylinder" type="MeshInstance3D" parent="NavigationRegion3D"]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_x4npc")
 skeleton = NodePath("")
 

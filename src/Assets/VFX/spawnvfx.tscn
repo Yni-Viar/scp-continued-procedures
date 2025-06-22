@@ -9,6 +9,7 @@ size = Vector3(0.1, 0.1, 0.1)
 [node name="Enemyspawn" type="Node3D"]
 
 [node name="Enemyspawn" type="CPUParticles3D" parent="."]
+visibility_range_end = 128.0
 amount = 24
 mesh = SubResource("BoxMesh_dukbe")
 emission_shape = 1

@@ -54,5 +54,6 @@ shadow_mesh = SubResource("ArrayMesh_4gu2e")
 
 [node name="crowbar_01" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, -8.74228e-08, 8.74228e-08, 3.82137e-15, 2, 0, -2, 3.82137e-15, 0, 0, 0)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_lvft3")
 skeleton = NodePath("")

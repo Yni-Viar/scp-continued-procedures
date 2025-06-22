@@ -358,11 +358,13 @@ navigation_mesh = SubResource("NavigationMesh_08alc")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_c5cvh")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(-3.57628e-07, 0, 1, 0, 1, 0, -1, 0, -3.57628e-07, 7.68102, -1.19374, -4.11951)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_qnwxj")
 skeleton = NodePath("")
 

@@ -22,6 +22,7 @@ radius = 7.5
 script = ExtResource("1_8ulql")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+visibility_range_end = 128.0
 amount = 64
 lifetime = 0.75
 mesh = SubResource("SphereMesh_ycmk2")
@@ -31,6 +32,7 @@ gravity = Vector3(0, 3.175, 0)
 linear_accel_max = 9.8
 
 [node name="CPUParticles3D2" type="CPUParticles3D" parent="."]
+visibility_range_end = 128.0
 amount = 64
 lifetime = 0.05
 mesh = SubResource("SphereMesh_ycmk2")

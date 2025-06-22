@@ -1,4 +1,4 @@
-[gd_scene load_steps=143 format=4 uid="uid://dlwvacfmctbs3"]
+[gd_scene load_steps=146 format=4 uid="uid://dlwvacfmctbs3"]
 
 [ext_resource type="Texture2D" uid="uid://bf1j1pn63d2qt" path="res://Assets/OriginalModels/ToyTrain/Leather033A_2K-PNG_Color.png" id="1_cflvy"]
 [ext_resource type="Texture2D" uid="uid://dw3gvkqbsrt1n" path="res://Assets/OriginalModels/ToyTrain/Leather033A_2K-PNG_Roughness.png" id="2_5tbcx"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cxtvchwi4aalm" path="res://Assets/OriginalModels/ToyTrain/Outdoor_metal-Outdoor_rough.png" id="10_4s8nn"]
 [ext_resource type="Texture2D" uid="uid://ctjjnlasq25a" path="res://Assets/OriginalModels/ToyTrain/Outdoor_nor.png" id="11_xomi1"]
 [ext_resource type="Texture2D" uid="uid://b72pax00fxd3n" path="res://Assets/OriginalModels/ToyTrain/Metal024_2K-PNG_Roughness.png" id="12_k2s86"]
+[ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="13_5tbcx"]
 [ext_resource type="Texture2D" uid="uid://dvn7yr2bauxjl" path="res://Assets/OriginalModels/ToyTrain/Outdoor_metal_png-Outdoor_rough_png.png" id="13_bv0ra"]
 [ext_resource type="Texture2D" uid="uid://csixm4tfxmm6f" path="res://Assets/OriginalModels/ToyTrain/wood_table_001_diff_1k_png.png" id="14_82i4d"]
 [ext_resource type="Texture2D" uid="uid://6417ikhnn3xl" path="res://Assets/OriginalModels/ToyTrain/wood_table_001_rough_2k_png.png" id="15_7jpum"]
@@ -746,9 +747,15 @@ roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("11_xomi1")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3rft"]
+render_priority = 0
+shader = ExtResource("13_5tbcx")
+shader_parameter/outline_color = Color(0.24079, 0.682482, 0.836464, 1)
+shader_parameter/outline_width = 2.0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mky3f"]
 resource_name = "Upperbody"
-cull_mode = 2
+next_pass = SubResource("ShaderMaterial_q3rft")
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.0945511, 0.309272, 0, 1)
 metallic_texture = ExtResource("12_k2s86")
@@ -2320,7 +2327,7 @@ normal_texture = ExtResource("16_rp60i")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gvn2v"]
 resource_name = "Lowerbody"
-cull_mode = 2
+next_pass = SubResource("ShaderMaterial_q3rft")
 albedo_color = Color(0.0997682, 0.219287, 0, 1)
 metallic_texture = ExtResource("12_k2s86")
 metallic_texture_channel = 2
@@ -2456,259 +2463,317 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5r33a")
 
-[node name="MetrowagonAnkaToy" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5tbcx"]
+size = Vector3(0.211609, 0.279297, 1.21854)
+
+[node name="ToyTrain" type="RigidBody3D"]
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, 0.05, 0, 0.05, 0, -0.05, 0, 0, 0.00823531, 0.0624803, -0.00763944)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_begei")
 skeleton = NodePath("")
 
 [node name="Wheel_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -0.05, 0, 0, 0, 0, 0.05, 0.0453778, 0.0157328, 0.402619)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_yqpf7")
 skeleton = NodePath("")
 
 [node name="Wheel_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -0.05, 0, 0, 0, 0, 0.05, 0.0453778, 0.0157328, 0.509209)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_p38dd")
 skeleton = NodePath("")
 
 [node name="Wheel_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.05, -3.7749e-09, -0.05, 2.84997e-16, -3.7749e-09, 3.7749e-09, 3.7749e-09, -0.05, -0.0314741, 0.0157328, 0.510959)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_5peho")
 skeleton = NodePath("")
 
 [node name="Wheel_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.05, -3.7749e-09, -0.05, 2.84997e-16, -3.7749e-09, 3.7749e-09, 3.7749e-09, -0.05, -0.0314741, 0.0157328, 0.402748)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_685yo")
 skeleton = NodePath("")
 
 [node name="Wheel_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.05, -3.7749e-09, -0.05, 2.84997e-16, -3.7749e-09, 3.7749e-09, 3.7749e-09, -0.05, -0.0314741, 0.0157328, -0.483781)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_b8ggn")
 skeleton = NodePath("")
 
 [node name="Wheel_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, -0.05, -3.7749e-09, -0.05, 2.84997e-16, -3.7749e-09, 3.7749e-09, 3.7749e-09, -0.05, -0.0314741, 0.0157328, -0.354735)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_we7pw")
 skeleton = NodePath("")
 
 [node name="Wheel_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -0.05, 0, 0, 0, 0, 0.05, 0.0453778, 0.0157328, -0.484668)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_1ybge")
 skeleton = NodePath("")
 
 [node name="Wheel_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -0.05, 0, 0, 0, 0, 0.05, 0.0453778, 0.0157328, -0.3542)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_viv5p")
 skeleton = NodePath("")
 
 [node name="Cube_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, 0, -4.37114e-09, 0, 0.05, 0, 4.37114e-09, 0, -0.05, 0.00665711, 0.0527268, -0.571206)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_o6wk2")
 skeleton = NodePath("")
 
 [node name="Cube_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0527268, 0.558814)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_aao7u")
 skeleton = NodePath("")
 
 [node name="Bogey_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0534678, 0.451379)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_a5hu3")
 skeleton = NodePath("")
 
 [node name="Bogey_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0534678, -0.417804)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_ndsms")
 skeleton = NodePath("")
 
 [node name="Bogey_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0465283, 0.452807)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_6af2l")
 skeleton = NodePath("")
 
 [node name="Bogey_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, -0.00304168, 0.454726)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_5eq23")
 skeleton = NodePath("")
 
 [node name="Bogey_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0437188, 0.235362)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_jcswv")
 skeleton = NodePath("")
 
 [node name="Bogey_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0379178, -0.0469375)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_lr4mb")
 skeleton = NodePath("")
 
 [node name="Bogey_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, -0.00304168, -0.416661)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_bcqsp")
 skeleton = NodePath("")
 
 [node name="Bogey_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0465283, -0.418581)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_pnhw0")
 skeleton = NodePath("")
 
 [node name="Bogey" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.00665711, 0.0395888, 0.29177)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_knmfq")
 skeleton = NodePath("")
 
 [node name="Door" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118236, 0.190682)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_hrghg")
 skeleton = NodePath("")
 
 [node name="Door_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118236, 0.144493)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_k0nis")
 skeleton = NodePath("")
 
 [node name="Door_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, 0.435513)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_1fx0h")
 skeleton = NodePath("")
 
 [node name="Door_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, 0.481702)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_n7x37")
 skeleton = NodePath("")
 
 [node name="Door_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, -0.0912386)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_2ok44")
 skeleton = NodePath("")
 
 [node name="Door_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, -0.137428)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_4myvr")
 skeleton = NodePath("")
 
 [node name="Door_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, -0.428656)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_iox23")
 skeleton = NodePath("")
 
 [node name="Door_007" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, -0.382467)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_0758l")
 skeleton = NodePath("")
 
 [node name="Door_008" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, -0.424718)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_fqlkv")
 skeleton = NodePath("")
 
 [node name="Door_009" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, -0.378529)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_wfols")
 skeleton = NodePath("")
 
 [node name="Door_010" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, -0.0864546)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_03xah")
 skeleton = NodePath("")
 
 [node name="Door_011" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, -0.132644)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_7ujf5")
 skeleton = NodePath("")
 
 [node name="Door_012" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, 0.149209)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_cjiej")
 skeleton = NodePath("")
 
 [node name="Door_013" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, 0.195398)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_r3o4g")
 skeleton = NodePath("")
 
 [node name="Door_014" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, 0.483584)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_w2bgd")
 skeleton = NodePath("")
 
 [node name="Door_015" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -3.7749e-09, -3.7749e-09, 3.7749e-09, 0, -0.05, 3.7749e-09, -0.05, 2.84997e-16, -0.0868968, 0.118917, 0.437395)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_tdw4h")
 skeleton = NodePath("")
 
 [node name="Door_016" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.96045e-09, -0.05, -5.32905e-16, -2.98023e-09, 1.77636e-16, -0.05, 0.05, 5.96045e-09, -2.98023e-09, 0.00958872, 0.117972, 0.573969)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_5l3qe")
 skeleton = NodePath("")
 
 [node name="Door_017" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -2.98023e-09, -1.77636e-16, -0.05, -0.05, 0, 2.98023e-09, 0.00328825, 0.117972, -0.589616)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_vicmq")
 skeleton = NodePath("")
 
 [node name="Door_019" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0, -0.05, 0, 0.05, 0, 0.101126, 0.118917, -0.541711)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_g7fd2")
 skeleton = NodePath("")
 
 [node name="Door_020" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.05, -2.18557e-09, -2.18557e-09, 2.18557e-09, 0, -0.05, 2.18557e-09, -0.05, 9.55345e-17, -0.0840163, 0.118917, -0.537456)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_hdt8o")
 skeleton = NodePath("")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.000501545, 0.0499975, 0, -0.0499975, 0.000501545, -0.0502408, 0.100336, -0.593341)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_ix2qy")
 skeleton = NodePath("")
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.000501545, 0.0499975, 0, -0.0499975, 0.000501545, 0.0637177, 0.100336, -0.593341)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_74xw3")
 skeleton = NodePath("")
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.0502313, 0.100572, -0.591261)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_w81vq")
 skeleton = NodePath("")
 
 [node name="Sphere_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0636097, 0.100209, -0.591261)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_ey4ob")
 skeleton = NodePath("")
 
 [node name="Cylinder_005" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0237014, 0, 0, 0, 0.000237749, 0.0237003, 0, -0.0237003, 0.000237749, -0.0418897, 0.229682, -0.593341)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_e1v3l")
 skeleton = NodePath("")
 
 [node name="Cylinder_006" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0237014, 0, 0, 0, 0.000237749, 0.0237003, 0, -0.0237003, 0.000237749, 0.0556462, 0.229682, -0.593341)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_45d8h")
 skeleton = NodePath("")
 
 [node name="Sphere_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, -0.0415599, 0.229256, -0.591966)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_1mo7n")
 skeleton = NodePath("")
 
 [node name="Sphere_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0.0565982, 0.229256, -0.591966)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_2rqjm")
 skeleton = NodePath("")
 
 [node name="Door_018" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0.05, 0, -2.98023e-09, -1.77636e-16, -0.05, -0.05, 0, 2.98023e-09, 0.00328825, 0.117972, -0.500691)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_2hg5b")
 skeleton = NodePath("")
 
 [node name="MetrowagonA_wagon" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 2.98023e-09, 0.05, -0.05, 2.98023e-09, -1.77636e-16, -2.98023e-09, -0.05, 2.98023e-09, 0.00877007, 0.14234, -0.619946)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_skchc")
 skeleton = NodePath("")
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0, 0, 0.05, 0, 0.05, 0, -0.05, 0, 0, 0.00877007, 0.14234, -0.619946)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_et8rw")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00509644, 0.135742, -0.00178528)
+shape = SubResource("BoxShape3D_5tbcx")

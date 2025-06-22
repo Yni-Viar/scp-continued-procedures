@@ -640,16 +640,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.56442, -0.246935, -5.26122)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_nl0fw")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -10.0765, -1.19374, -7.668)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_cl1d2")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1535, -1.19374, 7.65616)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_whu3x")
 skeleton = NodePath("")
 

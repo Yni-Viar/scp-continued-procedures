@@ -639,16 +639,19 @@ navigation_mesh = SubResource("NavigationMesh_shvc4")
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1494, -1.19374, 7.65616)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_83ssb")
 skeleton = NodePath("")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_rism5")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -4.62106, -1.19374, -7.668)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_43rjr")
 skeleton = NodePath("")
 
@@ -691,6 +694,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54772, -1.1663, -4.07249)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.03983e-07, 0, -8, 0, 8, 0, 8, 0, 6.03983e-07, 3.71548, 3.81702, 1.44965)
+visibility_range_end = 128.0
 mesh = SubResource("TextMesh_83ssb")
 
 [node name="DebugLights" type="Node3D" parent="."]

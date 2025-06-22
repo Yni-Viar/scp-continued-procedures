@@ -74,6 +74,7 @@ data = PackedVector3Array(-4, 0.6393, -0.9678, -4, 1, -1.5, -4, 1, -0.9678, -4, 
 [node name="Table" type="StaticBody3D"]
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_25gs8")
 skeleton = NodePath("")
 
