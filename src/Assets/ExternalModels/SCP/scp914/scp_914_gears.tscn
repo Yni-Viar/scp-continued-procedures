@@ -1,12 +1,11 @@
-[gd_scene load_steps=31 format=4 uid="uid://d0t8nb2o6k0j3"]
+[gd_scene load_steps=30 format=4 uid="uid://d0t8nb2o6k0j3"]
 
-[ext_resource type="Texture2D" uid="uid://ccngcy4ytlca" path="res://Assets/Models/scp914/scp914_gears/scp914_device_dial_AlbedoTransparency.png" id="1_xjb2g"]
-[ext_resource type="Texture2D" uid="uid://ci77v4sgujf5q" path="res://Assets/Models/scp914/scp914_gears/scp914_device_dial_MetallicSmoothness.png" id="2_s874c"]
-[ext_resource type="Texture2D" uid="uid://dah1mj7jcwi4c" path="res://Assets/Models/scp914/scp914_gears/scp914_device_dial_Normal.png" id="3_2qyb6"]
-[ext_resource type="Texture2D" uid="uid://bwlrk5v6fjena" path="res://Assets/Models/scp914/scp914_gears/scp914_device_gearset_AlbedoTransparency.png" id="4_ai5e6"]
-[ext_resource type="Texture2D" uid="uid://ch407hfw5535t" path="res://Assets/Models/scp914/scp914_gears/scp914_device_gearset_MetallicSmoothness.png" id="5_1k7b2"]
-[ext_resource type="Texture2D" uid="uid://pmoiryhqddw" path="res://Assets/Models/scp914/scp914_gears/scp914_device_gearset_Normal.png" id="6_ag6eu"]
-[ext_resource type="AudioStream" uid="uid://c1tcpqk3n430g" path="res://Sounds/Interact/LeverFlip.ogg" id="8_l20m2"]
+[ext_resource type="Texture2D" uid="uid://ccngcy4ytlca" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_dial_AlbedoTransparency.png" id="1_xjb2g"]
+[ext_resource type="Texture2D" uid="uid://ci77v4sgujf5q" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_dial_MetallicSmoothness.png" id="2_s874c"]
+[ext_resource type="Texture2D" uid="uid://dah1mj7jcwi4c" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_dial_Normal.png" id="3_2qyb6"]
+[ext_resource type="Texture2D" uid="uid://bwlrk5v6fjena" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_gearset_AlbedoTransparency.png" id="4_ai5e6"]
+[ext_resource type="Texture2D" uid="uid://ch407hfw5535t" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_gearset_MetallicSmoothness.png" id="5_1k7b2"]
+[ext_resource type="Texture2D" uid="uid://pmoiryhqddw" path="res://Assets/ExternalModels/SCP/scp914/scp914_gears/scp914_device_gearset_Normal.png" id="6_ag6eu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fiqu"]
 resource_name = "dial"
@@ -387,5 +386,4 @@ libraries = {
 }
 
 [node name="LeverFlip" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("8_l20m2")
 max_distance = 4.0
