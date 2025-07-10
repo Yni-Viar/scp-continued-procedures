@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=32 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
 [ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/lcz_ambient.ogg" id="11_dahhg"]
 [ext_resource type="Script" uid="uid://dxam3jgydqblf" path="res://Scripts/FPSCounter.gd" id="13_acvyw"]
+[ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="14_x3xnh"]
 [ext_resource type="Texture2D" uid="uid://bsdsboenf6un3" path="res://Assets/HUD/Touch/inventory.png" id="15_8r6kd"]
 [ext_resource type="Texture2D" uid="uid://cuc1gixnu6inj" path="res://Assets/HUD/Touch/inventory_click.png" id="16_tfod6"]
@@ -21,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://bl0heaaasxj8g" path="res://Assets/HUD/Touch/call_mtf.png" id="18_rajel"]
 [ext_resource type="Texture2D" uid="uid://mmxp8c0wn3eq" path="res://Assets/HUD/Touch/call_mtf_click.png" id="19_vvhu1"]
 [ext_resource type="Texture2D" uid="uid://cia0vdqonir34" path="res://Assets/HUD/Touch/call_mtf_disabled.png" id="20_lbihj"]
+[ext_resource type="Texture2D" uid="uid://cu0ojgep33hl5" path="res://Assets/HUD/Touch/use_914.png" id="22_i0vto"]
+[ext_resource type="Texture2D" uid="uid://dgim1llh2qq3l" path="res://Assets/HUD/Touch/use_914_click.png" id="23_3jf1l"]
+[ext_resource type="Texture2D" uid="uid://dsbo3crdre1v4" path="res://Assets/HUD/Touch/use_914_disabled.png" id="24_356ba"]
 
 [sub_resource type="Environment" id="Environment_mvdmi"]
 background_mode = 1
@@ -31,6 +35,7 @@ glow_enabled = true
 fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71axn"]
 bg_color = Color(0, 0, 0, 1)
@@ -54,6 +59,9 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_i4lct"]
+color = Color(1, 1, 1, 1)
+
 [node name="Game" type="Node3D"]
 process_mode = 1
 script = ExtResource("1_7lihs")
@@ -72,6 +80,8 @@ better_zone_generation_min_amount = 5
 script = ExtResource("7_wxwew")
 
 [node name="NPCs" type="Node3D" parent="."]
+
+[node name="Items" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mvdmi")
@@ -230,6 +240,137 @@ localize_numeral_system = false
 theme = ExtResource("10_3so38")
 text = "BACK_TO_MENU"
 
+[node name="Scp914Panel" type="Panel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.444
+anchor_right = 0.5
+anchor_bottom = 0.444
+offset_left = -400.0
+offset_top = -239.712
+offset_right = 400.0
+offset_bottom = 240.288
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -240.0
+offset_right = 400.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_8e0uq")
+
+[node name="Scp914Mode" type="HSlider" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.333
+anchor_right = 0.5
+anchor_bottom = 0.333
+offset_left = -192.0
+offset_top = -23.84
+offset_right = 192.0
+offset_bottom = 24.16
+theme = ExtResource("10_3so38")
+theme_override_styles/slider = SubResource("StyleBoxLine_i4lct")
+max_value = 4.0
+
+[node name="Label" type="Label" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267
+anchor_top = 0.274
+anchor_right = 0.267
+anchor_bottom = 0.274
+offset_left = -29.6
+offset_top = -11.52
+offset_right = 29.4
+offset_bottom = 11.48
+text = "ROUGH"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.379
+anchor_top = 0.274
+anchor_right = 0.379
+anchor_bottom = 0.274
+offset_left = -31.2
+offset_top = -11.52
+offset_right = 30.8
+offset_bottom = 11.48
+text = "COARSE"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.274
+anchor_right = 0.504
+anchor_bottom = 0.274
+offset_left = -27.2
+offset_top = -11.52
+offset_right = 26.8
+offset_bottom = 11.48
+text = "1:1"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.614
+anchor_top = 0.274
+anchor_right = 0.614
+anchor_bottom = 0.274
+offset_left = -27.2
+offset_top = -11.52
+offset_right = 26.8
+offset_bottom = 11.48
+text = "FINE"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.265
+anchor_top = 0.257
+anchor_right = 0.265
+anchor_bottom = 0.257
+offset_left = 332.0
+offset_top = -3.36
+offset_right = 406.0
+offset_bottom = 19.64
+text = "VERYFINE"
+horizontal_alignment = 1
+
+[node name="Refine" type="Button" parent="UI/Scp914Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.633
+anchor_right = 0.5
+anchor_bottom = 0.633
+offset_left = -192.0
+offset_top = -31.84
+offset_right = 192.0
+offset_bottom = 32.16
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_3so38")
+text = "SCP914_REFINE"
+
 [node name="Inventory" parent="UI" instance=ExtResource("14_x3xnh")]
 visible = false
 layout_mode = 1
@@ -248,7 +389,6 @@ grow_horizontal = 2
 grow_vertical = 0
 
 [node name="InventoryButton" type="TextureButton" parent="UI/HBoxContainer"]
-visible = false
 layout_mode = 2
 texture_normal = ExtResource("15_8r6kd")
 texture_pressed = ExtResource("16_tfod6")
@@ -264,6 +404,14 @@ texture_hover = ExtResource("18_rajel")
 texture_disabled = ExtResource("20_lbihj")
 texture_focused = ExtResource("18_rajel")
 
+[node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("22_i0vto")
+texture_pressed = ExtResource("23_3jf1l")
+texture_hover = ExtResource("22_i0vto")
+texture_disabled = ExtResource("24_356ba")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dahhg")
 autoplay = true
@@ -274,5 +422,8 @@ autoplay = true
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
 [connection signal="pressed" from="UI/Back" to="UI" method="_on_back_pressed"]
 [connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
+[connection signal="drag_ended" from="UI/Scp914Panel/Scp914Mode" to="UI" method="_on_scp_914_mode_drag_ended"]
+[connection signal="pressed" from="UI/Scp914Panel/Refine" to="UI" method="_on_refine_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/InventoryButton" to="UI" method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/CallMtfButton" to="UI" method="_on_call_mtf_button_pressed"]
+[connection signal="pressed" from="UI/HBoxContainer/Scp914Button" to="UI" method="_on_scp_914_button_pressed"]

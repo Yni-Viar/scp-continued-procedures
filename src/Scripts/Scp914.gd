@@ -11,10 +11,11 @@ extends AnimatableBody3D
 enum Scp914Mode {ROUGH, COARSE, ONE_TO_ONE, FINE, VERY_FINE}
 
 var items_to_refine: Array[Pickable] = []
-var players_to_refine: Array[MovableNpc] = []
+#var players_to_refine: Array[MovableNpc] = []
 var refining: bool = false
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
-@export var modes: Scp914Mode = Scp914Mode.ONE_TO_ONE
+@export var mode: Scp914Mode = Scp914Mode.ONE_TO_ONE
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -30,5 +31,31 @@ func refine():
 	$DoorBlockOut.disabled = false
 	$AnimationPlayer.play("Armature|Armature|Armature|Armature|Event|Armature|Event|Armatu")
 	await get_tree().create_timer(12.0).timeout
+	for item in items_to_refine:
+		var target_id: int = -1
+		match mode:
+			Scp914Mode.ROUGH:
+				target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_rough[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_rough.size())]
+			Scp914Mode.COARSE:
+				target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_coarse[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_coarse.size())]
+			Scp914Mode.ONE_TO_ONE:
+				target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_one_to_one[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_one_to_one.size())]
+			Scp914Mode.FINE:
+				target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_fine[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_fine.size())]
+			Scp914Mode.VERY_FINE:
+				target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine.size())]
+		if target_id != -1:
+			var result_item: Pickable = load(get_tree().root.get_node("Game").gamedata.items[target_id].pickable_path).instantiate()
+			result_item.position = $OutputSpawner.global_position
+			get_tree().root.get_node("Game/Items").add_child(result_item)
+		item.queue_free()
 	$DoorBlockOut.disabled = true
 	$DoorBlockIn.disabled = true
+
+
+func _on_add_items_area_body_entered(body: Node3D) -> void:
+	items_to_refine.append(body)
+
+
+func _on_add_items_area_body_exited(body: Node3D) -> void:
+	items_to_refine.erase(body)

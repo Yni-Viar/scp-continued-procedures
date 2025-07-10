@@ -65,3 +65,15 @@ func _on_playing_area_gui_input(event: InputEvent) -> void:
 
 func _on_call_mtf_button_pressed() -> void:
 	get_parent().call_mtf()
+
+
+func _on_scp_914_mode_drag_ended(value_changed: bool) -> void:
+	get_tree().get_first_node_in_group("Scp914").mode = int($Panel/Scp914Mode.value)
+
+
+func _on_refine_pressed() -> void:
+	get_tree().get_first_node_in_group("Scp914").call("refine")
+
+
+func _on_scp_914_button_pressed() -> void:
+	$Scp914Panel.visible = !$Scp914Panel.visible
