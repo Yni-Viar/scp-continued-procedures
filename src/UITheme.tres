@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=54 format=4 uid="uid://1c7qxp1dlx5i"]
+[gd_resource type="Theme" load_steps=56 format=4 uid="uid://1c7qxp1dlx5i"]
 
 [ext_resource type="Texture2D" uid="uid://bekswppq1xt0q" path="res://UI/checkbox_checked.png" id="1_87lyl"]
 [ext_resource type="Texture2D" uid="uid://p1j6j64jc3wd" path="res://UI/toggle_on.png" id="1_nhrs4"]
@@ -19,7 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://bjmlp1vq3373v" path="res://UI/slider_toggle_disabled.png" id="17_yryu7"]
 [ext_resource type="Texture2D" uid="uid://cq5n1u204g70j" path="res://UI/slider_toggle_highlight.png" id="18_8bltl"]
 [ext_resource type="StyleBox" uid="uid://bms7ema3mduoe" path="res://UI/scrollbar_toggle.tres" id="19_wlkkr"]
+[ext_resource type="Texture2D" uid="uid://rnjr58lhcryu" path="res://UI/close_glass.png" id="20_mefmv"]
 [ext_resource type="StyleBox" uid="uid://bwjl6h1n783gn" path="res://UI/Window.tres" id="21_8ee4j"]
+[ext_resource type="Texture2D" uid="uid://dakfngfrquxv4" path="res://UI/close_glass_pressed.png" id="21_kymd0"]
 [ext_resource type="StyleBox" uid="uid://dhj513crv55v4" path="res://UI/Window_Inactive.tres" id="22_5fj3l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25ss1"]
@@ -2389,7 +2391,9 @@ TextEdit/styles/normal = SubResource("StyleBoxFlat_qdlr4")
 VScrollBar/styles/grabber = ExtResource("19_wlkkr")
 VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_mefmv")
 VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_kymd0")
-Window/constants/close_h_offset = 23
-Window/constants/close_v_offset = 25
+Window/constants/close_h_offset = 20
+Window/constants/close_v_offset = 22
+Window/icons/close = ExtResource("20_mefmv")
+Window/icons/close_pressed = ExtResource("21_kymd0")
 Window/styles/embedded_border = ExtResource("21_8ee4j")
 Window/styles/embedded_unfocused_border = ExtResource("22_5fj3l")

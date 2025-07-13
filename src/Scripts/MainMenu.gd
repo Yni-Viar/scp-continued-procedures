@@ -13,8 +13,8 @@ func _ready() -> void:
 		#node.visible = (Settings.setting_res.secrets >> index) % 2 == 1
 		#index += 1
 	
-	$GameSettings/CiSpawn.selected = Settings.setting_res.ci_spawn
 	$GameSettings/TimeLimited.button_pressed = Settings.setting_res.time_limited
+	$GameSettings/ZenMode.button_pressed = Settings.setting_res.zen_mode
 	
 	# Display game ratings in main menu in some countries, this will replace the game logo.
 	if Settings.legal_req:
@@ -41,19 +41,11 @@ func play():
 	var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
 	if !$GameSettings/Seed.text.is_empty():
 		game.map_seed = $GameSettings/Seed.text
-	if $GameSettings/CiSpawn.selected - 1 >= 0:
-		game.ci_probability = $GameSettings/CiSpawn.selected - 1
 	game.time_limited = $GameSettings/TimeLimited.button_pressed
 	get_tree().root.add_child(game)
 	Settings.call_deferred("override_main_scene", game)
 	queue_free()
 
-func _on_custom_play_pressed() -> void:
-	$CustomGamePanel.show()
-
-
-func _on_customplay_back_button_pressed() -> void:
-	$CustomGamePanel.hide()
 
 
 func _on_ci_spawn_item_selected(index: int) -> void:
@@ -64,3 +56,15 @@ func _on_ci_spawn_item_selected(index: int) -> void:
 func _on_time_limited_toggled(toggled_on: bool) -> void:
 	Settings.setting_res.time_limited = toggled_on
 	Settings.save_resource(Settings.setting_res)
+
+
+func _on_help_button_pressed() -> void:
+	$Tutorial.show()
+
+
+func _on_zen_mode_toggled(toggled_on: bool) -> void:
+	$GameSettings/TimeLimited.disabled = toggled_on
+	if toggled_on:
+		$GameSettings/TimeLimited.button_pressed = false
+	Settings.setting_res.zen_mode = toggled_on
+	

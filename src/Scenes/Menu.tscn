@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=8 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="2_syfuq"]
 [ext_resource type="Texture2D" uid="uid://cl0fdkqxf4660" path="res://UI/playbutton.png" id="4_idohh"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_idohh"]
+[ext_resource type="Texture2D" uid="uid://b4x7oa8dlypky" path="res://UI/lorebutton.png" id="5_wfhf6"]
+[ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -40,6 +42,19 @@ grow_vertical = 2
 theme = ExtResource("2_syfuq")
 texture_normal = ExtResource("4_idohh")
 
+[node name="HelpButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.083
+anchor_top = 0.593
+anchor_right = 0.083
+anchor_bottom = 0.593
+offset_left = -63.616
+offset_top = -64.264
+offset_right = 64.384
+offset_bottom = 63.736
+texture_normal = ExtResource("5_wfhf6")
+
 [node name="GameSettings" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -65,23 +80,10 @@ theme = ExtResource("2_syfuq")
 button_pressed = true
 text = "TIME_LIMITED"
 
-[node name="EnemyType" type="Label" parent="GameSettings"]
-visible = false
-layout_mode = 2
-text = "CUSTOM_ENEMYTYPE_LABEL"
-
-[node name="CiSpawn" type="OptionButton" parent="GameSettings"]
-visible = false
+[node name="ZenMode" type="CheckBox" parent="GameSettings"]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
-selected = 0
-item_count = 3
-popup/item_0/text = "CUSTOM_ENEMYTYPE_RAND"
-popup/item_0/id = 0
-popup/item_1/text = "CUSTOM_ENEMYTYPE_0"
-popup/item_1/id = 1
-popup/item_2/text = "CUSTOM_ENEMYTYPE_1"
-popup/item_2/id = 2
+text = "ZEN_MODE"
 
 [node name="CreditsContainer" type="ScrollContainer" parent="."]
 visible = false
@@ -176,18 +178,50 @@ Procedures"
 [node name="LawRegulation" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.556
-anchor_top = 0.889
-anchor_right = 0.556
-anchor_bottom = 0.889
-offset_left = -64.5121
-offset_top = -64.072
-offset_right = 63.4879
-offset_bottom = 63.928
+anchor_left = 0.389
+anchor_top = 0.494
+anchor_right = 0.389
+anchor_bottom = 0.494
+offset_left = -64.128
+offset_top = -64.112
+offset_right = 63.872
+offset_bottom = 63.888
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Tutorial" type="Window" parent="."]
+title = "Tutorial"
+initial_position = 2
+size = Vector2i(800, 480)
+visible = false
+theme = ExtResource("2_syfuq")
+script = ExtResource("7_wfhf6")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/ScrollContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "HELP_TITLE"
+
+[node name="Label2" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "HELP_TASKS"
+
+[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+text = "HELP_EVENTS"
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="toggled" from="GameSettings/TimeLimited" to="." method="_on_time_limited_toggled"]
-[connection signal="item_selected" from="GameSettings/CiSpawn" to="." method="_on_ci_spawn_item_selected"]
+[connection signal="toggled" from="GameSettings/ZenMode" to="." method="_on_zen_mode_toggled"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="close_requested" from="Tutorial" to="Tutorial" method="_on_close_requested"]

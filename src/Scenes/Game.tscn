@@ -72,6 +72,7 @@ gamedata = ExtResource("2_fgofq")
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
 rooms = Array[ExtResource("4_bf53h")]([ExtResource("5_71axn")])
+zone_size = 12
 large_rooms = true
 enable_door_generation = false
 better_zone_generation_min_amount = 5

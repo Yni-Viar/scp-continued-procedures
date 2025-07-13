@@ -68,7 +68,8 @@ func _on_call_mtf_button_pressed() -> void:
 
 
 func _on_scp_914_mode_drag_ended(value_changed: bool) -> void:
-	get_tree().get_first_node_in_group("Scp914").mode = int($Panel/Scp914Mode.value)
+	if value_changed:
+		get_tree().get_first_node_in_group("Scp914").mode = int($Scp914Panel/Scp914Mode.value)
 
 
 func _on_refine_pressed() -> void:

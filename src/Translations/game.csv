@@ -8,3 +8,8 @@ TASK_347_PASS,Find SCP-347 and lead her to MTF\nto transport to another facility
 BACK_TO_MENU,Main menu,Главное меню
 TASK_CI_INVASION,Chaos Insurgency invaded the facility!\nCall MTF to destroy the threat.,Повстанцы Хаоса вторглись в комплекс!\nВызовите МОГ чтобы их уничтожить.
 SECONDS_LEFT,Work time\nends in\n,Рабочее время\nзакончится через\n
+ROUGH,Rough,Очень грубо
+COARSE,Coarse,Грубо
+FINE,Fine,Тонко
+VERYFINE,Very fine,Очень тонко
+SCP914_REFINE,Refine,Переработать

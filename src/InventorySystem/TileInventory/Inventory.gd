@@ -51,11 +51,11 @@ func item_move(prefab: InventorySlot, pos: Vector2) -> bool:
 func item_remove(item: InventorySlot, drop: bool) -> bool:
 	for i in _items:
 		if i == item:
-			get_tree().root.get_node("Game/Player").hold_item(-1)
+			#get_tree().root.get_node("Game/Player").hold_item(-1)
 			if drop:
 				var pickable: Node3D = load(game_data.items[i.item_id].pickable_path).instantiate()
-				pickable.position = get_tree().root.get_node("Game/Player/ItemMarker").global_position
-				get_tree().root.get_node("Game/MapObjects").add_child(pickable)
+				pickable.position = get_tree().root.get_node("Game").protagonist.get_node("ItemSpawn").global_position
+				get_tree().root.get_node("Game/Items").add_child(pickable)
 				pass
 			_items.erase(i)
 			i.queue_free()

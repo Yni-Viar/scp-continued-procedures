@@ -22,7 +22,8 @@ var infrared_visibility: bool = true:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func on_update_human(delta: float) -> void:
 	scp_347_infrared_blink(delta)
-	scp_347_mood_setter(delta)
+	if !Settings.setting_res.zen_mode:
+		scp_347_mood_setter(delta)
 
 ## Shows for 8 seconds 347 position
 func scp_347_infrared_blink(delta: float):

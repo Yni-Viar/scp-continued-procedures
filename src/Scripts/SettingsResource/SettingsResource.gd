@@ -16,3 +16,5 @@ class_name SettingsResource
 @export var ci_spawn: int = 0
 ## Time limited value
 @export var time_limited: bool = true
+## Zen mode
+@export var zen_mode: bool = false

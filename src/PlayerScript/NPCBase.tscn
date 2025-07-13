@@ -65,3 +65,6 @@ collision_mask = 7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ActionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30394, 0)
 shape = SubResource("CylinderShape3D_m1isr")
+
+[node name="ItemSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44197, 0)

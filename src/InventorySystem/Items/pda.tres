@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://d1pxflhcot1lu"]
+
+[ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_uw0t3"]
+[ext_resource type="Texture2D" uid="uid://cpkd8md3n0g5k" path="res://InventorySystem/Items/Res/pda_slot.png" id="2_uw0t3"]
+[ext_resource type="Texture2D" uid="uid://bkbcdhglcr5qt" path="res://InventorySystem/Items/Res/pda.png" id="3_acb6n"]
+
+[resource]
+script = ExtResource("1_uw0t3")
+id = 0
+name = "PDA"
+texture_tiled = ExtResource("3_acb6n")
+texture_slot = ExtResource("2_uw0t3")
+pickable_path = "res://Assets/ExternalModels/ItemPda.tscn"
+pickup_sound_path = ""
+size = Vector2i(1, 2)
+one_time_use = false
+usage = 0
+upgrade_rough = Array[int]([3, 2, 3])
+upgrade_coarse = Array[int]([2])
+upgrade_one_to_one = Array[int]([0])
+upgrade_fine = Array[int]([0])
+upgrade_very_fine = Array[int]([0])

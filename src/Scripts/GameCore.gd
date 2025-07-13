@@ -27,7 +27,7 @@ var mtf_cooldown: float = 10.0
 var protagonist: MovableNpc
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if time_limited:
+	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	# Choose seed
 	if map_seed >= 0:
@@ -42,6 +42,9 @@ func _process(delta: float) -> void:
 	if protagonist != null:
 		get_node("StaticPlayer").global_position = protagonist.global_position + Vector3(0, 3, 0)
 	if ci_probability == 1 && ci_ready:
+		if Settings.setting_res.zen_mode:
+			# Disable Chaos waves for the Safe modes
+			ci_probability = 0
 		ci_timer -= delta
 		if ci_timer < 0:
 			spawn_wave_entity(1)

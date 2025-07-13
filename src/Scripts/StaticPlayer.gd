@@ -73,6 +73,9 @@ func interact(value: String) -> void:
 				if get_node_or_null(target_puppet_path) == null:
 					get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
 				if !get_node(target_puppet_path).movement_freeze:
+					if result["collider"] is Pickable && result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+						get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(result["collider"].item_id)
+						result["collider"].queue_free()
 					if result["collider"] is MovableNpc && str(result["collider"].get_path()) != target_puppet_path:
 						result["collider"].follow_target = target_puppet_path
 						if result["collider"].wandering:
