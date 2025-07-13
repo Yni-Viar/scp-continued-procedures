@@ -1,4 +1,4 @@
-extends AnimatableBody3D
+extends StaticBody3D
 ## SCP-914 code
 ## Actually, this is one of my oldest code, I made this system in Q4 2022.
 ## Before SCP: Site Online, and any map generator ports for Godot existed...

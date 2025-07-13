@@ -285,6 +285,7 @@ offset_bottom = 24.16
 theme = ExtResource("10_3so38")
 theme_override_styles/slider = SubResource("StyleBoxLine_i4lct")
 max_value = 4.0
+value = 2.0
 
 [node name="Label" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1

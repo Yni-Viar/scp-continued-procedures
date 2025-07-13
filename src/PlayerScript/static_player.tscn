@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://by5c7g15ljuta"]
+[gd_scene load_steps=7 format=3 uid="uid://by5c7g15ljuta"]
 
 [ext_resource type="Script" uid="uid://coqykxns1k055" path="res://Scripts/StaticPlayer.gd" id="1_cfg1l"]
 [ext_resource type="Shader" uid="uid://d24wera2yb2tv" path="res://Shaders/Tint3DShader/tint.gdshader" id="2_1a04n"]
 [ext_resource type="Texture2D" uid="uid://cr0oagcm5dgan" path="res://Assets/HUD/cold_overlay.png" id="3_j77eh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j77eh"]
+radius = 24.0
+height = 80.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j77eh"]
 render_priority = 0
@@ -23,6 +27,18 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
+[node name="Optimizator" type="Area3D" parent="Head/Camera3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -16)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Optimizator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.9775, 0)
+shape = SubResource("CapsuleShape3D_j77eh")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.055)
 mesh = SubResource("QuadMesh_cfg1l")
+
+[connection signal="body_entered" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_entered"]
+[connection signal="body_exited" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_exited"]

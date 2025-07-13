@@ -1,4 +1,6 @@
 extends Node
+## Game task manager
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
 enum SpecialEvent {NONE, POSITIVE, NEGATIVE}
 

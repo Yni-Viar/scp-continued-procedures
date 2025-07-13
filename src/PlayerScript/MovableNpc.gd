@@ -77,6 +77,8 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var spawn_on_start: bool = true
 ## Check if is a player.
 var is_player: bool = false
+# Comment this these string, and you'll partly revert to SCP: Cont Pr. 1.0 optimization
+var optimizator_paused: bool = true
 
 var puppet_mesh: BasePuppetScript
 
@@ -227,7 +229,7 @@ func wander(delta: float):
 			wander_action = false
 			#wandering_rotator = rng.randi_range(150, 179)
 			#wandering_destination = roundi(wrapf(rotation_degrees.y + wandering_rotator, -180, 180))
-	else:
+	elif !optimizator_paused:
 		# If the destination is reached - wander
 		if roundi(rotation_degrees.y) == wandering_destination:
 			wander_action = true

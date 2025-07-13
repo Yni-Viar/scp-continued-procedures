@@ -13,3 +13,5 @@ COARSE,Coarse,Грубо
 FINE,Fine,Тонко
 VERYFINE,Very fine,Очень тонко
 SCP914_REFINE,Refine,Переработать
+TASK_914_EXP_1,"Refine a PDA in SCP-914, by setting on Coarse",Переработайте карманный компьютер в SCP-914 на Грубо
+TASK_914_EXP_2,"Refine a PDA in SCP-914, by setting on Rough",Переработайте карманный компьютер в SCP-914 на Очень грубо

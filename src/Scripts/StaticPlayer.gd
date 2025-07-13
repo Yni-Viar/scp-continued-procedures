@@ -81,3 +81,13 @@ func interact(value: String) -> void:
 						if result["collider"].wandering:
 							result["collider"].wandering = false
 					get_node(target_puppet_path).set_target_position(result["position"])
+
+
+func _on_optimizator_body_entered(body: Node3D) -> void:
+	if body is MovableNpc:
+		body.optimizator_paused = false
+
+
+func _on_optimizator_body_exited(body: Node3D) -> void:
+	if body is MovableNpc:
+		body.optimizator_paused = true
