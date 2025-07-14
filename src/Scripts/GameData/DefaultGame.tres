@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=28 format=3 uid="uid://kakqpi6wi07u"]
+[gd_resource type="Resource" script_class="GameData" load_steps=29 format=3 uid="uid://kakqpi6wi07u"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_teai8"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="1_uwdlv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://b78x487lxutqy" path="res://PlayerScript/PlayerClassResources/Scp650.tres" id="5_ujd5j"]
 [ext_resource type="Resource" uid="uid://dk8t148bg028i" path="res://InventorySystem/Items/CubeItem.tres" id="5_y38bq"]
 [ext_resource type="Resource" uid="uid://nydi02ml4weh" path="res://PlayerScript/PlayerClassResources/Scientist650.tres" id="6_qajj2"]
+[ext_resource type="Resource" uid="uid://caeffa8v3lv6c" path="res://InventorySystem/Items/omnidot_plush.tres" id="6_y38bq"]
 [ext_resource type="Resource" uid="uid://l23gxmbiwbrh" path="res://PlayerScript/PlayerClassResources/DClass.tres" id="7_ujd5j"]
 [ext_resource type="Resource" uid="uid://6j3kwox735os" path="res://PlayerScript/PlayerClassResources/GuardOfDClass.tres" id="8_jbef1"]
 [ext_resource type="Script" uid="uid://2412583x8gql" path="res://Scripts/TaskSystem/GameTaskResource.gd" id="10_jbef1"]
@@ -33,6 +34,6 @@ script = ExtResource("2_2kq0r")
 player_class = Array[ExtResource("1_uwdlv")]([ExtResource("3_4lkqw")])
 puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("2_iio3u"), ExtResource("3_qajj2"), ExtResource("4_cj51b"), ExtResource("5_ujd5j"), ExtResource("6_qajj2"), ExtResource("7_ujd5j"), ExtResource("8_jbef1"), ExtResource("11_o5qps"), ExtResource("12_0coki")])
 tasks = Array[ExtResource("10_jbef1")]([ExtResource("14_r6dwf"), ExtResource("15_0coki"), ExtResource("17_qyy85"), ExtResource("16_60025"), ExtResource("19_60025"), ExtResource("24_s78ub"), ExtResource("25_y38bq")])
-items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq")])
+items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq"), ExtResource("6_y38bq")])
 wave_puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("18_0lfxp"), ExtResource("19_om1ka")])
 metadata/_custom_type_script = "uid://cgv4yjj6gyjc1"

@@ -62,7 +62,7 @@ func intersect() -> Dictionary:
 	var origin = $Head/Camera3D.project_ray_origin(mousepos)
 	var end = origin + $Head/Camera3D.project_ray_normal(mousepos) * RAY_LENGTH
 	var query = PhysicsRayQueryParameters3D.create(origin, end)
-
+	
 	return space_state.intersect_ray(query)
 
 func interact(value: String) -> void:
@@ -76,6 +76,10 @@ func interact(value: String) -> void:
 					if result["collider"] is Pickable && result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
 						get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(result["collider"].item_id)
 						result["collider"].queue_free()
+					elif result["collider"].name == "ItemDetector":
+						if result["collider"].get_parent() is Pickable && result["collider"].get_parent().global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+							get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(result["collider"].get_parent().item_id)
+							result["collider"].get_parent().queue_free()
 					if result["collider"] is MovableNpc && str(result["collider"].get_path()) != target_puppet_path:
 						result["collider"].follow_target = target_puppet_path
 						if result["collider"].wandering:

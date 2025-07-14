@@ -2,7 +2,7 @@ extends Area3D
 
 const EXPERIMENTS = true
 ## Syntax - [ [input, output] ]
-var available_experiments: Array[PackedInt32Array] = [[0, 2], [0, 3]]
+var available_experiments: Array[Array] = [[0, [2]], [0, [3]]]
 var current_experiments: Array[int] = []
 
 # Called when the node enters the scene tree for the first time.
@@ -22,10 +22,13 @@ func _on_body_entered(body: Node3D) -> void:
 	if body is Pickable && EXPERIMENTS: #task processing
 		for i in range(available_experiments.size()):
 			if get_tree().root.get_node("Game/FoundationTask").has_task("task_914_exp_" + str(i+1)):
+				# Add support for multiple 914 outputs
+				if current_experiments.has(i):
+					for j in range(available_experiments[i][1].size()):
+						if body.item_id == available_experiments[i][1][j]:
+							get_tree().root.get_node("Game/FoundationTask").do_task("task_914_exp_" + str(i+1))
 				if body.item_id == available_experiments[i][0] && !current_experiments.has(i):
 					current_experiments.append(i)
-				if body.item_id == available_experiments[i][1] && current_experiments.has(i):
-					get_tree().root.get_node("Game/FoundationTask").do_task("task_914_exp_" + str(i+1))
 
 func _on_body_exited(body: Node3D) -> void:
 	if body is MovableNpc:

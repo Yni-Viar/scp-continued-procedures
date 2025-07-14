@@ -1,11 +1,10 @@
-[gd_scene load_steps=39 format=4 uid="uid://drfrh0cy5dxkp"]
+[gd_scene load_steps=38 format=4 uid="uid://drfrh0cy5dxkp"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_04ag1"]
 [ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_gijfy"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_huph1"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_7qqge"]
 [ext_resource type="Material" uid="uid://d2vsmrtffqdm0" path="res://Assets/Materials/ResearchZone/Concrete.tres" id="4_huph1"]
-[ext_resource type="PackedScene" uid="uid://bk7tgbs0pdha4" path="res://Assets/OriginalModels/omnidotplush_easteregg.tscn" id="6_jdwc2"]
 [ext_resource type="Shader" uid="uid://cgw46w7ss62uv" path="res://Shaders/WaterShader/water.gdshader" id="7_jdwc2"]
 [ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="7_qfm5w"]
 [ext_resource type="Texture2D" uid="uid://daxkwbdgyi8i" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_rough.png" id="8_muqcp"]
@@ -392,9 +391,6 @@ end_position = Vector3(0, 0, -1)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_cl0dk")
-
-[node name="OmnidotplushV2" parent="." instance=ExtResource("6_jdwc2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3161, -9.24325, -11.7002)
 
 [node name="entityspawn2" type="Marker3D" parent="." groups=["Scp347Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4306, -1.24029, 7.35588)
