@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("3_x2edw")
 puppet_class_name = "SCP-266"
-speed = 20.0
+speed = 9.0
 prefab = ExtResource("2_rj2b1")
 spawn_point_group = "Scp266Spawn"
 initial_amount = 1
@@ -19,3 +19,4 @@ health = Array[float]([1200.0])
 team = 0
 enable_avoidance = false
 spawn_on_start = false
+puppet_navigation_layers = 1

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=22 format=3 uid="uid://8ouqn7gu81tt"]
+
+[ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="1_tyao0"]
+[ext_resource type="Resource" uid="uid://tgxe2303s02g" path="res://MapGen/Resources/ResearchZone/room2C_redux.tres" id="2_r8dw0"]
+[ext_resource type="Resource" uid="uid://dd38ave42ap1i" path="res://MapGen/Resources/ResearchZone/room2_checkpoint.tres" id="2_t04w6"]
+[ext_resource type="Resource" uid="uid://bvl3bt5m4h1em" path="res://MapGen/Resources/ResearchZone/room2C.tres" id="3_4o75q"]
+[ext_resource type="Resource" uid="uid://dkax2pgmsnpbr" path="res://MapGen/Resources/ResearchZone/cont2C_special.tres" id="4_0r758"]
+[ext_resource type="Resource" uid="uid://defw3e0yk60rh" path="res://MapGen/Resources/ResearchZone/room4.tres" id="5_m1box"]
+[ext_resource type="Resource" uid="uid://dto18wf3e4ol4" path="res://MapGen/Resources/ResearchZone/room1.tres" id="6_atsi7"]
+[ext_resource type="Resource" uid="uid://fnhc6t0nwt4o" path="res://MapGen/Resources/ResearchZone/room1_redux.tres" id="7_ouuxb"]
+[ext_resource type="Resource" uid="uid://dw7ipvj8nnknk" path="res://MapGen/Resources/ResearchZone/cont1_classd.tres" id="8_k8as5"]
+[ext_resource type="Resource" uid="uid://cwn3flxx1e8ho" path="res://MapGen/Resources/ResearchZone/exit1.tres" id="9_npqwq"]
+[ext_resource type="Resource" uid="uid://mby2ifriv2wp" path="res://MapGen/Resources/ResearchZone/cont1_173.tres" id="11_knl56"]
+[ext_resource type="Resource" uid="uid://7cqlqpchllp6" path="res://MapGen/Resources/ResearchZone/cont1_266.tres" id="12_sou2h"]
+[ext_resource type="Resource" uid="uid://d252rpvlfw68a" path="res://MapGen/Resources/ResearchZone/cont1_testroom.tres" id="13_bpq84"]
+[ext_resource type="Resource" uid="uid://0kdbhka5yv2n" path="res://MapGen/Resources/ResearchZone/cont1_812.tres" id="14_m7uls"]
+[ext_resource type="Resource" uid="uid://cjkhvveue1tae" path="res://MapGen/Resources/ResearchZone/room2.tres" id="16_jvd7s"]
+[ext_resource type="Resource" uid="uid://cs2tk6fwt6jl1" path="res://MapGen/Resources/ResearchZone/room2_walkway.tres" id="17_0r3x5"]
+[ext_resource type="Resource" uid="uid://b5iorkkrwdl3m" path="res://MapGen/Resources/ResearchZone/room2_walkway_redux.tres" id="18_xq8ek"]
+[ext_resource type="Resource" uid="uid://cgh78us53op5w" path="res://MapGen/Resources/ResearchZone/room2_redux.tres" id="19_e0k2e"]
+[ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="21_nmxjq"]
+[ext_resource type="Resource" uid="uid://bx5nj144uqlqs" path="res://MapGen/Resources/ResearchZone/room3.tres" id="22_vyaeb"]
+[ext_resource type="Resource" uid="uid://clxj5wm4henr0" path="res://MapGen/Resources/ResearchZone/room3_redux.tres" id="23_ype6i"]
+
+[resource]
+script = ExtResource("21_nmxjq")
+endrooms = Array[ExtResource("1_tyao0")]([ExtResource("6_atsi7"), ExtResource("7_ouuxb"), ExtResource("8_k8as5")])
+endrooms_single = Array[ExtResource("1_tyao0")]([ExtResource("9_npqwq"), ExtResource("11_knl56"), ExtResource("12_sou2h"), ExtResource("13_bpq84")])
+endrooms_single_large = Array[ExtResource("1_tyao0")]([ExtResource("14_m7uls")])
+hallways = Array[ExtResource("1_tyao0")]([ExtResource("16_jvd7s"), ExtResource("17_0r3x5"), ExtResource("18_xq8ek"), ExtResource("19_e0k2e")])
+hallways_single = Array[ExtResource("1_tyao0")]([])
+checkpoint_hallway = Array[ExtResource("1_tyao0")]([ExtResource("2_t04w6")])
+hallways_single_large = Array[ExtResource("1_tyao0")]([])
+corners = Array[ExtResource("1_tyao0")]([ExtResource("2_r8dw0"), ExtResource("3_4o75q")])
+corners_single = Array[ExtResource("1_tyao0")]([ExtResource("4_0r758")])
+corners_single_large = Array[ExtResource("1_tyao0")]([])
+trooms = Array[ExtResource("1_tyao0")]([ExtResource("22_vyaeb"), ExtResource("23_ype6i")])
+trooms_single = Array[ExtResource("1_tyao0")]([])
+trooms_single_large = Array[ExtResource("1_tyao0")]([])
+crossrooms = Array[ExtResource("1_tyao0")]([ExtResource("5_m1box")])
+crossrooms_single = Array[ExtResource("1_tyao0")]([])
+door_frames = Array[PackedScene]([])
+checkpoint_door_frames = Array[PackedScene]([])

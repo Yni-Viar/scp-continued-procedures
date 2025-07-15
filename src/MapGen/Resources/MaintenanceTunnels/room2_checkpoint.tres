@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MapGenRoom" load_steps=5 format=3 uid="uid://dv32h2vbj6x8v"]
+
+[ext_resource type="Texture2D" uid="uid://bdohqm7yw00if" path="res://Assets/HUD/room2_90.png" id="1_kwtmi"]
+[ext_resource type="Texture2D" uid="uid://8etimuikkbyb" path="res://Assets/HUD/room2.png" id="2_swssj"]
+[ext_resource type="PackedScene" uid="uid://d2o7gg8fn2sqp" path="res://Assets/Rooms/room2/mt_room2_checkpoint.tscn" id="3_5axhx"]
+[ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="4_kuq47"]
+
+[resource]
+script = ExtResource("4_kuq47")
+name = "room2_checkpoint"
+prefab = ExtResource("3_5axhx")
+icon_0_degrees = ExtResource("1_kwtmi")
+icon_90_degrees = ExtResource("2_swssj")
+icon_180_degrees = ExtResource("1_kwtmi")
+icon_270_degrees = ExtResource("2_swssj")
+spawn_chance = 20.0
+door_type = -1
+guaranteed_spawn = false

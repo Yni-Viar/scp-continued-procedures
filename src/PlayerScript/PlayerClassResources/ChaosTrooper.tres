@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_nwwtm")
 puppet_class_name = "CHAOS_TROOPER"
-speed = 3.0
+speed = 8.0
 prefab = ExtResource("1_5p1h6")
 spawn_point_group = ""
 initial_amount = 5

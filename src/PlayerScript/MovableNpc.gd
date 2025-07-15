@@ -92,6 +92,7 @@ func _ready() -> void:
 	automatic = puppet_class.automatic
 	fraction = puppet_class.fraction
 	health = puppet_class.health
+	character_speed = puppet_class.speed
 	wandering = puppet_class.enable_wander
 	spawn_on_start = puppet_class.spawn_on_start
 	_nav_agent.avoidance_enabled = puppet_class.enable_avoidance

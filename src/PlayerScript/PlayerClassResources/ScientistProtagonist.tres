@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_1bwyr")
 puppet_class_name = "SCIENCE_PERSONNEL"
-speed = 3.0
+speed = 12.0
 prefab = ExtResource("1_ptuxb")
 spawn_point_group = "ScientistSpawn"
 initial_amount = 1

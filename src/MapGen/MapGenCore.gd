@@ -130,7 +130,6 @@ func generate_zone_astar() -> void:
 			# Large room amount (when checkpoints enabled, there are fewer rooms)
 			var large_room_amount: int = zone_size / 6 if !checkpoints_enabled else (zone_size - 2) / 6
 			zone_counter.y = j
-			zone_index += j
 			var number_of_rooms: int = zone_size * room_amount
 			# to deal with zero-sized zone_counter, there is a simple formula - if is not odd - 
 			# add value to be not null
@@ -177,6 +176,7 @@ func generate_zone_astar() -> void:
 			if zone_counter.y < map_size_y:
 				var zone_center_y: int = roundi(zone_center + (zone_size * (zone_counter.y + 1)))
 				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(roundi(current_zone_center.x), zone_center_y))
+			zone_index += 1
 		zone_index_default += map_size_y
 		zone_counter.y = 0
 

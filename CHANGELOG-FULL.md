@@ -1,10 +1,15 @@
 # SCP: Containing Procedures (Reborn)
 
 ## Long-term plan
-### Long-term roadmap
-- [ ] SCP-2522 Containment Chamber
-- [ ] Items: SCP-109.
-- [ ] SCP-914 minigame
+- [ ] SCP-104
+
+## v2.0.0
+
+- [x] SCP-914 and new tasks.
+- [x] Various items
+- [x] Maintenance zone re-introduction (being hidden in 1.0.0 files - needs to reduce MapGen size to 8 again, but increase zones to 3)
+- [x] Checkpoints between zones.
+- [ ] SCP-647
 
 ## v1.0.0
 - Android support

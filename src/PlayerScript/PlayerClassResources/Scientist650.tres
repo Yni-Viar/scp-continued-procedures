@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("2_21nc0")
 puppet_class_name = "SCIENCE_PERSONNEL"
-speed = 3.0
+speed = 10.0
 prefab = ExtResource("1_3qrvi")
 spawn_point_group = "Scientist650Spawn"
 initial_amount = 5
@@ -22,3 +22,4 @@ health = Array[float]([100.0, 10.0, 50.0])
 team = 1
 enable_avoidance = false
 spawn_on_start = true
+puppet_navigation_layers = 1

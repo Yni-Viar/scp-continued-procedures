@@ -6,7 +6,7 @@
 [resource]
 script = ExtResource("1_qg7uu")
 puppet_class_name = "MTF_NTF"
-speed = 3.0
+speed = 10.0
 prefab = ExtResource("1_fq7lc")
 spawn_point_group = "MtfSpawn"
 initial_amount = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=34 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -7,8 +7,10 @@
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="4_bf53h"]
 [ext_resource type="Resource" uid="uid://7prvjngodfs1" path="res://MapGen/ResearchZone.tres" id="5_71axn"]
 [ext_resource type="Script" uid="uid://brnmrs6xlpyic" path="res://Scripts/UI.gd" id="6_dahhg"]
+[ext_resource type="Resource" uid="uid://8ouqn7gu81tt" path="res://MapGen/ResearchZone2.tres" id="7_3jf1l"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="7_fgofq"]
 [ext_resource type="Script" uid="uid://h8d12qstq0k3" path="res://Scripts/TaskSystem/GameTaskManager.gd" id="7_wxwew"]
+[ext_resource type="Resource" uid="uid://dtd6pwanbhy7j" path="res://MapGen/MaintenanceTunnels.tres" id="8_356ba"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="9_bf53h"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="10_3so38"]
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
@@ -71,11 +73,13 @@ gamedata = ExtResource("2_fgofq")
 
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
-rooms = Array[ExtResource("4_bf53h")]([ExtResource("5_71axn")])
-zone_size = 12
+rooms = Array[ExtResource("4_bf53h")]([ExtResource("5_71axn"), ExtResource("7_3jf1l"), ExtResource("8_356ba")])
+zone_size = 10
+map_size_y = 2
 large_rooms = true
 enable_door_generation = false
 better_zone_generation_min_amount = 5
+checkpoints_enabled = true
 
 [node name="FoundationTask" type="Node" parent="."]
 script = ExtResource("7_wxwew")
@@ -88,7 +92,7 @@ script = ExtResource("7_wxwew")
 environment = SubResource("Environment_mvdmi")
 
 [node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 180.0
+wait_time = 240.0
 one_shot = true
 
 [node name="UI" type="Control" parent="."]
