@@ -3,6 +3,8 @@
 ## Long-term plan
 - [ ] SCP-104
 - [ ] Story mode
+- [ ] SCP-647
+- [ ] NPC picked by ShapeCast
 
 ## v2.0.0
 
@@ -10,7 +12,8 @@
 - [x] Various items
 - [x] Maintenance zone re-introduction (previously being hidden in 1.0.0 files)
 - [x] Checkpoints between zones.
-- [ ] SCP-647
+- [x] Items are now picked by ShapeCast
+- [x] Removed Internal Eternal easter egg - since Internal Eternal Demo 1 already includes this toy.
 
 ## v1.0.0
 - Android support

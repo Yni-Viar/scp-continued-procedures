@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_kj6sr")
 id = 4
-name = "PDA"
+name = "Plush"
 texture_tiled = ExtResource("3_108br")
 texture_slot = ExtResource("2_kj6sr")
 pickable_path = "res://InventorySystem/Items/ItemOmnidotPlush.tscn"

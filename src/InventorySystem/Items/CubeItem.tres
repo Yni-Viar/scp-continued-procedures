@@ -7,7 +7,7 @@
 [resource]
 script = ExtResource("1_qwo5y")
 id = 3
-name = "SCP-109"
+name = "Metallic cube"
 texture_tiled = ExtResource("3_g6oxb")
 texture_slot = ExtResource("2_k1bem")
 pickable_path = "res://InventorySystem/Items/ItemCube/ItemMetalCube.tscn"

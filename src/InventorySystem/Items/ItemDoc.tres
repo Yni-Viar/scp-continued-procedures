@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://6a47k5bb3tso"]
+
+[ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_1dl8m"]
+[ext_resource type="Texture2D" uid="uid://qb25eokyhjtb" path="res://InventorySystem/Items/Res/doc_slot.png" id="2_1dl8m"]
+[ext_resource type="Texture2D" uid="uid://d32tt15kws8ja" path="res://InventorySystem/Items/Res/doc.png" id="3_k6rv6"]
+
+[resource]
+script = ExtResource("1_1dl8m")
+id = 7
+name = "Document"
+texture_tiled = ExtResource("3_k6rv6")
+texture_slot = ExtResource("2_1dl8m")
+pickable_path = "res://InventorySystem/Items/ItemDoc.tscn"
+pickup_sound_path = ""
+size = Vector2i(1, 1)
+one_time_use = false
+usage = 0
+upgrade_rough = Array[int]([])
+upgrade_coarse = Array[int]([7])
+upgrade_one_to_one = Array[int]([7])
+upgrade_fine = Array[int]([7])
+upgrade_very_fine = Array[int]([7])

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameTaskResource" load_steps=2 format=3 uid="uid://c5u6uapjsmd6e"]
+
+[ext_resource type="Script" uid="uid://2412583x8gql" path="res://Scripts/TaskSystem/GameTaskResource.gd" id="1_puud0"]
+
+[resource]
+script = ExtResource("1_puud0")
+internal_name = "task_914_exp_3"
+public_name = "TASK_914_EXP_3"
+required_group = &"Scp914"
+metadata/_custom_type_script = "uid://2412583x8gql"

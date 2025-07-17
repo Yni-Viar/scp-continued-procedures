@@ -1,8 +1,8 @@
 extends Area3D
 
 const EXPERIMENTS = true
-## Syntax - [ [input, output] ]
-var available_experiments: Array[Array] = [[0, [2]], [0, [3]]]
+## Syntax - [ [ input, [ output ] ] ]
+var available_experiments: Array[Array] = [[0, [2]], [0, [3]],  [6, [5]], [6, [8]]]
 var current_experiments: Array[int] = []
 
 # Called when the node enters the scene tree for the first time.

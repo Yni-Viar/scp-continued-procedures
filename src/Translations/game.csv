@@ -15,3 +15,5 @@ VERYFINE,Very fine,Очень тонко
 SCP914_REFINE,Refine,Переработать
 TASK_914_EXP_1,"Refine a PDA in SCP-914, by setting on Coarse",Переработайте карманный компьютер в SCP-914 на Грубо
 TASK_914_EXP_2,"Refine a PDA in SCP-914, by setting on Rough",Переработайте карманный компьютер в SCP-914 на Очень грубо
+TASK_914_EXP_3,Retrieve information from SCP-914 by\nsetting a 3-paged SCP-914 documentation on Fine.,Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Тонко
+TASK_914_EXP_4,Retrieve information from SCP-914 by\nsetting a 3-paged SCP-914 documentation on Very fine.,Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Очень тонко
