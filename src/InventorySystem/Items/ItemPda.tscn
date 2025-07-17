@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://hqsff80j7fha"]
+[gd_scene load_steps=11 format=4 uid="uid://hqsff80j7fha"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_0cbie"]
 [ext_resource type="Texture2D" uid="uid://3wwb4cdhl4gw" path="res://Assets/ExternalModels/ItemPda/PDA_PDA_AlbedoTransparency.png" id="1_y8eho"]
@@ -62,10 +62,8 @@ shadow_mesh = SubResource("ArrayMesh_i6ifd")
 [sub_resource type="BoxShape3D" id="BoxShape3D_jq52u"]
 size = Vector3(0.0952759, 0.374756, 0.243652)
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_mhrfk"]
-radius = 2.02011
-
 [node name="PDA2" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_0cbie")
 
 [node name="PDA" type="MeshInstance3D" parent="."]
@@ -77,10 +75,3 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00942993, 0.00646973, 0.000732422)
 shape = SubResource("BoxShape3D_jq52u")
-
-[node name="ItemDetector" type="StaticBody3D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemDetector"]
-shape = SubResource("SphereShape3D_mhrfk")

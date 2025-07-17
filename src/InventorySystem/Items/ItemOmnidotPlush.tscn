@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bk7tgbs0pdha4"]
+[gd_scene load_steps=21 format=4 uid="uid://bk7tgbs0pdha4"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_415v3"]
 [ext_resource type="Texture2D" uid="uid://bjce4y6xcy1ak" path="res://Assets/OriginalModels/OmnidotPlush/Omnidot_Cylinder_base.png" id="1_pe8nm"]
@@ -176,10 +176,8 @@ shadow_mesh = SubResource("ArrayMesh_i61l7")
 [sub_resource type="SphereShape3D" id="SphereShape3D_5bq47"]
 radius = 0.101789
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_qupos"]
-radius = 2.02011
-
 [node name="OmnidotplushV2" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_415v3")
 item_id = 4
 
@@ -210,10 +208,3 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00689764, 0.0659796, 0)
 shape = SubResource("SphereShape3D_5bq47")
-
-[node name="ItemDetector" type="StaticBody3D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemDetector"]
-shape = SubResource("SphereShape3D_qupos")

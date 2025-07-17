@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://bk85cj0chavxa"]
+[gd_scene load_steps=17 format=4 uid="uid://bk85cj0chavxa"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_4i4vf"]
 [ext_resource type="Texture2D" uid="uid://2bl3a2am45jx" path="res://Assets/OriginalModels/ItemScp109/Scp109_Sphere_base.png" id="2_j358b"]
@@ -110,10 +110,8 @@ shadow_mesh = SubResource("ArrayMesh_8onyy")
 height = 0.108398
 radius = 0.242188
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_61mw3"]
-radius = 2.02011
-
 [node name="scp109" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_4i4vf")
 item_id = 1
 
@@ -131,10 +129,3 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.0179456, 0)
 shape = SubResource("CylinderShape3D_j358b")
-
-[node name="ItemDetector" type="StaticBody3D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemDetector"]
-shape = SubResource("SphereShape3D_61mw3")

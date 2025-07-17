@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://by5c7g15ljuta"]
+[gd_scene load_steps=8 format=3 uid="uid://by5c7g15ljuta"]
 
 [ext_resource type="Script" uid="uid://coqykxns1k055" path="res://Scripts/StaticPlayer.gd" id="1_cfg1l"]
 [ext_resource type="Shader" uid="uid://d24wera2yb2tv" path="res://Shaders/Tint3DShader/tint.gdshader" id="2_1a04n"]
@@ -17,6 +17,9 @@ shader_parameter/multiplier = 0.0
 [sub_resource type="QuadMesh" id="QuadMesh_cfg1l"]
 material = SubResource("ShaderMaterial_j77eh")
 size = Vector2(2, 2)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j77eh"]
+radius = 4.0
 
 [node name="StaticPlayer" type="Node3D"]
 script = ExtResource("1_cfg1l")
@@ -39,6 +42,14 @@ shape = SubResource("CapsuleShape3D_j77eh")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.055)
 mesh = SubResource("QuadMesh_cfg1l")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Head/Camera3D"]
+enabled = false
+shape = SubResource("SphereShape3D_j77eh")
+target_position = Vector3(0, 0, -72)
+max_results = 8
+collision_mask = 8
+debug_shape_custom_color = Color(1, 0, 0, 1)
 
 [connection signal="body_entered" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_entered"]
 [connection signal="body_exited" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_exited"]

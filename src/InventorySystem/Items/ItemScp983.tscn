@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://d0o1eeb1xokss"]
+[gd_scene load_steps=28 format=4 uid="uid://d0o1eeb1xokss"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_0wg1b"]
 [ext_resource type="Texture2D" uid="uid://birhuj8vyp0pn" path="res://Assets/ExternalModels/ItemScp983/1001_Base_Color.png" id="1_cydjt"]
@@ -338,10 +338,8 @@ shadow_mesh = SubResource("ArrayMesh_pf3qx")
 height = 0.302124
 radius = 0.143555
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_544ml"]
-radius = 2.02011
-
 [node name="scp983" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_0wg1b")
 item_id = 2
 
@@ -393,10 +391,3 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0276489, 0.0126329)
 shape = SubResource("CylinderShape3D_iou1f")
-
-[node name="ItemDetector" type="StaticBody3D" parent="."]
-collision_layer = 8
-collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ItemDetector"]
-shape = SubResource("SphereShape3D_544ml")

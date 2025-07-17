@@ -8,7 +8,9 @@ var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
 var target_puppet_path: String = ""
 
-const RAY_LENGTH = 1000
+const RAY_LENGTH = 512
+
+@onready var shape_cast: ShapeCast3D = $Head/Camera3D/ShapeCast3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -65,21 +67,43 @@ func intersect() -> Dictionary:
 	
 	return space_state.intersect_ray(query)
 
+## Used from Godot Docs
+func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
+	var space_state = get_world_3d().direct_space_state
+	var mousepos = get_viewport().get_mouse_position()
+	
+	var shape_rid = PhysicsServer3D.sphere_shape_create()
+	var radius = 4.0
+	PhysicsServer3D.shape_set_data(shape_rid, radius)
+
+	var params = PhysicsShapeQueryParameters3D.new()
+	params.shape_rid = shape_rid
+	params.transform = Transform3D(Basis(), intersect_position)
+	params.collision_mask = 10
+	
+	var result: Array[Dictionary] = space_state.intersect_shape(params, 4)
+	
+	# Release the shape when done with physics queries.
+	PhysicsServer3D.free_rid(shape_rid)
+	
+	return result
+
 func interact(value: String) -> void:
 	match value:
 		"Point":
 			var result: Dictionary = intersect()
 			if result.keys().size() > 0:
+				# Shape cast for items
+				var shape_result: Array[Dictionary] = intersect_shape(result["position"])
+				for s_result in shape_result:
+					if s_result.keys().size() > 0:
+						if s_result["collider"] is Pickable && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+							get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
+							s_result["collider"].queue_free()
+				# ray cast for moving
 				if get_node_or_null(target_puppet_path) == null:
 					get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
 				if !get_node(target_puppet_path).movement_freeze:
-					if result["collider"] is Pickable && result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
-						get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(result["collider"].item_id)
-						result["collider"].queue_free()
-					elif result["collider"].name == "ItemDetector":
-						if result["collider"].get_parent() is Pickable && result["collider"].get_parent().global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
-							get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(result["collider"].get_parent().item_id)
-							result["collider"].get_parent().queue_free()
 					if result["collider"] is MovableNpc && str(result["collider"].get_path()) != target_puppet_path:
 						result["collider"].follow_target = target_puppet_path
 						if result["collider"].wandering:

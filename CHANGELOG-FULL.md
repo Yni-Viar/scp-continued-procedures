@@ -2,12 +2,13 @@
 
 ## Long-term plan
 - [ ] SCP-104
+- [ ] Story mode
 
 ## v2.0.0
 
 - [x] SCP-914 and new tasks.
 - [x] Various items
-- [x] Maintenance zone re-introduction (being hidden in 1.0.0 files - needs to reduce MapGen size to 8 again, but increase zones to 3)
+- [x] Maintenance zone re-introduction (previously being hidden in 1.0.0 files)
 - [x] Checkpoints between zones.
 - [ ] SCP-647
 
