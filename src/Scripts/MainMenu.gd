@@ -3,7 +3,8 @@ extends Control
 ## Made by Yni, licensed under MIT license.
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _enter_tree() -> void:
+	Settings.set_pause_subtree(false)
 	# Set the region (needed for obeying contries' laws)
 	Settings.region = OS.get_locale()
 	Settings.touchscreen = DisplayServer.is_touchscreen_available()

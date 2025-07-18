@@ -17,6 +17,8 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 @export var mode: Scp914Mode = Scp914Mode.ONE_TO_ONE
 
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -29,7 +31,8 @@ func _process(delta: float) -> void:
 func refine():
 	$DoorBlockIn.disabled = false
 	$DoorBlockOut.disabled = false
-	$AnimationPlayer.play("Armature|Armature|Armature|Armature|Event|Armature|Event|Armatu")
+	anim_player.stop()
+	anim_player.play("Armature|Armature|Armature|Armature|Event|Armature|Event|Armatu")
 	await get_tree().create_timer(6.0).timeout
 	for item in items_to_refine:
 		var target_id: int = -1
@@ -60,8 +63,10 @@ func refine():
 
 
 func _on_add_items_area_body_entered(body: Node3D) -> void:
-	items_to_refine.append(body)
+	if body is Pickable:
+		items_to_refine.append(body)
 
 
 func _on_add_items_area_body_exited(body: Node3D) -> void:
-	items_to_refine.erase(body)
+	if body is Pickable:
+		items_to_refine.erase(body)

@@ -26,7 +26,6 @@ var exiting: bool = false
 
 
 func _on_back_pressed() -> void:
-	Settings.set_pause_subtree(false)
 	var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
 	get_tree().root.add_child(menu)
 	Settings.call_deferred("override_main_scene", menu)

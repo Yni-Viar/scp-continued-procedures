@@ -16,9 +16,11 @@ const CURRENT_STAGE: Stages = Stages.dev
 ## If we don't specify regions, which have additional legal requirements, we are in trouble.
 const LEGAL_REQ_REGIONS: PackedStringArray = ["ru_RU"]
 ## Touchscreen check
-var touchscreen = false
+var touchscreen: bool = false
 ## Settings resource
 var setting_res: SettingsResource
+
+var paused_game = false
 ## If we don't specify regions, which have additional legal requirements, we are in trouble.
 var region: String = "":
 	set(val):
@@ -70,7 +72,8 @@ func set_pause_subtree(pause: bool) -> void:
 	
 	for setter in process_setters:
 		get_tree().root.propagate_call(setter, [!pause])
-	Engine.time_scale = 0.1 if pause else 1.0
+	Engine.time_scale = 0.01 if pause else 1.0
+	paused_game = pause
 	
 
 func override_main_scene(scene: Node):

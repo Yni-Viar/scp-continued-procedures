@@ -15,15 +15,19 @@ var attack_update_timer: float = 2.0
 
 
 func on_update_human(delta: float):
-	if near_targets:
-		attack()
-	elif get_tree().get_node_count_in_group("ChaosInsurgency") > 0:
-		var collider = get_tree().get_nodes_in_group("ChaosInsurgency")[get_tree().get_node_count_in_group("ChaosInsurgency") - 1]
-		if collider is MovableNpc:
-			var puppet_class = collider.puppet_class
-			if puppet_class.fraction == 0 && puppet_class.team == 3:
-				if !get_parent().get_parent().movement_freeze:
-					get_parent().get_parent().follow_target = collider.get_path()
+	if get_tree().get_node_count_in_group("ChaosInsurgency") > 0:
+		if near_targets:
+			attack()
+		else:
+			var collider = get_tree().get_first_node_in_group("ChaosInsurgency")
+			if collider == null && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
+				get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
+			else:
+				if collider is MovableNpc:
+					var puppet_class = collider.puppet_class
+					if puppet_class.fraction == 0 && puppet_class.team == 3:
+						if !get_parent().get_parent().movement_freeze:
+							get_parent().get_parent().follow_target = collider.get_path()
 	elif get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 		get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
 
@@ -44,6 +48,9 @@ func _on_attack_radius_body_exited(body: Node3D) -> void:
 	if body is MovableNpc:
 		if str(body.get_path()) == get_parent().get_parent().follow_target || get_parent().get_parent().movement_freeze:
 			near_targets = false
+			if get_node_or_null(get_parent().get_parent().follow_target) == null:
+				if get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
+					get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
 
 func attack():
 	if attack_update_timer > 0:

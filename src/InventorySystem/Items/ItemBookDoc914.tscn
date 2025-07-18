@@ -55,6 +55,7 @@ shadow_mesh = SubResource("ArrayMesh_2uhs1")
 size = Vector3(0.363037, 0.0301514, 0.533447)
 
 [node name="doc" type="RigidBody3D"]
+collision_layer = 8
 script = ExtResource("1_dy215")
 item_id = 8
 

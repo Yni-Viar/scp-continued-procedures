@@ -92,7 +92,7 @@ func interact(value: String) -> void:
 	match value:
 		"Point":
 			var result: Dictionary = intersect()
-			if result.keys().size() > 0:
+			if result.keys().size() > 0 && !get_node(target_puppet_path).movement_freeze:
 				# Shape cast for items
 				var shape_result: Array[Dictionary] = intersect_shape(result["position"])
 				for s_result in shape_result:
@@ -102,14 +102,16 @@ func interact(value: String) -> void:
 							s_result["collider"].queue_free()
 							#Use only one item
 							return
+						if s_result["collider"] is MovableNpc:
+							if !s_result["collider"].is_player:
+								s_result["collider"].follow_target = target_puppet_path
+								if s_result["collider"].wandering:
+									s_result["collider"].wandering = false
+								return
 				# ray cast for moving
 				if get_node_or_null(target_puppet_path) == null:
 					get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
-				if !get_node(target_puppet_path).movement_freeze:
-					if result["collider"] is MovableNpc && str(result["collider"].get_path()) != target_puppet_path:
-						result["collider"].follow_target = target_puppet_path
-						if result["collider"].wandering:
-							result["collider"].wandering = false
+				else:
 					get_node(target_puppet_path).set_target_position(result["position"])
 
 
