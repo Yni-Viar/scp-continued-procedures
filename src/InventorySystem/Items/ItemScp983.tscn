@@ -345,46 +345,55 @@ item_id = 2
 
 [node name="scp983_body_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mlktt")
 skeleton = NodePath("")
 
 [node name="scp983_teeh_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_pswr1")
 skeleton = NodePath("")
 
 [node name="scp983_eyes_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_uwmka")
 skeleton = NodePath("")
 
 [node name="scp983_buttons_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_moil4")
 skeleton = NodePath("")
 
 [node name="scp983_hoop_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_7w55j")
 skeleton = NodePath("")
 
 [node name="scp983_bell_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_00ihp")
 skeleton = NodePath("")
 
 [node name="scp983_handle_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_js17n")
 skeleton = NodePath("")
 
 [node name="scp983_clapper_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_y8rhb")
 skeleton = NodePath("")
 
 [node name="scp983_hammer_low" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0564106, 0, 0, 0, -2.0174e-08, -0.0564106, 0, 0.0564106, -2.0174e-08, 0, 0.0721763, -0.024303)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_87n20")
 skeleton = NodePath("")
 

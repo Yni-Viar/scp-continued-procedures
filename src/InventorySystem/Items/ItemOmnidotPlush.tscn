@@ -183,25 +183,25 @@ item_id = 4
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.100122, 0, 0, 0, 0.100122, 0, 0, 0, 0.100122, 0.00648898, -0.0141233, -0.001058)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ehloj")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0198044, 0.097526, -0.010992, -0.0981095, 0.0199678, 0.000398517, 0.00258037, 0.0106922, 0.0995156, 0.0972452, 0.049069, 0.0289411)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_4udjf")
 skeleton = NodePath("")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0137435, 0.099072, 0.00449478, -0.0991726, 0.0137522, 0.000115514, -0.000503079, -0.00446804, 0.100021, 0.0990867, 0.049069, -0.0233762)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_3psrn")
 skeleton = NodePath("")
 
 [node name="Cylinder_004" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0528807, 0.0850175, 0, -0.0850175, 0.0528807, 0, 0, 0, 0.100122, 0.0861748, 0.0897528, 0.00679953)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_3theo")
 skeleton = NodePath("")
 

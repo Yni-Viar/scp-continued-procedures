@@ -112,7 +112,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07621, -0.238879, 3.21097)
 
 [node name="Cylinder" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_vlwar")
 skeleton = NodePath("")
 
@@ -173,7 +173,7 @@ light_data = ExtResource("4_k12ab")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.93428e-07, 0, -3.88657, 0, 3.88657, 0, 3.88657, 0, 2.93428e-07, 9.8079, 3.34619, 0.170754)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_54lxd")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]

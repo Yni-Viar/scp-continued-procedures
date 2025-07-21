@@ -28,6 +28,7 @@ script = ExtResource("1_3exxu")
 item_id = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visibility_range_end = 64.0
 mesh = SubResource("BoxMesh_bh4du")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

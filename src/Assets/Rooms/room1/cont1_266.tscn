@@ -144,7 +144,7 @@ navigation_mesh = SubResource("NavigationMesh_2ywj7")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_idrcq")
 skeleton = NodePath("")
 
@@ -226,7 +226,7 @@ interior = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 1.77439, 11.146, 0.721968)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_v11kr")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
@@ -239,7 +239,7 @@ light_data = ExtResource("6_0xjkt")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 1.83632, 2.87881, 0.70099)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_ujo26")
 
 [node name="Marker3D" type="Marker3D" parent="." groups=["Scp266Spawn"]]

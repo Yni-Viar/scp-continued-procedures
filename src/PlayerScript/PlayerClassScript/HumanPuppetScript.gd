@@ -23,7 +23,7 @@ func on_start():
 	if get_node_or_null("AnimationTree") != null:
 		get_node("AnimationTree").active = true
 		has_animtree = true
-	if get_node_or_null(armature_name + "/Skeleton3D/LookAtModifier3D") != null:
+	if get_node_or_null(armature_name + "/Skeleton3D/LookAtModifier3D") != null && get_parent().get_parent().puppet_class.enable_ik:
 		has_lookat_ik = true
 	#get_parent().get_node("NpcSelection").set_collision_mask_value(3, true)
 	on_start_human()
@@ -72,9 +72,12 @@ func _physics_process(delta: float) -> void:
 				prev_entity_distance = entity_distance
 				index = i
 		var looking_object: Vector3 = active_puppets[index].global_position
-		get_parent().get_parent().get_node("RayCast3D").look_at(looking_object)
+		
 		if has_lookat_ik:
+			get_parent().get_parent().get_node("RayCast3D").look_at(looking_object)
 			get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = active_puppets[index].get_path()
+		else:
+			get_parent().get_parent().look_at(looking_object)
 		looking_at_target = true
 	elif looking_at_target:
 		get_parent().get_parent().get_node("RayCast3D").rotation = Vector3.ZERO

@@ -111,7 +111,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07621, -0.238879, 3.21097)
 
 [node name="Cube2" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_invu1")
 skeleton = NodePath("")
 
@@ -191,5 +191,5 @@ light_data = ExtResource("5_invu1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.03983e-07, 0, -8, 0, 8, 0, 8, 0, 6.03983e-07, 10.0068, 3.81702, 0.0379491)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_54lxd")

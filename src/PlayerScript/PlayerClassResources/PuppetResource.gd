@@ -25,5 +25,7 @@ class_name PuppetClass
 ## Enables avoidance
 @export var enable_avoidance: bool = true
 ## Does the puppet spawn on start
-@export var spawn_on_start = true
+@export var spawn_on_start: bool = true
 @export_flags_3d_navigation var puppet_navigation_layers: int = 1
+## Enables Inverse Kinematics (only for humans and SCP-347)
+@export var enable_ik: bool = true

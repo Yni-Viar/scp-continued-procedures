@@ -91,13 +91,13 @@ size = Vector3(8, 8, 5)
 
 [node name="power_box_01_box" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0474811)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ot677")
 skeleton = NodePath("")
 
 [node name="power_box_01_door" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0478184)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_71ac1")
 skeleton = NodePath("")
 

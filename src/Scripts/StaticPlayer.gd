@@ -101,7 +101,8 @@ func interact(value: String) -> void:
 							#Use only one item
 							break
 						if s_result["collider"] is MovableNpc:
-							if !s_result["collider"].is_player:
+							var test = !s_result["collider"].puppet_class.automatic
+							if !s_result["collider"].is_player && !s_result["collider"].puppet_class.automatic:
 								s_result["collider"].follow_target = target_puppet_path
 								if s_result["collider"].wandering:
 									s_result["collider"].wandering = false

@@ -4249,27 +4249,27 @@ bones/64/rotation = Quaternion(1.82074e-06, 2.52388e-06, 4.65661e-08, 1)
 bones/64/scale = Vector3(1, 1, 1)
 
 [node name="Woman_body" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mpee2")
 skin = SubResource("Skin_7cndc")
 
 [node name="Woman_cortu_t-bar" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_gnx7y")
 skin = SubResource("Skin_7cndc")
 
 [node name="Woman_female_casualsuit01" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_nusxj")
 skin = SubResource("Skin_7cndc")
 
 [node name="Woman_low-poly" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_sx0a0")
 skin = SubResource("Skin_7cndc")
 
 [node name="Woman_short03" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_pi71h")
 skin = SubResource("Skin_7cndc")
 

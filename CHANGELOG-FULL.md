@@ -5,8 +5,13 @@
 - [ ] Story mode
 - [ ] SCP-647
 
+## v2.0.1 (upcoming)
 
-## v2.0.0
+- [x] Increase optimization on Android by reducing visible area
+- [x] Scientists at SCP-650 containment chamber now have IK disabled (previously they looked strange)
+- [x] You cannot pick-to-follow MTFs, Chaos Insurgency, hostile SCPs and scientists at SCP-650 chamber
+
+## v2.0.0 (2025.07.21)
 
 - SCP-914 and new tasks.
 - Various items
@@ -16,7 +21,7 @@
 - Removed Internal Eternal easter egg - since Internal Eternal Demo 1 already includes this toy.
 - Added ability to disable music
 
-## v1.0.0
+## v1.0.0 (2025.06.09)
 - Android support
 - SCP-162
 - SCP-173

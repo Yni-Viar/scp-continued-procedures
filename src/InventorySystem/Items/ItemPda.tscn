@@ -69,7 +69,7 @@ script = ExtResource("1_0cbie")
 
 [node name="PDA" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.117031, 0)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_8o0j3")
 skeleton = NodePath("")
 

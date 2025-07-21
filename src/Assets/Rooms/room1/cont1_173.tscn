@@ -109,7 +109,7 @@ navigation_mesh = SubResource("NavigationMesh_6571d")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_bj2f8")
 skeleton = NodePath("")
 
@@ -139,7 +139,7 @@ shape = SubResource("ConcavePolygonShape3D_mp2tu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -7.26412, 3.81702, 6.28462)
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_cajk8")
 
 [node name="Scp173Task" type="Area3D" parent="."]

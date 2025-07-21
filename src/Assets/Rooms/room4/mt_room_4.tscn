@@ -91,7 +91,7 @@ data = PackedVector3Array(1.6567, 5.8698, 3.4133, 3.4124, 3.5265, 10.24, 3.4124,
 navigation_mesh = SubResource("NavigationMesh_olia3")
 
 [node name="Cylinder" type="MeshInstance3D" parent="NavigationRegion3D"]
-visibility_range_end = 128.0
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_olia3")
 skeleton = NodePath("")
 
