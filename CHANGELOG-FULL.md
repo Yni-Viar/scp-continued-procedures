@@ -8,12 +8,13 @@
 
 ## v2.0.0
 
-- [x] SCP-914 and new tasks.
-- [x] Various items
-- [x] Maintenance zone re-introduction (previously being hidden in 1.0.0 files)
-- [x] Checkpoints between zones.
-- [x] Items and NPC are now picked by ShapeCast
-- [x] Removed Internal Eternal easter egg - since Internal Eternal Demo 1 already includes this toy.
+- SCP-914 and new tasks.
+- Various items
+- Maintenance zone re-introduction (previously being hidden in 1.0.0 files)
+- Checkpoints between zones.
+- Items and NPC are now picked by ShapeCast
+- Removed Internal Eternal easter egg - since Internal Eternal Demo 1 already includes this toy.
+- Added ability to disable music
 
 ## v1.0.0
 - Android support

@@ -16,6 +16,7 @@ func _enter_tree() -> void:
 	
 	$GameSettings/TimeLimited.button_pressed = Settings.setting_res.time_limited
 	$GameSettings/ZenMode.button_pressed = Settings.setting_res.zen_mode
+	$EnableSound.button_pressed = Settings.setting_res.music_volume > 0.875
 	
 	# Display game ratings in main menu in some countries, this will replace the game logo.
 	if Settings.legal_req:
@@ -48,12 +49,6 @@ func play():
 	queue_free()
 
 
-
-func _on_ci_spawn_item_selected(index: int) -> void:
-	Settings.setting_res.ci_spawn = index
-	Settings.save_resource(Settings.setting_res)
-
-
 func _on_time_limited_toggled(toggled_on: bool) -> void:
 	Settings.setting_res.time_limited = toggled_on
 	Settings.save_resource(Settings.setting_res)
@@ -68,4 +63,14 @@ func _on_zen_mode_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		$GameSettings/TimeLimited.button_pressed = false
 	Settings.setting_res.zen_mode = toggled_on
-	
+	Settings.save_resource(Settings.setting_res)
+
+
+func _on_enable_sound_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		Settings.setting_res.music_volume = 1.0
+		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicEnabled.png")
+	else:
+		Settings.setting_res.music_volume = 0.0
+		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicDisabled.png")
+	Settings.save_resource(Settings.setting_res)

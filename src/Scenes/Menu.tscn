@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=9 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cl0fdkqxf4660" path="res://UI/playbutton.png" id="4_idohh"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_idohh"]
 [ext_resource type="Texture2D" uid="uid://b4x7oa8dlypky" path="res://UI/lorebutton.png" id="5_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://bmx074026q6dt" path="res://UI/MainMenu/MusicEnabled.png" id="6_3jcrr"]
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
 
 [node name="Menu" type="Control"]
@@ -54,6 +55,22 @@ offset_top = -64.264
 offset_right = 64.384
 offset_bottom = 63.736
 texture_normal = ExtResource("5_wfhf6")
+
+[node name="EnableSound" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.833
+anchor_top = 0.086
+anchor_right = 0.833
+anchor_bottom = 0.086
+offset_left = -15.6161
+offset_top = -47.728
+offset_right = 48.3839
+offset_bottom = 16.272
+grow_horizontal = 0
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("6_3jcrr")
 
 [node name="GameSettings" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -129,19 +146,29 @@ Licensed under SCP-Wiki CC-BY-SA 3.0
 SCP-650 - Shadowscale(model, textures)
 Licensed under SCP-Wiki CC-BY-SA 3.0
 ------------------------
+SCP-914 - Apocryphos (model, texture, rig and
+animations), Aruspice (new dial model and textures)
+Licensed under SCP-Wiki CC-BY-SA 3.0
+------------------------
+SCP-983 item - Aruspice (model, textures, rig, animation)
+Licensed under SCP-Wiki CC-BY-SA 3.0
+-----------------------
 Crowbar and power generator models
 used from PolyHaven.
 SCP-347 model is made using Makehuman model.
 (License - CC0)
 ------------------------
 Mentioned SCP objects:
+SCP-109 by unknown author
 SCP-162 by Dr Gears
 SCP-173 by Moto42
 SCP-266 by Dr Kondraki
 SCP-347 by yellowdrakex
 SCP-650 by Dr Talson
 SCP-812 by HK-016
-(Licensed under CC-BY-SA 3.0)"
+SCP-914 by Dr Gears
+SCP-983 by NekoChris
+(Licensed under SCP-Wiki CC-BY-SA 3.0)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -221,6 +248,7 @@ text = "HELP_EVENTS"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
+[connection signal="toggled" from="EnableSound" to="." method="_on_enable_sound_toggled"]
 [connection signal="toggled" from="GameSettings/TimeLimited" to="." method="_on_time_limited_toggled"]
 [connection signal="toggled" from="GameSettings/ZenMode" to="." method="_on_zen_mode_toggled"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]

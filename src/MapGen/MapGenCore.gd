@@ -152,7 +152,12 @@ func generate_zone_astar() -> void:
 			if large_rooms && rooms[zone_index].endrooms_single_large.size() > 0:
 				for k in range(large_room_amount):
 					for l in range(NUMBER_OF_TRIES_TO_SPAWN):
-						random_room = Vector2(rng.randi_range(available_room_position[0].x, available_room_position[0].y), rng.randi_range(available_room_position[1].x, available_room_position[1].y))
+						if checkpoints_enabled:
+							## If checkpoints enabled, let's clean path for checkpoints
+							## As a workaround, large rooms will be always near center of map.
+							random_room = Vector2(rng.randi_range(available_room_position[0].x + 3, available_room_position[0].y - 3), rng.randi_range(available_room_position[1].x + 3, available_room_position[1].y - 3))
+						else:
+							random_room = Vector2(rng.randi_range(available_room_position[0].x, available_room_position[0].y), rng.randi_range(available_room_position[1].x, available_room_position[1].y))
 						if check_room_dimensions(random_room.x, random_room.y, 0):
 							walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), random_room)
 							mapgen[random_room.x][random_room.y].large = true

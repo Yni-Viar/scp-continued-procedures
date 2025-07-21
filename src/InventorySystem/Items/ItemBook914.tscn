@@ -1,15 +1,23 @@
-[gd_scene load_steps=9 format=4 uid="uid://ba08oo8adckju"]
+[gd_scene load_steps=11 format=4 uid="uid://ba08oo8adckju"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_fqnk3"]
 [ext_resource type="Texture2D" uid="uid://mu6r24dfprfj" path="res://Assets/OriginalModels/ItemBook914/book_scp914_base.png" id="1_xqq6k"]
 [ext_resource type="Texture2D" uid="uid://dlqlt327dcgv4" path="res://Assets/OriginalModels/ItemBook914/book_scp914_rough.png" id="2_fqnk3"]
 [ext_resource type="Texture2D" uid="uid://ckk137243ouw2" path="res://Assets/OriginalModels/ItemBook914/book_scp914_nor.png" id="3_pujqe"]
+[ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="4_pujqe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q0vhq"]
 size = Vector3(0.404724, 0.0861206, 0.605469)
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q3rft"]
+render_priority = 0
+shader = ExtResource("4_pujqe")
+shader_parameter/outline_color = Color(1, 1, 1, 1)
+shader_parameter/outline_width = 2.0
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_32mwk"]
 resource_name = "Material.001"
+next_pass = SubResource("ShaderMaterial_q3rft")
 cull_mode = 2
 albedo_texture = ExtResource("1_xqq6k")
 metallic_texture = ExtResource("2_fqnk3")
@@ -55,6 +63,7 @@ shadow_mesh = SubResource("ArrayMesh_q3lqo")
 
 [node name="Book914" type="RigidBody3D"]
 collision_layer = 8
+continuous_cd = true
 script = ExtResource("1_fqnk3")
 item_id = 5
 

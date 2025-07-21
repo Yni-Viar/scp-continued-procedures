@@ -25,6 +25,11 @@ var ci_ready: bool = false
 var mtf_cooldown: float = 10.0
 ## Protagonist tracker
 var protagonist: MovableNpc
+
+## Necessary for fixing a bug
+func _enter_tree() -> void:
+	Settings.set_pause_subtree(false)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if time_limited && !Settings.setting_res.zen_mode:

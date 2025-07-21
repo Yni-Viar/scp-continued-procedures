@@ -22,6 +22,10 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="uid://ca78sce3pl6wl"
 config/icon="uid://c7yat1lfp8emn"
 
+[audio]
+
+buses/default_bus_layout="uid://b5q6nyv2tmgde"
+
 [autoload]
 
 ResourceStorage="*res://Scripts/ResourceStorage.gd"

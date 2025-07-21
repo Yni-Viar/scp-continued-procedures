@@ -376,6 +376,7 @@ shape = SubResource("BoxShape3D_h7gxb")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_wndha")
 skeleton = NodePath("")
 

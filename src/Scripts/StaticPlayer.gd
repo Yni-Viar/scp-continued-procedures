@@ -10,8 +10,6 @@ var target_puppet_path: String = ""
 
 const RAY_LENGTH = 512
 
-@onready var shape_cast: ShapeCast3D = $Head/Camera3D/ShapeCast3D
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -73,7 +71,7 @@ func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
 	var mousepos = get_viewport().get_mouse_position()
 	
 	var shape_rid = PhysicsServer3D.sphere_shape_create()
-	var radius = 4.0
+	var radius = 3.0
 	PhysicsServer3D.shape_set_data(shape_rid, radius)
 
 	var params = PhysicsShapeQueryParameters3D.new()
@@ -101,13 +99,12 @@ func interact(value: String) -> void:
 							get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
 							s_result["collider"].queue_free()
 							#Use only one item
-							return
+							break
 						if s_result["collider"] is MovableNpc:
 							if !s_result["collider"].is_player:
 								s_result["collider"].follow_target = target_puppet_path
 								if s_result["collider"].wandering:
 									s_result["collider"].wandering = false
-								return
 				# ray cast for moving
 				if get_node_or_null(target_puppet_path) == null:
 					get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")

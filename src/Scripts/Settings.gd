@@ -30,6 +30,7 @@ var legal_req: bool = false
 
 func _init():
 	load_resource()
+	audio_settings(1, setting_res.music_volume)
 
 ## Sometimes ago it was a great function. Now it is just a stub, that calls ResourceStorage and loads settings
 func load_resource():
@@ -74,7 +75,13 @@ func set_pause_subtree(pause: bool) -> void:
 		get_tree().root.propagate_call(setter, [!pause])
 	Engine.time_scale = 0.01 if pause else 1.0
 	paused_game = pause
-	
+
+func audio_settings(bus: int, val: float):
+	AudioServer.set_bus_volume_db(bus, linear_to_db(val))
+	if val < 0.01:
+		AudioServer.set_bus_mute(bus, true)
+	elif val >= 0.01 && AudioServer.is_bus_mute(bus):
+		AudioServer.set_bus_mute(bus, false)	
 
 func override_main_scene(scene: Node):
 	get_tree().current_scene = scene

@@ -91,7 +91,7 @@ script = ExtResource("7_wxwew")
 environment = SubResource("Environment_mvdmi")
 
 [node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 240.0
+wait_time = 210.0
 one_shot = true
 
 [node name="UI" type="Control" parent="."]
@@ -420,6 +420,7 @@ texture_disabled = ExtResource("24_356ba")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dahhg")
 autoplay = true
+bus = &"Music"
 
 [connection signal="generated" from="FacilityGenerator" to="." method="_on_facility_generator_generated"]
 [connection signal="task_done" from="FoundationTask" to="UI" method="_on_foundation_task_task_done"]

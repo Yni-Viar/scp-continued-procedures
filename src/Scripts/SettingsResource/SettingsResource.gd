@@ -18,3 +18,5 @@ class_name SettingsResource
 @export var time_limited: bool = true
 ## Zen mode
 @export var zen_mode: bool = false
+## Music volume
+@export var music_volume: float = 1.0

@@ -13,24 +13,35 @@ enum Scp914Mode {ROUGH, COARSE, ONE_TO_ONE, FINE, VERY_FINE}
 var items_to_refine: Array[Pickable] = []
 #var players_to_refine: Array[MovableNpc] = []
 var refining: bool = false
+var door_block_node_type: int = -1
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 @export var mode: Scp914Mode = Scp914Mode.ONE_TO_ONE
 
 @onready var anim_player: AnimationPlayer = $AnimationPlayer
 
+@onready var door_block_in: Node3D = $DoorBlockIn
+@onready var door_block_out: Node3D = $DoorBlockOut
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	if door_block_in is NavigationLink3D && door_block_out is NavigationLink3D:
+		door_block_node_type = 1
+	elif door_block_in is CollisionShape3D && door_block_out is CollisionShape3D:
+		door_block_node_type = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func refine():
-	$DoorBlockIn.disabled = false
-	$DoorBlockOut.disabled = false
+	match door_block_node_type:
+		0:
+			door_block_in.disabled = false
+			door_block_out.disabled = false
+		1:
+			door_block_in.enabled = false
+			door_block_out.enabled = false
 	anim_player.stop()
 	anim_player.play("Armature|Armature|Armature|Armature|Event|Armature|Event|Armatu")
 	await get_tree().create_timer(6.0).timeout
@@ -52,14 +63,19 @@ func refine():
 			Scp914Mode.VERY_FINE:
 				if get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine.size() > 0:
 					target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine.size() - 1)]
-		if target_id != -1:
+		if target_id >= 0:
 			var result_item: Pickable = load(get_tree().root.get_node("Game").gamedata.items[target_id].pickable_path).instantiate()
 			result_item.position = $OutputSpawner.global_position
 			get_tree().root.get_node("Game/Items").add_child(result_item)
 		item.queue_free()
 	await get_tree().create_timer(6.0).timeout
-	$DoorBlockOut.disabled = true
-	$DoorBlockIn.disabled = true
+	match door_block_node_type:
+		0:
+			door_block_in.disabled = true
+			door_block_out.disabled = true
+		1:
+			door_block_in.enabled = true
+			door_block_out.enabled = true
 
 
 func _on_add_items_area_body_entered(body: Node3D) -> void:
