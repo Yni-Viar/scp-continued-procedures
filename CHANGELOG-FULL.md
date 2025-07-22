@@ -4,6 +4,8 @@
 - [ ] SCP-104
 - [ ] Story mode
 - [ ] SCP-647
+- [ ] SCP-001 event (by shaggydredlocks)
+- [ ] Multiplayer (possibly)
 
 ## v2.0.1 (2025.07.22)
 
