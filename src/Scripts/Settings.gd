@@ -44,7 +44,7 @@ func load_resource():
 		load_default_settings()
 
 func load_default_settings():
-	if OS.get_name() != "Web":
+	if OS.get_name() != "Web" || OS.get_name() != "Android":
 		var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
 		save_resource(res)
 		setting_res = res

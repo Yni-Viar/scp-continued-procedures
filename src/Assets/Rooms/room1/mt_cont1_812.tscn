@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cahwarpha15xl" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_Roughness.png" id="10_qhhuf"]
 [ext_resource type="Texture2D" uid="uid://c1kn4d5w17yv0" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_NormalGL.png" id="11_a4q3s"]
 [ext_resource type="LightmapGIData" uid="uid://brgo6g7kslogv" path="res://Assets/Rooms/room1/Lm/mt_cont1_812.lmbake" id="11_idhtc"]
+[ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="11_kevxb"]
 [ext_resource type="Shader" uid="uid://cgw46w7ss62uv" path="res://Shaders/WaterShader/water.gdshader" id="12_ms4c5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
@@ -261,13 +262,8 @@ size = Vector2(41, 18)
 subdivide_width = 8
 subdivide_depth = 8
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jdwc2"]
-shading_mode = 0
-albedo_color = Color(0.457151, 0.623664, 0.814709, 1)
-refraction_enabled = true
-
 [sub_resource type="SphereMesh" id="SphereMesh_gijfy"]
-material = SubResource("StandardMaterial3D_jdwc2")
+material = ExtResource("11_kevxb")
 radius = 0.031
 height = 0.5
 radial_segments = 8

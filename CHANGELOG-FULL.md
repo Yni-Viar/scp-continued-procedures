@@ -5,11 +5,15 @@
 - [ ] Story mode
 - [ ] SCP-647
 
-## v2.0.1 (upcoming)
+## v2.0.1 (2025.07.22)
 
-- [x] Increase optimization on Android by reducing visible area
-- [x] Scientists at SCP-650 containment chamber now have IK disabled (previously they looked strange)
-- [x] You cannot pick-to-follow MTFs, Chaos Insurgency, hostile SCPs and scientists at SCP-650 chamber
+- Increase optimization on Android by reducing visible area
+- Scientists at SCP-650 containment chamber now have IK disabled (previously they looked strange)
+- You cannot pick-to-follow MTFs, Chaos Insurgency, hostile SCPs and scientists at SCP-650 chamber
+- Labels at checkpoints are supporting translations!
+- Made color of SCP-812 waterfall more realistic
+- Tried to fix bug, where Chaos Insurgency event was not called if there was SCP-347 MTF task.
+- Disable Glow and Reflection probe on all of Android
 
 ## v2.0.0 (2025.07.21)
 

@@ -38,6 +38,17 @@ func _ready() -> void:
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
 	$FacilityGenerator.generate_rooms()
+	
+	# Apply settings
+	# Enable or disable glow
+	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
+	## Enable/disable reflection probes (cubemap)
+	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
+		if node is ReflectionProbe:
+			if !Settings.setting_res.reflection_probes: # || Settings.setting_res.ssr:
+				node.hide()
+			else:
+				node.show()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -53,7 +64,6 @@ func _process(delta: float) -> void:
 		ci_timer -= delta
 		if ci_timer < 0:
 			spawn_wave_entity(1)
-			get_node("FoundationTask").trigger_event(2, load("res://Scripts/TaskSystem/Tasks/CIEmergencyTask.tres"))
 			ci_timer = 120.0
 		mtf_cooldown -= delta
 
