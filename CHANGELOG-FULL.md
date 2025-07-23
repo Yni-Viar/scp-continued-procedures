@@ -7,6 +7,10 @@
 - [ ] SCP-001 event (by shaggydredlocks)
 - [ ] Multiplayer (possibly)
 
+## v2.0.2 (2025.07.23)
+
+- Updated Credits list.
+
 ## v2.0.1 (2025.07.22)
 
 - Increase optimization on Android by reducing visible area
