@@ -26,6 +26,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_idohh")
+expand_mode = 1
 
 [node name="Play" type="TextureButton" parent="."]
 layout_mode = 1

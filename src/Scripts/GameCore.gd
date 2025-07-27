@@ -45,10 +45,11 @@ func _ready() -> void:
 	## Enable/disable reflection probes (cubemap)
 	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
 		if node is ReflectionProbe:
-			if !Settings.setting_res.reflection_probes: # || Settings.setting_res.ssr:
+			if !Settings.setting_res.reflection_probe: # || Settings.setting_res.ssr:
 				node.hide()
 			else:
 				node.show()
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

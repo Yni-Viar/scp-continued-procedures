@@ -70,7 +70,9 @@ func _on_enable_sound_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		Settings.setting_res.music_volume = 1.0
 		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicEnabled.png")
+		
 	else:
 		Settings.setting_res.music_volume = 0.0
 		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicDisabled.png")
+	Settings.audio_settings(1, Settings.setting_res.music_volume)
 	Settings.save_resource(Settings.setting_res)
