@@ -40,8 +40,12 @@ func _ready() -> void:
 	# Choose seed
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
+	else:
+		# Make 1/100 chance to see a SCP:SL easter egg.
+		basement_of_sl = rng.randi_range(1, 100) == 1
 	if basement_of_sl:
-		$FacilityGenerator.rooms[1] = load("res://MapGen/MaintenanceTunnelsSl.tres")
+		# Replace Maintenance Zone with 
+		$FacilityGenerator.rooms[1] = load("res://MapGen/MaintenanceZoneSl.tres")
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings
