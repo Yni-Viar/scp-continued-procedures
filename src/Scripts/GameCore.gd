@@ -15,6 +15,9 @@ var map_seed: int = -1
 var ci_probability: int = -1
 ## Time limit enabled
 var time_limited: bool = true
+## If enabled, Maintenance Zone generic hallways will be
+## replaced with SL pre-14.0 ones.
+var basement_of_sl: bool = false
 ## End presets for game ##
 
 ## Enemy spawn timer
@@ -37,6 +40,8 @@ func _ready() -> void:
 	# Choose seed
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
+	if basement_of_sl:
+		$FacilityGenerator.rooms[1] = load("res://MapGen/MaintenanceTunnelsSl.tres")
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings

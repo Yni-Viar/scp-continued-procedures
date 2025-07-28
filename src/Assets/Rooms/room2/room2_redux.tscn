@@ -715,7 +715,6 @@ spot_angle = 81.922
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0608902, 2.343, -0.0816641)
-visible = false
 blend_distance = 0.4
 size = Vector3(20.1237, 7.31363, 20.4)
 box_projection = true

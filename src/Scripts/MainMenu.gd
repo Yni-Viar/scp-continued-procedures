@@ -42,7 +42,9 @@ func _on_credits_pressed() -> void:
 func play():
 	var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
 	if !$GameSettings/Seed.text.is_empty():
-		game.map_seed = $GameSettings/Seed.text
+		game.map_seed = hash($GameSettings/Seed.text)
+		if $GameSettings/Seed.text.to_lower().contains("sl"):
+			game.basement_of_sl = true
 	game.time_limited = $GameSettings/TimeLimited.button_pressed
 	get_tree().root.add_child(game)
 	Settings.call_deferred("override_main_scene", game)

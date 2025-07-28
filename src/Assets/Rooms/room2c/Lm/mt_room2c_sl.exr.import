@@ -1,0 +1,28 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://bwc5qcn8ycmx"
+path.bptc="res://.godot/imported/mt_room2c_sl.exr-dd1ccbcda096a9dfa78fa87fa83370ab.bptc.ctexarray"
+path.astc="res://.godot/imported/mt_room2c_sl.exr-dd1ccbcda096a9dfa78fa87fa83370ab.astc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://Assets/Rooms/room2c/Lm/mt_room2c_sl.exr"
+dest_files=["res://.godot/imported/mt_room2c_sl.exr-dd1ccbcda096a9dfa78fa87fa83370ab.bptc.ctexarray", "res://.godot/imported/mt_room2c_sl.exr-dd1ccbcda096a9dfa78fa87fa83370ab.astc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/channel_pack=1
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=1
+slices/vertical=1
