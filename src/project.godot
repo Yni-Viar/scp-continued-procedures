@@ -69,6 +69,7 @@ Scp266Spawn=""
 WaveSpawn=""
 ReflectionProbe="Reflection Probes"
 Scp914=""
+Scp023Spawn=""
 
 [input]
 
@@ -100,6 +101,13 @@ pointing/android/enable_pan_and_scale_gestures=true
 [internationalization]
 
 locale/translations=PackedStringArray("res://Translations/menu.en.translation", "res://Translations/menu.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/finishgame.en.translation", "res://Translations/finishgame.ru.translation")
+
+[layer_names]
+
+3d_navigation/layer_1="Generic"
+3d_navigation/layer_2="Class-D only"
+3d_navigation/layer_3="Special"
+3d_navigation/layer_4="SCP-023"
 
 [physics]
 

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MapGenZone" load_steps=12 format=3 uid="uid://b5wxeggd11k7k"]
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=13 format=3 uid="uid://b5wxeggd11k7k"]
 
 [ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="1_qj5au"]
 [ext_resource type="Resource" uid="uid://dv32h2vbj6x8v" path="res://MapGen/Resources/MaintenanceZone/room2_checkpoint.tres" id="2_mj6pp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://bgvcokfa5iie5" path="res://MapGen/Resources/MaintenanceZone/room1_playerspawn.tres" id="6_6i5bq"]
 [ext_resource type="Resource" uid="uid://d14v5u0si8xim" path="res://MapGen/Resources/MaintenanceZone/room1_sl.tres" id="6_rg6fj"]
 [ext_resource type="Resource" uid="uid://0kdbhka5yv2n" path="res://MapGen/Resources/MaintenanceZone/cont1_812.tres" id="7_qohuj"]
+[ext_resource type="Resource" uid="uid://l2t88wrtql8v" path="res://MapGen/Resources/MaintenanceZone/cont1_023_sl.tres" id="7_t55p3"]
 [ext_resource type="Resource" uid="uid://ds10guqmdoqht" path="res://MapGen/Resources/MaintenanceZone/room2_sl.tres" id="9_7dnq0"]
 [ext_resource type="Resource" uid="uid://c28c54bngkuhi" path="res://MapGen/Resources/MaintenanceZone/room2_station.tres" id="9_8uvei"]
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="10_ypreb"]
@@ -15,7 +16,7 @@
 [resource]
 script = ExtResource("10_ypreb")
 endrooms = Array[ExtResource("1_qj5au")]([ExtResource("6_rg6fj")])
-endrooms_single = Array[ExtResource("1_qj5au")]([ExtResource("6_6i5bq")])
+endrooms_single = Array[ExtResource("1_qj5au")]([ExtResource("6_6i5bq"), ExtResource("7_t55p3")])
 endrooms_single_large = Array[ExtResource("1_qj5au")]([ExtResource("7_qohuj")])
 hallways = Array[ExtResource("1_qj5au")]([ExtResource("9_7dnq0")])
 hallways_single = Array[ExtResource("1_qj5au")]([ExtResource("9_8uvei")])

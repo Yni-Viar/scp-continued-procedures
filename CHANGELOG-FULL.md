@@ -3,8 +3,7 @@
 ## Long-term plan
 - [ ] SCP-104
 - [ ] Story mode
-- [ ] SCP-647 (possibly 3.0.0)
-- [ ] SCP-023
+- [ ] SCP-647
 - [ ] SCP-001 (by shaggydredlocks) event
 - [ ] Multiplayer (possibly)
 
@@ -16,6 +15,8 @@
 - [ ] Add new item - Disarmer.
 - [ ] Add generator task (hello Unstable Dimensions)
 - [x] Really add an ability to disable music
+- [x] SCP-023 containment chamber in Maintenance Zone (both regular and SL version)
+- [ ] SCP-023 NPC + task.
 
 ## v2.0.2 (2025.07.23)
 

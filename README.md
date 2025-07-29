@@ -9,6 +9,8 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 ## License:
 The game is based on SCP Foundation community.
 
+[SCP Foundation community content are licensed under CC-BY-SA 3.0](https://scp-wiki.wikidot.com/licensing-guide)
+
 The game is made in 2025 by Yni Viar.
 
 This project is dual-licensed.
