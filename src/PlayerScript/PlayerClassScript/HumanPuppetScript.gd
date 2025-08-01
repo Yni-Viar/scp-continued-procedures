@@ -90,11 +90,23 @@ func _physics_process(delta: float) -> void:
 		var collider = raycast.get_collider()
 		if collider is MovableNpc:
 			var puppet_class = collider.puppet_class
-			if puppet_class.fraction == 2:
+			if puppet_class.fraction == 2: # Need-to-look SCPs
 				vision_entity.append(collider.get_node("PlayerModel/Puppet"))
 				if !collider.get_node("PlayerModel/Puppet").watching_puppets.has(get_parent().get_parent()):
 					collider.get_node("PlayerModel/Puppet").watching_puppets.append(get_parent().get_parent())
-			elif vision_entity.size() > 0:
+			elif puppet_class.fraction == 3: # Must-not-look SCPs
+				if collider.get_node_or_null("PlayerModel/Puppet/SafeZone") != null:
+					if has_lookat_ik:
+						get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = collider.get_node("PlayerModel/Puppet/SafeZone").get_path()
+					else:
+						get_parent().get_parent().look_at(collider.get_node("PlayerModel/Puppet/SafeZone"))
+					looking_at_target = true
+				elif looking_at_target:
+					get_parent().get_parent().get_node("RayCast3D").rotation = Vector3.ZERO
+					if has_lookat_ik:
+						get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = ""
+					looking_at_target = false
+			elif vision_entity.size() > 0: # Release must-to-look SCPs
 				for entity in vision_entity:
 					entity.watching_puppets.clear()
 				vision_entity.clear()

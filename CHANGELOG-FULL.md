@@ -6,17 +6,17 @@
 - [ ] SCP-647
 - [ ] SCP-001 (by shaggydredlocks) event
 - [ ] Multiplayer (possibly)
+- [ ] Add generator task (hello Unstable Dimensions)
 
 ## v3.0.0
 
-- [x] Rework existing Maintenance zone (room3_pit will be temporarily removed)
-- [x] Add modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. ~~(you need to input seed, that contains "sl" keyword or be lucky)~~
-- [x] Reduce human classes and SCP-347 size to fit into a new Maintenance Zone
-- [ ] Add new item - Disarmer.
-- [ ] Add generator task (hello Unstable Dimensions)
-- [x] Really add an ability to disable music
-- [x] SCP-023 containment chamber in Maintenance Zone (both regular and SL version)
-- [ ] SCP-023 NPC + task.
+- Rework existing Maintenance zone (room3_pit will be temporarily removed)
+- Add modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. ~~(you need to input seed, that contains "sl" keyword or be lucky)~~
+- Reduce human classes and SCP-347 size to fit into a new Maintenance Zone
+- Really add an ability to disable music
+- SCP-023 containment chamber in Maintenance Zone (both regular and SL version)
+- SCP-023 NPC + task.
+- Added disarmer for SCP-914 craft (unusable, need to refine cube on Very Fine).
 
 ## v2.0.2 (2025.07.23)
 

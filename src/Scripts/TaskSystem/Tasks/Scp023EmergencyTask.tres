@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameTaskResource" load_steps=2 format=3 uid="uid://c41iccrenydj4"]
+
+[ext_resource type="Script" uid="uid://2412583x8gql" path="res://Scripts/TaskSystem/GameTaskResource.gd" id="1_brwyd"]
+
+[resource]
+script = ExtResource("1_brwyd")
+internal_name = "task_023_emergency"
+public_name = "TASK_023_EYES"
+required_group = &""
+metadata/_custom_type_script = "uid://2412583x8gql"
