@@ -8,13 +8,18 @@
 - [ ] Multiplayer (possibly)
 - [ ] Add generator task (hello Unstable Dimensions)
 
-## v3.0.0
+## v3.1.0 (2025.08.02)
+
+- Remove SCP:SL pre-14.0 rooms entirely because of licensing issues.
+- Added a tint to Credits screen
+
+## v3.0.0 (2025.08.01)
 
 - Rework existing Maintenance zone (room3_pit will be temporarily removed)
-- Add modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. ~~(you need to input seed, that contains "sl" keyword or be lucky)~~
+- Add modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. (removed in 3.1.0 because of licensing issues)
 - Reduce human classes and SCP-347 size to fit into a new Maintenance Zone
 - Really add an ability to disable music
-- SCP-023 containment chamber in Maintenance Zone (both regular and SL version)
+- SCP-023 containment chamber in Maintenance Zone (both regular and SL version (latter was removed in 3.1.0 because of licensing issues))
 - SCP-023 NPC + task.
 - Added disarmer for SCP-914 craft (unusable, need to refine cube on Very Fine).
 

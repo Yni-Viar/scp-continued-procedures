@@ -15,9 +15,6 @@ var map_seed: int = -1
 var ci_probability: int = -1
 ## Time limit enabled
 var time_limited: bool = true
-## If enabled, Maintenance Zone generic hallways will be
-## replaced with SL pre-14.0 ones.
-var basement_of_sl: bool = false
 ## End presets for game ##
 
 ## Enemy spawn timer
@@ -40,12 +37,6 @@ func _ready() -> void:
 	# Choose seed
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
-	else:
-		# Make 1/100 chance to see a SCP:SL easter egg.
-		basement_of_sl = rng.randi_range(1, 100) == 1
-	if basement_of_sl:
-		# Replace Maintenance Zone with 
-		$FacilityGenerator.rooms[1] = load("res://MapGen/MaintenanceZoneSl.tres")
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings

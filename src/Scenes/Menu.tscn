@@ -28,6 +28,22 @@ grow_vertical = 2
 texture = ExtResource("2_idohh")
 expand_mode = 1
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.056
+anchor_top = 0.099
+anchor_right = 0.056
+anchor_bottom = 0.099
+offset_left = -0.512001
+offset_top = -0.152008
+offset_right = 497.488
+offset_bottom = 132.848
+theme_override_fonts/font = ExtResource("5_idohh")
+theme_override_font_sizes/font_size = 64
+text = "SCP: Containment
+Procedures"
+
 [node name="Play" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -103,22 +119,58 @@ layout_mode = 2
 theme = ExtResource("2_syfuq")
 text = "ZEN_MODE"
 
-[node name="CreditsContainer" type="ScrollContainer" parent="."]
+[node name="Credits" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 48.0
+grow_horizontal = 0
+theme = ExtResource("2_syfuq")
+toggle_mode = true
+text = "CREDITS"
+
+[node name="LawRegulation" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.389
+anchor_top = 0.494
+anchor_right = 0.389
+anchor_bottom = 0.494
+offset_left = -64.128
+offset_top = -64.112
+offset_right = 63.872
+offset_bottom = 63.888
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsContainer" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = -1
+anchor_top = 0.086
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.271999
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsContainer2" type="ScrollContainer" parent="CreditsContainer"]
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.611
-anchor_top = 0.099
 anchor_right = 1.007
 anchor_bottom = 1.0
 offset_left = 0.127991
-offset_top = -0.152008
-offset_right = -8.06409
+offset_right = -8.06396
 grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("2_syfuq")
 
-[node name="CreditsLabel" type="Label" parent="CreditsContainer"]
+[node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2"]
 layout_mode = 2
 text = "Godot Engine:
 Copyright (c) 2014-present Godot Engine contributors 
@@ -137,12 +189,6 @@ Chaos insurgency models are made
 by PurpleGoop and rigged by DrPri
 Room textures by Foodeater / Jamie
 Model and textures license - CC-BY-SA 4.0
-------------------------
-SCP: Secret Laboratory old HCZ room models by
-Straditarion , made for SCP: Secret Laboratory. Licensed
-under CC-BY-SA 3.0.
-The models are modified by Yni Viar. Modifications are
-licensed under CC-BY-SA 4.0.
 ------------------------
 Light Containment Zone Ambient by Jacek \"Fragik\" Rogal
 Licensed under CC-BY-SA 4.0
@@ -188,50 +234,6 @@ SCP-983 by NekoChris
 (Licensed under SCP-Wiki CC-BY-SA 3.0)"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Credits" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -136.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = 48.0
-grow_horizontal = 0
-theme = ExtResource("2_syfuq")
-toggle_mode = true
-text = "CREDITS"
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.056
-anchor_top = 0.099
-anchor_right = 0.056
-anchor_bottom = 0.099
-offset_left = -0.512001
-offset_top = -0.152008
-offset_right = 375.488
-offset_bottom = 132.848
-theme_override_fonts/font = ExtResource("5_idohh")
-theme_override_font_sizes/font_size = 64
-text = "SCP: Containment
-Procedures"
-
-[node name="LawRegulation" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.389
-anchor_top = 0.494
-anchor_right = 0.389
-anchor_bottom = 0.494
-offset_left = -64.128
-offset_top = -64.112
-offset_right = 63.872
-offset_bottom = 63.888
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Tutorial" type="Window" parent="."]
 title = "Tutorial"
