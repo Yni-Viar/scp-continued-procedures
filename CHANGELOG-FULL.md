@@ -2,11 +2,14 @@
 
 ## Long-term plan
 - [ ] SCP-104
-- [ ] Story mode
 - [ ] SCP-647
-- [ ] SCP-001 (by shaggydredlocks) event
+- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 4.0 as a separate mode?)
 - [ ] Multiplayer (possibly)
 - [ ] Add generator task (hello Unstable Dimensions)
+
+## v4.0.0 (release won't be soon)
+- [x] Main Menu UI refresh
+- [ ] Story mode (long task)
 
 ## v3.1.0 (2025.08.02)
 

@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="2_syfuq"]
-[ext_resource type="Texture2D" uid="uid://cl0fdkqxf4660" path="res://UI/playbutton.png" id="4_idohh"]
+[ext_resource type="Texture2D" uid="uid://5h1b7i0j2rq2" path="res://UI/MainMenu/Modes/casualmode.png" id="5_3jcrr"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_idohh"]
-[ext_resource type="Texture2D" uid="uid://b4x7oa8dlypky" path="res://UI/lorebutton.png" id="5_wfhf6"]
 [ext_resource type="Texture2D" uid="uid://bmx074026q6dt" path="res://UI/MainMenu/MusicEnabled.png" id="6_3jcrr"]
+[ext_resource type="Texture2D" uid="uid://cpl6y2uxqdot7" path="res://UI/MainMenu/Modes/helpbutton.png" id="6_aobxe"]
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
 
 [node name="Menu" type="Control"]
@@ -31,11 +31,11 @@ expand_mode = 1
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.056
+anchor_left = 0.181
 anchor_top = 0.099
-anchor_right = 0.056
+anchor_right = 0.181
 anchor_bottom = 0.099
-offset_left = -0.512001
+offset_left = -0.512009
 offset_top = -0.152008
 offset_right = 497.488
 offset_bottom = 132.848
@@ -47,31 +47,61 @@ Procedures"
 [node name="Play" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.115
-anchor_top = 0.796
-anchor_right = 0.115
-anchor_bottom = 0.796
-offset_left = -100.48
-offset_top = -43.808
-offset_right = 35.52
-offset_bottom = 92.192
+anchor_left = 0.125
+anchor_top = 0.889
+anchor_right = 0.125
+anchor_bottom = 0.889
+offset_left = -128.0
+offset_top = -64.072
+offset_right = 128.0
+offset_bottom = 63.928
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_syfuq")
-texture_normal = ExtResource("4_idohh")
+texture_normal = ExtResource("5_3jcrr")
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.656
+anchor_top = 0.5
+anchor_right = 0.656
+anchor_bottom = 0.5
+offset_left = -79.936
+offset_top = -48.0
+offset_right = 80.064
+offset_bottom = 48.0
+text = "CASUAL_MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HelpButton" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.083
-anchor_top = 0.593
-anchor_right = 0.083
-anchor_bottom = 0.593
-offset_left = -63.616
-offset_top = -64.264
-offset_right = 64.384
-offset_bottom = 63.736
-texture_normal = ExtResource("5_wfhf6")
+anchor_left = 0.125
+anchor_top = 0.667
+anchor_right = 0.125
+anchor_bottom = 0.667
+offset_left = -128.0
+offset_top = -64.216
+offset_right = 128.0
+offset_bottom = 63.784
+texture_normal = ExtResource("6_aobxe")
+
+[node name="Label" type="Label" parent="HelpButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.672
+anchor_top = 0.469
+anchor_right = 0.672
+anchor_bottom = 0.469
+offset_left = -68.032
+offset_top = -44.032
+offset_right = 67.968
+offset_bottom = 43.968
+text = "HELP_BUTTON"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="EnableSound" type="TextureButton" parent="."]
 layout_mode = 1
@@ -92,15 +122,19 @@ texture_normal = ExtResource("6_3jcrr")
 [node name="GameSettings" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.333
-anchor_top = 0.821
-anchor_right = 0.333
-anchor_bottom = 0.821
-offset_left = -191.616
-offset_top = -84.008
-offset_right = 128.384
-offset_bottom = 107.992
+anchor_left = 0.382
+anchor_top = 0.874
+anchor_right = 0.382
+anchor_bottom = 0.874
+offset_left = -160.064
+offset_top = -73.352
+offset_right = 159.936
+offset_bottom = 73.648
 alignment = 1
+
+[node name="Info" type="Label" parent="GameSettings"]
+layout_mode = 2
+text = "GAME_SETTINGS_INFO"
 
 [node name="Seed" type="LineEdit" parent="GameSettings"]
 custom_minimum_size = Vector2(0, 48)
@@ -136,14 +170,14 @@ text = "CREDITS"
 [node name="LawRegulation" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.389
-anchor_top = 0.494
-anchor_right = 0.389
-anchor_bottom = 0.494
-offset_left = -64.128
-offset_top = -64.112
-offset_right = 63.872
-offset_bottom = 63.888
+anchor_left = 0.09
+anchor_top = 0.198
+anchor_right = 0.09
+anchor_bottom = 0.198
+offset_left = -63.68
+offset_top = -64.304
+offset_right = 64.32
+offset_bottom = 63.696
 grow_horizontal = 2
 grow_vertical = 2
 
