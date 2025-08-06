@@ -11,6 +11,7 @@ func _on_body_entered(body: Node3D) -> void:
 		if body.fraction == 0 && body.puppet_class.team == 3:
 			if !get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 				get_tree().root.get_node("Game/FoundationTask").trigger_event(2, load("res://Scripts/TaskSystem/Tasks/CIEmergencyTask.tres"))
+				get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").show()
 
 
 func _on_body_exited(body: Node3D) -> void:

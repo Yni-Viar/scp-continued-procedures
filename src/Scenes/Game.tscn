@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=36 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="14_x3xnh"]
 [ext_resource type="Texture2D" uid="uid://bsdsboenf6un3" path="res://Assets/HUD/Touch/inventory.png" id="15_8r6kd"]
+[ext_resource type="Theme" uid="uid://wed0ey45xt0t" path="res://UITheme_Elevator.tres" id="16_i4lct"]
 [ext_resource type="Texture2D" uid="uid://cuc1gixnu6inj" path="res://Assets/HUD/Touch/inventory_click.png" id="16_tfod6"]
 [ext_resource type="Texture2D" uid="uid://bru20wcu484vo" path="res://Assets/HUD/Touch/inventory_disabled.png" id="17_rajel"]
 [ext_resource type="Texture2D" uid="uid://bl0heaaasxj8g" path="res://Assets/HUD/Touch/call_mtf.png" id="18_rajel"]
@@ -26,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://cu0ojgep33hl5" path="res://Assets/HUD/Touch/use_914.png" id="22_i0vto"]
 [ext_resource type="Texture2D" uid="uid://dgim1llh2qq3l" path="res://Assets/HUD/Touch/use_914_click.png" id="23_3jf1l"]
 [ext_resource type="Texture2D" uid="uid://dsbo3crdre1v4" path="res://Assets/HUD/Touch/use_914_disabled.png" id="24_356ba"]
+[ext_resource type="Texture2D" uid="uid://b2lonnmtkdn4e" path="res://Assets/HUD/Touch/call_elevator.png" id="26_356ba"]
+[ext_resource type="Texture2D" uid="uid://cx0pyayxian80" path="res://Assets/HUD/Touch/call_elevator_click.png" id="27_i4lct"]
 
 [sub_resource type="Environment" id="Environment_mvdmi"]
 background_mode = 1
@@ -376,6 +379,88 @@ grow_vertical = 2
 theme = ExtResource("10_3so38")
 text = "SCP914_REFINE"
 
+[node name="ElevatorMode" type="Panel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.444
+anchor_right = 0.5
+anchor_bottom = 0.444
+offset_left = -400.0
+offset_top = -239.712
+offset_right = 400.0
+offset_bottom = 240.288
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Call" type="Button" parent="UI/ElevatorMode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.767
+anchor_right = 0.5
+anchor_bottom = 0.767
+offset_left = -192.0
+offset_top = -32.16
+offset_right = 192.0
+offset_bottom = 31.84
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("10_3so38")
+text = "ELEVATOR_CALL"
+
+[node name="Label" type="Label" parent="UI/ElevatorMode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.1
+anchor_right = 0.5
+anchor_bottom = 0.1
+offset_left = -384.0
+offset_top = -32.0
+offset_right = 384.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("9_bf53h")
+theme_override_font_sizes/font_size = 48
+text = "ELEVATOR_MGMT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor" type="SpinBox" parent="UI/ElevatorMode"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -32.0
+offset_right = 128.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("16_i4lct")
+theme_override_constants/buttons_width = 32
+max_value = 1.0
+rounded = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="UI/ElevatorMode"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.35
+anchor_right = 0.5
+anchor_bottom = 0.35
+offset_left = -192.0
+offset_top = -24.0
+offset_right = 192.0
+offset_bottom = 24.0
+text = "ELEVATOR_WHAT_FLOOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Inventory" parent="UI" instance=ExtResource("14_x3xnh")]
 visible = false
 layout_mode = 1
@@ -399,15 +484,14 @@ texture_normal = ExtResource("15_8r6kd")
 texture_pressed = ExtResource("16_tfod6")
 texture_hover = ExtResource("15_8r6kd")
 texture_disabled = ExtResource("17_rajel")
-texture_focused = ExtResource("15_8r6kd")
 
 [node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
 layout_mode = 2
 texture_normal = ExtResource("18_rajel")
 texture_pressed = ExtResource("19_vvhu1")
 texture_hover = ExtResource("18_rajel")
 texture_disabled = ExtResource("20_lbihj")
-texture_focused = ExtResource("18_rajel")
 
 [node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer"]
 visible = false
@@ -416,6 +500,14 @@ texture_normal = ExtResource("22_i0vto")
 texture_pressed = ExtResource("23_3jf1l")
 texture_hover = ExtResource("22_i0vto")
 texture_disabled = ExtResource("24_356ba")
+
+[node name="ElevatorButton" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("26_356ba")
+texture_pressed = ExtResource("27_i4lct")
+texture_hover = ExtResource("26_356ba")
+texture_disabled = ExtResource("20_lbihj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dahhg")

@@ -3,13 +3,20 @@
 ## Long-term plan
 - [ ] SCP-104
 - [ ] SCP-647
-- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 4.0 as a separate mode?)
+- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 4.0.0 (part 2) as a separate mode?)
 - [ ] Multiplayer (possibly)
 - [ ] Add generator task (hello Unstable Dimensions)
 
-## v4.0.0 (release won't be soon)
+## v4.0.0 (or 4.0.0 part 2, release won't be soon)
+- [ ] Story mode: lore (in progress)
+- [ ] Story mode: Pre-configured round mechanic
+- [ ] Story mode: Custom "escape" scenario - finish task.
+
+## v3.5.0 (or 4.0.0 part 1)
+- [x] Elevator support
+- [ ] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room (models are ready, to implement)
+- [ ] Move SCP-347 task into new sub-zone.
 - [x] Main Menu UI refresh
-- [ ] Story mode (long task)
 
 ## v3.1.0 (2025.08.02)
 

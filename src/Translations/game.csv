@@ -20,3 +20,6 @@ TASK_914_EXP_4,Retrieve information from SCP-914 by\nsetting a 3-paged SCP-914 d
 RESEARCH_ZONE,Research Zone,Исследовательская\nЗона
 MAINTENANCE_ZONE,Maintenance\nZone,Техническая\nЗона
 TASK_023_EYES,You need to replace SCP-023's eyes quickly.,Вы должны быстро заменить глаза SCP-023.
+ELEVATOR_MGMT,Elevator management,Управление лифтом
+ELEVATOR_WHAT_FLOOR,Choose your destination,Выберите желаемый этаж
+ELEVATOR_CALL,Call/Ride the elevator,Вызвать/поехать на лифте

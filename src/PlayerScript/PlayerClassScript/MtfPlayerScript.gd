@@ -22,6 +22,7 @@ func on_update_human(delta: float):
 			var collider = get_tree().get_first_node_in_group("ChaosInsurgency")
 			if collider == null && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 				get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
+				get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
 			else:
 				if collider is MovableNpc:
 					var puppet_class = collider.puppet_class
@@ -30,6 +31,7 @@ func on_update_human(delta: float):
 							get_parent().get_parent().follow_target = collider.get_path()
 	elif get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 		get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
+		get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
 
 
 func _on_attack_radius_body_entered(body: Node3D) -> void:
@@ -51,6 +53,7 @@ func _on_attack_radius_body_exited(body: Node3D) -> void:
 			if get_node_or_null(get_parent().get_parent().follow_target) == null:
 				if get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 					get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
+					get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
 
 func attack():
 	if attack_update_timer > 0:
