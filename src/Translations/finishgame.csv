@@ -3,6 +3,6 @@ GAME_WIN,YOU WIN,Победа!
 GAME_OVER,YOU LOSE,Поражение!
 GAME_WIN_1,You did all tasks. The Foundation is proud of you!,Вы выполнили все задачи. Фонд гордится Вами!
 GAME_OVER_1,You died. What a pity...,Вы умерли. Какая досада...
-GAME_OVER_2,You let SCPs escape. You will be demoted to Class-D personnel.,Вы позволили SCP выйти. Вы будете понижены до Класса Д.
+GAME_OVER_2,"You let SCPs escape. You will be demoted to Class-D personnel.\nTip: If you want to do SCP-347 task, go to Entrance Sub-zone.","Вы позволили SCP выйти. Вы будете понижены до Класса Д.\nПодсказка: если Вы хотите сделать задание с SCP-347, идите во Входную под-зону"
 GAME_OVER_3,You did not finish all the task in a work day.,Вы не успели сделать все задачи в рабочее время.
 GAME_OVER_4,You didn't change SCP-023's eyes in time.,Вы не успели заменить глаза SCP-023.

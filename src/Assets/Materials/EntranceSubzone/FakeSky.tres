@@ -1,0 +1,23 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://64pceyag8e5u"]
+
+[sub_resource type="Gradient" id="Gradient_sw50w"]
+offsets = PackedFloat32Array(0, 0.978125, 1)
+colors = PackedColorArray(0, 0.560784, 1, 1, 0.978125, 0.990392, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ft7as"]
+frequency = 0.0054
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qal2s"]
+seamless = true
+color_ramp = SubResource("Gradient_sw50w")
+noise = SubResource("FastNoiseLite_ft7as")
+
+[resource]
+resource_name = "Ceiling"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+albedo_texture = SubResource("NoiseTexture2D_qal2s")
+roughness = 0.5
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = SubResource("NoiseTexture2D_qal2s")

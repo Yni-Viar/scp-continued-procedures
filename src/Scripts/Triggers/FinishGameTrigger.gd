@@ -1,11 +1,12 @@
 extends Area3D
 
+@export var detect_scp347_with_mtf: bool = true
 var mtf_guarding: int = 0
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:
 		if body.puppet_class.puppet_class_name == "SCP-347":
-			if get_tree().get_node_count_in_group("MobileTaskForce") > 0 && mtf_guarding > 0:
+			if get_tree().get_node_count_in_group("MobileTaskForce") > 0 && mtf_guarding > 0 && detect_scp347_with_mtf:
 				get_tree().root.get_node("Game/FoundationTask").do_task("task_347")
 				body.queue_free()
 				get_tree().root.get_node("Game").despawn_wave(0)
