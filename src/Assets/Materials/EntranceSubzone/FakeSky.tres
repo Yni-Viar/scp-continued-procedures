@@ -19,5 +19,4 @@ albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
 albedo_texture = SubResource("NoiseTexture2D_qal2s")
 roughness = 0.5
 emission_enabled = true
-emission_energy_multiplier = 0.5
 emission_texture = SubResource("NoiseTexture2D_qal2s")

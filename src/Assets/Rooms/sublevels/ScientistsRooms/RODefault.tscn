@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://h54te7ycgcig"]
+
+[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_bqbul"]
+[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="2_xc118"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="3_2n8j7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5bsa"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5jofj"]
+material = SubResource("StandardMaterial3D_e5bsa")
+text = "[DATA REDACTED]"
+font = ExtResource("3_2n8j7")
+font_size = 32
+
+[node name="MeshInstance3D" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_bqbul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74937, -2.47104, -1.16241)
+
+[node name="laptop" parent="." instance=ExtResource("2_xc118")]
+transform = Transform3D(-0.999734, 0, -0.0230713, 0, 1, 0, 0.0230713, 0, -0.999734, 4.29808, -1.47104, -1.67947)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.97311, -7.59466)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_5jofj")

@@ -43,4 +43,6 @@ puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("2_iio3u"), ExtResou
 tasks = Array[ExtResource("10_jbef1")]([ExtResource("14_r6dwf"), ExtResource("15_0coki"), ExtResource("17_qyy85"), ExtResource("16_60025"), ExtResource("19_60025"), ExtResource("24_s78ub"), ExtResource("25_y38bq"), ExtResource("31_4yelm"), ExtResource("32_5ss25")])
 items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq"), ExtResource("6_y38bq"), ExtResource("7_hinnn"), ExtResource("8_jeue1"), ExtResource("9_pwoua"), ExtResource("10_mywb3")])
 wave_puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("18_0lfxp"), ExtResource("19_om1ka")])
+custom_left_scientists_offices = Dictionary[String, PackedScene]({})
+custom_right_scientists_offices = Dictionary[String, PackedScene]({})
 metadata/_custom_type_script = "uid://cgv4yjj6gyjc1"

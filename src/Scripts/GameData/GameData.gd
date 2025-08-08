@@ -11,4 +11,8 @@ class_name GameData
 ## All items.
 @export var items: Array[Item] = []
 ## Wave puppets
-@export var wave_puppet_classes: Array[PuppetClass]
+@export var wave_puppet_classes: Array[PuppetClass] = []
+## Custom left Scientist's offices (available since v3.5)
+@export var custom_left_scientists_offices: Dictionary[String, PackedScene] = {}
+## Custom right Scientist's offices (available since v3.5)
+@export var custom_right_scientists_offices: Dictionary[String, PackedScene] = {}

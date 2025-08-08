@@ -14,7 +14,9 @@
 
 ## v3.5.0 (or 4.0.0 part 1)
 - [x] Elevator support
-- [ ] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room (models are ready, to implement)
+- [ ] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room (need to connect facility with subzone with elevator)
+- [ ] Add scriptable researcher's offices (in progress)
+- [x] Change protagonist's spawn point.
 - [ ] Move SCP-347 task into new sub-zone.
 - [x] Main Menu UI refresh
 

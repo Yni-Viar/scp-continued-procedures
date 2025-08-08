@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=36 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -11,7 +11,6 @@
 [ext_resource type="Script" uid="uid://h8d12qstq0k3" path="res://Scripts/TaskSystem/GameTaskManager.gd" id="7_wxwew"]
 [ext_resource type="Resource" uid="uid://dtd6pwanbhy7j" path="res://MapGen/MaintenanceZone.tres" id="8_356ba"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="9_bf53h"]
-[ext_resource type="PackedScene" uid="uid://c5peq8bikxrsb" path="res://Assets/Rooms/sublevels/subl_Entrance.tscn" id="9_iyesh"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="10_3so38"]
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
 [ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/lcz_ambient.ogg" id="11_dahhg"]
@@ -90,9 +89,6 @@ script = ExtResource("7_wxwew")
 [node name="NPCs" type="Node3D" parent="."]
 
 [node name="Items" type="Node3D" parent="."]
-
-[node name="Node3D" parent="." instance=ExtResource("9_iyesh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 192, 128)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_mvdmi")
