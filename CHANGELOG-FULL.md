@@ -1,9 +1,14 @@
 # SCP: Containing Procedures (Reborn)
 
 ## Long-term plan
-- [ ] SCP-104
-- [ ] SCP-647
 - [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 4.0.0 (part 2) as a separate mode?)
+- [ ] SCP-003
+- [ ] SCP-010
+- [ ] SCP-104
+- [ ] SCP-217
+- [ ] SCP-647
+- [ ] SCP-864 (probably, latest Nalka version)
+- [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Multiplayer (possibly)
 - [ ] Add generator task (hello Unstable Dimensions)
 
@@ -19,6 +24,7 @@
 - [x] Change protagonist's spawn point.
 - [ ] Move SCP-347 task into new sub-zone.
 - [x] Main Menu UI refresh
+- [ ] Fix annoying bug on Android, when if you rotate screen, player began to move. (may be postponed to 4.0.0 part 2, but NOT later)
 
 ## v3.1.0 (2025.08.02)
 

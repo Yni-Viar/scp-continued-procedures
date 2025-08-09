@@ -27,7 +27,7 @@
 [ext_resource type="Resource" uid="uid://cdlwr1y5gkw5" path="res://Scripts/TaskSystem/Tasks/Scp173Task.tres" id="15_0coki"]
 [ext_resource type="Resource" uid="uid://uv6b74j6cpsr" path="res://Scripts/TaskSystem/Tasks/Scp812Task.tres" id="16_60025"]
 [ext_resource type="Resource" uid="uid://gu8sp1ix4rd0" path="res://Scripts/TaskSystem/Tasks/Scp266Task.tres" id="17_qyy85"]
-[ext_resource type="Resource" uid="uid://kt10qm1d2rht" path="res://PlayerScript/PlayerClassResources/MtfAgent.tres" id="18_0lfxp"]
+[ext_resource type="Resource" uid="uid://kt10qm1d2rht" path="res://PlayerScript/PlayerClassResources/MtfNtf.tres" id="18_0lfxp"]
 [ext_resource type="Resource" uid="uid://bl0x4f4crcrxt" path="res://Scripts/TaskSystem/Tasks/Scp347Task.tres" id="19_60025"]
 [ext_resource type="Resource" uid="uid://br4pxad71a6v3" path="res://PlayerScript/PlayerClassResources/ChaosTrooper.tres" id="19_om1ka"]
 [ext_resource type="Resource" uid="uid://b3lx3vafmkc7e" path="res://PlayerScript/PlayerClassResources/Scp023.tres" id="22_5ss25"]
