@@ -23,7 +23,7 @@ If you are using code for SCP Foundation usage or the project includes CC-BY-SA 
 
 1. Firstly, read the [Code of Conduct](./CODE-OF-CONDUCT.md).
 2. After you read and accept the terms, you can:
-  - Report a bug.
-  - Suggest a new SCP object (before you suggest, see [suggestion rules](./SUGGESTING-IDEAS.md))
-  - Suggest an own model for replacement of existing one. (e.g own SCP-023 model instead of bad quality 3-rd party one).
-  - Suggest an own audio (SFX, music) for addition/replacement into the game
+    - Report a bug.
+    - Suggest a new SCP object (before you suggest, see [suggestion rules](./SUGGESTING-IDEAS.md))
+    - Suggest an own model for replacement of existing one. (e.g own SCP-023 model instead of bad quality 3-rd party one).
+    - Suggest an own audio (SFX, music) for addition/replacement into the game
