@@ -1,7 +1,7 @@
 # SCP: Containing Procedures (Reborn)
 
 ## Long-term plan
-- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 4.0.0 (part 2) as a separate mode?)
+- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 5.0.0 as a separate mode?)
 - [ ] SCP-003
 - [ ] SCP-010
 - [ ] SCP-104
@@ -12,12 +12,12 @@
 - [ ] Multiplayer (possibly)
 - [ ] Add generator task (hello Unstable Dimensions)
 
-## v4.0.0 (or 4.0.0 part 2, release won't be soon)
+## v5.0.0 (Expansion update part 2, release won't be soon)
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 
-## v3.5.0 (or 4.0.0 part 1)
+## v4.0.0 (Expansion update part 1)
 - [x] Elevator support
 - [ ] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room (need to connect facility with subzone with elevator)
 - [ ] Add scriptable researcher's offices (in progress)
@@ -25,6 +25,7 @@
 - [ ] Move SCP-347 task into new sub-zone.
 - [x] Main Menu UI refresh
 - [ ] Fix annoying bug on Android, when if you rotate screen, player began to move. (may be postponed to 4.0.0 part 2, but NOT later)
+- [x] Add new human class - Agent. (currently looks like SCP: Unity guard)
 
 ## v3.1.0 (2025.08.02)
 
