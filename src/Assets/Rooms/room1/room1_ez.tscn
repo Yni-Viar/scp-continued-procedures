@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://c4kjg8vj7euky"]
+[gd_scene load_steps=44 format=4 uid="uid://c4kjg8vj7euky"]
 
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_srtgi"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_rk2gv"]
@@ -9,6 +9,14 @@
 [ext_resource type="PackedScene" uid="uid://cogri7pfu6a1e" path="res://Assets/OriginalModels/box.tscn" id="7_2815l"]
 [ext_resource type="LightmapGIData" uid="uid://chc2qomjklune" path="res://Assets/Rooms/room1/Lm/room1_ez.lmbake" id="8_2815l"]
 [ext_resource type="PackedScene" uid="uid://c5peq8bikxrsb" path="res://Assets/Rooms/sublevels/subl_Entrance.tscn" id="9_auprv"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="10_mcmt4"]
+[ext_resource type="PackedScene" uid="uid://b2r7tumbeonla" path="res://Assets/OriginalModels/elevator.tscn" id="11_drp0l"]
+[ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="11_gcdxs"]
+[ext_resource type="Texture2D" uid="uid://ttw8c15u0if6" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_Color.png" id="12_gkoav"]
+[ext_resource type="Script" uid="uid://7ag6n6s5rw1m" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="12_rglua"]
+[ext_resource type="Script" uid="uid://bti7y8cq2dfm4" path="res://Scripts/DoorSystem/DoorBase.gd" id="13_gcdxs"]
+[ext_resource type="Texture2D" uid="uid://c7v1ma1sf0n5h" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_NormalGL.png" id="13_rglua"]
+[ext_resource type="Texture2D" uid="uid://bf414e28ipiii" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_Roughness.png" id="14_gcdxs"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_auprv"]
 vertices = PackedVector3Array(-3.76981, -0.769568, -3.0086, -1.01981, -0.769568, -2.7586, -0.769813, -0.769568, -4.5086, -3.76981, -0.769568, -9.5086, 2.98019, -0.769568, -4.5086, 6.23019, -0.769568, -9.5086, 3.23019, -0.769568, 1.7414, 6.23019, -0.769568, 1.9914, -0.0198126, 1.23043, -3.5086, -0.0198126, 1.23043, 3.7414, 2.23019, 1.23043, 3.7414, 2.23019, 1.23043, -3.5086, 6.23019, -0.769568, 9.4914, 6.23019, -0.769568, 4.7414, 3.23019, -0.769568, 4.9914, -1.01981, -0.769568, 4.4914, -3.76981, -0.769568, 9.4914, 3.98019, 1.23043, 2.7414, 3.98019, 1.23043, 3.9914, 5.23019, 1.23043, 3.9914, 5.23019, 1.23043, 2.7414)
@@ -581,6 +589,139 @@ data = PackedVector3Array(7.0996, -2.1288, -10.2586, 3.9906, 5.13, -10.2533, 7.1
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_soiee"]
 data = PackedVector3Array(-0.16, 7.1959, 0.64, -0.16, -0.0134, -0.64, -0.16, 7.1959, -0.64, -0.16, 7.1959, 0.64, -0.16, -0.0134, 0.64, -0.16, -0.0134, -0.64, -0.32, 7.1959, 2.5599, -0.32, -0.0134, 0.64, -0.32, 7.1959, 0.64, -0.32, 7.1959, 2.5599, -0.32, -0.0134, 2.56, -0.32, -0.0134, 0.64, -0.32, 7.1959, -0.64, -0.32, -0.0134, -2.56, -0.32, 7.1959, -2.5345, -0.32, 7.1959, -0.64, -0.32, -0.0134, -0.64, -0.32, -0.0134, -2.56, -0.16, -0.0134, 0.64, -0.32, 7.1959, 0.64, -0.32, -0.0134, 0.64, -0.16, -0.0134, 0.64, -0.16, 7.1959, 0.64, -0.32, 7.1959, 0.64, -0.32, -0.0134, -0.64, -0.16, 7.1959, -0.64, -0.16, -0.0134, -0.64, -0.32, -0.0134, -0.64, -0.32, 7.1959, -0.64, -0.16, 7.1959, -0.64, -0.32, 7.1959, -2.5345, -0.32, -0.0134, -4.4545, -0.32, 7.1959, -4.4545, -0.32, 7.1959, -2.5345, -0.32, -0.0134, -2.56, -0.32, -0.0134, -4.4545, -0.16, -0.0134, -4.4545, -0.32, 7.1959, -4.4545, -0.32, -0.0134, -4.4545, -0.16, -0.0134, -4.4545, -0.16, 7.1959, -4.4545, -0.32, 7.1959, -4.4545, -0.32, 7.1959, -10.8596, -0.32, -0.0134, -12.7768, -0.32, 7.1959, -12.7768, -0.32, 7.1959, -10.8596, -0.32, -0.0134, -10.8596, -0.32, -0.0134, -12.7768, -0.32, -0.0134, -10.8596, -0.16, 7.1959, -10.8596, -0.16, -0.0134, -10.8596, -0.32, -0.0134, -10.8596, -0.32, 7.1959, -10.8596, -0.16, 7.1959, -10.8596, -0.16, 7.1959, -14.6968, -0.16, -0.0134, -15.9768, -0.16, 7.1959, -15.9768, -0.16, 7.1959, -14.6968, -0.16, -0.0134, -14.6968, -0.16, -0.0134, -15.9768, -0.32, 7.1959, -12.7769, -0.32, -0.0134, -14.6968, -0.32, 7.1959, -14.6968, -0.32, 7.1959, -12.7769, -0.32, -0.0134, -12.7768, -0.32, -0.0134, -14.6968, -0.32, 7.1959, -15.9768, -0.32, -0.0134, -17.8968, -0.32, 7.1959, -17.8968, -0.32, 7.1959, -15.9768, -0.32, -0.0134, -15.9768, -0.32, -0.0134, -17.8968, -0.16, -0.0134, -14.6968, -0.32, 7.1959, -14.6968, -0.32, -0.0134, -14.6968, -0.16, -0.0134, -14.6968, -0.16, 7.1959, -14.6968, -0.32, 7.1959, -14.6968, -0.32, -0.0134, -15.9768, -0.16, 7.1959, -15.9768, -0.16, -0.0134, -15.9768, -0.32, -0.0134, -15.9768, -0.32, 7.1959, -15.9768, -0.16, 7.1959, -15.9768)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uv1va"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_m3yji"]
+material = SubResource("StandardMaterial3D_uv1va")
+text = "RESEARCH_ZONE"
+font = ExtResource("10_mcmt4")
+font_size = 32
+depth = 0.01
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcmt4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_soiee"]
+material = SubResource("StandardMaterial3D_mcmt4")
+text = "EZ_RZ_SIGN"
+font = ExtResource("10_mcmt4")
+font_size = 32
+depth = 0.01
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig11j"]
+size = Vector3(18.6207, 6.99567, 20.3601)
+
+[sub_resource type="Resource" id="Resource_ig11j"]
+script = ExtResource("12_rglua")
+destination_point = "/root/Game/FacilityGenerator/room1_ez/RzElevPoint1"
+up_helper_point = ""
+down_helper_point = ""
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="Resource" id="Resource_kygly"]
+script = ExtResource("12_rglua")
+destination_point = "/root/Game/FacilityGenerator/room1_ez/RzElevPoint2"
+up_helper_point = ""
+down_helper_point = ""
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b1r8"]
+resource_name = "Wall"
+albedo_texture = ExtResource("12_gkoav")
+roughness_texture = ExtResource("14_gcdxs")
+normal_enabled = true
+normal_texture = ExtResource("13_rglua")
+uv1_scale = Vector3(3.2, 7.2, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig11j"]
+material = SubResource("StandardMaterial3D_6b1r8")
+size = Vector3(3.2, 7.2, 0.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kygly"]
+data = PackedVector3Array(-1.6, 3.6, 0.125, 1.6, 3.6, 0.125, -1.6, -3.6, 0.125, 1.6, 3.6, 0.125, 1.6, -3.6, 0.125, -1.6, -3.6, 0.125, 1.6, 3.6, -0.125, -1.6, 3.6, -0.125, 1.6, -3.6, -0.125, -1.6, 3.6, -0.125, -1.6, -3.6, -0.125, 1.6, -3.6, -0.125, 1.6, 3.6, 0.125, 1.6, 3.6, -0.125, 1.6, -3.6, 0.125, 1.6, 3.6, -0.125, 1.6, -3.6, -0.125, 1.6, -3.6, 0.125, -1.6, 3.6, -0.125, -1.6, 3.6, 0.125, -1.6, -3.6, -0.125, -1.6, 3.6, 0.125, -1.6, -3.6, 0.125, -1.6, -3.6, -0.125, 1.6, 3.6, 0.125, -1.6, 3.6, 0.125, 1.6, 3.6, -0.125, -1.6, 3.6, 0.125, -1.6, 3.6, -0.125, 1.6, 3.6, -0.125, -1.6, -3.6, 0.125, 1.6, -3.6, 0.125, -1.6, -3.6, -0.125, 1.6, -3.6, 0.125, 1.6, -3.6, -0.125, -1.6, -3.6, -0.125)
+
+[sub_resource type="Animation" id="Animation_wnfbl"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.44971, 2.34732, -1.6)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.45001, 2.34732, 1.6)
+
+[sub_resource type="Animation" id="Animation_guktx"]
+resource_name = "door_open"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.66053, 2.34732, -1.6, 1, 1, -4.66053, 2.34732, -4.71582)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.68719, 2.34732, 1.6, 1, 1, -4.68719, 2.34732, 4.71981)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_018lr"]
+_data = {
+&"RESET": SubResource("Animation_wnfbl"),
+&"door_open": SubResource("Animation_guktx")
+}
+
+[sub_resource type="Animation" id="Animation_4vesk"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.55565, 2.34732, -1.6)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.54996, 2.34732, 1.6)
+
+[sub_resource type="Animation" id="Animation_stpe6"]
+resource_name = "door_open"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.55565, 2.34732, -1.6, 1, 1, -4.55565, 2.34732, -4.78011)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.54996, 2.34732, 1.6, 1, 1, -4.54996, 2.34732, 4.64823)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rl2fh"]
+_data = {
+&"RESET": SubResource("Animation_4vesk"),
+&"door_open": SubResource("Animation_stpe6")
+}
+
 [node name="room1_ez" type="StaticBody3D"]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
@@ -588,16 +729,19 @@ navigation_mesh = SubResource("NavigationMesh_auprv")
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16508, -1.19374, 7.65616)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_auprv")
 skeleton = NodePath("")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mcmt4")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -4.67981, -1.19374, -7.668)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_m3yji")
 skeleton = NodePath("")
 
@@ -618,12 +762,6 @@ shape = SubResource("ConcavePolygonShape3D_m3yji")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -4.67981, -1.19374, -7.668)
 shape = SubResource("ConcavePolygonShape3D_soiee")
-
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
@@ -665,3 +803,130 @@ interior = true
 
 [node name="sublevel_Entrance_Subzone" parent="." instance=ExtResource("9_auprv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 339.008, 0)
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
+navigation_layers = 3
+start_position = Vector3(0, 0, 0.75)
+end_position = Vector3(0, 0, -0.75)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 6.82313, 4.15162, -0.781462)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_m3yji")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.68273, 0, 3.19807e-07, 0, 2.68273, 0, -3.19807e-07, 0, 2.68273, 1.0533, 3.22253, -10.0809)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_soiee")
+
+[node name="RzElevPoint1" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87951, 2.33381, -0.0206722)
+
+[node name="ElevatorTrigger" type="Area3D" parent="RzElevPoint1"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("11_gcdxs")
+elevator_path = NodePath("../../elevator")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RzElevPoint1/ElevatorTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63234, -0.0104065, 0.00109851)
+shape = SubResource("BoxShape3D_ig11j")
+
+[node name="elevator" parent="." instance=ExtResource("11_drp0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97978, 341.379, -0.0206722)
+floors = Array[ExtResource("12_rglua")]([SubResource("Resource_ig11j"), SubResource("Resource_kygly")])
+elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/room1_ez/ElevatorDoors/Down", "/root/Game/FacilityGenerator/room1_ez/ElevatorDoors/Up")
+speed = 32.0
+current_floor = 1
+
+[node name="RzElevPoint2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97978, 341.379, -0.0206722)
+
+[node name="ElevatorTrigger" type="Area3D" parent="RzElevPoint2"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("11_gcdxs")
+elevator_path = NodePath("../../elevator")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RzElevPoint2/ElevatorTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63234, -0.0104065, 0.00109851)
+shape = SubResource("BoxShape3D_ig11j")
+
+[node name="ElevatorDoors" type="Node3D" parent="."]
+
+[node name="Up" type="Node3D" parent="ElevatorDoors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 339.137, 0)
+script = ExtResource("13_gcdxs")
+can_open = false
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ElevatorDoors/Up"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.44971, 2.34732, -1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ElevatorDoors/Up/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorDoors/Up/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ElevatorDoors/Up"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.45001, 2.34732, 1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ElevatorDoors/Up/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorDoors/Up/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="ElevatorDoors/Up"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32038, 2.86273, 0)
+max_distance = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ElevatorDoors/Up"]
+libraries = {
+&"": SubResource("AnimationLibrary_018lr")
+}
+
+[node name="Down" type="Node3D" parent="ElevatorDoors"]
+script = ExtResource("13_gcdxs")
+can_open = false
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="ElevatorDoors/Down"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.55565, 2.34732, -1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ElevatorDoors/Down/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorDoors/Down/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="ElevatorDoors/Down"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.54996, 2.34732, 1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ElevatorDoors/Down/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorDoors/Down/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="ElevatorDoors/Down"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.22474, 2.86273, 0)
+max_distance = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ElevatorDoors/Down"]
+libraries = {
+&"": SubResource("AnimationLibrary_rl2fh")
+}
+
+[connection signal="body_entered" from="RzElevPoint1/ElevatorTrigger" to="RzElevPoint1/ElevatorTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="RzElevPoint1/ElevatorTrigger" to="RzElevPoint1/ElevatorTrigger" method="_on_body_exited"]
+[connection signal="body_entered" from="RzElevPoint2/ElevatorTrigger" to="RzElevPoint2/ElevatorTrigger" method="_on_body_entered"]
+[connection signal="body_exited" from="RzElevPoint2/ElevatorTrigger" to="RzElevPoint1/ElevatorTrigger" method="_on_elevator_trigger_body_exited"]

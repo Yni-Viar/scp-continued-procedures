@@ -394,7 +394,7 @@ offset_bottom = 240.288
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Call" type="Button" parent="UI/ElevatorMode"]
+[node name="ElevatorCall" type="Button" parent="UI/ElevatorMode"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -522,6 +522,8 @@ bus = &"Music"
 [connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
 [connection signal="drag_ended" from="UI/Scp914Panel/Scp914Mode" to="UI" method="_on_scp_914_mode_drag_ended"]
 [connection signal="pressed" from="UI/Scp914Panel/Refine" to="UI" method="_on_refine_pressed"]
+[connection signal="pressed" from="UI/ElevatorMode/ElevatorCall" to="UI" method="_on_elevator_call_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/InventoryButton" to="UI" method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/CallMtfButton" to="UI" method="_on_call_mtf_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/Scp914Button" to="UI" method="_on_scp_914_button_pressed"]
+[connection signal="pressed" from="UI/HBoxContainer/ElevatorButton" to="UI" method="_on_elevator_button_pressed"]

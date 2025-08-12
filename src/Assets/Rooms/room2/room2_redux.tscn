@@ -660,16 +660,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_n4wu4")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, -10.2136)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
-
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
 
@@ -727,3 +717,13 @@ bounce_indirect_energy = 2.0
 interior = true
 texel_scale = 0.5
 light_data = ExtResource("7_qfl03")
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
+start_position = Vector3(0, 0, 0.75)
+end_position = Vector3(0, 0, -0.75)
+
+[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, -10.2136)
+start_position = Vector3(0, 0, 0.75)
+end_position = Vector3(0, 0, -0.75)

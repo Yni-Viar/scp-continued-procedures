@@ -173,19 +173,18 @@ func interact_down(player):
 	if dir < floors.size() && !is_moving:
 		call("call_elevator", dir) #move the elevator down.
 
-func on_player_area_body_entered(body):
+func _on_player_area_body_entered(body: Node3D) -> void:
 	if body is MovableNpc || body is Pickable:
 		call("add_object", body.get_path())
 
-func on_player_area_body_exited(body):
+
+func _on_player_area_body_exited(body: Node3D) -> void:
 	if body is MovableNpc || body is Pickable:
 		call("remove_object", body.get_path())
 
+
 func add_object(body):
 	if get_node(body) is MovableNpc:
-		if get_node(body).is_player:
-			get_tree().root.get_node("Game/UI/HBoxContainer/ElevatorButton")
-			get_tree().root.get_node("Game/UI/HBoxContainer/ElevatorButton").show()
 		changed_launch_state.connect(get_node(body).on_moving_platform)
 	objects_to_teleport.append(body)
 

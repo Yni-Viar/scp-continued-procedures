@@ -103,23 +103,23 @@ shape = SubResource("ConcavePolygonShape3D_mmsqm")
 
 [node name="NavigationLink3D" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
+start_position = Vector3(0, 0, 0.5)
+end_position = Vector3(0, 0, -0.5)
 
 [node name="NavigationLink3D4" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.769, -10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
+start_position = Vector3(0, 0, 0.5)
+end_position = Vector3(0, 0, -0.5)
 
 [node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.24, -0.769, 0)
-start_position = Vector3(-1, 0, 0)
-end_position = Vector3(1, 0, 0)
+start_position = Vector3(-0.5, 0, 0)
+end_position = Vector3(0.5, 0, 0)
 
 [node name="NavigationLink3D3" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, -0.769, 0)
-start_position = Vector3(-1, 0, 0)
-end_position = Vector3(1, 0, 0)
+start_position = Vector3(-0.5, 0, 0)
+end_position = Vector3(0.5, 0, 0)
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false

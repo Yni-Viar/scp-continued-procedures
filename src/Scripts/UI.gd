@@ -1,7 +1,11 @@
 extends Control
 ## Made by Yni, licensed under MIT License.
+## Uses third-party code. See code comment.
 
 var exiting: bool = false
+var current_elevator: ElevatorSystem = null
+var input_amount: Dictionary[int, Vector2] = {}
+var dragged: bool = false
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():
@@ -9,8 +13,11 @@ var exiting: bool = false
 #
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#
+#func _physics_process(delta):
+	#if input_time_record:
+		#input_timer += delta
+		#if Input.is_action_pressed("click"):
+			#
 
 
 #func _on_seed_text_changed(new_text):
@@ -50,16 +57,62 @@ func _on_foundation_task_task_done() -> void:
 
 
 func _on_inventory_button_pressed() -> void:
-	if $Inventory.visible:
-		$Inventory.hide()
-	else:
-		$Inventory.show()
+	$ElevatorMode.hide()
+	$Scp914Panel.hide()
+	$Inventory.visible = !$Inventory.visible
 
 
 func _on_playing_area_gui_input(event: InputEvent) -> void:
-	if event.is_action_pressed("click"):
+	if Settings.touchscreen:
+# BEGIN https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+# Copyright (c) 2014-present Godot Engine contributors.
+# Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+# Licensed under MIT license
+		var finger_count := input_amount.size()
+
+		if finger_count == 0:
+			# No fingers => Accept press.
+			if event is InputEventScreenTouch:
+				if event.pressed:
+					# A finger started touching.
+
+					input_amount[event.index] = event.position
+
+		elif finger_count == 1:
+			# One finger => For rotating around X and Y.
+			# Accept one more press, unpress or drag.
+			if event is InputEventScreenTouch:
+				if event.pressed:
+					# One more finger started touching.
+
+					# Reset the base state to the only current and the new fingers.
+					var temp: Array = [input_amount.keys()[0], input_amount.values()[0]]
+					input_amount = {
+						temp[0]: temp[1],
+						event.index: event.position
+					}
+				else:
+					if input_amount.has(event.index):
+						# Only touching finger released.
+# END https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+						if dragged:
+							dragged = false
+						else:
+							get_tree().root.get_node("Game/StaticPlayer").interact("Point")
+# BEGIN https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+# Copyright (c) 2014-present Godot Engine contributors.
+# Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+# Licensed under MIT license
+						input_amount.clear()
+
+			elif event is InputEventScreenDrag:
+				if input_amount.has(event.index):
+					# Touching finger dragged.
+# END https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+					dragged = true
+					get_tree().root.get_node("Game/StaticPlayer").rotate_player(event)
+	elif Input.is_action_just_pressed("click"):
 		get_tree().root.get_node("Game/StaticPlayer").interact("Point")
-		Input.action_release("click")
 
 
 func _on_call_mtf_button_pressed() -> void:
@@ -76,4 +129,18 @@ func _on_refine_pressed() -> void:
 
 
 func _on_scp_914_button_pressed() -> void:
+	$Inventory.hide()
+	$ElevatorMode.hide()
 	$Scp914Panel.visible = !$Scp914Panel.visible
+
+
+func _on_elevator_call_pressed() -> void:
+	if current_elevator == null:
+		return
+	current_elevator.call_elevator(int($ElevatorMode/Floor.value))
+
+
+func _on_elevator_button_pressed() -> void:
+	$Inventory.hide()
+	$Scp914Panel.hide()
+	$ElevatorMode.visible = !$ElevatorMode.visible

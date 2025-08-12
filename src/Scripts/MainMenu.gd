@@ -23,7 +23,7 @@ func _enter_tree() -> void:
 		match Settings.region:
 			"ru_RU":
 				# New upcoming Russian law.
-				$LawRegulation.texture = load("res://UI/MainMenu/LawRegulation/RU.png")
+				$Logo.texture = load("res://UI/MainMenu/LawRegulation/RU.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -113,11 +113,6 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_irgxd")
 skeleton = NodePath("")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
-
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
@@ -193,3 +188,9 @@ mesh = SubResource("TextMesh_626l1")
 
 [node name="entityspawn" type="Marker3D" parent="." groups=["Scp023Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.11216, -0.744537, 0)
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
+navigation_layers = 3
+start_position = Vector3(0, 0, 0.5)
+end_position = Vector3(0, 0, -0.5)

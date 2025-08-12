@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://baskn56ygmotl" path="res://MapGen/Resources/MaintenanceZone/room2C.tres" id="2_bt36h"]
 [ext_resource type="Resource" uid="uid://d0so8w0byu3rf" path="res://MapGen/Resources/MaintenanceZone/room4.tres" id="3_8nfe0"]
 [ext_resource type="Resource" uid="uid://d0en6563qst02" path="res://MapGen/Resources/MaintenanceZone/room1.tres" id="4_3un6p"]
-[ext_resource type="Resource" uid="uid://bgvcokfa5iie5" path="res://MapGen/Resources/MaintenanceZone/room1_playerspawn.tres" id="5_2euw7"]
+[ext_resource type="Resource" uid="uid://bgvcokfa5iie5" path="res://MapGen/Resources/MaintenanceZone/exit1_gateb.tres" id="5_2euw7"]
 [ext_resource type="Resource" uid="uid://bw58osyjan7h8" path="res://MapGen/Resources/MaintenanceZone/cont1_023.tres" id="7_7ovle"]
 [ext_resource type="Resource" uid="uid://0kdbhka5yv2n" path="res://MapGen/Resources/MaintenanceZone/cont1_812.tres" id="7_bt36h"]
 [ext_resource type="Resource" uid="uid://ch0bxsompxx5d" path="res://MapGen/Resources/MaintenanceZone/room2_walkway.tres" id="9_bt36h"]

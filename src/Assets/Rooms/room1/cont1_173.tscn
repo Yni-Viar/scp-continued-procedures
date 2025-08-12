@@ -116,8 +116,8 @@ skeleton = NodePath("")
 [node name="NavigationLink3D" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
 navigation_layers = 3
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
+start_position = Vector3(0, 0, 0.562)
+end_position = Vector3(0, 0, -0.562)
 
 [node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.10735, -0.0570238)
@@ -131,7 +131,7 @@ navigation_layers = 4
 start_position = Vector3(0.964633, 2.20508, 1.58786)
 
 [node name="Marker3D" type="Marker3D" parent="." groups=["Scp173Spawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.2832, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38526, -3.2832, -5.72607)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

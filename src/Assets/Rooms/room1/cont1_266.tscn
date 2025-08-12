@@ -9,8 +9,8 @@
 [ext_resource type="Script" uid="uid://dp5xbq0ddvcx1" path="res://Scripts/Triggers/Scp266TaskTrigger.gd" id="7_idrcq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ywj7"]
-vertices = PackedVector3Array(-7.91106, -0.770643, -8.8476, -7.91106, -0.770643, -2.3476, -5.16106, -0.770643, -2.5976, -5.16106, -0.770643, -8.8476, 4.83894, 6.47936, -8.8476, 4.83894, 6.22936, -0.597595, 9.33894, 6.47936, -0.597595, 9.33894, 6.47936, -8.8476, -3.41106, 6.47936, 1.4024, -3.41106, 6.47936, 9.6524, 9.33894, 6.47936, 9.6524, 9.33894, 6.47936, 1.1524, -4.16106, -0.770643, 5.1524, -7.91106, -0.770643, 5.6524, -7.91106, -0.770643, 9.6524, 9.33894, -0.770643, 1.4024, -4.16106, -0.770643, 1.4024, 9.33894, -0.770643, 9.6524)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(14, 13, 12), PackedInt32Array(12, 16, 15), PackedInt32Array(15, 17, 12), PackedInt32Array(12, 17, 14)]
+vertices = PackedVector3Array(-7.91106, -0.770643, -8.8476, -7.91106, -0.770643, -2.3476, -4.41106, -0.270643, -2.5976, -5.11106, -0.770643, -3.8476, -5.57772, -0.770643, -2.51426, -4.16106, -0.0206428, -0.597595, 9.33894, 6.47936, -0.597595, 5.21394, 6.47936, -1.1976, 5.28894, 6.47936, -0.597595, 9.33894, 6.47936, -8.8476, 5.02644, 6.47936, -8.8476, -3.59856, -0.0206428, -8.8476, -5.03606, -0.770643, -8.8476, -3.41106, 6.47936, 1.4024, -3.41106, 6.47936, 9.6524, 9.33894, 6.47936, 9.6524, 9.33894, 6.47936, 1.1524, -4.16106, -0.770643, 5.1524, -7.91106, -0.770643, 5.6524, -7.91106, -0.770643, 9.6524, 9.33894, -0.770643, 1.4024, -4.16106, -0.770643, 1.4024, 9.33894, -0.770643, 9.6524)
+polygons = [PackedInt32Array(2, 4, 3), PackedInt32Array(3, 4, 1), PackedInt32Array(3, 1, 0), PackedInt32Array(6, 8, 7), PackedInt32Array(7, 8, 5), PackedInt32Array(7, 5, 2), PackedInt32Array(0, 12, 3), PackedInt32Array(3, 12, 11), PackedInt32Array(3, 11, 2), PackedInt32Array(2, 11, 10), PackedInt32Array(2, 10, 7), PackedInt32Array(7, 10, 9), PackedInt32Array(7, 9, 6), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 16), PackedInt32Array(19, 18, 17), PackedInt32Array(17, 21, 20), PackedInt32Array(20, 22, 17), PackedInt32Array(17, 22, 19)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jx83s"]
 _surfaces = [{
@@ -156,28 +156,16 @@ affect_navigation_mesh = true
 avoidance_enabled = false
 
 [node name="NavigationLink3D" type="NavigationLink3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.37821, 6.52479, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.37821, 6.52479, 0.215493)
 navigation_layers = 2
-start_position = Vector3(0, 0, -1.565)
-end_position = Vector3(0, 0, 2.35)
+start_position = Vector3(0, 0, -0.835)
+end_position = Vector3(0, 0, 1)
 
 [node name="NavigationLink3D3" type="NavigationLink3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52811, -0.773682, -1.80502)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52811, -0.773682, 1.52196)
 navigation_layers = 2
-start_position = Vector3(0, 0, -1.565)
-end_position = Vector3(0, 0, 8.976)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.01744, 6.7307, -3.61371)
-navigation_layers = 2
-start_position = Vector3(-0.442559, -7.49562, -1.77919)
-end_position = Vector3(11.3855, -0.264587, -1.81359)
-
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
+start_position = Vector3(0, 0, -4)
+end_position = Vector3(0, 0, 4)
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
@@ -254,6 +242,12 @@ script = ExtResource("7_idrcq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scp266Task"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27475, -0.924316, -0.10974)
 shape = SubResource("BoxShape3D_0xjkt")
+
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
+navigation_layers = 3
+start_position = Vector3(0, 0, 0.625)
+end_position = Vector3(0, 0, -0.625)
 
 [connection signal="body_entered" from="Scp266Task" to="Scp266Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp266Task" to="Scp266Task" method="_on_body_exited"]

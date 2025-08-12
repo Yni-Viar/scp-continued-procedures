@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b8nf0gvd62sem" path="res://Assets/HUD/room1_270.png" id="2_t18mj"]
 [ext_resource type="Texture2D" uid="uid://b7pofqfywnjd4" path="res://Assets/HUD/room1_180.png" id="3_yyb42"]
 [ext_resource type="Texture2D" uid="uid://bmbn1pgwlfdri" path="res://Assets/HUD/room1.png" id="4_kgef7"]
-[ext_resource type="PackedScene" uid="uid://c1o5pgod7o4k0" path="res://Assets/Rooms/room1/exit1.tscn" id="5_v4efj"]
+[ext_resource type="PackedScene" uid="uid://c1o5pgod7o4k0" path="res://Assets/Rooms/room1/exit1_gatec.tscn" id="5_v4efj"]
 [ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="6_xh1og"]
 
 [resource]

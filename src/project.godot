@@ -70,6 +70,7 @@ WaveSpawn=""
 ReflectionProbe="Reflection Probes"
 Scp914=""
 Scp023Spawn=""
+AgentSpawn=""
 
 [input]
 

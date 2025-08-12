@@ -6,7 +6,7 @@ class_name Scp347PuppetScript
 enum Mood {NORMAL, TRYING_TO_ESCAPE}
 
 @export var mood: Mood = Mood.NORMAL
-var mood_timer: float = 30.0
+var mood_timer: float = 55.0
 var blink_timer: float = 0.0
 ## Shows or hides infrared scan of SCP-347
 var infrared_visibility: bool = true:

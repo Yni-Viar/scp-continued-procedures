@@ -8,6 +8,7 @@ var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
 var target_puppet_path: String = ""
 
+
 const RAY_LENGTH = 512
 
 # Called when the node enters the scene tree for the first time.
@@ -17,20 +18,9 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		if Input.is_action_pressed("look"):
-			# https://kidscancode.org/godot_recipes/3.x/3d/camera_gimbal/index.html
-			rotate_object_local(Vector3.UP, event.relative.x * mouse_sensitivity * 0.05)
-			var y_rotation = clamp(event.relative.y, -30, 30)
-			$Head.rotate_object_local(Vector3.RIGHT, y_rotation * mouse_sensitivity * 0.05)
-			$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
-			#rotation.y -= event.relative.x * mouse_sensitivity * 0.05
-			#rotation.x -= event.relative.y * mouse_sensitivity * 0.05
-			#rotation_degrees.y = clamp(rotation_degrees.y, -90, 90)
+			rotate_player(event)
 	if event is InputEventScreenDrag:
-		# https://kidscancode.org/godot_recipes/3.x/3d/camera_gimbal/index.html
-		rotate_object_local(Vector3.UP, event.relative.x * mouse_sensitivity * 0.05)
-		var y_rotation = clamp(event.relative.y, -30, 30)
-		$Head.rotate_object_local(Vector3.RIGHT, y_rotation * mouse_sensitivity * 0.05)
-		$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
+		rotate_player(event)
 	if event.is_action_pressed("scroll_up"):
 		scroll_factor += 0.125
 		scroll_factor = clamp(scroll_factor, 1.0, 8.0)
@@ -44,8 +34,6 @@ func _input(event: InputEvent) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	#if Input.is_action_just_pressed("click"):
-		#interact("Point")
 	if !target_puppet_path.is_empty():
 		if get_node_or_null(target_puppet_path) == null:
 			get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
@@ -112,6 +100,16 @@ func interact(value: String) -> void:
 				else:
 					get_node(target_puppet_path).set_target_position(result["position"])
 
+func rotate_player(event: InputEvent):
+	# Yni: Necessary to fix annoying bug on Android, when if you rotate screen, player began to move.
+	# https://kidscancode.org/godot_recipes/3.x/3d/camera_gimbal/index.html
+	rotate_object_local(Vector3.UP, event.relative.x * mouse_sensitivity * 0.05)
+	var y_rotation = clamp(event.relative.y, -30, 30)
+	$Head.rotate_object_local(Vector3.RIGHT, y_rotation * mouse_sensitivity * 0.05)
+	$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
+	#rotation.y -= event.relative.x * mouse_sensitivity * 0.05
+	#rotation.x -= event.relative.y * mouse_sensitivity * 0.05
+	#rotation_degrees.y = clamp(rotation_degrees.y, -90, 90)
 
 func _on_optimizator_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:

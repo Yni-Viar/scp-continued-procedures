@@ -1,11 +1,17 @@
 # SCP: Containing Procedures (Reborn)
 
+## ⚠️About post-Expansion update!
+
+I lost interest to SCP community again, but I want to finish this game at Expansion update.
+Next short-term updates will be 5.x.x versions.
+This is **NOT PERMANENT!!!**
+6.x.x will wait for months and months (until I return again to SCP community)... ☹️
+
 ## Long-term plan
 - [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 5.0.0 as a separate mode?)
 - [ ] SCP-003
 - [ ] SCP-010
 - [ ] SCP-104
-- [ ] SCP-217
 - [ ] SCP-647
 - [ ] SCP-864 (probably, latest Nalka version)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
@@ -19,13 +25,15 @@
 
 ## v4.0.0 (Expansion update part 1)
 - [x] Elevator support
-- [ ] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room (need to connect facility with subzone with elevator)
-- [ ] Add scriptable researcher's offices (in progress)
+- [x] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
+- [ ] Add scriptable researcher's offices (in progress, also add Yni office)
+- [ ] Add female researchers from MakeHuman + add Octobergine Avo office
 - [x] Change protagonist's spawn point.
-- [ ] Move SCP-347 task into new sub-zone.
+- [x] Move SCP-347 task to Maintenance Zone Gate B.
 - [x] Main Menu UI refresh
-- [ ] Fix annoying bug on Android, when if you rotate screen, player began to move. (may be postponed to 4.0.0 part 2, but NOT later)
+- [x] Fix annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
 - [x] Add new human class - Agent. (currently looks like SCP: Unity guard)
+- [ ] Fix navigation mesh connection between rooms (idea: use example from `https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_connecting_navmesh.html`)
 
 ## v3.1.0 (2025.08.02)
 
