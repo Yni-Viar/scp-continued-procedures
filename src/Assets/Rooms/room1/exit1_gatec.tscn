@@ -175,9 +175,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00610352, 2.46216, 1.55603)
 blend_distance = 0.4
 size = Vector3(14.7349, 7.14404, 17.031)
 interior = true
-
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.562)
-end_position = Vector3(0, 0, -0.562)

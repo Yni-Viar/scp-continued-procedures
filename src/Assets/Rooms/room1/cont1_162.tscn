@@ -175,12 +175,6 @@ vertices = PackedVector3Array(-3.09982, 0, 4.99822, -3.09982, 0, 3.85083, 4.5303
 affect_navigation_mesh = true
 avoidance_enabled = false
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.562)
-end_position = Vector3(0, 0, -0.562)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_rvhuw")

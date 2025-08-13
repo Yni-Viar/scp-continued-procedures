@@ -243,11 +243,5 @@ script = ExtResource("7_idrcq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27475, -0.924316, -0.10974)
 shape = SubResource("BoxShape3D_0xjkt")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.625)
-end_position = Vector3(0, 0, -0.625)
-
 [connection signal="body_entered" from="Scp266Task" to="Scp266Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp266Task" to="Scp266Task" method="_on_body_exited"]

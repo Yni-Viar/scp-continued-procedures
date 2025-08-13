@@ -804,12 +804,6 @@ interior = true
 [node name="sublevel_Entrance_Subzone" parent="." instance=ExtResource("9_auprv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 339.008, 0)
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.75)
-end_position = Vector3(0, 0, -0.75)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 6.82313, 4.15162, -0.781462)
 visibility_range_end = 64.0

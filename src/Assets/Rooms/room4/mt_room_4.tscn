@@ -97,26 +97,6 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_irgxd")
 skeleton = NodePath("")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
-
-[node name="NavigationLink3D4" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.769, -10.24)
-start_position = Vector3(0, 0, 1)
-end_position = Vector3(0, 0, -1)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.24, -0.769, 0)
-start_position = Vector3(-1, 0, 0)
-end_position = Vector3(1, 0, 0)
-
-[node name="NavigationLink3D3" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, -0.769, 0)
-start_position = Vector3(-1, 0, 0)
-end_position = Vector3(1, 0, 0)
-
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1

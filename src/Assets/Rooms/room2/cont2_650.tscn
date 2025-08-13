@@ -10,8 +10,8 @@
 [ext_resource type="LightmapGIData" uid="uid://bfxk33pu40ede" path="res://Assets/Rooms/room2/Lm/cont2_650.lmbake" id="8_uv1va"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
-vertices = PackedVector3Array(3.98563, -0.769568, 7.7414, 3.98563, -0.769568, 4.7414, 3.48563, -0.769568, 4.4914, -3.76437, -0.769568, 9.4914, 3.48563, -0.769568, 7.9914, 3.48563, -0.769568, -9.7586, -3.76437, -0.769568, -9.7586, 3.48563, -0.769568, 9.7414, 4.73563, -0.769568, 7.9914, 6.23563, -0.769568, 6.7414, 4.73563, -0.769568, 4.4914, 6.23563, -0.769568, -2.0086, 4.73563, -0.769568, -9.5086, 4.73563, -0.769568, 9.4914, 9.23563, -0.769568, 9.4914, 9.23563, -0.769568, 6.9914, 9.48563, -0.769568, -2.2586, 9.23563, -0.769568, -9.5086, 7.23563, 1.23043, 5.9914, 9.23563, 1.23043, 5.9914, 9.48563, 1.23043, 2.7414, 9.23563, 1.23043, -1.2586, 7.23563, 1.23043, -1.2586)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 2, 6), PackedInt32Array(6, 2, 3), PackedInt32Array(4, 7, 3), PackedInt32Array(8, 0, 9), PackedInt32Array(9, 0, 1), PackedInt32Array(9, 1, 10), PackedInt32Array(9, 10, 11), PackedInt32Array(11, 10, 12), PackedInt32Array(8, 9, 13), PackedInt32Array(13, 9, 15), PackedInt32Array(13, 15, 14), PackedInt32Array(16, 11, 17), PackedInt32Array(17, 11, 12), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 22)]
+vertices = PackedVector3Array(3.98563, -0.769568, 7.7414, 3.98563, -0.769568, 4.7414, 3.48563, -0.769568, 4.4914, -3.76437, -0.769568, 9.4914, 3.48563, -0.769568, 7.9914, 3.48563, -0.769568, -9.7586, -3.76437, -0.769568, -9.7586, 3.48563, -0.769568, 9.7414, 7.73563, -0.769568, 8.2414, 9.48563, -0.769568, 7.9914, 9.23563, -0.769568, 6.9914, 6.23563, -0.769568, 6.7414, 6.23563, -0.769568, -2.0086, 4.73563, -0.769568, -7.5086, 4.73563, -0.769568, 4.4914, 9.48563, -0.769568, -2.2586, 9.23563, -0.769568, -7.5086, 7.23563, 1.23043, 5.9914, 9.23563, 1.23043, 5.9914, 9.48563, 1.23043, 2.7414, 9.23563, 1.23043, -1.2586, 7.23563, 1.23043, -1.2586)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 2, 6), PackedInt32Array(6, 2, 3), PackedInt32Array(4, 7, 3), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 0), PackedInt32Array(11, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 13), PackedInt32Array(14, 11, 1), PackedInt32Array(1, 11, 0), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(20, 17, 21)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vnjjb"]
 _surfaces = [{
@@ -658,15 +658,19 @@ skeleton = NodePath("")
 [node name="Table" parent="NavigationRegion3D" instance=ExtResource("6_1vd86")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.38003, -0.247156, 2.47762)
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 0.625)
-end_position = Vector3(0, 0, -0.625)
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26622, 0.363186)
+height = 8.0
+vertices = PackedVector3Array(4.2667, 0, 9.70871, 4.20358, 0, 8.16169, 6.33883, 0, 8.19012, 9.48584, 0, 8.34767, 9.47014, 0, 9.87024)
+affect_navigation_mesh = true
+avoidance_enabled = false
 
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, -10.2136)
-start_position = Vector3(0, 0, 0.562)
-end_position = Vector3(0, 0, -0.562)
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27374, 0)
+height = 8.0
+vertices = PackedVector3Array(4.05584, 0, -10.2997, 9.83525, 0, -10.3316, 9.92037, 0, -8.12703, 4.07002, 0, -8.11994)
+affect_navigation_mesh = true
+avoidance_enabled = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

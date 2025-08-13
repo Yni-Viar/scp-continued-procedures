@@ -477,11 +477,5 @@ interior = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("ConcavePolygonShape3D_kevxb")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.625)
-end_position = Vector3(0, 0, -0.625)
-
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
 [connection signal="body_exited" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_exited"]

@@ -8,8 +8,8 @@
 [ext_resource type="LightmapGIData" uid="uid://cud8niyltgnro" path="res://Assets/Rooms/room2/Lm/room2_walkway_redux.lmbake" id="6_2i7p4"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(-6.27106, -0.769568, -9.5086, -6.27106, -0.769568, 9.4914, 6.47894, -0.769568, 9.4914, 6.47894, -0.769568, -9.5086)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+vertices = PackedVector3Array(3.72894, -0.769568, 8.7414, 6.22894, -0.769568, 8.7414, 6.47894, -0.769568, 7.9914, -3.77106, -0.769568, 8.7414, -3.52106, -0.769568, 9.7414, 3.47894, -0.769568, 9.7414, 3.72894, -0.769568, -8.7586, 3.47894, -0.769568, -9.7586, -3.52106, -0.769568, -9.7586, 6.22894, -0.769568, -8.7586, -3.77106, -0.769568, -8.7586, -6.27106, -0.769568, 8.7414, -6.27106, -0.769568, -8.7586)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 0), PackedInt32Array(8, 7, 6), PackedInt32Array(6, 9, 2), PackedInt32Array(8, 6, 10), PackedInt32Array(10, 6, 2), PackedInt32Array(10, 2, 3), PackedInt32Array(10, 3, 11), PackedInt32Array(2, 0, 3), PackedInt32Array(11, 12, 10)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7e3t8"]
 _surfaces = [{
@@ -637,6 +637,34 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_kfnw8")
 skeleton = NodePath("")
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.29374, 0)
+height = 8.0
+vertices = PackedVector3Array(-7.01544, 0, 9.15859, -3.99928, 0, 9.11942, -3.97556, 0, 10.2563, -7.01931, 0, 10.2581)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.28297, 0)
+height = 8.0
+vertices = PackedVector3Array(3.99158, 0, 9.17818, 3.98303, 0, 10.1904, 7.10751, 0, 10.2006, 7.08607, 0, 9.19776)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -1.29374, 0)
+height = 8.0
+vertices = PackedVector3Array(-7.06972, 0, 9.21769, -3.97523, 0, 9.25686, -3.97556, 0, 10.2563, -7.06162, 0, 10.2612)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D4" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -1.28297, 0)
+height = 8.0
+vertices = PackedVector3Array(3.99308, 0, 9.1801, 3.98303, 0, 10.1904, 7.00481, 0, 10.204, 7.00924, 0, 9.16051)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_osqes")
@@ -678,13 +706,3 @@ bounce_indirect_energy = 2.0
 interior = true
 texel_scale = 0.5
 light_data = ExtResource("6_2i7p4")
-
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 0.75)
-end_position = Vector3(0, 0, -0.75)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, -10.2136)
-start_position = Vector3(0, 0, 0.75)
-end_position = Vector3(0, 0, -0.75)

@@ -368,16 +368,6 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_5k2e4")
 skeleton = NodePath("")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 0.5)
-end_position = Vector3(0, 0, -0.5)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, -0.769, 0)
-start_position = Vector3(-0.562, 0, 0)
-end_position = Vector3(0.563, 0, 0)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_knu6h")

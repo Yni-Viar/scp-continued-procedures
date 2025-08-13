@@ -15,7 +15,7 @@ This is **NOT PERMANENT!!!**
 - [ ] SCP-647
 - [ ] SCP-864 (probably, latest Nalka version)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
-- [ ] Multiplayer (possibly)
+- [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
 
 ## v5.0.0 (Expansion update part 2, release won't be soon)
@@ -27,13 +27,13 @@ This is **NOT PERMANENT!!!**
 - [x] Elevator support
 - [x] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
 - [ ] Add scriptable researcher's offices (in progress, also add Yni office)
-- [ ] Add female researchers from MakeHuman + add Octobergine Avo office
+- [ ] Add female researchers from MakeHuman + add Octobergine's office
 - [x] Change protagonist's spawn point.
 - [x] Move SCP-347 task to Maintenance Zone Gate B.
 - [x] Main Menu UI refresh
 - [x] Fix annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
 - [x] Add new human class - Agent. (currently looks like SCP: Unity guard)
-- [ ] Fix navigation mesh connection between rooms (idea: use example from `https://docs.godotengine.org/en/stable/tutorials/navigation/navigation_connecting_navmesh.html`)
+- [x] Fix navigation mesh connection between rooms
 
 ## v3.1.0 (2025.08.02)
 

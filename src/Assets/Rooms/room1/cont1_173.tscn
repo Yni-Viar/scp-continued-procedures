@@ -113,12 +113,6 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_bj2f8")
 skeleton = NodePath("")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.562)
-end_position = Vector3(0, 0, -0.562)
-
 [node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.10735, -0.0570238)
 bidirectional = false

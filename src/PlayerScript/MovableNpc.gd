@@ -217,7 +217,6 @@ func target_follow():
 ## MUST be called by moving platform when starts or ends moving.
 func on_moving_platform(start: bool):
 	platform_moving = start
-	print(platform_moving)
 
 ## Wander implementation
 func wander(delta: float):

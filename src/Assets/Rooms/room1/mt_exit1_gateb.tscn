@@ -231,12 +231,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.31429, -0.000290036, 0.090
 [node name="entityspawn5" type="Marker3D" parent="EntitySpawner"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.49436, -0.000290036, 0.090184)
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-navigation_layers = 3
-start_position = Vector3(0, 0, 0.562)
-end_position = Vector3(0, 0, -0.562)
-
 [connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
 [connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]
 [connection signal="body_entered" from="IntruderCheck" to="IntruderCheck" method="_on_body_entered"]

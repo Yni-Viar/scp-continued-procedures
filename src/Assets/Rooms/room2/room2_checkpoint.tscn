@@ -183,13 +183,3 @@ light_data = ExtResource("5_invu1")
 transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 10.0068, 4.15162, 0.0379491)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_54lxd")
-
-[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, 10.24)
-start_position = Vector3(0, 0, 0.5)
-end_position = Vector3(0, 0, -0.5)
-
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.768606, -10.2136)
-start_position = Vector3(0, 0, 0.5)
-end_position = Vector3(0, 0, -0.5)

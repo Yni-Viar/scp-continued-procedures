@@ -110,6 +110,10 @@ locale/translations=PackedStringArray("res://Translations/menu.en.translation", 
 3d_navigation/layer_3="Special"
 3d_navigation/layer_4="SCP-023"
 
+[navigation]
+
+3d/default_edge_connection_margin=1.5
+
 [physics]
 
 common/physics_ticks_per_second=30
