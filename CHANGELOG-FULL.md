@@ -17,23 +17,26 @@ This is **NOT PERMANENT!!!**
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
+- [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
 
 ## v5.0.0 (Expansion update part 2, release won't be soon)
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 
-## v4.0.0 (Expansion update part 1)
-- [x] Elevator support
-- [x] New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
-- [ ] Add scriptable researcher's offices (in progress, also add Yni office)
-- [ ] Add female researchers from MakeHuman + add Octobergine's office
-- [x] Change protagonist's spawn point.
-- [x] Move SCP-347 task to Maintenance Zone Gate B.
-- [x] Main Menu UI refresh
-- [x] Fix annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
-- [x] Add new human class - Agent. (currently looks like SCP: Unity guard)
-- [x] Fix navigation mesh connection between rooms
+## v4.0.0 (Expansion update part 1, release will be soon)
+- Elevator support
+- New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
+- Add scriptable researcher's offices + add Yni office (with returned Internal Eternal easter egg)
+- Add Site Director Octobergine Avo + office.
+- Change protagonist's spawn point.
+- Move SCP-347 task to Maintenance Zone Gate B.
+- Main Menu UI refresh
+- Fix annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
+- Add new human class - Agent. (currently looks like SCP: Unity guard)
+- Fix navigation mesh connection between rooms
+- Add second SCP-173 variation - the model will be randomly selected at the round start (between original and SCP:Unity model)
+- Add new Main Menu theme.
 
 ## v3.1.0 (2025.08.02)
 

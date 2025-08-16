@@ -7,6 +7,7 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT}
 
+@export var enable_secondary_state: bool = true
 @export var secondary_state: SecondaryState = SecondaryState.NONE
 
 var cuffed_players: Array[MovableNpc] = []
@@ -45,21 +46,22 @@ func _physics_process(delta: float) -> void:
 			States.RUNNING:
 				if !get_node("AnimationTree").get("parameters/state_machine/blend_amount") + 0.00001 > 1:
 					call("set_state", "state_machine", "blend_amount", lerp(get_node("AnimationTree").get("parameters/state_machine/blend_amount"), 1.0, get_parent().get_parent().character_speed * delta))
-		match secondary_state:
-			SecondaryState.NONE:
-				if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") - 0.00001 < 0:
-					call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 0.0, get_parent().get_parent().character_speed * delta))
-			SecondaryState.ITEM:
-				call("set_state", "secondary_state", "transition_request", "item")
-			SecondaryState.CUFFED:
-				call("set_state", "secondary_state", "transition_request", "cuffed")
-			SecondaryState.JAILBIRD_ATTACK:
-				call("set_state", "secondary_state", "transition_request", "jailbird_attack")
-			SecondaryState.INTERACT:
-				call("set_state", "secondary_state", "transition_request", "interact")
-		if secondary_state != SecondaryState.NONE:
-			if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") + 0.00001 > 1:
-				call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 1.0, get_parent().get_parent().character_speed * delta))
+		if enable_secondary_state:
+			match secondary_state:
+				SecondaryState.NONE:
+					if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") - 0.00001 < 0:
+						call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 0.0, get_parent().get_parent().character_speed * delta))
+				SecondaryState.ITEM:
+					call("set_state", "secondary_state", "transition_request", "item")
+				SecondaryState.CUFFED:
+					call("set_state", "secondary_state", "transition_request", "cuffed")
+				SecondaryState.JAILBIRD_ATTACK:
+					call("set_state", "secondary_state", "transition_request", "jailbird_attack")
+				SecondaryState.INTERACT:
+					call("set_state", "secondary_state", "transition_request", "interact")
+			if secondary_state != SecondaryState.NONE:
+				if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") + 0.00001 > 1:
+					call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 1.0, get_parent().get_parent().character_speed * delta))
 	
 	## Look at enemy
 	if active_puppets.size() > 0 && state == States.IDLE:

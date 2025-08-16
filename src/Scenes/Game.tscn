@@ -13,7 +13,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="9_bf53h"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="10_3so38"]
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
-[ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/lcz_ambient.ogg" id="11_dahhg"]
+[ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/Third_party/lcz_ambient.ogg" id="11_dahhg"]
 [ext_resource type="Script" uid="uid://dxam3jgydqblf" path="res://Scripts/FPSCounter.gd" id="13_acvyw"]
 [ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="14_x3xnh"]

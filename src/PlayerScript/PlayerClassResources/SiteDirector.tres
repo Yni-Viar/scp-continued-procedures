@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="PuppetClass" load_steps=3 format=3 uid="uid://ckwnekm2c0qy5"]
+
+[ext_resource type="PackedScene" uid="uid://b6tb6ku23yquw" path="res://PlayerScript/PlayerClassPrefab/Characters/OctobergineAvo.tscn" id="1_irtv1"]
+[ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="2_4ess3"]
+
+[resource]
+script = ExtResource("2_4ess3")
+puppet_class_name = "SITE_DIRECTOR"
+speed = 10.0
+prefab = ExtResource("1_irtv1")
+spawn_point_group = "SiteDirectorSpawn"
+initial_amount = 1
+automatic = true
+footstep_sounds = {
+"run": PackedStringArray("res://Sounds/Character/Human/Step/Run1.ogg", "res://Sounds/Character/Human/Step/Run2.ogg", "res://Sounds/Character/Human/Step/Run3.ogg", "res://Sounds/Character/Human/Step/Run4.ogg", "res://Sounds/Character/Human/Step/Run5.ogg", "res://Sounds/Character/Human/Step/Run6.ogg", "res://Sounds/Character/Human/Step/Run7.ogg", "res://Sounds/Character/Human/Step/Run8.ogg"),
+"walk": PackedStringArray("res://Sounds/Character/Human/Step/Step1.ogg", "res://Sounds/Character/Human/Step/Step2.ogg", "res://Sounds/Character/Human/Step/Step3.ogg", "res://Sounds/Character/Human/Step/Step4.ogg", "res://Sounds/Character/Human/Step/Step5.ogg", "res://Sounds/Character/Human/Step/Step6.ogg", "res://Sounds/Character/Human/Step/Step7.ogg", "res://Sounds/Character/Human/Step/Step8.ogg")
+}
+fraction = 0
+apply_height_bugfix = false
+enable_wander = false
+health = Array[float]([100.0, 10.0, 50.0])
+team = 1
+enable_avoidance = true
+spawn_on_start = true
+puppet_navigation_layers = 1
+enable_ik = true

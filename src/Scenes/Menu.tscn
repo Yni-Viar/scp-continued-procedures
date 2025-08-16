@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=13 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
 [ext_resource type="Texture2D" uid="uid://dssg1kbhm5lsn" path="res://UI/MainMenu/Modes/helpbutton_click.png" id="8_sjh0l"]
 [ext_resource type="Texture2D" uid="uid://cjb5vwpp8o0ug" path="res://icon_192_foreground.png" id="10_sjh0l"]
+[ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -251,8 +252,10 @@ Licensed under SCP-Wiki CC-BY-SA 3.0
 PDA item - Model and textures by Shadowscale
 Licensed under SCP-Wiki CC-BY-SA 3.0
 -----------------------
-Agent model uses SCP: Unity guard model with MTF animations.
-SCP Security Guard - Shadowscale (model, textures),
+Agent model uses SCP: Unity guard
+model with MTF animations.
+SCP Security Guard -
+Shadowscale (model, textures),
 Shakles (rig, animation)
 Licensed under SCP-Wiki CC-BY-SA 3.0
 -----------------------
@@ -270,6 +273,13 @@ licensed under CC-BY-4.0
 Couch by J-Toastie [CC-BY 3.0]
 (https://creativecommons.org/licenses/by/3.0/)
 via Poly Pizza (https://poly.pizza/m/obMPe0AheB)
+------------------------
+Site Director Octobergine Avo model
+was created with MakeHuman.
+MakeHuman content is licensed under CC0.
+The model also included
+sweater by Mindfront (Sweden)
+which is licensed under CC BY 4.0
 ------------------------
 Mentioned SCP objects:
 SCP-023 by Pig_catapult
@@ -314,6 +324,12 @@ text = "HELP_TASKS"
 [node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "HELP_EVENTS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_qki4b")
+volume_db = -8.226
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
