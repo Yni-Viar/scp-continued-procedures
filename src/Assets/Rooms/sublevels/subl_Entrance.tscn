@@ -524,13 +524,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.8552, -1.24029, -34.1601)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1936, -1.24029, -18.9156)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 23.9929, 12.562, -28.8475)
+transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 23.9929, 8.86234, -28.8475)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_wmmhx")
 skeleton = NodePath("../NavigationRegion3D/ProtagonistROffice")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 24.5671, 5.98043, -28.8475)
+transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 24.5671, 4.37331, -28.8475)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_1e74e")
 skeleton = NodePath("../NavigationRegion3D/ProtagonistROffice")

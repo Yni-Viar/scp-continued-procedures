@@ -94,7 +94,7 @@ script = ExtResource("7_wxwew")
 environment = SubResource("Environment_mvdmi")
 
 [node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 210.0
+wait_time = 240.0
 one_shot = true
 
 [node name="UI" type="Control" parent="."]

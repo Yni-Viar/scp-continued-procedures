@@ -74,8 +74,9 @@ func _on_facility_generator_generated() -> void:
 	spawn_puppets()
 	$FoundationTask.initialize()
 	$UI._on_foundation_task_task_done()
+	# Spawn SCP-347 agent, if there is a task
 	if get_node("FoundationTask").has_task("task_347"):
-		spawn_wave_entity(0)
+		spawn_wave_entity(2)
 	await get_tree().create_timer(15.0).timeout
 	if ci_probability < 0:
 		ci_probability = rng.randi_range(0, 1)
@@ -135,7 +136,7 @@ func spawn_wave_entity(wave_type: int):
 				wavenpc.puppet_class = gamedata.wave_puppet_classes[1]
 				wavenpc.add_to_group("ChaosInsurgency")
 			2:
-				wavenpc.puppet_class = gamedata.wave_puppet_classes[3]
+				wavenpc.puppet_class = gamedata.wave_puppet_classes[2]
 		spawn.get_child(i).add_child(wavenpc)
 	for i in range(how_much_spawn):
 		for node in spawn.get_child(i).get_children():
