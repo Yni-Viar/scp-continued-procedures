@@ -25,7 +25,11 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Improve Maintenance Zone graphics.
 
-## v4.0.0 (Expansion update part 1, release will be soon)
+## v4.1.0
+- [x] Add omnidot plush to Yni Viar's room
+- [x] Remove omnidot plush from items and replace with Knitted sphere
+
+## v4.0.0 (Expansion update part 1, 2025.08.18)
 - Elevator support
 - New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
 - Added scriptable researcher's offices + add Yni office (with returned Internal Eternal easter egg)
