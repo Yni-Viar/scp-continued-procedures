@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://3nk4aude758p"]
+[gd_scene load_steps=16 format=4 uid="uid://3nk4aude758p"]
 
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_oo7ax"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_2i7p4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="4_tg3nw"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="5_kfnw8"]
 [ext_resource type="LightmapGIData" uid="uid://cud8niyltgnro" path="res://Assets/Rooms/room2/Lm/room2_walkway_redux.lmbake" id="6_2i7p4"]
+[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="6_yjocq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
 vertices = PackedVector3Array(3.72894, -0.769568, 8.7414, 6.22894, -0.769568, 8.7414, 6.47894, -0.769568, 7.9914, -3.77106, -0.769568, 8.7414, -3.52106, -0.769568, 9.7414, 3.47894, -0.769568, 9.7414, 3.72894, -0.769568, -8.7586, 3.47894, -0.769568, -9.7586, -3.52106, -0.769568, -9.7586, 6.22894, -0.769568, -8.7586, -3.77106, -0.769568, -8.7586, -6.27106, -0.769568, 8.7414, -6.27106, -0.769568, -8.7586)
@@ -665,32 +666,26 @@ vertices = PackedVector3Array(3.99308, 0, 9.1801, 3.98303, 0, 10.1904, 7.00481, 
 affect_navigation_mesh = true
 avoidance_enabled = false
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("6_yjocq")]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 6.85559, 3.84897, -5.17092)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("6_yjocq")]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 6.85559, 3.84897, 5.0206)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("6_yjocq")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -6.82295, 3.84897, 5.0206)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("6_yjocq")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -6.82295, 3.84897, -5.17092)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_osqes")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.384909, 5.97135, 7.10308)
-light_energy = 4.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.36588, 5.97135, -5.15522)
-light_energy = 4.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0472341, 2.343, -0.0816641)

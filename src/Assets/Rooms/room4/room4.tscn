@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://b2058uf8i0kt0"]
+[gd_scene load_steps=10 format=4 uid="uid://b2058uf8i0kt0"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_m518o"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_mmsqm"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="3_nnxjk"]
 [ext_resource type="LightmapGIData" uid="uid://x8jbgbucbi22" path="res://Assets/Rooms/room4/Lm/room4.lmbake" id="4_mmsqm"]
+[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="4_nnxjk"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ijhca"]
 vertices = PackedVector3Array(-3.4894, -0.769568, 9.7469, 3.2606, -0.769568, 9.7469, 3.2606, -0.769568, 6.9969, -3.4894, -0.769568, 6.7469, 6.7606, -0.769568, 3.4969, 7.0106, -0.769568, -3.2531, 3.2606, -0.769568, -7.0031, -3.4894, -0.769568, -6.7531, -6.7394, -0.769568, 3.4969, 9.7606, -0.769568, 3.4969, 9.7606, -0.769568, -3.2531, -6.9894, -0.769568, -3.2531, 3.2606, -0.769568, -9.7531, -3.4894, -0.769568, -9.7531, -9.7394, -0.769568, -3.2531, -9.7394, -0.769568, 3.4969)
@@ -97,52 +98,26 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_nnxjk")
 skeleton = NodePath("")
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("4_nnxjk")]
+transform = Transform3D(6.18173e-08, -0.707107, 0.707107, -1, -4.37114e-08, 4.37114e-08, -7.10543e-15, -0.707107, -0.707107, -5.65706, 3.87832, 5.77367)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("4_nnxjk")]
+transform = Transform3D(-6.25483e-15, -0.707107, -0.707107, -1, -4.37114e-08, 4.37114e-08, -6.18173e-08, 0.707107, -0.707107, 5.66995, 3.87832, 5.77367)
+
+[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("4_nnxjk")]
+transform = Transform3D(-6.18173e-08, 0.707107, -0.707107, -1, -4.37114e-08, 4.37114e-08, 8.95695e-15, 0.707107, 0.707107, 5.66995, 3.87832, -5.78754)
+
+[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("4_nnxjk")]
+transform = Transform3D(8.10636e-15, 0.707107, 0.707107, -1, -4.37114e-08, 4.37114e-08, 6.18173e-08, -0.707107, 0.707107, -5.65706, 3.87832, -5.78753)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_mmsqm")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -5.33719, 5.971, 0)
-light_energy = 2.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.971, 5.98023)
-light_energy = 2.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 5.971, -5.32232)
-light_energy = 2.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 5.14428, 5.971, 0.128605)
-light_energy = 2.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.343, 0)

@@ -3,3 +3,4 @@
 [node name="NavigationObstacle3D" type="NavigationObstacle3D"]
 height = 5.1
 vertices = PackedVector3Array(-10.5482, 0, -15.2951, 11.052, 0, -15.1068, 10.9505, 0, -16.8022, -10.5229, 0, -16.4466)
+affect_navigation_mesh = true

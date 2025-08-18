@@ -1,13 +1,15 @@
-[gd_scene load_steps=9 format=4 uid="uid://bioti3gaqj0t8"]
+[gd_scene load_steps=11 format=4 uid="uid://bioti3gaqj0t8"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_r8il1"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_uuvbx"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_ag52p"]
+[ext_resource type="PackedScene" uid="uid://l6v51fn3hbsv" path="res://Assets/ExternalModels/industrial_wall_lamp_light.tscn" id="4_n71rt"]
 [ext_resource type="LightmapGIData" uid="uid://cyj2bs35pf8ga" path="res://Assets/Rooms/room1/Lm/cont1_testroom.lmbake" id="4_uuvbx"]
+[ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="5_eiihm"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ywj7"]
-vertices = PackedVector3Array(-3.66346, -0.770391, 0.72853, -3.41346, -0.770391, 1.72853, 2.08654, -0.770391, 1.72853, -6.91346, -0.770391, -6.27147, -6.91346, -0.770391, 0.72853, 2.08654, -0.770391, -6.27147, 4.08654, -0.770391, 0.47853, 8.58654, -0.770391, 0.47853, 8.58654, -0.770391, -6.27147, 4.08654, -0.770391, -6.27147, 4.08654, -0.770391, 2.47853, 2.58654, -0.770391, 2.72853, 2.58654, -0.770391, 9.72853, 8.58654, -0.770391, 9.47853, 2.08654, -0.770391, 2.47853, -3.66346, -0.770391, 2.72853, -6.91346, -0.770391, 2.72853, -6.91346, -0.770391, 9.72853)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(0, 4, 3), PackedInt32Array(2, 0, 5), PackedInt32Array(5, 0, 3), PackedInt32Array(9, 8, 6), PackedInt32Array(6, 8, 7), PackedInt32Array(10, 6, 7), PackedInt32Array(12, 11, 10), PackedInt32Array(12, 10, 13), PackedInt32Array(13, 10, 7), PackedInt32Array(2, 14, 1), PackedInt32Array(1, 14, 15), PackedInt32Array(17, 16, 15), PackedInt32Array(14, 11, 15), PackedInt32Array(15, 11, 12), PackedInt32Array(15, 12, 17)]
+vertices = PackedVector3Array(-0.43736, -0.770391, -5.04423, -0.68736, -0.770391, -6.29423, -3.93736, -0.770391, -6.29423, -4.18736, -0.770391, -5.04423, -3.68736, -0.770391, 0.705772, -6.93736, -0.770391, -5.29423, -6.93736, -0.770391, 0.705772, -3.43736, -0.770391, 1.70577, 2.06264, -0.770391, 1.70577, 2.06264, -0.770391, -5.29423, 4.06264, -0.770391, 2.45577, 3.56264, -0.770391, 2.70577, 7.31264, -0.770391, 3.95577, 7.56264, -0.770391, 3.45577, 8.56264, -0.770391, 3.45577, 8.56264, -0.770391, -6.29423, 4.06264, -0.770391, -6.29423, 2.06264, -0.770391, 2.45577, 2.56264, -0.770391, 2.70577, -4.18736, -0.770391, 4.20577, -6.93736, -0.770391, 4.20577, -6.93736, -0.770391, 9.70577, 2.56264, -0.770391, 9.70577, 7.31264, -0.770391, 9.70577)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 4), PackedInt32Array(7, 4, 8), PackedInt32Array(8, 4, 0), PackedInt32Array(8, 0, 9), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(13, 10, 14), PackedInt32Array(14, 10, 16), PackedInt32Array(14, 16, 15), PackedInt32Array(7, 8, 17), PackedInt32Array(17, 18, 7), PackedInt32Array(7, 18, 19), PackedInt32Array(21, 20, 19), PackedInt32Array(18, 22, 19), PackedInt32Array(19, 22, 21), PackedInt32Array(11, 12, 18), PackedInt32Array(18, 12, 23), PackedInt32Array(18, 23, 22)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gh4iw"]
 _surfaces = [{
@@ -99,48 +101,47 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ag52p")
 skeleton = NodePath("")
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(-4.37114e-08, 0, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 1.91069e-15, -7.68736, 0.257013, 8.47168)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -0.0269699, 4.96849, 1.98633)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -1.96506, 4.22998, -7.0177)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(-4.37114e-08, 1.06581e-14, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 1.06581e-14, -7.67309, 4.22998, -3.08029)
+
+[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, -1, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -8.74228e-08, 9.32701, 4.06828, 2.44472)
+
+[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("4_n71rt")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, -1, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -8.74228e-08, 9.32701, 4.06828, -4.22333)
+
+[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.01008, -1.26767, 2.90064)
+
+[node name="steel_frame_shelves_01_2k2" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.01008, -1.26767, -6.41658)
+
+[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29191, -1.26767, -6.41658)
+
+[node name="steel_frame_shelves_01_2k5" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.44249, -1.26767, 5.4709)
+
+[node name="steel_frame_shelves_01_2k6" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.44249, -1.26767, 8.64859)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_r8il1")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -2.23517, 5.97135, -2.84613)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6.33104, 5.97135, -2.84613)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.25239, 5.97135, 6.56543)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.03471, 5.97135, 6.56543)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

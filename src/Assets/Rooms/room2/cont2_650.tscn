@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cqh6tjpsub0jn"]
+[gd_scene load_steps=22 format=4 uid="uid://cqh6tjpsub0jn"]
 
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_uv1va"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_83ssb"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="5_jpowq"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="6_1vd86"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="7_5gale"]
+[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="7_83ssb"]
 [ext_resource type="LightmapGIData" uid="uid://bfxk33pu40ede" path="res://Assets/Rooms/room2/Lm/cont2_650.lmbake" id="8_uv1va"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
@@ -655,8 +656,25 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_43rjr")
 skeleton = NodePath("")
 
-[node name="Table" parent="NavigationRegion3D" instance=ExtResource("6_1vd86")]
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("6_1vd86")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.38003, -0.247156, 2.47762)
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -4.32091, 3.67728, 5.0206)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
+transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -4.32091, 3.67728, -5.17092)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 9.85118, 3.77737, -5.17092)
+
+[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 4.03071, 3.77737, -5.17092)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 9.85118, 3.77737, 5.0206)
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26622, 0.363186)
@@ -703,46 +721,6 @@ mesh = SubResource("TextMesh_83ssb")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.13109, 5.97135, 3.66732)
-light_energy = 2.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 7.21946, 5.97135, -5.38282)
-light_energy = 4.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0648251, 5.97135, 5.3296)
-light_energy = 4.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.0223351, 5.97135, -6.31318)
-light_energy = 4.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 14.769
-spot_angle = 81.922
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84573, 2.343, -0.0816641)

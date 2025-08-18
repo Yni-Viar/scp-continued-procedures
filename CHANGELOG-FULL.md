@@ -23,32 +23,34 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
+- [ ] Improve Maintenance Zone graphics.
 
 ## v4.0.0 (Expansion update part 1, release will be soon)
 - Elevator support
 - New sublevel (Entrance subzone) with researcher's offices and exit to new Research Zone room
-- Add scriptable researcher's offices + add Yni office (with returned Internal Eternal easter egg)
-- Add Site Director Octobergine Avo + office.
-- Change protagonist's spawn point.
-- Move SCP-347 task to Maintenance Zone Gate B.
+- Added scriptable researcher's offices + add Yni office (with returned Internal Eternal easter egg)
+- Added Site Director Octobergine Avo + office.
+- Changed protagonist's spawn point.
+- Moved SCP-347 task to Maintenance Zone Gate B.
 - Main Menu UI refresh
-- Fix annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
-- Add new human class - Agent. (currently looks like SCP: Unity guard)
-- Fix navigation mesh connection between rooms
-- Add second SCP-173 variation - the model will be randomly selected at the round start (between original and SCP:Unity model)
-- Add new Main Menu theme.
+- Fixed annoying bug on Android, when if you rotate screen, player began to move. (FINALLY!!!)
+- Added new human class - Agent. (currently looks like SCP: Unity guard)
+- Fixed navigation mesh connection between rooms
+- Added second SCP-173 variation - the model will be randomly selected at the round start (between original and SCP:Unity model)
+- Added new Main Menu theme.
+- Improved Research Zone graphics.
 
 ## v3.1.0 (2025.08.02)
 
-- Remove SCP:SL pre-14.0 rooms entirely because of licensing issues.
+- Removed SCP:SL pre-14.0 rooms entirely because of licensing issues.
 - Added a tint to Credits screen
 
 ## v3.0.0 (2025.08.01)
 
-- Rework existing Maintenance zone (room3_pit will be temporarily removed)
-- Add modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. (removed in 3.1.0 because of licensing issues)
-- Reduce human classes and SCP-347 size to fit into a new Maintenance Zone
-- Really add an ability to disable music
+- Reworked existing Maintenance zone (room3_pit will be temporarily removed)
+- Added modified SCP: SL pre-14.0 rooms as an easter egg for Maintenance Zone. (removed in 3.1.0 because of licensing issues)
+- Reduced human classes and SCP-347 size to fit into a new Maintenance Zone
+- Really added an ability to disable music
 - SCP-023 containment chamber in Maintenance Zone (both regular and SL version (latter was removed in 3.1.0 because of licensing issues))
 - SCP-023 NPC + task.
 - Added disarmer for SCP-914 craft (unusable, need to refine cube on Very Fine).
@@ -65,7 +67,7 @@ This is **NOT PERMANENT!!!**
 - Labels at checkpoints are supporting translations!
 - Made color of SCP-812 waterfall more realistic
 - Tried to fix bug, where Chaos Insurgency event was not called if there was SCP-347 MTF task.
-- Disable Glow and Reflection probe on all of Android
+- Disabled Glow and Reflection probe on all of Android
 
 ## v2.0.0 (2025.07.21)
 
