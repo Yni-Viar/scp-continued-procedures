@@ -24,10 +24,14 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Improve Maintenance Zone graphics.
+- [ ] Expose Gate A, B and C (Gate C need to be re-made from scratch).
 
-## v4.1.0
-- [x] Add omnidot plush to Yni Viar's room
-- [x] Remove omnidot plush from items and replace with Knitted sphere
+## v4.1.0 (2025.08.19)
+- Add omnidot plush to Yni Viar's room
+- Remove omnidot plush from items and replace with Knitted sphere
+- Reduce amount of Scientist to match personnel offices amount.
+- Add new SCP Cage prop (my model, that was reused from SCP: Site Online) - spawns on Gates A and B.
+- Added more light to SCP-914 room - because SCP-914 was too dark.
 
 ## v4.0.0 (Expansion update part 1, 2025.08.18)
 - Elevator support
