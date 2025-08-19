@@ -8,9 +8,7 @@ This is **NOT PERMANENT!!!**
 6.x.x will wait for months and months (until I return again to SCP community)... ☹️
 
 ## Long-term plan
-- [ ] SCP-001 (by shaggydredlocks) event (maybe integrate into 5.0.0 as a separate mode?)
-- [ ] SCP-003
-- [ ] SCP-010
+- [ ] SCP-001 (by shaggydredlocks) event
 - [ ] SCP-104
 - [ ] SCP-647
 - [ ] SCP-864 (probably, latest Nalka version)
@@ -25,6 +23,8 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Improve Maintenance Zone graphics.
 - [ ] Expose Gate A, B and C (Gate C need to be re-made from scratch).
+- [ ] SCP-003
+- [ ] SCP-813
 
 ## v4.1.0 (2025.08.19)
 - Add omnidot plush to Yni Viar's room
