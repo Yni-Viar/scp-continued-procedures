@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://bse6x0gj3go58"]
+[gd_scene load_steps=14 format=4 uid="uid://bse6x0gj3go58"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_b8ioa"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_axw3i"]
+[ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_626l1"]
 [ext_resource type="LightmapGIData" uid="uid://c6pn6ns16er1m" path="res://Assets/Rooms/room4/Lm/mt_room_4.lmbake" id="3_ruuf7"]
 [ext_resource type="PackedScene" uid="uid://c7o5iodr55fdp" path="res://Assets/Doors/maintenance_zone_door.tscn" id="4_aux4i"]
 [ext_resource type="PackedScene" uid="uid://d206r02l87aim" path="res://Assets/Doors/maintenance_zone_door_faux.tscn" id="5_vsgnr"]
@@ -127,6 +128,20 @@ vertices = PackedVector3Array(3.97947, 0, 9.56597, 3.98988, 0, 10.3876, 5.85389,
 affect_navigation_mesh = true
 avoidance_enabled = false
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("3_626l1")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, 6.418)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("3_626l1")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, -6.92687)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("3_626l1")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, -6.80447, 4.088, 0)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("3_626l1")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, 7.08139, 4.088, 0)
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
@@ -136,41 +151,6 @@ light_data = ExtResource("3_ruuf7")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 6.97876)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, -5.98903)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 0.0185356)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74576, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03486, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00667632, 0)

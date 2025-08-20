@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://4i51o046e2no"]
+[gd_scene load_steps=10 format=4 uid="uid://4i51o046e2no"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_olia3"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_1jqct"]
 [ext_resource type="LightmapGIData" uid="uid://c6pn6ns16er1m" path="res://Assets/Rooms/room4/Lm/mt_room_4.lmbake" id="3_irgxd"]
+[ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_olia3"]
+[ext_resource type="PackedScene" uid="uid://c4rphn1mij8kp" path="res://Assets/ExternalModels/pipe_1.tscn" id="4_prqh0"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_olia3"]
 vertices = PackedVector3Array(-9.74, -0.7504, -1.24, -9.74, -0.7504, 1.26, -3.24, -0.7504, 1.26, -2.74, -0.7504, -1.49, -1.24, -0.7504, -3.24, 1.51, -0.7504, -2.74, 1.26, -0.7504, -9.74, -1.24, -0.7504, -9.74, -1.49, -0.7504, 2.76, 3.26, -0.7504, 1.26, 1.26, -0.7504, 3.26, -1.24, -0.7504, 9.76, 1.26, -0.7504, 9.76, 9.76, -0.7504, 1.26, 9.76, -0.7504, -1.24, 3.26, -0.7504, -1.24)
@@ -97,6 +99,23 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_irgxd")
 skeleton = NodePath("")
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("3_olia3")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, 6.418)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("3_olia3")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, -6.92687)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("3_olia3")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, -6.80447, 4.088, 0)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("3_olia3")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, 7.08139, 4.088, 0)
+
+[node name="Pipe_04" parent="NavigationRegion3D/Props" instance=ExtResource("4_prqh0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90571, 1.41002, -2.43104)
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
@@ -106,41 +125,6 @@ light_data = ExtResource("3_irgxd")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 6.97876)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, -5.98903)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 0.0185356)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74576, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03486, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00667632, 0)

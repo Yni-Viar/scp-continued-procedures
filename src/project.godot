@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SCP: Containment Procedures"
 config/description="A Facility simulator"
-config/version="4.1.0"
+config/version="4.2.0"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
@@ -127,3 +127,4 @@ common/physics_interpolation=true
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
+lightmapping/denoising/denoiser=1

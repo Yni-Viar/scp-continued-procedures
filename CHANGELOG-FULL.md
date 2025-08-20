@@ -21,10 +21,12 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
-- [ ] Improve Maintenance Zone graphics.
-- [ ] Expose Gate A, B and C (Gate C need to be re-made from scratch).
+- [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
 - [ ] SCP-003
 - [ ] SCP-813
+
+## v4.2.0 (2025.08.20)
+- Improve Maintenance Zone graphics.
 
 ## v4.1.0 (2025.08.19)
 - Add omnidot plush to Yni Viar's room

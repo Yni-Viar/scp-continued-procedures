@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cugqss4yqxcj"]
+[gd_scene load_steps=10 format=4 uid="uid://cugqss4yqxcj"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_er6q1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_oifw5"]
+[ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_16sud"]
 [ext_resource type="LightmapGIData" uid="uid://d3ia0xq4s0j41" path="res://Assets/Rooms/room3/Lm/mt_room3.lmbake" id="3_hiwie"]
+[ext_resource type="PackedScene" uid="uid://c4rphn1mij8kp" path="res://Assets/ExternalModels/pipe_1.tscn" id="4_8p0gb"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(3.26, -0.741151, -1.16632, 2.51, -0.741151, -2.16632, -2.49, -0.741151, -2.16632, -3.24, -0.741151, -1.16632, -1.49, -0.741151, 2.58368, 1.26, -0.741151, 2.83368, -9.74, -0.741151, -1.16632, -9.74, -0.741151, 1.33368, -2.74, -0.741151, 1.33368, 9.76, -0.741151, 1.33368, 9.76, -0.741151, -1.16632, 2.76, -0.741151, 1.33368, -1.24, -0.741151, 9.83368, 1.26, -0.741151, 9.83368)
@@ -97,6 +99,26 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_hiwie")
 skeleton = NodePath("")
 
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("3_16sud")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, 6.418)
+
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("3_16sud")]
+transform = Transform3D(1, 0, 0, 0, 2.98023e-08, -1, 0, 1, 2.98023e-08, 0, 4.088, -0.00676918)
+
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("3_16sud")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, -6.80447, 4.088, 0)
+
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("3_16sud")]
+transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -4.37114e-08, -1.3027e-15, 7.08139, 4.088, 0)
+
+[node name="Pipe_04" parent="NavigationRegion3D/Props" instance=ExtResource("4_8p0gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49445, 1.41002, -2.43104)
+
+[node name="Pipe_05" parent="NavigationRegion3D/Props" instance=ExtResource("4_8p0gb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.41466, 1.41002, -2.43104)
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
@@ -106,34 +128,6 @@ light_data = ExtResource("3_hiwie")
 
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 6.97876)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.58255, 0.0185356)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74576, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03486, 2.58255, -0.0178819)
-light_color = Color(0.949323, 0.785057, 0.671987, 1)
-light_energy = 2.0
-light_bake_mode = 1
-omni_range = 5.625
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.310877, 0)
