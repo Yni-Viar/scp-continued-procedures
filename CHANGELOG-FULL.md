@@ -10,6 +10,7 @@ This is **NOT PERMANENT!!!**
 ## Long-term plan
 - [ ] SCP-001 (by shaggydredlocks) event
 - [ ] SCP-104
+- [ ] SCP-109 (need to find useful options)
 - [ ] SCP-647
 - [ ] SCP-864 (probably, latest Nalka version)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
@@ -23,7 +24,15 @@ This is **NOT PERMANENT!!!**
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
 - [ ] SCP-003
+- [ ] SCP-109 Containment Chamber
+- [ ] SCP-178 (only as 914 item)
 - [ ] SCP-813
+
+## v4.3.0
+
+- [x] WC rooms for Maintenance and Research zones.
+- [x] Returned fully-functional SCP-109 - it can be used as healing item, due to new API. ~~Use the cube to make it with 33% chance.~~
+- [x] Changed texture to Research Zone ceiling (except 914 room).
 
 ## v4.2.0 (2025.08.20)
 - Improve Maintenance Zone graphics.

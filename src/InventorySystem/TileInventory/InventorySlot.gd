@@ -12,10 +12,10 @@ func _ready():
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.double_click:
+		if event.double_click && get_parent().get_parent().visible:
 			get_parent().use_item(self)
 	if event is InputEventScreenTouch:
-		if event.double_tap:
+		if event.double_tap && get_parent().get_parent().visible:
 			get_parent().use_item(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

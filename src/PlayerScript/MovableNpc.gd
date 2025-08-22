@@ -206,6 +206,11 @@ func health_manage(health_to_add: float, health_type: int = 0):
 		# Remove one live
 		queue_free()
 
+func use_item(type_of_usage: String, amount: float):
+	match type_of_usage:
+		"health":
+			health_manage(amount, 0)
+
 ## Target follow target position setter.
 func target_follow():
 	if follow_update_timer > 0:

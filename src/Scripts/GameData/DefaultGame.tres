@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://b78x487lxutqy" path="res://PlayerScript/PlayerClassResources/Scp650.tres" id="5_ujd5j"]
 [ext_resource type="Resource" uid="uid://dk8t148bg028i" path="res://InventorySystem/Items/CubeItem.tres" id="5_y38bq"]
 [ext_resource type="Resource" uid="uid://nydi02ml4weh" path="res://PlayerScript/PlayerClassResources/Scientist650.tres" id="6_qajj2"]
-[ext_resource type="Resource" uid="uid://caeffa8v3lv6c" path="res://InventorySystem/Items/ItemWoolSphere.tres" id="6_y38bq"]
+[ext_resource type="Resource" uid="uid://caeffa8v3lv6c" path="res://InventorySystem/Items/ItemScp109.tres" id="6_y38bq"]
 [ext_resource type="Resource" uid="uid://sletek4tlyt" path="res://InventorySystem/Items/Item914book.tres" id="7_hinnn"]
 [ext_resource type="Resource" uid="uid://l23gxmbiwbrh" path="res://PlayerScript/PlayerClassResources/DClass.tres" id="7_ujd5j"]
 [ext_resource type="Resource" uid="uid://6j3kwox735os" path="res://PlayerScript/PlayerClassResources/GuardOfDClass.tres" id="8_jbef1"]

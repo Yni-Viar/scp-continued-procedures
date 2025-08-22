@@ -64,10 +64,9 @@ func item_remove(item: InventorySlot, drop: bool) -> bool:
 	return false
 
 func use_item(item: InventorySlot):
-	#if game_data.items[item.item_id].usage != 0:
-		#item_remove(item, game_data.items[item.item_id].usage == 2)
-	#get_tree().root.get_node("Game/Player").hold_item(item.item_id)
-	pass
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path).use_item(game_data.items[item.item_id].action, game_data.items[item.item_id].action_amount)
+	if game_data.items[item.item_id].usage != 0:
+		item_remove(item, game_data.items[item.item_id].usage == 2)
 
 ## the item could be dropped only inside inventory
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
