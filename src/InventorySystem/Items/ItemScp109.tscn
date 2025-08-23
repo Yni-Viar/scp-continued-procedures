@@ -116,11 +116,13 @@ script = ExtResource("1_xxk6y")
 item_id = 4
 
 [node name="Sphere" type="MeshInstance3D" parent="."]
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_pfuwg")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, -0.00102234)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_vnsuw")
 skeleton = NodePath("")
 

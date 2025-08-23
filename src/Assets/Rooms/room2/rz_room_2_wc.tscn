@@ -656,6 +656,7 @@ navigation_mesh = SubResource("NavigationMesh_d8u2j")
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_epfj1")
 skeleton = NodePath("")
 
@@ -733,20 +734,24 @@ transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-3.49691e-07, 0, -4, 0, 8, 0, 8, 0, -1.74846e-07, 3.77923, 4.86147, -3.8245)
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_db3oe")
 skeleton = NodePath("../../..")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-3.49691e-07, 0, 4, 0, 8, 0, -8, 0, -1.74846e-07, -3.72508, 4.86147, -3.55386)
+visibility_range_end = 64.0
 mesh = SubResource("TextMesh_tiiib")
 skeleton = NodePath("../../..")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.2168, 2.3313, -0.0388503)
+visibility_range_end = 64.0
 mesh = SubResource("BoxMesh_wkxox")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87032, 2.3313, 0.112917)
+visibility_range_end = 64.0
 mesh = SubResource("BoxMesh_wkxox")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
