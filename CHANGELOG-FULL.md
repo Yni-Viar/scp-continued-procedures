@@ -31,7 +31,7 @@ This is **NOT PERMANENT!!!**
 ## v4.3.0
 
 - Added WC rooms for Maintenance and Research zones.
-- Returned fully-functional SCP-109 - it can be used as healing item, due to new API. ~~Use the cube to make it with 33% chance.~~
+- Returned fully-functional SCP-109 - it can be used as healing item, due to new API. ~~Use the cube in SCP-914 to make it with 33% chance.~~
 - Changed texture to Research Zone ceiling (except 914 room).
 
 ## v4.2.0 (2025.08.20)
