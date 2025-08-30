@@ -1,10 +1,16 @@
 # SCP: Containment Procedures
 
+# SCP: Containment Procedures
+## About
+
 Do your daily job at Site-[REDACTED].
 
 Click/Tap - move/pick items (if you tap on character, they will go with you).
 
 If Chaos Insurgency will raid your Site, call MTF using the button (in other times, the button won't work)
+
+### Notice about Android version
+[How to install Android version after 2026 guide](https://github.com/Yni-Viar/Yni-Viar/blob/main/google-android-2026-foss.md)
 
 ## License:
 The game is based on SCP Foundation community.
