@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=19 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -14,6 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://oxnjcfkf4kcf" path="res://UI/MainMenu/Modes/storymode_click.png" id="8_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://cjb5vwpp8o0ug" path="res://icon_192_foreground.png" id="10_sjh0l"]
 [ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
+[ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
+[ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="15_t8p2w"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_krje8"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dd46u"]
+noise = SubResource("FastNoiseLite_krje8")
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -84,11 +91,16 @@ vertical_alignment = 1
 
 [node name="StoryMode" type="TextureButton" parent="."]
 visible = false
-layout_mode = 0
-offset_left = 16.0
-offset_top = 376.0
-offset_right = 272.0
-offset_bottom = 504.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.679
+anchor_right = 0.125
+anchor_bottom = 0.679
+offset_left = -128.0
+offset_top = -63.992
+offset_right = 128.0
+offset_bottom = 64.008
 texture_normal = ExtResource("7_a8aa6")
 texture_pressed = ExtResource("8_x0ao6")
 
@@ -353,6 +365,48 @@ text = "HELP_TASKS"
 layout_mode = 2
 text = "HELP_EVENTS"
 
+[node name="StoryUI" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="StoryUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_dd46u")
+expand_mode = 1
+
+[node name="ItemList" type="ItemList" parent="StoryUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.494
+anchor_right = 0.5
+anchor_bottom = 0.494
+offset_left = -128.0
+offset_top = -128.112
+offset_right = 128.0
+offset_bottom = 127.888
+max_text_lines = 2
+item_count = 1
+icon_mode = 0
+item_0/text = "STORY_MAIN"
+item_0/icon = ExtResource("15_t8p2w")
+
+[node name="Back" type="TextureButton" parent="StoryUI"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("14_dsmso")
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_qki4b")
 volume_db = -8.226
@@ -360,9 +414,11 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="StoryMode" to="." method="_on_story_mode_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
 [connection signal="toggled" from="EnableSound" to="." method="_on_enable_sound_toggled"]
 [connection signal="toggled" from="GameSettings/TimeLimited" to="." method="_on_time_limited_toggled"]
 [connection signal="toggled" from="GameSettings/ZenMode" to="." method="_on_zen_mode_toggled"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="close_requested" from="Tutorial" to="Tutorial" method="_on_close_requested"]
+[connection signal="pressed" from="StoryUI/Back" to="." method="_on_story_back_pressed"]

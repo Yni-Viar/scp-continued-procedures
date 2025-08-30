@@ -76,3 +76,11 @@ func _on_enable_sound_toggled(toggled_on: bool) -> void:
 		$EnableSound.texture_normal = load("res://UI/MainMenu/MusicDisabled.png")
 	Settings.audio_settings(1, Settings.setting_res.music_volume)
 	Settings.save_resource(Settings.setting_res)
+
+
+func _on_story_mode_pressed() -> void:
+	$StoryUI.show()
+
+
+func _on_story_back_pressed() -> void:
+	$StoryUI.hide()
