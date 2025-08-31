@@ -10,7 +10,6 @@ This is **NOT PERMANENT!!!**
 ## Long-term plan
 - [ ] SCP-001 (by shaggydredlocks) event
 - [ ] SCP-104
-- [ ] SCP-109 (need to find useful options)
 - [ ] SCP-647
 - [ ] SCP-864 (probably, latest Nalka version)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
