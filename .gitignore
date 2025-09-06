@@ -18,4 +18,5 @@ mono_crash.*.json
 # Internal resources
 builds/
 android/
+src/Demonstration/
 CHANGELOG-RELEASE-GH.md

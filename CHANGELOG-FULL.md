@@ -9,9 +9,11 @@ This is **NOT PERMANENT!!!**
 
 ## Long-term plan
 - [ ] SCP-001 (by shaggydredlocks) event
+- [ ] SCP-003
 - [ ] SCP-104
-- [ ] SCP-109 (need to find useful options)
+- [ ] SCP-178
 - [ ] SCP-647
+- [ ] SCP-813
 - [ ] SCP-864 (probably, latest Nalka version)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Multiplayer (co-op)
@@ -19,14 +21,14 @@ This is **NOT PERMANENT!!!**
 - [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
 
 ## v5.0.0 (Expansion update part 2, release won't be soon)
+- [x] Enable SCP-023 in Safe mode (through it will just walk around).
+- [ ] Enable hotkeys for moving - looks like, that camera rotation is not so easy.
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
-- [ ] SCP-003
+- [ ] SCP-938 and its Containment Chamber (in progress)
 - [ ] SCP-109 Containment Chamber
-- [ ] SCP-178 (only as 914 item)
-- [ ] SCP-813
 
 ## v4.3.0
 

@@ -29,3 +29,5 @@ GATE_B,Gate B,Выход Б
 GATE_C,Under construction,Строится
 LOUNGE,Lounge,Комната отдыха
 EZ_RZ_SIGN,←\nEntrance Subzone\nGate A\nPersonal rooms\nLounge,←\nВходная подзона\nВыход А\nЛичные комнаты\nКомната отдыха
+SUBL_938_SIGN,SCP-938\n↑ Maintenance Zone,SCP-938\n↑ Техническая зона
+SUBL_938_WARN,DANGER!\nElectric hazard,ОПАСНО!\nЭлектрическая угроза

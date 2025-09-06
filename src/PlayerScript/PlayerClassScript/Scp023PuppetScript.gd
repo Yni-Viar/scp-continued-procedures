@@ -8,15 +8,15 @@ class_name Scp023PuppetScript
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var eye_glow_strength: float = 0.25
 
+@export var glow_enabled: bool = true
 @onready var timer: Timer = $Timer
 
 func on_start():
-	timer.wait_time = rng.randf_range(155, 192)
-	timer.start()
 	if Settings.setting_res.zen_mode:
-		set_physics_process(false)
-		# disable this dog in safe mode
-		get_parent().get_parent().health_manage(-16777216)
+		glow_enabled = false
+	if glow_enabled:
+		timer.wait_time = rng.randf_range(155, 192)
+		timer.start()
 
 func _physics_process(delta: float) -> void:
 	match state:
@@ -43,7 +43,7 @@ func set_state(anim_name: String) -> void:
 ## Do this task
 func _on_procedures_trigger_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:
-		if body.is_player:
+		if body.is_player && glow_enabled:
 			eye_glow_strength = 0.25
 			$Timer.stop()
 			if get_tree().root.get_node("Game/FoundationTask").has_task("task_023_emergency"):

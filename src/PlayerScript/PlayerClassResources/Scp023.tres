@@ -20,4 +20,4 @@ team = 0
 enable_avoidance = true
 spawn_on_start = true
 puppet_navigation_layers = 8
-enable_ik = true
+enable_ik = false

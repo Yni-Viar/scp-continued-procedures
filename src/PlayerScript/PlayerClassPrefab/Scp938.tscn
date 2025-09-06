@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfyph164qef1e"]
+
+[ext_resource type="Texture2D" uid="uid://bgg11f8ixkht8" path="res://Assets/Materials/Lightning/0.png" id="1_8v1en"]
+
+[sub_resource type="Curve" id="Curve_8v1en"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.751309, 1), 0.0, 0.0, 0, 0, Vector2(0.992146, 0.00355339), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0sqbm"]
+curve = SubResource("Curve_8v1en")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7wcrn"]
+lifetime_randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 0.5
+angle_min = -15.0
+angle_max = 15.0
+direction = Vector3(0, 0, 0)
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+gravity = Vector3(0, 0, 0)
+alpha_curve = SubResource("CurveTexture_0sqbm")
+turbulence_enabled = true
+turbulence_influence_min = 1.0
+turbulence_influence_max = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_663d6"]
+transparency = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_8v1en")
+emission_enabled = true
+emission_texture = ExtResource("1_8v1en")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_rerev"]
+material = SubResource("StandardMaterial3D_663d6")
+size = Vector2(0.25, 0.125)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75wev"]
+emission_enabled = true
+emission = Color(0.594942, 0.850201, 0.977879, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_0jgng"]
+material = SubResource("StandardMaterial3D_75wev")
+radius = 0.25
+height = 0.5
+radial_segments = 32
+rings = 16
+
+[node name="Scp938" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.106224, 0)
+amount = 24
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_7wcrn")
+draw_pass_1 = SubResource("QuadMesh_rerev")
+
+[node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_0jgng")

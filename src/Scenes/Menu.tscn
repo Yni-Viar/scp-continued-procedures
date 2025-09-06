@@ -178,7 +178,6 @@ offset_bottom = 73.648
 alignment = 1
 
 [node name="Info" type="Label" parent="GameSettings"]
-visible = false
 layout_mode = 2
 text = "GAME_SETTINGS_INFO"
 

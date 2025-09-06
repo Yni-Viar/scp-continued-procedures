@@ -19,3 +19,5 @@ health = Array[float]([1000.0])
 team = 0
 enable_avoidance = true
 spawn_on_start = true
+puppet_navigation_layers = 1
+enable_ik = false
