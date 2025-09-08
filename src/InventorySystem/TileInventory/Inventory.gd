@@ -63,6 +63,12 @@ func item_remove(item: InventorySlot, drop: bool) -> bool:
 	print("No item for delete found")
 	return false
 
+func item_remove_by_id(id: int, drop: bool):
+	for node in get_children():
+		if node is InventorySlot:
+			if node.item_id == id:
+				item_remove(node, drop)
+
 func use_item(item: InventorySlot):
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path).use_item(game_data.items[item.item_id].action, game_data.items[item.item_id].action_amount)
 	if game_data.items[item.item_id].usage != 0:

@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_01jcx"]
 [ext_resource type="Material" uid="uid://r3xwpbwndakb" path="res://Assets/Materials/MaintenanceTunnels/Borders.tres" id="3_5mjld"]
 [ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Metal.tres" id="4_y5bn2"]
-[ext_resource type="PackedScene" uid="uid://daniqy18dv0gq" path="res://Assets/ExternalModels/wooden_lantern.tscn" id="5_cngcp"]
+[ext_resource type="PackedScene" uid="uid://daniqy18dv0gq" path="res://InventorySystem/Items/ItemWoodenLantern.tscn" id="5_cngcp"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_pkqvl"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4dl2j"]
@@ -142,72 +142,6 @@ visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_00cc7")
 skeleton = NodePath("")
 
-[node name="wooden_lantern_01_2k7" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, 1.40377)
-
-[node name="wooden_lantern_01_2k8" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, 1.40377)
-
-[node name="wooden_lantern_01_2k10" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -5.16585)
-
-[node name="wooden_lantern_01_2k11" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -5.16585)
-
-[node name="wooden_lantern_01_2k12" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -12.1658)
-
-[node name="wooden_lantern_01_2k13" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -12.1658)
-
-[node name="wooden_lantern_01_2k14" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -19.1658)
-
-[node name="wooden_lantern_01_2k15" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -19.1658)
-
-[node name="wooden_lantern_01_2k16" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -26.8755)
-
-[node name="wooden_lantern_01_2k17" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -26.8755)
-
-[node name="wooden_lantern_01_2k18" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -32.8755)
-
-[node name="wooden_lantern_01_2k19" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -32.8755)
-
-[node name="wooden_lantern_01_2k20" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -38.719)
-
-[node name="wooden_lantern_01_2k21" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -38.719)
-
-[node name="wooden_lantern_01_2k22" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -44.719)
-
-[node name="wooden_lantern_01_2k23" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -44.719)
-
-[node name="wooden_lantern_01_2k24" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -50.719)
-
-[node name="wooden_lantern_01_2k25" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -50.719)
-
-[node name="wooden_lantern_01_2k26" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94041, 5.47869, -56.9348)
-
-[node name="wooden_lantern_01_2k27" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 5.47869, -56.9348)
-
-[node name="wooden_lantern_01_2k9" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.89972, 0.123461, 3.48729)
-
-[node name="wooden_lantern_01_2k6" parent="NavigationRegion3D" instance=ExtResource("5_cngcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.116001, 6.34627, 4.61377)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.78814e-07, 0, 1, 0, 1, 0, -1, 0, 1.78814e-07, 0.07, 0.17536, -0.36)
 shape = SubResource("ConcavePolygonShape3D_j7axh")
@@ -223,3 +157,6 @@ transform = Transform3D(-1.74846e-07, 0, -2, 0, 4, 0, 4, 0, -8.74228e-08, 4.0328
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_7tfy1")
 skeleton = NodePath("../../../../../../..")
+
+[node name="wooden_lantern" parent="." instance=ExtResource("5_cngcp")]
+transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 2.93724, 0.536744, 3.76281)

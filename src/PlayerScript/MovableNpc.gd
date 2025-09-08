@@ -210,6 +210,11 @@ func use_item(type_of_usage: String, amount: float):
 	match type_of_usage:
 		"health":
 			health_manage(amount, 0)
+		"take":
+			if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null:
+				var prefab: Node3D = get_node("PlayerModel/Puppet")
+				if prefab is HumanPuppetScript:
+					prefab.hold_item(int(amount))
 
 ## Target follow target position setter.
 func target_follow():

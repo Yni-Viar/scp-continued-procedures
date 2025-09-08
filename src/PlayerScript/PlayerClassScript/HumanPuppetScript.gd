@@ -133,9 +133,23 @@ func set_state(animation_name: String, action_name: String, amount):
 
 ## Playing footsteps
 func footstep(key: String):
-	pass
-	#get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
-	#get_parent().get_parent().get_node("WalkSounds").play()
+	get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
+	get_parent().get_parent().get_node("WalkSounds").play()
+
+func hold_item(idx: int):
+	if get_node_or_null(armature_name + "/Skeleton3D/ItemAttachment/Marker3D") != null:
+		if get_parent().get_parent().is_player:
+			if get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").get_child_count() > 0:
+				for node in get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").get_children():
+					node.queue_free()
+				secondary_state = SecondaryState.NONE
+			else:
+				secondary_state = SecondaryState.ITEM
+				var item_prefab: Pickable = load(get_tree().root.get_node("Game").gamedata.items[idx].pickable_path).instantiate()
+				item_prefab.freeze = true
+				get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").add_child(item_prefab)
+			
+
 
 ## Follow the players, if cuffed
 #func target_follow(delta: float):

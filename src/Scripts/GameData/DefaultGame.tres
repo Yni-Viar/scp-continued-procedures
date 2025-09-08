@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cgv4yjj6gyjc1" path="res://Scripts/GameData/GameData.gd" id="2_2kq0r"]
 [ext_resource type="Resource" uid="uid://d1pxflhcot1lu" path="res://InventorySystem/Items/pda.tres" id="2_6lojy"]
 [ext_resource type="Resource" uid="uid://cdvadpe1bwmkp" path="res://PlayerScript/PlayerClassResources/Scientist.tres" id="2_iio3u"]
-[ext_resource type="Resource" uid="uid://ccgr3lh4u7jg0" path="res://InventorySystem/Items/Disarmer.tres" id="3_3myvo"]
+[ext_resource type="Resource" uid="uid://ccgr3lh4u7jg0" path="res://InventorySystem/Items/Lantern.tres" id="3_3myvo"]
 [ext_resource type="Resource" uid="uid://c8pms1lfwn1s8" path="res://PlayerScript/PlayerClassResources/ScientistProtagonist.tres" id="3_4lkqw"]
 [ext_resource type="Resource" uid="uid://dtxvxmwsol0hf" path="res://PlayerScript/PlayerClassResources/Guard.tres" id="3_qajj2"]
 [ext_resource type="Resource" uid="uid://csusu4a31htq1" path="res://PlayerScript/PlayerClassResources/Scp173.tres" id="4_cj51b"]

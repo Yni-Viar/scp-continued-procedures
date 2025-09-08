@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://rj65na3myb3i"]
+[gd_scene load_steps=6 format=3 uid="uid://rj65na3myb3i"]
 
 [ext_resource type="Script" uid="uid://b8pkv7v2qmc5c" path="res://PlayerScript/MovableNpc.gd" id="1_3jgrj"]
+[ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="2_m1isr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvonu"]
 radius = 0.371158
@@ -67,3 +68,16 @@ shape = SubResource("CylinderShape3D_m1isr")
 
 [node name="ItemSpawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44197, 0)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Inventory" parent="UI" instance=ExtResource("2_m1isr")]
+visible = false
+layout_mode = 1

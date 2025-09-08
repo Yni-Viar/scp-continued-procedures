@@ -83,8 +83,8 @@ func interact(value: String) -> void:
 				var shape_result: Array[Dictionary] = intersect_shape(result["position"])
 				for s_result in shape_result:
 					if s_result.keys().size() > 0:
-						if s_result["collider"] is Pickable && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
-							get_tree().root.get_node("Game/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
+						if s_result["collider"] is Pickable && !s_result["collider"].freeze && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+							get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
 							s_result["collider"].queue_free()
 							#Use only one item
 							break

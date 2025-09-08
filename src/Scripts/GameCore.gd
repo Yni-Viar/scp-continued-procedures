@@ -122,26 +122,27 @@ func spawn_wave_entity(wave_type: int):
 		2: # Agent for SCP-347
 			how_much_spawn = 1
 	var spawn = get_tree().get_first_node_in_group("WaveSpawn")
-	for i in range(how_much_spawn):
-		var vfxspawn = load("res://Assets/VFX/spawnvfx.tscn").instantiate()
-		spawn.get_child(i).add_child(vfxspawn)
-	await get_tree().create_timer(1.0).timeout
-	for i in range(how_much_spawn):
-		var wavenpc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
-		match wave_type:
-			0: # Mobile Task Force
-				wavenpc.puppet_class = gamedata.wave_puppet_classes[0]
-				wavenpc.add_to_group("MobileTaskForce")
-			1: # Chaos Insurgency
-				wavenpc.puppet_class = gamedata.wave_puppet_classes[1]
-				wavenpc.add_to_group("ChaosInsurgency")
-			2:
-				wavenpc.puppet_class = gamedata.wave_puppet_classes[2]
-		spawn.get_child(i).add_child(wavenpc)
-	for i in range(how_much_spawn):
-		for node in spawn.get_child(i).get_children():
-			if node is not MovableNpc:
-				node.queue_free()
+	if spawn != null:
+		for i in range(how_much_spawn):
+			var vfxspawn = load("res://Assets/VFX/spawnvfx.tscn").instantiate()
+			spawn.get_child(i).add_child(vfxspawn)
+		await get_tree().create_timer(1.0).timeout
+		for i in range(how_much_spawn):
+			var wavenpc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
+			match wave_type:
+				0: # Mobile Task Force
+					wavenpc.puppet_class = gamedata.wave_puppet_classes[0]
+					wavenpc.add_to_group("MobileTaskForce")
+				1: # Chaos Insurgency
+					wavenpc.puppet_class = gamedata.wave_puppet_classes[1]
+					wavenpc.add_to_group("ChaosInsurgency")
+				2:
+					wavenpc.puppet_class = gamedata.wave_puppet_classes[2]
+			spawn.get_child(i).add_child(wavenpc)
+		for i in range(how_much_spawn):
+			for node in spawn.get_child(i).get_children():
+				if node is not MovableNpc:
+					node.queue_free()
 
 func despawn_wave(wave_type: int):
 	match wave_type:

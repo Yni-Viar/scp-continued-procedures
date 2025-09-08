@@ -1,35 +1,44 @@
-[gd_scene load_steps=15 format=4 uid="uid://daniqy18dv0gq"]
+[gd_scene load_steps=19 format=4 uid="uid://daniqy18dv0gq"]
 
-[ext_resource type="Texture2D" uid="uid://5kdn1uexjq4c" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_diff_2k.jpg" id="1_mj48w"]
-[ext_resource type="Texture2D" uid="uid://btwkokj5no8iy" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_arm_2k.jpg" id="2_2hsfw"]
-[ext_resource type="Texture2D" uid="uid://dymc5d2nfsajd" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_nor_gl_2k.jpg" id="3_01tew"]
-[ext_resource type="Texture2D" uid="uid://h3y667mcpvcc" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_diff_2k.jpg" id="4_tms6n"]
-[ext_resource type="Texture2D" uid="uid://dldo3ix1ft1yl" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_arm_2k.jpg" id="5_fyehb"]
-[ext_resource type="Texture2D" uid="uid://b1n5w0rrjbfs6" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_nor_gl_2k.jpg" id="6_3ln68"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_pwn81"]
+[ext_resource type="Texture2D" uid="uid://5kdn1uexjq4c" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_diff_2k.jpg" id="2_eydpu"]
+[ext_resource type="Texture2D" uid="uid://btwkokj5no8iy" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_arm_2k.jpg" id="3_fe4o8"]
+[ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="3_nmw3f"]
+[ext_resource type="Texture2D" uid="uid://dymc5d2nfsajd" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_nor_gl_2k.jpg" id="4_j8gib"]
+[ext_resource type="Texture2D" uid="uid://h3y667mcpvcc" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_diff_2k.jpg" id="5_2latt"]
+[ext_resource type="Texture2D" uid="uid://dldo3ix1ft1yl" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_arm_2k.jpg" id="6_m1fuv"]
+[ext_resource type="Texture2D" uid="uid://b1n5w0rrjbfs6" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_glass_nor_gl_2k.jpg" id="7_4oqfj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lrmlj"]
+render_priority = 0
+shader = ExtResource("3_nmw3f")
+shader_parameter/outline_color = Color(0.347192, 0.836067, 7.70092e-07, 1)
+shader_parameter/outline_width = 2.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu2g0"]
 resource_name = "wooden_lantern_01"
+next_pass = SubResource("ShaderMaterial_lrmlj")
 cull_mode = 2
-albedo_texture = ExtResource("1_mj48w")
+albedo_texture = ExtResource("2_eydpu")
 metallic = 1.0
-metallic_texture = ExtResource("2_2hsfw")
+metallic_texture = ExtResource("3_fe4o8")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("2_2hsfw")
+roughness_texture = ExtResource("3_fe4o8")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("3_01tew")
+normal_texture = ExtResource("4_j8gib")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kpqk"]
 resource_name = "wooden_lantern_01_glass"
 blend_mode = 1
-albedo_texture = ExtResource("4_tms6n")
+albedo_texture = ExtResource("5_2latt")
 metallic = 1.0
-metallic_texture = ExtResource("5_fyehb")
+metallic_texture = ExtResource("6_m1fuv")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("5_fyehb")
+roughness_texture = ExtResource("6_m1fuv")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("6_3ln68")
+normal_texture = ExtResource("7_4oqfj")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dkk8w"]
 _surfaces = [{
@@ -177,24 +186,34 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8tap6")
 
-[node name="wooden_lantern_01_2k" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tms6n"]
+size = Vector3(0.335693, 0.807159, 0.340088)
+
+[node name="wooden_lantern" type="RigidBody3D"]
+collision_layer = 8
+script = ExtResource("1_pwn81")
+item_id = 1
 
 [node name="wooden_lantern_01" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.51154, 0, 0, 0, 1.51154, 0, 0, 0, 1.51154, -0.0106691, -0.087468, -0.0152039)
+transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, 0.0235077, 0.512817, 0.0220485)
 mesh = SubResource("ArrayMesh_6ydux")
 skeleton = NodePath("")
 
 [node name="wooden_lantern_01_door" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.51154, 0, 0, 0, 1.51154, 0, 0, 0, 1.51154, 0.0838237, 0.169349, 0.119492)
+transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, -0.0595763, 0.354405, -0.0362372)
 mesh = SubResource("ArrayMesh_3cp7m")
 skeleton = NodePath("")
 
 [node name="wooden_lantern_01_handle" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.51154, 0, 0, 0, 1.51154, 0, 0, 0, 1.51154, -0.010584, 0.443728, -0.0151223)
+transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, 0.0234574, 0.185161, 0.021996)
 mesh = SubResource("ArrayMesh_q0cku")
 skeleton = NodePath("")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00854227, 0.241666, 0)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.69624e-08, 2.35712e-15, -0.616827, 5.39247e-08, -0.616827, 0, -0.616827, -5.39247e-08, -2.69624e-08, 0.0251981, 0.274059, 0.0241266)
+shape = SubResource("BoxShape3D_tms6n")
+
+[node name="Flicker" type="OmniLight3D" parent="."]
+transform = Transform3D(4.37114e-08, 3.82137e-15, -1, 8.74228e-08, -1, 0, -1, -8.74228e-08, -4.37114e-08, 0.0244479, 0.314351, 0.0225596)
 light_color = Color(0.963687, 0.624732, 3.85046e-07, 1)
 light_bake_mode = 1

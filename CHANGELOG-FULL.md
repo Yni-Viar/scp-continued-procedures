@@ -22,12 +22,13 @@ This is **NOT PERMANENT!!!**
 
 ## v5.0.0 (Expansion update part 2, release won't be soon)
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
-- [ ] Enable hotkeys for moving - looks like, that camera rotation is not so easy.
+- [ ] Enable hotkeys for moving + Settings screen - looks like, that camera rotation is not so easy.
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
-- [ ] SCP-938 and its Containment Chamber (in progress)
+- [ ] SCP-938 and its Containment Chamber + Lantern item (in progress)
+- [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [ ] SCP-109 Containment Chamber
 
 ## v4.3.0

@@ -59,7 +59,7 @@ func _on_foundation_task_task_done() -> void:
 func _on_inventory_button_pressed() -> void:
 	$ElevatorMode.hide()
 	$Scp914Panel.hide()
-	$Inventory.visible = !$Inventory.visible
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible = !get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible
 
 
 func _on_playing_area_gui_input(event: InputEvent) -> void:
@@ -129,7 +129,7 @@ func _on_refine_pressed() -> void:
 
 
 func _on_scp_914_button_pressed() -> void:
-	$Inventory.hide()
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").hide()
 	$ElevatorMode.hide()
 	$Scp914Panel.visible = !$Scp914Panel.visible
 
@@ -141,6 +141,6 @@ func _on_elevator_call_pressed() -> void:
 
 
 func _on_elevator_button_pressed() -> void:
-	$Inventory.hide()
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").hide()
 	$Scp914Panel.hide()
 	$ElevatorMode.visible = !$ElevatorMode.visible

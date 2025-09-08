@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3xwcegffpg1y"]
+[gd_scene load_steps=9 format=3 uid="uid://b3xwcegffpg1y"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_f2oo0"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="2_tyq66"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ck7np8nu8h0l" path="res://Assets/OriginalModels/ScientistsOfficeProp/Yni/train_toy.tscn" id="4_6wjd1"]
 [ext_resource type="PackedScene" uid="uid://d4issmtwtpowq" path="res://Assets/ExternalModels/couch.tscn" id="5_k7j1g"]
 [ext_resource type="PackedScene" uid="uid://bk7tgbs0pdha4" path="res://Assets/OriginalModels/OmnidotPlush.tscn" id="6_tyq66"]
-[ext_resource type="PackedScene" uid="uid://cnfe34rn7msn7" path="res://InventorySystem/Items/ItemScp109.tscn" id="7_t0ny7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5bsa"]
 emission_enabled = true
@@ -40,6 +39,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75699, -3.46285, -3.36389)
 
 [node name="OmnidotplushV2" parent="." instance=ExtResource("6_tyq66")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.51452, -1.4086, 2.15832)
-
-[node name="ItemWoolSphere" parent="." instance=ExtResource("7_t0ny7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.36565, -2.14659, -3.8549)
