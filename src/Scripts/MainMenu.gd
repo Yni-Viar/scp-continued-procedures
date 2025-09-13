@@ -16,7 +16,6 @@ func _enter_tree() -> void:
 	
 	$GameSettings/TimeLimited.button_pressed = Settings.setting_res.time_limited
 	$GameSettings/ZenMode.button_pressed = Settings.setting_res.zen_mode
-	$EnableSound.button_pressed = Settings.setting_res.music_volume > 0.875
 	
 	# Display game ratings in main menu in some countries, this will replace the game logo.
 	if Settings.legal_req:
@@ -84,3 +83,7 @@ func _on_story_mode_pressed() -> void:
 
 func _on_story_back_pressed() -> void:
 	$StoryUI.hide()
+
+
+func _on_settings_button_pressed() -> void:
+	$Settings.show()

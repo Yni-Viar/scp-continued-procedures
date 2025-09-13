@@ -557,6 +557,7 @@ light_data = ExtResource("11_idhtc")
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.271851, -4.82813, -6.26819)
 blend_distance = 0.4
+max_distance = 64.0
 size = Vector3(29.6541, 32.8203, 32.8167)
 origin_offset = Vector3(0, 7.5, 0)
 box_projection = true

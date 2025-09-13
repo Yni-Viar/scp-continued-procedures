@@ -196,16 +196,19 @@ item_id = 1
 
 [node name="wooden_lantern_01" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, 0.0235077, 0.512817, 0.0220485)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_6ydux")
 skeleton = NodePath("")
 
 [node name="wooden_lantern_01_door" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, -0.0595763, 0.354405, -0.0362372)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_3cp7m")
 skeleton = NodePath("")
 
 [node name="wooden_lantern_01_handle" type="MeshInstance3D" parent="."]
 transform = Transform3D(4.07547e-08, 3.56289e-15, -0.932358, 8.15094e-08, -0.932358, 0, -0.932358, -8.15094e-08, -4.07547e-08, 0.0234574, 0.185161, 0.021996)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_q0cku")
 skeleton = NodePath("")
 
@@ -217,3 +220,6 @@ shape = SubResource("BoxShape3D_tms6n")
 transform = Transform3D(4.37114e-08, 3.82137e-15, -1, 8.74228e-08, -1, 0, -1, -8.74228e-08, -4.37114e-08, 0.0244479, 0.314351, 0.0225596)
 light_color = Color(0.963687, 0.624732, 3.85046e-07, 1)
 light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 64.0
+omni_range = 8.0

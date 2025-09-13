@@ -5,17 +5,37 @@
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="2_syfuq"]
 [ext_resource type="Texture2D" uid="uid://5h1b7i0j2rq2" path="res://UI/MainMenu/Modes/casualmode.png" id="5_3jcrr"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_idohh"]
-[ext_resource type="Texture2D" uid="uid://bmx074026q6dt" path="res://UI/MainMenu/MusicEnabled.png" id="6_3jcrr"]
-[ext_resource type="Texture2D" uid="uid://f6uc4hrhqp05" path="res://UI/MainMenu/Modes/casualmode_click.png" id="6_ab40c"]
 [ext_resource type="Texture2D" uid="uid://cpl6y2uxqdot7" path="res://UI/MainMenu/Modes/helpbutton.png" id="6_aobxe"]
 [ext_resource type="Texture2D" uid="uid://cj5anigj1kj5y" path="res://UI/MainMenu/Modes/storymode.png" id="7_a8aa6"]
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
-[ext_resource type="Texture2D" uid="uid://dssg1kbhm5lsn" path="res://UI/MainMenu/Modes/helpbutton_click.png" id="8_sjh0l"]
-[ext_resource type="Texture2D" uid="uid://oxnjcfkf4kcf" path="res://UI/MainMenu/Modes/storymode_click.png" id="8_x0ao6"]
+[ext_resource type="Texture2D" uid="uid://26abh1a6pa33" path="res://UI/MainMenu/Modes/settings.png" id="7_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://cjb5vwpp8o0ug" path="res://icon_192_foreground.png" id="10_sjh0l"]
 [ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
+[ext_resource type="Script" uid="uid://cuqie2ofws5qv" path="res://Scripts/SettingsUI.gd" id="12_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
 [ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="15_t8p2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsmso"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8p2w"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_krje8"]
 
@@ -57,112 +77,98 @@ theme_override_font_sizes/font_size = 64
 text = "SCP: Containment
 Procedures"
 
-[node name="Play" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.125
-anchor_top = 0.889
-anchor_right = 0.125
-anchor_bottom = 0.889
-offset_left = -128.0
-offset_top = -64.072
-offset_right = 128.0
-offset_bottom = 63.928
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("2_syfuq")
-texture_normal = ExtResource("5_3jcrr")
-texture_pressed = ExtResource("6_ab40c")
-
-[node name="Label" type="Label" parent="Play"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.656
-anchor_top = 0.5
-anchor_right = 0.656
-anchor_bottom = 0.5
-offset_left = -79.936
-offset_top = -48.0
-offset_right = 80.064
-offset_bottom = 48.0
-text = "CASUAL_MODE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="StoryMode" type="TextureButton" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.125
-anchor_top = 0.679
-anchor_right = 0.125
-anchor_bottom = 0.679
-offset_left = -128.0
-offset_top = -63.992
-offset_right = 128.0
-offset_bottom = 64.008
-texture_normal = ExtResource("7_a8aa6")
-texture_pressed = ExtResource("8_x0ao6")
-
-[node name="Label" type="Label" parent="StoryMode"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.656
-anchor_top = 0.5
-anchor_right = 0.656
-anchor_bottom = 0.5
-offset_left = -79.936
-offset_top = -48.0
-offset_right = 80.064
-offset_bottom = 48.0
-text = "STORY_MODE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="HelpButton" type="TextureButton" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.125
-anchor_top = 0.667
-anchor_right = 0.125
-anchor_bottom = 0.667
-offset_left = -128.0
-offset_top = -192.216
-offset_right = 128.0
-offset_bottom = -64.216
-texture_normal = ExtResource("6_aobxe")
-texture_pressed = ExtResource("8_sjh0l")
-
-[node name="Label" type="Label" parent="HelpButton"]
+[node name="Label4" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.672
 anchor_top = 0.469
 anchor_right = 0.672
 anchor_bottom = 0.469
-offset_left = -68.032
-offset_top = -44.032
-offset_right = 67.968
-offset_bottom = 43.968
-text = "HELP_BUTTON"
+offset_left = -654.144
+offset_top = -47.912
+offset_right = -518.144
+offset_bottom = 40.088
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnableSound" type="TextureButton" parent="."]
+[node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.833
-anchor_top = 0.086
-anchor_right = 0.833
-anchor_bottom = 0.086
-offset_left = -15.6161
-offset_top = -47.728
-offset_right = 48.3839
-offset_bottom = 16.272
-grow_horizontal = 0
-toggle_mode = true
-button_pressed = true
-texture_normal = ExtResource("6_3jcrr")
+anchor_left = 0.083
+anchor_top = 0.58
+anchor_right = 0.083
+anchor_bottom = 0.58
+offset_left = -87.616
+offset_top = -111.84
+offset_right = 88.384
+offset_bottom = 112.16
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+text = "CASUAL_MODE"
+icon = ExtResource("5_3jcrr")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="StoryMode" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.579
+anchor_right = 0.25
+anchor_bottom = 0.579
+offset_left = -88.0
+offset_top = -111.192
+offset_right = 88.0
+offset_bottom = 110.808
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+text = "STORY_MODE"
+icon = ExtResource("7_a8aa6")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="SettingsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.417
+anchor_top = 0.579
+anchor_right = 0.417
+anchor_bottom = 0.579
+offset_left = -88.384
+offset_top = -111.192
+offset_right = 87.616
+offset_bottom = 110.808
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+text = "SETTINGS"
+icon = ExtResource("7_x0ao6")
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[node name="HelpButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.583
+anchor_top = 0.58
+anchor_right = 0.583
+anchor_bottom = 0.58
+offset_left = -87.616
+offset_top = -111.84
+offset_right = 88.384
+offset_bottom = 112.16
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+text = "HELP_BUTTON"
+icon = ExtResource("6_aobxe")
+icon_alignment = 1
+vertical_icon_alignment = 0
 
 [node name="GameSettings" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -171,10 +177,10 @@ anchor_left = 0.382
 anchor_top = 0.874
 anchor_right = 0.382
 anchor_bottom = 0.874
-offset_left = -160.064
-offset_top = -73.352
-offset_right = 159.936
-offset_bottom = 73.648
+offset_left = -432.064
+offset_top = -70.352
+offset_right = -112.064
+offset_bottom = 76.648
 alignment = 1
 
 [node name="Info" type="Label" parent="GameSettings"]
@@ -312,6 +318,9 @@ Couch by J-Toastie [CC-BY 3.0]
 (https://creativecommons.org/licenses/by/3.0/)
 via Poly Pizza (https://poly.pizza/m/obMPe0AheB)
 ------------------------
+Mattress model is made by Arthur Glushko , Saritasa
+License - CC-BY 4.0
+------------------------
 Site Director Octobergine Avo model
 was created with MakeHuman.
 MakeHuman content is licensed under CC0.
@@ -364,6 +373,58 @@ text = "HELP_TASKS"
 layout_mode = 2
 text = "HELP_EVENTS"
 
+[node name="Settings" type="Window" parent="."]
+auto_translate_mode = 1
+title = "Settings"
+initial_position = 2
+size = Vector2i(800, 480)
+visible = false
+theme = ExtResource("2_syfuq")
+script = ExtResource("7_wfhf6")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Settings"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsUI" type="VBoxContainer" parent="Settings/ScrollContainer"]
+custom_minimum_size = Vector2(768, 0)
+layout_mode = 2
+script = ExtResource("12_x0ao6")
+
+[node name="Glow" type="CheckButton" parent="Settings/ScrollContainer/SettingsUI"]
+layout_mode = 2
+button_pressed = true
+text = "GLOW"
+
+[node name="BasicReflection" type="CheckButton" parent="Settings/ScrollContainer/SettingsUI"]
+layout_mode = 2
+button_pressed = true
+text = "REFLECTION_PROBE"
+
+[node name="Label" type="Label" parent="Settings/ScrollContainer/SettingsUI"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "REFLECTION_PROBE_WARNING"
+
+[node name="Music" type="HBoxContainer" parent="Settings/ScrollContainer/SettingsUI"]
+custom_minimum_size = Vector2(768, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Settings/ScrollContainer/SettingsUI/Music"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+text = "MUSIC_VOLUME"
+
+[node name="MusicVolume" type="HSlider" parent="Settings/ScrollContainer/SettingsUI/Music"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+
 [node name="StoryUI" type="Control" parent="."]
 visible = false
 layout_mode = 1
@@ -414,10 +475,14 @@ bus = &"Music"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="StoryMode" to="." method="_on_story_mode_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_help_button_pressed"]
-[connection signal="toggled" from="EnableSound" to="." method="_on_enable_sound_toggled"]
 [connection signal="toggled" from="GameSettings/TimeLimited" to="." method="_on_time_limited_toggled"]
 [connection signal="toggled" from="GameSettings/ZenMode" to="." method="_on_zen_mode_toggled"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="close_requested" from="Tutorial" to="Tutorial" method="_on_close_requested"]
+[connection signal="close_requested" from="Settings" to="Settings" method="_on_close_requested"]
+[connection signal="toggled" from="Settings/ScrollContainer/SettingsUI/Glow" to="Settings/ScrollContainer/SettingsUI" method="_on_glow_toggled"]
+[connection signal="toggled" from="Settings/ScrollContainer/SettingsUI/BasicReflection" to="Settings/ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
+[connection signal="drag_ended" from="Settings/ScrollContainer/SettingsUI/Music/MusicVolume" to="Settings/ScrollContainer/SettingsUI" method="_on_music_volume_drag_ended"]
 [connection signal="pressed" from="StoryUI/Back" to="." method="_on_story_back_pressed"]

@@ -106,6 +106,7 @@ mass = 8.0
 
 [node name="Cage" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_qj3e5")
 skeleton = NodePath("")
 
@@ -115,5 +116,6 @@ shape = SubResource("CylinderShape3D_gk1ki")
 
 [node name="Cage_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.382683, 0, 0.92388, 0, 1, 0, -0.92388, 0, -0.382683, 0.0418691, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mgl4d")
 skeleton = NodePath("")

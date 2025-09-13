@@ -1,20 +1,14 @@
-# SCP: Containing Procedures (Reborn)
-
-## ⚠️About post-Expansion update!
-
-I lost interest to SCP community again, but I want to finish this game at Expansion update.
-Next short-term updates will be 5.x.x versions.
-This is **NOT PERMANENT!!!**
-6.x.x will wait for months and months (until I return again to SCP community)... ☹️
+# SCP: Containing Procedures
 
 ## Long-term plan
 - [ ] SCP-001 (by shaggydredlocks) event
 - [ ] SCP-003
 - [ ] SCP-104
-- [ ] SCP-178
+- [ ] SCP-178 (3d model is ready)
+- [ ] SCP-432 (with dimension)
 - [ ] SCP-647
 - [ ] SCP-813
-- [ ] SCP-864 (probably, latest Nalka version)
+- [ ] SCP-864 (probably, latest Nalka version, with dimension)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
@@ -22,14 +16,21 @@ This is **NOT PERMANENT!!!**
 
 ## v5.0.0 (Expansion update part 2, release won't be soon)
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
-- [ ] Enable hotkeys for moving + Settings screen - looks like, that camera rotation is not so easy.
+- [x] Enable hotkeys for moving + Settings screen - looks like, that camera rotation is not so easy.
+- [x] You cannot enter WC now (because of possible *strange situations*)
+- [x] Removed old lighting hack from non-lightmap era.
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
-- [ ] SCP-938 and its Containment Chamber + Lantern item (in progress)
+- [ ] Improve finish game screen/gameover - make it full-screen + graphics.
+- [x] Add props to Class-D room
+- [x] Add Settings to Main Menu
+- [x] Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)
+- [ ] SCP-938 (in progress)
+- [x] SCP-938 Containment Sublevel + Lantern item
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
-- [ ] SCP-109 Containment Chamber
+- [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 
 ## v4.3.0
 

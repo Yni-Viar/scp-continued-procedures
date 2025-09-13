@@ -393,6 +393,7 @@ shape = SubResource("ConcavePolygonShape3D_x6fc7")
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32723, 6.46844, 0.297435)
 blend_distance = 0.4
+max_distance = 64.0
 size = Vector3(19.9801, 15.4554, 19.8004)
 origin_offset = Vector3(0, -4.025, 4.76)
 box_projection = true

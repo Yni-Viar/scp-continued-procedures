@@ -300,201 +300,13 @@ shape = SubResource("BoxShape3D_cxqbm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4465, 14.0874, 0)
 shape = SubResource("ConcavePolygonShape3D_ft7as")
 
-[node name="StaticLights" type="Node3D" parent="."]
-visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 25.1181, 40.8847, 0)
-light_energy = 16.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 70.8695
-spot_angle = 81.4211
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 67.2712, 6.11013, 0)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 78.2086, 6.11013, 0)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D20" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 78.2086, 6.11013, -14.5114)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D21" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 78.2086, 6.11013, -32.6851)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D22" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 78.2086, 6.11013, -48.214)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 90.5815, 6.11013, 0)
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 14.1295
-spot_angle = 80.7585
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 105.701, 6.11013, 0)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D6" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 105.701, 6.11013, 14.2512)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D7" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 105.701, 6.11013, -12.3744)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D23" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 81.8014, 10.9162, -86.7548)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D24" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 81.8014, 10.9162, -69.8532)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D8" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 129.821, 6.11013, 0)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D9" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 129.821, 6.11013, 14.2512)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D10" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 129.821, 6.11013, -12.3744)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D11" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 149, 6.11013, 0)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D12" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 149, 6.11013, 14.2512)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D13" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 149, 6.11013, -12.3744)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D14" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 167.062, 6.11013, 0)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D15" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 167.062, 6.11013, 14.2512)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D16" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 167.062, 6.11013, -12.3744)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D17" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 186.062, 6.11013, 0)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D18" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 186.062, 6.11013, 14.2512)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
-[node name="SpotLight3D19" type="SpotLight3D" parent="StaticLights"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 186.062, 6.11013, -12.3744)
-light_energy = 3.0
-light_bake_mode = 1
-distance_fade_enabled = true
-spot_range = 21.8839
-spot_angle = 80.7585
-
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
 bounce_indirect_energy = 2.0
 interior = true
 texel_scale = 0.25
+environment_custom_color = Color(0.481789, 0.481789, 0.481789, 1)
 light_data = ExtResource("5_qal2s")
 
 [node name="FinishGame" type="Area3D" parent="."]
@@ -575,6 +387,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.5828, 0.486295, -83.4092)
 
 [node name="SCPCage_open8" parent="." instance=ExtResource("11_t6k7u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.2241, 0.486295, -83.7906)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.5309, 13.9631, -38.4933)
+max_distance = 128.0
+size = Vector3(204.375, 30.6632, 134.824)
+origin_offset = Vector3(-70.955, -11.535, 38.465)
+box_projection = true
 
 [connection signal="body_entered" from="NavigationRegion3D/FinishGame" to="NavigationRegion3D/FinishGame" method="_on_body_entered"]
 [connection signal="body_exited" from="NavigationRegion3D/FinishGame" to="NavigationRegion3D/FinishGame" method="_on_body_exited"]

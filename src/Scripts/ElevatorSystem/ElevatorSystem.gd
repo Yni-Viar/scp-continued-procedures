@@ -32,8 +32,6 @@ var last_move: LastMove = LastMove.UP
 @export var locked: bool = false
 ## Use only if you set navigation
 @export var navigation_link: NodePath
-## Use only if you set navigation
-@export var navigation_region: NodePath
 var counter: int = 0
 var pass_floor: bool = false
 var default_rotation: Vector3

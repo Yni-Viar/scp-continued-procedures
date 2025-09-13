@@ -152,7 +152,6 @@ _data = {
 script = ExtResource("1_eqh3e")
 speed = 12.0
 navigation_link = NodePath("NavigationLink3D")
-navigation_region = NodePath("AnimatableBody3D/NavigationRegion3D")
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 sync_to_physics = false
@@ -189,8 +188,8 @@ spot_range = 16.2274
 spot_angle = 78.6957
 
 [node name="PlayerArea" type="Area3D" parent="."]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 11
+collision_mask = 11
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000770569, 0.00172424, -0.00894165)

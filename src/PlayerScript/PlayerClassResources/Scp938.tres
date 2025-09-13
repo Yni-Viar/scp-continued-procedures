@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PuppetClass" load_steps=3 format=3 uid="uid://75f7gb2eutok"]
+
+[ext_resource type="PackedScene" uid="uid://cfyph164qef1e" path="res://PlayerScript/PlayerClassPrefab/Scp938.tscn" id="1_g5btx"]
+[ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="2_5fppk"]
+
+[resource]
+script = ExtResource("2_5fppk")
+puppet_class_name = "SCP-938"
+speed = 15.0
+prefab = ExtResource("1_g5btx")
+spawn_point_group = "Scp938Spawn"
+initial_amount = 1
+automatic = true
+footstep_sounds = {}
+fraction = 1
+apply_height_bugfix = false
+enable_wander = false
+health = Array[float]([2300.0])
+team = 0
+enable_avoidance = false
+spawn_on_start = true
+puppet_navigation_layers = 1
+enable_ik = false

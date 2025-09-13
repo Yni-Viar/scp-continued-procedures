@@ -57,6 +57,7 @@ data = PackedVector3Array(-0.0562, 0.4763, -0.032, -0.0661, 0.9526, -0.0004, -0.
 
 [node name="modular_industrial_pipes_01_pipe02" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.75, 0, 0, 0, 2.75, 0, 0, 0, 2.75, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_7schs")
 skeleton = NodePath("")
 

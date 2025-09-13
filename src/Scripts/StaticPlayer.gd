@@ -29,11 +29,18 @@ func _input(event: InputEvent) -> void:
 		scroll_factor -= 0.125
 		scroll_factor = clamp(scroll_factor, 1.0, 8.0)
 		$Head/Camera3D.fov = 75.0 / scroll_factor
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("camera_rotate_up"):
+		rotate_player_by_key(Vector2i.UP)
+	if Input.is_action_pressed("camera_rotate_down"):
+		rotate_player_by_key(Vector2i.DOWN)
+	if Input.is_action_pressed("camera_rotate_left"):
+		rotate_player_by_key(Vector2i.LEFT)
+	if Input.is_action_pressed("camera_rotate_right"):
+		rotate_player_by_key(Vector2i.RIGHT)
 	if !target_puppet_path.is_empty():
 		if get_node_or_null(target_puppet_path) == null:
 			get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
@@ -110,6 +117,25 @@ func rotate_player(event: InputEvent):
 	#rotation.y -= event.relative.x * mouse_sensitivity * 0.05
 	#rotation.x -= event.relative.y * mouse_sensitivity * 0.05
 	#rotation_degrees.y = clamp(rotation_degrees.y, -90, 90)
+
+func rotate_player_by_key(direction: Vector2i):
+	var x_dir: float
+	var y_dir: float
+	match direction:
+		Vector2i.UP:
+			y_dir = 15
+		Vector2i.DOWN:
+			y_dir = -15
+		Vector2i.LEFT:
+			x_dir = -15
+		Vector2i.RIGHT:
+			x_dir = 15
+	# Yni: Necessary to fix annoying bug on Android, when if you rotate screen, player began to move.
+	# https://kidscancode.org/godot_recipes/3.x/3d/camera_gimbal/index.html
+	rotate_object_local(Vector3.UP, x_dir * mouse_sensitivity * 0.05)
+	var y_rotation = clamp(y_dir, -30, 30)
+	$Head.rotate_object_local(Vector3.RIGHT, y_rotation * mouse_sensitivity * 0.05)
+	$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
 
 func _on_optimizator_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:

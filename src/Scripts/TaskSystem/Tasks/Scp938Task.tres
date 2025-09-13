@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GameTaskResource" load_steps=2 format=3 uid="uid://chrcg7ojldnxg"]
+
+[ext_resource type="Script" uid="uid://2412583x8gql" path="res://Scripts/TaskSystem/GameTaskResource.gd" id="1_kyhpv"]
+
+[resource]
+script = ExtResource("1_kyhpv")
+internal_name = "task_938"
+public_name = "TASK_938_CHECK"
+required_group = &"Scp938Spawn"
+metadata/_custom_type_script = "uid://2412583x8gql"

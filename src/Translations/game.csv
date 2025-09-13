@@ -1,25 +1,13 @@
 keys,en,ru
-TASK_162_TOUCH,"Order Class-D to go to SCP-162\nIf there are no Class-D, do it yourself.","Прикажите Классу-Д идти к SCP-162\nЕсли Класс-Д отсутствует, сделайте это сами."
-TASK_173_CLEAN,"Order Class-D to clean SCP-173 room\nIf there are no Class-D, do it yourself.","Прикажите Классу-Д очищать комнату SCP-173\nЕсли Класс-Д отсутствует, сделайте это сами."
-TASK_812_RESEARCH,"Test water composition, taken from SCP-812","Проверьте состав воды из SCP-812"
-TASK_347_CATCH,DO NOT LET SCP-347 ESCAPE!!!\nTake SCP-347 from the exit.,НЕ ПОЗВОЛЯЙТЕ SCP-347 СБЕЖАТЬ!!!\nУтащите SCP-347 подальше от выхода.
-TASK_266_TEST,"Order Class-D to test SCP-266 temperature.\nIf there are no Class-D, do it yourself.","Прикажите Классу-Д проверить температуру SCP-266.\nЕсли Класс-Д отсутствует, сделайте это сами."
-TASK_347_PASS,Find SCP-347 and lead her to the agent\nat Gate B to transport to another\nfacility,Найдите SCP-347 и приведите ее к агенту\nна Выходе Б для перевозки в другой\nкомплекс
 BACK_TO_MENU,Main menu,Главное меню
-TASK_CI_INVASION,Chaos Insurgency invaded the facility!\nCall MTF to destroy the threat.,Повстанцы Хаоса вторглись в комплекс!\nВызовите МОГ чтобы их уничтожить.
 SECONDS_LEFT,Work time\nends in\n,Рабочее время\nзакончится через\n
 ROUGH,Rough,Очень грубо
 COARSE,Coarse,Грубо
 FINE,Fine,Тонко
 VERYFINE,Very fine,Очень тонко
 SCP914_REFINE,Refine,Переработать
-TASK_914_EXP_1,"Refine a PDA in SCP-914, by setting on Coarse",Переработайте карманный компьютер в SCP-914 на Грубо
-TASK_914_EXP_2,"Refine a PDA in SCP-914, by setting on Rough",Переработайте карманный компьютер в SCP-914 на Очень грубо
-TASK_914_EXP_3,Retrieve information from SCP-914 by\nsetting a 3-paged SCP-914 documentation on Fine.,Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Тонко
-TASK_914_EXP_4,Retrieve information from SCP-914 by\nsetting a 3-paged SCP-914 documentation on Very fine.,Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Очень тонко
 RESEARCH_ZONE,Research Zone,Исследовательская\nЗона
 MAINTENANCE_ZONE,Maintenance\nZone,Техническая\nЗона
-TASK_023_EYES,You need to replace SCP-023's eyes quickly.,Вы должны быстро заменить глаза SCP-023.
 ELEVATOR_MGMT,Elevator management,Управление лифтом
 ELEVATOR_WHAT_FLOOR,Choose your destination,Выберите желаемый этаж
 ELEVATOR_CALL,Call/Ride the elevator,Вызвать/поехать на лифте
