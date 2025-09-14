@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=41 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -25,8 +25,10 @@
 [ext_resource type="Texture2D" uid="uid://cia0vdqonir34" path="res://Assets/HUD/Touch/call_mtf_disabled.png" id="20_lbihj"]
 [ext_resource type="Texture2D" uid="uid://cu0ojgep33hl5" path="res://Assets/HUD/Touch/use_914.png" id="22_i0vto"]
 [ext_resource type="Texture2D" uid="uid://dgim1llh2qq3l" path="res://Assets/HUD/Touch/use_914_click.png" id="23_3jf1l"]
+[ext_resource type="Texture2D" uid="uid://doh88081wemgb" path="res://UI/outro_game_ui.png" id="23_i4lct"]
 [ext_resource type="Texture2D" uid="uid://dsbo3crdre1v4" path="res://Assets/HUD/Touch/use_914_disabled.png" id="24_356ba"]
 [ext_resource type="Texture2D" uid="uid://b2lonnmtkdn4e" path="res://Assets/HUD/Touch/call_elevator.png" id="26_356ba"]
+[ext_resource type="Texture2D" uid="uid://c8y4oka7p08v6" path="res://UI/icon_192_dark.png" id="26_iyesh"]
 [ext_resource type="Texture2D" uid="uid://cx0pyayxian80" path="res://Assets/HUD/Touch/call_elevator_click.png" id="27_i4lct"]
 
 [sub_resource type="Environment" id="Environment_mvdmi"]
@@ -39,6 +41,87 @@ fog_light_color = Color(0, 0, 0, 1)
 fog_density = 1.0
 fog_depth_end = 60.0
 
+[sub_resource type="Animation" id="Animation_iyesh"]
+resource_name = "condition_open"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ConditionFadeIn:color:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ConditionFadeIn:color:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ConditionFadeIn:color:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ConditionFadeIn:color:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.966667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"end_screen_show"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_i1pr2"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ConditionFadeIn:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4f4ik"]
+_data = {
+&"RESET": SubResource("Animation_i1pr2"),
+&"condition_open": SubResource("Animation_iyesh")
+}
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71axn"]
 bg_color = Color(0, 0, 0, 1)
 
@@ -50,16 +133,11 @@ border_color = Color(0.8, 0.8, 0.360784, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3xnh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cx6b"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyesh"]
+texture = ExtResource("23_i4lct")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1pr2"]
+texture = ExtResource("14_8e0uq")
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_i4lct"]
 color = Color(1, 1, 1, 1)
@@ -94,6 +172,12 @@ environment = SubResource("Environment_mvdmi")
 [node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 240.0
 one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../UI")
+libraries = {
+&"": SubResource("AnimationLibrary_4f4ik")
+}
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -174,11 +258,59 @@ anchor_bottom = 0.988
 offset_bottom = -0.223999
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x3xnh")
 
-[node name="Back" type="TextureButton" parent="UI"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("7_fgofq")
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -96.0
+offset_right = 48.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="InventoryButton" type="TextureButton" parent="UI/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("15_8r6kd")
+texture_pressed = ExtResource("16_tfod6")
+texture_hover = ExtResource("15_8r6kd")
+texture_disabled = ExtResource("17_rajel")
+
+[node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("18_rajel")
+texture_pressed = ExtResource("19_vvhu1")
+texture_hover = ExtResource("18_rajel")
+texture_disabled = ExtResource("20_lbihj")
+
+[node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("22_i0vto")
+texture_pressed = ExtResource("23_3jf1l")
+texture_hover = ExtResource("22_i0vto")
+texture_disabled = ExtResource("24_356ba")
+
+[node name="ElevatorButton" type="TextureButton" parent="UI/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("26_356ba")
+texture_pressed = ExtResource("27_i4lct")
+texture_hover = ExtResource("26_356ba")
+texture_disabled = ExtResource("20_lbihj")
+
+[node name="ConditionFadeIn" type="ColorRect" parent="UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
 
 [node name="Condition" type="Panel" parent="UI"]
 visible = false
@@ -188,13 +320,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -384.0
-offset_top = -196.0
-offset_right = 384.0
-offset_bottom = 188.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_3cx6b")
+theme_override_styles/panel = SubResource("StyleBoxTexture_iyesh")
 
 [node name="ConditionLabel" type="Label" parent="UI/Condition"]
 layout_mode = 1
@@ -203,14 +335,16 @@ anchor_left = 0.5
 anchor_top = 0.251
 anchor_right = 0.5
 anchor_bottom = 0.251
-offset_left = -24.0
-offset_top = -64.384
-offset_right = 24.0
-offset_bottom = 64.616
+offset_left = -448.0
+offset_top = -64.648
+offset_right = 448.0
+offset_bottom = 64.352
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("9_bf53h")
 theme_override_font_sizes/font_size = 128
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ReasonLabel" type="Label" parent="UI/Condition"]
 layout_mode = 1
@@ -220,9 +354,9 @@ anchor_top = 0.569
 anchor_right = 0.5
 anchor_bottom = 0.569
 offset_left = -320.0
-offset_top = -37.496
+offset_top = -112.712
 offset_right = 320.0
-offset_bottom = 37.504
+offset_bottom = 143.288
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_alignment = 1
@@ -245,6 +379,27 @@ localize_numeral_system = false
 theme = ExtResource("10_3so38")
 text = "BACK_TO_MENU"
 
+[node name="TextureRect" type="TextureRect" parent="UI/Condition"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -200.0
+offset_right = -24.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("26_iyesh")
+
+[node name="Back" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("7_fgofq")
+
 [node name="Scp914Panel" type="Panel" parent="UI"]
 visible = false
 layout_mode = 1
@@ -259,21 +414,7 @@ offset_right = 400.0
 offset_bottom = 240.288
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="UI/Scp914Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -400.0
-offset_top = -240.0
-offset_right = 400.0
-offset_bottom = 240.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_8e0uq")
+theme_override_styles/panel = SubResource("StyleBoxTexture_i1pr2")
 
 [node name="Scp914Mode" type="HSlider" parent="UI/Scp914Panel"]
 layout_mode = 1
@@ -459,50 +600,6 @@ text = "ELEVATOR_WHAT_FLOOR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -96.0
-offset_right = 48.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="InventoryButton" type="TextureButton" parent="UI/HBoxContainer"]
-layout_mode = 2
-texture_normal = ExtResource("15_8r6kd")
-texture_pressed = ExtResource("16_tfod6")
-texture_hover = ExtResource("15_8r6kd")
-texture_disabled = ExtResource("17_rajel")
-
-[node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer"]
-visible = false
-layout_mode = 2
-texture_normal = ExtResource("18_rajel")
-texture_pressed = ExtResource("19_vvhu1")
-texture_hover = ExtResource("18_rajel")
-texture_disabled = ExtResource("20_lbihj")
-
-[node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer"]
-visible = false
-layout_mode = 2
-texture_normal = ExtResource("22_i0vto")
-texture_pressed = ExtResource("23_3jf1l")
-texture_hover = ExtResource("22_i0vto")
-texture_disabled = ExtResource("24_356ba")
-
-[node name="ElevatorButton" type="TextureButton" parent="UI/HBoxContainer"]
-visible = false
-layout_mode = 2
-texture_normal = ExtResource("26_356ba")
-texture_pressed = ExtResource("27_i4lct")
-texture_hover = ExtResource("26_356ba")
-texture_disabled = ExtResource("20_lbihj")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dahhg")
 autoplay = true
@@ -512,12 +609,12 @@ bus = &"Music"
 [connection signal="task_done" from="FoundationTask" to="UI" method="_on_foundation_task_task_done"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
-[connection signal="pressed" from="UI/Back" to="UI" method="_on_back_pressed"]
-[connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
-[connection signal="drag_ended" from="UI/Scp914Panel/Scp914Mode" to="UI" method="_on_scp_914_mode_drag_ended"]
-[connection signal="pressed" from="UI/Scp914Panel/Refine" to="UI" method="_on_refine_pressed"]
-[connection signal="pressed" from="UI/ElevatorMode/ElevatorCall" to="UI" method="_on_elevator_call_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/InventoryButton" to="UI" method="_on_inventory_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/CallMtfButton" to="UI" method="_on_call_mtf_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/Scp914Button" to="UI" method="_on_scp_914_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/ElevatorButton" to="UI" method="_on_elevator_button_pressed"]
+[connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
+[connection signal="pressed" from="UI/Back" to="UI" method="_on_back_pressed"]
+[connection signal="drag_ended" from="UI/Scp914Panel/Scp914Mode" to="UI" method="_on_scp_914_mode_drag_ended"]
+[connection signal="pressed" from="UI/Scp914Panel/Refine" to="UI" method="_on_refine_pressed"]
+[connection signal="pressed" from="UI/ElevatorMode/ElevatorCall" to="UI" method="_on_elevator_call_pressed"]

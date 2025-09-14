@@ -221,7 +221,11 @@ func target_follow():
 	if follow_update_timer > 0:
 		follow_update_timer -= get_physics_process_delta_time()
 	else:
-		set_target_position(get_node(follow_target).global_position + get_node(follow_target).global_transform.basis.z * 1.5)
+		if get_node(follow_target).get("movement_freeze") != null:
+			follow_update_timer = 1.0
+			return
+		if !get_node(follow_target).movement_freeze:
+			set_target_position(get_node(follow_target).global_position + get_node(follow_target).global_transform.basis.z * 1.5)
 		follow_update_timer = 1.0
 
 ## MUST be called by moving platform when starts or ends moving.

@@ -82,30 +82,33 @@ func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
 	return result
 
 func interact(value: String) -> void:
-	match value:
-		"Point":
-			var result: Dictionary = intersect()
-			if result.keys().size() > 0 && !get_node(target_puppet_path).movement_freeze:
-				# Shape cast for items
-				var shape_result: Array[Dictionary] = intersect_shape(result["position"])
-				for s_result in shape_result:
-					if s_result.keys().size() > 0:
-						if s_result["collider"] is Pickable && !s_result["collider"].freeze && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
-							get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
-							s_result["collider"].queue_free()
-							#Use only one item
-							break
-						if s_result["collider"] is MovableNpc:
-							var test = !s_result["collider"].puppet_class.automatic
-							if !s_result["collider"].is_player && !s_result["collider"].puppet_class.automatic:
-								s_result["collider"].follow_target = target_puppet_path
-								if s_result["collider"].wandering:
-									s_result["collider"].wandering = false
-				# ray cast for moving
-				if get_node_or_null(target_puppet_path) == null:
-					get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
-				else:
-					get_node(target_puppet_path).set_target_position(result["position"])
+	if get_node_or_null(target_puppet_path) == null:
+		get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
+	else:
+		match value:
+			"Point":
+				var result: Dictionary = intersect()
+				if result.keys().size() > 0 && !get_node(target_puppet_path).movement_freeze:
+					# Shape cast for items
+					var shape_result: Array[Dictionary] = intersect_shape(result["position"])
+					for s_result in shape_result:
+						if s_result.keys().size() > 0:
+							if s_result["collider"] is Pickable && !s_result["collider"].freeze && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+								get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
+								s_result["collider"].queue_free()
+								#Use only one item
+								break
+							if s_result["collider"] is MovableNpc:
+								var test = !s_result["collider"].puppet_class.automatic
+								if !s_result["collider"].is_player && !s_result["collider"].puppet_class.automatic:
+									s_result["collider"].follow_target = target_puppet_path
+									if s_result["collider"].wandering:
+										s_result["collider"].wandering = false
+					# ray cast for moving
+					if get_node_or_null(target_puppet_path) == null:
+						get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
+					else:
+						get_node(target_puppet_path).set_target_position(result["position"])
 
 func rotate_player(event: InputEvent):
 	# Yni: Necessary to fix annoying bug on Android, when if you rotate screen, player began to move.

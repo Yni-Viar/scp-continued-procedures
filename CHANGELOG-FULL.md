@@ -9,6 +9,7 @@
 - [ ] SCP-647
 - [ ] SCP-813
 - [ ] SCP-864 (probably, latest Nalka version, with dimension)
+- [ ] SCP-939 (3d model is ready (from SCP: Unity), blocked until 2026-07-01 because of popular SCP restriction)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
@@ -23,7 +24,9 @@
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
-- [ ] Improve finish game screen/gameover - make it full-screen + graphics.
+- [x] Removed time scale after finish game
+- [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
+- [x] Improve finish game screen/gameover - make it full-screen + graphics
 - [x] Add props to Class-D room
 - [x] Add Settings to Main Menu
 - [x] Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)

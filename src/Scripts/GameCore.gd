@@ -26,10 +26,6 @@ var mtf_cooldown: float = 10.0
 ## Protagonist tracker
 var protagonist: MovableNpc
 
-## Necessary for fixing a bug
-func _enter_tree() -> void:
-	Settings.set_pause_subtree(false)
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if time_limited && !Settings.setting_res.zen_mode:
@@ -160,10 +156,9 @@ func despawn_wave(wave_type: int):
 ## Game end
 func finish_game(good_end: bool, reason: String):
 	$UI/Condition/ConditionLabel.text = "GAME_WIN" if good_end else "GAME_OVER"
-	$UI/Condition.show()
 	$UI/Condition/ReasonLabel.text = reason
+	$AnimationPlayer.play("condition_open")
 	$GameOverTimer.stop()
-	Settings.set_pause_subtree(true)
 
 func call_mtf():
 	if get_node("FoundationTask").has_task("task_ci") && mtf_cooldown <= 0.0:

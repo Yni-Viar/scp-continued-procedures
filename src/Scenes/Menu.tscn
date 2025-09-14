@@ -10,8 +10,8 @@
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="7_wfhf6"]
 [ext_resource type="Texture2D" uid="uid://26abh1a6pa33" path="res://UI/MainMenu/Modes/settings.png" id="7_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://cjb5vwpp8o0ug" path="res://icon_192_foreground.png" id="10_sjh0l"]
+[ext_resource type="PackedScene" uid="uid://dyo4u3ig5wr1p" path="res://Scenes/Settings.tscn" id="11_a8aa6"]
 [ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
-[ext_resource type="Script" uid="uid://cuqie2ofws5qv" path="res://Scripts/SettingsUI.gd" id="12_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
 [ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="15_t8p2w"]
 
@@ -127,6 +127,8 @@ offset_right = 88.0
 offset_bottom = 110.808
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 text = "STORY_MODE"
 icon = ExtResource("7_a8aa6")
 icon_alignment = 1
@@ -145,6 +147,8 @@ offset_right = 87.616
 offset_bottom = 110.808
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 text = "SETTINGS"
 icon = ExtResource("7_x0ao6")
 icon_alignment = 1
@@ -373,57 +377,7 @@ text = "HELP_TASKS"
 layout_mode = 2
 text = "HELP_EVENTS"
 
-[node name="Settings" type="Window" parent="."]
-auto_translate_mode = 1
-title = "Settings"
-initial_position = 2
-size = Vector2i(800, 480)
-visible = false
-theme = ExtResource("2_syfuq")
-script = ExtResource("7_wfhf6")
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Settings"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SettingsUI" type="VBoxContainer" parent="Settings/ScrollContainer"]
-custom_minimum_size = Vector2(768, 0)
-layout_mode = 2
-script = ExtResource("12_x0ao6")
-
-[node name="Glow" type="CheckButton" parent="Settings/ScrollContainer/SettingsUI"]
-layout_mode = 2
-button_pressed = true
-text = "GLOW"
-
-[node name="BasicReflection" type="CheckButton" parent="Settings/ScrollContainer/SettingsUI"]
-layout_mode = 2
-button_pressed = true
-text = "REFLECTION_PROBE"
-
-[node name="Label" type="Label" parent="Settings/ScrollContainer/SettingsUI"]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-text = "REFLECTION_PROBE_WARNING"
-
-[node name="Music" type="HBoxContainer" parent="Settings/ScrollContainer/SettingsUI"]
-custom_minimum_size = Vector2(768, 0)
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Settings/ScrollContainer/SettingsUI/Music"]
-custom_minimum_size = Vector2(256, 0)
-layout_mode = 2
-text = "MUSIC_VOLUME"
-
-[node name="MusicVolume" type="HSlider" parent="Settings/ScrollContainer/SettingsUI/Music"]
-custom_minimum_size = Vector2(512, 0)
-layout_mode = 2
-max_value = 1.0
-step = 0.1
-value = 1.0
+[node name="Settings" parent="." instance=ExtResource("11_a8aa6")]
 
 [node name="StoryUI" type="Control" parent="."]
 visible = false
@@ -481,8 +435,4 @@ bus = &"Music"
 [connection signal="toggled" from="GameSettings/ZenMode" to="." method="_on_zen_mode_toggled"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
 [connection signal="close_requested" from="Tutorial" to="Tutorial" method="_on_close_requested"]
-[connection signal="close_requested" from="Settings" to="Settings" method="_on_close_requested"]
-[connection signal="toggled" from="Settings/ScrollContainer/SettingsUI/Glow" to="Settings/ScrollContainer/SettingsUI" method="_on_glow_toggled"]
-[connection signal="toggled" from="Settings/ScrollContainer/SettingsUI/BasicReflection" to="Settings/ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
-[connection signal="drag_ended" from="Settings/ScrollContainer/SettingsUI/Music/MusicVolume" to="Settings/ScrollContainer/SettingsUI" method="_on_music_volume_drag_ended"]
 [connection signal="pressed" from="StoryUI/Back" to="." method="_on_story_back_pressed"]

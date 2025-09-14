@@ -31,6 +31,9 @@ var dragged: bool = false
 	#get_parent().get_node("FacilityGenerator").clear()
 	#get_parent().get_node("FacilityGenerator").prepare_generation()
 
+func end_screen_show():
+	$Condition.show()
+
 
 func _on_back_pressed() -> void:
 	var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
@@ -59,6 +62,7 @@ func _on_foundation_task_task_done() -> void:
 func _on_inventory_button_pressed() -> void:
 	$ElevatorMode.hide()
 	$Scp914Panel.hide()
+
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible = !get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible
 
 
