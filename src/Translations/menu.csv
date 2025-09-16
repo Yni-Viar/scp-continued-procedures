@@ -13,7 +13,3 @@ STORY_MODE,Story mode,Кампания
 HELP_BUTTON,Help,Справка
 GAME_SETTINGS_INFO,"These settings only work in ""casual mode""","Эти настройки работают только в ""свободной игре""."
 STORY_MAIN,Main Story\nAuthor: Yni Viar,Основная история\nАвтор: Yni Viar
-GLOW,Glow,Свечение
-REFLECTION_PROBE,Reflection probe,Базовые отражения
-REFLECTION_PROBE_WARNING,It is NOT recommended to disable reflection probe\nbecause character will appear fully dark.\nUse this at last resort for performance.,"Не рекомендуется отключать базовые отражения,\nтак как персонажи будут полностью темными.\nИспользуйте только как последнее средство для производительности."
-MUSIC_VOLUME,Music volume,Громкость музыки

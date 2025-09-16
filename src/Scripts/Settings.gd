@@ -71,3 +71,7 @@ func audio_settings(bus: int, val: float):
 
 func override_main_scene(scene: Node):
 	get_tree().current_scene = scene
+
+func set_keybind(action_name:String, key: InputEvent):
+	InputMap.erase_action(action_name)
+	InputMap.action_add_event(action_name, key)
