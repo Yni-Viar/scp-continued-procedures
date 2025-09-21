@@ -11,7 +11,7 @@ enum CameraMode {ALL, UPPERLOOK, THIRD_PERSON, SIZE}
 var mouse_sensitivity = 0.03125
 var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
-var transition: Vector3 = Vector3(NAN, NAN, NAN)
+var transition: NodePath
 
 
 const RAY_LENGTH = 512
@@ -38,13 +38,15 @@ func _input(event: InputEvent) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	if transition != null && !transition != Vector3(NAN, NAN, NAN):
-		$Head/Camera3D.position = $Head/Camera3D.position.move_toward($Head/Camera3D.position, transition, delta)
-		if $Head/Camera3D.position.is_equal_approx(transition):
-			transition = Vector3(NAN, NAN, NAN)
+	#Handle smooth camera transitions
+	if transition != null && !transition.is_empty():
+		var to_pos: Vector3 = get_node(transition).position
+		$Head/Camera3D.position = $Head/Camera3D.position.move_toward(to_pos, 12 * delta)
+		if $Head/Camera3D.position.is_equal_approx(to_pos):
+			transition = NodePath()
 	if Input.is_action_just_pressed("toggle_mode"):
-		toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 == CameraMode.SIZE else 0)
-	rotate_player_by_key(Vector2i(int(Input.is_action_just_pressed("camera_rotate_right"))  - int(Input.is_action_just_pressed("camera_rotate_left")), 0))
+		toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 <= CameraMode.SIZE else 1)
+	rotate_player_by_key(Vector2i(int(Input.is_action_just_pressed("camera_rotate_right")) - int(Input.is_action_just_pressed("camera_rotate_left")), 0))
 	if !target_puppet_path.is_empty():
 		if get_node_or_null(target_puppet_path) == null:
 			get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
@@ -52,6 +54,11 @@ func _physics_process(delta: float) -> void:
 			if get_node(target_puppet_path).current_health[2] < get_node(target_puppet_path).health[2]:
 				$Head/Camera3D/MeshInstance3D.mesh.surface_get_material(0).set_shader_parameter("multiplier", (get_node(target_puppet_path).health[2] - get_node(target_puppet_path).current_health[2]) / get_node(target_puppet_path).health[2])
 			get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[0]
+		# Apply bonus to Y coordinate if current_camera_mode is third person
+		if current_camera_mode == CameraMode.THIRD_PERSON:
+			global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)
+		else:
+			global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0)
 
 ## Used from Godot Docs
 func intersect() -> Dictionary:
@@ -151,14 +158,14 @@ func toggle_mode(mode: int):
 		1:
 			if camera_mode == 0 || camera_mode == 1:
 				global_position.y = 0
-				transition = $Head/UpperLook.position
+				transition = $Head/UpperLook.get_path()
 				current_camera_mode = CameraMode.UPPERLOOK
 			else:
 				printerr("camera_mode does not allow this mode")
 		2:
 			if camera_mode == 0 || camera_mode == 2:
 				global_position.y = 1.863
-				transition = $Head/ThirdPerson.position
+				transition = $Head/ThirdPerson.get_path()
 				current_camera_mode = CameraMode.THIRD_PERSON
 			else:
 				printerr("camera_mode does not allow this mode")

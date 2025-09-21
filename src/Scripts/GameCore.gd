@@ -52,8 +52,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !$GameOverTimer.is_stopped():
 		$UI/TimeToLeft.text = tr("SECONDS_LEFT") + " " + str(ceili($GameOverTimer.time_left))
-	if protagonist != null:
-		get_node("StaticPlayer").global_position = protagonist.global_position + Vector3(0, 3, 0)
 	if ci_probability == 1 && ci_ready:
 		if Settings.setting_res.zen_mode:
 			# Disable Chaos waves for the Safe modes

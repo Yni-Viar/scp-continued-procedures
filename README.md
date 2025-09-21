@@ -7,6 +7,21 @@ Click/Tap - move/pick items (if you tap on character, they will go with you).
 
 If Chaos Insurgency will raid your Site, call MTF using the button (in other times, the button won't work)
 
+Included SCPs:
+
+- SCP-023
+- SCP-162
+- SCP-173
+- SCP-266
+- SCP-347
+- SCP-650
+- SCP-812
+- SCP-914
+- SCP-938
+
+## Why this name?
+- It is a recursive acronym - **S**CP: **C**ontainment **P**rocedures
+
 ### Notice about Android version
 [How to install Android version after 2026 guide](https://github.com/Yni-Viar/Yni-Viar/blob/main/google-android-2026-foss.md)
 

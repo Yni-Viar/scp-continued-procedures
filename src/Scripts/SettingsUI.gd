@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 func _on_music_volume_drag_ended(value_changed: bool) -> void:
 	if value_changed:
 		Settings.audio_settings(1, $Music/MusicVolume.value)
+		Settings.setting_res.music_volume = $Music/MusicVolume.value
 		Settings.save_resource(Settings.setting_res)
 
 func _on_basic_reflection_toggled(toggled_on: bool) -> void:
