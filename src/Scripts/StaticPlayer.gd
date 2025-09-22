@@ -26,14 +26,14 @@ func _input(event: InputEvent) -> void:
 			rotate_player(event)
 	if event is InputEventScreenDrag:
 		rotate_player(event)
-	if event.is_action_pressed("scroll_up"):
-		scroll_factor += 0.125
-		scroll_factor = clamp(scroll_factor, 1.0, 8.0)
-		$Head/Camera3D.fov = 75.0 / scroll_factor
-	if event.is_action_pressed("scroll_down"):
-		scroll_factor -= 0.125
-		scroll_factor = clamp(scroll_factor, 1.0, 8.0)
-		$Head/Camera3D.fov = 75.0 / scroll_factor
+	#if event.is_action_pressed("scroll_up"):
+		#scroll_factor += 0.125
+		#scroll_factor = clamp(scroll_factor, 1.0, 8.0)
+		#$Head/Camera3D.fov = 75.0 / scroll_factor
+	#if event.is_action_pressed("scroll_down"):
+		#scroll_factor -= 0.125
+		#scroll_factor = clamp(scroll_factor, 1.0, 8.0)
+		#$Head/Camera3D.fov = 75.0 / scroll_factor
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		if $Head/Camera3D.position.is_equal_approx(to_pos):
 			transition = NodePath()
 	if Input.is_action_just_pressed("toggle_mode"):
-		toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 <= CameraMode.SIZE else 1)
+		toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 < CameraMode.SIZE else 1)
 	rotate_player_by_key(Vector2i(int(Input.is_action_just_pressed("camera_rotate_right")) - int(Input.is_action_just_pressed("camera_rotate_left")), 0))
 	if !target_puppet_path.is_empty():
 		if get_node_or_null(target_puppet_path) == null:

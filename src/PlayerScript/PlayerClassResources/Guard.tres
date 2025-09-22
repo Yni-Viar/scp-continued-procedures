@@ -12,8 +12,8 @@ spawn_point_group = "GuardSpawn"
 initial_amount = 4
 automatic = false
 footstep_sounds = {
-"run": PackedStringArray("res://Sounds/Character/Human/Step/Run1.ogg", "res://Sounds/Character/Human/Step/Run2.ogg", "res://Sounds/Character/Human/Step/Run3.ogg", "res://Sounds/Character/Human/Step/Run4.ogg", "res://Sounds/Character/Human/Step/Run5.ogg", "res://Sounds/Character/Human/Step/Run6.ogg", "res://Sounds/Character/Human/Step/Run7.ogg", "res://Sounds/Character/Human/Step/Run8.ogg"),
-"walk": PackedStringArray("res://Sounds/Character/Human/Step/Step1.ogg", "res://Sounds/Character/Human/Step/Step2.ogg", "res://Sounds/Character/Human/Step/Step3.ogg", "res://Sounds/Character/Human/Step/Step4.ogg", "res://Sounds/Character/Human/Step/Step5.ogg", "res://Sounds/Character/Human/Step/Step6.ogg", "res://Sounds/Character/Human/Step/Step7.ogg", "res://Sounds/Character/Human/Step/Step8.ogg")
+"run": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"),
+"walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
 }
 fraction = 0
 apply_height_bugfix = false
@@ -23,3 +23,4 @@ team = 1
 enable_avoidance = true
 spawn_on_start = true
 puppet_navigation_layers = 1
+enable_ik = true

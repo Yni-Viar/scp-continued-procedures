@@ -46,6 +46,7 @@ func load_resource():
 func load_default_settings():
 	#if OS.get_name() != "Web" || OS.get_name() != "Android":
 	var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
+	set_default_keybinds()
 	save_resource(res)
 	setting_res = res
 	#else:
@@ -72,6 +73,22 @@ func audio_settings(bus: int, val: float):
 func override_main_scene(scene: Node):
 	get_tree().current_scene = scene
 
-func set_keybind(action_name:String, key: InputEvent):
-	InputMap.erase_action(action_name)
-	InputMap.action_add_event(action_name, key)
+func set_default_keybinds():
+	for value in setting_res.keybinds.keys():
+		set_keybind(value, setting_res.keybinds[value][0], setting_res.keybinds[value][1])
+
+func set_keybind(action_name: String, key_type: int, key: int):
+	InputMap.action_erase_events(action_name)
+	match key_type:
+		0:
+			var event: InputEventKey = InputEventKey.new()
+			event.physical_keycode = key
+			InputMap.action_add_event(action_name, event)
+		1:
+			var event: InputEventMouseButton = InputEventMouseButton.new()
+			event.button_index = key
+			InputMap.action_add_event(action_name, event)
+		2:
+			print("Gamepad support is not implemented.")
+	setting_res.keybinds[action_name] = PackedInt64Array([key_type, key])
+	save_resource(setting_res)

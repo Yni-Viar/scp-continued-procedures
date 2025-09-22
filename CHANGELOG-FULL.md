@@ -19,14 +19,15 @@
 ## v5.0.0 (Expansion update part 2, release won't be soon)
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
 - [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
-- [x] Camera Rework: Add Third-person view + toggle API
-- [ ] Keybind settings (in progress)
+- [x] Camera Rework: Add Third-person view + toggle API and remove scroll zoom
+- [x] Keybind settings (FINALLY DONE!!!)
 - [x] You cannot enter WC now (because of possible *strange situations*)
 - [x] Removed old lighting hack from non-lightmap era.
 - [ ] Story mode: lore (in progress)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
+- [ ] Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency
 - [x] Removed time scale after finish game
 - [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
 - [x] Improve finish game screen/gameover - make it full-screen + graphics
