@@ -1,7 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://cfyph164qef1e"]
+[gd_scene load_steps=25 format=3 uid="uid://cfyph164qef1e"]
 
 [ext_resource type="Texture2D" uid="uid://bgg11f8ixkht8" path="res://Assets/Materials/Lightning/0.png" id="1_8v1en"]
-[ext_resource type="Script" uid="uid://balciuvitprqm" path="res://PlayerScript/PlayerClassScript/BasePuppetScript.gd" id="1_ldt5e"]
+[ext_resource type="Script" uid="uid://o2140pmyrlhj" path="res://PlayerScript/PlayerClassScript/Scp938PuppetScript.gd" id="1_57mr0"]
+[ext_resource type="Material" uid="uid://j3a5131k41ib" path="res://Assets/Materials/Lightning/lightning_1.tres" id="2_57mr0"]
+[ext_resource type="Shader" uid="uid://bwwkqxfbp71h1" path="res://Shaders/LightingShader/lightning_emission.gdshader" id="3_nn0yt"]
+[ext_resource type="Texture2D" uid="uid://c4frn067o3ams" path="res://Assets/Materials/Lightning/1.png" id="5_rkwqo"]
+[ext_resource type="Texture2D" uid="uid://dtw2dj1lm1hb3" path="res://Assets/Materials/Lightning/2.png" id="6_1g7bx"]
+[ext_resource type="Texture2D" uid="uid://cixg2v3eals5y" path="res://Assets/Materials/Lightning/3.png" id="7_3ctwl"]
+[ext_resource type="Texture2D" uid="uid://bs7fkrdxxbvhh" path="res://Assets/Materials/Lightning/4.png" id="8_yf3pm"]
+[ext_resource type="Texture2D" uid="uid://cn7i2qmflhuf6" path="res://Assets/Materials/Lightning/5.png" id="9_klovq"]
+[ext_resource type="Texture2D" uid="uid://c4ls1d1s0dmgo" path="res://Assets/Materials/Lightning/6.png" id="10_j1ayf"]
+[ext_resource type="Texture2D" uid="uid://b4tvxp4co0s2j" path="res://Assets/Materials/Lightning/7.png" id="11_iycwc"]
+[ext_resource type="Texture2D" uid="uid://d3abp7thg74hg" path="res://Assets/Materials/Lightning/8.png" id="12_orfx2"]
+[ext_resource type="Texture2D" uid="uid://c7c0rb3xasuvq" path="res://Assets/Materials/Lightning/9.png" id="13_ou21i"]
+[ext_resource type="Texture2D" uid="uid://cmut4gpdxpg42" path="res://Assets/Materials/Lightning/10.png" id="14_08wfc"]
 
 [sub_resource type="Curve" id="Curve_8v1en"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.751309, 1), 0.0, 0.0, 0, 0, Vector2(0.992146, 0.00355339), 0.0, 0.0, 0, 0]
@@ -25,19 +37,8 @@ turbulence_enabled = true
 turbulence_influence_min = 1.0
 turbulence_influence_max = 1.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_663d6"]
-transparency = 1
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_8v1en")
-emission_enabled = true
-emission_texture = ExtResource("1_8v1en")
-billboard_mode = 3
-particles_anim_h_frames = 1
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
 [sub_resource type="QuadMesh" id="QuadMesh_rerev"]
-material = SubResource("StandardMaterial3D_663d6")
+material = ExtResource("2_57mr0")
 size = Vector2(0.25, 0.125)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_75wev"]
@@ -56,10 +57,19 @@ rings = 16
 radius = 12.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ldt5e"]
-radius = 4.0
+radius = 1.99739
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5y8gx"]
+render_priority = 0
+shader = ExtResource("3_nn0yt")
+shader_parameter/lightning_textures = Array[Texture2D]([ExtResource("1_8v1en"), ExtResource("5_rkwqo"), ExtResource("6_1g7bx"), ExtResource("7_3ctwl"), ExtResource("8_yf3pm"), ExtResource("9_klovq"), ExtResource("10_j1ayf"), ExtResource("11_iycwc"), ExtResource("12_orfx2"), ExtResource("13_ou21i"), ExtResource("14_08wfc")])
+
+[sub_resource type="QuadMesh" id="QuadMesh_co428"]
+material = SubResource("ShaderMaterial_5y8gx")
+size = Vector2(2, 2)
 
 [node name="Puppet" type="Node3D"]
-script = ExtResource("1_ldt5e")
+script = ExtResource("1_57mr0")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.106224, 0)
@@ -74,11 +84,27 @@ draw_pass_1 = SubResource("QuadMesh_rerev")
 mesh = SubResource("SphereMesh_0jgng")
 
 [node name="TriggerArea" type="Area3D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TriggerArea"]
 shape = SubResource("SphereShape3D_w17vb")
 
 [node name="AttackArea" type="Area3D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea"]
 shape = SubResource("SphereShape3D_ldt5e")
+
+[node name="AttackTrigger" type="Marker3D" parent="."]
+visible = false
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="AttackTrigger"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.127843, 1.0156)
+amount = 1
+mesh = SubResource("QuadMesh_co428")
+gravity = Vector3(0, 0, 0)
+
+[connection signal="body_entered" from="TriggerArea" to="." method="_on_trigger_area_body_entered"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

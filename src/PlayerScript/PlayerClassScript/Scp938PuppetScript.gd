@@ -6,8 +6,8 @@ class_name Scp938PuppetScript
 enum Scp938State{DORMANT, ACTIVE_WANDERING, ACTIVE_ATTACKING}
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+var current_state: Scp938State = Scp938State.DORMANT
 var electro_targets: Array[Node3D] = []
-var active_targets: Array[int] = []
 var timer: float = 4.0
 
 # Called when the node enters the scene tree for the first time.
@@ -20,39 +20,20 @@ func _physics_process(delta: float) -> void:
 	scp_938(delta)
 
 func scp_938(delta: float):
-	if timer > 0:
-		timer -= delta
+	if electro_targets.size() > 0:
+		if timer > 0:
+			timer -= delta
+		else:
+			current_state = rng.randi_range(1, 2)
 	else:
-		#if heat_targets.size() > 0:
-			#get_parent().get_parent().wandering = false
-			#var counter: int = 0
-			#for heat in heat_targets:
-				#if is_instance_valid(heat):
-					#if heat is MovableNpc:
-						## Only humans will freeze
-						#if heat.puppet_class.fraction != 1 && heat.puppet_class.fraction != 2:
-							#if heat.current_health[2] - 5 < 0:
-								#heat.health_manage(-100)
-								#heat.health_manage(-5, 2)
-								#heat_targets.erase(heat)
-								#return
-							#else:
-								#heat.health_manage(-25 * (heat.health[2] - heat.current_health[2]) / heat.health[2]) #deplete health
-								#heat.health_manage(-5, 2) #deplete warmth
-				#else:
-					#heat_targets.remove_at(counter)
-				#counter += 1
-			#get_parent().get_parent().follow_target = heat_targets[0].get_path()
-			#counter = 0
-		timer = 2.5
+		timer = 5.0
 
-#func _on_warm_detector_body_entered(body: Node3D) -> void:
-	#if body is MovableNpc:
-		#if body.puppet_class.fraction != 1 && body.puppet_class.fraction != 2:
-			#heat_targets.append(body)
-#
-#
-#func _on_warm_detector_body_exited(body: Node3D) -> void:
-	#if body is MovableNpc:
-		#if heat_targets.has(body):
-			#heat_targets.erase(body)
+func _on_trigger_area_body_entered(body: Node3D) -> void:
+	if body is MovableNpc:
+		if body.puppet_class.fraction != 1 && body.puppet_class.fraction != 2:
+			electro_targets.append(body)
+
+
+func _on_attack_area_body_entered(body: Node3D) -> void:
+	if body is MovableNpc:
+		pass

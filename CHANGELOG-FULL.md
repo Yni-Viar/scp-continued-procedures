@@ -14,9 +14,9 @@
 - [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
 - [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
-- [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.1 support 😒 (for 6.0)
+- [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.1 support 😒 (for 5.1 and 6.0)
 
-## v5.0.0 (Expansion update part 2, release won't be soon)
+## v5.0.0 (Expansion update part 2, release won't be soon) **(⚠️ Last version, that natively supports Windows 7-8.1!!!)**
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
 - [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
 - [x] Camera Rework: Add Third-person view + toggle API and remove scroll zoom
