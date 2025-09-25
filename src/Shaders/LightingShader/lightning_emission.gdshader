@@ -6,10 +6,6 @@ render_mode cull_disabled;
 
 uniform sampler2D lightning_textures[11];
 
-float random(vec2 uv) {
-	return fract(sin(dot(uv, vec2(12.9898, 78.233))) * 43758.5453);
-}
-
 void vertex() {
 	// Called for every vertex the material is visible on.
 }

@@ -34,8 +34,10 @@
 - [x] Add props to Class-D room
 - [x] Add Settings to Main Menu
 - [x] Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)
-- [ ] SCP-938 (in progress)
-- [x] SCP-938 Containment Sublevel + Lantern item
+- [x] SCP-938: VFX
+- [x] SCP-938: Puppet Logic
+- [ ] SCP-938: Task
+- [x] SCP-938: Containment Sublevel + Lantern item
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 
