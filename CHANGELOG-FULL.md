@@ -5,6 +5,7 @@
 - [ ] SCP-003
 - [ ] SCP-104
 - [ ] SCP-178 (3d model is ready)
+- [ ] SCP-323
 - [ ] SCP-432 (with dimension)
 - [ ] SCP-647
 - [ ] SCP-813
@@ -14,9 +15,9 @@
 - [ ] Multiplayer (co-op)
 - [ ] Add generator task (hello Unstable Dimensions)
 - [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
-- [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.1 support 😒 (for 5.1 and 6.0)
 
-## v5.0.0 (Expansion update part 2, release won't be soon) **(⚠️ Last version, that natively supports Windows 7-8.1!!!)**
+
+## v5.0.0 (Expansion update part 2, release won't be soon) 
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
 - [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
 - [x] Camera Rework: Add Third-person view + toggle API and remove scroll zoom
@@ -40,8 +41,9 @@
 - [x] SCP-938: Containment Sublevel + Lantern item
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
+- [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
 
-## v4.3.0
+## v4.3.0 **(⚠️ Last version, that natively supports Windows 7-8.0!!!)**
 
 - Added WC rooms for Maintenance and Research zones.
 - Returned fully-functional SCP-109 - it can be used as healing item, due to new API. ~~Use the cube in SCP-914 to make it with 33% chance.~~

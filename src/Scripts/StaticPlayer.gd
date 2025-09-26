@@ -146,9 +146,9 @@ func rotate_player_by_key(direction: Vector2i):
 			x_dir = 45
 	# Yni: Necessary to fix annoying bug on Android, when if you rotate screen, player began to move.
 	# https://kidscancode.org/godot_recipes/3.x/3d/camera_gimbal/index.html
-	rotate_object_local(Vector3.UP, x_dir * mouse_sensitivity * 0.05)
+	rotate_object_local(Vector3.UP, deg_to_rad(x_dir))
 	var y_rotation = clamp(y_dir, -30, 30)
-	$Head.rotate_object_local(Vector3.RIGHT, y_rotation * mouse_sensitivity * 0.05)
+	$Head.rotate_object_local(Vector3.RIGHT, deg_to_rad(y_rotation))
 	$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
 
 func toggle_mode(mode: int):
