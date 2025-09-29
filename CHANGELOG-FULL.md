@@ -28,7 +28,7 @@
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch).
-- [ ] Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency
+- [ ] Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency (in progress)
 - [x] Removed time scale after finish game
 - [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
 - [x] Improve finish game screen/gameover - make it full-screen + graphics
@@ -42,7 +42,7 @@
 - [x] Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
-- [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
+- [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
 
 ## v4.3.0 **(⚠️ Last version, that natively supports Windows 7-8.0!!!)**
 

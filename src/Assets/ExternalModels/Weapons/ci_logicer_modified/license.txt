@@ -1,0 +1,11 @@
+Model Information:
+* title:	M249 Machine Gun
+* source:	https://sketchfab.com/3d-models/m249-machine-gun-bf0105376a2d4c37926f3ce95316460d
+* author:	Kendrick Russell (https://sketchfab.com/Buce)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "M249 Machine Gun" (https://sketchfab.com/3d-models/m249-machine-gun-bf0105376a2d4c37926f3ce95316460d) by Kendrick Russell (https://sketchfab.com/Buce) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

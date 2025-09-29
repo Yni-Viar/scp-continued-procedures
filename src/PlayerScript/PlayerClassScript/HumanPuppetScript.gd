@@ -5,7 +5,7 @@ class_name HumanPuppetScript
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
-enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT}
+enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, CI_RIFLE}
 
 @export var enable_secondary_state: bool = true
 @export var secondary_state: SecondaryState = SecondaryState.NONE
@@ -59,6 +59,10 @@ func _physics_process(delta: float) -> void:
 					call("set_state", "secondary_state", "transition_request", "jailbird_attack")
 				SecondaryState.INTERACT:
 					call("set_state", "secondary_state", "transition_request", "interact")
+				SecondaryState.MTF_RIFLE:
+					call("set_state", "secondary_state", "transition_request", "mtf_rifle")
+				SecondaryState.CI_RIFLE:
+					call("set_state", "secondary_state", "transition_request", "ci_rifle")
 			if secondary_state != SecondaryState.NONE:
 				if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") + 0.00001 > 1:
 					call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 1.0, get_parent().get_parent().character_speed * delta))

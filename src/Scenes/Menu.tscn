@@ -77,20 +77,6 @@ theme_override_font_sizes/font_size = 64
 text = "SCP: Containment
 Procedures"
 
-[node name="Label4" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.672
-anchor_top = 0.469
-anchor_right = 0.672
-anchor_bottom = 0.469
-offset_left = -654.144
-offset_top = -47.912
-offset_right = -518.144
-offset_bottom = 40.088
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Play" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -266,50 +252,57 @@ theme = ExtResource("2_syfuq")
 
 [node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2"]
 layout_mode = 2
-text = "Godot Engine:
+text = "SCP: Containment Procedures
+-------------------------
+Made by Yni Viar at 2025.
+License: GPL3 / MIT License / CC-BY-SA 3.0-4.0
+(see individual files)
+-------------------------
+Third-party credits
+-------------------------
+Godot Engine:
 Copyright (c) 2014-present Godot Engine contributors 
 Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
-Licensed under MIT License.
+License: MIT License.
 -------------------------
-Map generation by Yni (the author).
-Room models (but not textures) by Yni (the author)
+Camera Gimbal by kidscancode 
+License: MIT License.
 -------------------------
-Camera Gimbal by kidscancode (MIT License).
--------------------------
-Scanning Shader by Yui Kinomoto @arlez80 (MIT License)
+Scanning Shader by Yui Kinomoto @arlez80 
+License: MIT License
 -------------------------
 Scientist, guard, class-D, MTF and
 Chaos insurgency models are made
 by PurpleGoop and rigged by DrPri
 Room textures by Foodeater / Jamie
-Model and textures license - CC-BY-SA 4.0
+License: CC-BY-SA 4.0
 ------------------------
 Light Containment Zone Ambient by Jacek \"Fragik\" Rogal
-Licensed under CC-BY-SA 4.0
+License: CC-BY-SA 4.0
 ------------------------
 SCP-173 (version 2) - Aruspice (model, textures),
 Shakles (rig, animation), PixelPuffin (concept art)
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 ------------------------
 SCP-650 - Shadowscale(model, textures)
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 ------------------------
 SCP-914 - Apocryphos (model, texture, rig and
 animations), Aruspice (new dial model and textures)
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 ------------------------
 SCP-983 item - Aruspice (model, textures, rig, animation)
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 -----------------------
 PDA item - Model and textures by Shadowscale
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 -----------------------
 Agent model uses SCP: Unity guard
 model with MTF animations.
 SCP Security Guard -
 Shadowscale (model, textures),
 Shakles (rig, animation)
-Licensed under SCP-Wiki CC-BY-SA 3.0
+License: SCP-Wiki CC-BY-SA 3.0
 -----------------------
 Crowbar and power generator models
 used from PolyHaven.
@@ -319,12 +312,13 @@ SCP-347 model is made using Makehuman model.
 ------------------------
 SCP-023 model is based on \"wolf low poly rigged\" by
 victory_mirosya (https://sketchfab.com/victory_mirosya)
-licensed under CC-BY-4.0
+License: CC-BY 4.0
 (http://creativecommons.org/licenses/by/4.0/)
 ------------------------
-Couch by J-Toastie [CC-BY 3.0]
+Couch 3D model is made by J-Toastie
+License: CC-BY 3.0
 (https://creativecommons.org/licenses/by/3.0/)
-via Poly Pizza (https://poly.pizza/m/obMPe0AheB)
+Used from https://poly.pizza/m/obMPe0AheB
 ------------------------
 Mattress model is made by Arthur Glushko , Saritasa
 License - CC-BY 4.0
@@ -334,7 +328,16 @@ was created with MakeHuman.
 MakeHuman content is licensed under CC0.
 The model also included
 sweater by Mindfront (Sweden)
-which is licensed under CC BY 4.0
+License: CC-BY 4.0
+------------------------
+Logicer weapon 3D model is made by
+Kendrick Russell
+License: CC-BY 4.0
+------------------------
+COM-16 weapon model is based on
+Glock made by J-Toastie
+License: CC-BY 3.0
+Used from https://poly.pizza/m/q3lsX3tSta
 ------------------------
 Mentioned SCP objects:
 SCP-023 by Pig_catapult
@@ -348,7 +351,7 @@ SCP-812 by HK-016
 SCP-914 by Dr Gears
 SCP-938 by Adam Smascher
 SCP-983 by NekoChris
-(Licensed under SCP-Wiki CC-BY-SA 3.0)"
+License: SCP-Wiki CC-BY-SA 3.0"
 horizontal_alignment = 1
 vertical_alignment = 1
 

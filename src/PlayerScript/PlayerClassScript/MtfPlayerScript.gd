@@ -9,9 +9,8 @@ var saw_player: bool = false
 var attack_update_timer: float = 2.0
 
 # Called when the node enters the scene tree for the first time.
-#func on_start_human() -> void:
-	# Retrieve protagonist node path and make it follow target
-	#get_parent().get_parent().follow_target = get_tree().get_first_node_in_group("MainCharacter").get_parent().get_parent().get_parent().get_path()
+func on_start_human() -> void:
+	pass
 
 
 func on_update_human(delta: float):
