@@ -3765,13 +3765,13 @@ animation = &"Walking"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_setat"]
 graph_offset = Vector2(-778.169, 27.116)
+nodes/output/position = Vector2(1040, 500)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_setat")
 nodes/Animation/position = Vector2(300, 640)
 nodes/idle/node = SubResource("AnimationNodeAnimation_irfbi")
 nodes/idle/position = Vector2(-540, -20)
 nodes/items_blend/node = SubResource("AnimationNodeBlend2_p51s6")
 nodes/items_blend/position = Vector2(760, 440)
-nodes/output/position = Vector2(1040, 500)
 nodes/run_anim/node = SubResource("AnimationNodeAnimation_mribv")
 nodes/run_anim/position = Vector2(-640, 300)
 nodes/secondary_state/node = SubResource("AnimationNodeTransition_f7mta")
@@ -3780,13 +3780,13 @@ nodes/state_machine/node = SubResource("AnimationNodeBlend3_7mosc")
 nodes/state_machine/position = Vector2(-340, 40)
 nodes/walk_anim/node = SubResource("AnimationNodeAnimation_let05")
 nodes/walk_anim/position = Vector2(-780, 120)
-node_connections = [&"items_blend", 0, &"state_machine", &"items_blend", 1, &"secondary_state", &"output", 0, &"items_blend", &"secondary_state", 0, &"Animation", &"state_machine", 0, &"idle", &"state_machine", 1, &"walk_anim", &"state_machine", 2, &"run_anim"]
+node_connections = [&"output", 0, &"items_blend", &"items_blend", 0, &"state_machine", &"items_blend", 1, &"secondary_state", &"secondary_state", 0, &"Animation", &"state_machine", 0, &"idle", &"state_machine", 1, &"walk_anim", &"state_machine", 2, &"run_anim"]
 
 [node name="Puppet" type="Node3D"]
 script = ExtResource("1_setat")
 armature_name = "Woman_body_rig"
 enable_vision_scan = true
-vision_class_detect = 2
+vision_class_detect = Array[int]([2, 3])
 
 [node name="Woman_body_rig" type="Node3D" parent="."]
 transform = Transform3D(-1.75, 0, -2.64243e-07, 0, 1.75, 0, 2.64243e-07, 0, -1.75, 0, 0, 0)

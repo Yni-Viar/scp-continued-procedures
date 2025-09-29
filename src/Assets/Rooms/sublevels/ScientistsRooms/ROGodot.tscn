@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c66hlscpe1n5m"]
+
+[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_x33o2"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="2_em7t4"]
+[ext_resource type="PackedScene" uid="uid://bk7tgbs0pdha4" path="res://Assets/OriginalModels/OmnidotPlush.tscn" id="4_o8ef6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5bsa"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5jofj"]
+material = SubResource("StandardMaterial3D_e5bsa")
+text = "Godot"
+font = ExtResource("2_em7t4")
+font_size = 32
+
+[node name="MeshInstance3D" type="Node3D"]
+
+[node name="Table" parent="." instance=ExtResource("1_x33o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.61635447, -2.47104, -1.16241)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.97311, -8.254189)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_5jofj")
+
+[node name="OmnidotplushV2" parent="." instance=ExtResource("4_o8ef6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.5431299, -1.42534, -0.8987951)
+
+[node name="OmnidotplushV3" parent="." instance=ExtResource("4_o8ef6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.4264414, -1.42534, -0.8987951)
+
+[node name="OmnidotplushV4" parent="." instance=ExtResource("4_o8ef6")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.4662869, -1.42534, -0.8987951)

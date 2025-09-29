@@ -8,9 +8,9 @@ colors = PackedColorArray(0, 0.560784, 1, 1, 0.978125, 0.990392, 1, 1, 1, 1, 1, 
 frequency = 0.0054
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qal2s"]
-seamless = true
-color_ramp = SubResource("Gradient_sw50w")
 noise = SubResource("FastNoiseLite_ft7as")
+color_ramp = SubResource("Gradient_sw50w")
+seamless = true
 
 [resource]
 resource_name = "Ceiling"

@@ -15,6 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
 [ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="15_t8p2w"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8p2w"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsmso"]
 content_margin_left = 2.0
 content_margin_top = 2.0
@@ -29,13 +36,6 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8p2w"]
-content_margin_left = 2.0
-content_margin_top = 2.0
-content_margin_right = 2.0
-content_margin_bottom = 2.0
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_krje8"]
 
@@ -104,11 +104,11 @@ offset_right = 88.384
 offset_bottom = 112.16
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
 text = "CASUAL_MODE"
 icon = ExtResource("5_3jcrr")
 icon_alignment = 1
@@ -126,11 +126,11 @@ offset_left = -88.0
 offset_top = -111.192
 offset_right = 88.0
 offset_bottom = 110.808
-theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
 text = "STORY_MODE"
 icon = ExtResource("7_a8aa6")
 icon_alignment = 1
@@ -147,11 +147,11 @@ offset_left = -88.384
 offset_top = -111.192
 offset_right = 87.616
 offset_bottom = 110.808
-theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
 text = "SETTINGS"
 icon = ExtResource("7_x0ao6")
 icon_alignment = 1
@@ -168,11 +168,11 @@ offset_left = -87.616
 offset_top = -111.84
 offset_right = 88.384
 offset_bottom = 112.16
-theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_dsmso")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dsmso")
 text = "HELP_BUTTON"
 icon = ExtResource("6_aobxe")
 icon_alignment = 1

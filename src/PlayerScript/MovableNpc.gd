@@ -27,7 +27,6 @@ class_name MovableNpc
 @export var platform_moving: bool = false
 
 @export var puppet_class: PuppetClass
-@export var automatic: bool = false
 ## See PuppetResource description
 @export var fraction: int
 @export var health: Array[float] = []
@@ -89,7 +88,6 @@ var puppet_mesh: BasePuppetScript
 func _ready() -> void:
 	#state = State.IDLE
 	puppet_mesh = puppet_class.prefab.instantiate()
-	automatic = puppet_class.automatic
 	fraction = puppet_class.fraction
 	health = puppet_class.health
 	character_speed = puppet_class.speed
@@ -221,7 +219,7 @@ func target_follow():
 	if follow_update_timer > 0:
 		follow_update_timer -= get_physics_process_delta_time()
 	else:
-		if get_node(follow_target).get("movement_freeze") != null:
+		if get_node(follow_target).get("movement_freeze") == null:
 			follow_update_timer = 1.0
 			return
 		if !get_node(follow_target).movement_freeze:

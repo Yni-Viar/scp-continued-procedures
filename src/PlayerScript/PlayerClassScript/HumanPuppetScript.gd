@@ -73,13 +73,21 @@ func _physics_process(delta: float) -> void:
 			if entity_distance < prev_entity_distance || i == active_puppets.size() - 1:
 				prev_entity_distance = entity_distance
 				index = i
-		var looking_object: Vector3 = active_puppets[index].global_position
+		
+		var looking_object: Node3D
+		
+		# If there is must-not-look SCP (like 023), just watch SafePoint. Else, look directly, as 173 or 650
+		if active_puppets[index].puppet_class.fraction == 3 && \
+		active_puppets[index].get_node_or_null("PlayerModel/Puppet/SafeZone") != null:
+			looking_object = active_puppets[index].get_node("PlayerModel/Puppet/SafeZone")
+		else:
+			looking_object = active_puppets[index]
 		
 		if has_lookat_ik:
-			get_parent().get_parent().get_node("RayCast3D").look_at(looking_object)
-			get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = active_puppets[index].get_path()
-		else:
-			get_parent().get_parent().look_at(looking_object)
+			get_parent().get_parent().get_node("RayCast3D").look_at(looking_object.global_position)
+			get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = looking_object.get_path()
+		elif active_puppets[index].puppet_class.fraction != 3:
+			get_parent().get_parent().look_at(looking_object.global_position)
 		looking_at_target = true
 	elif looking_at_target:
 		get_parent().get_parent().get_node("RayCast3D").rotation = Vector3.ZERO
@@ -96,18 +104,6 @@ func _physics_process(delta: float) -> void:
 				vision_entity.append(collider.get_node("PlayerModel/Puppet"))
 				if !collider.get_node("PlayerModel/Puppet").watching_puppets.has(get_parent().get_parent()):
 					collider.get_node("PlayerModel/Puppet").watching_puppets.append(get_parent().get_parent())
-			elif puppet_class.fraction == 3: # Must-not-look SCPs
-				if collider.get_node_or_null("PlayerModel/Puppet/SafeZone") != null:
-					if has_lookat_ik:
-						get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = collider.get_node("PlayerModel/Puppet/SafeZone").get_path()
-					else:
-						get_parent().get_parent().look_at(collider.get_node("PlayerModel/Puppet/SafeZone"))
-					looking_at_target = true
-				elif looking_at_target:
-					get_parent().get_parent().get_node("RayCast3D").rotation = Vector3.ZERO
-					if has_lookat_ik:
-						get_node(armature_name + "/Skeleton3D/LookAtModifier3D").target_node = ""
-					looking_at_target = false
 			elif vision_entity.size() > 0: # Release must-to-look SCPs
 				for entity in vision_entity:
 					entity.watching_puppets.clear()

@@ -6,7 +6,7 @@ class_name BasePuppetScript
 enum States {IDLE, WALKING, RUNNING, SPECIAL1, SPECIAL2, SPECIAL3, SPECIAL4}
 @export var state: States = States.IDLE
 @export var enable_vision_scan: bool = false
-@export var vision_class_detect: int = 0
+@export var vision_class_detect: Array[int] = [0]
 var active_puppets: Array[Node3D] = []
 
 func _ready() -> void:
@@ -20,10 +20,14 @@ func on_start():
 
 func on_vision_area_body_entered(body: Node3D):
 	if body is MovableNpc:
-		if body.fraction == vision_class_detect:
-			active_puppets.append(body)
+		for puppet_class in vision_class_detect:
+			if body.fraction == puppet_class:
+				active_puppets.append(body)
 
 func on_vision_area_body_exited(body: Node3D):
 	if body is MovableNpc:
 		if active_puppets.has(body):
 			active_puppets.erase(body)
+
+func special_action():
+	pass

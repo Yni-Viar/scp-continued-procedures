@@ -39,6 +39,7 @@
 - [x] SCP-938: Puppet Logic
 - [ ] SCP-938: Task
 - [x] SCP-938: Containment Sublevel + Lantern item
+- [x] Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 - [ ] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])

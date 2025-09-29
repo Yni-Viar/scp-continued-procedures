@@ -16,5 +16,3 @@ icon_90_degrees = ExtResource("4_tutrq")
 icon_180_degrees = ExtResource("2_y55xw")
 icon_270_degrees = ExtResource("3_0wkis")
 spawn_chance = 80.0
-door_type = -1
-guaranteed_spawn = false

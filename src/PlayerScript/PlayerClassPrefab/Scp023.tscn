@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://ccwr44itsoxqa"]
+[gd_scene load_steps=13 format=4 uid="uid://ccwr44itsoxqa"]
 
 [ext_resource type="Script" uid="uid://br8l8qqliv22t" path="res://PlayerScript/PlayerClassScript/Scp023PuppetScript.gd" id="1_bw3o4"]
 [ext_resource type="Shader" uid="uid://crydejvxtf5rf" path="res://Shaders/Scp023EyeShader/simpleglowshader.gdshader" id="2_p60mr"]
@@ -1567,10 +1567,6 @@ _data = {
 &"walk": SubResource("Animation_4333l")
 }
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_bw3o4"]
-height = 1.25214
-radius = 0.875488
-
 [node name="Puppet" type="Node3D"]
 script = ExtResource("1_bw3o4")
 armature_name = "rig_001_deform"
@@ -1915,16 +1911,6 @@ libraries = {
 [node name="SafeZone" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.08331, 0)
 
-[node name="ProceduresTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.226201, 0)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ProceduresTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0158997, 0)
-shape = SubResource("CylinderShape3D_bw3o4")
-
 [node name="Timer" type="Timer" parent="."]
 
-[connection signal="body_entered" from="ProceduresTrigger" to="." method="_on_procedures_trigger_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

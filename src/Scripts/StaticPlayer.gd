@@ -54,11 +54,11 @@ func _physics_process(delta: float) -> void:
 			if get_node(target_puppet_path).current_health[2] < get_node(target_puppet_path).health[2]:
 				$Head/Camera3D/MeshInstance3D.mesh.surface_get_material(0).set_shader_parameter("multiplier", (get_node(target_puppet_path).health[2] - get_node(target_puppet_path).current_health[2]) / get_node(target_puppet_path).health[2])
 			get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[0]
-		# Apply bonus to Y coordinate if current_camera_mode is third person
-		if current_camera_mode == CameraMode.THIRD_PERSON:
-			global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)
-		else:
-			global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0)
+			# Apply bonus to Y coordinate if current_camera_mode is third person
+			if current_camera_mode == CameraMode.THIRD_PERSON:
+				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)
+			else:
+				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0)
 
 ## Used from Godot Docs
 func intersect() -> Dictionary:
@@ -74,7 +74,6 @@ func intersect() -> Dictionary:
 ## Used from Godot Docs
 func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
 	var space_state = get_world_3d().direct_space_state
-	var mousepos = get_viewport().get_mouse_position()
 	
 	var shape_rid = PhysicsServer3D.sphere_shape_create()
 	var radius = 3.0
@@ -110,11 +109,16 @@ func interact(value: String) -> void:
 								#Use only one item
 								break
 							if s_result["collider"] is MovableNpc:
-								var test = !s_result["collider"].puppet_class.automatic
-								if !s_result["collider"].is_player && !s_result["collider"].puppet_class.automatic:
-									s_result["collider"].follow_target = target_puppet_path
-									if s_result["collider"].wandering:
-										s_result["collider"].wandering = false
+								if !s_result["collider"].is_player:
+									match s_result["collider"].puppet_class.interacting_action:
+										1:  # FOLLOW
+											s_result["collider"].follow_target = target_puppet_path
+											if s_result["collider"].wandering:
+												s_result["collider"].wandering = false
+										2: # SPECIAL
+											if s_result["collider"].get_node_or_null("PlayerModel/Puppet") != null:
+												if s_result["collider"].get_node("PlayerModel/Puppet") is BasePuppetScript:
+													s_result["collider"].get_node("PlayerModel/Puppet").special_action()
 					# ray cast for moving
 					if get_node_or_null(target_puppet_path) == null:
 						get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")

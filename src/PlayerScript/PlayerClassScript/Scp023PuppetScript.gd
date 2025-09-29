@@ -40,15 +40,12 @@ func set_state(anim_name: String) -> void:
 	$AnimationPlayer.play(anim_name, 0.3)
 
 
-## Do this task
-func _on_procedures_trigger_body_entered(body: Node3D) -> void:
-	if body is MovableNpc:
-		if body.is_player && glow_enabled:
+func _on_timer_timeout() -> void:
+	get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_4")
+
+func special_action():
+	if glow_enabled:
 			eye_glow_strength = 0.25
 			$Timer.stop()
 			if get_tree().root.get_node("Game/FoundationTask").has_task("task_023_emergency"):
 				get_tree().root.get_node("Game/FoundationTask").get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
-
-
-func _on_timer_timeout() -> void:
-	get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_4")
