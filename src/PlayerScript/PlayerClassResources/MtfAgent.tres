@@ -6,21 +6,15 @@
 [resource]
 script = ExtResource("2_2i1ww")
 puppet_class_name = "MTF_AGENT"
-speed = 10.0
 prefab = ExtResource("1_5cy13")
 spawn_point_group = "AgentSpawn"
 initial_amount = 1
-automatic = true
 footstep_sounds = {
 "run": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"),
 "walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
 }
-fraction = 0
 apply_height_bugfix = false
 enable_wander = false
-health = Array[float]([100.0, 10.0, 50.0])
+health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 1
-enable_avoidance = true
 spawn_on_start = false
-puppet_navigation_layers = 1
-enable_ik = true

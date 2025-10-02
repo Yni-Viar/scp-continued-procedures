@@ -16,6 +16,6 @@ footstep_sounds = {
 }
 apply_height_bugfix = false
 enable_wander = false
-health = Array[float]([100.0, 10.0, 50.0])
+health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 2
 puppet_navigation_layers = 3

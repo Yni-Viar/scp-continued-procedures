@@ -11,8 +11,12 @@ var all_tasks: Array[GameTaskResource]
 var all_tasks_bkp: Array[GameTaskResource]
 var special_event: SpecialEvent = SpecialEvent.NONE
 
+# These tasks will never spawn
+var blocked_tasks: Array[int] = []
+
 # Called when the node enters the scene tree for the first time.
 func initialize() -> void:
+	all_tasks.clear()
 	var used_index: Array[int] = []
 	for i in range(tasks_left):
 		if get_parent().gamedata.tasks.size() - 1 < i:
@@ -22,7 +26,7 @@ func initialize() -> void:
 			task_index = get_parent().rng.randi_range(0, get_parent().gamedata.tasks.size() - 1)
 			if get_tree().get_node_count_in_group(get_parent().gamedata.tasks[task_index].required_group) == 0 || get_parent().gamedata.tasks[task_index].required_group.is_empty():
 				used_index.append(task_index)
-			if !used_index.has(task_index):
+			if !used_index.has(task_index) || blocked_tasks.has(task_index):
 				break
 			if get_parent().gamedata.tasks.size() == used_index.size():
 				return
@@ -40,9 +44,11 @@ func do_task(task_name: String):
 func trigger_event(event_type: SpecialEvent, res: GameTaskResource = null):
 	special_event = event_type
 	if special_event == SpecialEvent.NONE || res == null:
-		all_tasks = all_tasks_bkp.duplicate()
+		all_tasks.clear()
+		all_tasks = all_tasks_bkp.duplicate(true)
+		all_tasks_bkp.clear()
 	else:
-		all_tasks_bkp = all_tasks.duplicate()
+		all_tasks_bkp = all_tasks.duplicate(true)
 		all_tasks.clear()
 		all_tasks.append(res)
 	task_done.emit()

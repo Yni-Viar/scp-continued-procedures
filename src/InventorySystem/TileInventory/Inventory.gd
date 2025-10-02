@@ -70,7 +70,7 @@ func item_remove_by_id(id: int, drop: bool):
 				item_remove(node, drop)
 
 func use_item(item: InventorySlot):
-	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path).use_item(game_data.items[item.item_id].action, game_data.items[item.item_id].action_amount)
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)._call_function(game_data.items[item.item_id].action_node_path, game_data.items[item.item_id].action_method_name, game_data.items[item.item_id].action_args)
 	if game_data.items[item.item_id].usage != 0:
 		item_remove(item, game_data.items[item.item_id].usage == 2)
 

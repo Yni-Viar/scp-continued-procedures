@@ -28,6 +28,7 @@ var protagonist: MovableNpc
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	# Choose seed
@@ -166,3 +167,7 @@ func call_mtf():
 
 func _on_game_over_timer_timeout() -> void:
 	finish_game(false, "GAME_OVER_3")
+
+
+func add_item(args: Array):
+	get_node($StaticPlayer.target_puppet_path).call("_call_function", "UI/Inventory/Inventory", "add_item", [int(args[0])])

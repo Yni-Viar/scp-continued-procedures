@@ -8,19 +8,14 @@ script = ExtResource("2_nwwtm")
 puppet_class_name = "CHAOS_TROOPER"
 speed = 8.0
 prefab = ExtResource("1_5p1h6")
-spawn_point_group = ""
 initial_amount = 5
-automatic = true
 footstep_sounds = {
 "run": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"),
 "walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
 }
-fraction = 0
 apply_height_bugfix = false
-enable_wander = true
-health = Array[float]([100.0, 10.0, 50.0])
+health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 3
 enable_avoidance = false
 spawn_on_start = false
 puppet_navigation_layers = 3
-enable_ik = true

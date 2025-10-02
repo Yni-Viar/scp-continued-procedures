@@ -1,0 +1,264 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+
+msgid "CUSTOM_SEED"
+msgstr "Map Generator seed"
+
+msgid "PLAY"
+msgstr "Play"
+
+msgid "CREDITS"
+msgstr "Credits"
+
+msgid "CUSTOM_ENEMYTYPE_RAND"
+msgstr "Randomize enemy spawn"
+
+msgid "TIME_LIMITED"
+msgstr "Time limited game"
+
+msgid "ZEN_MODE"
+msgstr "Safe mode - do what you want - no threats, no tasks"
+
+msgid "HELP_TITLE"
+msgstr "Help (NOT for safe mode)"
+
+msgid "HELP_TASKS"
+msgstr ""
+"You need to do tasks.\n"
+"Some tasks require to come close to the subject of testing (eg. 812),\n"
+"some tasks require to bring Class-D (if they exist, if not - do it on your own) (for example - 162 and 266)\n"
+"and a third type of task is to bring something to special place (as for 347 amd 914).\n"
+"I recommend at first doing tasks at first zone, then the second... e.t.c."
+
+msgid "HELP_EVENTS"
+msgstr ""
+"Also the game has events.\n"
+"There are only three events implemented right now - Chaos Insurgency invasion, SCP-023 critical state and SCP-347 containment breach.\n"
+"For the first one, you need to call MTF (maybe more then one time), just when they appear.\n"
+"For SCP-023 - if you round took long (> 2 minutes), you need to go to Maintenance Zone and go to SCP-023, replacing his \"eyes\" as soon, as possible.\n"
+"For the later one you need to catch SCP-347 (which was not detected before) as soon as possible\n"
+"(She is marked by the red radar, because this woman is invisible)."
+
+msgid "CASUAL_MODE"
+msgstr "Casual mode"
+
+msgid "STORY_MODE"
+msgstr "Story mode"
+
+msgid "HELP_BUTTON"
+msgstr "Help"
+
+msgid "GAME_SETTINGS_INFO"
+msgstr "These settings only work in \"casual mode\""
+
+msgid "STORY_MAIN"
+msgstr ""
+"Main Story\n"
+"Author: Yni Viar"
+
+msgid "SETTINGS"
+msgstr "Settings"
+
+msgid "GLOW"
+msgstr "Glow"
+
+msgid "REFLECTION_PROBE"
+msgstr "Reflection probe"
+
+msgid "REFLECTION_PROBE_WARNING"
+msgstr ""
+"It is NOT recommended to disable reflection probe\n"
+"because character will appear fully dark.\n"
+"Use this at last resort for performance."
+
+msgid "MUSIC_VOLUME"
+msgstr "Music volume"
+
+msgid "GRAPHICS"
+msgstr "Graphics"
+
+msgid "SOUNDS"
+msgstr "Sounds"
+
+msgid "KEYBINDING"
+msgstr "Keybinding"
+
+msgid "CAMERA_ROTATE_LEFT"
+msgstr "Camera left rotate"
+
+msgid "CAMERA_ROTATE_RIGHT"
+msgstr "Camera right rotate"
+
+msgid "CAMERA_LOOK"
+msgstr "Camera look"
+
+msgid "CLICK"
+msgstr "Click"
+
+msgid "TOGGLE_VIEW_MODE"
+msgstr "Toggle third person/up view"
+
+msgid "BACK_TO_MENU"
+msgstr "Main menu"
+
+msgid "SECONDS_LEFT"
+msgstr ""
+"Work time\n"
+"ends in"
+
+msgid "ROUGH"
+msgstr "Rough"
+
+msgid "COARSE"
+msgstr "Coarse"
+
+msgid "FINE"
+msgstr "Fine"
+
+msgid "VERYFINE"
+msgstr "Very fine"
+
+msgid "SCP914_REFINE"
+msgstr "Refine"
+
+msgid "RESEARCH_ZONE"
+msgstr "Research Zone"
+
+msgid "MAINTENANCE_ZONE"
+msgstr ""
+"Maintenance\n"
+"Zone"
+
+msgid "ELEVATOR_MGMT"
+msgstr "Elevator management"
+
+msgid "ELEVATOR_WHAT_FLOOR"
+msgstr "Choose your destination"
+
+msgid "ELEVATOR_CALL"
+msgstr "Call/Ride the elevator"
+
+msgid "ENTRANCE_SUBZONE"
+msgstr "Entrance Subzone"
+
+msgid "GATE_A"
+msgstr "Gate A"
+
+msgid "GATE_B"
+msgstr "Gate B"
+
+msgid "GATE_C"
+msgstr "Under construction"
+
+msgid "LOUNGE"
+msgstr "Lounge"
+
+msgid "EZ_RZ_SIGN"
+msgstr ""
+"←\n"
+"Entrance Subzone\n"
+"Gate A\n"
+"Personal rooms\n"
+"Lounge"
+
+msgid "SUBL_938_SIGN"
+msgstr ""
+"SCP-938\n"
+"↑ Maintenance Zone"
+
+msgid "SUBL_938_WARN"
+msgstr ""
+"DANGER!\n"
+"Electric hazard"
+
+msgid "GAME_WIN"
+msgstr "TASK DONE!"
+
+msgid "GAME_OVER"
+msgstr "FAILED!"
+
+msgid "GAME_WIN_1"
+msgstr "You did all tasks. The Foundation is proud of you!"
+
+msgid "GAME_OVER_1"
+msgstr "You died. What a pity..."
+
+msgid "GAME_OVER_2"
+msgstr ""
+"You let SCPs escape. You will be demoted to Class-D personnel.\n"
+"Tip: If you want to do SCP-347 task, go to Entrance Sub-zone."
+
+msgid "GAME_OVER_3"
+msgstr "You did not finish all the task in a work day."
+
+msgid "GAME_OVER_4"
+msgstr "You didn't change SCP-023's eyes in time."
+
+msgid "TASK_162_TOUCH"
+msgstr ""
+"Order Class-D to go to SCP-162\n"
+"If there are no Class-D, do it yourself."
+
+msgid "TASK_173_CLEAN"
+msgstr ""
+"Order Class-D to clean SCP-173 room\n"
+"If there are no Class-D, do it yourself."
+
+msgid "TASK_812_RESEARCH"
+msgstr "Test water composition, taken from SCP-812"
+
+msgid "TASK_347_CATCH"
+msgstr ""
+"DO NOT LET SCP-347 ESCAPE!!!\n"
+"Take SCP-347 from the exit."
+
+msgid "TASK_266_TEST"
+msgstr ""
+"Order Class-D to test SCP-266 temperature.\n"
+"If there are no Class-D, do it yourself."
+
+msgid "TASK_347_PASS"
+msgstr ""
+"Find SCP-347 and lead her to the agent\n"
+"at Gate B to transport to another\n"
+"facility"
+
+msgid "TASK_CI_INVASION"
+msgstr ""
+"Chaos Insurgency invaded the facility!\n"
+"Call MTF to destroy the threat."
+
+msgid "TASK_914_EXP_1"
+msgstr "Refine a PDA in SCP-914, by setting on Coarse"
+
+msgid "TASK_914_EXP_2"
+msgstr "Refine a PDA in SCP-914, by setting on Rough"
+
+msgid "TASK_914_EXP_3"
+msgstr ""
+"Retrieve information from SCP-914 by\n"
+"setting a 3-paged SCP-914 documentation on Fine."
+
+msgid "TASK_914_EXP_4"
+msgstr ""
+"Retrieve information from SCP-914 by\n"
+"setting a 3-paged SCP-914 documentation on Very fine."
+
+msgid "TASK_023_EYES"
+msgstr "You need to replace SCP-023's eyes quickly."
+
+msgid "TASK_938_CHECK"
+msgstr ""
+"Order 4 Class-D personnel, 1 scientist\n"
+"and 1 guard to check SCP-938 battery integrity"

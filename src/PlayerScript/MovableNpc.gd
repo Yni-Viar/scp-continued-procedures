@@ -204,15 +204,24 @@ func health_manage(health_to_add: float, health_type: int = 0):
 		# Remove one live
 		queue_free()
 
-func use_item(type_of_usage: String, amount: float):
-	match type_of_usage:
-		"health":
-			health_manage(amount, 0)
-		"take":
-			if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null:
-				var prefab: Node3D = get_node("PlayerModel/Puppet")
-				if prefab is HumanPuppetScript:
-					prefab.hold_item(int(amount))
+func _call_function(node_path: String, method_caller: String, amount: Array):
+	if method_caller.containsn("OS"):
+		printerr("Due to security concerns, this is not allowed")
+	if !node_path.is_empty():
+		var safety_circus = node_path.get_slice("/", 0)
+		# For safety circus
+		get_child(get_node(safety_circus).get_index()).get_node(node_path.trim_prefix(safety_circus + "/")).callv(method_caller, amount)
+	elif node_path == "Game":
+		get_tree().root.get_node("Game").callv(method_caller, amount)
+	else:
+		callv(method_caller, amount)
+
+## @deprecated: Will be moved from MovableNpc
+func action_take(index: int):
+	if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null:
+		var prefab: Node3D = get_node("PlayerModel/Puppet")
+		if prefab is HumanPuppetScript:
+			prefab.hold_item(index)
 
 ## Target follow target position setter.
 func target_follow():

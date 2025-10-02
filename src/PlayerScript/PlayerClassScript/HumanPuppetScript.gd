@@ -112,16 +112,22 @@ func _physics_process(delta: float) -> void:
 				for entity in vision_entity:
 					entity.watching_puppets.clear()
 				vision_entity.clear()
+			_on_raycast_update_npc(collider.get_path())
 		elif vision_entity.size() > 0:
 			for entity in vision_entity:
 				entity.watching_puppets.clear()
 			vision_entity.clear()
+		#else:
+			#_on_raycast_update(collider.get_path())
 	## Cuffed players mechanic
 	#if cuffed_players.size() > 0:
 		#target_follow(delta)
 	on_update_human(delta)
 
 func on_update_human(delta: float):
+	pass
+
+func _on_raycast_update_npc(collider_path: String):
 	pass
 
 ## Set animation to an entity via Animation Tree.

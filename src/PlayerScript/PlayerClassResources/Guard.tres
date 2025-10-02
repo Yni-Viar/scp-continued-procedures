@@ -15,5 +15,5 @@ footstep_sounds = {
 "walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
 }
 apply_height_bugfix = false
-health = Array[float]([100.0, 10.0, 50.0])
+health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 1

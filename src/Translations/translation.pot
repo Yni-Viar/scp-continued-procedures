@@ -1,0 +1,215 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: key\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "CUSTOM_SEED"
+msgstr ""
+
+msgid "PLAY"
+msgstr ""
+
+msgid "CREDITS"
+msgstr ""
+
+msgid "CUSTOM_ENEMYTYPE_RAND"
+msgstr ""
+
+msgid "TIME_LIMITED"
+msgstr ""
+
+msgid "ZEN_MODE"
+msgstr ""
+
+msgid "HELP_TITLE"
+msgstr ""
+
+msgid "HELP_TASKS"
+msgstr ""
+
+msgid "HELP_EVENTS"
+msgstr ""
+
+msgid "CASUAL_MODE"
+msgstr ""
+
+msgid "STORY_MODE"
+msgstr ""
+
+msgid "HELP_BUTTON"
+msgstr ""
+
+msgid "GAME_SETTINGS_INFO"
+msgstr ""
+
+msgid "STORY_MAIN"
+msgstr ""
+
+msgid "SETTINGS"
+msgstr ""
+
+msgid "GLOW"
+msgstr ""
+
+msgid "REFLECTION_PROBE"
+msgstr ""
+
+msgid "REFLECTION_PROBE_WARNING"
+msgstr ""
+
+msgid "MUSIC_VOLUME"
+msgstr ""
+
+msgid "GRAPHICS"
+msgstr ""
+
+msgid "SOUNDS"
+msgstr ""
+
+msgid "KEYBINDING"
+msgstr ""
+
+msgid "CAMERA_ROTATE_LEFT"
+msgstr ""
+
+msgid "CAMERA_ROTATE_RIGHT"
+msgstr ""
+
+msgid "CAMERA_LOOK"
+msgstr ""
+
+msgid "CLICK"
+msgstr ""
+
+msgid "TOGGLE_VIEW_MODE"
+msgstr ""
+
+msgid "BACK_TO_MENU"
+msgstr ""
+
+msgid "SECONDS_LEFT"
+msgstr ""
+
+msgid "ROUGH"
+msgstr ""
+
+msgid "COARSE"
+msgstr ""
+
+msgid "FINE"
+msgstr ""
+
+msgid "VERYFINE"
+msgstr ""
+
+msgid "SCP914_REFINE"
+msgstr ""
+
+msgid "RESEARCH_ZONE"
+msgstr ""
+
+msgid "MAINTENANCE_ZONE"
+msgstr ""
+
+msgid "ELEVATOR_MGMT"
+msgstr ""
+
+msgid "ELEVATOR_WHAT_FLOOR"
+msgstr ""
+
+msgid "ELEVATOR_CALL"
+msgstr ""
+
+msgid "ENTRANCE_SUBZONE"
+msgstr ""
+
+msgid "GATE_A"
+msgstr ""
+
+msgid "GATE_B"
+msgstr ""
+
+msgid "GATE_C"
+msgstr ""
+
+msgid "LOUNGE"
+msgstr ""
+
+msgid "EZ_RZ_SIGN"
+msgstr ""
+
+msgid "SUBL_938_SIGN"
+msgstr ""
+
+msgid "SUBL_938_WARN"
+msgstr ""
+
+msgid "GAME_WIN"
+msgstr ""
+
+msgid "GAME_OVER"
+msgstr ""
+
+msgid "GAME_WIN_1"
+msgstr ""
+
+msgid "GAME_OVER_1"
+msgstr ""
+
+msgid "GAME_OVER_2"
+msgstr ""
+
+msgid "GAME_OVER_3"
+msgstr ""
+
+msgid "GAME_OVER_4"
+msgstr ""
+
+msgid "TASK_162_TOUCH"
+msgstr ""
+
+msgid "TASK_173_CLEAN"
+msgstr ""
+
+msgid "TASK_812_RESEARCH"
+msgstr ""
+
+msgid "TASK_347_CATCH"
+msgstr ""
+
+msgid "TASK_266_TEST"
+msgstr ""
+
+msgid "TASK_347_PASS"
+msgstr ""
+
+msgid "TASK_CI_INVASION"
+msgstr ""
+
+msgid "TASK_914_EXP_1"
+msgstr ""
+
+msgid "TASK_914_EXP_2"
+msgstr ""
+
+msgid "TASK_914_EXP_3"
+msgstr ""
+
+msgid "TASK_914_EXP_4"
+msgstr ""
+
+msgid "TASK_023_EYES"
+msgstr ""
+
+msgid "TASK_938_CHECK"
+msgstr ""
+

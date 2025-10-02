@@ -9,7 +9,6 @@ puppet_class_name = "SCIENCE_PERSONNEL"
 prefab = ExtResource("1_3qrvi")
 spawn_point_group = "Scientist650Spawn"
 initial_amount = 5
-automatic = true
 interacting_action = 1
 footstep_sounds = {
 "run": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"),
@@ -17,7 +16,7 @@ footstep_sounds = {
 }
 apply_height_bugfix = false
 enable_wander = false
-health = Array[float]([100.0, 10.0, 50.0])
+health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 1
 enable_avoidance = false
 enable_ik = false

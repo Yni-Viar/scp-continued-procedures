@@ -104,15 +104,11 @@ shadow_mesh = SubResource("ArrayMesh_mnb2s")
 [sub_resource type="Resource" id="Resource_30sy4"]
 script = ExtResource("8_nph5e")
 destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Down"
-up_helper_point = ""
-down_helper_point = ""
 metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 
 [sub_resource type="Resource" id="Resource_vbswh"]
 script = ExtResource("8_nph5e")
 destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Up"
-up_helper_point = ""
-down_helper_point = ""
 metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qup2f"]
@@ -226,7 +222,7 @@ light_data = ExtResource("6_qup2f")
 [node name="elevator" parent="." instance=ExtResource("7_f6fn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.36289, 1.37781, 2.65249)
 floors = Array[ExtResource("8_nph5e")]([SubResource("Resource_30sy4"), SubResource("Resource_vbswh")])
-elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevators/Door2", "/root/Game/FacilityGenerator/mt_room2_elevators/Door1")
+elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevators/Door3", "/root/Game/FacilityGenerator/mt_room2_elevators/Door1")
 speed = 24.0
 current_floor = 1
 
@@ -295,6 +291,31 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Door1/Cube_001"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door1/Cube_001/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_4b8wq")
+
+[node name="Door3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.669205, -98.17673, 2.68536)
+script = ExtResource("7_66fqs")
+can_open = false
+
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="Door3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62781, -0.0259056, 0)
+max_distance = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door3"]
+libraries = {
+&"": SubResource("AnimationLibrary_gvlrn")
+}
+
+[node name="Cube_001" type="MeshInstance3D" parent="Door3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0516045, -0.0624912)
+visibility_range_end = 64.0
+mesh = SubResource("ArrayMesh_xk5ok")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door3/Cube_001"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door3/Cube_001/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_4b8wq")
 
 [node name="Door2" type="Node3D" parent="."]

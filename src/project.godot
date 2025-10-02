@@ -29,16 +29,22 @@ buses/default_bus_layout="uid://b5q6nyv2tmgde"
 [autoload]
 
 ResourceStorage="*res://Scripts/ResourceStorage.gd"
+GDsh="*res://GDsh/GDsh.gd"
 Settings="*res://Scripts/Settings.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray()
+
 [file_customization]
 
 folder_colors={
 "res://Assets/": "orange",
+"res://GDsh/": "green",
 "res://InventorySystem/": "yellow",
 "res://MapGen/": "teal",
 "res://PlayerScript/": "red",
@@ -113,7 +119,7 @@ pointing/android/enable_pan_and_scale_gestures=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Translations/menu.en.translation", "res://Translations/menu.ru.translation", "res://Translations/game.en.translation", "res://Translations/game.ru.translation", "res://Translations/finishgame.en.translation", "res://Translations/finishgame.ru.translation", "res://Translations/tasks.en.translation", "res://Translations/tasks.ru.translation", "res://Translations/settings.en.translation", "res://Translations/settings.ru.translation")
+locale/translations=PackedStringArray("res://Translations/en.po", "res://Translations/ru.po")
 
 [layer_names]
 

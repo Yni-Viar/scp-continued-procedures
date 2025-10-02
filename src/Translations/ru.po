@@ -1,0 +1,214 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.7\n"
+
+msgid "CUSTOM_SEED"
+msgstr "Зерно генератора карт"
+
+msgid "PLAY"
+msgstr "Играть"
+
+msgid "CREDITS"
+msgstr "Титры"
+
+msgid "CUSTOM_ENEMYTYPE_RAND"
+msgstr "Случайное появление противников"
+
+msgid "TIME_LIMITED"
+msgstr "Игра ограничена по времени"
+
+msgid "ZEN_MODE"
+msgstr "Безопасный режим - делай, что хочешь - никаких заданий и угроз"
+
+msgid "HELP_TITLE"
+msgstr "Справка (НЕ для безопасного режима)"
+
+msgid "HELP_TASKS"
+msgstr "Вы должны делать задания\nНекоторые задания требуют подойти близко к объекту тестирования (например 812)\nНекоторые задания требуют притащить с собой Класса-Д (если существуют, иначе делай все сам)(например 162 и 266)\nи третий тип задач, которые требуют принести нужного SCP в специальное место (например 347 и 914)\nЯ рекоммендую сначала делать задачи в первой зоне, затем в второй... и.т.д."
+
+msgid "HELP_EVENTS"
+msgstr "Также у игры есть события\nПока что присутствуют только 3 события - налет Повстанцев Хаоса, критическое состояние SCP-023 и нарушение условий содержания SCP-347\nДля первого случая, нужно вызвать МОГ (возможно несколько раз), когда неприятели появятся.\nДля SCP-023 - если вы задержались больше чем на 2 минуты, Вам стоит пойти в Техническую зону и заменить \"глаза\" SCP-023 как можно скорее.\nДля последнего, нужно повести за собой SCP-347 как можно раньше. (Она подсвечивается красным радаром, так как эта женщина невидима)"
+
+msgid "CASUAL_MODE"
+msgstr "Обычная игра"
+
+msgid "STORY_MODE"
+msgstr "Кампания"
+
+msgid "HELP_BUTTON"
+msgstr "Справка"
+
+msgid "GAME_SETTINGS_INFO"
+msgstr "Эти настройки работают только в \"свободной игре\"."
+
+msgid "STORY_MAIN"
+msgstr "Основная история\nАвтор: Yni Viar"
+
+msgid "SETTINGS"
+msgstr "Настройки"
+
+msgid "GLOW"
+msgstr "Свечение"
+
+msgid "REFLECTION_PROBE"
+msgstr "Базовые отражения"
+
+msgid "REFLECTION_PROBE_WARNING"
+msgstr "Не рекомендуется отключать базовые отражения,\nтак как персонажи будут полностью темными.\nИспользуйте только как последнее средство для производительности."
+
+msgid "MUSIC_VOLUME"
+msgstr "Громкость музыки"
+
+msgid "GRAPHICS"
+msgstr "Графика"
+
+msgid "SOUNDS"
+msgstr "Звуки"
+
+msgid "KEYBINDING"
+msgstr "Настройка клавиш"
+
+msgid "CAMERA_ROTATE_LEFT"
+msgstr "Поворот камеры влево"
+
+msgid "CAMERA_ROTATE_RIGHT"
+msgstr "Поворот камеры вправо"
+
+msgid "CAMERA_LOOK"
+msgstr "Свободный поворот камеры"
+
+msgid "CLICK"
+msgstr "Взаимодействие"
+
+msgid "TOGGLE_VIEW_MODE"
+msgstr "Переключить вид сверху/от 3-го лица"
+
+msgid "BACK_TO_MENU"
+msgstr "Главное меню"
+
+msgid "SECONDS_LEFT"
+msgstr "Рабочее время\nзакончится через"
+
+msgid "ROUGH"
+msgstr "Очень грубо"
+
+msgid "COARSE"
+msgstr "Грубо"
+
+msgid "FINE"
+msgstr "Тонко"
+
+msgid "VERYFINE"
+msgstr "Очень тонко"
+
+msgid "SCP914_REFINE"
+msgstr "Переработать"
+
+msgid "RESEARCH_ZONE"
+msgstr "Исследовательская\nЗона"
+
+msgid "MAINTENANCE_ZONE"
+msgstr "Техническая\nЗона"
+
+msgid "ELEVATOR_MGMT"
+msgstr "Управление лифтом"
+
+msgid "ELEVATOR_WHAT_FLOOR"
+msgstr "Выберите желаемый этаж"
+
+msgid "ELEVATOR_CALL"
+msgstr "Вызвать/поехать на лифте"
+
+msgid "ENTRANCE_SUBZONE"
+msgstr "Входная подзона"
+
+msgid "GATE_A"
+msgstr "Выход А"
+
+msgid "GATE_B"
+msgstr "Выход Б"
+
+msgid "GATE_C"
+msgstr "Строится"
+
+msgid "LOUNGE"
+msgstr "Комната отдыха"
+
+msgid "EZ_RZ_SIGN"
+msgstr "←\nВходная подзона\nВыход А\nЛичные комнаты\nКомната отдыха"
+
+msgid "SUBL_938_SIGN"
+msgstr "SCP-938\n↑ Техническая зона"
+
+msgid "SUBL_938_WARN"
+msgstr "ОПАСНО!\nЭлектрическая угроза"
+
+msgid "GAME_WIN"
+msgstr "Задача сделана!"
+
+msgid "GAME_OVER"
+msgstr "Провалено!"
+
+msgid "GAME_WIN_1"
+msgstr "Вы выполнили все задачи. Фонд гордится Вами!"
+
+msgid "GAME_OVER_1"
+msgstr "Вы умерли. Какая досада..."
+
+msgid "GAME_OVER_2"
+msgstr "Вы позволили SCP выйти. Вы будете понижены до Класса Д.\nПодсказка: если Вы хотите сделать задание с SCP-347, идите во Входную под-зону"
+
+msgid "GAME_OVER_3"
+msgstr "Вы не успели сделать все задачи в рабочее время."
+
+msgid "GAME_OVER_4"
+msgstr "Вы не успели заменить глаза SCP-023."
+
+msgid "TASK_162_TOUCH"
+msgstr "Прикажите Классу-Д идти к SCP-162\nЕсли Класс-Д отсутствует, сделайте это сами."
+
+msgid "TASK_173_CLEAN"
+msgstr "Прикажите Классу-Д очищать комнату SCP-173\nЕсли Класс-Д отсутствует, сделайте это сами."
+
+msgid "TASK_812_RESEARCH"
+msgstr "Проверьте состав воды из SCP-812"
+
+msgid "TASK_347_CATCH"
+msgstr "НЕ ПОЗВОЛЯЙТЕ SCP-347 СБЕЖАТЬ!!!\nУтащите SCP-347 подальше от выхода."
+
+msgid "TASK_266_TEST"
+msgstr "Прикажите Классу-Д проверить температуру SCP-266.\nЕсли Класс-Д отсутствует, сделайте это сами."
+
+msgid "TASK_347_PASS"
+msgstr "Найдите SCP-347 и приведите ее к агенту\nна Выходе Б для перевозки в другой\nкомплекс"
+
+msgid "TASK_CI_INVASION"
+msgstr "Повстанцы Хаоса вторглись в комплекс!\nВызовите МОГ чтобы их уничтожить."
+
+msgid "TASK_914_EXP_1"
+msgstr "Переработайте карманный компьютер в SCP-914 на Грубо"
+
+msgid "TASK_914_EXP_2"
+msgstr "Переработайте карманный компьютер в SCP-914 на Очень грубо"
+
+msgid "TASK_914_EXP_3"
+msgstr "Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Тонко"
+
+msgid "TASK_914_EXP_4"
+msgstr "Добудьте информацию из SCP-914 - Поставьте\n3-страничный документ об SCP-914 на Очень тонко"
+
+msgid "TASK_023_EYES"
+msgstr "Вы должны быстро заменить глаза SCP-023."
+
+msgid "TASK_938_CHECK"
+msgstr "Прикажите персоналу Класса-Д из 4 человек,\n1 научному сотруднику и 1 охраннику\nпроверить целостность батареи SCP-938"

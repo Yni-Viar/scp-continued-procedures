@@ -22,6 +22,8 @@ enum InteractAction {NONE, FOLLOW, SPECIAL}
 @export var apply_height_bugfix: bool = true
 ## Will the puppet stay on this point, or it will wander
 @export var enable_wander: bool = true
+## Health (0 is general health, 1 is coldness (humans only),
+## 2 is thirst (humans only), 3 is hunger (humans only)
 @export var health: Array[float] = [100]
 ## Only for humans currently.
 ## 0 is none team, 1 is Foundation personnel, 2 is Class-D personnel,

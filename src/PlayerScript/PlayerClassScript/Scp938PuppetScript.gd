@@ -9,7 +9,9 @@ var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var current_state: Scp938State = Scp938State.DORMANT
 var electro_targets: Array[Node3D] = []
 var timer: float = 8.75
-var teleport_timer: float = 0.0
+var teleport_is_ready: bool = false
+# Favourite SCP-938 target
+var favourite_target: int = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,32 +23,35 @@ func _physics_process(delta: float) -> void:
 	scp_938(delta)
 
 func scp_938(delta: float):
-	if timer > 0:
+	if timer > 0 || !teleport_is_ready:
 		if electro_targets.size() > 0 || current_state != 0:
 			timer -= delta
 	else:
 		current_state = rng.randi_range(1, 2) as Scp938State
 		$AttackArea.monitoring = true
-		teleport_timer = 0.0
+		teleport_is_ready = true
+		timer = 8.0
 	match current_state:
 		1:
-			if teleport_timer > 0:
-				teleport_timer -= delta
-			else:
-				if !get_parent().get_parent().wandering:
-					get_parent().get_parent().wandering = true
-				teleport_timer = rng.randf_range(3.0, 4.0)
-				get_parent().get_parent().global_position = NavigationServer3D.map_get_random_point(get_parent().get_parent().get_node("NavigationAgent3D").get_navigation_map(), 1, true)
+			if !get_parent().get_parent().wandering:
+				get_parent().get_parent().wandering = true
+			get_parent().get_parent().global_position = NavigationServer3D.map_get_random_point(get_parent().get_parent().get_node("NavigationAgent3D").get_navigation_map(), 1, true)
 		2:
-			if electro_targets.size() > 0:
-				if teleport_timer > 0:
-					teleport_timer -= delta
-				else:
-					if get_parent().get_parent().wandering:
-						get_parent().get_parent().wandering = false
-					teleport_timer = rng.randf_range(0.4375, 0.75)
-					var target = electro_targets[randi_range(0, electro_targets.size()-1)]
+			if teleport_is_ready && electro_targets.size() > 0:
+				teleport_is_ready = false
+				if get_parent().get_parent().wandering:
+					get_parent().get_parent().wandering = false
+				# Firstly, choose random target
+				var selection: int = randi_range(0, electro_targets.size()-1)
+				# Secondly, choose should electrocute this target (0) or favourite (1)
+				var choice_for_target: bool = randi_range(0, 1) as bool
+				var target = electro_targets[selection if !choice_for_target else favourite_target]
+				if target != null:
 					get_parent().get_parent().global_position = target.global_position - target.global_transform.basis.z * 2
+					if favourite_target < 0:
+						favourite_target = selection
+				elif electro_targets.size()-1 < favourite_target:
+					favourite_target = randi_range(0, electro_targets.size()-1)
 			else:
 				current_state = 1 as Scp938State
 
@@ -57,13 +62,17 @@ func _on_trigger_area_body_entered(body: Node3D) -> void:
 
 func _on_attack_area_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:
-		$AttackTrigger.look_at(body)
+		$AttackTrigger.look_at(body.global_position)
 		$AttackTrigger.show()
-		body.movement_freeze = true
+		if body != null:
+			body.movement_freeze = true
 		await get_tree().create_timer(1.0).timeout
-		body.health_manage(-80)
+		if body != null:
+			body.health_manage(-80)
 		$AttackTrigger.hide()
-		body.movement_freeze = false
+		if body != null:
+			body.movement_freeze = false
+		teleport_is_ready = true
 
 
 func _on_trigger_area_body_exited(body: Node3D) -> void:
