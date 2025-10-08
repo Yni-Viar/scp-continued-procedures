@@ -1,61 +1,62 @@
 # SCP: Containing Procedures
 
-## Long-term plan
-### Undetermined
-- [ ] SCP-001 (by shaggydredlocks) event
-- [ ] SCP-003
-- [ ] SCP-104
-- [ ] SCP-323
-- [ ] SCP-432 (with dimension)
-- [ ] SCP-647
-- [ ] SCP-813
-- [ ] SCP-864 (probably, latest Nalka version, with dimension)
-- [ ] SCP-939 (3d model borrowed from SCP: Unity, blocked until 2026-07-01 because of popular SCP restriction)
-- [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
-- [ ] SCP-2471 (3d model borrowed from AmbientCG, blocked until 2026-01-01 because of 4-digit-SCP restriction)
-- [ ] Multiplayer (Research or Survival mode)
-- [ ] Add generator task (hello Unstable Dimensions)
-- [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
-### v6.0.0 plan
+## Long-term plan (new versions will have different codebase, this plan will contain only 5.x.x changes)
+
+### 5.x.x plan
+- [ ] Add generator task (hello Unstable Dimensions) (maybe scrap this?)
 - [ ] SCP-178 (3d model is ready)
-- [ ] Survival mode
-- [ ] Hunger and thirst system for survival mode (implement this for ~~109 and ~~458) (in progress, began in 5.0)
-### v5.1.0 plan
 - [ ] SCP-458 (probably will be implemented in 5.1)
+
+### v5.1.0 plan (last version before developing 10.x)
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
 
-## v5.0.0 (Expansion update part 2, release may be soon, if I finish the story) 
-- [x] Enable SCP-023 in Safe mode (through it will just walk around).
+## v5.0.0 (Expansion update part 2, release may be soon, if I finish the story)
+### Story mode (unfinished)
+#### Not started
+- [ ] Move Casual mode as story, rename Story mode button as Play.
+- [ ] Story mode: Pre-configured round mechanic
+- [ ] Story mode: Custom "escape" scenario - finish task.
+#### Working on
+- [ ] Story mode: lore (in progress)
+#### Done
+- [x] Improve finish game screen/gameover - make it full-screen + graphics
+### SCP-938 (done)
+- [x] SCP-938: Puppet Logic (needs more testing)
+- [x] SCP-938: Task (need to passability test)
+- [x] SCP-938: VFX
+- [x] SCP-938: Containment Sublevel + Lantern item
+### General rework and map expansion (mostly done, feature freeze)
+#### Not started
+- [ ] Add ragdolls
+- [ ] Expose Gate B
+#### Working on
+- [ ] Expose Gate A
+- [ ] Surface Zone for Gate B and C (in progress, SZ and elevators will be borrowed from pop_pop_icard).
+#### Done
+- [x] CB-styled doors (for elevators)
+- [x] Remake Gate C room
 - [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
 - [x] Camera Rework: Add Third-person view + toggle API and remove scroll zoom
 - [x] Keybind settings (FINALLY DONE!!!)
-- [x] You cannot enter WC now (because of possible *strange situations*)
-- [x] Removed old lighting hack from non-lightmap era.
-- [ ] Move Casual mode as story, rename Story mode button as Play.
-- [ ] Story mode: lore (in progress)
-- [ ] Story mode: Pre-configured round mechanic
-- [ ] Story mode: Custom "escape" scenario - finish task.
-- [ ] Expose Gate A, B and C + Surface Zone for Gate B and C (Gate C need to be re-made from scratch) (in progress, SZ will be borrowed from pop_pop_icard).
 - [x] Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency
-- [ ] Add ragdolls
-- [ ] Add debug console (in progress)
 - [x] Rework item usage to a safe method caller
 - [x] Add hunger and thirst HP layers to humans
-- [x] Removed time scale after finish game
-- [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
-- [x] Improve finish game screen/gameover - make it full-screen + graphics
 - [x] Add props to Class-D room
 - [x] Add Settings to Main Menu
 - [x] Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)
-- [x] SCP-938: VFX
-- [x] SCP-938: Puppet Logic
-- [ ] SCP-938: Task (fix bug, when task appears in impossible condition)
-- [x] SCP-938: Containment Sublevel + Lantern item
 - [x] Moved to POT translation file instead of CSV, making translation to other languages easier.
 - [x] Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 - [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
+## Other changes and bugfixes (mostly done, accepting new bugs)
+- [ ] Add debug console (in progress)
+- [x] Add more Scientists spawns in Research Zone
+- [x] Enable SCP-023 in Safe mode (through it will just walk around).
+- [x] You cannot enter WC now (because of possible *strange situations*)
+- [x] Removed old lighting hack from non-lightmap era.
+- [x] Removed time scale after finish game
+- [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
 
 ## v4.3.0 **(⚠️ Last version, that natively supports Windows 7-8.0!!!)**
 

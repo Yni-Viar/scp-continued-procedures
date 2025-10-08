@@ -49,6 +49,7 @@ func _on_foundation_task_task_done() -> void:
 		label.add_theme_font_size_override("font_size", 20)
 		label.text = task.public_name
 		$Tasks.add_child(label)
+		$Tasks.add_child(HSeparator.new())
 	if get_parent().get_node("FoundationTask").all_tasks.size() == 0:
 		match get_parent().get_node("FoundationTask").special_event:
 			0: # neutral

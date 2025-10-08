@@ -159,7 +159,7 @@ msgid "GATE_B"
 msgstr "Gate B"
 
 msgid "GATE_C"
-msgstr "Under construction"
+msgstr "Gate C"
 
 msgid "LOUNGE"
 msgstr "Lounge"
@@ -260,5 +260,8 @@ msgstr "You need to replace SCP-023's eyes quickly."
 
 msgid "TASK_938_CHECK"
 msgstr ""
-"Order 4 Class-D personnel, 1 scientist\n"
-"and 1 guard to check SCP-938 battery integrity"
+"Order 3 Class-D personnel and 1 scientist\n"
+"to check SCP-938 battery integrity"
+
+msgid "EMERGENCY_EXIT"
+msgstr "Emergency exit"

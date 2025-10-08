@@ -7,4 +7,5 @@ script = ExtResource("1_kyhpv")
 internal_name = "task_938"
 public_name = "TASK_938_CHECK"
 required_group = &"Scp938Spawn"
+required_groups = Array[String](["Scp938Spawn", "DClassSpawn"])
 metadata/_custom_type_script = "uid://2412583x8gql"

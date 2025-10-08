@@ -213,3 +213,5 @@ msgstr ""
 msgid "TASK_938_CHECK"
 msgstr ""
 
+msgid "EMERGENCY_EXIT"
+msgstr ""

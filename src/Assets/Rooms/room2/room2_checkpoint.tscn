@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="12_bj63s"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
-vertices = PackedVector3Array(-3.05029, -0.769567, 1.01436, -3.05029, -0.769567, -9.73564, -9.30029, -0.769567, -9.48564, -9.30029, -0.769567, 1.01436, -1.30029, -0.769567, 1.26436, -1.30029, -0.769567, 3.01436, 1.44971, -0.769567, 3.01436, 1.44971, -0.769567, 1.26436, 3.19971, -0.769567, 1.01436, 3.19971, -0.769567, -9.73564, 9.44971, -0.769567, 1.01436, 9.44971, -0.769567, -9.48564, -9.30029, 1.23043, 2.01436, -9.30029, 1.23043, 4.26436, -2.30029, 1.23043, 4.26436, -2.30029, 1.23043, 2.01436, 2.44971, 1.23043, 2.01436, 2.44971, 1.23043, 4.26436, 9.44971, 1.23043, 4.26436, 9.44971, 1.23043, 2.01436, 1.44971, -0.769567, 5.01436, -1.55029, -0.769567, 5.26436, 3.69971, -0.769567, 5.26436, -3.55029, -0.769567, 9.76436, 3.69971, -0.769567, 9.76436, -3.55029, -0.769567, 5.26436, -9.30029, -0.769567, 5.26436, -9.30029, -0.769567, 9.76436, 9.44971, -0.769567, 9.76436, 9.44971, -0.769567, 5.26436)
-polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(4, 0, 7), PackedInt32Array(7, 0, 8), PackedInt32Array(8, 0, 1), PackedInt32Array(8, 1, 9), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(19, 18, 16), PackedInt32Array(16, 18, 17), PackedInt32Array(6, 20, 5), PackedInt32Array(5, 20, 21), PackedInt32Array(20, 22, 21), PackedInt32Array(21, 22, 24), PackedInt32Array(21, 24, 23), PackedInt32Array(23, 25, 21), PackedInt32Array(27, 26, 23), PackedInt32Array(23, 26, 25), PackedInt32Array(22, 29, 24), PackedInt32Array(24, 29, 28)]
+vertices = PackedVector3Array(-9.300285, -0.7695668, -9.485641, -9.300285, -0.7695668, -0.7356405, -6.5502853, -0.7695668, -0.7356405, 6.4497147, -0.7695668, -0.7356405, 9.449715, -0.7695668, -0.7356405, 9.449715, -0.7695668, -9.485641, -6.3002853, -0.7695668, 1.5143595, 6.1997147, -0.7695668, 1.5143595, -9.300285, 1.2304332, 0.26435947, -9.300285, 1.2304332, 6.0143595, -7.3002853, 1.2304332, 6.0143595, -7.3002853, 1.2304332, 0.26435947, 7.1997147, 1.2304332, 0.26435947, 7.1997147, 1.2304332, 6.0143595, 9.449715, 1.2304332, 6.0143595, 9.449715, 1.2304332, 0.26435947, -6.3002853, -0.7695668, 6.7643595, -9.300285, -0.7695668, 7.0143595, -9.300285, -0.7695668, 9.764359, 9.449715, -0.7695668, 9.764359, 9.449715, -0.7695668, 7.0143595, 6.1997147, -0.7695668, 6.7643595)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(6, 2, 7), PackedInt32Array(7, 2, 3), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 5), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 13), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 21), PackedInt32Array(18, 21, 20), PackedInt32Array(18, 20, 19), PackedInt32Array(21, 16, 7), PackedInt32Array(7, 16, 6)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ncriq"]
 _surfaces = [{
@@ -207,10 +207,10 @@ skeleton = NodePath("")
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("1_54lxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9121, -0.238879, 3.21097)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -8.375951, -0.238879, 3.21097)
 
 [node name="Table2" parent="NavigationRegion3D/Props" instance=ExtResource("1_54lxd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07621, -0.238879, 3.21097)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.394005, -0.238879, 3.21097)
 
 [node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("5_4mbmi")]
 transform = Transform3D(-4.37114e-08, 0, -1, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1.91069e-15, 10.0517, 2.78077, -6.60426)

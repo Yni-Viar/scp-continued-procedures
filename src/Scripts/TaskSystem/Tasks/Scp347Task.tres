@@ -7,4 +7,5 @@ script = ExtResource("1_gomdx")
 internal_name = "task_347"
 public_name = "TASK_347_PASS"
 required_group = &"Scp347Spawn"
+required_groups = Array[String](["Scp347Spawn"])
 metadata/_custom_type_script = "uid://2412583x8gql"

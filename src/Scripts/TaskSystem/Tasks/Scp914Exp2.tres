@@ -7,4 +7,5 @@ script = ExtResource("1_saft0")
 internal_name = "task_914_exp_2"
 public_name = "TASK_914_EXP_2"
 required_group = &"Scp914"
+required_groups = Array[String](["Scp914"])
 metadata/_custom_type_script = "uid://2412583x8gql"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="MapGenRoom" load_steps=5 format=3 uid="uid://cwn3flxx1e8ho"]
+
+[ext_resource type="Texture2D" uid="uid://bdohqm7yw00if" path="res://Assets/HUD/room2_90.png" id="1_f40r1"]
+[ext_resource type="Texture2D" uid="uid://8etimuikkbyb" path="res://Assets/HUD/room2.png" id="2_w24uy"]
+[ext_resource type="PackedScene" uid="uid://bsf6uo5b8l2jm" path="res://Assets/Rooms/room2/rz_exit2_gatec.tscn" id="5_pxw6i"]
+[ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="6_u00eu"]
+
+[resource]
+script = ExtResource("6_u00eu")
+name = "rz_exit2_gatec"
+prefab = ExtResource("5_pxw6i")
+icon_0_degrees = ExtResource("1_f40r1")
+icon_90_degrees = ExtResource("2_w24uy")
+icon_180_degrees = ExtResource("1_f40r1")
+icon_270_degrees = ExtResource("2_w24uy")
+spawn_chance = 100.0
+guaranteed_spawn = true
