@@ -194,6 +194,7 @@ _data = {
 script = ExtResource("1_6v4dk")
 
 [node name="Cube_003" type="MeshInstance3D" parent="."]
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_gdd3j")
 skeleton = NodePath("")
 
@@ -204,6 +205,7 @@ shape = SubResource("ConcavePolygonShape3D_f8wcs")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.003067013, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_fal7a")
 skeleton = NodePath("")
 
@@ -214,6 +216,7 @@ shape = SubResource("ConcavePolygonShape3D_6v4dk")
 
 [node name="Cube_002" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003067013, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_1670q")
 skeleton = NodePath("")
 

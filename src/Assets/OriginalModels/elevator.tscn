@@ -9,7 +9,7 @@
 [ext_resource type="LightmapGIData" uid="uid://cwoxxudg3ixer" path="res://Assets/OriginalModels/Lm/elevator.lmbake" id="7_olfai"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6f61q"]
-vertices = PackedVector3Array(-2.45, -3.118, -2.45, -2.45, -3.118, 2.55, 2.3, -3.118, 2.55, 2.3, -3.118, -2.45)
+vertices = PackedVector3Array(-2.45, -3.118, -2.45, -2.45, -3.118, 2.55, 2.8, -3.118, 2.55, 2.8, -3.118, -2.45)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_n2yap"]
@@ -170,7 +170,8 @@ shape = SubResource("ConcavePolygonShape3D_40j2t")
 [node name="NavigationLink3D" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14753, -3.12224, 0)
 enabled = false
-end_position = Vector3(2, 0, 0)
+start_position = Vector3(-0.185, 0, 0)
+end_position = Vector3(3, 0, 0)
 
 [node name="DoorSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0303, 0, 0)

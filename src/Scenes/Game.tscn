@@ -13,6 +13,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="9_bf53h"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="10_3so38"]
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
+[ext_resource type="Environment" uid="uid://mkrxfq7uvngm" path="res://Assets/Environment/Default.tres" id="10_khs3t"]
 [ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/Third_party/lcz_ambient.ogg" id="11_dahhg"]
 [ext_resource type="Script" uid="uid://dxam3jgydqblf" path="res://Scripts/FPSCounter.gd" id="13_acvyw"]
 [ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
@@ -31,16 +32,6 @@
 [ext_resource type="Texture2D" uid="uid://c8y4oka7p08v6" path="res://UI/icon_192_dark.png" id="26_iyesh"]
 [ext_resource type="Texture2D" uid="uid://cx0pyayxian80" path="res://Assets/HUD/Touch/call_elevator_click.png" id="27_i4lct"]
 [ext_resource type="PackedScene" uid="uid://o6rnnciwmwvn" path="res://GDsh/InGameConsole.tscn" id="30_i1pr2"]
-
-[sub_resource type="Environment" id="Environment_mvdmi"]
-background_mode = 1
-ambient_light_source = 2
-glow_enabled = true
-fog_enabled = true
-fog_mode = 1
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 1.0
-fog_depth_end = 60.0
 
 [sub_resource type="Animation" id="Animation_i1pr2"]
 length = 0.001
@@ -135,7 +126,7 @@ script = ExtResource("7_wxwew")
 [node name="Items" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_mvdmi")
+environment = ExtResource("10_khs3t")
 
 [node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 240.0

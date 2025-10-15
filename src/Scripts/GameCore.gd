@@ -65,14 +65,26 @@ func _process(delta: float) -> void:
 
 
 func _on_facility_generator_generated() -> void:
+	var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
+	sz.position.y = 256.0
+	add_child(sz, true)
+	var ez: Node3D = load("res://Assets/Rooms/sublevels/subl_Entrance.tscn").instantiate()
+	# avoid elevator collision
+	ez.position = Vector3(0.0, 128.0, 128.0)
+	add_child(ez, true)
+	
 	spawn_player()
 	spawn_puppets()
+	
 	$FoundationTask.initialize()
 	$UI._on_foundation_task_task_done()
+	
 	# Spawn SCP-347 agent, if there is a task
 	if get_node("FoundationTask").has_task("task_347"):
 		spawn_wave_entity(2)
+	
 	await get_tree().create_timer(15.0).timeout
+	
 	if ci_probability < 0:
 		ci_probability = rng.randi_range(0, 1)
 	ci_ready = true

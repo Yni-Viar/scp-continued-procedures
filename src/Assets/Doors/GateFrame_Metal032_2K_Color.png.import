@@ -1,0 +1,45 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://1uhlow3loxyi"
+path.s3tc="res://.godot/imported/GateFrame_Metal032_2K_Color.png-f290c4be67bba8342e1c52214020cc76.s3tc.ctex"
+path.etc2="res://.godot/imported/GateFrame_Metal032_2K_Color.png-f290c4be67bba8342e1c52214020cc76.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "474e56769694d24f199f66f4f4feb5b7"
+}
+
+[deps]
+
+source_file="res://Assets/Doors/GateFrame_Metal032_2K_Color.png"
+dest_files=["res://.godot/imported/GateFrame_Metal032_2K_Color.png-f290c4be67bba8342e1c52214020cc76.s3tc.ctex", "res://.godot/imported/GateFrame_Metal032_2K_Color.png-f290c4be67bba8342e1c52214020cc76.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=512
+detect_3d/compress_to=0

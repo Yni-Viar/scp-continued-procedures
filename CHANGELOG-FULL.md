@@ -10,16 +10,7 @@
 ### v5.1.0 plan (last version before developing 10.x)
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
 
-## v5.0.0 (Expansion update part 2, release may be soon, if I finish the story)
-### Story mode (unfinished)
-#### Not started
-- [ ] Move Casual mode as story, rename Story mode button as Play.
-- [ ] Story mode: Pre-configured round mechanic
-- [ ] Story mode: Custom "escape" scenario - finish task.
-#### Working on
-- [ ] Story mode: lore (in progress)
-#### Done
-- [x] Improve finish game screen/gameover - make it full-screen + graphics
+## v5.0.0 (Expansion update part 2, release will be probably before 2026)
 ### SCP-938 (done)
 - [x] SCP-938: Puppet Logic (needs more testing)
 - [x] SCP-938: Task (need to passability test)
@@ -28,11 +19,11 @@
 ### General rework and map expansion (mostly done, feature freeze)
 #### Not started
 - [ ] Add ragdolls
-- [ ] Expose Gate B
 #### Working on
 - [ ] Expose Gate A
 - [ ] Surface Zone for Gate B and C (in progress, SZ and elevators will be borrowed from pop_pop_icard).
 #### Done
+- [x] Expose Gate B
 - [x] CB-styled doors (for elevators)
 - [x] Remake Gate C room
 - [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.

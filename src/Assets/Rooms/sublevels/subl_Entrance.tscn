@@ -1,17 +1,24 @@
-[gd_scene load_steps=26 format=4 uid="uid://c5peq8bikxrsb"]
+[gd_scene load_steps=42 format=4 uid="uid://brvkqe655jbgs"]
 
-[ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_yj6g7"]
-[ext_resource type="Material" uid="uid://64pceyag8e5u" path="res://Assets/Materials/EntranceSubzone/FakeSky.tres" id="2_ft7as"]
-[ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_sw50w"]
-[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="4_ft7as"]
-[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="5_cxqbm"]
-[ext_resource type="LightmapGIData" uid="uid://baf3iucalb1a6" path="res://Assets/Rooms/sublevels/Lm/subl_Entrance.lmbake" id="5_qal2s"]
-[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="6_1e74e"]
-[ext_resource type="Script" uid="uid://b8lv838ni70ad" path="res://Scripts/Triggers/FinishGameTrigger.gd" id="6_fwwpm"]
-[ext_resource type="PackedScene" uid="uid://d4issmtwtpowq" path="res://Assets/ExternalModels/couch.tscn" id="7_t6k7u"]
-[ext_resource type="Script" uid="uid://dy22rto53osc7" path="res://Scripts/SpawnableOffices.gd" id="8_1e74e"]
-[ext_resource type="PackedScene" uid="uid://ck7np8nu8h0l" path="res://Assets/OriginalModels/ScientistsOfficeProp/Yni/train_toy.tscn" id="8_klcbq"]
-[ext_resource type="PackedScene" uid="uid://c32hwf66e1ihj" path="res://Assets/OriginalModels/scp_cage.tscn" id="11_t6k7u"]
+[ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_4ojac"]
+[ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="2_cxqbm"]
+[ext_resource type="Material" uid="uid://64pceyag8e5u" path="res://Assets/Materials/EntranceSubzone/FakeSky.tres" id="2_xfcit"]
+[ext_resource type="PackedScene" uid="uid://b2r7tumbeonla" path="res://Assets/OriginalModels/elevator.tscn" id="3_1e74e"]
+[ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="3_24728"]
+[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="4_rn1l8"]
+[ext_resource type="Script" uid="uid://7ag6n6s5rw1m" path="res://Scripts/ElevatorSystem/ElevatorFloor.gd" id="4_t6k7u"]
+[ext_resource type="Script" uid="uid://bti7y8cq2dfm4" path="res://Scripts/DoorSystem/DoorBase.gd" id="5_klcbq"]
+[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="5_w6082"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="6_imm16"]
+[ext_resource type="Texture2D" uid="uid://ttw8c15u0if6" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_Color.png" id="6_wmmhx"]
+[ext_resource type="Texture2D" uid="uid://c7v1ma1sf0n5h" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_NormalGL.png" id="7_roeg4"]
+[ext_resource type="PackedScene" uid="uid://d4issmtwtpowq" path="res://Assets/ExternalModels/couch.tscn" id="7_webay"]
+[ext_resource type="Texture2D" uid="uid://bf414e28ipiii" path="res://Assets/Materials/Elevator/Metal009_2K-PNG_Roughness.png" id="8_1iicb"]
+[ext_resource type="PackedScene" uid="uid://ck7np8nu8h0l" path="res://Assets/OriginalModels/ScientistsOfficeProp/Yni/train_toy.tscn" id="8_kqusu"]
+[ext_resource type="Script" uid="uid://dy22rto53osc7" path="res://Scripts/SpawnableOffices.gd" id="9_ru7rl"]
+[ext_resource type="Script" uid="uid://b8lv838ni70ad" path="res://Scripts/Triggers/FinishGameTrigger.gd" id="10_g7qfe"]
+[ext_resource type="LightmapGIData" uid="uid://baf3iucalb1a6" path="res://Assets/Rooms/sublevels/Lm/subl_Entrance.lmbake" id="11_r4cte"]
+[ext_resource type="PackedScene" uid="uid://c32hwf66e1ihj" path="res://Assets/OriginalModels/scp_cage.tscn" id="12_6k8ah"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_yj6g7"]
 vertices = PackedVector3Array(57.975, -0.615299, -93.844, 65.975, -0.615299, -93.844, 66.225, -0.615299, -96.094, 68.475, -0.615299, -96.094, 68.725, -0.615299, -104.844, 57.975, -0.615299, -104.844, 70.225, -0.615299, -95.844, 70.225, -0.615299, -88.594, 97.475, -0.615299, -88.344, 97.475, -0.615299, -104.844, 66.975, 1.3847, -95.094, 66.975, 1.3847, -87.844, 69.225, 1.3847, -87.844, 69.225, 1.3847, -95.094, 57.975, -0.615299, -89.094, 65.975, -0.615299, -89.094, 65.975, -0.615299, -81.094, 68.225, -0.615299, -81.344, 68.225, -0.615299, -86.844, 65.975, -0.615299, -87.094, 57.975, -0.615299, -79.094, 65.975, -0.615299, -79.094, 69.975, -0.615299, -81.344, 69.975, -0.615299, -86.844, 70.225, -0.615299, -79.594, 97.475, -0.615299, -79.844, 66.975, 1.3847, -80.344, 66.975, 1.3847, -73.094, 69.225, 1.3847, -73.094, 69.225, 1.3847, -80.344, 74.975, -0.615299, -54.594, 80.475, -0.615299, -54.594, 80.475, -0.615299, -56.594, 74.725, -0.615299, -56.844, 70.225, -0.615299, -72.344, 80.975, -0.615299, -57.094, 97.475, -0.615299, -66.594, 66.475, -0.615299, -72.094, 65.725, -0.615299, -62.094, 57.975, -0.615299, -74.344, 65.975, -0.615299, -74.344, 65.975, -0.615299, -72.344, 57.975, -0.615299, -66.594, 74.975, -0.615299, -4.844, 80.475, -0.615299, -4.844, 23.475, -0.615299, -13.594, 25.475, -0.615299, -13.844, 25.475, -0.615299, -15.594, 23.475, -0.615299, -15.844, -3.775, -0.615299, -4.344, 23.475, -0.615299, -24.594, 25.225, -0.615299, -24.844, 24.975, -0.615299, -28.094, -3.775, -0.615299, -28.094, 23.975, -0.615299, -4.594, 23.475, -0.615299, -4.844, 27.725, -0.615299, -24.594, 32.725, -0.615299, -24.594, 35.225, -0.615299, -24.844, 35.475, -0.615299, -28.094, 27.725, -0.615299, -17.844, 32.725, -0.615299, -17.844, 36.975, -0.615299, -24.594, 42.225, -0.615299, -24.594, 44.725, -0.615299, -24.844, 44.975, -0.615299, -28.094, 36.975, -0.615299, -15.844, 42.225, -0.615299, -15.844, 46.475, -0.615299, -15.844, 44.475, -0.615299, -15.594, 44.475, -0.615299, -14.094, 46.475, -0.615299, -13.844, 56.725, -0.615299, -4.594, 46.475, -0.615299, -24.594, 56.725, -0.615299, -28.094, 46.475, -0.615299, -5.094, 45.975, -0.615299, -4.844, 24.475, 1.3847, -23.844, 24.475, 1.3847, -16.594, 26.725, 1.3847, -16.594, 26.725, 1.3847, -23.844, 33.725, 1.3847, -23.844, 33.725, 1.3847, -16.594, 35.975, 1.3847, -16.594, 35.975, 1.3847, -23.844, 43.225, 1.3847, -23.844, 43.225, 1.3847, -16.594, 45.475, 1.3847, -16.594, 45.475, 1.3847, -23.844, 105.225, -0.615299, -19.844, 104.725, -0.615299, -19.594, 107.725, -0.615299, -18.094, 107.975, -0.615299, -18.594, 105.225, -0.615299, -22.344, 116.975, -0.615299, -18.344, 116.975, -0.615299, -22.344, 99.225, 1.6347, -22.094, 99.225, 1.6347, -21.344, 99.975, 1.6347, -21.844, 103.725, 1.6347, -21.344, 104.225, 1.6347, -21.344, 104.225, 1.6347, -22.094, 103.475, 1.6347, -22.094, 107.725, -0.615299, -9.094, 108.225, -0.615299, -14.344, 107.725, -0.615299, -14.594, 98.225, -0.615299, -19.844, 98.225, -0.615299, -9.094, 27.475, -0.615299, -15.594, 27.725, -0.615299, -13.594, 32.725, -0.615299, -15.844, 32.725, -0.615299, -13.844, 34.975, -0.615299, -14.094, 34.975, -0.615299, -15.594, 27.725, -0.615299, -7.094, 32.725, -0.615299, -7.094, 108.725, 1.3847, -15.344, 110.725, 1.3847, -15.344, 110.475, 1.3847, -16.594, 108.725, 1.3847, -17.594, 111.975, 1.3847, -17.094, 113.475, 1.3847, -16.844, 115.975, 1.3847, -17.594, 113.225, 1.3847, -15.344, 115.975, 1.3847, -15.344, 36.725, -0.615299, -14.094, 36.975, -0.615299, -12.094, 42.225, -0.615299, -12.094, 42.475, -0.615299, -14.094, 108.225, -0.615299, -8.844, 116.975, -0.615299, -7.344, 116.975, -0.615299, -14.594, 108.225, -0.615299, -7.344, 33.725, 1.3847, -13.094, 33.725, 1.3847, -5.844, 35.975, 1.3847, -5.844, 35.975, 1.3847, -13.094, 43.225, 1.3847, -13.094, 43.225, 1.3847, -5.844, 45.475, 1.3847, -5.844, 45.475, 1.3847, -13.094, 24.475, 1.3847, -12.844, 24.475, 1.3847, -5.594, 26.725, 1.3847, -5.594, 26.725, 1.3847, -12.844, 36.975, -0.615299, -6.844, 42.225, -0.615299, -6.844, 32.725, -0.615299, -5.094, 27.725, -0.615299, -4.844, 33.225, -0.615299, 2.406, 35.225, -0.615299, 2.406, 34.975, -0.615299, -4.844, 27.475, -0.615299, 2.656, 27.725, -0.615299, 4.656, 32.975, -0.615299, 4.406, 25.475, -0.615299, -4.594, 25.475, -0.615299, 2.656, 107.725, -0.615299, -7.094, 107.725, -0.615299, 5.406, 119.475, -0.615299, 5.156, 117.725, -0.615299, -6.594, 119.475, -0.615299, -6.594, 36.975, -0.615299, 2.406, 37.225, -0.615299, 4.406, 41.975, -0.615299, 4.406, 42.225, -0.615299, 2.406, 36.725, -0.615299, -4.844, 42.475, -0.615299, -4.844, 44.225, -0.615299, 2.406, 44.475, -0.615299, -4.844, 95.975, -0.615299, -2.594, 95.975, -0.615299, 2.656, 97.975, -0.615299, 2.906, 97.975, -0.615299, -2.844, 98.225, -0.615299, -7.094, 106.975, -0.615299, 5.656, 97.975, -0.615299, 6.156, 106.975, -0.615299, 6.156, 198.975, -0.615299, 4.906, 198.975, -0.615299, -6.844, 80.475, -0.615299, -2.844, 74.975, -0.615299, -2.844, 73.225, -0.615299, -2.594, 73.475, -0.615299, 2.656, 81.975, -0.615299, 2.656, 82.225, -0.615299, -2.594, 56.975, -0.615299, 2.656, 58.725, -0.615299, 2.656, 58.725, -0.615299, -2.594, 56.725, -0.615299, -2.844, 56.725, -0.615299, 3.156, 45.975, -0.615299, 2.406, 46.225, -0.615299, 3.156, -3.775, -0.615299, 2.906, 23.475, -0.615299, 2.906, 23.475, -0.615299, 13.156, 25.475, -0.615299, 12.906, 25.475, -0.615299, 11.906, 23.475, -0.615299, 11.656, 25.475, -0.615299, 28.156, 25.475, -0.615299, 22.156, 23.475, -0.615299, 21.906, -3.775, -0.615299, 28.156, 44.225, -0.615299, 11.656, 44.225, -0.615299, 13.156, 46.225, -0.615299, 13.406, 46.225, -0.615299, 11.406, 46.225, -0.615299, 22.156, 44.475, -0.615299, 22.406, 44.725, -0.615299, 28.156, 56.725, -0.615299, 28.156, 33.975, 1.3847, 3.406, 33.975, 1.3847, 10.656, 36.225, 1.3847, 10.656, 36.225, 1.3847, 3.406, 42.975, 1.3847, 3.406, 42.975, 1.3847, 10.656, 45.225, 1.3847, 10.656, 45.225, 1.3847, 3.406, 24.475, 1.3847, 3.656, 24.475, 1.3847, 10.906, 26.725, 1.3847, 10.906, 26.725, 1.3847, 3.656, 27.725, -0.615299, 9.906, 32.975, -0.615299, 9.656, 34.975, -0.615299, 11.656, 34.975, -0.615299, 12.906, 37.225, -0.615299, 13.156, 37.225, -0.615299, 11.406, 41.975, -0.615299, 11.406, 41.975, -0.615299, 13.406, 37.225, -0.615299, 20.156, 41.975, -0.615299, 20.406, 98.225, -0.615299, 14.906, 98.475, -0.615299, 14.906, 98.725, -0.615299, 12.906, 107.225, -0.615299, 12.906, 107.475, -0.615299, 7.156, 106.975, -0.615299, 6.906, 107.725, -0.615299, 13.406, 114.975, -0.615299, 13.156, 114.975, -0.615299, 7.156, 27.475, -0.615299, 11.906, 27.475, -0.615299, 12.906, 27.725, -0.615299, 14.906, 32.975, -0.615299, 14.906, 32.975, -0.615299, 13.156, 32.975, -0.615299, 11.406, 116.475, 1.6347, 12.156, 116.475, 1.6347, 12.656, 116.975, 1.6347, 12.656, 116.975, 1.6347, 12.156, 107.725, -0.615299, 16.906, 105.975, -0.615299, 17.156, 106.225, -0.615299, 22.406, 115.225, -0.615299, 13.656, 116.975, -0.615299, 22.406, 116.975, -0.615299, 13.656, 24.475, 1.3847, 13.906, 24.475, 1.3847, 21.156, 26.725, 1.3847, 21.156, 26.725, 1.3847, 13.906, 33.975, 1.3847, 13.906, 33.975, 1.3847, 21.156, 36.225, 1.3847, 21.156, 36.225, 1.3847, 13.906, 99.475, 1.3847, 13.906, 99.475, 1.3847, 16.156, 106.725, 1.3847, 16.156, 106.725, 1.3847, 13.906, 42.975, 1.3847, 14.156, 42.975, 1.3847, 21.406, 45.225, 1.3847, 21.406, 45.225, 1.3847, 14.156, 27.725, -0.615299, 20.156, 32.975, -0.615299, 20.156, 98.725, -0.615299, 17.156, 98.225, -0.615299, 22.406, 32.975, -0.615299, 21.906, 27.475, -0.615299, 22.156, 34.975, -0.615299, 28.156, 34.975, -0.615299, 22.156, 36.975, -0.615299, 22.156, 42.225, -0.615299, 22.406)
@@ -77,7 +84,7 @@ _surfaces = [{
 "format": 34359742527,
 "index_count": 1113,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgADAAAABgAHAAMACAAHAAYACAAJAAcACgAIAAYACgAGAAsADAANAA4ADAAPAA0AEAAMAA4AEAAOABEAEgATABQAEgAVABMAFgASABQAFgAUABcAGAAVABIAGAAZABUAGgAZABgAGgAbABkAHAAbABoAHAAdABsAHgAdABwAHgAfAB0AIAAeABwAIAAcACEAIgAjACQAIgAlACMAJgAiACQAJgAkACcAKAApACoAKAArACkALAAoACoALAAqAC0ALgAsAC0ALgAtAC8AMAAuAC8AMAAvADEAMgAwADEAMgAxADMANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQgBDAEAAQgBEAEMAQABFAEEARgBBAEUARgBFAEcARwBIAEYARwBJAEgASgBIAEkASgBJAEsATABNAE4ATABPAE0AUABRAFIAUQBQAFMAUQBTAFQAVQBWAFcAVgBVAFgAVgBYAFkAWgBbAFwAWwBaAF0AWwBdAF4AXwBgAGEAXwBiAGAAYwBkAGUAYwBmAGQAZwBoAGkAZwBqAGgAZwBpAGsAZwBrAGwAbQBuAG8AbQBwAG4AcQByAHMAcQB0AHIAdQB2AHcAdQB4AHYAeQB2AHgAeQB6AHYAdwB2AHsAdwB7AHwAfQB+AH8AfQB/AIAAfQCAAIEAfQCCAH4AgwCCAH0AgwCEAIIAhQCGAIcAhQCIAIYAiQCGAIgAiQCKAIYAiwCMAI0AiwCOAIwAjwCQAJEAjwCSAJAAjwCRAJMAjwCTAJQAlQCWAJcAlQCYAJYAmQCaAJsAmQCcAJoAnQCZAJsAnQCeAJkAnwCgAKEAnwCiAKAAowCkAKUAowCmAKQApwCoAKkApwCqAKgAqwCsAK0AqwCuAKwArwCwALEArwCyALAAswC0ALUAswC2ALQAtwC4ALkAtwC6ALgAuwC8AL0AuwC+ALwAvwDAAMEAvwDCAMAAwwDCAL8AwwDEAMIAxQDGAMcAxQDIAMYAxwDGAMkAxwDJAMoAxQDHAMsAxQDLAMwAzQDOAM8A0ADNAM8AzQDRAM4A0ADSAM0A0wDOANEA0gDQANQA0wDVAM4A1QDTANYA1QDWANcA0gDUANgA1ADZANgA1ADaANkA2wDZANoA2wDcANkA3ADbAN0A3ADdAN4A3QDfAN4A3QDgAN8A4QDfAOAA4QDiAN8A4gDhAOMA4gDjAOQA4wDlAOQA4wDmAOUA5wDlAOYA5wDoAOUA6ADnAOkA6ADpAOoA6wDsAO0A6wDuAOwA7QDvAOsA8ADsAO4A8QDvAO0A7wDxAPIA8QDtAPMA7ADwAPQA7AD0APUA9ADwAPYA9gD3APQA9gD4APcA+QD3APgA9wD5APoA9wD6APsA+gD5APwA/AD9APoA/AD+AP0A/wD9AP4A/QD/AAAB/QAAAQEBAAH/AAIBAgEDAQABAgEEAQMBBQEDAQQBAwEFAQYBBgEFAQcBAwEGAQgBCQEKAQsBCQEMAQoBDQEOAQ8BDQEQAQ4BEQEQAQ0BEQESARABEwEOARABEwEUAQ4BFQEWARcBFQEYARYBFwEWARkBFwEZARoBFQEXARsBFQEbARwBHQEeAR8BHQEgAR4BIQEgAR0BIQEiASABIwEeASABIwEkAR4BJQEmAScBJQEoASYBJwEmASkBJwEpASoBJQEnASsBJQErASwBLQEuAS8BLQEwAS4BLwEuATEBLwExATIBMwEtAS8BMwE0AS0BNQE2ATcBNQE4ATYBOQE4ATUBOQE6ATgBOwE8AT0BOwE+ATwBPwFAAUEBPwFCAUABQwFEAUUBQwFGAUQBRwFIAUkBRwFKAUgBSwFMAU0BSwFOAUwBTwFQAVEBTwFSAVABUwFUAVUBUwFWAVQBVQFXAVMBVQFYAVcBWQFaAVsBWQFcAVoBXQFeAV8BXQFgAV4BYQFiAWMBYQFkAWIBZQFmAWcBZQFoAWYBaQFmAWgBaQFoAWoBawFsAW0BawFuAWwBbQFvAWsBbQFwAW8BcQFyAXMBcQF0AXIBdQF2AXcBdQF4AXYBeQF6AXsBeQF8AXoBfQF+AX8BfQGAAX4BgQGCAYMBgQGEAYIBhQGGAYcBhQGIAYYBhwGJAYUBhwGKAYkBiwGMAY0BiwGOAYwBjwGQAZEBjwGSAZABkwGUAZUBkwGWAZQBlwGYAZkBlwGaAZgBmwGcAZ0BmwGeAZwBnwGgAaEBnwGiAaABoQGjAZ8BoQGkAaMBpQGmAacBpQGoAaYBqQGqAasBqQGsAaoBrQGuAa8BrQGwAa4BsQGyAbMBsQG0AbIBtQG2AbcBtQG4AbYBuQG6AbsBuQG8AboBvQG+Ab8BvQHAAb4BwQHCAcMBwQHEAcIBxQHGAccBxQHIAcYByQHFAccByQHHAcoBywHMAc0BywHOAcwBzwHQAdEBzwHSAdAB0wHUAdUB0wHWAdQB1wHYAdkB1wHaAdgB2wHcAd0B2wHeAdwB3wHgAeEB3wHiAeAB4wHfAeEB4wHhAeQB5QHmAecB5QHoAeYB6QHqAesB6QHsAeoB7QHuAe8B7QHwAe4B8QHyAfMB8QH0AfIB9QHyAfQB9QH0AfYB9wH4AfkB9wH6AfgB+wH3AfkB+wH5AfwB/QH+Af8B/QEAAv4BAQICAgMCAQIEAgICBQIGAgcCBQIIAgYCCQIKAgsCCQIMAgoCDQIOAg8CDQIQAg4CEQISAhMCEQIUAhICEwIVAhECEwIWAhUCFwIYAhkCFwIaAhgCGwIcAh0CGwIeAhwCHwIgAiECHwIiAiACIwIkAiUCIwImAiQCJwIoAikCJwIqAigCKwIsAi0CKwIuAiwCLwIwAjECLwIyAjACMwI0AjUCMwI2AjQCNwI4AjkCNwI6AjgCOwI8Aj0COwI+AjwCPwJAAkECPwJCAkACQwJEAkUCQwJGAkQC"),
-"material": ExtResource("1_yj6g7"),
+"material": ExtResource("1_4ojac"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 583,
@@ -88,7 +95,7 @@ _surfaces = [{
 "format": 34359742527,
 "index_count": 447,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAgAEAAUAAgAFAAYABgAFAAcACAAAAAIACAACAAYACQADAAAACgAAAAgACgAJAAAABgAHAAsACwAHAAwACwAMAA0ADgAGAAsADgAIAAYADwAJAAoAEAAPAAoADwARAAkAEAAKABIAEgAKAAgAEgAIAA4AEwAQABIAEQAUAAkACQAUAAMAEQAVABQAFAAWAAMAFwAUABUAFAAYABYAFAAXABkAFAAZABgAEwASABoAGgASAA4AGwATABoAGwAaABwAGgAOAB0AHAAaAB0AHQAOAAsAHAAdAB4AHQALAA0AHgAdAA0AHgANAB8AIAAhACIAIAAjACEAIgAkACAAIgAlACQAIgAmACUAIgAnACYAJQAoACQAJQApACgAKgAkACgAKwAoACkAKgAoACwAKgAsAC0AKgAtAC4AKwApAC8ALwAwACsAMQAyACYAMQAzADIALwA0ADAALwA1ADQALwA2ADUANwA1ADYANwA4ADUANAA5ADAAOgAwADkAOgA5ADsANAA8ADkAPQA5ADwAPQA8AD4APgA/AD0AQAA6AEEAQABBAEIAPgBDAEQAPgBEAEUAPgBFAD8ARQBGAD8ARwA/AEYARwBGAEgARQBJAEYASQBKAEYASQBLAEoATABNAE4ATABPAE0AUABRAFIAUABTAFEAVABVAFYAVABXAFUAWABWAFUAWABVAFkAWgBbAFwAWgBdAFsAXgBfAGAAXgBhAF8AYgBjAGQAYgBlAGMAYgBmAGUAYgBnAGYAaABmAGcAaABpAGYAagBrAGwAagBtAGsAbgBvAHAAbgBxAG8AcgBzAHQAcgB1AHMAdgB3AHgAdgB5AHcAdgB4AHoAdgB6AHsAfAB9AH4AfAB/AH0AgACBAIIAgACDAIEAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0AkACRAJIAkACTAJEAlACVAJYAlACXAJUAlACYAJcAlACZAJgAmgCbAJwAmgCdAJsAngCfAKAAngChAJ8AogCjAKQAogClAKMApgClAKIApgCnAKUApwCmAKgAqACmAKkAqQCmAKoAqQCqAKsArACtAK4ArACvAK0AsACvAKwAsACxAK8AsgCxALAAsgCzALEAtAC1ALYAtAC3ALUAuAC3ALQAuAC5ALcAugC5ALgAugC7ALkA"),
-"material": ExtResource("2_ft7as"),
+"material": ExtResource("2_xfcit"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 188,
@@ -99,7 +106,7 @@ _surfaces = [{
 "format": 34359742527,
 "index_count": 444,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAABAAFAAMABQAGAAMABwAFAAQABQAIAAYABwAJAAUACQAIAAUACgAJAAcACAALAAYACgAMAAkADQAMAAoADQAOAAwADAAPAAkACQAPAAgADAAQAA8ACAARAAsADwARAAgAEQASAAsAEAATAA8ADwATABEAEQAUABIAEwAUABEAFAAVABIAFAAWABUAFgAXABUAFgAYABcAGQAWABQAEwAZABQAGgAYABYAGQAaABYAGgAbABgAGwAcABgAGwAdABwAHgAbABoAHgAfABsAIAAeABoAIAAaABkAIAAhAB4AIgAZABMAIgAgABkAEAAiABMAIAAjACEAIgAjACAAIwAkACEAEAAlACIAIgAlACMAEAAmACUAIwAnACQAJQAnACMAJwAoACQAJwApACgAJQAqACcAKgApACcAJgAqACUAKgArACkAJgAsACoALAArACoALAAtACsALgAvADAALgAxAC8AMgAzADQAMgA1ADMAMgA0ADYAMgA2ADcAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQAA+AD0AQAA9AEEAQgBDAEQAQgBFAEMARgBHAEgARgBJAEcASgBLAEwASgBNAEsATABOAEoATwBKAE4ATABQAE4ATwBOAFEAUABSAE4ATwBRAFMATwBTAFQAUQBVAFMAUQBWAFUAUABXAFIAWABSAFcAUABZAFcAWABXAFoAUABbAFkAWgBcAFgAXQBYAFwAWgBeAFwAXwBZAFsAXwBgAFkAYQBfAFsAYQBbAGIAXgBjAFwAXQBcAGQAXgBlAGMAZgBjAGUAXgBnAGUAZgBlAGgAXgBpAGcAXQBkAGoAXQBqAGsAZABsAGoAZABtAGwAbgBnAGkAbgBvAGcAcABuAGkAcABpAHEAaAByAGYAcwBmAHIAaAB0AHIAcwByAHUAdAB2AHIAcwB1AHcAcwB3AHgAdQB5AHcAdQB6AHkAdAB7AHYAewB8AHYAewB9AHwAdAB+AHsAdAB/AH4AgAB+AH8AgACBAH4AggCAAH8AggB/AIMAhACFAIYAhACHAIUAiACJAIoAiACLAIkAjACNAI4AjACPAI0AjACQAI8AjACRAJAAkgCTAJQAkgCVAJMAlgCXAJgAlgCZAJcAlgCaAJkAlgCbAJoAnACaAJsAnACdAJoA"),
-"material": ExtResource("2_sw50w"),
+"material": ExtResource("3_24728"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 158,
@@ -127,14 +134,14 @@ emission = Color(1, 1, 1, 1)
 material = SubResource("StandardMaterial3D_klcbq")
 text = "Researcher
 Janusz Zając"
-font = ExtResource("6_1e74e")
+font = ExtResource("6_imm16")
 font_size = 32
 
 [sub_resource type="TextMesh" id="TextMesh_cxqbm"]
 material = SubResource("StandardMaterial3D_klcbq")
 text = "Site Director
 Octobergine Avo"
-font = ExtResource("6_1e74e")
+font = ExtResource("6_imm16")
 font_size = 32
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cxqbm"]
@@ -149,253 +156,386 @@ size = Vector3(40.7808, 8.40625, 39.1814)
 [sub_resource type="TextMesh" id="TextMesh_wmmhx"]
 material = SubResource("StandardMaterial3D_klcbq")
 text = "ENTRANCE_SUBZONE"
-font = ExtResource("6_1e74e")
+font = ExtResource("6_imm16")
 font_size = 32
 
 [sub_resource type="TextMesh" id="TextMesh_1e74e"]
 material = SubResource("StandardMaterial3D_klcbq")
 text = "LOUNGE"
-font = ExtResource("6_1e74e")
+font = ExtResource("6_imm16")
 font_size = 32
 
 [sub_resource type="TextMesh" id="TextMesh_t6k7u"]
 material = SubResource("StandardMaterial3D_klcbq")
 text = "GATE_A"
-font = ExtResource("6_1e74e")
+font = ExtResource("6_imm16")
 font_size = 32
 
-[node name="sublevel_Entrance_Subzone" type="StaticBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ig11j"]
+size = Vector3(18.6207, 6.99567, 20.3601)
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[sub_resource type="Resource" id="Resource_ig11j"]
+script = ExtResource("4_t6k7u")
+destination_point = "/root/Game/FacilityGenerator/room1_ez/RzElevPoint1"
+down_helper_point = "/root/Game/FacilityGenerator/room1_ez/RzElevPoint2"
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="Resource" id="Resource_kygly"]
+script = ExtResource("4_t6k7u")
+destination_point = "/root/Game/EZ/RzElevPoint2"
+up_helper_point = "/root/Game/EZ/RzElevPoint3"
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b1r8"]
+resource_name = "Wall"
+albedo_texture = ExtResource("6_wmmhx")
+roughness_texture = ExtResource("8_1iicb")
+normal_enabled = true
+normal_texture = ExtResource("7_roeg4")
+uv1_scale = Vector3(3.2, 7.2, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig11j"]
+material = SubResource("StandardMaterial3D_6b1r8")
+size = Vector3(3.2, 7.2, 0.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kygly"]
+data = PackedVector3Array(-1.6, 3.6, 0.125, 1.6, 3.6, 0.125, -1.6, -3.6, 0.125, 1.6, 3.6, 0.125, 1.6, -3.6, 0.125, -1.6, -3.6, 0.125, 1.6, 3.6, -0.125, -1.6, 3.6, -0.125, 1.6, -3.6, -0.125, -1.6, 3.6, -0.125, -1.6, -3.6, -0.125, 1.6, -3.6, -0.125, 1.6, 3.6, 0.125, 1.6, 3.6, -0.125, 1.6, -3.6, 0.125, 1.6, 3.6, -0.125, 1.6, -3.6, -0.125, 1.6, -3.6, 0.125, -1.6, 3.6, -0.125, -1.6, 3.6, 0.125, -1.6, -3.6, -0.125, -1.6, 3.6, 0.125, -1.6, -3.6, 0.125, -1.6, -3.6, -0.125, 1.6, 3.6, 0.125, -1.6, 3.6, 0.125, 1.6, 3.6, -0.125, -1.6, 3.6, 0.125, -1.6, 3.6, -0.125, 1.6, 3.6, -0.125, -1.6, -3.6, 0.125, 1.6, -3.6, 0.125, -1.6, -3.6, -0.125, 1.6, -3.6, 0.125, 1.6, -3.6, -0.125, -1.6, -3.6, -0.125)
+
+[sub_resource type="Animation" id="Animation_wnfbl"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.44971, 2.34732, -1.6)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.45001, 2.34732, 1.6)
+
+[sub_resource type="Animation" id="Animation_guktx"]
+resource_name = "door_open"
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D3")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -4.66053, 2.34732, -1.6, 1, 1, -4.66053, 2.34732, -4.71582)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D4")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -4.68719, 2.34732, 1.6, 1, 1, -4.68719, 2.34732, 4.71981)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_018lr"]
+_data = {
+&"RESET": SubResource("Animation_wnfbl"),
+&"door_open": SubResource("Animation_guktx")
+}
+
+[node name="EZ" type="Node3D"]
+
+[node name="sublevel_Entrance_Subzone" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99975586, 0)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="sublevel_Entrance_Subzone"]
 navigation_mesh = SubResource("NavigationMesh_yj6g7")
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
+[node name="Cube" type="MeshInstance3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4465, 14.0874, 0)
 visibility_range_end = 144.0
 mesh = SubResource("ArrayMesh_fwwpm")
 skeleton = NodePath("")
 
-[node name="Table" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.327, -0.0917847, -20.3354)
 
-[node name="Table2" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table2" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.327, -0.0917847, -9.57572)
 
-[node name="Table3" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table3" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.9506, -0.0917847, -9.57572)
 
-[node name="Table4" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table4" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.9506, -0.0917847, -20.3354)
 
-[node name="Table5" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table5" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5743, -0.0917847, -20.3354)
 
-[node name="Table6" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table6" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5743, -0.0917847, -9.2683)
 
-[node name="Table7" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table7" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5743, -0.0917847, 7.33241)
 
-[node name="Table8" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table8" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 25.5743, -0.0917847, 17.4773)
 
-[node name="Table9" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table9" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.1132, -0.0917847, 17.4773)
 
-[node name="Table10" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table10" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 35.1132, -0.0917847, 7.0786)
 
-[node name="Table11" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table11" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.0776, -0.0917847, 7.0786)
 
-[node name="Table12" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table12" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 44.0776, -0.0917847, 17.6566)
 
-[node name="ProtagonistROffice" type="Node3D" parent="NavigationRegion3D"]
+[node name="ProtagonistROffice" type="Node3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.634, 2.43594, -15.2985)
 
-[node name="Table" parent="NavigationRegion3D/ProtagonistROffice" instance=ExtResource("4_ft7as")]
+[node name="Table" parent="sublevel_Entrance_Subzone/NavigationRegion3D/ProtagonistROffice" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.74937, -2.47104, -1.16241)
 
-[node name="laptop" parent="NavigationRegion3D/ProtagonistROffice" instance=ExtResource("5_cxqbm")]
+[node name="laptop" parent="sublevel_Entrance_Subzone/NavigationRegion3D/ProtagonistROffice" instance=ExtResource("5_w6082")]
 transform = Transform3D(-0.999734, 0, -0.0230713, 0, 1, 0, 0.0230713, 0, -0.999734, 4.29808, -1.47104, -1.67947)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/ProtagonistROffice"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/ProtagonistROffice"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 1.97311, -7.59466)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_klcbq")
 
-[node name="Couch" parent="NavigationRegion3D/ProtagonistROffice" instance=ExtResource("7_t6k7u")]
+[node name="Couch" parent="sublevel_Entrance_Subzone/NavigationRegion3D/ProtagonistROffice" instance=ExtResource("7_webay")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.92241, -3.4907, -6.07398)
 
-[node name="SiteDirectorLOffice" type="Node3D" parent="NavigationRegion3D"]
+[node name="SiteDirectorLOffice" type="Node3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 108.005, 2.43594, 14.8029)
 
-[node name="Table" parent="NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("4_ft7as")]
+[node name="Table" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85924, -2.52772, 0.280903)
 
-[node name="Couch" parent="NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("7_t6k7u")]
+[node name="Couch" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("7_webay")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.68883, -3.52413, -4.80778)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/SiteDirectorLOffice"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SiteDirectorLOffice"]
 transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, -0.370514, 1.97311, 8.30676)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_cxqbm")
 skeleton = NodePath("../../ProtagonistROffice")
 
-[node name="EasterEgg" type="Label3D" parent="NavigationRegion3D/SiteDirectorLOffice"]
+[node name="EasterEgg" type="Label3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SiteDirectorLOffice"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 4.37328, 1.46756, -8.51491)
 visibility_range_end = 24.0
 text = "Octobergine Avo is Internal Eternal character.
 But in this world, she is a SCP Site Director."
 
-[node name="MetrowagonAnkaToy" parent="NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("8_klcbq")]
+[node name="MetrowagonAnkaToy" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SiteDirectorLOffice" instance=ExtResource("8_kqusu")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.79243, -3.40666, -7.89999)
 
-[node name="SpawnableOffices" type="Node3D" parent="NavigationRegion3D"]
-script = ExtResource("8_1e74e")
+[node name="SpawnableOffices" type="Node3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D"]
+script = ExtResource("9_ru7rl")
 
-[node name="ROfficeSpawn1" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="ROfficeSpawn1" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.187, 2.43594, -15.2985)
 
-[node name="LOfficeSpawn1" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="LOfficeSpawn1" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.097, 2.43594, 14.8029)
 
-[node name="ROfficeSpawn2" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="ROfficeSpawn2" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.74, 2.43594, -15.2985)
 
-[node name="LOfficeSpawn2" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="LOfficeSpawn2" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.65, 2.43594, 14.8029)
 
-[node name="ROfficeSpawn3" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="ROfficeSpawn3" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.168, 2.43594, -15.2985)
 
-[node name="LOfficeSpawn3" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="LOfficeSpawn3" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.078, 2.43594, 14.8029)
 
-[node name="ROfficeSpawn4" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="ROfficeSpawn4" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 189.845, 2.43594, -15.2985)
 
-[node name="LOfficeSpawn4" type="Marker3D" parent="NavigationRegion3D/SpawnableOffices"]
+[node name="LOfficeSpawn4" type="Marker3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/SpawnableOffices"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 189.755, 2.43594, 14.8029)
 
-[node name="Table13" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table13" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 68.0985, -0.0917847, -76.6453)
 
-[node name="Table14" parent="NavigationRegion3D" instance=ExtResource("4_ft7as")]
+[node name="Table14" parent="sublevel_Entrance_Subzone/NavigationRegion3D" instance=ExtResource("4_rn1l8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 68.0985, -0.0917847, -91.476)
 
-[node name="FinishGame" type="Area3D" parent="NavigationRegion3D"]
+[node name="FinishGame" type="Area3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.0322, 0, -84.266)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("6_fwwpm")
+script = ExtResource("10_g7qfe")
 detect_scp347_with_mtf = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/FinishGame"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sublevel_Entrance_Subzone/NavigationRegion3D/FinishGame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.354721, 5.38397, -2.11343)
 shape = SubResource("BoxShape3D_cxqbm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sublevel_Entrance_Subzone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4465, 14.0874, 0)
 shape = SubResource("ConcavePolygonShape3D_ft7as")
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
+[node name="LightmapGI" type="LightmapGI" parent="sublevel_Entrance_Subzone"]
 quality = 0
 bounces = 1
 bounce_indirect_energy = 2.0
 interior = true
 texel_scale = 0.25
 environment_custom_color = Color(0.481789, 0.481789, 0.481789, 1)
-light_data = ExtResource("5_qal2s")
+light_data = ExtResource("11_r4cte")
 
-[node name="FinishGame" type="Area3D" parent="."]
+[node name="FinishGame" type="Area3D" parent="sublevel_Entrance_Subzone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.87, 0, -96.0883)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("6_fwwpm")
+script = ExtResource("10_g7qfe")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FinishGame"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sublevel_Entrance_Subzone/FinishGame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.183006, 2.14624, 10.1644)
 shape = SubResource("BoxShape3D_ybhhf")
 
-[node name="entityspawn" type="Marker3D" parent="." groups=["PlayerSpawn"]]
+[node name="entityspawn" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["PlayerSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.544, -1.24029, -15.9298)
 
-[node name="entityspawn9" type="Marker3D" parent="." groups=["SiteDirectorSpawn"]]
+[node name="entityspawn9" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["SiteDirectorSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.085, -1.24029, 9.74139)
 
-[node name="entityspawn2" type="Marker3D" parent="." groups=["ScientistSpawn"]]
+[node name="entityspawn2" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["ScientistSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5964, -1.24029, -12.7232)
 
-[node name="entityspawn3" type="Marker3D" parent="." groups=["ScientistSpawn"]]
+[node name="entityspawn3" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["ScientistSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.3066, -1.24029, 12.2886)
 
-[node name="entityspawn4" type="Marker3D" parent="." groups=["ScientistSpawn"]]
+[node name="entityspawn4" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["ScientistSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3946, -1.24029, -1.10435)
 
-[node name="entityspawn5" type="Marker3D" parent="." groups=["ScientistSpawn"]]
+[node name="entityspawn5" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["ScientistSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3946, -1.24029, 12.8957)
 
-[node name="entityspawn6" type="Marker3D" parent="." groups=["ScientistSpawn"]]
+[node name="entityspawn6" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["ScientistSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.7757, -1.24029, -13.7431)
 
-[node name="entityspawn7" type="Marker3D" parent="." groups=["GuardSpawn"]]
+[node name="entityspawn7" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["GuardSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76.8552, -1.24029, -34.1601)
 
-[node name="entityspawn8" type="Marker3D" parent="." groups=["GuardSpawn"]]
+[node name="entityspawn8" type="Marker3D" parent="sublevel_Entrance_Subzone" groups=["GuardSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1936, -1.24029, -18.9156)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="sublevel_Entrance_Subzone"]
 transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 23.9929, 6.09902, -28.8475)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_wmmhx")
 skeleton = NodePath("../NavigationRegion3D/ProtagonistROffice")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="sublevel_Entrance_Subzone"]
 transform = Transform3D(7.54946, 0, 0, 0, 7.54946, 0, 0, 0, 7.54946, 24.5671, 2.42604, -28.8475)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_1e74e")
 skeleton = NodePath("../NavigationRegion3D/ProtagonistROffice")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="sublevel_Entrance_Subzone"]
 transform = Transform3D(-5.72236e-07, 0, -13.0912, 0, 13.0912, 0, 13.0912, 0, -5.72236e-07, 97.9448, 5.81494, -86.7208)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_t6k7u")
 skeleton = NodePath("../NavigationRegion3D/ProtagonistROffice")
 
-[node name="SCPCage_open" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.677, 0.486295, -73.3271)
 
-[node name="SCPCage_open2" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open2" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.4171, 0.486296, -73.0511)
 
-[node name="SCPCage_open3" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open3" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94.9427, 0.486295, -77.0467)
 
-[node name="SCPCage_open4" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open4" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.3126, 0.486295, -77.7842)
 
-[node name="SCPCage_open5" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open5" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.1227, 0.486295, -80.2961)
 
-[node name="SCPCage_open6" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open6" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.3086, 0.486295, -81.3922)
 
-[node name="SCPCage_open7" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open7" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.5828, 0.486295, -83.4092)
 
-[node name="SCPCage_open8" parent="." instance=ExtResource("11_t6k7u")]
+[node name="SCPCage_open8" parent="sublevel_Entrance_Subzone" instance=ExtResource("12_6k8ah")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.2241, 0.486295, -83.7906)
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="sublevel_Entrance_Subzone" groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.5309, 13.9631, -38.4933)
 max_distance = 128.0
 size = Vector3(204.375, 30.6632, 134.824)
 origin_offset = Vector3(-70.955, -11.535, 38.465)
 box_projection = true
 
-[connection signal="body_entered" from="NavigationRegion3D/FinishGame" to="NavigationRegion3D/FinishGame" method="_on_body_entered"]
-[connection signal="body_exited" from="NavigationRegion3D/FinishGame" to="NavigationRegion3D/FinishGame" method="_on_body_exited"]
-[connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
-[connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]
+[node name="ElevatorTrigger2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97978, 131.0245, -0.0206722)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_cxqbm")
+elevator_path = NodePath("../elevator")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63234, -127.664154, 0.0010985099)
+shape = SubResource("BoxShape3D_ig11j")
+
+[node name="elevator" parent="." instance=ExtResource("3_1e74e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97978, 3.370758, -0.0206722)
+floors = Array[ExtResource("4_t6k7u")]([SubResource("Resource_ig11j"), SubResource("Resource_kygly")])
+elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/room1_ez/ElevatorDoors/Down", "/root/Game/EZ/Up")
+current_floor = 1
+
+[node name="RzElevPoint2" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.97978, 3.370758, -0.0206722)
+
+[node name="RzElevPoint3" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.98, -32, -0.021)
+
+[node name="Up" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 128.7825, 0)
+script = ExtResource("5_klcbq")
+can_open = false
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Up"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.44971, 2.34732, -1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Up/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Up/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Up"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.45001, 2.34732, 1.6)
+visibility_range_end = 64.0
+mesh = SubResource("BoxMesh_ig11j")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Up/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Up/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_kygly")
+
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="Up"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.32038, -124.791016, 0)
+max_distance = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Up"]
+libraries = {
+&"": SubResource("AnimationLibrary_018lr")
+}
+
+[connection signal="body_entered" from="sublevel_Entrance_Subzone/NavigationRegion3D/FinishGame" to="sublevel_Entrance_Subzone/NavigationRegion3D/FinishGame" method="_on_body_entered"]
+[connection signal="body_exited" from="sublevel_Entrance_Subzone/NavigationRegion3D/FinishGame" to="sublevel_Entrance_Subzone/NavigationRegion3D/FinishGame" method="_on_body_exited"]
+[connection signal="body_entered" from="sublevel_Entrance_Subzone/FinishGame" to="sublevel_Entrance_Subzone/FinishGame" method="_on_body_entered"]
+[connection signal="body_exited" from="sublevel_Entrance_Subzone/FinishGame" to="sublevel_Entrance_Subzone/FinishGame" method="_on_body_exited"]
+[connection signal="body_entered" from="ElevatorTrigger2" to="ElevatorTrigger2" method="_on_body_entered"]
