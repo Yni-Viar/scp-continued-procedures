@@ -11,18 +11,15 @@
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
 
 ## v5.0.0 (Expansion update part 2, release will be probably before 2026)
-### SCP-938 (done)
-- [x] SCP-938: Puppet Logic (needs more testing)
-- [x] SCP-938: Task (need to passability test)
-- [x] SCP-938: VFX
-- [x] SCP-938: Containment Sublevel + Lantern item
+- [x] SCP-938
+- [x] SCP-938 Containment Sublevel + Lantern item
 ### General rework and map expansion (mostly done, feature freeze)
 #### Not started
 - [ ] Add ragdolls
 #### Working on
 - [ ] Expose Gate A
-- [ ] Surface Zone for Gate B and C (in progress, SZ and elevators will be borrowed from pop_pop_icard).
 #### Done
+- [x] Surface Zone for Gate B and C (in progress, SZ and elevators will be borrowed from pop_pop_icard).
 - [x] Expose Gate B
 - [x] CB-styled doors (for elevators)
 - [x] Remake Gate C room
@@ -41,6 +38,7 @@
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 - [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
 ## Other changes and bugfixes (mostly done, accepting new bugs)
+- [ ] Better organize Main Menu
 - [ ] Add debug console (in progress)
 - [x] Add more Scientists spawns in Research Zone
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
