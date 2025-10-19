@@ -51,7 +51,7 @@ msgstr ""
 "(She is marked by the red radar, because this woman is invisible)."
 
 msgid "CASUAL_MODE"
-msgstr "Casual mode"
+msgstr "Play"
 
 msgid "STORY_MODE"
 msgstr "Story mode"

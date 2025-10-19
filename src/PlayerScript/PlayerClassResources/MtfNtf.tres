@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="PuppetClass" load_steps=3 format=3 uid="uid://kt10qm1d2rht"]
+[gd_resource type="Resource" script_class="PuppetClass" load_steps=4 format=3 uid="uid://kt10qm1d2rht"]
 
 [ext_resource type="PackedScene" uid="uid://dse10q2d85240" path="res://PlayerScript/PlayerClassPrefab/MTF.tscn" id="1_fq7lc"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="1_qg7uu"]
+[ext_resource type="PackedScene" uid="uid://dtphgs8i61fd5" path="res://PlayerScript/PlayerClassRagdoll/MTF.tscn" id="2_7qjna"]
 
 [resource]
 script = ExtResource("1_qg7uu")
@@ -19,3 +20,4 @@ health = Array[float]([100.0, 10.0, 50.0, 50.0])
 team = 1
 enable_avoidance = false
 spawn_on_start = false
+ragdoll_prefab = ExtResource("2_7qjna")

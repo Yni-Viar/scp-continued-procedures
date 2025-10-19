@@ -14,12 +14,11 @@
 - [x] SCP-938
 - [x] SCP-938 Containment Sublevel + Lantern item
 ### General rework and map expansion (mostly done, feature freeze)
-#### Not started
-- [ ] Add ragdolls
 #### Working on
 - [ ] Expose Gate A
 #### Done
-- [x] Surface Zone for Gate B and C (in progress, SZ and elevators will be borrowed from pop_pop_icard).
+- [x] Add ragdolls to humans (except SCP-347 and Site Director)
+- [x] Surface Zone for Gate B and C (SZ and elevators are borrowed from pop_pop_icard).
 - [x] Expose Gate B
 - [x] CB-styled doors (for elevators)
 - [x] Remake Gate C room
@@ -36,10 +35,10 @@
 - [x] Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
 - [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
 - [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
-- [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities[.]org/blog_september-2025-news, remove [])
+- [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities.org/blog_september-2025-news)
 ## Other changes and bugfixes (mostly done, accepting new bugs)
-- [ ] Better organize Main Menu
-- [ ] Add debug console (in progress)
+- [x] Add debug console
+- [x] Better organize Main Menu
 - [x] Add more Scientists spawns in Research Zone
 - [x] Enable SCP-023 in Safe mode (through it will just walk around).
 - [x] You cannot enter WC now (because of possible *strange situations*)

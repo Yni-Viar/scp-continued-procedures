@@ -19,6 +19,9 @@ var dragged: bool = false
 		#if Input.is_action_pressed("click"):
 			#
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_released("debug_console"):
+		$InGameConsole.visible = !$InGameConsole.visible
 
 #func _on_seed_text_changed(new_text):
 	#if new_text != "":

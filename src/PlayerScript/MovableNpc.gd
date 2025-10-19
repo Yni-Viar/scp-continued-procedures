@@ -201,6 +201,10 @@ func health_manage(health_to_add: float, health_type: int = 0):
 		current_health[health_type] = health[health_type]
 	
 	if current_health[health_type] <= 0:
+		if puppet_class.ragdoll_prefab != null:
+			var ragdoll: Node3D = puppet_class.ragdoll_prefab.duplicate().instantiate()
+			ragdoll.global_position = global_position
+			get_parent().add_child(ragdoll)
 		# Remove one live
 		queue_free()
 

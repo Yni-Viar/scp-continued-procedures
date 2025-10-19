@@ -60,8 +60,8 @@ func _physics_process(delta):
 			global_position = global_position.move_toward(waypoints[counter][0], speed * delta)
 			if !global_rotation.is_equal_approx(waypoints[counter][1]):
 				#if default_rotation.is_equal_approx(Vector3.ZERO):
-				#var rotation_result = -(TAU - waypoints[counter][1].y) if waypoints[counter][1].y >= PI else waypoints[counter][1].y
-				global_rotation = global_rotation.move_toward(waypoints[counter][1], rotation_speed * delta)# if global_rotation.y < rotation_result else -rotation_speed * delta)
+				var rotation_result = -(TAU - waypoints[counter][1].y) if waypoints[counter][1].y >= PI else waypoints[counter][1].y
+				global_rotation = global_rotation.move_toward(Vector3(0, rotation_result, 0), rotation_speed * delta)# if global_rotation.y < rotation_result else -rotation_speed * delta)
 				#else:
 					#var radian_rotation = waypoints[counter][1].y + default_rotation.y
 					#var rotation_result = -(TAU - radian_rotation) if radian_rotation >= PI else radian_rotation
@@ -147,7 +147,7 @@ func elevator_move(p_pass_floor: bool, first : bool):
 		#check if lower point of next floor exist
 		if (floors[floor].down_helper_point != ""):
 			waypoints.append([get_node(floors[floor].down_helper_point).global_position, get_node(floors[floor].down_helper_point).global_rotation])
-		print(str(get_node(floors[floor].destination_point).get_path()) + str(get_node(floors[floor].destination_point).global_rotation))
+		
 		waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
 		current_floor = floor
 	elif (target_floor > current_floor):
@@ -160,7 +160,7 @@ func elevator_move(p_pass_floor: bool, first : bool):
 		if (floors[floor].up_helper_point != ""):
 			waypoints.append([get_node(floors[floor].up_helper_point).global_position, get_node(floors[floor].up_helper_point).global_rotation])
 		waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
-		print(str(get_node(floors[floor].destination_point).get_path()) + str(get_node(floors[floor].destination_point).global_rotation))
+		
 		current_floor = floor
 	is_moving = true
 	if !$Move.playing:

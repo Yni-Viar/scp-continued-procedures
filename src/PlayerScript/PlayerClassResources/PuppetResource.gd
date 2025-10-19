@@ -36,3 +36,4 @@ enum InteractAction {NONE, FOLLOW, SPECIAL}
 @export_flags_3d_navigation var puppet_navigation_layers: int = 1
 ## Enables Inverse Kinematics (only for humans and SCP-347)
 @export var enable_ik: bool = true
+@export var ragdoll_prefab: PackedScene

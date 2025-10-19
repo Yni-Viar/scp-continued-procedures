@@ -73,6 +73,7 @@ script = ExtResource("1_57mr0")
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.106224, 0)
+visibility_range_end = 64.0
 amount = 16
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_7wcrn")
@@ -81,6 +82,7 @@ draw_pass_1 = SubResource("QuadMesh_rerev")
 [node name="GPUParticlesAttractorSphere3D" type="GPUParticlesAttractorSphere3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visibility_range_end = 64.0
 mesh = SubResource("SphereMesh_0jgng")
 
 [node name="TriggerArea" type="Area3D" parent="."]
@@ -102,6 +104,7 @@ visible = false
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="AttackTrigger"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -0.127843, 1.0156)
+visibility_range_end = 64.0
 amount = 1
 mesh = SubResource("QuadMesh_co428")
 gravity = Vector3(0, 0, 0)

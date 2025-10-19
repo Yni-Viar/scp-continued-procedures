@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="PuppetClass" load_steps=3 format=3 uid="uid://gy7ixps5jwwq"]
+[gd_resource type="Resource" script_class="PuppetClass" load_steps=4 format=3 uid="uid://gy7ixps5jwwq"]
 
 [ext_resource type="PackedScene" uid="uid://cskradjeycmsa" path="res://PlayerScript/PlayerClassPrefab/Scp347.tscn" id="1_hvvu0"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="2_feh0c"]
+[ext_resource type="PackedScene" uid="uid://djohnqatfc8ec" path="res://PlayerScript/PlayerClassRagdoll/Default.tscn" id="2_uv2pt"]
 
 [resource]
 script = ExtResource("2_feh0c")
@@ -18,3 +19,4 @@ footstep_sounds = {
 apply_height_bugfix = false
 health = Array[float]([100.0, 10.0, 50.0, 50.0])
 enable_avoidance = false
+ragdoll_prefab = ExtResource("2_uv2pt")

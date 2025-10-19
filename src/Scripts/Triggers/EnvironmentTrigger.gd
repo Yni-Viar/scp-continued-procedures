@@ -5,8 +5,12 @@ extends Area3D
 
 
 func _on_body_entered(body: Node3D) -> void:
-	get_tree().root.get_node("Game/WorldEnvironment").environment = env
+	if body is MovableNpc:
+		if body.is_player:
+			get_tree().root.get_node("Game/WorldEnvironment").environment = env
 
 
 func _on_body_exited(body: Node3D) -> void:
-	get_tree().root.get_node("Game/WorldEnvironment").environment = load("res://Assets/Environment/Default.tres")
+	if body is MovableNpc:
+		if body.is_player:
+			get_tree().root.get_node("Game/WorldEnvironment").environment = load("res://Assets/Environment/Default.tres")

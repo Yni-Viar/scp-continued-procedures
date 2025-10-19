@@ -38,5 +38,6 @@ func attack():
 		attack_update_timer -= get_physics_process_delta_time()
 	else:
 		var test = get_parent().get_parent().follow_target
-		get_node(test).health_manage(-70.0)
+		if test != null:
+			get_node(test).health_manage(-70.0)
 		attack_update_timer = 0.625
