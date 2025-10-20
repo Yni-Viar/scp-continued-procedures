@@ -7,44 +7,43 @@
 - [ ] SCP-178 (3d model is ready)
 - [ ] SCP-458 (probably will be implemented in 5.1)
 
-### v5.1.0 plan (last version before developing 10.x)
+## v5.1.0
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
 
-## v5.0.0 (Expansion update part 2, release will be probably before 2026)
-- [x] SCP-938
-- [x] SCP-938 Containment Sublevel + Lantern item
-### General rework and map expansion (mostly done, feature freeze)
-#### Working on
-- [ ] Expose Gate A
-#### Done
-- [x] Add ragdolls to humans (except SCP-347 and Site Director)
-- [x] Surface Zone for Gate B and C (SZ and elevators are borrowed from pop_pop_icard).
-- [x] Expose Gate B
-- [x] CB-styled doors (for elevators)
-- [x] Remake Gate C room
-- [x] Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
-- [x] Camera Rework: Add Third-person view + toggle API and remove scroll zoom
-- [x] Keybind settings (FINALLY DONE!!!)
-- [x] Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency
-- [x] Rework item usage to a safe method caller
-- [x] Add hunger and thirst HP layers to humans
-- [x] Add props to Class-D room
-- [x] Add Settings to Main Menu
-- [x] Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)
-- [x] Moved to POT translation file instead of CSV, making translation to other languages easier.
-- [x] Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
-- [x] Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
-- [x] SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
-- [x] Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities.org/blog_september-2025-news)
-## Other changes and bugfixes (mostly done, accepting new bugs)
-- [x] Add debug console
-- [x] Better organize Main Menu
-- [x] Add more Scientists spawns in Research Zone
-- [x] Enable SCP-023 in Safe mode (through it will just walk around).
-- [x] You cannot enter WC now (because of possible *strange situations*)
-- [x] Removed old lighting hack from non-lightmap era.
-- [x] Removed time scale after finish game
-- [x] Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
+## v5.0.0 (Expansion update part 2, release will be in October 2025)
+### New SCP - SCP-938 with Containment Sublevel
+- Lantern item
+### New features
+- Expose Gate A
+- Add ragdolls to humans (except SCP-347 and Site Director)
+- Surface Zone for Gate B and C (SZ and elevators are borrowed from pop_pop_icard).
+- Expose Gate B
+- CB-styled doors (for elevators)
+- Remake Gate C room
+- Camera Rework: Enable hotkeys for moving - looks like, that camera rotation is not so easy.
+- Camera Rework: Add Third-person view + toggle API and remove scroll zoom
+- Keybind settings (FINALLY DONE!!!)
+- Add "real" weapon to Mobile Task Force, Agents and Chaos Insurgency
+- Rework item usage to a safe method caller
+- Add hunger and thirst HP layers to humans (currently unused)
+- Add props to Class-D room
+- Add Settings to Main Menu
+- Apply Glow and ReflectionProbe for all platforms (previously, Web and Android platforms had this setting disabled)
+- Moved to POT translation file instead of CSV, making translation to other languages easier.
+- Added special interact support for NPC ~~(you can see this new system with SCP-023 - click on it to repair it's eyes).~~ Also removed `automatic` flag.
+- Moved Inventory to Puppet from Game UI - separated inventories are good for future multiplayer
+- SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
+- Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities.org/blog_september-2025-news)
+### General fixes and small enhancements
+- Inventory button is now hidden, if there is no touchscreen (click Tab buttton to open your inventory)
+- Add debug console
+- Better organize Main Menu
+- Add more Scientists spawns in Research Zone
+- Enable SCP-023 in Safe mode (through it will just walk around).
+- You cannot enter WC now (because of possible *strange situations*)
+- Removed old lighting hack from non-lightmap era.
+- Removed time scale after finish game
+- Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
 
 ## v4.3.0 **(⚠️ Last version, that natively supports Windows 7-8.0!!!)**
 

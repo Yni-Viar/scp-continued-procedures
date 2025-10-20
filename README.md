@@ -1,11 +1,5 @@
 # SCP: Containment Procedures (Classic Reborn)
 
-## ⚠️ Deprecation notice
-
-v.5.x.x will be the last Classic Reborn version. v10.x.x (instead of 6.x.x) will be likely rewritten to C++ due to addon subsystem and will be moved to a new repo.
-
-Subsystem of the 5.x.x will release as separate platform under MIT License (and remove any SCP notices).
-
 ## About
 
 Do your daily job at Site-[REDACTED].

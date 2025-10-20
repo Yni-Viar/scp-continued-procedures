@@ -8,6 +8,7 @@
 
 [node name="Settings" type="Window"]
 auto_translate_mode = 1
+oversampling_override = 1.0
 title = "Settings"
 initial_position = 2
 size = Vector2i(800, 480)
@@ -129,6 +130,14 @@ text = "TOGGLE_VIEW_MODE"
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
+[node name="ILabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "INVENTORY"
+
+[node name="IButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
 [connection signal="close_requested" from="." to="." method="_on_close_requested"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/Glow" to="ScrollContainer/SettingsUI" method="_on_glow_toggled"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/BasicReflection" to="ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
@@ -138,3 +147,4 @@ layout_mode = 2
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRLButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crl_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRRButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crr_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/TVMButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_tvm_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/IButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_i_button_pressed"]

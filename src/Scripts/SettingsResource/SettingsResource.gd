@@ -29,5 +29,6 @@ enum InputMethod {KB, MB, JP}
 	"click": [InputMethod.MB, MOUSE_BUTTON_LEFT],
 	"camera_rotate_left": [InputMethod.KB, KEY_A],
 	"camera_rotate_right": [InputMethod.KB, KEY_D],
-	"toggle_mode": [InputMethod.KB, KEY_SPACE]
+	"toggle_mode": [InputMethod.KB, KEY_SPACE],
+	"inventory": [InputMethod.KB, KEY_TAB]
 }

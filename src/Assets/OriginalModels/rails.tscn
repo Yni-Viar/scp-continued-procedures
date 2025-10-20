@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt3vlnw0vlemb"]
+
+[ext_resource type="PackedScene" uid="uid://cih1gdov7o4ew" path="res://Assets/OriginalModels/Rails/Rails.gltf" id="1_3qwjh"]
+[ext_resource type="ArrayMesh" uid="uid://bn2fp7l7asec2" path="res://Assets/Meshes/rails.tres" id="2_23m6p"]
+
+[node name="Rails" instance=ExtResource("1_3qwjh")]
+
+[node name="Cube" parent="." index="0"]
+mesh = ExtResource("2_23m6p")

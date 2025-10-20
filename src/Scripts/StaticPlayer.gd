@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 		if $Head/Camera3D.position.is_equal_approx(to_pos):
 			transition = NodePath()
 	if Input.is_action_just_pressed("toggle_mode"):
-		toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 < CameraMode.SIZE else 1)
+		toggle_switcher()
 	rotate_player_by_key(Vector2i(int(Input.is_action_just_pressed("camera_rotate_right")) - int(Input.is_action_just_pressed("camera_rotate_left")), 0))
 	if !target_puppet_path.is_empty():
 		if get_node_or_null(target_puppet_path) == null:
@@ -154,6 +154,9 @@ func rotate_player_by_key(direction: Vector2i):
 	var y_rotation = clamp(y_dir, -30, 30)
 	$Head.rotate_object_local(Vector3.RIGHT, deg_to_rad(y_rotation))
 	$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
+
+func toggle_switcher():
+	toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 < CameraMode.SIZE else 1)
 
 func toggle_mode(mode: int):
 	if mode == 0 || mode >= CameraMode.SIZE:

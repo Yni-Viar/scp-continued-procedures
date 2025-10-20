@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://b3xwcegffpg1y"]
+[gd_scene load_steps=8 format=3 uid="uid://b3xwcegffpg1y"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_f2oo0"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="2_tyq66"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="3_t0ny7"]
-[ext_resource type="PackedScene" uid="uid://ck7np8nu8h0l" path="res://Assets/OriginalModels/ScientistsOfficeProp/Yni/train_toy.tscn" id="4_6wjd1"]
 [ext_resource type="PackedScene" uid="uid://d4issmtwtpowq" path="res://Assets/ExternalModels/couch.tscn" id="5_k7j1g"]
 [ext_resource type="PackedScene" uid="uid://bk7tgbs0pdha4" path="res://Assets/OriginalModels/OmnidotPlush.tscn" id="6_tyq66"]
 
@@ -30,9 +29,6 @@ transform = Transform3D(0.999734, 0, 0.0230714, 0, 1, 0, -0.0230714, 0, 0.999734
 transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 0.347152, 1.97311, 8.08066)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_4lnpe")
-
-[node name="MetrowagonAnkaToy" parent="." instance=ExtResource("4_6wjd1")]
-transform = Transform3D(0.815613, 0, 0.578598, 0, 1, 0, -0.578598, 0, 0.815613, 8.21813, -2.14551, -5.16687)
 
 [node name="Couch" parent="." instance=ExtResource("5_k7j1g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75699, -3.46285, -3.36389)

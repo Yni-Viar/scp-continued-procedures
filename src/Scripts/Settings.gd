@@ -9,7 +9,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "2.0.0"
+const DATA_COMPATIBILITY: String = "5.0.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -82,11 +82,11 @@ func set_keybind(action_name: String, key_type: int, key: int):
 	match key_type:
 		0:
 			var event: InputEventKey = InputEventKey.new()
-			event.physical_keycode = key
+			event.physical_keycode = key as Key
 			InputMap.action_add_event(action_name, event)
 		1:
 			var event: InputEventMouseButton = InputEventMouseButton.new()
-			event.button_index = key
+			event.button_index = key as MouseButton
 			InputMap.action_add_event(action_name, event)
 		2:
 			print("Gamepad support is not implemented.")

@@ -8,9 +8,11 @@ var input_amount: Dictionary[int, Vector2] = {}
 var dragged: bool = false
 
 # Called when the node enters the scene tree for the first time.
-#func _ready():
-	#pass
-#
+func _ready():
+	if !Settings.touchscreen:
+		$HBoxContainer/InventoryButton.hide()
+		$HBoxContainer/SwitchCameraButton.hide()
+
 #
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _physics_process(delta):
@@ -22,6 +24,8 @@ var dragged: bool = false
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("debug_console"):
 		$InGameConsole.visible = !$InGameConsole.visible
+	if event.is_action_released("inventory"):
+		_on_inventory_button_pressed()
 
 #func _on_seed_text_changed(new_text):
 	#if new_text != "":
@@ -152,3 +156,7 @@ func _on_elevator_button_pressed() -> void:
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").hide()
 	$Scp914Panel.hide()
 	$ElevatorMode.visible = !$ElevatorMode.visible
+
+
+func _on_switch_camera_button_pressed() -> void:
+	get_tree().root.get_node("Game/StaticPlayer").toggle_switcher()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=45 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -19,8 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
 [ext_resource type="Texture2D" uid="uid://bsdsboenf6un3" path="res://Assets/HUD/Touch/inventory.png" id="15_8r6kd"]
 [ext_resource type="Theme" uid="uid://wed0ey45xt0t" path="res://UITheme_Elevator.tres" id="16_i4lct"]
+[ext_resource type="Texture2D" uid="uid://c6w4f0ei72n5d" path="res://Assets/HUD/Touch/switch_camera.png" id="16_jn8rg"]
 [ext_resource type="Texture2D" uid="uid://cuc1gixnu6inj" path="res://Assets/HUD/Touch/inventory_click.png" id="16_tfod6"]
 [ext_resource type="Texture2D" uid="uid://bru20wcu484vo" path="res://Assets/HUD/Touch/inventory_disabled.png" id="17_rajel"]
+[ext_resource type="Texture2D" uid="uid://di6m00oomj7mr" path="res://Assets/HUD/Touch/switch_camera_click.png" id="17_umnjm"]
+[ext_resource type="Texture2D" uid="uid://xggbhfss40gu" path="res://Assets/HUD/Touch/switch_camera_disabled.png" id="18_4eqlp"]
 [ext_resource type="Texture2D" uid="uid://bl0heaaasxj8g" path="res://Assets/HUD/Touch/call_mtf.png" id="18_rajel"]
 [ext_resource type="Texture2D" uid="uid://mmxp8c0wn3eq" path="res://Assets/HUD/Touch/call_mtf_click.png" id="19_vvhu1"]
 [ext_resource type="Texture2D" uid="uid://cia0vdqonir34" path="res://Assets/HUD/Touch/call_mtf_disabled.png" id="20_lbihj"]
@@ -236,6 +239,14 @@ texture_normal = ExtResource("15_8r6kd")
 texture_pressed = ExtResource("16_tfod6")
 texture_hover = ExtResource("15_8r6kd")
 texture_disabled = ExtResource("17_rajel")
+
+[node name="SwitchCameraButton" type="TextureButton" parent="UI/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("16_jn8rg")
+texture_pressed = ExtResource("17_umnjm")
+texture_hover = ExtResource("16_jn8rg")
+texture_disabled = ExtResource("18_4eqlp")
+texture_focused = ExtResource("16_jn8rg")
 
 [node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer"]
 visible = false
@@ -573,6 +584,7 @@ bus = &"Music"
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]
 [connection signal="gui_input" from="UI/PlayingArea" to="UI" method="_on_playing_area_gui_input"]
 [connection signal="pressed" from="UI/HBoxContainer/InventoryButton" to="UI" method="_on_inventory_button_pressed"]
+[connection signal="pressed" from="UI/HBoxContainer/SwitchCameraButton" to="UI" method="_on_switch_camera_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/CallMtfButton" to="UI" method="_on_call_mtf_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/Scp914Button" to="UI" method="_on_scp_914_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/ElevatorButton" to="UI" method="_on_elevator_button_pressed"]

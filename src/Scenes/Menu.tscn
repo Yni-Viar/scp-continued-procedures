@@ -161,7 +161,6 @@ placeholder_text = "CUSTOM_SEED"
 [node name="TimeLimited" type="CheckBox" parent="GameSettings"]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
-button_pressed = true
 text = "TIME_LIMITED"
 
 [node name="ZenMode" type="CheckBox" parent="GameSettings"]
