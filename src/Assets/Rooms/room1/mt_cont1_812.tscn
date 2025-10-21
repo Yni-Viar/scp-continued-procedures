@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://xfomg41qsbnq"]
+[gd_scene load_steps=44 format=4 uid="uid://xfomg41qsbnq"]
 
 [ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_idhtc"]
 [ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="6_lcccv"]
@@ -15,6 +15,9 @@
 [ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="11_kevxb"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="12_4fuhk"]
 [ext_resource type="Shader" uid="uid://cgw46w7ss62uv" path="res://Shaders/WaterShader/water.gdshader" id="12_ms4c5"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="16_eaxjk"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="17_lcccv"]
+[ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="18_lcccv"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(0.394783, -0.760336, -14.8718, 1.39478, -0.760336, -15.3718, 1.39478, -0.760336, -15.8718, -13.8552, -0.760336, -14.1218, 0.394783, -0.760336, -14.1218, -13.8552, -0.760336, -22.1218, 7.64478, -0.760336, -21.8718, 6.14478, 2.73966, -18.6218, 5.39478, 2.73966, -18.3718, 5.14478, 2.73966, -17.6218, 3.64478, 2.73966, -12.1218, 11.3948, 2.73966, -19.8718, 4.39478, 2.73966, -17.3718, 4.14478, 2.73966, -16.6218, 3.39478, 2.73966, -16.3718, 3.14478, 2.73966, -15.6218, 2.39478, 2.73966, -15.3718, 1.89478, 2.73966, -14.3718, 1.39478, 2.73966, -14.3718, 11.3948, 2.73966, -20.3718, 9.39478, 2.73966, -22.1218, 6.39478, 2.73966, -19.3718, 14.3948, -0.760336, -22.1218, 11.1448, -0.760336, -22.1218, 12.6448, -0.760336, -20.6218, 12.6448, -0.760336, -19.6218, 14.3948, -0.760336, -14.1218, 7.14478, -0.760336, -14.3718, 10.6448, -0.760336, -19.8718, 9.64478, -0.760336, -21.3718, 9.14478, -0.760336, -21.3718, 2.14478, -0.760336, -14.3718, 3.64478, -0.760336, -12.8718, 4.14478, -0.760336, -10.8718, 3.39478, -0.760336, -10.8718, 3.39478, -0.760336, 2.37819, 6.39478, -0.760336, 2.37819, 6.14478, -0.760336, -13.3718, -13.8552, -8.76034, -13.1218, -13.8552, -8.76034, -10.1218, 14.3948, -8.76034, -10.1218, 14.3948, -8.76034, -13.1218, 14.6448, -20.7603, 3.62819, 14.6448, -20.7603, 3.12819, 13.8948, -20.7603, 2.87819, -13.8552, -20.7603, 3.62819, 13.8948, -20.7603, 0.128187, 14.6448, -20.7603, -0.121813, 14.6448, -20.7603, -0.621813, 13.8948, -20.7603, -0.871813, 14.1448, -20.7603, -8.62181, 14.6448, -20.7603, -9.12181, -13.8552, -20.7603, -9.12181, 14.6448, -20.7603, -5.37181, 14.6448, -20.7603, -6.12181, 14.1448, -20.7603, -6.37181, 13.8948, -20.7603, -5.12181, 15.8948, -28.7603, -9.12181, 15.8948, -28.7603, 3.62819, 25.8948, -28.7603, 3.62819, 25.8948, -28.7603, -9.12181, 6.39478, -0.760336, 4.37819, 3.39478, -0.760336, 4.37819, 2.89478, -0.760336, 4.62819, 2.89478, -0.760336, 9.62819, 8.64478, -0.760336, 9.62819, 8.64478, -0.760336, 4.62819, -13.8552, -0.760336, 4.62819, -13.8552, -0.760336, 9.62819, 14.3948, -0.760336, 9.62819, 14.3948, -0.760336, 4.62819)
@@ -566,6 +569,25 @@ interior = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 shape = SubResource("ConcavePolygonShape3D_kevxb")
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("16_eaxjk")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("17_lcccv")]
+transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, -9.529006, -0.9937242, -15.036153)
+
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("17_lcccv")]
+transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, -4.6140294, -0.9937242, -15.036153)
+
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("18_lcccv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.297235, -1.2603072, 8.997611)
+
+[node name="Pumpkin4" parent="Seasonal/Halloween" instance=ExtResource("18_lcccv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.856014, -1.2603072, -14.960752)
 
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
 [connection signal="body_exited" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_exited"]

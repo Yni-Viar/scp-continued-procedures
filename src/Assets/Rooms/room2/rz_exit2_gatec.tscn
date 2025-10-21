@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://bsf6uo5b8l2jm"]
+[gd_scene load_steps=31 format=4 uid="uid://bsf6uo5b8l2jm"]
 
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_sjxj1"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="2_takvg"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://dn45mk02tkui1" path="res://Assets/Doors/lcz_door.tscn" id="13_f67qm"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="14_f028w"]
 [ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="16_2wnpn"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_06tn7"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_4rapg"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
 vertices = PackedVector3Array(-4.118932, -0.8415327, 8.491407, -4.118932, -0.8415327, 9.491407, -3.6189318, -0.8415327, 9.741407, -4.868932, -0.8415327, 6.2414074, -4.868932, -0.8415327, 8.241407, -4.118932, -0.8415327, 5.9914074, 3.8810682, -0.8415327, 9.491407, 3.6310682, -0.8415327, -9.758593, -4.118932, -0.8415327, -9.508593, -5.868932, -0.8415327, 5.9914074, -9.118932, -0.8415327, 8.241407, -5.868932, -9.591533, -5.7585926, -4.868932, -9.591533, -6.0085926, -4.868932, -9.591533, -8.258593, -9.118932, -9.591533, -8.258593, -5.868932, -1.5915327, 4.5226574, -5.868932, -8.841533, -4.2898426, -9.118932, -9.591533, -5.5085926, -9.118932, -0.8415327, 5.4914074, -6.873907, -6.0915327, -1.2616177, -3.8689318, -9.591533, -5.7585926, 1.6310682, -9.591533, -8.258593, -3.8689318, -9.591533, 2.4914074, 1.6310682, -9.591533, 2.4914074, 2.1310682, -9.591533, 8.741407, 2.1310682, -9.591533, 4.7414074, 1.6310682, -9.591533, 4.4914074, -3.8689318, -9.591533, 8.741407, 8.881068, -9.591533, 8.741407, 8.881068, -9.591533, 4.7414074)
@@ -369,6 +371,27 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.59
 
 [node name="GateCMiddle" type="Marker3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 6.5930967, 75.11742, 2.0355144)
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("17_06tn7")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("18_4rapg")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 3.7713099, -1.2581564, 0.60461664)
+
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("18_4rapg")]
+transform = Transform3D(0.5, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.5, -4.232005, -1.2581564, -5.369106)
+
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("18_4rapg")]
+transform = Transform3D(-0.70710677, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.70710677, -4.232005, -1.2581564, 5.457357)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("17_06tn7")
+current_season = 5
 
 [connection signal="body_entered" from="ElevatorToggle" to="ElevatorToggle" method="_on_body_entered"]
 [connection signal="body_exited" from="ElevatorToggle" to="ElevatorToggle" method="_on_body_exited"]

@@ -4,9 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _enter_tree() -> void:
-	# Set the region (needed for obeying contries' laws)
-	Settings.region = OS.get_locale()
-	Settings.touchscreen = DisplayServer.is_touchscreen_available()
+	
 	#var index: int = 0
 	#for node in $LorePanel/ScrollContainer/VBoxContainer.get_children():
 		# Easy bit-field checking
@@ -38,6 +36,8 @@ func _on_credits_pressed() -> void:
 
 
 func play():
+	$FakeLoadingScreen.show()
+	await get_tree().create_timer(0.5).timeout
 	var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
 	if !$GameSettings/Seed.text.is_empty():
 		game.map_seed = hash($GameSettings/Seed.text)

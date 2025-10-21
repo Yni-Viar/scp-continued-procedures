@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dk5tshb1f2wsi"]
+[gd_scene load_steps=16 format=4 uid="uid://dk5tshb1f2wsi"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_n8bhf"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_4w4vd"]
@@ -7,6 +7,8 @@
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="5_knu6h"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="6_74ork"]
 [ext_resource type="LightmapGIData" uid="uid://di8iii0836774" path="res://Assets/Rooms/room2c/Lm/room2c_special.lmbake" id="6_knu6h"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_5augc"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_tsku5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(-3.32542, -0.769568, 6.99822, -3.32542, -0.769568, 9.74822, 3.42458, -0.769568, 9.74822, 3.42458, -0.769568, 6.74822, 6.67458, -0.769568, -5.00178, -4.07542, -0.769568, -5.00178, -4.82542, -0.769568, -4.00178, -4.82542, -0.769568, 6.74822, 6.67458, -0.769568, 3.49822, 9.67458, -0.769568, 3.49822, 9.67458, -0.769568, -3.25178, 6.92458, -0.769568, -3.25178)
@@ -405,3 +407,18 @@ bounce_indirect_energy = 2.0
 interior = true
 texel_scale = 0.5
 light_data = ExtResource("6_knu6h")
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("8_5augc")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("9_tsku5")]
+transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, -2.7819448, -1.2581564, -3.1379495)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("8_5augc")
+current_season = 5

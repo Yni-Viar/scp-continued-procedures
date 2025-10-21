@@ -215,3 +215,12 @@ msgstr ""
 
 msgid "EMERGENCY_EXIT"
 msgstr ""
+
+msgid "INVENTORY"
+msgstr ""
+
+msgid "LOADING"
+msgstr ""
+
+msgid "PLEASE_WAIT"
+msgstr ""

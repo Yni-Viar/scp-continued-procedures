@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cvwbiyb4cbtok"]
+[gd_scene load_steps=25 format=4 uid="uid://cvwbiyb4cbtok"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_g6en1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_jpe88"]
@@ -8,13 +8,17 @@
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="4_y4540"]
 [ext_resource type="Script" uid="uid://b8lv838ni70ad" path="res://Scripts/Triggers/FinishGameTrigger.gd" id="5_d1800"]
 [ext_resource type="Script" uid="uid://dg3hthb6jqdqg" path="res://Scripts/Triggers/IntruderCheckTrigger.gd" id="5_jpe88"]
+[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="5_olvp5"]
 [ext_resource type="PackedScene" uid="uid://c32hwf66e1ihj" path="res://Assets/OriginalModels/scp_cage.tscn" id="7_cc1sb"]
 [ext_resource type="PackedScene" uid="uid://dn45mk02tkui1" path="res://Assets/Doors/lcz_door.tscn" id="10_y4540"]
 [ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="11_hs6xl"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="13_niiig"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="13_skdfc"]
+[ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="14_skdfc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x844e"]
-vertices = PackedVector3Array(4.6197834, -0.75080895, -5.0670853, 5.1197834, -0.75080895, -5.3170853, 5.1197834, -0.75080895, -6.0670853, 4.6197834, -0.75080895, -6.3170853, -4.8802166, -0.75080895, -9.067085, -4.6302166, -0.75080895, -0.56708527, -1.6302166, -0.75080895, 2.6829147, -1.3802166, -0.75080895, 9.682915, 1.3697834, -0.75080895, 9.682915, 1.6197834, -0.75080895, 2.6829147, 8.869783, -0.75080895, 2.6829147, 8.869783, -0.75080895, -0.31708527, 4.6197834, -0.75080895, -0.56708527, 4.6197834, -0.75080895, -9.067085, -8.880217, -0.75080895, -0.31708527, -8.880217, -0.75080895, 2.6829147)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(7, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 9), PackedInt32Array(4, 13, 3), PackedInt32Array(14, 5, 15), PackedInt32Array(15, 5, 6), PackedInt32Array(6, 5, 9), PackedInt32Array(9, 5, 12), PackedInt32Array(12, 5, 0)]
+vertices = PackedVector3Array(4.6197834, -0.75080895, -5.0670853, 5.1197834, -0.75080895, -5.3170853, 5.1197834, -0.75080895, -6.0670853, 4.6197834, -0.75080895, -6.3170853, -2.3802166, -0.75080895, -7.5670853, -2.3802166, -0.75080895, -0.81708527, -8.880217, -0.75080895, -0.31708527, -8.880217, -0.75080895, 2.6829147, -1.6302166, -0.75080895, 2.6829147, -4.8802166, -0.75080895, -9.067085, -4.8802166, -0.75080895, -7.8170853, 8.869783, -0.75080895, 2.6829147, 8.869783, -0.75080895, -0.31708527, 4.6197834, -0.75080895, -0.56708527, 1.6197834, -0.75080895, 2.6829147, -1.3802166, -0.75080895, 9.682915, 1.3697834, -0.75080895, 9.682915, 4.6197834, -0.75080895, -9.067085)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(4, 10, 9), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 14), PackedInt32Array(15, 8, 16), PackedInt32Array(16, 8, 14), PackedInt32Array(3, 4, 17), PackedInt32Array(17, 4, 9), PackedInt32Array(8, 5, 14), PackedInt32Array(14, 5, 13), PackedInt32Array(13, 5, 0), PackedInt32Array(0, 5, 4)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_viu3g"]
 _surfaces = [{
@@ -148,6 +152,9 @@ transform = Transform3D(4.3711392e-08, 8.742278e-08, -1, 1, -4.371139e-08, 4.371
 [node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" instance=ExtResource("3_tuj35")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 4.189, 7.106)
 
+[node name="Table" parent="NavigationRegion3D" instance=ExtResource("5_olvp5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -4.2510767, -0.21894252, -4.23709)
+
 [node name="entityspawn" type="Marker3D" parent="." groups=["AgentSpawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2595286, -1.24029, -5.0147095)
 
@@ -254,6 +261,22 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.40
 
 [node name="GateBMiddle" type="Marker3D" parent="."]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.4092712, 24.571266, -5.558091)
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("13_skdfc")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("13_niiig")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.259532, -1.2507728, -8.382795)
+
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("14_skdfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9731789, 0.24922574, -6.104312)
+
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("14_skdfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.332854, 0.24922669, -2.1996164)
 
 [connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
 [connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]

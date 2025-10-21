@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cer4f28tf2elv"]
+[gd_scene load_steps=16 format=4 uid="uid://cer4f28tf2elv"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_fxrmn"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_gk07h"]
@@ -7,6 +7,8 @@
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="5_qfwom"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="6_c5cvh"]
 [ext_resource type="LightmapGIData" uid="uid://c4wm3xlg4j1yx" path="res://Assets/Rooms/room3/Lm/room3_redux.lmbake" id="6_gk07h"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_qfwom"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_875mv"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(-9.7394, -0.769568, -3.24565, -9.7394, -0.769568, 3.25435, -6.9894, -0.769568, 3.25435, -3.4894, -0.769568, 9.75435, 3.2606, -0.769568, 9.75435, 3.2606, -0.769568, 7.00435, -3.4894, -0.769568, 6.75435, 6.7606, -0.769568, 3.50435, 9.7606, -0.769568, -3.24565, 9.7606, -0.769568, 3.50435)
@@ -407,3 +409,18 @@ bounces = 1
 bounce_indirect_energy = 2.0
 texel_scale = 0.5
 light_data = ExtResource("6_gk07h")
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("8_qfwom")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("9_875mv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19572522, -1.2603406, -2.769822)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("8_qfwom")
+current_season = 5

@@ -4,6 +4,7 @@ extends Node
 ## Stages of the developing
 enum Stages {release, testing, dev}
 enum ItemType {item, map_object, npc}
+enum Season {NONE, WINTER, SPRING, SUMMER, AUTUMN, CHRISTMAS, HALLOWEEN}
 
 signal settings_saved
 
@@ -14,7 +15,9 @@ const DATA_COMPATIBILITY: String = "5.0.0"
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
 ## If we don't specify regions, which have additional legal requirements, we are in trouble.
-const LEGAL_REQ_REGIONS: PackedStringArray = ["ru_RU"]
+const LEGAL_REQ_REGIONS: Dictionary[String, PackedStringArray] = {
+	"ru_RU": ["generic_ru"]
+}
 ## Touchscreen check
 var touchscreen: bool = false
 ## Settings resource
@@ -27,10 +30,17 @@ var region: String = "":
 		region = val
 		legal_req = is_legal_req()
 var legal_req: bool = false
+var current_season: Season = Season.NONE
 
 func _init():
 	load_resource()
 	audio_settings(1, setting_res.music_volume)
+	# Set the region (needed for obeying contries' laws)
+	region = OS.get_locale()
+
+func _ready() -> void:
+	Settings.touchscreen = DisplayServer.is_touchscreen_available()
+	season_checker()
 
 ## Sometimes ago it was a great function. Now it is just a stub, that calls ResourceStorage and loads settings
 func load_resource():
@@ -60,8 +70,32 @@ func save_resource(res):
 		ResourceStorage.save_resource("user://Settings.bin", res)
 		emit_signal("settings_saved")
 
+func season_checker():
+	match Time.get_datetime_dict_from_system()["month"]:
+		1, 2:
+			current_season = Season.WINTER
+		3, 4, 5:
+			current_season = Season.SPRING
+		6, 7, 8:
+			current_season = Season.SUMMER
+		9, 11: # this was NOT intended!!!
+			current_season = Season.AUTUMN
+		10:
+			if !feature_legality_checker("no_halloween"):
+				current_season = Season.HALLOWEEN
+			else:
+				current_season = Season.AUTUMN
+		12:
+			current_season = Season.CHRISTMAS
+		_:
+			print("Did you ever set a date?")
+			current_season = Season.NONE
+
 func is_legal_req() -> bool:
 	return LEGAL_REQ_REGIONS.has(region)
+
+func feature_legality_checker(feature: String) -> bool:
+	return LEGAL_REQ_REGIONS[region].has(feature)
 
 func audio_settings(bus: int, val: float):
 	AudioServer.set_bus_volume_db(bus, linear_to_db(val))

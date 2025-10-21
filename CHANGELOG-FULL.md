@@ -6,14 +6,16 @@
 - [ ] Add generator task (hello Unstable Dimensions) (maybe scrap this?)
 - [ ] SCP-178 (3d model is ready)
 - [ ] SCP-458 (probably will be implemented in 5.1)
+- [ ] Clutter system - finish Christmas decorations. (probably for 5.1)
 
 ## v5.1.0
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
 
-## v5.0.0 (Expansion update part 2, release will be in October 2025)
+## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel
 - Lantern item
 ### New features
+- Added clutter system + Halloween (and partly Christmas) decorations
 - Expose Gate A
 - Add ragdolls to humans (except SCP-347 and Site Director)
 - Surface Zone for Gate B and C (SZ and elevators are borrowed from pop_pop_icard).
@@ -35,6 +37,7 @@
 - SCP-109 and 983 Containment Chamber (Instead of regular Testroom)
 - Upgrade to Godot 4.5, and thus remove Windows 7/8.0 support (see https://yniviar.neocities.org/blog_september-2025-news)
 ### General fixes and small enhancements
+- Added fake loading screen.
 - Inventory button is now hidden, if there is no touchscreen (click Tab buttton to open your inventory)
 - Add debug console
 - Better organize Main Menu
