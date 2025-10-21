@@ -188,6 +188,7 @@ skeleton = NodePath("")
 
 [node name="Cube_003" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1.7881393e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.7881393e-07, 0.07, 0.17536032, -0.36)
+visibility_range_end = 128.0
 mesh = SubResource("ArrayMesh_pkqvl")
 skeleton = NodePath("")
 
