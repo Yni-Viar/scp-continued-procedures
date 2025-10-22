@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://b0lbehlrb2hbt"]
+[gd_scene load_steps=30 format=4 uid="uid://b0lbehlrb2hbt"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_u2482"]
 [ext_resource type="Material" uid="uid://vkd4gsi3ilqy" path="res://Assets/Materials/ResearchZone/Floor173.tres" id="2_mp2tu"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="11_hjkh1"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="12_3cn68"]
 [ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="13_hpied"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_2ovmx"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_4ecej"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-6.91346, -2.83059, -6.27147, -6.91346, -2.83059, 0.72853, 2.08654, -2.83059, 0.72853, 2.08654, -2.83059, -6.27147, 4.08654, 1.16941, -6.27147, 4.08654, 1.16941, 0.72853, 6.08654, 1.16941, 0.72853, 6.08654, 1.16941, -6.27147, 7.08654, -0.830588, 1.47853, 4.08654, -0.830588, 1.72853, 3.83654, -0.830588, 2.72853, 2.58654, -0.830588, 9.72853, 8.58654, -0.830588, 9.47853, 2.58654, -0.830588, 2.72853, 8.58654, -0.830588, -6.27147, 7.08654, -0.830588, -6.27147, 2.08654, -0.830588, 2.47853, 2.08654, -0.830588, 1.72853, -3.41346, -0.830588, 1.72853, -3.66346, -0.830588, 2.72853, -6.91346, -0.830588, 2.72853, -6.91346, -0.830588, 9.72853)
@@ -346,6 +348,19 @@ max_distance = 64.0
 size = Vector3(16.963, 9.33423, 17.3011)
 box_projection = true
 interior = true
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("17_2ovmx")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("18_4ecej")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.6731935, -1.2606231, -5.5624766)
+
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("18_4ecej")]
+transform = Transform3D(0.51763815, 0, 1.9318516, 0, 2, 0, -1.9318516, 0, 0.51763815, -6.24952, -1.2606231, 5.7041335)
 
 [connection signal="body_entered" from="Scp173Task" to="Scp173Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp173Task" to="Scp173Task" method="_on_body_exited"]

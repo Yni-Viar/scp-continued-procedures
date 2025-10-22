@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://buwx2f5s8ms0n"]
+[gd_scene load_steps=34 format=4 uid="uid://buwx2f5s8ms0n"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_keue3"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_iy3yx"]
@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="12_3x5tu"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="13_i76g7"]
 [ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="14_q2nps"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="16_egjxc"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="17_3x5tu"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-3.91106, -0.769567, -5.52231, 4.58894, -0.769567, -5.52231, 4.58894, -0.769567, -6.27231, -7.91106, -0.769567, -6.27231, -7.91106, -0.769567, 3.97769, -4.91106, -0.769567, 3.97769, -4.66106, -0.769567, -4.77231, 5.58894, -0.769567, -5.52231, 9.33894, -0.769567, -6.27231, 6.33894, -0.769567, -4.77231, 6.33894, -0.769567, 4.47769, 9.33894, -0.769567, 4.47769, 3.08894, -0.769567, -0.272311, 2.58894, -0.769567, -0.0223107, 2.58894, -0.769567, 1.22769, -3.41106, -0.769567, -0.272311, -1.66106, -0.769567, -0.272311, -1.66106, -0.769567, -1.02231, 1.08894, -0.769567, 2.22769, 1.08894, -0.769567, 3.72769, 4.83894, -0.769567, 3.72769, -3.16106, -0.769567, -4.02231, -0.411058, -0.769567, -2.52231, 2.08894, -0.769567, -2.52231, 4.83894, -0.769567, -4.02231, 0.338942, -0.769567, -0.772311, 0.338942, -0.519567, -0.0223107, 1.08894, -0.769567, -0.272311, -1.16106, -0.769567, 1.22769, -3.16106, -0.769567, 3.72769, -2.16106, -0.769567, 9.72769, -1.91106, -0.769567, 5.97769, -3.41106, -0.769567, 5.97769, -4.16106, -0.769567, 5.47769, -7.91106, -0.769567, 9.72769, 4.83894, -0.769567, 5.97769, 9.33894, -0.769567, 9.47769)
@@ -407,6 +409,19 @@ end_position = Vector3(0, 0, -1.127)
 
 [node name="Waypoint" type="Marker3D" parent="." groups=["cont1_162"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46704, 0, -0.773889)
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("16_egjxc")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("17_3x5tu")]
+transform = Transform3D(1.299038, 0, -0.75, 0, 1.5, 0, 0.75, 0, 1.299038, -0.8826026, -1.2612566, 1.1413807)
+
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("17_3x5tu")]
+transform = Transform3D(1.2990382, 0, 0.7500001, 0, 1.5000002, 0, -0.7500001, 0, 1.2990382, 2.0438423, -1.2612566, 1.1413807)
 
 [connection signal="body_entered" from="Scp162Task" to="Scp162Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp162Task" to="Scp162Task" method="_on_body_exited"]

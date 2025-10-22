@@ -7,3 +7,5 @@ func _ready() -> void:
 	if Settings.current_season == current_season || \
 	 current_season == Settings.Season.NONE && Settings.current_season <= 4:
 		show()
+	else:
+		hide()
