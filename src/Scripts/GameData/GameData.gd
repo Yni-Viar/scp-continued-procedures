@@ -16,3 +16,5 @@ class_name GameData
 @export var custom_left_scientists_offices: Array[PackedScene] = []
 ## Custom right Scientist's offices (available since v4.0)
 @export var custom_right_scientists_offices: Array[PackedScene] = []
+## Status Effects
+@export var status_effects: Dictionary[String, StatusEffect] = {}

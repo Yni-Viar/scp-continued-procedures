@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://rj65na3myb3i"]
+[gd_scene load_steps=7 format=3 uid="uid://rj65na3myb3i"]
 
 [ext_resource type="Script" uid="uid://b8pkv7v2qmc5c" path="res://PlayerScript/MovableNpc.gd" id="1_3jgrj"]
+[ext_resource type="Script" uid="uid://caoa6u8nk71m7" path="res://Scripts/StatusEffects/StatusEffectManager.gd" id="2_2vyji"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="2_m1isr"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvonu"]
@@ -28,6 +29,12 @@ max_speed = 15.0
 
 [node name="PlayerModel" type="Node3D" parent="."]
 transform = Transform3D(1.50046, 0, 0, 0, 1.50046, 0, 0, 0, 1.50046, 0, 0, 0)
+
+[node name="StatusEffects" type="Node" parent="."]
+script = ExtResource("2_2vyji")
+status_effects = null
+current_status_effect = null
+strength = null
 
 [node name="CollisionBodyCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10079, 0)

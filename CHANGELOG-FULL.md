@@ -6,10 +6,15 @@
 - [ ] Add generator task (hello Unstable Dimensions) (maybe scrap this?)
 - [ ] SCP-178 (3d model is ready)
 - [ ] SCP-458 (probably will be implemented in 5.1)
-- [ ] Clutter system - finish Christmas decorations. (probably for 5.1)
+- [ ] Clutter system - finish Christmas decorations. (probably for 5.2)
 
 ## v5.1.0
-- [ ] SCP-686 (3d model borrowed from pop_pop_icard, probably will be implemented in 5.1)
+### Not started
+- [ ] SCP-686 (3d model borrowed from pop_pop_icard)
+- [ ] Make Freeze effect in StaticPlayer a StatusEffect
+### In progress
+- [ ] Status effect system
+### Done
 
 ## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel
