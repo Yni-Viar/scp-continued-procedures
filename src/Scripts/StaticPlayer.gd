@@ -51,8 +51,6 @@ func _physics_process(delta: float) -> void:
 		if get_node_or_null(target_puppet_path) == null:
 			get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
 		else:
-			if get_node(target_puppet_path).current_health[2] < get_node(target_puppet_path).health[2]:
-				$Head/Camera3D/MeshInstance3D.mesh.surface_get_material(0).set_shader_parameter("multiplier", (get_node(target_puppet_path).health[2] - get_node(target_puppet_path).current_health[2]) / get_node(target_puppet_path).health[2])
 			get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[0]
 			# Apply bonus to Y coordinate if current_camera_mode is third person
 			if current_camera_mode == CameraMode.THIRD_PERSON:
@@ -187,3 +185,8 @@ func _on_optimizator_body_entered(body: Node3D) -> void:
 func _on_optimizator_body_exited(body: Node3D) -> void:
 	if body is MovableNpc:
 		body.optimizator_paused = true
+
+func apply_overlay(effect: String, strength: float):
+	match effect:
+		"Frozen":
+			$Head/Camera3D/Overlays.get_child(0).mesh.surface_get_material(0).set_shader_parameter("multiplier", strength)

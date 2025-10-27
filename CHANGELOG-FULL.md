@@ -10,12 +10,13 @@
 ## v5.1.0
 ### Not started
 - [ ] SCP-686 (3d model borrowed from pop_pop_icard)
-- [ ] Make Freeze effect in StaticPlayer a StatusEffect
 ### In progress
-- [ ] Status effect system
 ### Done
+- [x] Make Freeze effect in StaticPlayer a StatusEffect
+- [x] Status effect system
 - [x] SCP-458
 - [x] Fix item duplication bug
+- [x] \[Technical\] Health system now uses that order: 0 - general health, 1 - cold, 2 - thirst, 3 - hunger meters. SCP-266 was modified to use new system.
 
 ## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel

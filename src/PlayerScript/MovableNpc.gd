@@ -199,6 +199,11 @@ func health_manage(health_to_add: float, health_type: int = 0):
 		current_health[health_type] += health_to_add
 	else:
 		current_health[health_type] = health[health_type]
+	if health_type == 1:
+		if current_health[1] < health[1]:
+			$StatusEffects.apply_status_effect("Frozen", (health[1] - current_health[1]) / health[1], 0.0)
+		else:
+			$StatusEffects.apply_status_effect("Frozen", 0.0, 0.0)
 	
 	if current_health[health_type] <= 0:
 		if puppet_class.ragdoll_prefab != null:
@@ -211,14 +216,18 @@ func health_manage(health_to_add: float, health_type: int = 0):
 func _call_function(node_path: String, method_caller: String, amount: Array):
 	if method_caller.containsn("OS"):
 		printerr("Due to security concerns, this is not allowed")
-	if !node_path.is_empty():
-		var safety_circus = node_path.get_slice("/", 0)
-		# For safety circus
-		get_child(get_node(safety_circus).get_index()).get_node(node_path.trim_prefix(safety_circus + "/")).callv(method_caller, amount)
-	elif node_path == "Game":
-		get_tree().root.get_node("Game").callv(method_caller, amount)
-	else:
-		callv(method_caller, amount)
+	match node_path:
+		"Game":
+			get_tree().root.get_node("Game").callv(method_caller, amount)
+		"StaticPlayer":
+			get_tree().root.get_node("Game/StaticPlayer").callv(method_caller, amount)
+		_:
+			if !node_path.is_empty():
+				var safety_circus = node_path.get_slice("/", 0)
+				# For safety circus
+				get_child(get_node(safety_circus).get_index()).get_node(node_path.trim_prefix(safety_circus + "/")).callv(method_caller, amount)
+			else:
+				callv(method_caller, amount)
 
 ## @deprecated: Will be moved from MovableNpc
 func action_take(index: int):

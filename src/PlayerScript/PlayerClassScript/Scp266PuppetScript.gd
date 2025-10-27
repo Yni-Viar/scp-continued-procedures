@@ -29,14 +29,14 @@ func scp_262_heateater(delta: float):
 					if heat is MovableNpc:
 						# Only humans will freeze
 						if heat.puppet_class.fraction != 1 && heat.puppet_class.fraction != 2:
-							if heat.current_health[2] - 5 < 0:
+							if heat.current_health[1] - 5 < 0:
 								heat.health_manage(-100)
-								heat.health_manage(-5, 2)
+								heat.health_manage(-5, 1)
 								heat_targets.erase(heat)
 								return
 							else:
-								heat.health_manage(-25 * (heat.health[2] - heat.current_health[2]) / heat.health[2]) #deplete health
-								heat.health_manage(-5, 2) #deplete warmth
+								heat.health_manage(-25 * (heat.health[1] - heat.current_health[1]) / heat.health[1]) #deplete health
+								heat.health_manage(-5, 1) #deplete warmth
 				else:
 					heat_targets.remove_at(counter)
 				counter += 1

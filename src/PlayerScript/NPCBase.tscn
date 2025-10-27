@@ -32,9 +32,6 @@ transform = Transform3D(1.50046, 0, 0, 0, 1.50046, 0, 0, 0, 1.50046, 0, 0, 0)
 
 [node name="StatusEffects" type="Node" parent="."]
 script = ExtResource("2_2vyji")
-status_effects = null
-current_status_effect = null
-strength = null
 
 [node name="CollisionBodyCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10079, 0)
