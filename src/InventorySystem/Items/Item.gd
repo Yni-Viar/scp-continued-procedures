@@ -13,7 +13,9 @@ enum Usage {NORMAL, ONE_TIME, ONE_TIME_DROP}
 @export var size: Vector2i = Vector2i.ZERO
 @export var one_time_use: bool
 @export var usage: Usage = Usage.NORMAL
-@export var action: CommandResource
+@export var action_node_path: String = ""
+@export var action_method_name: String = ""
+@export var action_args: Array = []
 @export var status_effect: String
 @export var upgrade_rough: Array[int] = []
 @export var upgrade_coarse: Array[int] = []

@@ -3,3 +3,5 @@ extends RigidBody3D
 class_name Pickable
 
 @export var item_id: int
+## Leave this FALSE in inspector - needed only for anti-dupe
+@export var picked: bool = false

@@ -16,6 +16,6 @@ action_method_name = "health_manage"
 action_args = [15.0, 2]
 upgrade_rough = Array[int]([3])
 upgrade_coarse = Array[int]([3])
-upgrade_one_to_one = Array[int]([4])
+upgrade_one_to_one = Array[int]([4, 9])
 upgrade_fine = Array[int]([4])
 upgrade_very_fine = Array[int]([4])

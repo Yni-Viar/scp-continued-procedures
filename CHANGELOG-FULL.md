@@ -5,7 +5,6 @@
 ### 5.x.x plan
 - [ ] Add generator task (hello Unstable Dimensions) (maybe scrap this?)
 - [ ] SCP-178 (3d model is ready)
-- [ ] SCP-458 (probably will be implemented in 5.1)
 - [ ] Clutter system - finish Christmas decorations. (probably for 5.2)
 
 ## v5.1.0
@@ -15,6 +14,8 @@
 ### In progress
 - [ ] Status effect system
 ### Done
+- [x] SCP-458
+- [x] Fix item duplication bug
 
 ## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel
