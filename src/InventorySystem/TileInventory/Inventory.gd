@@ -71,6 +71,8 @@ func item_remove_by_id(id: int, drop: bool):
 
 func use_item(item: InventorySlot):
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)._call_function(game_data.items[item.item_id].action_node_path, game_data.items[item.item_id].action_method_name, game_data.items[item.item_id].action_args)
+	if !game_data.items[item.item_id].status_effect.is_empty():
+		get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/StatusEffects").apply_status_effect(game_data.items[item.item_id].status_effect, game_data.items[item.item_id].status_effect_strength, game_data.items[item.item_id].status_effect_duration)
 	if game_data.items[item.item_id].usage != 0:
 		item_remove(item, game_data.items[item.item_id].usage == 2)
 

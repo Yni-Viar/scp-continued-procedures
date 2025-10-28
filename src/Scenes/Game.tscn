@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=47 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -15,8 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
 [ext_resource type="Environment" uid="uid://mkrxfq7uvngm" path="res://Assets/Environment/Default.tres" id="10_khs3t"]
 [ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/Third_party/lcz_ambient.ogg" id="11_dahhg"]
+[ext_resource type="Texture2D" uid="uid://c7425hilhemru" path="res://Assets/HUD/waterbar.png" id="13_4eqlp"]
 [ext_resource type="Script" uid="uid://dxam3jgydqblf" path="res://Scripts/FPSCounter.gd" id="13_acvyw"]
 [ext_resource type="Texture2D" uid="uid://ru4xgebhbko0" path="res://UI/914bg.png" id="14_8e0uq"]
+[ext_resource type="Texture2D" uid="uid://lv8kggcxlch3" path="res://Assets/HUD/foodbar.png" id="14_18uti"]
 [ext_resource type="Texture2D" uid="uid://bsdsboenf6un3" path="res://Assets/HUD/Touch/inventory.png" id="15_8r6kd"]
 [ext_resource type="Theme" uid="uid://wed0ey45xt0t" path="res://UITheme_Elevator.tres" id="16_i4lct"]
 [ext_resource type="Texture2D" uid="uid://c6w4f0ei72n5d" path="res://Assets/HUD/Touch/switch_camera.png" id="16_jn8rg"]
@@ -88,10 +90,10 @@ _data = {
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dahhg"]
-bg_color = Color(0.8, 0.8, 0.360784, 0.498039)
+bg_color = Color(1, 0.6788811, 0.62744546, 0.49803922)
 border_width_top = 2
 border_width_bottom = 2
-border_color = Color(0.8, 0.8, 0.360784, 1)
+border_color = Color(1, 0.6784314, 0.627451, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3xnh"]
 
@@ -110,6 +112,9 @@ script = ExtResource("1_7lihs")
 gamedata = ExtResource("2_fgofq")
 
 [node name="StaticPlayer" parent="." instance=ExtResource("3_bf53h")]
+camera_mode = 0
+current_camera_mode = 1
+target_puppet_path = ""
 
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
@@ -178,6 +183,41 @@ grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
 
+[node name="ThirstBar" type="ProgressBar" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.108
+anchor_top = 0.901
+anchor_right = 0.108
+anchor_bottom = 0.901
+offset_left = -60.416
+offset_top = -7.8480225
+offset_right = 59.584
+offset_bottom = 8.151978
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
+max_value = 50.0
+show_percentage = false
+
+[node name="HungerBar" type="ProgressBar" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22600001
+anchor_top = 0.901
+anchor_right = 0.22600001
+anchor_bottom = 0.901
+offset_left = -60.35202
+offset_top = -7.8480225
+offset_right = 59.64798
+offset_bottom = 8.151978
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
+max_value = 50.0
+show_percentage = false
+
 [node name="HealthIcon" type="TextureRect" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
@@ -191,6 +231,35 @@ offset_right = 20.288
 offset_bottom = 19.864
 grow_vertical = 0
 texture = ExtResource("10_71axn")
+
+[node name="ThirstIcon" type="TextureRect" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.108
+anchor_top = 0.846
+anchor_right = 0.108
+anchor_bottom = 0.846
+offset_left = -20.416
+offset_top = -20.208008
+offset_right = 19.584
+offset_bottom = 19.791992
+grow_vertical = 0
+texture = ExtResource("13_4eqlp")
+
+[node name="HungerIcon" type="TextureRect" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.108
+anchor_top = 0.846
+anchor_right = 0.108
+anchor_bottom = 0.846
+offset_left = 115.584
+offset_top = -20.208008
+offset_right = 155.584
+offset_bottom = 19.791992
+grow_vertical = 0
+texture = ExtResource("14_18uti")
 
 [node name="Tasks" type="VBoxContainer" parent="UI"]
 layout_mode = 1

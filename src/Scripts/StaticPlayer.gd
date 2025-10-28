@@ -13,7 +13,6 @@ var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
 var transition: NodePath
 
-
 const RAY_LENGTH = 512
 
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +51,9 @@ func _physics_process(delta: float) -> void:
 			get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
 		else:
 			get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[0]
+			if get_node(target_puppet_path).fraction == 0:
+				get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[2]
+				get_tree().root.get_node("Game/UI/HealthBar").value = get_node(target_puppet_path).current_health[3]
 			# Apply bonus to Y coordinate if current_camera_mode is third person
 			if current_camera_mode == CameraMode.THIRD_PERSON:
 				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)

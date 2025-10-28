@@ -3,14 +3,17 @@
 ## Long-term plan (new versions will have different codebase, this plan will contain only 5.x.x changes)
 
 ### 5.x.x plan
-- [ ] Add generator task (hello Unstable Dimensions) (maybe scrap this?)
+- [ ] SCP-067
 - [ ] SCP-178 (3d model is ready)
-- [ ] Clutter system - finish Christmas decorations. (probably for 5.2)
 
-## v5.1.0
+## v5.2.0
+- [ ] Clutter system - finish Christmas decorations.
+
+## v5.1.0 (Possibly end of October 2025)
 ### Not started
-- [ ] SCP-686 (3d model borrowed from pop_pop_icard)
 ### In progress
+- [ ] SCP-686 (3d model borrowed from pop_pop_icard, a family-friendly implementation)
+- [ ] Add thirst and hunger indication
 ### Done
 - [x] Make Freeze effect in StaticPlayer a StatusEffect
 - [x] Status effect system

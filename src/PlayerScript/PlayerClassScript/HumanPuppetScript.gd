@@ -9,6 +9,8 @@ enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, C
 
 @export var enable_secondary_state: bool = true
 @export var secondary_state: SecondaryState = SecondaryState.NONE
+@export var resistance_scp686: bool = false
+@export var torso_node_path: NodePath
 
 var cuffed_players: Array[MovableNpc] = []
 var raycast: RayCast3D
@@ -27,6 +29,8 @@ func on_start():
 	if get_node_or_null(armature_name + "/Skeleton3D/LookAtModifier3D") != null && get_parent().get_parent().puppet_class.enable_ik:
 		has_lookat_ik = true
 	#get_parent().get_node("NpcSelection").set_collision_mask_value(3, true)
+	if get_node(torso_node_path) == null:
+		resistance_scp686 = true
 	on_start_human()
 
 func on_start_human():
@@ -156,6 +160,18 @@ func hold_item(idx: int):
 				get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").add_child(item_prefab)
 			
 
+func effect_manager(effect: String, strength: float):
+	match effect:
+		"Scp686":
+			if !resistance_scp686:
+				if get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint")[0] < 0.95:
+					for i in range(3):
+						get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint")[i] += get_physics_process_delta_time() * strength
+				get_parent().get_parent().health_manage(-get_physics_process_delta_time() * strength * 0.01, 2)
+	effect_manager_custom(effect, strength)
+
+func effect_manager_custom(effect: String, strength: float):
+	pass
 
 ## Follow the players, if cuffed
 #func target_follow(delta: float):
