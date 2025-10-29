@@ -9,6 +9,9 @@
 ## v5.2.0
 - [ ] Clutter system - finish Christmas decorations.
 
+## v5.1.1 (2025.10.29)
+- Fix Credits being too wide
+
 ## v5.1.0 (2025.10.29)
 ### New SCP items
 - SCP-686 (3d model borrowed from pop_pop_icard, a family-friendly implementation)
