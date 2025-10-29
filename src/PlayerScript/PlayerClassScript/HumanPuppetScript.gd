@@ -160,17 +160,26 @@ func hold_item(idx: int):
 				get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").add_child(item_prefab)
 			
 
-func effect_manager(effect: String, strength: float):
+func effect_manager_start(effect: String, strength: float):
+	match effect:
+		"Scp686":
+			get_node(torso_node_path).mesh.surface_set_material(0, get_node(torso_node_path).mesh.surface_get_material(0).duplicate())
+	effect_manager_start_custom(effect, strength)
+
+func effect_manager_start_custom(effect: String, strength: float):
+	pass
+
+func effect_manager_update(effect: String, strength: float):
 	match effect:
 		"Scp686":
 			if !resistance_scp686:
 				if get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint")[0] < 0.95:
-					for i in range(3):
-						get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint")[i] += get_physics_process_delta_time() * strength
-				get_parent().get_parent().health_manage(-get_physics_process_delta_time() * strength * 0.01, 2)
-	effect_manager_custom(effect, strength)
+					var value: float = get_physics_process_delta_time() * 2 * strength
+					get_node(torso_node_path).mesh.surface_get_material(0).set_shader_parameter("tint", get_node(torso_node_path).mesh.surface_get_material(0).get_shader_parameter("tint") + Color(value, value, value))
+				get_parent().get_parent().health_manage(-get_physics_process_delta_time() * strength, 2)
+	effect_manager_update_custom(effect, strength)
 
-func effect_manager_custom(effect: String, strength: float):
+func effect_manager_update_custom(effect: String, strength: float):
 	pass
 
 ## Follow the players, if cuffed

@@ -1,7 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://0ru8kubmd8q6"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://0ru8kubmd8q6"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_jywhv"]
-[ext_resource type="Texture2D" uid="uid://qjblb4ycee1d" path="res://InventorySystem/Items/Res/scp458_slot.png" id="3_wmg8h"]
 [ext_resource type="Texture2D" uid="uid://cutnl4adlkm0s" path="res://InventorySystem/Items/Res/scp458.png" id="4_101jh"]
 
 [resource]
@@ -9,13 +8,12 @@ script = ExtResource("1_jywhv")
 id = 9
 name = "SCP-458"
 texture_tiled = ExtResource("4_101jh")
-texture_slot = ExtResource("3_wmg8h")
 pickable_path = "res://InventorySystem/Items/ItemScp458.tscn"
 size = Vector2i(2, 2)
 action_method_name = "health_manage"
 action_args = [25.0, 3]
 upgrade_rough = Array[int]([3])
-upgrade_coarse = Array[int]([3])
+upgrade_coarse = Array[int]([10])
 upgrade_one_to_one = Array[int]([4, 9])
 upgrade_fine = Array[int]([9])
 upgrade_very_fine = Array[int]([9])

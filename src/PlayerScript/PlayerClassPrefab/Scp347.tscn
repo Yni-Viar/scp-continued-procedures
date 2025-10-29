@@ -3784,6 +3784,7 @@ node_connections = [&"output", 0, &"items_blend", &"items_blend", 0, &"state_mac
 
 [node name="Puppet" type="Node3D"]
 script = ExtResource("1_setat")
+resistance_scp686 = true
 armature_name = "Woman_body_rig"
 enable_vision_scan = true
 vision_class_detect = Array[int]([2, 3])

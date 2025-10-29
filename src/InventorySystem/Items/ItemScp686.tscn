@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=4 uid="uid://bf3i3ic0mu7ks"]
+[gd_scene load_steps=10 format=4 uid="uid://bf3i3ic0mu7ks"]
 
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_3b7dh"]
 [ext_resource type="Texture2D" uid="uid://dw0vbpefsrt08" path="res://Assets/ExternalModels/SCP/scp686/Scp686_Scp686.png" id="1_rjkgq"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="2_ct753"]
 
@@ -81,16 +82,21 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_a55ep")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ct753"]
-height = 0.3242798
-radius = 0.080078125
+height = 0.61720276
+radius = 0.13671875
 
 [node name="Scp686" type="RigidBody3D"]
 collision_layer = 8
+continuous_cd = true
+script = ExtResource("1_3b7dh")
+item_id = 10
 
 [node name="Trimming2MiddlePieceCornerInner_001" type="MeshInstance3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_euv0m")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05996704, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12833405, 0)
 shape = SubResource("CylinderShape3D_ct753")

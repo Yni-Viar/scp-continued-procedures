@@ -3,23 +3,23 @@
 ## Long-term plan (new versions will have different codebase, this plan will contain only 5.x.x changes)
 
 ### 5.x.x plan
-- [ ] SCP-067
+- [ ] SCP-067 (probably for 5.2 if there will be 3d model)
 - [ ] SCP-178 (3d model is ready)
 
 ## v5.2.0
 - [ ] Clutter system - finish Christmas decorations.
 
-## v5.1.0 (Possibly end of October 2025)
-### Not started
-### In progress
-- [ ] SCP-686 (3d model borrowed from pop_pop_icard, a family-friendly implementation)
-- [ ] Add thirst and hunger indication
-### Done
-- [x] Make Freeze effect in StaticPlayer a StatusEffect
-- [x] Status effect system
-- [x] SCP-458
-- [x] Fix item duplication bug
-- [x] \[Technical\] Health system now uses that order: 0 - general health, 1 - cold, 2 - thirst, 3 - hunger meters. SCP-266 was modified to use new system.
+## v5.1.0 (2025.10.29)
+### New SCP items
+- SCP-686 (3d model borrowed from pop_pop_icard, a family-friendly implementation)
+- SCP-458
+### Status effect system
+- Add thirst and hunger indication
+- Make Freeze effect in StaticPlayer a StatusEffect
+- Status effect system
+### Bugfixes and other
+- Fix item duplication bug
+- \[Technical\] Health system now uses that order: 0 - general health, 1 - cold, 2 - thirst, 3 - hunger meters. SCP-266 was modified to use new system.
 
 ## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel

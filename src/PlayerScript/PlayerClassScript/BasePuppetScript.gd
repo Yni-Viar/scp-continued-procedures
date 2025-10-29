@@ -31,3 +31,9 @@ func on_vision_area_body_exited(body: Node3D):
 
 func special_action():
 	pass
+
+func effect_manager_start(effect: String, strength: float):
+	pass
+
+func effect_manager_update(effect: String, strength: float):
+	pass

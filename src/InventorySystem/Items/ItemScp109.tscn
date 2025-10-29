@@ -112,6 +112,7 @@ radius = 0.224609
 
 [node name="ItemScp109" type="RigidBody3D"]
 collision_layer = 8
+continuous_cd = true
 script = ExtResource("1_xxk6y")
 item_id = 4
 

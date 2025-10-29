@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=49 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -90,10 +90,22 @@ _data = {
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dahhg"]
-bg_color = Color(1, 0.6788811, 0.62744546, 0.49803922)
+bg_color = Color(0.735357, 0.735357, 0.735357, 0.5)
 border_width_top = 2
 border_width_bottom = 2
-border_color = Color(1, 0.6784314, 0.627451, 1)
+border_color = Color(0.735357, 0.735357, 0.735357, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4eqlp"]
+bg_color = Color(1.540184e-06, 0.82251805, 0.96524924, 0.5019608)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0.8226884, 0.96535945, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18uti"]
+bg_color = Color(1, 0.6196782, 0.57214785, 0.5)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(1, 0.6199727, 0.572891, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3xnh"]
 
@@ -196,7 +208,7 @@ offset_right = 59.584
 offset_bottom = 8.151978
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
-theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4eqlp")
 max_value = 50.0
 show_percentage = false
 
@@ -214,7 +226,7 @@ offset_right = 59.64798
 offset_bottom = 8.151978
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
-theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_18uti")
 max_value = 50.0
 show_percentage = false
 

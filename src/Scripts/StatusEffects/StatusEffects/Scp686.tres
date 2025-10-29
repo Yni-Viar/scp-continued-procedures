@@ -1,17 +1,23 @@
-[gd_resource type="Resource" script_class="StatusEffect" load_steps=4 format=3 uid="uid://di2hwxertgitw"]
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=5 format=3 uid="uid://di2hwxertgitw"]
 
 [ext_resource type="Script" uid="uid://c4fqc7mfbrm1o" path="res://Scripts/StatusEffects/StatusEffect.gd" id="1_hfkvt"]
 [ext_resource type="Script" uid="uid://dcmkhvqt24ups" path="res://Scripts/StatusEffects/StatusEffectCommand.gd" id="2_1tesf"]
 
+[sub_resource type="Resource" id="Resource_1tesf"]
+script = ExtResource("2_1tesf")
+action_node_path = "PlayerModel/Puppet"
+action_method_name = "effect_manager_start"
+metadata/_custom_type_script = "uid://dcmkhvqt24ups"
+
 [sub_resource type="Resource" id="Resource_hfkvt"]
 script = ExtResource("2_1tesf")
 action_node_path = "PlayerModel/Puppet"
-action_method_name = "effect_manager"
-type = "HumanPuppetScript"
+action_method_name = "effect_manager_update"
 metadata/_custom_type_script = "uid://dcmkhvqt24ups"
 
 [resource]
 script = ExtResource("1_hfkvt")
 effect_name = "Scp686"
+start_command = Array[ExtResource("2_1tesf")]([SubResource("Resource_1tesf")])
 update_command = Array[ExtResource("2_1tesf")]([SubResource("Resource_hfkvt")])
 metadata/_custom_type_script = "uid://c4fqc7mfbrm1o"

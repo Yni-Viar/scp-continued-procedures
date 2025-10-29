@@ -67,6 +67,7 @@ item_id = 9
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_fgrba")
 skeleton = NodePath("")
 
