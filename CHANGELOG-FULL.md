@@ -9,6 +9,10 @@
 ## v5.2.0
 - [ ] Clutter system - finish Christmas decorations.
 
+## v5.1.2 (2025.10.30)
+- Make walk and interact sound louder.
+- Fixed SCP-173 not crunching + not playing a sound.
+
 ## v5.1.1 (2025.10.29)
 - Fix Credits being too wide
 
@@ -23,6 +27,16 @@
 ### Bugfixes and other
 - Fix item duplication bug
 - \[Technical\] Health system now uses that order: 0 - general health, 1 - cold, 2 - thirst, 3 - hunger meters. SCP-266 was modified to use new system.
+
+## v5.0.2 (2025.10.22)
+
+- Add Halloween props in SCP-162 and SCP-173 CC.
+- Add second check on SeasonSwitcher
+- Fix SCP-938 CC elevator lightmap brightness.
+
+## v5.0.1 (2025.10.21)
+
+- Fixed serious visibility bug on Surface Zone
 
 ## v5.0.0 (Expansion update part 2, 2025.10.21)
 ### New SCP - SCP-938 with Containment Sublevel

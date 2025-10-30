@@ -39,11 +39,11 @@ shape = SubResource("CapsuleShape3D_kvonu")
 
 [node name="WalkSounds" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.242917, 0)
-max_distance = 12.0
+max_distance = 16.0
 
 [node name="InteractSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1602, 0)
-max_distance = 24.0
+max_distance = 32.0
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86335, 0)

@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 			var collider = raycast.get_collider()
 			if collider is MovableNpc:
 				if collider.fraction == 0:
-					get_parent().get_parent().get_node("InteractSound").stream = load("res://ResourcePacks/Site19/Sounds/Characters/Scp173/NeckSnap.ogg")
+					get_parent().get_parent().get_node("InteractSound").stream = load("res://Sounds/Character/Scp173/NeckSnap.ogg")
 					get_parent().get_parent().get_node("InteractSound").play()
 					collider.health_manage(-16777216)
 					active_puppets.erase(current_human)
@@ -59,7 +59,7 @@ func scp_173_blink(delta: float):
 ## Movement control
 func scp_173_movement():
 	if state == States.IDLE && !movement_reset:
-		get_parent().get_parent().set_target_position(current_human.global_position + current_human.global_transform.basis.z * 2)
+		get_parent().get_parent().set_target_position(current_human.global_position)# + current_human.global_transform.basis.z * 1.5)
 		movement_reset = true
 
 func spawn_scp_variation() -> void:
