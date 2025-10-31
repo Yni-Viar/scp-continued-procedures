@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="MapGenZone" load_steps=21 format=3 uid="uid://7prvjngodfs1"]
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=22 format=3 uid="uid://7prvjngodfs1"]
 
 [ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="1_n7egd"]
 [ext_resource type="Resource" uid="uid://tgxe2303s02g" path="res://MapGen/Resources/ResearchZone/room2C_redux.tres" id="2_rv8qh"]
 [ext_resource type="Resource" uid="uid://dd38ave42ap1i" path="res://MapGen/Resources/ResearchZone/room2_checkpoint.tres" id="2_yy57l"]
-[ext_resource type="Resource" uid="uid://dkax2pgmsnpbr" path="res://MapGen/Resources/ResearchZone/cont2C_special.tres" id="4_t7i8j"]
+[ext_resource type="Resource" uid="uid://dkax2pgmsnpbr" path="res://MapGen/Resources/ResearchZone/room2C_special.tres" id="4_t7i8j"]
+[ext_resource type="Resource" uid="uid://dqdtklri5tu2" path="res://MapGen/Resources/ResearchZone/cont2C_178.tres" id="4_yy57l"]
 [ext_resource type="Resource" uid="uid://defw3e0yk60rh" path="res://MapGen/Resources/ResearchZone/room4.tres" id="5_27xd5"]
 [ext_resource type="Resource" uid="uid://fnhc6t0nwt4o" path="res://MapGen/Resources/ResearchZone/room1_redux.tres" id="7_ganj3"]
 [ext_resource type="Resource" uid="uid://rwvg2r7pstmc" path="res://MapGen/Resources/ResearchZone/exit1.tres" id="8_27xd5"]
@@ -30,6 +31,6 @@ hallways = Array[ExtResource("1_n7egd")]([ExtResource("13_hndsr"), ExtResource("
 hallways_single = Array[ExtResource("1_n7egd")]([ExtResource("8_t7i8j"), ExtResource("15_n7egd"), ExtResource("18_27xd5")])
 checkpoint_hallway = Array[ExtResource("1_n7egd")]([ExtResource("2_yy57l")])
 corners = Array[ExtResource("1_n7egd")]([ExtResource("2_rv8qh")])
-corners_single = Array[ExtResource("1_n7egd")]([ExtResource("4_t7i8j")])
+corners_single = Array[ExtResource("1_n7egd")]([ExtResource("4_yy57l"), ExtResource("4_t7i8j")])
 trooms = Array[ExtResource("1_n7egd")]([ExtResource("17_e72q2")])
 crossrooms = Array[ExtResource("1_n7egd")]([ExtResource("5_27xd5")])

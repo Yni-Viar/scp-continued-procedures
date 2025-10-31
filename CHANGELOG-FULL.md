@@ -1,15 +1,14 @@
 # SCP: Containing Procedures
 
-## Long-term plan (new versions will have different codebase, this plan will contain only 5.x.x changes)
-
-### 5.x.x plan
-- [ ] SCP-067 (probably for 5.2 if there will be 3d model)
-- [ ] SCP-178 (3d model is ready)
+**⚠️ new versions will have different codebase, this plan will contain only 5.x.x changes**
 
 ## v5.2.0
+### Not started
+- [ ] SCP-067 (model in process)
 - [ ] Clutter system - finish Christmas decorations.
-
-## v5.1.3 (release coming soon)
+### In progress
+- [ ] SCP-178
+### Done
 - [x] \[Technical\] Update map generator to 9.1.1 to improve performance
 
 ## v5.1.2 (2025.10.30)

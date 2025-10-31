@@ -1,7 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://sletek4tlyt"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://sletek4tlyt"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_7weex"]
-[ext_resource type="Texture2D" uid="uid://cmr5ibbuyrkgy" path="res://InventorySystem/Items/Res/book_slot.png" id="2_7weex"]
 [ext_resource type="Texture2D" uid="uid://dmcmk75yergty" path="res://InventorySystem/Items/Res/book.png" id="3_2gjxl"]
 
 [resource]
@@ -9,14 +8,8 @@ script = ExtResource("1_7weex")
 id = 5
 name = "SCP-914 Book"
 texture_tiled = ExtResource("3_2gjxl")
-texture_slot = ExtResource("2_7weex")
 pickable_path = "res://InventorySystem/Items/ItemBook914.tscn"
-pickup_sound_path = ""
 size = Vector2i(2, 2)
-one_time_use = false
-usage = 0
-upgrade_rough = Array[int]([])
-upgrade_coarse = Array[int]([])
 upgrade_one_to_one = Array[int]([5])
 upgrade_fine = Array[int]([8])
 upgrade_very_fine = Array[int]([8])

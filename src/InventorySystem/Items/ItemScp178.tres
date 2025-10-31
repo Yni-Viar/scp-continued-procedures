@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://sd610lrs11ox"]
+
+[ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_xii4y"]
+[ext_resource type="Texture2D" uid="uid://cgwuw5nspit5p" path="res://InventorySystem/Items/Res/scp178.png" id="2_xii4y"]
+
+[resource]
+script = ExtResource("1_xii4y")
+id = 11
+name = "SCP-178"
+texture_tiled = ExtResource("2_xii4y")
+pickable_path = "res://InventorySystem/Items/ItemScp178.tscn"
+size = Vector2i(1, 1)
+upgrade_rough = Array[int]([3])
+upgrade_coarse = Array[int]([3])
+upgrade_one_to_one = Array[int]([11])
+upgrade_fine = Array[int]([11])
+upgrade_very_fine = Array[int]([11])
