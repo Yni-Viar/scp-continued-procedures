@@ -10,7 +10,8 @@
 - [ ] Clutter system - finish Christmas decorations.
 
 ## v5.1.3 (release coming soon)
-- [x] \[Technical\] Update map generator to 9.1.1 to improve performance
+- Fix first-start crash (a regression from 5.0.0)
+- \[Technical\] Update map generator to 9.1.1 to improve performance
 
 ## v5.1.2 (2025.10.30)
 - Make walk and interact sound louder.
