@@ -56,9 +56,9 @@ func load_resource():
 func load_default_settings():
 	#if OS.get_name() != "Web" || OS.get_name() != "Android":
 	var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
-	set_default_keybinds()
 	save_resource(res)
 	setting_res = res
+	set_default_keybinds()
 	#else:
 		#var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Lowest.tres")
 		#save_resource(res)

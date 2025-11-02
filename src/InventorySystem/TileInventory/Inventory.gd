@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 
 ## Adds item
 func add_item(item_id: int):
+	if game_data.items.size() < item_id:
+		return
 	var item_prefab: InventorySlot = InventorySlot.new()
 	item_prefab.item_id = item_id
 	item_prefab.texture = game_data.items[item_id].texture_tiled

@@ -2,14 +2,21 @@
 
 **⚠️ new versions will have different codebase, this plan will contain only 5.x.x changes**
 
+## v5.3.0
+- [ ] Clutter system - finish Christmas decorations.
+
+
 ## v5.2.0
 ### Not started
-- [ ] SCP-067 (model in process)
-- [ ] Clutter system - finish Christmas decorations.
+- [ ] SCP-067
 ### In progress
-- [ ] SCP-178
 ### Done
-- [x] \[Technical\] Update map generator to 9.1.1 to improve performance
+- [x] Fixed possibility on crash by adding out-of-bound item id.
+- [x] SCP-178 (WANTED 3D MODEL FOR SCP-178-1!!!)
+
+## v5.1.3 (Hotfix, 2025.11.02)
+- Fix first-start crash (a regression from 5.0.0)
+- \[Technical\] Update map generator to 9.1.1 to improve performance
 
 ## v5.1.2 (2025.10.30)
 - Make walk and interact sound louder.
