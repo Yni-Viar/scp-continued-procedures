@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=47 format=3 uid="uid://kakqpi6wi07u"]
+[gd_resource type="Resource" script_class="GameData" load_steps=48 format=3 uid="uid://kakqpi6wi07u"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_teai8"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="1_uwdlv"]
@@ -45,6 +45,7 @@
 [ext_resource type="Resource" uid="uid://di2hwxertgitw" path="res://Scripts/StatusEffects/StatusEffects/Scp686.tres" id="30_67p03"]
 [ext_resource type="Resource" uid="uid://c5u6uapjsmd6e" path="res://Scripts/TaskSystem/Tasks/Scp914Exp3.tres" id="31_4yelm"]
 [ext_resource type="Resource" uid="uid://d1el55bndmsin" path="res://Scripts/TaskSystem/Tasks/Scp914Exp4.tres" id="32_5ss25"]
+[ext_resource type="Resource" uid="uid://bvgm5xll68t8u" path="res://Scripts/StatusEffects/StatusEffects/Scp178.tres" id="33_0bwjp"]
 [ext_resource type="Resource" uid="uid://chrcg7ojldnxg" path="res://Scripts/TaskSystem/Tasks/Scp938Task.tres" id="37_bgvy5"]
 
 [resource]
@@ -57,6 +58,7 @@ wave_puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("18_0lfxp"), Ex
 custom_left_scientists_offices = Array[PackedScene]([ExtResource("1_vlxle")])
 status_effects = Dictionary[String, ExtResource("28_7yeqa")]({
 "Frozen": ExtResource("29_7yeqa"),
+"Scp178": ExtResource("33_0bwjp"),
 "Scp686": ExtResource("30_67p03")
 })
 metadata/_custom_type_script = "uid://cgv4yjj6gyjc1"

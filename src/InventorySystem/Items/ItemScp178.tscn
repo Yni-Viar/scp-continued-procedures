@@ -141,7 +141,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_xb0e5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q4dto"]
-size = Vector3(0.046539307, 0.20056152, 0.4906006)
+size = Vector3(0.046539307, 0.13632202, 0.3300476)
 
 [node name="Scp178" type="RigidBody3D"]
 collision_layer = 8
@@ -149,20 +149,23 @@ continuous_cd = true
 script = ExtResource("1_elnqa")
 item_id = 11
 
-[node name="Cube" type="MeshInstance3D" parent="."]
+[node name="Mesh" type="Node3D" parent="."]
+transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 0, 0, 0)
+
+[node name="Cube" type="MeshInstance3D" parent="Mesh"]
 mesh = SubResource("ArrayMesh_22als")
 skeleton = NodePath("")
 
-[node name="Cube_001" type="MeshInstance3D" parent="."]
+[node name="Cube_001" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(0.00999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_pu176")
 skeleton = NodePath("")
 
-[node name="Cube_002" type="MeshInstance3D" parent="."]
+[node name="Cube_002" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(0.00999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gyp14")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000869751, -0.0040893555, -0.0012817383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000869751, -0.0024261475, 0.0011444092)
 shape = SubResource("BoxShape3D_q4dto")

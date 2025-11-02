@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb5i1c58f5kyw"]
+
+[ext_resource type="Script" uid="uid://balciuvitprqm" path="res://PlayerScript/PlayerClassScript/BasePuppetScript.gd" id="1_gxyyk"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lnmrj"]
+radius = 0.4
+height = 2.6
+
+[node name="Puppet" type="Node3D" groups=["Scp178-1"]]
+script = ExtResource("1_gxyyk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0618534, 0)
+layers = 524288
+mesh = SubResource("CapsuleMesh_lnmrj")

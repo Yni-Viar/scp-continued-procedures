@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqoqnyepfa104"]
+[gd_scene load_steps=3 format=3 uid="uid://bqoqnyepfa104"]
+
+[ext_resource type="Script" uid="uid://balciuvitprqm" path="res://PlayerScript/PlayerClassScript/BasePuppetScript.gd" id="1_ojpak"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lnmrj"]
 radius = 0.4
 height = 2.6
 
 [node name="default" type="Node3D"]
+script = ExtResource("1_ojpak")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0618534, 0)

@@ -10,6 +10,7 @@ name = "SCP-178"
 texture_tiled = ExtResource("2_xii4y")
 pickable_path = "res://InventorySystem/Items/ItemScp178.tscn"
 size = Vector2i(1, 1)
+status_effect = "Scp178"
 upgrade_rough = Array[int]([3])
 upgrade_coarse = Array[int]([3])
 upgrade_one_to_one = Array[int]([11])

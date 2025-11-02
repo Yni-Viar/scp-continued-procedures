@@ -13,6 +13,7 @@ Included SCPs:
 - SCP-023
 - SCP-162
 - SCP-173
+- SCP-178
 - SCP-266
 - SCP-347
 - SCP-458

@@ -5,12 +5,14 @@ class_name HumanPuppetScript
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
-enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, CI_RIFLE}
+enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, CI_RIFLE, HAT}
 
 @export var enable_secondary_state: bool = true
 @export var secondary_state: SecondaryState = SecondaryState.NONE
+@export var resistance_scp178: bool = false
 @export var resistance_scp686: bool = false
 @export var torso_node_path: NodePath
+@export var current_outfit: Array[String] = []
 
 var cuffed_players: Array[MovableNpc] = []
 var raycast: RayCast3D
@@ -65,6 +67,8 @@ func _physics_process(delta: float) -> void:
 					call("set_state", "secondary_state", "transition_request", "interact")
 				SecondaryState.MTF_RIFLE:
 					call("set_state", "secondary_state", "transition_request", "mtf_rifle")
+				SecondaryState.HAT:
+					call("set_state", "secondary_state", "transition_request", "hat")
 				SecondaryState.CI_RIFLE:
 					call("set_state", "secondary_state", "transition_request", "ci_rifle")
 			if secondary_state != SecondaryState.NONE:
@@ -163,7 +167,34 @@ func hold_item(idx: int):
 func effect_manager_start(effect: String, strength: float):
 	match effect:
 		"Scp686":
-			get_node(torso_node_path).mesh.surface_set_material(0, get_node(torso_node_path).mesh.surface_get_material(0).duplicate())
+			if !resistance_scp686:
+				get_node(torso_node_path).mesh.surface_set_material(0, get_node(torso_node_path).mesh.surface_get_material(0).duplicate())
+		"Scp178":
+			if !resistance_scp178:
+				if get_tree().get_node_count_in_group("Scp178-1") == 0:
+					for i in range(64):
+						var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
+						npc.puppet_class = load("res://PlayerScript/PlayerClassResources/Scp178-1.tres")
+						npc.position = NavigationServer3D.map_get_random_point(get_parent().get_parent().get_node("NavigationAgent3D").get_navigation_map(), 1, true)
+						get_tree().root.get_node("Game/NPCs").add_child(npc)
+				secondary_state = SecondaryState.HAT
+				await get_tree().create_timer(2.5).timeout
+				secondary_state = SecondaryState.NONE
+				if current_outfit.has("Scp178"):
+					get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").set_cull_mask_value(20, false)
+					for node in get_node(armature_name + "/Skeleton3D/HeadAttachment/Marker3D").get_children():
+						node.queue_free()
+						current_outfit.erase("Scp178")
+					
+				else:
+					var glasses: Pickable = load("res://InventorySystem/Items/ItemScp178.tscn").instantiate()
+					glasses.picked = true
+					glasses.freeze = true
+					glasses.position = Vector3(0.0, 0.162, 0.215)
+					glasses.rotation_degrees = Vector3(0.0, -90.0, 0.0)
+					get_node(armature_name + "/Skeleton3D/HeadAttachment/Marker3D").add_child(glasses)
+					get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").set_cull_mask_value(20, true)
+					current_outfit.append("Scp178")
 	effect_manager_start_custom(effect, strength)
 
 func effect_manager_start_custom(effect: String, strength: float):
