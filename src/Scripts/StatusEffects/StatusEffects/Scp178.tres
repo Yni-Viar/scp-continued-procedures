@@ -1,9 +1,21 @@
-[gd_resource type="Resource" script_class="StatusEffect" load_steps=4 format=3 uid="uid://bvgm5xll68t8u"]
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=6 format=3 uid="uid://bvgm5xll68t8u"]
 
 [ext_resource type="Script" uid="uid://c4fqc7mfbrm1o" path="res://Scripts/StatusEffects/StatusEffect.gd" id="1_k2qvc"]
 [ext_resource type="Script" uid="uid://dcmkhvqt24ups" path="res://Scripts/StatusEffects/StatusEffectCommand.gd" id="2_cg5xo"]
 
 [sub_resource type="Resource" id="Resource_1tesf"]
+script = ExtResource("2_cg5xo")
+action_node_path = "PlayerModel/Puppet"
+action_method_name = "effect_manager_destroy"
+metadata/_custom_type_script = "uid://dcmkhvqt24ups"
+
+[sub_resource type="Resource" id="Resource_2718k"]
+script = ExtResource("2_cg5xo")
+action_node_path = "StaticPlayer"
+action_method_name = "apply_overlay"
+metadata/_custom_type_script = "uid://dcmkhvqt24ups"
+
+[sub_resource type="Resource" id="Resource_k2qvc"]
 script = ExtResource("2_cg5xo")
 action_node_path = "PlayerModel/Puppet"
 action_method_name = "effect_manager_start"
@@ -12,5 +24,6 @@ metadata/_custom_type_script = "uid://dcmkhvqt24ups"
 [resource]
 script = ExtResource("1_k2qvc")
 effect_name = "Scp178"
-start_command = Array[ExtResource("2_cg5xo")]([SubResource("Resource_1tesf")])
+start_command = Array[ExtResource("2_cg5xo")]([SubResource("Resource_2718k"), SubResource("Resource_k2qvc")])
+destroy_command = Array[ExtResource("2_cg5xo")]([SubResource("Resource_1tesf")])
 metadata/_custom_type_script = "uid://c4fqc7mfbrm1o"

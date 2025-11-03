@@ -12,7 +12,8 @@
 ### In progress
 ### Done
 - [x] Fixed possibility on crash by adding out-of-bound item id.
-- [x] SCP-178 (WANTED 3D MODEL FOR SCP-178-1!!!)
+- [x] Implemented removing status effects
+- [x] SCP-178 (WANTED 3D MODEL FOR SCP-178-1)
 
 ## v5.1.3 (Hotfix, 2025.11.02)
 - Fix first-start crash (a regression from 5.0.0)

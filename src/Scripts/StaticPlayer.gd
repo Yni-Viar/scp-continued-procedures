@@ -189,6 +189,13 @@ func _on_optimizator_body_exited(body: Node3D) -> void:
 		body.optimizator_paused = true
 
 func apply_overlay(effect: String, strength: float):
+	for node in $Head/Camera3D/Overlays.get_children():
+		node.hide()
 	match effect:
 		"Frozen":
-			$Head/Camera3D/Overlays.get_child(0).mesh.surface_get_material(0).set_shader_parameter("multiplier", strength)
+			$Head/Camera3D/Overlays/ColdOverlay.show()
+			$Head/Camera3D/Overlays/ColdOverlay.mesh.surface_get_material(0).set_shader_parameter("multiplier", strength)
+		"EdgeVision":
+			$Head/Camera3D/Overlays/EgdeDetectOverlay.show()
+		"Scp178":
+			$Head/Camera3D/Overlays/StereoGlassesOverlay.show()

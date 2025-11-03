@@ -37,3 +37,6 @@ func effect_manager_start(effect: String, strength: float):
 
 func effect_manager_update(effect: String, strength: float):
 	pass
+
+func effect_manager_destroy(effect: String, strength: float):
+	pass

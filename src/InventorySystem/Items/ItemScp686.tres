@@ -11,6 +11,7 @@ texture_tiled = ExtResource("3_s4nuf")
 pickable_path = "res://InventorySystem/Items/ItemScp686.tscn"
 size = Vector2i(1, 2)
 status_effect = "Scp686"
+status_effect_destroyable = false
 upgrade_rough = Array[int]([3])
 upgrade_coarse = Array[int]([3])
 upgrade_one_to_one = Array[int]([6])
