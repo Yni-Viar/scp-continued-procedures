@@ -8,8 +8,8 @@
 
 ## v5.2.0
 ### Not started
-- [ ] SCP-067
 ### In progress
+- [ ] SCP-067
 ### Done
 - [x] Fixed possibility on crash by adding out-of-bound item id.
 - [x] Implemented removing status effects
