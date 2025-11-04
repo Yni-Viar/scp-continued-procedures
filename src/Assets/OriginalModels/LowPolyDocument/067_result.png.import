@@ -2,21 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdxukieekbj1"
-path.s3tc="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex"
-path.etc2="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"
+uid="uid://brodxgj2iqex5"
+path.s3tc="res://.godot/imported/067_result.png-361947e8dc7e2d257561f1ff8211008f.s3tc.ctex"
+path.etc2="res://.godot/imported/067_result.png-361947e8dc7e2d257561f1ff8211008f.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "66d2e8e27cc2aa7a15c48d1e0514bdb8"
-}
 
 [deps]
 
-source_file="res://Assets/ExternalModels/CB178-1/Scp178-1_scp_178_1.png"
-dest_files=["res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex", "res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"]
+source_file="res://Assets/OriginalModels/LowPolyDocument/067_result.png"
+dest_files=["res://.godot/imported/067_result.png-361947e8dc7e2d257561f1ff8211008f.s3tc.ctex", "res://.godot/imported/067_result.png-361947e8dc7e2d257561f1ff8211008f.etc2.ctex"]
 
 [params]
 
@@ -41,5 +38,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=512
+process/size_limit=0
 detect_3d/compress_to=0

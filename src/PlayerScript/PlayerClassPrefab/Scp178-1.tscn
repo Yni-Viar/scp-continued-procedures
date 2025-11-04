@@ -4091,6 +4091,7 @@ bones/34/scale = Vector3(0.99999994, 0.99999994, 1.0000001)
 
 [node name="scp_178_1" type="MeshInstance3D" parent="scp_178_1_skeleton/Skeleton3D"]
 layers = 524288
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mgfek")
 skin = SubResource("Skin_46tnj")
 

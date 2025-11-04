@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdxukieekbj1"
-path.s3tc="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex"
-path.etc2="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"
+uid="uid://b2sdjvtptngcs"
+path.s3tc="res://.godot/imported/Scp067_Scp067_Cylinder_nor.png-a7e8f7cba4639e6d37e04b768845e68e.s3tc.ctex"
+path.etc2="res://.godot/imported/Scp067_Scp067_Cylinder_nor.png-a7e8f7cba4639e6d37e04b768845e68e.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "66d2e8e27cc2aa7a15c48d1e0514bdb8"
+"md5": "478709f08e03e4799b7b6a7a44ec8cff"
 }
 
 [deps]
 
-source_file="res://Assets/ExternalModels/CB178-1/Scp178-1_scp_178_1.png"
-dest_files=["res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex", "res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"]
+source_file="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_nor.png"
+dest_files=["res://.godot/imported/Scp067_Scp067_Cylinder_nor.png-a7e8f7cba4639e6d37e04b768845e68e.s3tc.ctex", "res://.godot/imported/Scp067_Scp067_Cylinder_nor.png-a7e8f7cba4639e6d37e04b768845e68e.etc2.ctex"]
 
 [params]
 
@@ -26,12 +26,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_nor.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

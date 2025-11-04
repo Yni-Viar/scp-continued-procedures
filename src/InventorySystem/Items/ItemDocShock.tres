@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://xrrjhidisw1j"]
+
+[ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_24bac"]
+[ext_resource type="Texture2D" uid="uid://6vx6wevueahd" path="res://InventorySystem/Items/Res/doc_shock.png" id="2_24bac"]
+
+[resource]
+script = ExtResource("1_24bac")
+id = 13
+name = "Your past..."
+texture_tiled = ExtResource("2_24bac")
+pickable_path = "res://InventorySystem/Items/ItemDocShock.tscn"
+size = Vector2i(1, 1)
+upgrade_coarse = Array[int]([7])
+upgrade_one_to_one = Array[int]([7, 13])
+upgrade_fine = Array[int]([13])
+upgrade_very_fine = Array[int]([13])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cbv5koigg8s1v"]
+[gd_scene load_steps=20 format=4 uid="uid://cbv5koigg8s1v"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_vur81"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_4qqfb"]
@@ -10,6 +10,9 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_d5pdp"]
 [ext_resource type="LightmapGIData" uid="uid://cdxetluhymu17" path="res://Assets/Rooms/room3/Lm/cont3_067.lmbake" id="8_w1v5u"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_xq2bu"]
+[ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="11_00o1j"]
+[ext_resource type="PackedScene" uid="uid://di3qs5437vm87" path="res://InventorySystem/Items/ItemScp067.tscn" id="11_y73rg"]
+[ext_resource type="PackedScene" uid="uid://d0ot1af7632t" path="res://InventorySystem/Items/ItemDoc.tscn" id="12_00o1j"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(-3.2394257, -0.7695668, -9.092059, -3.4894257, -0.7695668, -11.092059, -4.9894257, -0.7695668, -9.592059, -6.2394257, -0.7695668, -9.592059, -6.2394257, -0.7695668, -5.092059, 3.0105743, -0.7695668, -5.092059, 3.0105743, -0.7695668, -9.092059, 6.0105743, -0.7695668, -9.342059, 3.7605743, -0.7695668, -11.092059, 3.7605743, -0.7695668, -9.342059, 3.5105743, -0.7695668, -4.842059, 3.5105743, -0.7695668, -4.092059, 5.7605743, -0.7695668, -4.092059, 6.0105743, -0.7695668, -5.092059, 8.010574, -0.7695668, -5.092059, 8.010574, -0.7695668, -9.342059, 3.2605743, -0.7695668, -3.3420591, 6.7605743, -0.7695668, 3.4079409, 6.0105743, -0.7695668, -3.3420591, 9.760574, -0.7695668, 3.4079409, 9.760574, -0.7695668, -3.3420591, -9.739426, -0.7695668, -3.3420591, -9.739426, -0.7695668, 3.4079409, -6.9894257, -0.7695668, 3.4079409, -3.4894257, -0.7695668, 6.907941, -3.4894257, -0.7695668, 9.657941, 3.2605743, -0.7695668, 9.657941, 3.2605743, -0.7695668, 6.907941)
@@ -138,6 +141,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.4
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_t4jx0")
 skeleton = NodePath("")
 
@@ -175,6 +179,12 @@ current_season = 6
 [node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("9_xq2bu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19572522, -1.2603406, -2.769822)
 
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("11_00o1j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7879896, -1.254737, -5.4536085)
+
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("11_00o1j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6245637, -1.2682966, -5.405074)
+
 [node name="Christmas" type="Node3D" parent="Seasonal"]
 visible = false
 script = ExtResource("8_d5pdp")
@@ -183,3 +193,9 @@ current_season = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 shape = SubResource("ConcavePolygonShape3D_xq2bu")
+
+[node name="Scp067" parent="." instance=ExtResource("11_y73rg")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.1254945, 0.27350885, -11.049057)
+
+[node name="doc" parent="." instance=ExtResource("12_00o1j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14200258, 0.24193737, -10.913492)

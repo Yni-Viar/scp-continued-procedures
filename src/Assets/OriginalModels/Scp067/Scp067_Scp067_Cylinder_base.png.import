@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgdxukieekbj1"
-path.s3tc="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex"
-path.etc2="res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"
+uid="uid://dqdb35xv44gcu"
+path.s3tc="res://.godot/imported/Scp067_Scp067_Cylinder_base.png-9eec7cc320d47dc25a0d2b239232b989.s3tc.ctex"
+path.etc2="res://.godot/imported/Scp067_Scp067_Cylinder_base.png-9eec7cc320d47dc25a0d2b239232b989.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "66d2e8e27cc2aa7a15c48d1e0514bdb8"
+"md5": "95844130c0547aaa1737711c0f5d51df"
 }
 
 [deps]
 
-source_file="res://Assets/ExternalModels/CB178-1/Scp178-1_scp_178_1.png"
-dest_files=["res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.s3tc.ctex", "res://.godot/imported/Scp178-1_scp_178_1.png-ca47bfea8318b536809b5ca875bf2c77.etc2.ctex"]
+source_file="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_base.png"
+dest_files=["res://.godot/imported/Scp067_Scp067_Cylinder_base.png-9eec7cc320d47dc25a0d2b239232b989.s3tc.ctex", "res://.godot/imported/Scp067_Scp067_Cylinder_base.png-9eec7cc320d47dc25a0d2b239232b989.etc2.ctex"]
 
 [params]
 

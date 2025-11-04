@@ -299,6 +299,7 @@ distance_fade_begin = 24.0
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_61k58")
 skeleton = NodePath("")
 

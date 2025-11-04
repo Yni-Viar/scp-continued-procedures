@@ -10,6 +10,6 @@ name = "SCP-914 Book"
 texture_tiled = ExtResource("3_2gjxl")
 pickable_path = "res://InventorySystem/Items/ItemBook914.tscn"
 size = Vector2i(2, 2)
-upgrade_one_to_one = Array[int]([5])
+upgrade_one_to_one = Array[int]([5, 13])
 upgrade_fine = Array[int]([8])
 upgrade_very_fine = Array[int]([8])

@@ -153,16 +153,19 @@ item_id = 11
 transform = Transform3D(0.675, 0, 0, 0, 0.675, 0, 0, 0, 0.675, 0, 0, 0)
 
 [node name="Cube" type="MeshInstance3D" parent="Mesh"]
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_22als")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(0.00999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_pu176")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Mesh"]
 transform = Transform3D(0.00999999, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_gyp14")
 skeleton = NodePath("")
 
