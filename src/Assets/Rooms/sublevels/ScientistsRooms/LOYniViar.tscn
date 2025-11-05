@@ -23,7 +23,7 @@ font_size = 32
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.40222, -2.47104, 1.64841)
 
 [node name="laptop" parent="." instance=ExtResource("2_tyq66")]
-transform = Transform3D(0.999734, 0, 0.0230714, 0, 1, 0, -0.0230714, 0, 0.999734, -3.95093, -1.47104, 2.16547)
+transform = Transform3D(0.999734, 0, 0.0230714, 0, 1, 0, -0.0230714, 0, 0.999734, -3.95093, -2.0318925, 1.9181373)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4, 0, -3.49691e-07, 0, 4, 0, 3.49691e-07, 0, -4, 0.347152, 1.97311, 8.08066)
@@ -34,4 +34,4 @@ mesh = SubResource("TextMesh_4lnpe")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75699, -3.46285, -3.36389)
 
 [node name="OmnidotplushV2" parent="." instance=ExtResource("6_tyq66")]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.51452, -1.4086, 2.15832)
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.51452, -1.9694525, 1.9109874)

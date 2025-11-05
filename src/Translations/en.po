@@ -274,3 +274,22 @@ msgstr "Loading..."
 
 msgid "PLEASE_WAIT"
 msgstr "Please wait."
+
+msgid "SCP067_CANT_USE"
+msgstr "I need a paper to use SCP-067..."
+
+msgid "SCP067_DLG1"
+msgstr ""
+"You cannot control your hand.\n"
+"The pen control the Artist."
+
+msgid "SCP067_DLG2"
+msgstr ""
+"You draw and write. Draw and write...\n"
+"You look at the Art and have flashbacks."
+
+msgid "SCP067_DLG3"
+msgstr "The Art is ready."
+
+msgid "TASK_067_TEST"
+msgstr "Check the output from SCP-067"

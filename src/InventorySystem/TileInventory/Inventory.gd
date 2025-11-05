@@ -22,6 +22,8 @@ func add_item(item_id: int):
 	if item_id >= game_data.items.size():
 		return
 	var item_prefab: InventorySlot = InventorySlot.new()
+	item_prefab.mouse_entered.connect(item_prefab._inside)
+	item_prefab.mouse_exited.connect(item_prefab._outside)
 	item_prefab.item_id = item_id
 	item_prefab.texture = game_data.items[item_id].texture_tiled
 	add_child(item_prefab)
@@ -49,6 +51,13 @@ func item_move(prefab: InventorySlot, pos: Vector2) -> bool:
 			return false
 	return true
 
+func has_item(id: int) -> bool:
+	for node in get_children():
+		if node is InventorySlot:
+			if node.item_id == id:
+				return true
+	return false
+
 ## Removes item
 func item_remove(item: InventorySlot, drop: bool) -> bool:
 	for i in _items:
@@ -60,6 +69,8 @@ func item_remove(item: InventorySlot, drop: bool) -> bool:
 				get_tree().root.get_node("Game/Items").add_child(pickable)
 				pass
 			_items.erase(i)
+			i.mouse_entered.disconnect(i._inside)
+			i.mouse_exited.disconnect(i._outside)
 			i.queue_free()
 			return true
 	print("No item for delete found")

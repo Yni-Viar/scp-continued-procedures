@@ -171,6 +171,19 @@ func finish_game(good_end: bool, reason: String):
 	$AnimationPlayer.play("condition_open")
 	$GameOverTimer.stop()
 
+func cutscene_anim(reverse: bool = false):
+	if reverse:
+		$AnimationPlayer.play_backwards("cutscene")
+	else:
+		$AnimationPlayer.play("cutscene")
+
+func dialogue(text: String):
+	$UI/Dialogue.text = text
+	for i in text.length():
+		$UI/Dialogue.visible_characters = i
+		await get_tree().physics_frame
+	$UI/Dialogue.visible_characters = -1
+
 func call_mtf():
 	if get_node("FoundationTask").has_task("task_ci") && mtf_cooldown <= 0.0:
 		spawn_wave_entity(0)

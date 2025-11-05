@@ -224,3 +224,18 @@ msgstr ""
 
 msgid "PLEASE_WAIT"
 msgstr ""
+
+msgid "SCP067_CANT_USE"
+msgstr ""
+
+msgid "SCP067_DLG1"
+msgstr ""
+
+msgid "SCP067_DLG2"
+msgstr ""
+
+msgid "SCP067_DLG3"
+msgstr ""
+
+msgid "TASK_067_TEST"
+msgstr ""

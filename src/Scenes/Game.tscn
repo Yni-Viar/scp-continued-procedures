@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=51 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_fgofq"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://b2lonnmtkdn4e" path="res://Assets/HUD/Touch/call_elevator.png" id="26_356ba"]
 [ext_resource type="Texture2D" uid="uid://c8y4oka7p08v6" path="res://UI/icon_192_dark.png" id="26_iyesh"]
 [ext_resource type="Texture2D" uid="uid://cx0pyayxian80" path="res://Assets/HUD/Touch/call_elevator_click.png" id="27_i4lct"]
+[ext_resource type="FontFile" uid="uid://df7jbkqjjvyuv" path="res://Assets/Fonts/Special_Elite_with_Cyrillic_by_Lomzz/SpecialElite.ttf" id="29_18uti"]
 [ext_resource type="PackedScene" uid="uid://o6rnnciwmwvn" path="res://GDsh/InGameConsole.tscn" id="30_i1pr2"]
 
 [sub_resource type="Animation" id="Animation_i1pr2"]
@@ -80,10 +81,25 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_18uti"]
+resource_name = "cutscene"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ConditionFadeIn:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4f4ik"]
 _data = {
 &"RESET": SubResource("Animation_i1pr2"),
-&"condition_open": SubResource("Animation_iyesh")
+&"condition_open": SubResource("Animation_iyesh"),
+&"cutscene": SubResource("Animation_18uti")
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71axn"]
@@ -124,9 +140,6 @@ script = ExtResource("1_7lihs")
 gamedata = ExtResource("2_fgofq")
 
 [node name="StaticPlayer" parent="." instance=ExtResource("3_bf53h")]
-camera_mode = 0
-current_camera_mode = 1
-target_puppet_path = ""
 
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
@@ -362,6 +375,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="Dialogue" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.528
+anchor_top = 0.753
+anchor_right = 0.528
+anchor_bottom = 0.753
+offset_left = -352.25598
+offset_top = -39.944
+offset_right = 351.74402
+offset_bottom = 40.056
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("29_18uti")
+theme_override_font_sizes/font_size = 24
 
 [node name="Condition" type="Panel" parent="UI"]
 visible = false

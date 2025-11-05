@@ -12,6 +12,7 @@ enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, C
 @export var resistance_scp178: bool = false
 @export var resistance_scp686: bool = false
 @export var torso_node_path: NodePath
+var scp_067_affected: bool = false
 
 var cuffed_players: Array[MovableNpc] = []
 var raycast: RayCast3D
@@ -186,7 +187,25 @@ func effect_manager_start(effect: String, strength: float):
 				get_node(armature_name + "/Skeleton3D/HeadAttachment/Marker3D").add_child(glasses)
 				await get_tree().create_timer(2.5).timeout
 				secondary_state = SecondaryState.NONE
-				
+		"Scp067":
+			if !get_parent().get_parent().get_node("UI/Inventory/Inventory").has_item(7):
+				get_tree().root.get_node("Game").dialogue("SCP067_CANT_USE")
+				await get_tree().create_timer(1.0).timeout
+				get_parent().get_parent().get_node("StatusEffects").remove_status_effect(get_parent().get_parent().get_node("StatusEffects").get_status_effect_index("Scp067"))
+				return
+			scp_067_affected = true
+			get_parent().get_parent().movement_freeze = true
+			get_tree().root.get_node("Game").cutscene_anim()
+			await get_tree().create_timer(3.0).timeout
+			get_tree().root.get_node("Game").dialogue("SCP067_DLG1")
+			await get_tree().create_timer(3.5).timeout
+			get_tree().root.get_node("Game").dialogue("SCP067_DLG2")
+			get_parent().get_parent().get_node("UI/Inventory/Inventory").item_remove_by_id(7, false)
+			get_parent().get_parent().get_node("UI/Inventory/Inventory").add_item(13)
+			await get_tree().create_timer(3.0).timeout
+			get_tree().root.get_node("Game").dialogue("SCP067_DLG3")
+			await get_tree().create_timer(1.0).timeout
+			get_parent().get_parent().get_node("StatusEffects").remove_status_effect(get_parent().get_parent().get_node("StatusEffects").get_status_effect_index("Scp067"))
 	effect_manager_start_custom(effect, strength)
 
 func effect_manager_start_custom(effect: String, strength: float):
@@ -213,6 +232,13 @@ func effect_manager_destroy(effect: String, strength: float):
 				get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").set_cull_mask_value(20, false)
 				for node in get_node(armature_name + "/Skeleton3D/HeadAttachment/Marker3D").get_children():
 					node.queue_free()
+		"Scp067":
+			if scp_067_affected:
+				get_parent().get_parent().movement_freeze = false
+				get_tree().root.get_node("Game").cutscene_anim(true)
+				get_tree().root.get_node("Game/FoundationTask").do_task("task_067")
+			scp_067_affected = false
+			get_tree().root.get_node("Game").dialogue("")
 	effect_manager_destroy_custom(effect, strength)
 
 func effect_manager_destroy_custom(effect: String, strength: float):

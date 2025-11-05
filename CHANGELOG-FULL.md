@@ -6,14 +6,20 @@
 - [ ] Clutter system - finish Christmas decorations.
 
 
-## v5.2.0
-### Not started
-### In progress
-- [ ] SCP-067
-### Done
-- [x] Fixed possibility on crash by adding out-of-bound item id.
-- [x] Implemented removing status effects
-- [x] SCP-178 (WANTED 3D MODEL FOR SCP-178-1)
+## v5.2.0 (2025.11.05)
+### New SCP items
+- SCP-067 + task
+- SCP-178 (WANTED 3D MODEL FOR SCP-178-1)
+### Cutscene system (used by SCP-067)
+- Added cutscene and dialogue system
+### Bugfixes and other
+- Fixed possibility on crash by adding out-of-bound item id.
+- Fixed documents falling through floor
+- Fixed MTF error spam due to missing animation
+- Bugfix: clicking on the item in the Inventory, click ALL the items...
+- Implemented removing status effects
+- Now you cannot enter Scientists' offices (again)
+
 
 ## v5.1.3 (Hotfix, 2025.11.02)
 - Fix first-start crash (a regression from 5.0.0)
