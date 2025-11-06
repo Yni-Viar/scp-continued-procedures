@@ -12,15 +12,15 @@ config_version=5
 
 config/name="SCP: Containment Procedures"
 config/description="A Facility simulator"
-config/version="5.2.0"
+config/version="5.2.1"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="SCPContPr"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-boot_splash/image="uid://ca78sce3pl6wl"
 config/icon="uid://c7yat1lfp8emn"
+boot_splash/image="uid://ca78sce3pl6wl"
 
 [audio]
 
@@ -151,5 +151,6 @@ common/physics_interpolation=true
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
 lightmapping/denoising/denoiser=1
