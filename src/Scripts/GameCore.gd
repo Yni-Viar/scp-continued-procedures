@@ -26,6 +26,9 @@ var mtf_cooldown: float = 10.0
 ## Protagonist tracker
 var protagonist: MovableNpc
 
+
+var showable_res: String = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
@@ -183,6 +186,20 @@ func dialogue(text: String):
 		$UI/Dialogue.visible_characters = i
 		await get_tree().physics_frame
 	$UI/Dialogue.visible_characters = -1
+
+func showable(resource_path: String):
+	if (resource_path != null && !resource_path.is_empty()) && resource_path != showable_res:
+		$UI/Showable.show()
+		var res = load(resource_path)
+		if res is Texture2D:
+			$UI/Showable.texture = res
+			showable_res = resource_path
+		else:
+			$UI/Showable.hide()
+			showable_res = ""
+	else:
+		$UI/Showable.hide()
+		showable_res = ""
 
 func call_mtf():
 	if get_node("FoundationTask").has_task("task_ci") && mtf_cooldown <= 0.0:

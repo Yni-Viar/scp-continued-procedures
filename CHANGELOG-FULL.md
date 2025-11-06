@@ -5,6 +5,10 @@
 ## v5.3.0
 - [ ] Clutter system - finish Christmas decorations.
 
+## v5.2.1 (2025.11.06)
+- Fix duplicate item click. (this commit was made on Android editor 🙂)
+- Fix crash when removing an invalid status effect (reproducible at 5.2.0 by using SCP-067 too fast).
+- Add lore to SCP-067 + new mechanic to the game.
 
 ## v5.2.0 (2025.11.05)
 ### New SCP items

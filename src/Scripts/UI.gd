@@ -41,7 +41,6 @@ func _input(event: InputEvent) -> void:
 func end_screen_show():
 	$Condition.show()
 
-
 func _on_back_pressed() -> void:
 	var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
 	get_tree().root.add_child(menu)
