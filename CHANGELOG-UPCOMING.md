@@ -9,6 +9,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-104
 - [ ] SCP-432 (with dimension)
 - [ ] SCP-647
+- [ ] SCP-713
 - [ ] SCP-813
 - [ ] SCP-814
 - [ ] SCP-864 (probably, latest Nalka version, with dimension)

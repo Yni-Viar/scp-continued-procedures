@@ -17,6 +17,7 @@ Included SCPs:
 - SCP-178
 - SCP-266
 - SCP-347
+- SCP-446
 - SCP-458
 - SCP-650
 - SCP-686

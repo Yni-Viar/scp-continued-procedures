@@ -5,6 +5,7 @@ enum ObjectType {static_prefab, animated, ragdoll}
 @export var state: String
 @export var type: ObjectType = ObjectType.static_prefab
 @export var armature_name: String = "Armature"
+@export var seconds_before_despawn: float = 30.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,8 +14,9 @@ func _ready():
 			set_state(state)
 		ObjectType.ragdoll:
 			get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()
-	await get_tree().create_timer(30.0).timeout
-	despawn()
+	if seconds_before_despawn > 0.05:
+		await get_tree().create_timer(30.0).timeout
+		despawn()
 
 func set_state(s):
 	if get_node("AnimationPlayer").current_animation != s:
