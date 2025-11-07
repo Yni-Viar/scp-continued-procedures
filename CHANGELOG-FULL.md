@@ -4,7 +4,12 @@ This list contains all features, added in the game, or will be added in upcoming
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.3.0
+### Not started
+### In progress
 - [ ] Clutter system - finish Christmas decorations.
+### Done
+- [x] Added footstep sounds to Guard, Agent and Chaos Insurgent.
+- [x] Added falling snow VFX for Christmas season, make rain VFX available on all regular seasons, except Halloween and Christmas.
 
 ## v5.2.1 (2025.11.06)
 - Fix duplicate item click. (this commit was made on Android editor 🙂)
