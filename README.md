@@ -11,6 +11,7 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 Included SCPs:
 
 - SCP-023
+- SCP-067
 - SCP-162
 - SCP-173
 - SCP-178
