@@ -1,6 +1,7 @@
 # SCP: Containing Procedures
 
-**⚠️ new versions will have different codebase, this plan will contain only 5.x.x changes**
+This list contains all features, added in the game, or will be added in upcoming version, that is in development.
+For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.3.0
 - [ ] Clutter system - finish Christmas decorations.
