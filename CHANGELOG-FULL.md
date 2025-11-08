@@ -6,9 +6,9 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ## v5.3.0
 ### Not started
 ### In progress
-- [ ] SCP-446
 - [ ] Clutter system - finish Christmas decorations.
 ### Done
+- [x] SCP-446
 - [x] Where did Octobergine Avo go?
 - [x] Added footstep sounds to Guard, Agent and Chaos Insurgent.
 - [x] Added falling snow VFX for Christmas season, make rain VFX available on all regular seasons, except Halloween and Christmas.

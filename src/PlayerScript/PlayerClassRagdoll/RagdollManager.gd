@@ -15,8 +15,14 @@ func _ready():
 		ObjectType.ragdoll:
 			get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()
 	if seconds_before_despawn > 0.05:
-		await get_tree().create_timer(30.0).timeout
+		await get_tree().create_timer(seconds_before_despawn).timeout
 		despawn()
+	elif type == ObjectType.ragdoll:
+		var timer: Timer = Timer.new()
+		add_child(timer)
+		timer.timeout.connect(check_distance)
+		timer.wait_time = 2.0
+		timer.start()
 
 func set_state(s):
 	if get_node("AnimationPlayer").current_animation != s:
@@ -24,5 +30,11 @@ func set_state(s):
 
 func despawn():
 	if type == ObjectType.ragdoll:
-		get_node(armature_name + "/Skeleton3D").physical_bones_stop_simulation()
+		get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_stop_simulation()
 	queue_free()
+
+func check_distance():
+	if global_position.distance_to(get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").global_position) > 64.0:
+		get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_stop_simulation()
+	else:
+		get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()

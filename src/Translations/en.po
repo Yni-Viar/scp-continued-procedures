@@ -293,3 +293,8 @@ msgstr "The Art is ready."
 
 msgid "TASK_067_TEST"
 msgstr "Check the output from SCP-067"
+
+msgid "446_CAUTION"
+msgstr ""
+"Personnel should remember,\n"
+"that SCP-446 is alive."
