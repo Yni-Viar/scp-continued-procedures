@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cugqss4yqxcj"]
+[gd_scene load_steps=13 format=4 uid="uid://cugqss4yqxcj"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_er6q1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_oifw5"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c4rphn1mij8kp" path="res://Assets/ExternalModels/pipe_1.tscn" id="4_8p0gb"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="6_a6lec"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="7_1uj8l"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_1uj8l"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(3.26, -0.741151, -1.16632, 2.51, -0.741151, -2.16632, -2.49, -0.741151, -2.16632, -3.24, -0.741151, -1.16632, -1.49, -0.741151, 2.58368, 1.26, -0.741151, 2.83368, -9.74, -0.741151, -1.16632, -9.74, -0.741151, 1.33368, -2.74, -0.741151, 1.33368, 9.76, -0.741151, 1.33368, 9.76, -0.741151, -1.16632, 2.76, -0.741151, 1.33368, -1.24, -0.741151, 9.83368, 1.26, -0.741151, 9.83368)
@@ -157,3 +158,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19572522, -1.3980975, -2.7
 visible = false
 script = ExtResource("6_a6lec")
 current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("8_1uj8l")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.17990112, -2.0461187, -1.3837657)

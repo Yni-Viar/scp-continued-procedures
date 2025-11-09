@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://dk5tshb1f2wsi"]
+[gd_scene load_steps=17 format=4 uid="uid://dk5tshb1f2wsi"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_n8bhf"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_4w4vd"]
@@ -9,6 +9,7 @@
 [ext_resource type="LightmapGIData" uid="uid://di8iii0836774" path="res://Assets/Rooms/room2c/Lm/room2c_special.lmbake" id="6_knu6h"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_5augc"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_tsku5"]
+[ext_resource type="PackedScene" uid="uid://xcscr0xn5o6o" path="res://Assets/ExternalModels/christmas_tree.tscn" id="10_5augc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(-3.32542, -0.769568, 6.99822, -3.32542, -0.769568, 9.74822, 3.42458, -0.769568, 9.74822, 3.42458, -0.769568, 6.74822, 6.67458, -0.769568, -5.00178, -4.07542, -0.769568, -5.00178, -4.82542, -0.769568, -4.00178, -4.82542, -0.769568, 6.74822, 6.67458, -0.769568, 3.49822, 9.67458, -0.769568, 3.49822, 9.67458, -0.769568, -3.25178, 6.92458, -0.769568, -3.25178)
@@ -366,7 +367,7 @@ mesh = SubResource("ArrayMesh_74ork")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 4.80128, -1.24115, -5.91178)
+transform = Transform3D(-1.19209e-07, 0, 1, 0, 1, 0, -1, 0, -1.19209e-07, 4.8166237, -1.24115, -5.91178)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_5k2e4")
 skeleton = NodePath("")
@@ -422,3 +423,6 @@ transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.41421
 visible = false
 script = ExtResource("8_5augc")
 current_season = 5
+
+[node name="ChristmasTree" parent="Seasonal/Christmas" instance=ExtResource("10_5augc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6472697, -1.2568237, -2.259194)

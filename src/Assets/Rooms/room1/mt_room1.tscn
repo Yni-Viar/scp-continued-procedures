@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://jj2lslwnb2os"]
+[gd_scene load_steps=17 format=4 uid="uid://jj2lslwnb2os"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_vn67m"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_0ovdr"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="6_q0cx4"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="10_q0cx4"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="11_xvau2"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="12_xvau2"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-6.33751, -0.753305, -6.12021, -8.83751, -0.753305, -6.12021, -6.08751, -0.753305, -5.62021, -1.33751, -0.753305, -8.87021, -1.83751, -0.753305, -8.87021, -2.08751, -0.753305, -8.12021, -1.08751, -0.753305, -7.87021, 8.91249, -0.753305, 2.87979, 7.91249, -0.753305, 0.129791, 5.41249, -0.753305, -2.62021, 1.66249, -0.753305, 2.87979, -8.83751, -0.753305, -2.62021, -8.83751, -0.753305, -1.87021, -8.08751, -0.753305, -1.62021, -6.08751, -0.753305, -2.87021, 0.662485, -0.753305, -8.87021, 0.162485, -0.753305, -8.87021, -0.0875149, -0.753305, -7.87021, 0.912485, -0.753305, -7.62021, -1.58751, -0.753305, 2.87979, -3.08751, -0.753305, -8.12021, -1.33751, -0.753305, 9.62979, 1.16249, -0.753305, 9.62979, 1.16249, -0.753305, 3.37979, 8.91249, -0.753305, 0.379791, -8.08751, -0.753305, -0.620209, -3.33751, -0.753305, -8.87021, -6.08751, -0.753305, -8.87021, -8.83751, -0.753305, 2.87979, 8.91249, -0.753305, -5.62021, 8.41249, -0.753305, -5.62021, 8.41249, -0.753305, -2.37021, 8.91249, -0.753305, -1.37021, 7.91249, -0.753305, -1.12021, 5.41249, -0.753305, -5.37021, 1.91249, -0.753305, -7.62021, -8.83751, -0.753305, -0.370209, 6.16249, -0.753305, -5.62021, 6.16249, -0.753305, -8.87021, 2.16249, -0.753305, -8.87021, -8.33751, 1.2467, -8.37021, -8.33751, 1.2467, -7.12021, -7.08751, 1.2467, -7.12021, -7.08751, 1.2467, -8.37021, 6.91249, 1.2467, -7.87021, 6.91249, 1.2467, -6.62021, 8.16249, 1.2467, -6.62021, 8.16249, 1.2467, -7.87021, -8.33751, 1.2467, -4.87021, -8.33751, 1.2467, -3.62021, -7.08751, 1.2467, -3.62021, -7.08751, 1.2467, -4.87021, 6.41249, 1.2467, -4.62021, 6.41249, 1.2467, -3.37021, 7.66249, 1.2467, -3.37021, 7.66249, 1.2467, -4.62021)
@@ -186,3 +187,11 @@ current_season = 6
 
 [node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("11_xvau2")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.28144908, -1.2532705, -6.1367216)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("10_q0cx4")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("12_xvau2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.38102385, -1.7638257, 0.8278222)

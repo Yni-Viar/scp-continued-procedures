@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://3nk4aude758p"]
+[gd_scene load_steps=19 format=4 uid="uid://3nk4aude758p"]
 
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_oo7ax"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_2i7p4"]
@@ -8,6 +8,7 @@
 [ext_resource type="LightmapGIData" uid="uid://cud8niyltgnro" path="res://Assets/Rooms/room2/Lm/room2_walkway_redux.lmbake" id="6_2i7p4"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="6_yjocq"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_k5spb"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="10_0t1ol"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="10_dhx8w"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
@@ -623,7 +624,7 @@ data = PackedVector3Array(-7.0211, -2.1155, -10.2273, -7.0038, 5.1301, 10.2338, 
 navigation_mesh = SubResource("NavigationMesh_swyoh")
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.16508, -1.19374, 7.65616)
+transform = Transform3D(1, 0, 0, 0, 1.0085899, 0, 0, 0, 1, 7.16508, -1.269301, 7.6561594)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_yjocq")
 skeleton = NodePath("")
@@ -635,7 +636,7 @@ mesh = SubResource("ArrayMesh_tg3nw")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -7.12685, -1.19374, -7.668)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1.0085899, 0, 1.50996e-07, 0, -1, -7.12685, -1.255059, -7.668)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_kfnw8")
 skeleton = NodePath("")
@@ -725,3 +726,9 @@ transform = Transform3D(-0.70710677, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, -0.70
 visible = false
 script = ExtResource("8_k5spb")
 current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("10_0t1ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6993923, 0.14377522, 0.71636677)
+
+[node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("10_0t1ol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5500507, 0.14377522, 0.71636677)

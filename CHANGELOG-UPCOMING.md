@@ -16,7 +16,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-939 (3d model borrowed from SCP: Unity, blocked until 2026-07-01 because of popular SCP restriction)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] SCP-2471 (3d model borrowed from AmbientCG, blocked until 2026-01-01 because of 4-digit-SCP restriction)
-- [ ] Add female models for D-Class, Scientists and Guards (since 4.0, there is a female Site Director)
+- [ ] Add female models for D-Class, Scientists and Guards
 
 ## v6.0.0 plan
 ### Addon support

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://kb5so0w2xj5k"]
+[gd_scene load_steps=26 format=4 uid="uid://kb5so0w2xj5k"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_yy1am"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_kymhv"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="10_43vmf"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="10_u2gtq"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="12_kymhv"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="13_u2gtq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-0.33751488, -0.7344861, -2.336667, 0.41248512, -0.7344861, -2.586667, 0.41248512, -0.7344861, -5.586667, -5.837515, -0.7344861, -5.586667, -6.087515, -0.7344861, -8.836667, -6.837515, -0.7344861, -8.836667, -8.837515, -0.7344861, -6.836667, -8.837515, -0.7344861, -2.586667, -7.087515, -0.7344861, -2.336667, -7.337515, -0.7344861, -0.83666706, -8.837515, -0.7344861, -0.83666706, -8.837515, -0.7344861, 3.663333, -6.587515, -0.7344861, 5.913333, -0.33751488, -0.7344861, -1.3366671, -1.8375149, -0.7344861, 5.913333, 7.912485, -0.7344861, -6.086667, 8.162485, -0.7344861, -2.586667, 8.912485, -0.7344861, -2.586667, 8.912485, -0.7344861, -5.086667, 8.662485, -0.7344861, -6.586667, 1.1624851, -0.7344861, -5.836667, 4.912485, -0.7344861, -2.586667, 5.162485, -0.7344861, -6.086667, 6.412485, -0.7344861, -8.836667, 1.1624851, -0.7344861, -8.836667, 6.162485, -0.7344861, -4.836667, 6.162485, -0.7344861, -3.336667, 6.912485, -0.7344861, -3.336667, 6.912485, -0.7344861, -4.836667, 1.6624851, -0.7344861, 5.663333, 2.6624851, -0.7344861, 1.4133329, 2.4124851, -0.7344861, -0.83666706, -0.08751488, -0.7344861, -0.83666706, 1.1624851, -0.7344861, 6.163333, -1.3375149, -0.7344861, 6.163333, -1.3375149, -0.7344861, 9.663333, 1.1624851, -0.7344861, 9.663333, 6.662485, -0.7344861, 5.663333, 8.662485, -0.7344861, 3.663333, 8.662485, -0.7344861, 1.4133329)
@@ -263,6 +264,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.5923395, -1.2344874, -0.39
 
 [node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("12_kymhv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8154263, -1.2344893, -8.205961)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("10_43vmf")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("13_u2gtq")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 0.075865746, -1.7819049, -6.2482333)
+
+[node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("13_u2gtq")]
+transform = Transform3D(-0.41346997, 0, -0.91051775, 0, 1, 0, 0.91051775, 0, -0.41346997, 0.075865746, -1.7819049, -6.2482333)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.28538615, 0)

@@ -3,15 +3,16 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.3.0
-### Not started
-### In progress
-- [ ] Clutter system - finish Christmas decorations.
-### Done
-- [x] SCP-446
-- [x] Where did Octobergine Avo go?
-- [x] Added footstep sounds to Guard, Agent and Chaos Insurgent.
-- [x] Added falling snow VFX for Christmas season, make rain VFX available on all regular seasons, except Halloween and Christmas.
+## v5.3.0 - (? update, 2025.11.09)
+### New SCP
+- SCP-446
+### ? changes
+- Clutter system - finish Christmas decorations.
+- Where did Octobergine Avo go?
+- Added falling snow VFX for Christmas season, make rain VFX available on all regular seasons, except Halloween and Christmas.
+### Bugfixes and other
+- Added footstep sounds to Guard, Agent and Chaos Insurgent.
+- Fixed hole in the wall in some Research Zone rooms. 
 
 ## v5.2.1 (2025.11.06)
 - Fix duplicate item click. (this commit was made on Android editor 🙂)
@@ -103,7 +104,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Removed time scale after finish game
 - Fixed situation, where NPCs following player, that went to SCP-162, were playing "walk" animation, while stay.
 
-## v4.3.0 **(⚠️ Last version, that natively supports Windows 7-8.0!!!)**
+## v4.3.0 (2025.08.23, **⚠️ Last version, that natively supports Windows 7-8.0!!!**)
 
 - Added WC rooms for Maintenance and Research zones.
 - Returned fully-functional SCP-109 - it can be used as healing item, due to new API. ~~Use the cube in SCP-914 to make it with 33% chance.~~

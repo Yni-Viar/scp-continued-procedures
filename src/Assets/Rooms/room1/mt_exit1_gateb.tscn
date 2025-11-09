@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cvwbiyb4cbtok"]
+[gd_scene load_steps=26 format=4 uid="uid://cvwbiyb4cbtok"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_g6en1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_jpe88"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="13_niiig"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="13_skdfc"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="14_skdfc"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_skdfc"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x844e"]
 vertices = PackedVector3Array(4.6197834, -0.75080895, -5.0670853, 5.1197834, -0.75080895, -5.3170853, 5.1197834, -0.75080895, -6.0670853, 4.6197834, -0.75080895, -6.3170853, -2.3802166, -0.75080895, -7.5670853, -2.3802166, -0.75080895, -0.81708527, -8.880217, -0.75080895, -0.31708527, -8.880217, -0.75080895, 2.6829147, -1.6302166, -0.75080895, 2.6829147, -4.8802166, -0.75080895, -9.067085, -4.8802166, -0.75080895, -7.8170853, 8.869783, -0.75080895, 2.6829147, 8.869783, -0.75080895, -0.31708527, 4.6197834, -0.75080895, -0.56708527, 1.6197834, -0.75080895, 2.6829147, -1.3802166, -0.75080895, 9.682915, 1.3697834, -0.75080895, 9.682915, 4.6197834, -0.75080895, -9.067085)
@@ -277,6 +278,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9731789, 0.24922574, -6.10
 
 [node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("14_skdfc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.332854, 0.24922669, -2.1996164)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("13_skdfc")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("16_skdfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.036688, -1.776686, -4.5029864)
+
+[node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("16_skdfc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1510239, -1.776686, -4.5029864)
 
 [connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
 [connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]

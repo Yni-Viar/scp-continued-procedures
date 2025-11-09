@@ -661,13 +661,13 @@ mesh = SubResource("ArrayMesh_epfj1")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1926, -1.19374, 7.65616)
+transform = Transform3D(1, 0, 0, 0, 1.009, 0, 0, 0, 1, 10.1926, -1.2906283, 7.65616)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_v5r88")
 skeleton = NodePath("")
 
 [node name="site19_wall_cb_modern_001" type="MeshInstance3D" parent="NavigationRegion3D"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -10.1365, -1.19374, -7.668)
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1.009, 0, 1.509958e-07, 0, -1, -10.1365, -1.2906283, -7.668)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ytcod")
 skeleton = NodePath("")

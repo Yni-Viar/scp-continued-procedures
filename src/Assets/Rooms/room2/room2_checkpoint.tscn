@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://nhxrp1vckqu8"]
+[gd_scene load_steps=28 format=4 uid="uid://nhxrp1vckqu8"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_54lxd"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_s3mxu"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="12_bj63s"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="15_i5e20"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="16_h2w75"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_h2w75"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
 vertices = PackedVector3Array(-9.300285, -0.7695668, -9.485641, -9.300285, -0.7695668, -0.7356405, -6.5502853, -0.7695668, -0.7356405, 6.4497147, -0.7695668, -0.7356405, 9.449715, -0.7695668, -0.7356405, 9.449715, -0.7695668, -9.485641, -6.3002853, -0.7695668, 1.5143595, 6.1997147, -0.7695668, 1.5143595, -9.300285, 1.2304332, 0.26435947, -9.300285, 1.2304332, 6.0143595, -7.3002853, 1.2304332, 6.0143595, -7.3002853, 1.2304332, 0.26435947, 7.1997147, 1.2304332, 0.26435947, 7.1997147, 1.2304332, 6.0143595, 9.449715, 1.2304332, 6.0143595, 9.449715, 1.2304332, 0.26435947, -6.3002853, -0.7695668, 6.7643595, -9.300285, -0.7695668, 7.0143595, -9.300285, -0.7695668, 9.764359, 9.449715, -0.7695668, 9.764359, 9.449715, -0.7695668, 7.0143595, 6.1997147, -0.7695668, 6.7643595)
@@ -300,3 +301,11 @@ transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49
 
 [node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("16_h2w75")]
 transform = Transform3D(0.7071068, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071068, -8.673354, 0.2292887, 1.6285892)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("15_i5e20")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("17_h2w75")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.012556076, -0.6757479, -3.2576213)
