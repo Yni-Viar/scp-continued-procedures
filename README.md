@@ -2,7 +2,7 @@
 
 ## ⚠️ This game currently is poorly maintained.
 
-Currently, I (Yni) pause the development of 6.0.0 because of the risk of burn-out.
+Currently, I (Yni) take a break from developing 6.0.0 because of the risk of burn-out.
 5.3.x will be still updated.
 
 ## About
