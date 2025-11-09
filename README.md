@@ -1,4 +1,8 @@
-# SCP: Containment Procedures (Classic Reborn)
+# SCP: Containment Procedures (Reborn)
+
+## ⚠️ As of 2025.11.09, only 5.x.x will be developed.
+
+The reason is on `main` branch.
 
 ## About
 
