@@ -3,6 +3,15 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v6.0.0 (release is NOT soon.)
+### Addon support
+- [ ] Addon support.
+### Story mode (unfinished)
+- [ ] Move Casual mode as story, rename Story mode button as Play.
+- [ ] Story mode: Pre-configured round mechanic
+- [ ] Story mode: Custom "escape" scenario - finish task.
+- [ ] Story mode: lore (in progress)
+
 ## v5.3.0 - (? update, 2025.11.09)
 ### New SCP
 - SCP-446

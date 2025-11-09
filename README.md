@@ -1,4 +1,9 @@
-# SCP: Containment Procedures (Classic Reborn)
+# SCP: Containment Procedures (Reborn)
+
+## ⚠️ This game currently is poorly maintained.
+
+Currently, I (Yni) pause the development of 6.0.0 because of the risk of burn-out.
+5.3.x will be still updated.
 
 ## About
 
