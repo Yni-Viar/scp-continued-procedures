@@ -7,14 +7,17 @@ enum ObjectType {static_prefab, animated, ragdoll}
 @export var armature_name: String = "Armature"
 @export var seconds_before_despawn: float = 30.0
 
+var update_timer: float = 1.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	update_timer = get_physics_process_delta_time()
 	match type:
 		ObjectType.animated:
 			set_state(state)
-		ObjectType.ragdoll:
-			get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()
 	if seconds_before_despawn > 0.05:
+		if type == ObjectType.ragdoll:
+			get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()
 		await get_tree().create_timer(seconds_before_despawn).timeout
 		despawn()
 	elif type == ObjectType.ragdoll:
@@ -34,7 +37,8 @@ func despawn():
 	queue_free()
 
 func check_distance():
-	if global_position.distance_to(get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").global_position) > 64.0:
-		get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_stop_simulation()
-	else:
-		get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D").physical_bones_start_simulation()
+	var ragdoll_simulator: PhysicalBoneSimulator3D = get_node(armature_name + "/Skeleton3D/PhysicalBoneSimulator3D")
+	if global_position.distance_to(get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").global_position) > 64.0 && ragdoll_simulator.is_simulating_physics():
+		ragdoll_simulator.physical_bones_stop_simulation()
+	elif global_position.distance_to(get_tree().root.get_node("Game/StaticPlayer/Head/Camera3D").global_position) <= 64.0 && !ragdoll_simulator.is_simulating_physics():
+		ragdoll_simulator.physical_bones_start_simulation()

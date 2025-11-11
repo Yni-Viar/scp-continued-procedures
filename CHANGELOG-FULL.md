@@ -3,6 +3,12 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.3.1 (2025.11.11)
+- Fixed testroom texture.
+- Fixed SCP-914 position.
+- Added Christmas decoration to SCP-162 chamber.
+- Fixed a typo in RagdollManager.
+
 ## v5.3.0 - (? update, 2025.11.09)
 ### New SCP
 - SCP-446
