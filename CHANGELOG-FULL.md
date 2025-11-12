@@ -11,6 +11,11 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Story mode: lore (in progress)
+## v5.3.1 (2025.11.11)
+- Fixed testroom texture.
+- Fixed SCP-914 position.
+- Added Christmas decoration to SCP-162 chamber.
+- Fixed a typo in RagdollManager.
 
 ## v5.3.0 - (? update, 2025.11.09)
 ### New SCP
