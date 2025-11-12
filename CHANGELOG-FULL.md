@@ -3,6 +3,9 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.3.2
+- [x] Make christmas lights have random color
+
 ## v5.3.1 (2025.11.11)
 - Fixed testroom texture.
 - Fixed SCP-914 position.
