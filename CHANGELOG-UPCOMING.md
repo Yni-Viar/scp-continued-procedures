@@ -14,6 +14,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-814
 - [ ] SCP-864 (probably, latest Nalka version, with dimension)
 - [ ] SCP-939 (3d model borrowed from SCP: Unity, blocked until 2026-07-01 because of popular SCP restriction)
+- [ ] SCP-1032 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] SCP-2028 (blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] SCP-2471 (3d model borrowed from AmbientCG, blocked until 2026-01-01 because of 4-digit-SCP restriction)
 - [ ] Add female models for D-Class, Scientists and Guards
