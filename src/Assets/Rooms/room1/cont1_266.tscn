@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bw050fidp6hg0"]
+[gd_scene load_steps=31 format=4 uid="uid://bw050fidp6hg0"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_i5u11"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_iar28"]
@@ -14,6 +14,9 @@
 [ext_resource type="Texture2D" uid="uid://brxtgl2ekhirf" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_diff_2k.jpg" id="9_t06pc"]
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="10_vygn4"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="11_piepq"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="15_ggk85"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="16_t06pc"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_vygn4"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ywj7"]
 vertices = PackedVector3Array(-7.91106, -0.770643, -8.8476, -7.91106, -0.770643, -2.3476, -4.41106, -0.270643, -2.5976, -5.11106, -0.770643, -3.8476, -5.57772, -0.770643, -2.51426, -4.16106, -0.0206428, -0.597595, 9.33894, 6.47936, -0.597595, 5.21394, 6.47936, -1.1976, 5.28894, 6.47936, -0.597595, 9.33894, 6.47936, -8.8476, 5.02644, 6.47936, -8.8476, -3.59856, -0.0206428, -8.8476, -5.03606, -0.770643, -8.8476, -3.41106, 6.47936, 1.4024, -3.41106, 6.47936, 9.6524, 9.33894, 6.47936, 9.6524, 9.33894, 6.47936, 1.1524, -4.16106, -0.770643, 5.1524, -7.91106, -0.770643, 5.6524, -7.91106, -0.770643, 9.6524, 9.33894, -0.770643, 1.4024, -4.16106, -0.770643, 1.4024, 9.33894, -0.770643, 9.6524)
@@ -429,6 +432,25 @@ script = ExtResource("7_idrcq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scp266Task"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27475, -0.924316, -0.10974)
 shape = SubResource("BoxShape3D_0xjkt")
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("15_ggk85")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("16_t06pc")]
+transform = Transform3D(1.299038, 0, -0.75, 0, 1.5, 0, 0.75, 0, 1.299038, 8.72255, -1.2612566, 1.8548342)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8323898, 9.217535)
+visible = false
+script = ExtResource("15_ggk85")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("17_vygn4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.5404744, -3.562223, 0.82782173)
 
 [connection signal="body_entered" from="Scp266Task" to="Scp266Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp266Task" to="Scp266Task" method="_on_body_exited"]

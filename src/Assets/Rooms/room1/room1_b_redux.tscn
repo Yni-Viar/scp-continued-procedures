@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://b8ov0fbc5m23w"]
+[gd_scene load_steps=31 format=4 uid="uid://b8ov0fbc5m23w"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_1vekj"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_jldi2"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="11_4hffe"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="12_xsx68"]
 [ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="14_4rq04"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="15_g41ma"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="16_4hffe"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_xsx68"]
+[ext_resource type="PackedScene" uid="uid://xcscr0xn5o6o" path="res://Assets/ExternalModels/christmas_tree.tscn" id="18_4rq04"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(2.0897, -0.769567, 0.97853, 2.0897, -0.769567, -6.27147, -6.6603, -0.769567, -6.27147, -6.6603, -0.769567, 1.22853, 4.0897, -0.769567, 0.97853, 8.3397, -0.769567, 1.22853, 8.3397, -0.769567, -6.27147, 4.0897, -0.769567, -6.27147, 2.5897, -0.769567, 9.72853, 2.5897, -0.769567, 2.72853, 2.0897, -0.769567, 2.47853, -6.6603, -0.769567, 9.72853, 4.0897, -0.769567, 2.47853, 8.3397, -0.769567, 9.47853)
@@ -650,9 +654,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_ccqsl")
 
-[node name="GeneratorSpawn" type="Marker3D" parent="." groups=["GeneratorSpawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.85387, 1.69374, -6.93311)
-
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
 
@@ -711,3 +712,25 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.746
 
 [node name="steel_frame_shelves_01_2k2" parent="." instance=ExtResource("14_4rq04")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64548, -1.25183, -6.38039)
+
+[node name="Seasonal" type="Node3D" parent="."]
+
+[node name="Halloween" type="Node3D" parent="Seasonal"]
+visible = false
+script = ExtResource("15_g41ma")
+current_season = 6
+
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("16_4hffe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3735423, -1.2612566, -5.9566855)
+
+[node name="Christmas" type="Node3D" parent="Seasonal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8323898, 9.217535)
+visible = false
+script = ExtResource("15_g41ma")
+current_season = 5
+
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("17_xsx68")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7921705, -3.671036, -7.034262)
+
+[node name="ChristmasTree" parent="Seasonal/Christmas" instance=ExtResource("18_4rq04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.290313, -5.116476, -14.914331)

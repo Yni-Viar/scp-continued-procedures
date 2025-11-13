@@ -3,8 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.3.2
-- [x] Make christmas lights have random color
+## v5.3.2 (2025.11.13)
+- Make christmas lights have random color
+- Add lightmap to Entrance zone.
+- Add seasonal clutter to SCP-266 and Class-D containment chamber and unused testroom (both Halloween and Christmas ones)
 
 ## v5.3.1 (2025.11.11)
 - Fixed testroom texture.
