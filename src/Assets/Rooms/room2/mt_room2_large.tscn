@@ -293,6 +293,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.67905, 1.4047, 1.9601)
 quality = 0
 bounces = 1
 bounce_indirect_energy = 1.5
+directional = true
 texel_scale = 0.5
 light_data = ExtResource("11_ff0m3")
 

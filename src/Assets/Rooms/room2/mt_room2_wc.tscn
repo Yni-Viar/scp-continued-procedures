@@ -177,6 +177,8 @@ mesh = SubResource("BoxMesh_ukw1m")
 quality = 0
 bounces = 1
 bounce_indirect_energy = 1.5
+directional = true
+interior = true
 texel_scale = 0.5
 light_data = ExtResource("6_4bu8b")
 

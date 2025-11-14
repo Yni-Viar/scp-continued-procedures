@@ -4,6 +4,13 @@
 
 The reason is on `main` branch.
 
+## How to build
+
+### ⚠️ [Godot 4.5.1 with lightmap specular (a custom fork)](https://github.com/Yni-Viar/GDCustomBuilds/tree/4.5-specular) is REQUIRED for SCP: Containment Procedures 5.x.x, beginning with 5.4.0.
+
+1. [Manually build Godot editor and templates (select your platform to compile)](https://docs.godotengine.org/en/4.5/engine_details/development/compiling/)
+2. Project -> Export -> build the game (you need to replace templates to your compiled ones, NOT the regular stable release)
+
 ## About
 
 Do your daily job at Site-[REDACTED].

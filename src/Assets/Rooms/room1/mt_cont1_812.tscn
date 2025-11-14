@@ -556,6 +556,7 @@ spot_angle = 38.066
 quality = 0
 bounces = 1
 bounce_indirect_energy = 1.5
+directional = true
 texel_scale = 0.25
 light_data = ExtResource("11_idhtc")
 

@@ -123,6 +123,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90571, 1.41002, -2.43104)
 quality = 0
 bounces = 1
 bounce_indirect_energy = 1.5
+directional = true
+interior = true
 texel_scale = 0.5
 light_data = ExtResource("3_irgxd")
 

@@ -340,6 +340,8 @@ distance_fade_enabled = true
 distance_fade_begin = 24.0
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+directional = true
+texel_scale = 0.5
 light_data = ExtResource("6_bh5mh")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]

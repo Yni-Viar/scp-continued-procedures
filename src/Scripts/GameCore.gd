@@ -42,6 +42,7 @@ func _ready() -> void:
 	# Apply settings
 	# Enable or disable glow
 	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
+	#$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
 	## Enable/disable reflection probes (cubemap)
 	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
 		if node is ReflectionProbe:
