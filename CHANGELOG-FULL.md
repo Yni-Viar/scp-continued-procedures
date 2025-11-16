@@ -3,6 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.3.3 (2025.11.16)
+
+- backport changes from 5.4.1 to 5.3.x
+
 ## v5.3.2 (2025.11.13)
 - Make christmas lights have random color
 - Add lightmap to Entrance zone.
