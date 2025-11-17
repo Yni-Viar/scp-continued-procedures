@@ -31,6 +31,7 @@ var showable_res: String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
