@@ -3,11 +3,22 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.4.1 (hotfix, 2025.11.14)
+## v5.3.4 and v5.4.2 (2025.11.17)
+
+- Display GPU FPS to determine real FPS (used from Godot Engine code)
+- Fix rz_exit1_gatea model.
+
+## v5.3.3 (2025.11.16)
+
+- Backport of 5.4.1 changes.
+
+## v5.4.1 (2025.11.14)
+
 - Fixed some Research Zone rooms having different door sizes.
 - Changed room spawn order in Research zone - instead of having too much Class-D chambers, they become mandatory to spawn and become single.
 
-## v5.4.0 (Graphics overhaul, 2025.11.14)
+## v5.4.0 (2025.11.14)
+
 - **Re-bake lightmaps with custom Godot build to increase quality of graphics**
 
 ## v5.3.2 (2025.11.13)
