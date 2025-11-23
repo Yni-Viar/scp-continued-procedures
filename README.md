@@ -4,6 +4,10 @@
 
 The reason is on `main` branch.
 
+## Requirements to build
+
+**It is strongly recommended to use [custom build of Godot engine 4.5.1](https://github.com/Yni-Viar/godot/releases/tag/4.5.1-stable-patch), because of recent security issue with libpng**, but it is possible to build with regular Godot 4.5.1.
+
 ## About
 
 Do your daily job at Site-[REDACTED].

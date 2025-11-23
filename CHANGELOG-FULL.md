@@ -3,6 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.3.5 (2025.11.23)
+
+- Same as 5.3.4, but use custom Godot build because of security issues.
+
 ## v5.3.4 and v5.4.2 (2025.11.17)
 
 - Display GPU FPS to determine real FPS (used from Godot Engine code)
