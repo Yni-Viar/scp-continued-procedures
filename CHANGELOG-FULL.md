@@ -11,6 +11,33 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Story mode: lore (in progress)
+## v5.3.5 (2025.11.23)
+
+- Same as 5.3.4, but use custom Godot build because of security issues.
+
+## v5.3.4 and v5.4.2 (2025.11.17)
+
+- Display GPU FPS to determine real FPS (used from Godot Engine code)
+- Fix rz_exit1_gatea model.
+
+## v5.3.3 (2025.11.16)
+
+- backport changes from 5.4.1 to 5.3.x
+
+## v5.4.1 (2025.11.14)
+
+- Fixed some Research Zone rooms having different door sizes.
+- Changed room spawn order in Research zone - instead of having too much Class-D chambers, they become mandatory to spawn and become single.
+
+## v5.4.0 (2025.11.14)
+
+- **Re-bake lightmaps with custom Godot build to increase quality of graphics**
+
+## v5.3.2 (2025.11.13)
+- Make christmas lights have random color
+- Add lightmap to Entrance zone.
+- Add seasonal clutter to SCP-266 and Class-D containment chamber and unused testroom (both Halloween and Christmas ones)
+
 ## v5.3.1 (2025.11.11)
 - Fixed testroom texture.
 - Fixed SCP-914 position.
