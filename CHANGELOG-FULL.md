@@ -1,4 +1,4 @@
-# SCP: Containing Procedures
+# SCP: Containment Procedures
 
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
