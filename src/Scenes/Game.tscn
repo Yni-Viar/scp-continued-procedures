@@ -147,6 +147,8 @@ script = ExtResource("7_wxwew")
 
 [node name="Items" type="Node3D" parent="."]
 
+[node name="Particles" type="Node3D" parent="."]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("10_khs3t")
 

@@ -3,6 +3,12 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.5.0 (Cold as Ice update)
+### New SCP
+- [ ] SCP-649
+### New mechanics
+- [x] Snow on surface, or in facility, when SCP-649 is used.
+
 ## v5.3.5 (2025.11.23)
 
 - Same as 5.3.4, but use custom Godot build because of security issues.
