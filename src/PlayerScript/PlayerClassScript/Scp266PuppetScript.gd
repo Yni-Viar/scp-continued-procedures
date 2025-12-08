@@ -5,7 +5,6 @@ class_name Scp266PuppetScript
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var heat_targets: Array[Node3D] = []
-var active_targets: Array[int] = []
 var timer: float = 4.0
 
 # Called when the node enters the scene tree for the first time.

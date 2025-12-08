@@ -6,7 +6,7 @@ The reason is on `main` branch.
 
 ## Requirements to build
 
-**It is strongly recommended to use [custom build of Godot engine 4.5.1](https://github.com/Yni-Viar/godot/releases/tag/4.5.1-stable-patch), because of recent security issue with libpng**, but it is possible to build with regular Godot 4.5.1.
+**It is strongly recommended to use [custom build of Godot engine 4.5.1](https://github.com/Yni-Viar/godot/releases/tag/4.5.1-stable-patch), because of various security issues**, but it is possible to build with regular Godot 4.5.1.
 
 ## About
 
@@ -32,6 +32,7 @@ Included SCPs:
 - SCP-812
 - SCP-914
 - SCP-938
+- SCP-939
 
 ## Why this name?
 - It is a recursive acronym - **S**CP: **C**ontainment **P**rocedures

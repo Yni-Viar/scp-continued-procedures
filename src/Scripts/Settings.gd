@@ -48,6 +48,7 @@ func load_resource():
 		var settings_from_file = ResourceStorage.load_resource("user://Settings.bin", "SettingsResource")
 		if settings_from_file != null:
 			setting_res = settings_from_file
+			set_default_keybinds()
 		else:
 			load_default_settings()
 	else:
@@ -124,5 +125,5 @@ func set_keybind(action_name: String, key_type: int, key: int):
 			InputMap.action_add_event(action_name, event)
 		2:
 			print("Gamepad support is not implemented.")
-	setting_res.keybinds[action_name] = PackedInt64Array([key_type, key])
+	setting_res.keybinds[action_name] = [key_type, key]
 	save_resource(setting_res)

@@ -13,6 +13,8 @@ var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
 var transition: NodePath
 
+var current_overlays: Array[String] = []
+
 const RAY_LENGTH = 512
 
 # Called when the node enters the scene tree for the first time.
@@ -189,13 +191,33 @@ func _on_optimizator_body_exited(body: Node3D) -> void:
 		body.optimizator_paused = true
 
 func apply_overlay(effect: String, strength: float):
-	for node in $Head/Camera3D/Overlays.get_children():
-		node.hide()
 	match effect:
 		"Frozen":
 			$Head/Camera3D/Overlays/ColdOverlay.show()
 			$Head/Camera3D/Overlays/ColdOverlay.mesh.surface_get_material(0).set_shader_parameter("multiplier", strength)
+			current_overlays.append(effect)
 		"EdgeVision":
-			$Head/Camera3D/Overlays/EgdeDetectOverlay.show()
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/EgdeDetectOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.erase(effect)
 		"Scp178":
-			$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.erase(effect)
+		"Amnesia":
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/AmnesiaVisionOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/AmnesiaVisionOverlay.hide()
+				current_overlays.erase(effect)
+		_:
+			for node in $Head/Camera3D/Overlays.get_children():
+				node.hide()
+			current_overlays.clear()

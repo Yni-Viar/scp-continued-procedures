@@ -24,7 +24,7 @@ enum InputMethod {KB, MB, JP}
 ## Music volume
 @export var music_volume: float = 1.0
 ## Keybinds
-@export var keybinds: Dictionary[String, PackedInt64Array] = {
+@export var keybinds: Dictionary[String, Array] = {
 	"look": [InputMethod.MB, MOUSE_BUTTON_RIGHT],
 	"click": [InputMethod.MB, MOUSE_BUTTON_LEFT],
 	"camera_rotate_left": [InputMethod.KB, KEY_A],

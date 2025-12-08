@@ -29,7 +29,7 @@ func remove_status_effect(index: int):
 	if index >= current_status_effects.size() || index < 0:
 		return
 	for effect_method in status_effects[current_status_effects[index][0]].destroy_command:
-		get_parent()._call_function(effect_method.action_node_path, effect_method.action_method_name, [status_effects[current_status_effects[index][0]].effect_name, current_status_effects[index][1]])
+		get_parent()._call_function(effect_method.action_node_path, effect_method.action_method_name, [status_effects[current_status_effects[index][0]].effect_name, 0.0])
 	current_status_effects.remove_at(index)
 
 func get_status_effect_index(effect: String) -> int:

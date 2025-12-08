@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://35uqwcwtxgn3"]
+[gd_scene load_steps=36 format=4 uid="uid://35uqwcwtxgn3"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_vuiwq"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_5fofj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="9_3b8tf"]
 [ext_resource type="PackedScene" uid="uid://cmg1lea3osal" path="res://Assets/Rooms/sublevels/subl_cont_938.tscn" id="10_lorvw"]
 [ext_resource type="PackedScene" uid="uid://dn45mk02tkui1" path="res://Assets/Doors/lcz_door.tscn" id="11_f6fn0"]
+[ext_resource type="PackedScene" uid="uid://co06de4n8epvf" path="res://Assets/Rooms/sublevels/subl_cont_939.tscn" id="11_nph5e"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
 vertices = PackedVector3Array(-1.18713, -0.743077, 5.26, -1.18713, -0.743077, 9.76, 1.31287, -0.743077, 9.76, 1.31287, -0.743077, -9.74, -1.18713, -0.743077, -9.74, -1.18713, -0.743077, -5.24, -1.43713, -0.743077, -4.74, -1.43713, -0.743077, 4.76, -3.18713, -0.743077, -4.74, -3.18713, -0.743077, 4.76)
@@ -25,6 +26,11 @@ emission = Color(1, 1, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_nph5e"]
 material = SubResource("StandardMaterial3D_f6fn0")
 text = "↓ SCP-938"
+font = ExtResource("2_qojts")
+
+[sub_resource type="TextMesh" id="TextMesh_f6fn0"]
+material = SubResource("StandardMaterial3D_f6fn0")
+text = "↑ SCP-939"
 font = ExtResource("2_qojts")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_3kash"]
@@ -103,19 +109,35 @@ shadow_mesh = SubResource("ArrayMesh_3kash")
 
 [sub_resource type="Resource" id="Resource_30sy4"]
 script = ExtResource("8_nph5e")
-destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Down"
+destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Left0"
 metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 
 [sub_resource type="Resource" id="Resource_vbswh"]
 script = ExtResource("8_nph5e")
-destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Up"
+destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Left1"
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="Resource" id="Resource_nph5e"]
+script = ExtResource("8_nph5e")
+destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Right0"
+metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
+
+[sub_resource type="Resource" id="Resource_lorvw"]
+script = ExtResource("8_nph5e")
+destination_point = "/root/Game/FacilityGenerator/mt_room2_elevators/Right1"
 metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gvlrn"]
 size = Vector3(14.6551, 5.56006, 7.25507)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nph5e"]
+size = Vector3(13.9023, 6.99567, 5.320341)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qup2f"]
-size = Vector3(13.9023, 6.99567, 5.44244)
+size = Vector3(13.9023, 6.99567, 5.320341)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lorvw"]
+size = Vector3(13.9023, 6.99567, 5.320341)
 
 [sub_resource type="Animation" id="Animation_vbswh"]
 length = 0.001
@@ -195,9 +217,15 @@ transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0, 4.104, 6.54345)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-1.7484511e-07, 0, 2, 0, 4, 0, -4, 0, -8.7422755e-08, -3.672805, 3.4661894, 1.6469216)
+transform = Transform3D(-1.7484511e-07, 0, 2, 0, 4, 0, -4, 0, -8.7422755e-08, -3.672805, 3.4661894, 2.723721)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_nph5e")
+skeleton = NodePath("../../../../../../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
+transform = Transform3D(-1.7484511e-07, 0, 2, 0, 4, 0, -4, 0, -8.7422755e-08, -3.672805, 3.4661894, -2.732541)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_f6fn0")
 skeleton = NodePath("../../../../../../..")
 
 [node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("3_3b8tf")]
@@ -227,6 +255,12 @@ elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevat
 speed = 24.0
 current_floor = 1
 
+[node name="elevator2" parent="." instance=ExtResource("7_f6fn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 1.412107, -2.6903172)
+floors = Array[ExtResource("8_nph5e")]([SubResource("Resource_nph5e"), SubResource("Resource_lorvw")])
+elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevators/Door2", "/root/Game/FacilityGenerator/mt_room2_elevators/Door4")
+target_floor = 1
+
 [node name="ElevatorTrigger2" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.053005, -98.14918, 2.65249)
 script = ExtResource("9_3b8tf")
@@ -244,17 +278,48 @@ script = ExtResource("9_3b8tf")
 elevator_path = NodePath("../elevator")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27312, -0.010406494, 2.8028994)
+shape = SubResource("BoxShape3D_nph5e")
+
+[node name="ElevatorTrigger3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8697867, 1.177216, -5.5520506)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("9_3b8tf")
+elevator_path = NodePath("../elevator2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27312, -0.0104065, 2.74185)
 shape = SubResource("BoxShape3D_qup2f")
 
-[node name="Up" type="Marker3D" parent="."]
+[node name="ElevatorTrigger4" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8697867, 34.74969, -5.5520506)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("9_3b8tf")
+elevator_path = NodePath("../elevator2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27312, -0.0104065, 2.74185)
+shape = SubResource("BoxShape3D_lorvw")
+
+[node name="Right0" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 1.412107, -2.6903172)
+
+[node name="Right1" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 33.82707, -2.6903172)
+
+[node name="Left1" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 1.412107, 2.65249)
 
-[node name="Down" type="Marker3D" parent="."]
+[node name="Left0" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.053005, -98.14918, 2.65249)
 
 [node name="subl_cont938" parent="." instance=ExtResource("10_lorvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -100.849, 0)
+
+[node name="subl_cont939" parent="." instance=ExtResource("11_nph5e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.542552, 31.304945, -36.77556)
 
 [node name="DebugLights" type="Node3D" parent="."]
 
@@ -268,9 +333,15 @@ interior = true
 
 [node name="Door1" parent="." instance=ExtResource("11_f6fn0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5988455, -1.2430797, 2.744102)
+can_open = false
 
 [node name="Door2" parent="." instance=ExtResource("11_f6fn0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5988455, -1.2430797, -2.6769693)
+can_open = false
+
+[node name="Door4" parent="." instance=ExtResource("11_f6fn0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5988455, 31.319115, -2.6769693)
+can_open = false
 
 [node name="Door3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.669205, -98.17673, 2.68536)
@@ -305,3 +376,7 @@ shape = SubResource("ConcavePolygonShape3D_lorvw")
 [connection signal="body_exited" from="ElevatorTrigger2" to="ElevatorTrigger2" method="_on_body_exited"]
 [connection signal="body_entered" from="ElevatorTrigger" to="ElevatorTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="ElevatorTrigger" to="ElevatorTrigger" method="_on_body_exited"]
+[connection signal="body_entered" from="ElevatorTrigger3" to="ElevatorTrigger3" method="_on_body_entered"]
+[connection signal="body_exited" from="ElevatorTrigger3" to="ElevatorTrigger3" method="_on_body_exited"]
+[connection signal="body_entered" from="ElevatorTrigger4" to="ElevatorTrigger4" method="_on_body_entered"]
+[connection signal="body_exited" from="ElevatorTrigger4" to="ElevatorTrigger4" method="_on_body_exited"]
