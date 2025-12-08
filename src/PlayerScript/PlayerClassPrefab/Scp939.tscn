@@ -27,6 +27,8 @@ resource_name = "scp939_spikes"
 cull_mode = 2
 albedo_texture = ExtResource("5_o2mxb")
 roughness = 0.5
+emission_enabled = true
+emission = Color(0.18790439, 8.7236984e-08, 3.008172e-08, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_s7b34"]
 resource_name = "Scp939_939retopo_Plane"
