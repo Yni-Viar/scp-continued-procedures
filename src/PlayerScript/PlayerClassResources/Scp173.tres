@@ -11,6 +11,10 @@ speed = 20.0
 prefab = ExtResource("1_iet7l")
 spawn_point_group = "Scp173Spawn"
 initial_amount = 1
+footstep_sounds = {
+"run": PackedStringArray("res://Sounds/Character/Scp173/Move1.ogg"),
+"walk": PackedStringArray("res://Sounds/Character/Scp173/Move1.ogg")
+}
 fraction = 2
 apply_height_bugfix = false
 enable_wander = false

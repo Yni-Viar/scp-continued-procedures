@@ -17,6 +17,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 #### Working on
 #### Finished
 - [x] Snow on surface
+- [x] SCP-173 has now in-house movement sound
 ### Bugfixes
 - [x] Make sure, that Status Effect is correctly unloaded.
 - [x] Remove placeholder SCP-178-1 sprites

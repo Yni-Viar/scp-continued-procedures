@@ -1,0 +1,2 @@
+- Move1.ogg is made by Yni Viar and is licensed under CC-BY-SA 4.0
+- NeckSnap.ogg is made by Daniel Nesov and SCP: Godot contributors and is licensed under MIT License.
