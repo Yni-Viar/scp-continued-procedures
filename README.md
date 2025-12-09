@@ -3,7 +3,7 @@
 ## ⚠️ This game currently is poorly maintained.
 
 Currently, I (Yni) take a break from developing 6.0.0 because of the risk of burn-out.
-5.x.x will be still updated.
+[5.x.x](https://github.com/Yni-Viar/scp-containmentprocedures/tree/5.x.x) will be still updated.
 
 ## Requirements to build
 
