@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://cd5dsyts0jeeo"]
+[gd_scene load_steps=10 format=4 uid="uid://cd5dsyts0jeeo"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_evu3g"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="2_1wmds"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_1xfio"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_1xfio"]
 [ext_resource type="LightmapGIData" uid="uid://ciqma88pq5ej8" path="res://Assets/Rooms/room2/Lm/mt_room2.lmbake" id="4_fuhes"]
@@ -64,7 +65,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 78,
 "index_data": PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAAAFAAEABgAFAAAABgAAAAcACAAGAAcACAAJAAYACgAJAAsACgAMAAkACQANAAsADQAOAAsADQAPAA4ACQAIAA0AEAANAAgAEAAIABEAEgAHAAAAEgATAAcAAQAUAAQAFQAWAA4AFQAOAA8AFQAPABcADwAYABcAGQACAAMABQAaABsABQAGABoA"),
-"material": ExtResource("2_1xfio"),
+"material": ExtResource("2_1wmds"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 28,

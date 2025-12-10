@@ -1,10 +1,11 @@
-[gd_scene load_steps=36 format=4 uid="uid://35uqwcwtxgn3"]
+[gd_scene load_steps=37 format=4 uid="uid://35uqwcwtxgn3"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_vuiwq"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_5fofj"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="2_qojts"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="3_3b8tf"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_wnd08"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="5_lorvw"]
 [ext_resource type="LightmapGIData" uid="uid://wtjqi3q7gmr2" path="res://Assets/Rooms/room2/Lm/mt_room2_elevators.lmbake" id="6_qup2f"]
 [ext_resource type="Script" uid="uid://bti7y8cq2dfm4" path="res://Scripts/DoorSystem/DoorBase.gd" id="7_66fqs"]
 [ext_resource type="PackedScene" uid="uid://cqset7w3gmd5" path="res://Assets/ExternalModels/elevator_small.tscn" id="7_f6fn0"]
@@ -16,8 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://co06de4n8epvf" path="res://Assets/Rooms/sublevels/subl_cont_939.tscn" id="11_nph5e"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(-1.18713, -0.743077, 5.26, -1.18713, -0.743077, 9.76, 1.31287, -0.743077, 9.76, 1.31287, -0.743077, -9.74, -1.18713, -0.743077, -9.74, -1.18713, -0.743077, -5.24, -1.43713, -0.743077, -4.74, -1.43713, -0.743077, 4.76, -3.18713, -0.743077, -4.74, -3.18713, -0.743077, 4.76)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(7, 3, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(6, 7, 8), PackedInt32Array(8, 7, 9)]
+vertices = PackedVector3Array(-1.2827396, -0.7396585, -4.99, -3.0327396, -0.7396585, -4.74, -3.2827396, -0.7396585, -3.2399998, -1.7827396, -0.7396585, -0.7399998, 1.2172604, -0.7396585, -0.23999977, -3.0327396, -0.7396585, -0.7399998, -1.5327396, -0.7396585, -0.23999977, 1.2172604, -0.7396585, -9.74, -1.2827396, -0.7396585, -9.74, -3.2827396, -0.7396585, 3.5100002, -3.0327396, -0.7396585, 4.76, -1.2827396, -0.7396585, 5.01, -1.7827396, -0.7396585, 0.5100002, -3.0327396, -0.7396585, 0.5100002, 1.2172604, -0.7396585, 9.76, -1.2827396, -0.7396585, 9.76)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(3, 5, 2), PackedInt32Array(3, 4, 6), PackedInt32Array(8, 7, 0), PackedInt32Array(0, 7, 4), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 13), PackedInt32Array(11, 13, 12), PackedInt32Array(6, 4, 12), PackedInt32Array(12, 4, 11), PackedInt32Array(11, 4, 14), PackedInt32Array(14, 15, 11)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f6fn0"]
 emission_enabled = true
@@ -87,7 +88,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 90,
 "index_data": PackedByteArray("AAABAAIAAwAAAAIABAAAAAMAAwACAAUABAAGAAAABQACAAcAAQAHAAIABQAHAAgAAAAJAAEACQAAAAYAAQAKAAcACgABAAsACgALAAwABwAKAA0ABwANAA4ADQAPAA4AEAAOAA8ADQARAA8ADQASABEAEwAUAAkAEwAJABUACQAGABUABgAWABUABgAXABYAGAAWABcAGAAZABYAGAAXABoAFwAbABoAHAAdAB4AHwAgACEA"),
-"material": ExtResource("2_5fofj"),
+"material": ExtResource("5_lorvw"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 34,
@@ -131,10 +132,10 @@ metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 size = Vector3(14.6551, 5.56006, 7.25507)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nph5e"]
-size = Vector3(13.9023, 6.99567, 5.320341)
+size = Vector3(5.525868, 6.99567, 5.320341)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qup2f"]
-size = Vector3(13.9023, 6.99567, 5.320341)
+size = Vector3(5.446522, 6.99567, 5.320341)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lorvw"]
 size = Vector3(13.9023, 6.99567, 5.320341)
@@ -240,6 +241,12 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_nph5e")
 skeleton = NodePath("")
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.252703, 0)
+height = 5.1
+vertices = PackedVector3Array(-9.18214, 0, -0.11407833, -9.196493, 0, 0.05815797, -1.9051638, 0, 0.08686389, -1.9195175, 0, -0.12843119)
+affect_navigation_mesh = true
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
@@ -278,7 +285,7 @@ script = ExtResource("9_3b8tf")
 elevator_path = NodePath("../elevator")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27312, -0.010406494, 2.8028994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1405463, -0.010406494, 2.8028994)
 shape = SubResource("BoxShape3D_nph5e")
 
 [node name="ElevatorTrigger3" type="Area3D" parent="."]
@@ -289,7 +296,7 @@ script = ExtResource("9_3b8tf")
 elevator_path = NodePath("../elevator2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27312, -0.0104065, 2.74185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1228461, -0.010406494, 2.74185)
 shape = SubResource("BoxShape3D_qup2f")
 
 [node name="ElevatorTrigger4" type="Area3D" parent="."]

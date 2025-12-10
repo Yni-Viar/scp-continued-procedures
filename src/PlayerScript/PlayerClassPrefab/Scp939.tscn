@@ -22399,6 +22399,7 @@ bones/129/rotation = Quaternion(-3.6e-44, -1.9239895e-22, -1.9239892e-22, 1)
 bones/129/scale = Vector3(1, 1, 1)
 
 [node name="939Ob" type="MeshInstance3D" parent="939_Rig/Skeleton3D"]
+visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_s7b34")
 skin = SubResource("Skin_wju8e")
 

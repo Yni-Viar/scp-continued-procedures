@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=4 uid="uid://cvwbiyb4cbtok"]
+[gd_scene load_steps=27 format=4 uid="uid://cvwbiyb4cbtok"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_g6en1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_jpe88"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="3_fevdu"]
 [ext_resource type="LightmapGIData" uid="uid://dgucu5knn54sy" path="res://Assets/Rooms/room1/Lm/mt_exit1_gateb.lmbake" id="3_g6en1"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_tuj35"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="4_cc1sb"]
@@ -87,7 +88,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 54,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkACgAJAAwACgANAAgACgAMAA4ADgANAAoADgAMAA8ADgAPABAADQAOABAADQAQABEAEgATABQAEgAVABMAFgAXABgAFgAZABcA"),
-"material": ExtResource("2_jpe88"),
+"material": ExtResource("3_fevdu"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 26,

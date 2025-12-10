@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=4 uid="uid://bj6yk74i8r8c6"]
+[gd_scene load_steps=18 format=4 uid="uid://bj6yk74i8r8c6"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_qom4j"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_glu1g"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="2_qom4j"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="4_4bu8b"]
 [ext_resource type="Shader" uid="uid://dn5865upl6f7h" path="res://Shaders/BlurShader/blur.gdshader" id="5_qom4j"]
 [ext_resource type="LightmapGIData" uid="uid://ca3lc7gvsjj0f" path="res://Assets/Rooms/room2/Lm/mt_room2_wc.lmbake" id="6_4bu8b"]
@@ -68,7 +69,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 258,
 "index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQAAwAEAAUAAQADAAYABwAAAAIABwAIAAAACQACAAEAAQAGAAoACgAJAAEACgALAAkACgAMAAsADQAKAAYACgANAAwADQAGAA4ADgAPABAADgAQABEAEQANAA4AEgAMAA0AEQASAA0AEwASABEAEwARABQADAASABUADAAVABYAFwAMABYAFwAWABgAFQAZABYAEgAaABUAFQAaABkAEgATABoAGwATABQAGwAUABwAEwAbAB0AHQAaABMAHgAdABsAHgAbAB8AHQAgABoAIAAdACEAIgAgACEAIgAjACAAIwAaACAAJAAjACIAJAAlACMAJgAlACQAJwAjACUAJgAnACUAGgAjACcAKAAnACYAGgAnACkAKAApACcAGgApABkAKAAZACkAKAAqABkAKgAoACsALAAtAC4ALAAvAC0ACAAtADAABwAtAAgALQAHAC4AMQAuAAcALgAxADIAMwAyADEAMQAHADQAMwAxADUANAA1ADEANgAzADUAAgA0AAcANgA1ADcAOAA2ADcANQA5ADcAOAA3ADkANAA5ADUAOgA4ADkAAgA7ADQAAgAJADsAOwAJADwAPQA8AAkAPQA+ADwAOwA8AD8AOwA/ADQAOQA0AD8AOQA/AEAAOgA5AEAAQQBAAD8AQQA6AEAAOgBBAEIA"),
-"material": ExtResource("2_glu1g"),
+"material": ExtResource("2_qom4j"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 67,

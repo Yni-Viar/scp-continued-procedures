@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=4 uid="uid://bbjmuygg67pir"]
+[gd_scene load_steps=26 format=4 uid="uid://bbjmuygg67pir"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_ff23p"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="2_j3fxc"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_u1fn0"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="4_ff0m3"]
 [ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="5_iojl1"]
@@ -78,7 +79,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 162,
 "index_data": PackedByteArray("AAABAAIAAgABAAMAAgADAAQAAwABAAUAAwAFAAYABAADAAcABAAHAAgACAAHAAkABwAKAAkACAAJAAsAAAAMAAEADQAOAAwADQAMAA8AEAAMAAAAEAAPAAwAEQAPABAAEQASAA8AAAATABAAEwARABAAEwAUABEAEwAVABQAAAAWABMAEwAXABUAFgAXABMAFgAYABcAGQAXABgAGQAYABoAGwAYABYAGwAcABgAHQAcABsAHQAeABwAHwAeAB0AIAAcAB4AIAAhABwAHwAiAB4AIwAiAB8AIwAkACIAFgACABsAFgAAAAIAAgAdABsAAgAEAB0AHQAEAAgAHQAIAB8ACAAjAB8ACAALACMAJQASABEAJQAmABIAJgAnABIAJQARABQAJQAUACgAFAApACgAFAAVACkAFQAqACkAKwAiACQA"),
-"material": ExtResource("2_u1fn0"),
+"material": ExtResource("2_j3fxc"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 44,

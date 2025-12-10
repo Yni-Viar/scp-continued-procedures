@@ -6,16 +6,18 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ## v5.5.0 (Cold as Ice update, should release before Christmas)
 ### New SCPs
 #### Not started
-- [ ] SCP-649
 #### Working on
+- [ ] SCP-649 (will spawn only at December (for Christmas))
 - [ ] SCP-939 Task
 #### Finished
 - [x] SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect
-### New mechanics
+### New features
 #### Not started
-- [ ] Snow in facility
+- [ ] Snow in facility (for SCP-649)
 #### Working on
 #### Finished
+- [x] New Maintenance Zone rooms: Warehouse and testroom. Find it out!
+- [x] Added ventilation for Maintenance Zone
 - [x] Snow on surface
 - [x] SCP-173 has now in-house movement sound
 ### Bugfixes

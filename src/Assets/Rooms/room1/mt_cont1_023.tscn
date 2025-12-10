@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=4 uid="uid://bse6x0gj3go58"]
+[gd_scene load_steps=15 format=4 uid="uid://bse6x0gj3go58"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_b8ioa"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_axw3i"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_626l1"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="3_e8iy8"]
 [ext_resource type="LightmapGIData" uid="uid://c6pn6ns16er1m" path="res://Assets/Rooms/room4/Lm/mt_room_4.lmbake" id="3_ruuf7"]
 [ext_resource type="PackedScene" uid="uid://c7o5iodr55fdp" path="res://Assets/Doors/maintenance_zone_door.tscn" id="4_aux4i"]
 [ext_resource type="PackedScene" uid="uid://d206r02l87aim" path="res://Assets/Doors/maintenance_zone_door_faux.tscn" id="5_vsgnr"]
@@ -78,7 +79,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 42,
 "index_data": PackedByteArray("AAABAAIAAwACAAQAAwAFAAIAAAACAAUAAgABAAYABwAGAAEABwABAAgAAAAJAAoAAAAKAAsADAAAAAsAAAAMAAEAAQAMAA0ADAAOAA0ADAAPAA4A"),
-"material": ExtResource("2_axw3i"),
+"material": ExtResource("3_e8iy8"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 16,
