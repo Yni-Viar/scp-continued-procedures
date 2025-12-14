@@ -1,4 +1,5 @@
 extends Marker3D
+## Made by Yni, licensed under MIT License.
 
 @export var item: PackedScene
 

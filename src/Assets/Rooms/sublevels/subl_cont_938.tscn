@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=4 uid="uid://cmg1lea3osal"]
+[gd_scene load_steps=23 format=4 uid="uid://cmg1lea3osal"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_cngcp"]
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_qy6ff"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_01jcx"]
 [ext_resource type="Material" uid="uid://r3xwpbwndakb" path="res://Assets/Materials/MaintenanceTunnels/Borders.tres" id="3_5mjld"]
 [ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Metal.tres" id="4_y5bn2"]
@@ -174,6 +175,9 @@ font = ExtResource("5_pkqvl")
 size = Vector3(53.475723, 17.192139, 41.3338)
 
 [node name="subl_cont938" type="StaticBody3D"]
+script = ExtResource("1_qy6ff")
+mesh_node_path = NodePath("NavigationRegion3D/Cube_003")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_4dl2j")

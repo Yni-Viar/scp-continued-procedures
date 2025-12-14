@@ -242,3 +242,12 @@ msgstr ""
 
 msgid "446_CAUTION"
 msgstr ""
+
+msgid "939_CAUTION"
+msgstr ""
+
+msgid "TASK_939_CHECK"
+msgstr ""
+
+msgid "SUBL_939_SIGN"
+msgstr ""

@@ -1,4 +1,5 @@
 extends Node3D
+## Made by Yni, licensed under MIT License.
 
 var rng: RandomNumberGenerator
 

@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=4 uid="uid://bsf6uo5b8l2jm"]
+[gd_scene load_steps=33 format=4 uid="uid://bsf6uo5b8l2jm"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_v6vjl"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_sjxj1"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="2_takvg"]
 [ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="3_tphe8"]
@@ -210,6 +211,9 @@ data = PackedVector3Array(-4.7093, -2.1253, 8.7471, -4.7033997, 5.1302, 10.2338,
 size = Vector3(6.846161, 6.0405273, 10.31337)
 
 [node name="rz_exit2_gatec" type="StaticBody3D"]
+script = ExtResource("1_v6vjl")
+mesh_node_path = NodePath("NavigationRegion3D/Cube")
+floor_material_index = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_shvc4")

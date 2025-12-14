@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://cqh6tjpsub0jn"]
+[gd_scene load_steps=26 format=4 uid="uid://cqh6tjpsub0jn"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ndh3u"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_uv1va"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_83ssb"]
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="3_rism5"]
@@ -637,6 +638,9 @@ font_size = 32
 depth = 0.01
 
 [node name="cont2_650" type="StaticBody3D"]
+script = ExtResource("1_ndh3u")
+mesh_node_path = NodePath("NavigationRegion3D/Cube")
+floor_material_index = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_shvc4")

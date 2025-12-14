@@ -3,27 +3,26 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.5.0 (Cold as Ice update, should release before Christmas)
+## v5.5.0 (Cold as Ice update, release is soon)
 ### New SCPs
-#### Not started
-#### Working on
-- [ ] SCP-649 (will spawn only at December (for Christmas))
-- [ ] SCP-939 Task
-#### Finished
-- [x] SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect
+- SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect + Task
+- SCP-649 (will spawn only at December (for Christmas))
 ### New features
-#### Not started
-- [ ] Snow in facility (for SCP-649)
-#### Working on
-#### Finished
-- [x] New Maintenance Zone rooms: Warehouse and testroom. Find it out!
-- [x] Added ventilation for Maintenance Zone
-- [x] Snow on surface
-- [x] SCP-173 has now in-house movement sound
+- Add prop interactables
+- Snow in facility (for SCP-649)
+- New Maintenance Zone rooms: Warehouse and testroom. Find it out!
+- Added ventilation for Maintenance Zone
+- Snow on surface
+- SCP-173 has now in-house movement sound
+- Chaos Insurgency now spawns once per game.
+- Guards now do not spawn at Surface Zone at Halloween and Christmas
+- Reworked clutter system - now it has simple API + added ability for season-only prefabs.
 ### Bugfixes
-- [x] Make sure, that Status Effect is correctly unloaded.
-- [x] Remove placeholder SCP-178-1 sprites
-- [x] \[Technical\] ResourceStorage: support dictionaries inside Resource.
+- Reduce Christmas tree amount because of optimization
+- Make sure, that Status Effect is correctly unloaded.
+- Remove placeholder SCP-178-1 sprites
+- \[Technical\] ResourceStorage: support dictionaries inside Resource.
+- \[Technical\] StatusEffectCommand: support player-only status commands
 
 ## v5.3.5 (2025.11.23)
 

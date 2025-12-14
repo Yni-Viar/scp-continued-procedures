@@ -15,7 +15,7 @@ height = 80.0
 render_priority = 0
 shader = ExtResource("2_1a04n")
 shader_parameter/overlay = ExtResource("3_j77eh")
-shader_parameter/multiplier = 0.0
+shader_parameter/multiplier = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_cfg1l"]
 material = SubResource("ShaderMaterial_j77eh")
@@ -71,6 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 cull_mask = 524287
+near = 0.031
 far = 128.0
 
 [node name="Optimizator" type="Area3D" parent="Head/Camera3D"]

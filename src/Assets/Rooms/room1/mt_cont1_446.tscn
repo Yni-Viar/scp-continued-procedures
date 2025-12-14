@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=4 uid="uid://kb5so0w2xj5k"]
+[gd_scene load_steps=28 format=4 uid="uid://kb5so0w2xj5k"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_t50k2"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_yy1am"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_kymhv"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_w1o03"]
@@ -163,6 +164,9 @@ font_size = 32
 depth = 0.01
 
 [node name="mt_cont1_446" type="StaticBody3D"]
+script = ExtResource("1_t50k2")
+mesh_node_path = NodePath("NavigationRegion3D/Cylinder")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_6571d")

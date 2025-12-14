@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=4 uid="uid://nhxrp1vckqu8"]
+[gd_scene load_steps=29 format=4 uid="uid://nhxrp1vckqu8"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_54lxd"]
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_wthl7"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_s3mxu"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_8ektp"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="4_b4com"]
@@ -197,6 +198,9 @@ font_size = 32
 depth = 0.01
 
 [node name="room2_b" type="StaticBody3D"]
+script = ExtResource("1_wthl7")
+mesh_node_path = NodePath("NavigationRegion3D/Cube2")
+floor_material_index = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_shvc4")

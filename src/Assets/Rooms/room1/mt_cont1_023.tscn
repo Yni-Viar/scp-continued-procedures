@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=4 uid="uid://bse6x0gj3go58"]
+[gd_scene load_steps=16 format=4 uid="uid://bse6x0gj3go58"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_b8ioa"]
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_d2sa3"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_axw3i"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="3_626l1"]
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="3_e8iy8"]
@@ -104,6 +105,9 @@ font_size = 32
 depth = 0.01
 
 [node name="cont1_023" type="StaticBody3D"]
+script = ExtResource("1_d2sa3")
+mesh_node_path = NodePath("NavigationRegion3D/Cylinder2")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_olia3")

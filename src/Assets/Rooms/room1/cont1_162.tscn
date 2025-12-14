@@ -1,5 +1,6 @@
-[gd_scene load_steps=35 format=4 uid="uid://buwx2f5s8ms0n"]
+[gd_scene load_steps=36 format=4 uid="uid://buwx2f5s8ms0n"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_i76g7"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_keue3"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_iy3yx"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_57pa4"]
@@ -247,11 +248,14 @@ size = Vector3(13.8098, 1, 14.902)
 size = Vector3(21.4137, 9.70383, 21.8945)
 
 [node name="cont1_162" type="StaticBody3D"]
+script = ExtResource("1_i76g7")
+mesh_node_path = NodePath("NavigationRegion3D/RoomMesh")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_6571d")
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
+[node name="RoomMesh" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_0rp3e")
@@ -285,18 +289,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.4465
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.44652, -1.26562, 8.06145)
 
 [node name="industrial_wall_lamp" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.68399, 3.9233, 6.18346)
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.68399, 3.9233, 2.0687294)
 
 [node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-visibility_range_end = 64.0
-mesh = SubResource("ArrayMesh_b72w1")
-skeleton = NodePath("")
-
-[node name="industrial_wall_lamp2" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.68399, 3.9233, -1.83254)
-
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp2"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_b72w1")
@@ -355,16 +350,7 @@ shape = SubResource("BoxShape3D_rvhuw")
 [node name="DebugLights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -7.68399, 3.9233, 6.18346)
-visible = false
-light_color = Color(0.722576, 0.893088, 0.996695, 1)
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 24.0
-omni_range = 18.9452
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -7.68399, 3.9233, -1.83254)
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7427692, 3.9232998, 2.0687294)
 visible = false
 light_color = Color(0.722576, 0.893088, 0.996695, 1)
 light_bake_mode = 1
@@ -390,6 +376,7 @@ omni_range = 18.9452
 quality = 0
 bounces = 1
 bounce_indirect_energy = 2.0
+directional = true
 interior = true
 texel_scale = 0.5
 light_data = ExtResource("7_0rp3e")

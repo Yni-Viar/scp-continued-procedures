@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.3.0"
+const DATA_COMPATIBILITY: String = "5.5.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -127,3 +127,11 @@ func set_keybind(action_name: String, key_type: int, key: int):
 			print("Gamepad support is not implemented.")
 	setting_res.keybinds[action_name] = [key_type, key]
 	save_resource(setting_res)
+
+## Current season check
+func season_feature_checker(season_check: Season) -> bool:
+	if current_season == season_check || \
+	 season_check == Season.NONE && current_season <= 4:
+		return true
+	else:
+		return false

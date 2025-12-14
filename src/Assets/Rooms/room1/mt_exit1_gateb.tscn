@@ -1,5 +1,6 @@
-[gd_scene load_steps=27 format=4 uid="uid://cvwbiyb4cbtok"]
+[gd_scene load_steps=28 format=4 uid="uid://cvwbiyb4cbtok"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ecvom"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_g6en1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_jpe88"]
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="3_fevdu"]
@@ -121,6 +122,9 @@ data = PackedVector3Array(-9.5875, 0.8276, 3.4132, -1.6573, -0.94689995, 3.4132,
 size = Vector3(6.846161, 6.0405273, 10.31337)
 
 [node name="mt_exit1_gateb" type="StaticBody3D"]
+script = ExtResource("1_ecvom")
+mesh_node_path = NodePath("NavigationRegion3D/Cylinder")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_x844e")
@@ -262,7 +266,7 @@ shape = SubResource("BoxShape3D_yw614")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 7.4092712, 1.3866796, -5.558091)
 
 [node name="GateBMiddle" type="Marker3D" parent="."]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.4092712, 24.571266, -5.558091)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 7.409, 36, -5.558)
 
 [node name="Seasonal" type="Node3D" parent="."]
 

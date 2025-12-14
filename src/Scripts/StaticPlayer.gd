@@ -112,6 +112,10 @@ func interact(value: String) -> void:
 								s_result["collider"].queue_free()
 								#Use only one item
 								break
+							if s_result["collider"] is InteractableStatic && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+								s_result["collider"].interact(get_node(target_puppet_path))
+								#Use only one interactable
+								break
 							if s_result["collider"] is MovableNpc:
 								if !s_result["collider"].is_player:
 									match s_result["collider"].puppet_class.interacting_action:

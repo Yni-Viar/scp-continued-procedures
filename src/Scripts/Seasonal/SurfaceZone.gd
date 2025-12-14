@@ -1,4 +1,5 @@
 extends StaticBody3D
+## Made by Yni, licensed under MIT License.
 class_name SurfaceZone
 
 @export var current_season: Settings.Season

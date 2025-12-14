@@ -17,7 +17,8 @@ func apply_status_effect(effect: String, strength: float, duration: float):
 		current_status_effects.append([effect, strength, duration])
 		index = current_status_effects.size() - 1
 	for effect_method in status_effects[current_status_effects[index][0]].start_command:
-		get_parent()._call_function(effect_method.action_node_path, effect_method.action_method_name, [status_effects[current_status_effects[index][0]].effect_name, current_status_effects[index][1]])
+		if (effect_method.player_only && get_parent().is_player) || !effect_method.player_only:
+			get_parent()._call_function(effect_method.action_node_path, effect_method.action_method_name, [status_effects[current_status_effects[index][0]].effect_name, strength])
 	if is_zero_approx(strength):
 		remove_status_effect(index)
 		return

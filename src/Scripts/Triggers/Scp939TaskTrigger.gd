@@ -1,4 +1,5 @@
 extends Area3D
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
 var timer: float = 0.0
 var player_came: bool = false
@@ -20,9 +21,6 @@ func _physics_process(delta: float) -> void:
 			set_physics_process(false)
 			monitoring = false
 			monitorable = false
-	else:
-		set_process(false)
-		set_physics_process(false)
 
 
 func _on_body_entered(body: Node3D) -> void:

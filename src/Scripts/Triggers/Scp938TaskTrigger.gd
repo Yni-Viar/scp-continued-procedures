@@ -1,4 +1,5 @@
 extends Area3D
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
 var class_d_amount: int = 0
 var foundation_amount: int = 0

@@ -1,4 +1,5 @@
 extends Area3D
+## Made by Yni, licensed under MIT License.
 
 @export var elevator_path: NodePath
 @export var elevator_path_global: String
