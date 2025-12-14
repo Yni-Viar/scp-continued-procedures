@@ -309,7 +309,9 @@ msgstr ""
 "amnestics to lure you."
 
 msgid "TASK_939_CHECK"
-msgstr "Order Class-D to calm down SCP-939."
+msgstr ""
+"Order Class-D to check vents state\n"
+"at SCP-939 containment chamber."
 
 msgid "SUBL_939_SIGN"
 msgstr ""

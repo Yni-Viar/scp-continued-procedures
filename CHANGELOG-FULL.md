@@ -8,7 +8,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect + Task
 - SCP-649 (will spawn only at December (for Christmas))
 ### New features
-- Add prop interactables
+- Add interactable props
 - Snow in facility (for SCP-649)
 - New Maintenance Zone rooms: Warehouse and testroom. Find it out!
 - Added ventilation for Maintenance Zone
