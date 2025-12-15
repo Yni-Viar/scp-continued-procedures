@@ -3,21 +3,23 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.5.0 (Cold as Ice update, release is soon)
+## v5.5.0 (Cold as Ice update, 2025.12.15)
 ### New SCPs
 - SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect + Task
 - SCP-649 (will spawn only at December (for Christmas))
 ### New features
 - Add interactable props
-- Snow in facility (for SCP-649)
 - New Maintenance Zone rooms: Warehouse and testroom. Find it out!
 - Added ventilation for Maintenance Zone
-- Snow on surface
+- Snow on surface or in facility (for SCP-649)
 - SCP-173 has now in-house movement sound
 - Chaos Insurgency now spawns once per game.
 - Guards now do not spawn at Surface Zone at Halloween and Christmas
 - Reworked clutter system - now it has simple API + added ability for season-only prefabs.
+- Checkpoints now contain information about actual SCPs in the facility.
+- Updated map generator to 9.1.2 and require doors spawn for Maintenance Zone
 ### Bugfixes
+- Fixed third-person camera position
 - Reduce Christmas tree amount because of optimization
 - Make sure, that Status Effect is correctly unloaded.
 - Remove placeholder SCP-178-1 sprites

@@ -4,12 +4,5 @@
 
 [resource]
 script = ExtResource("1_y4xtp")
-music = 1.0
-sound = 1.0
-mouse_sensitivity = 0.05
 glow = false
 reflection_probe = false
-ci_spawn = 0
-time_limited = true
-zen_mode = false
-music_volume = 1.0

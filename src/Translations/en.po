@@ -127,7 +127,9 @@ msgid "FINE"
 msgstr "Fine"
 
 msgid "VERYFINE"
-msgstr "Very fine"
+msgstr ""
+"Very\n"
+"fine"
 
 msgid "SCP914_REFINE"
 msgstr "Refine"

@@ -58,7 +58,7 @@ func _physics_process(delta: float) -> void:
 				get_tree().root.get_node("Game/UI/HungerBar").value = get_node(target_puppet_path).current_health[3]
 			# Apply bonus to Y coordinate if current_camera_mode is third person
 			if current_camera_mode == CameraMode.THIRD_PERSON:
-				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)
+				global_position = get_node(target_puppet_path).global_position + Vector3(0, 2.5, 0)
 			else:
 				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0)
 
@@ -172,14 +172,12 @@ func toggle_mode(mode: int):
 	match mode:
 		1:
 			if camera_mode == 0 || camera_mode == 1:
-				global_position.y = 0
 				transition = $Head/UpperLook.get_path()
 				current_camera_mode = CameraMode.UPPERLOOK
 			else:
 				printerr("camera_mode does not allow this mode")
 		2:
 			if camera_mode == 0 || camera_mode == 2:
-				global_position.y = 1.863
 				transition = $Head/ThirdPerson.get_path()
 				current_camera_mode = CameraMode.THIRD_PERSON
 			else:

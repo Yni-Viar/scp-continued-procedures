@@ -18,7 +18,7 @@ enum InputMethod {KB, MB, JP}
 ## Current enemy spawn value
 @export var ci_spawn: int = 0
 ## Time limited value
-@export var time_limited: bool = true
+@export var time_limited: bool = false
 ## Zen mode
 @export var zen_mode: bool = false
 ## Music volume

@@ -163,7 +163,7 @@ font = ExtResource("10_u2gtq")
 font_size = 32
 depth = 0.01
 
-[node name="mt_cont1_446" type="StaticBody3D"]
+[node name="mt_cont1_446" type="StaticBody3D" groups=["MT_cont1_446"]]
 script = ExtResource("1_t50k2")
 mesh_node_path = NodePath("NavigationRegion3D/Cylinder")
 floor_material_index = 1

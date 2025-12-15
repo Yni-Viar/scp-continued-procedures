@@ -136,7 +136,6 @@ rooms = Array[ExtResource("4_bf53h")]([ExtResource("5_71axn"), ExtResource("8_35
 zone_size = 10
 map_size_y = 1
 large_rooms = true
-enable_door_generation = false
 better_zone_generation_min_amount = 5
 checkpoints_enabled = true
 

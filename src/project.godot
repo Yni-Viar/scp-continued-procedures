@@ -36,6 +36,10 @@ Settings="*res://Scripts/Settings.gd"
 
 window/stretch/mode="canvas_items"
 
+[editor]
+
+movie_writer/movie_file="D:/Data/DeveloperData/Repositories/scp-containmentprocedures/builds/output.avi"
+
 [file_customization]
 
 folder_colors={

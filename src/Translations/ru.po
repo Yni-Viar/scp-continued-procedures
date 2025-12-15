@@ -117,7 +117,9 @@ msgstr ""
 "закончится через"
 
 msgid "ROUGH"
-msgstr "Очень грубо"
+msgstr ""
+"Очень\n"
+"грубо"
 
 msgid "COARSE"
 msgstr "Грубо"
@@ -126,7 +128,9 @@ msgid "FINE"
 msgstr "Тонко"
 
 msgid "VERYFINE"
-msgstr "Очень тонко"
+msgstr ""
+"Очень\n"
+"тонко"
 
 msgid "SCP914_REFINE"
 msgstr "Переработать"

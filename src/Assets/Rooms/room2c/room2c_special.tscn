@@ -10,7 +10,7 @@
 [ext_resource type="LightmapGIData" uid="uid://di8iii0836774" path="res://Assets/Rooms/room2c/Lm/room2c_special.lmbake" id="6_knu6h"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_5augc"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_tsku5"]
-[ext_resource type="PackedScene" uid="uid://xcscr0xn5o6o" path="res://Assets/ExternalModels/christmas_tree.tscn" id="10_5augc"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="11_tsku5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(-3.32542, -0.769568, 6.99822, -3.32542, -0.769568, 9.74822, 3.42458, -0.769568, 9.74822, 3.42458, -0.769568, 6.74822, 6.67458, -0.769568, -5.00178, -4.07542, -0.769568, -5.00178, -4.82542, -0.769568, -4.00178, -4.82542, -0.769568, 6.74822, 6.67458, -0.769568, 3.49822, 9.67458, -0.769568, 3.49822, 9.67458, -0.769568, -3.25178, 6.92458, -0.769568, -3.25178)
@@ -428,5 +428,5 @@ visible = false
 script = ExtResource("8_5augc")
 current_season = 5
 
-[node name="ChristmasTree" parent="Seasonal/Christmas" instance=ExtResource("10_5augc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6472697, -1.2568237, -2.259194)
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("11_tsku5")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.739676, -0.59264135, 1.3319478)

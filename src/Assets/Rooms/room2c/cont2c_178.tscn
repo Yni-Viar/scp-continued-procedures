@@ -226,7 +226,7 @@ font = ExtResource("17_mrost")
 font_size = 32
 depth = 0.01
 
-[node name="cont2c_178" type="StaticBody3D"]
+[node name="cont2c_178" type="StaticBody3D" groups=["Scp178Spawn"]]
 script = ExtResource("1_cxq0v")
 mesh_node_path = NodePath("NavigationRegion3D/Cube")
 floor_material_index = 2
