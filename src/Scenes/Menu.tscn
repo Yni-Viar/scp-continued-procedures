@@ -265,7 +265,8 @@ License: SCP-Wiki CC-BY-SA 3.0
 SCP-983 item - Aruspice (model, textures, rig, animation)
 License: SCP-Wiki CC-BY-SA 3.0
 -----------------------
-SCP-939 - Apocryphos (model), Shadowscale (textures), Shakles (rig and animation)
+SCP-939 - Apocryphos (model), Shadowscale (textures),
+Shakles (rig and animation)
 License: SCP-Wiki CC-BY-SA 3.0
 -----------------------
 PDA item - Model and textures by Shadowscale
@@ -327,9 +328,11 @@ SuperTuxKart nitro model for Yni Viar's office
 nitro.gltf && nitro.bin
 stk_mod_nitroBarrel.png
 stk_mod_nitroBottle.png
-Copyright: Copyright 2011, 2013 Jean-Manuel Clémençon
+Copyright 2011, 2013 Jean-Manuel Clémençon
 License: CC-BY-SA 4.0
-Comment: Nitro textures assumed to be done by Jean-Manuel Clémençon, model was rotated by Yni.
+Comment: Nitro textures assumed to be
+done by Jean-Manuel Clémençon, model
+was rotated by Yni.
 ------------------------
 Mentioned SCP objects:
 SCP-023 by Pig_catapult
