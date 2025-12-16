@@ -3,6 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.5.1 (2025.12.16)
+
+- Fix credits tab being out of bounds
+
 ## v5.5.0 (Cold as Ice update, 2025.12.15)
 ### New SCPs
 - SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect + Task
