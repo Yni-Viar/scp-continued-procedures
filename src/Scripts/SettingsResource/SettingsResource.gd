@@ -18,13 +18,13 @@ enum InputMethod {KB, MB, JP}
 ## Current enemy spawn value
 @export var ci_spawn: int = 0
 ## Time limited value
-@export var time_limited: bool = true
+@export var time_limited: bool = false
 ## Zen mode
 @export var zen_mode: bool = false
 ## Music volume
 @export var music_volume: float = 1.0
 ## Keybinds
-@export var keybinds: Dictionary[String, PackedInt64Array] = {
+@export var keybinds: Dictionary[String, Array] = {
 	"look": [InputMethod.MB, MOUSE_BUTTON_RIGHT],
 	"click": [InputMethod.MB, MOUSE_BUTTON_LEFT],
 	"camera_rotate_left": [InputMethod.KB, KEY_A],

@@ -1,5 +1,6 @@
-[gd_scene load_steps=39 format=4 uid="uid://c4kjg8vj7euky"]
+[gd_scene load_steps=40 format=4 uid="uid://c4kjg8vj7euky"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ig11j"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_srtgi"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_rk2gv"]
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="3_druik"]
@@ -355,6 +356,9 @@ data = PackedVector3Array(7.0996, -2.1288, -3.6713, 3.9905999, 5.1299996, -3.666
 data = PackedVector3Array(-0.32, 7.1959, -10.9549, -0.32, -0.0134, -12.776799, -0.32, 7.1959, -12.776799, -0.32, 7.1959, -10.9549, -0.32, -0.0134, -10.9549, -0.32, -0.0134, -12.776799, -0.16, 7.1959, -14.696799, -0.16, -0.0134, -15.9768, -0.16, 7.1959, -15.9768, -0.16, 7.1959, -14.696799, -0.16, -0.0134, -14.696799, -0.16, -0.0134, -15.9768, -0.32, 7.1959, -12.776899, -0.32, -0.0134, -14.696799, -0.32, 7.1959, -14.696799, -0.32, 7.1959, -12.776899, -0.32, -0.0134, -12.776799, -0.32, -0.0134, -14.696799, -0.32, 7.1959, -15.9768, -0.32, -0.0134, -17.8968, -0.32, 7.1959, -17.8968, -0.32, 7.1959, -15.9768, -0.32, -0.0134, -15.9768, -0.32, -0.0134, -17.8968, -0.16, -0.0134, -14.696799, -0.32, 7.1959, -14.696799, -0.32, -0.0134, -14.696799, -0.16, -0.0134, -14.696799, -0.16, 7.1959, -14.696799, -0.32, 7.1959, -14.696799, -0.32, -0.0134, -15.9768, -0.16, 7.1959, -15.9768, -0.16, -0.0134, -15.9768, -0.32, -0.0134, -15.9768, -0.32, 7.1959, -15.9768, -0.16, 7.1959, -15.9768)
 
 [node name="room1_ez" type="StaticBody3D"]
+script = ExtResource("1_ig11j")
+mesh_node_path = NodePath("NavigationRegion3D/Cube")
+floor_material_index = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_auprv")

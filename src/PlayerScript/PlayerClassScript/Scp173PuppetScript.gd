@@ -60,6 +60,8 @@ func scp_173_blink(delta: float):
 func scp_173_movement():
 	if state == States.IDLE && !movement_reset:
 		get_parent().get_parent().set_target_position(current_human.global_position)# + current_human.global_transform.basis.z * 1.5)
+		get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds["run"][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds["run"].size() - 1)])
+		get_parent().get_parent().get_node("WalkSounds").play()
 		movement_reset = true
 
 func spawn_scp_variation() -> void:

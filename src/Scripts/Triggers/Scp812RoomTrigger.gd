@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends RoomPrefab
 ## SCP-812 trigger script
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 

@@ -229,7 +229,6 @@ func _call_function(node_path: String, method_caller: String, amount: Array):
 			else:
 				callv(method_caller, amount)
 
-## @deprecated: Will be moved from MovableNpc
 func action_take(index: int):
 	if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null:
 		var prefab: Node3D = get_node("PlayerModel/Puppet")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=26 format=4 uid="uid://kb5so0w2xj5k"]
+[gd_scene load_steps=28 format=4 uid="uid://kb5so0w2xj5k"]
 
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_t50k2"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_yy1am"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_kymhv"]
 [ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_w1o03"]
 [ext_resource type="Texture2D" uid="uid://lntwsjawfujv" path="res://Assets/OriginalModels/Scp446Case/box_Metal009_2K-PNG_Color.png" id="4_yhutx"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="5_886wo"]
 [ext_resource type="Texture2D" uid="uid://3pe46xbd7vy5" path="res://Assets/OriginalModels/Scp446Case/box_Metal009_2K-PNG_Roughness.png" id="5_yy1am"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="6_886wo"]
 [ext_resource type="Texture2D" uid="uid://sryn254tfiqq" path="res://Assets/OriginalModels/Scp446Case/box_Metal009_2K-PNG_NormalGL.png" id="6_kymhv"]
 [ext_resource type="PackedScene" uid="uid://b7jrivpaerxxl" path="res://PlayerScript/PlayerClassRagdoll/Scp446.tscn" id="7_w1o03"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="7_yy1am"]
@@ -85,7 +87,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 54,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAGAAcACAAJAAoACwAMAAoADQALAA4ACwAPAAwAEAARAA8AEgAPABEAEgAMAA8AEgATAAwAFAAMABMAFQAMABQAFgAXABgAFgAZABcAGgAbABcAHAAdAB4A"),
-"material": ExtResource("2_kymhv"),
+"material": ExtResource("6_886wo"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 31,
@@ -161,7 +163,10 @@ font = ExtResource("10_u2gtq")
 font_size = 32
 depth = 0.01
 
-[node name="mt_cont1_446" type="StaticBody3D"]
+[node name="mt_cont1_446" type="StaticBody3D" groups=["MT_cont1_446"]]
+script = ExtResource("1_t50k2")
+mesh_node_path = NodePath("NavigationRegion3D/Cylinder")
+floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_6571d")
@@ -201,6 +206,12 @@ transform = Transform3D(0, 1.0000001, -8.742278e-08, 1.0000001, 0, 0, 0, -8.7422
 [node name="industrial_wall_lamp11" parent="NavigationRegion3D/Props" instance=ExtResource("2_w1o03")]
 transform = Transform3D(0, 1.0000001, -8.742278e-08, 1.0000001, 0, 0, 0, -8.7422784e-08, -1, 6.3747625, 0.44903326, -1.8948886)
 
+[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("7_yy1am")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5449665, -0.20265377, -7.414014)
+
+[node name="Table2" parent="NavigationRegion3D/Props" instance=ExtResource("7_yy1am")]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 6.092246, -0.20265377, -0.3590331)
+
 [node name="Cylinder" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00043988228, -0.27882367, -0.0010120869)
 visibility_range_end = 64.0
@@ -216,12 +227,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Cube/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_w1o03")
-
-[node name="Table" parent="NavigationRegion3D" instance=ExtResource("7_yy1am")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5449665, -0.20265377, -7.414014)
-
-[node name="Table2" parent="NavigationRegion3D" instance=ExtResource("7_yy1am")]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 6.092246, -0.20265377, -0.3590331)
 
 [node name="SCP-446" parent="." instance=ExtResource("7_w1o03")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 6.4314823, -1.0139104, -2.7653613)

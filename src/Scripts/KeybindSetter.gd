@@ -1,6 +1,5 @@
 extends GridContainer
-
-# Made by Yni. Licensed under MIT License.
+## Made by Yni, licensed under MIT License.
 
 var settings_key: Dictionary[String, String] = {
 	"CL": "look",

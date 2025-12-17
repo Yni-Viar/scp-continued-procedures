@@ -422,7 +422,6 @@ func spawn_doors() -> void:
 						startup_node.add_child(door, true)
 			zone_counter.x += 1
 			zone_index_default += map_size_y + 1
-			continue
 		for j in range(size_y):
 			if j >= size_y / (map_size_y + 1) * (zone_counter.y + 1) - 1:
 				if checkpoints_enabled && rooms[zone_index].door_frames.size() > 0:
@@ -433,7 +432,6 @@ func spawn_doors() -> void:
 						startup_node.add_child(door, true)
 				zone_counter.y += 1
 				zone_index += 1
-				continue
 			elif rooms[zone_index].door_frames.size() > 0:
 				var available_frames: Array[PackedScene] = rooms[zone_index].door_frames
 				if mapgen[i][j].east:
@@ -444,9 +442,8 @@ func spawn_doors() -> void:
 						door = available_frames[mapgen[i+1][j].resource.door_type].instantiate()
 					elif mapgen[i][j].resource.door_type >= 0:
 						door = available_frames[mapgen[i][j].resource.door_type].instantiate()
-					else: # Spawn or not spawn random door frame
-						if rng.randi_range(0, 1) == 1:
-							door = available_frames[rng.randi_range(0, available_frames.size() - 1)].instantiate()
+					else: # Spawn random door frame
+						door = available_frames[rng.randi_range(0, available_frames.size() - 1)].instantiate()
 					if door != null:
 						door.position = global_position + Vector3(i * grid_size + grid_size / 2, 0, j * grid_size)
 						door.rotation_degrees = Vector3(0, 90, 0)
@@ -459,9 +456,8 @@ func spawn_doors() -> void:
 						door = available_frames[mapgen[i][j+1].resource.door_type].instantiate()
 					elif mapgen[i][j].resource.door_type >= 0:
 						door = available_frames[mapgen[i][j].resource.door_type].instantiate()
-					else: # Spawn or not spawn random door frame
-						if rng.randi_range(0, 1) == 1:
-							door = available_frames[rng.randi_range(0, available_frames.size() - 1)].instantiate()
+					else: # Spawn random door frame
+						door = available_frames[rng.randi_range(0, available_frames.size() - 1)].instantiate()
 					if door != null:
 						door.position = global_position + Vector3(i * grid_size, 0, j * grid_size + grid_size / 2)
 						door.rotation_degrees = Vector3(0, 0, 0)

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bh28usaa6gi1m"]
+
+[node name="Spawnpoints" type="Node3D"]
+
+[node name="entityspawn8" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.155354, 5.398538, 4.266859)
+
+[node name="entityspawn9" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.155354, 5.398538, 17.205444)
+
+[node name="entityspawn11" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.696245, 4.5931134, 10.907906)
+
+[node name="entityspawn12" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.282737, 0.15319997, 61.238007)
+
+[node name="entityspawn13" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.086128, 0.15319997, 57.88002)
+
+[node name="entityspawn14" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.086128, 0.15319997, 45.34756)
+
+[node name="entityspawn15" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.103218, 0.15319997, 45.34756)
+
+[node name="entityspawn16" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.019436, 0.15319997, 32.040592)
+
+[node name="entityspawn17" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9354615, 0.15320009, 39.125908)
+
+[node name="entityspawn10" type="Marker3D" parent="." groups=["GuardSpawn"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.684046, 7.887731, -9.968121)

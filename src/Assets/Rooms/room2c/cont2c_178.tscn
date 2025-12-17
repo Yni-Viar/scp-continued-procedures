@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=4 uid="uid://ek6uussev77v"]
+[gd_scene load_steps=31 format=4 uid="uid://ek6uussev77v"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_3udlw"]
+[ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_cxq0v"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="2_j37il"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="2_wmtfc"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="3_35vcb"]
@@ -225,7 +226,10 @@ font = ExtResource("17_mrost")
 font_size = 32
 depth = 0.01
 
-[node name="cont2c_178" type="StaticBody3D"]
+[node name="cont2c_178" type="StaticBody3D" groups=["Scp178Spawn"]]
+script = ExtResource("1_cxq0v")
+mesh_node_path = NodePath("NavigationRegion3D/Cube")
+floor_material_index = 2
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_o7u4x")

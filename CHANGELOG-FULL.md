@@ -11,6 +11,33 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Story mode: Pre-configured round mechanic
 - [ ] Story mode: Custom "escape" scenario - finish task.
 - [ ] Story mode: lore (in progress)
+## v5.5.1 (2025.12.16)
+
+- Fix credits tab being out of bounds
+
+## v5.5.0 (Cold as Ice update, 2025.12.15)
+### New SCPs
+- SCP-939 (actually, a Christmas gift 🙂) + Amnesia status effect + Task
+- SCP-649 (will spawn only at December (for Christmas))
+### New features
+- Add interactable props
+- New Maintenance Zone rooms: Warehouse and testroom. Find it out!
+- Added ventilation for Maintenance Zone
+- Snow on surface or in facility (for SCP-649)
+- SCP-173 has now in-house movement sound
+- Chaos Insurgency now spawns once per game.
+- Guards now do not spawn at Surface Zone at Halloween and Christmas
+- Reworked clutter system - now it has simple API + added ability for season-only prefabs.
+- Checkpoints now contain information about actual SCPs in the facility.
+- Updated map generator to 9.1.2 and require doors spawn for Maintenance Zone
+### Bugfixes
+- Fixed third-person camera position
+- Reduce Christmas tree amount because of optimization
+- Make sure, that Status Effect is correctly unloaded.
+- Remove placeholder SCP-178-1 sprites
+- \[Technical\] ResourceStorage: support dictionaries inside Resource.
+- \[Technical\] StatusEffectCommand: support player-only status commands
+
 ## v5.3.5 (2025.11.23)
 
 - Same as 5.3.4, but use custom Godot build because of security issues.

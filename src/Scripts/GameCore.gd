@@ -33,6 +33,7 @@ var showable_res: String = ""
 func _ready() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
+	ci_timer = rng.randf_range(20.0, 22.5)
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	# Choose seed
@@ -64,7 +65,8 @@ func _process(delta: float) -> void:
 		ci_timer -= delta
 		if ci_timer < 0:
 			spawn_wave_entity(1)
-			ci_timer = 120.0
+			# Disable Chaos wave if they were already spawned (5.5.0 feature)
+			ci_probability = 0
 		mtf_cooldown -= delta
 
 

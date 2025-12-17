@@ -26,7 +26,12 @@ func load_resource(path: String, type: String) -> Resource:
 				for i in range(data_received.size()):
 					#if resource_to_save.is_class(res_names[i]["name"]) || res_names[i]["name"].contains("resource") || res_names[i]["name"] == "script" || res_names[i]["name"].contains(".gd"):
 						#continue
-					resource_to_save.set(data_received.keys()[i], data_received[data_received.keys()[i]])
+					var key = data_received.keys()[i]
+					if typeof(data_received[key]) == TYPE_DICTIONARY:
+						for sub_key in data_received[key].keys():
+							resource_to_save[key][sub_key] = data_received[key][sub_key]
+					else:
+						resource_to_save.set(data_received.keys()[i], data_received[key])
 				return resource_to_save
 			else:
 				printerr("Error reading data.")
@@ -35,6 +40,7 @@ func load_resource(path: String, type: String) -> Resource:
 			printerr("Not a JSON")
 			return null
 	else:
+		
 		printerr("File not exist")
 		return null
 
@@ -46,8 +52,7 @@ func save_resource(path: String, resource_to_save: Resource):
 		if resource_to_save.is_class(res_names[i]["name"]) || res_names[i]["name"].contains("resource") || res_names[i]["name"] == "script" || res_names[i]["name"].contains(".gd"):
 			continue
 		data_to_save[res_names[i]["name"]] = resource_to_save.get(res_names[i]["name"])
-	var json_binding: JSON = JSON.new()
-	var resulting_json = json_binding.stringify(data_to_save)
+	var resulting_json = JSON.stringify(data_to_save)
 	var file: FileAccess = FileAccess.open(path, FileAccess.WRITE)
 	file.store_line(resulting_json)
 	file.close()

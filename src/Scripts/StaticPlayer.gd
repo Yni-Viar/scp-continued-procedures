@@ -13,6 +13,8 @@ var prev_x_coordinate: float = 0
 var scroll_factor: float = 1.0
 var transition: NodePath
 
+var current_overlays: Array[String] = []
+
 const RAY_LENGTH = 512
 
 # Called when the node enters the scene tree for the first time.
@@ -56,7 +58,7 @@ func _physics_process(delta: float) -> void:
 				get_tree().root.get_node("Game/UI/HungerBar").value = get_node(target_puppet_path).current_health[3]
 			# Apply bonus to Y coordinate if current_camera_mode is third person
 			if current_camera_mode == CameraMode.THIRD_PERSON:
-				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0) + Vector3(0, 0.875, 0)
+				global_position = get_node(target_puppet_path).global_position + Vector3(0, 2.5, 0)
 			else:
 				global_position = get_node(target_puppet_path).global_position + Vector3(0, 3, 0)
 
@@ -109,6 +111,10 @@ func interact(value: String) -> void:
 								s_result["collider"].picked = true
 								s_result["collider"].queue_free()
 								#Use only one item
+								break
+							if s_result["collider"] is InteractableStatic && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
+								s_result["collider"].interact(get_node(target_puppet_path))
+								#Use only one interactable
 								break
 							if s_result["collider"] is MovableNpc:
 								if !s_result["collider"].is_player:
@@ -166,14 +172,12 @@ func toggle_mode(mode: int):
 	match mode:
 		1:
 			if camera_mode == 0 || camera_mode == 1:
-				global_position.y = 0
 				transition = $Head/UpperLook.get_path()
 				current_camera_mode = CameraMode.UPPERLOOK
 			else:
 				printerr("camera_mode does not allow this mode")
 		2:
 			if camera_mode == 0 || camera_mode == 2:
-				global_position.y = 1.863
 				transition = $Head/ThirdPerson.get_path()
 				current_camera_mode = CameraMode.THIRD_PERSON
 			else:
@@ -189,13 +193,33 @@ func _on_optimizator_body_exited(body: Node3D) -> void:
 		body.optimizator_paused = true
 
 func apply_overlay(effect: String, strength: float):
-	for node in $Head/Camera3D/Overlays.get_children():
-		node.hide()
 	match effect:
 		"Frozen":
 			$Head/Camera3D/Overlays/ColdOverlay.show()
 			$Head/Camera3D/Overlays/ColdOverlay.mesh.surface_get_material(0).set_shader_parameter("multiplier", strength)
+			current_overlays.append(effect)
 		"EdgeVision":
-			$Head/Camera3D/Overlays/EgdeDetectOverlay.show()
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/EgdeDetectOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.erase(effect)
 		"Scp178":
-			$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/StereoGlassesOverlay.show()
+				current_overlays.erase(effect)
+		"Amnesia":
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/AmnesiaVisionOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/AmnesiaVisionOverlay.hide()
+				current_overlays.erase(effect)
+		_:
+			for node in $Head/Camera3D/Overlays.get_children():
+				node.hide()
+			current_overlays.clear()

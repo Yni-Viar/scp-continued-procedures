@@ -7,10 +7,12 @@
 script = ExtResource("3_nyb2y")
 action_node_path = "StaticPlayer"
 action_method_name = "apply_overlay"
+player_only = true
 metadata/_custom_type_script = "uid://dcmkhvqt24ups"
 
 [resource]
 script = ExtResource("1_2718k")
 effect_name = "Frozen"
 start_command = Array[ExtResource("3_nyb2y")]([SubResource("Resource_2718k")])
+destroy_command = Array[ExtResource("3_nyb2y")]([SubResource("Resource_2718k")])
 metadata/_custom_type_script = "uid://c4fqc7mfbrm1o"

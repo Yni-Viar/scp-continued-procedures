@@ -4,16 +4,7 @@
 
 [resource]
 script = ExtResource("1_sq76f")
-music = 1.0
-sound = 1.0
-mouse_sensitivity = 0.05
-glow = true
-reflection_probe = true
-ci_spawn = 0
-time_limited = true
-zen_mode = false
-music_volume = 1.0
-keybinds = Dictionary[String, PackedInt64Array]({
+keybinds = Dictionary[String, Array]({
 "camera_rotate_left": [0, 65],
 "camera_rotate_right": [0, 68],
 "click": [1, 1],

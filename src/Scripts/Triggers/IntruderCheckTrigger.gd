@@ -1,4 +1,5 @@
 extends Area3D
+## Made by Yni, licensed under MIT License.
 
 @export var detect_scp347: bool = true
 @export var detect_CI:bool = true
