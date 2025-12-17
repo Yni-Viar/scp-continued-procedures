@@ -6,12 +6,21 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ## v6.0.0 (release is NOT soon.)
 ### Addon support
 - [ ] Addon support.
-### Story mode (unfinished)
-- [ ] Move Casual mode as story, rename Story mode button as Play.
-- [ ] Story mode: Pre-configured round mechanic
-- [ ] Story mode: Custom "escape" scenario - finish task.
-- [ ] Story mode: lore (in progress)
-## v5.5.1 (2025.12.16)
+
+### Facility Builder mode
+- [ ] Facility Builder mode - facility building simulator.
+
+### Human classes rework
+- [ ] Class-D and researchers will be randomized, based on GD-Human-Framework. (Scientist from Classic mode will remian unchanged, since this scientist is from *SCP:SL*)
+- [ ] Improve gameplay AI to call and ride elevators
+- [ ] Improve researcher AI to go to various SCP subjects, instead of wandering around (may be ported on next 5.x.x version)
+
+### More changes
+#### New Godot version
+- [ ] Update to Godot 4.6 and enable SSAO setting. *Yni Viar's Comment: current Godot 4.6 beta has issues, task will be delayed.*
+- [ ] Remove item shader in favor of 4.5 stencil feature.
+
+## v5.5.1 (2025.12.16, last version, which possibly runs on Windows 8.1 and has compatibility with 4.4)
 
 - Fix credits tab being out of bounds
 
