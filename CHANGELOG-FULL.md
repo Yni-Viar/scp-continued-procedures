@@ -11,9 +11,12 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Facility Builder mode - facility building simulator.
 
 ### Human classes rework
-- [ ] Class-D and researchers will be randomized, based on GD-Human-Framework. (Scientist from Classic mode will remian unchanged, since this scientist is from *SCP:SL*)
+- [ ] Class-D and researchers will be randomized, based on GD-Human-Framework. (Scientist from Classic mode will remain unchanged, since this scientist is from *SCP:SL*)
 - [ ] Improve gameplay AI to call and ride elevators
 - [ ] Improve researcher AI to go to various SCP subjects, instead of wandering around (may be ported on next 5.x.x version)
+
+### New SCP
+- [ ] SCP-007 *Yni Viar's Comment: human classes rework is required before integrating 007.*
 
 ### More changes
 #### New Godot version
