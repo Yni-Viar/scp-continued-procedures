@@ -15,8 +15,20 @@ var infrared_visibility: bool = true:
 		get_node(armature_name).visible = val
 
 # Called when the node enters the scene tree for the first time.
-#func on_start_human() -> void:
-	#pass # Replace with function body.
+func on_start_human() -> void:
+	match Settings.current_season:
+		Settings.Season.CHRISTMAS:
+			$Woman_body_rig/Skeleton3D/Woman_body.set_surface_override_material(0, load("res://Assets/Materials/Classes/Christmas/Scp347_scan_shader.tres"))
+			$Woman_body_rig/Skeleton3D/Woman_female_casualsuit01.set_surface_override_material(0, load("res://Assets/Materials/Classes/Christmas/Scp347_scan_shader.tres"))
+			$Woman_body_rig/Skeleton3D/Woman_short03.set_surface_override_material(0, load("res://Assets/Materials/Classes/Christmas/Scp347_scan_shader.tres"))
+			$"Woman_body_rig/Skeleton3D/Woman_cortu_t-bar".set_surface_override_material(0, load("res://Assets/Materials/Classes/Christmas/Scp347_scan_shader.tres"))
+			$"Woman_body_rig/Skeleton3D/Woman_low-poly".set_surface_override_material(0, load("res://Assets/Materials/Classes/Christmas/Scp347_scan_shader.tres"))
+		Settings.Season.HALLOWEEN:
+			$Woman_body_rig/Skeleton3D/Woman_body.set_surface_override_material(0, load("res://Assets/Materials/Classes/Halloween/Scp347_scan_shader.tres"))
+			$Woman_body_rig/Skeleton3D/Woman_female_casualsuit01.set_surface_override_material(0, load("res://Assets/Materials/Classes/Halloween/Scp347_scan_shader.tres"))
+			$Woman_body_rig/Skeleton3D/Woman_short03.set_surface_override_material(0, load("res://Assets/Materials/Classes/Halloween/Scp347_scan_shader.tres"))
+			$"Woman_body_rig/Skeleton3D/Woman_cortu_t-bar".set_surface_override_material(0, load("res://Assets/Materials/Classes/Halloween/Scp347_scan_shader.tres"))
+			$"Woman_body_rig/Skeleton3D/Woman_low-poly".set_surface_override_material(0, load("res://Assets/Materials/Classes/Halloween/Scp347_scan_shader.tres"))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

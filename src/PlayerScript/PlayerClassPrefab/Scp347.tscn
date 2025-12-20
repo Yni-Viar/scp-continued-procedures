@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=4 uid="uid://cskradjeycmsa"]
 
 [ext_resource type="Script" uid="uid://cl0nqk4wfplo" path="res://PlayerScript/PlayerClassScript/Scp347PuppetScript.gd" id="1_setat"]
-[ext_resource type="Material" uid="uid://doborvycad2fa" path="res://Shaders/ScanShader347.tres" id="2_setat"]
+[ext_resource type="Material" uid="uid://doborvycad2fa" path="res://Assets/Materials/Classes/Regular/Scp347_scan_shader.tres" id="2_setat"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_phl15"]
 resource_name = "v2 skin material"

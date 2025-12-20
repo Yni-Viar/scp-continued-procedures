@@ -12,6 +12,7 @@ enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, C
 @export var resistance_scp178: bool = false
 @export var resistance_scp686: bool = false
 @export var torso_node_path: NodePath
+
 var scp_067_affected: bool = false
 
 var cuffed_players: Array[MovableNpc] = []
@@ -33,6 +34,7 @@ func on_start():
 	#get_parent().get_node("NpcSelection").set_collision_mask_value(3, true)
 	if get_node(torso_node_path) == null:
 		resistance_scp686 = true
+	
 	on_start_human()
 
 func on_start_human():

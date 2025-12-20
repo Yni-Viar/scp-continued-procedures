@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dsxkxasbkkhkb"]
+
+[ext_resource type="Shader" uid="uid://dg5tinl2kmhhk" path="res://Shaders/SuitShader/suit.gdshader" id="1_lo6ia"]
+[ext_resource type="Texture2D" uid="uid://djog8wqe0utj7" path="res://Assets/ExternalModels/SCP/DClass/christmas/ClassD_jumpsuit_AlbedoTransparency.png" id="2_lo6ia"]
+[ext_resource type="Texture2D" uid="uid://cppaxg3otgn2r" path="res://Assets/ExternalModels/SCP/DClass/ClassD_jumpsuit_Normal.png" id="3_vojiq"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Jumpsuit"
+render_priority = 0
+shader = ExtResource("1_lo6ia")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_lo6ia")
+shader_parameter/roughness = 0.723077
+shader_parameter/metallic_texture_channel = Vector4(1, 0, 0, 0)
+shader_parameter/specular = 0.5
+shader_parameter/metallic = 0.0
+shader_parameter/texture_normal = ExtResource("3_vojiq")
+shader_parameter/normal_scale = 1.0
+shader_parameter/uv1_scale = Vector3(1, 1, 1)
+shader_parameter/uv1_offset = Vector3(0, 0, 0)
+shader_parameter/uv2_scale = Vector3(1, 1, 1)
+shader_parameter/uv2_offset = Vector3(0, 0, 0)
+shader_parameter/tint = Color(0, 0, 0, 1)

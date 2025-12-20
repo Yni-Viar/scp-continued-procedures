@@ -3,6 +3,13 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.6.0 (Yule 2025 update, 2025.12.21)
+### Add season spirit to current puppet classes
+- [x] Add skins to most of puppet classes (except SCP-173 (because they already have randomization and Christmas face), SCP-178-1, SCP-650 (Halloween only, not Christmas) and SCP-938)
+### New features
+- [x] SCP-266 VFX overhaul.
+- [ ] Improve researcher AI to go to various SCP subjects, instead of wandering around (similar to SCP-939 AI) *Yni Viar's comment: originally, it was 6.0 feature, but I decided to do it for 5.6*
+
 ## v5.5.1 (2025.12.16)
 
 - Fix credits tab being out of bounds

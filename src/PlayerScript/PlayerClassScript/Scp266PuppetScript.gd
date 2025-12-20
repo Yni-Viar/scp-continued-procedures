@@ -9,7 +9,13 @@ var timer: float = 4.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	match Settings.current_season:
+		Settings.Season.CHRISTMAS:
+			$CPUParticles3D.mesh.material = load("res://Assets/VFX/Scp266/christmas/Scp266_active.tres")
+			$CPUParticles3D2.mesh.material = load("res://Assets/VFX/Scp266/christmas/Scp266_dormant.tres")
+		Settings.Season.HALLOWEEN:
+			$CPUParticles3D.mesh.material = load("res://Assets/VFX/Scp266/halloween/Scp266_active.tres")
+			$CPUParticles3D2.mesh.material = load("res://Assets/VFX/Scp266/halloween/Scp266_dormant.tres")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
