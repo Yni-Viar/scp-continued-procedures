@@ -11,7 +11,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Agents now have a visual flashlight on their vest.
 - Began AI rework - add SCP-939 (and Scientists since 5.6.0) style of wandering to MovableNpc *Yni Viar's comment: originally, it was 6.0 feature, but I decided to do it for 5.6*
 - Researchers no longer spawn in Entrance subzone
-- Added slight-visible doors for Research Zone (Maintenance Zone started having doors in 5.5.0)
+- Added slight-visible doors for Research Zone (Maintenance Zone have doors since 5.5.0)
 ### Bugfixes
 - Fix CI event crash - also change CI logic.
 
