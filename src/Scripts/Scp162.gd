@@ -33,7 +33,7 @@ func activate():
 	for npc in targets:
 		if is_instance_valid(npc):
 			npc.follow_target = self.get_path()
-			npc.wandering = false
+			npc.wandering_system = MovableNpc.WanderingSystem.NONE
 			npc.movement_freeze = true
 
 func spike():

@@ -46,6 +46,6 @@ func _on_body_exited(body: Node3D) -> void:
 		elif body.puppet_class.puppet_class_name == "SCP-939":
 			var scp939 = body.get_node("PlayerModel/Puppet")
 			if scp939 is Scp939PuppetScript:
-				scp939.wandering_system = Scp939PuppetScript.WanderingSystem.GENERIC_WANDER
+				body.wandering_system = MovableNpc.WanderingSystem.GENERIC_WANDER
 		#if class_d_amount < 1 && foundation_amount < 1:
 			#player_came = false

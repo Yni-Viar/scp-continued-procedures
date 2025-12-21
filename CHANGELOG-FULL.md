@@ -13,7 +13,6 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### Human classes rework
 - [ ] Class-D and researchers will be randomized, based on GD-Human-Framework. (Scientist from Classic mode will remain unchanged, since this scientist is from *SCP:SL*)
 - [ ] Improve gameplay AI to call and ride elevators
-- [ ] Improve researcher AI to go to various SCP subjects, instead of wandering around (may be ported on next 5.x.x version)
 
 ### New SCP
 - [ ] SCP-007 *Yni Viar's Comment: human classes rework is required before integrating 007.*
@@ -23,7 +22,19 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Update to Godot 4.6 and enable SSAO setting. *Yni Viar's Comment: current Godot 4.6 beta has issues, task will be delayed.*
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 
-## v5.5.1 (2025.12.16, last version, which possibly runs on Windows 8.1 and has compatibility with 4.4)
+## v5.6.0 (Winter solstice 2025 update, 2025.12.21, last version, which possibly runs on Windows 8.1 and has compatibility with 4.4)
+### Add season spirit to current puppet classes
+- Add skins to most of puppet classes (except SCP-173 (because they already have randomization and Christmas face), SCP-178-1, SCP-650 (they have only Christmas skin) and SCP-938)
+### New features
+- SCP-266 VFX overhaul.
+- Agents now have a visual flashlight on their vest.
+- Began AI rework - add SCP-939 (and Scientists since 5.6.0) style of wandering to MovableNpc *Yni Viar's comment: originally, it was 6.0 feature, but I decided to do it for 5.6*
+- Researchers no longer spawn in Entrance subzone
+- Added slight-visible doors for Research Zone (Maintenance Zone have doors since 5.5.0)
+### Bugfixes
+- Fix CI event crash - also change CI logic.
+
+## v5.5.1 (2025.12.16)
 
 - Fix credits tab being out of bounds
 

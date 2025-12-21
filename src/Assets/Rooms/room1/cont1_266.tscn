@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://bw050fidp6hg0"]
+[gd_scene load_steps=33 format=4 uid="uid://bw050fidp6hg0"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_i5u11"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_t06pc"]
@@ -15,13 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://brxtgl2ekhirf" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_diff_2k.jpg" id="9_t06pc"]
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="10_vygn4"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="11_piepq"]
+[ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="13_vygn4"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="15_ggk85"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="16_t06pc"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_vygn4"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_2ywj7"]
-vertices = PackedVector3Array(-7.91106, -0.770643, -8.8476, -7.91106, -0.770643, -2.3476, -4.41106, -0.270643, -2.5976, -5.11106, -0.770643, -3.8476, -5.57772, -0.770643, -2.51426, -4.16106, -0.0206428, -0.597595, 9.33894, 6.47936, -0.597595, 5.21394, 6.47936, -1.1976, 5.28894, 6.47936, -0.597595, 9.33894, 6.47936, -8.8476, 5.02644, 6.47936, -8.8476, -3.59856, -0.0206428, -8.8476, -5.03606, -0.770643, -8.8476, -3.41106, 6.47936, 1.4024, -3.41106, 6.47936, 9.6524, 9.33894, 6.47936, 9.6524, 9.33894, 6.47936, 1.1524, -4.16106, -0.770643, 5.1524, -7.91106, -0.770643, 5.6524, -7.91106, -0.770643, 9.6524, 9.33894, -0.770643, 1.4024, -4.16106, -0.770643, 1.4024, 9.33894, -0.770643, 9.6524)
-polygons = [PackedInt32Array(2, 4, 3), PackedInt32Array(3, 4, 1), PackedInt32Array(3, 1, 0), PackedInt32Array(6, 8, 7), PackedInt32Array(7, 8, 5), PackedInt32Array(7, 5, 2), PackedInt32Array(0, 12, 3), PackedInt32Array(3, 12, 11), PackedInt32Array(3, 11, 2), PackedInt32Array(2, 11, 10), PackedInt32Array(2, 10, 7), PackedInt32Array(7, 10, 9), PackedInt32Array(7, 9, 6), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 16), PackedInt32Array(19, 18, 17), PackedInt32Array(17, 21, 20), PackedInt32Array(20, 22, 17), PackedInt32Array(17, 22, 19)]
+vertices = PackedVector3Array(-7.9110584, -0.77064276, -8.85031, -7.9110584, -0.77064276, -2.3503103, -4.4110584, -0.27064276, -2.6003103, -5.111058, -0.77064276, -3.8503103, -5.577725, -0.77064276, -2.5169768, -4.1610584, -0.020642757, -0.6003103, 9.338942, 6.4793572, -0.6003103, 5.2139416, 6.4793572, -1.2003107, 5.2889414, 6.4793572, -0.6003103, 9.338942, 6.4793572, -8.85031, 5.0264416, 6.4793572, -8.85031, -3.5985584, -0.020642757, -8.85031, -5.0360584, -0.77064276, -8.85031, -3.4110584, 6.4793572, 1.3996897, -3.4110584, 6.4793572, 9.64969, 9.338942, 6.4793572, 9.64969, 9.338942, 6.4793572, 1.1496897, 7.8389416, -0.77064276, 6.8996897, 9.088942, -0.77064276, 6.6496897, 9.338942, -0.77064276, 5.1496897, 7.8389416, -0.77064276, 4.6496897, 7.8389416, -0.77064276, 1.3996897, -2.9110584, -0.77064276, 1.3996897, -4.1610584, -0.77064276, 1.6496897, -4.4110584, -0.77064276, 5.3996897, -7.9110584, -0.77064276, 5.6496897, -7.9110584, -0.77064276, 9.64969, 7.8389416, -0.77064276, 9.64969)
+polygons = [PackedInt32Array(2, 4, 3), PackedInt32Array(3, 4, 1), PackedInt32Array(3, 1, 0), PackedInt32Array(6, 8, 7), PackedInt32Array(7, 8, 5), PackedInt32Array(7, 5, 2), PackedInt32Array(0, 12, 3), PackedInt32Array(3, 12, 11), PackedInt32Array(3, 11, 2), PackedInt32Array(2, 11, 10), PackedInt32Array(2, 10, 7), PackedInt32Array(7, 10, 9), PackedInt32Array(7, 9, 6), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(22, 21, 20), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 20), PackedInt32Array(24, 20, 17), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 17), PackedInt32Array(26, 17, 27)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jx83s"]
 _surfaces = [{
@@ -271,7 +272,7 @@ end_position = Vector3(0, 0, 4)
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="industrial_wall_lamp" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.91911, 0.964182, 3.47601)
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.91911, -0.14502347, 5.854574)
 
 [node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -280,9 +281,27 @@ mesh = SubResource("ArrayMesh_erdpl")
 skeleton = NodePath("")
 
 [node name="industrial_wall_lamp2" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.91911, 0.964182, 8.20247)
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, 6.6784563, -0.14502347, 0.65456295)
 
 [node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp2"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+visibility_range_end = 64.0
+mesh = SubResource("ArrayMesh_erdpl")
+skeleton = NodePath("")
+
+[node name="industrial_wall_lamp8" type="Node3D" parent="NavigationRegion3D/Props"]
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, 1.6433454, -0.14502347, 0.65456295)
+
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp8"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+visibility_range_end = 64.0
+mesh = SubResource("ArrayMesh_erdpl")
+skeleton = NodePath("")
+
+[node name="industrial_wall_lamp9" type="Node3D" parent="NavigationRegion3D/Props"]
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, -3.4606104, -0.14502347, 0.65456295)
+
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp9"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_erdpl")
@@ -333,24 +352,14 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_erdpl")
 skeleton = NodePath("")
 
+[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("13_vygn4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.118471, -1.2663893, 8.542466)
+
+[node name="steel_frame_shelves_01_2k2" parent="NavigationRegion3D/Props" instance=ExtResource("13_vygn4")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.118471, -1.2663893, 2.8231544)
+
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 8.91911, 0.964182, 3.47601)
-light_color = Color(0.841349, 0.64222, 0.464989, 1)
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 24.0
-omni_range = 8.0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 8.91911, 0.964182, 8.20247)
-light_color = Color(0.841349, 0.64222, 0.464989, 1)
-light_bake_mode = 1
-distance_fade_enabled = true
-distance_fade_begin = 24.0
-omni_range = 8.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights"]
 transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -7.6557, 0.964182, 8.20247)
@@ -392,6 +401,38 @@ light_bake_mode = 1
 distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 16.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
+transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.9106863e-15, 8.91911, -0.14502342, 5.854574)
+light_color = Color(0.841349, 0.64222, 0.464989, 1)
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
+omni_range = 8.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights"]
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, 6.6784563, -0.14502342, 1.654563)
+light_color = Color(0.841349, 0.64222, 0.464989, 1)
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
+omni_range = 8.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="DebugLights"]
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, 1.6433454, -0.14502342, 1.654563)
+light_color = Color(0.841349, 0.64222, 0.464989, 1)
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
+omni_range = 8.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="DebugLights"]
+transform = Transform3D(-4.3711395e-08, 1, 4.3711392e-08, -1, -4.37114e-08, 4.37114e-08, 4.3711402e-08, -4.371139e-08, 1, -3.4606104, -0.14502342, 1.654563)
+light_color = Color(0.841349, 0.64222, 0.464989, 1)
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
+omni_range = 8.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32723, 6.46844, 0.297435)

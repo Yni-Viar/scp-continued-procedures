@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dig02xllan7ya"]
+
+[ext_resource type="Texture2D" uid="uid://bl4gfts1p76re" path="res://Assets/ExternalModels/SCP/DClass/christmas/ClassD_shoe_AlbedoTransparency.png" id="1_x5ajf"]
+[ext_resource type="Texture2D" uid="uid://dy1pipv3i3jol" path="res://Assets/ExternalModels/SCP/DClass/ClassD_shoe_Normal.png" id="2_1y50v"]
+
+[resource]
+resource_name = "shoes.001"
+albedo_texture = ExtResource("1_x5ajf")
+roughness = 0.104545
+normal_enabled = true
+normal_texture = ExtResource("2_1y50v")

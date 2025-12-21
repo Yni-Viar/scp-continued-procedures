@@ -5,7 +5,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 
 ## Undetermined
 - [ ] SCP-001 (by shaggydredlocks) event
-- [ ] SCP-003
+- [ ] SCP-007
 - [ ] SCP-104
 - [ ] SCP-432 (with dimension)
 - [ ] SCP-647

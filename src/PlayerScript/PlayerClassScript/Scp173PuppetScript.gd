@@ -3,7 +3,6 @@ extends VisionScpPuppetScript
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp173PuppetScript
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 @export var scp_173_variations: Dictionary[PackedScene, int] = {}
 var scp_173_current_id: int
 @export var invincibility: bool = false

@@ -13,6 +13,7 @@ initial_amount = 64
 interacting_action = 2
 fraction = 1
 apply_height_bugfix = false
+wandering_system = 1
 health = Array[float]([1000.0])
 spawn_on_start = false
 enable_ik = false

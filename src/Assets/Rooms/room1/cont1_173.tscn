@@ -377,5 +377,14 @@ transform = Transform3D(0.287394, 0, -0.9578124, 0, 1, 0, 0.9578124, 0, 0.287394
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 shape = SubResource("ConcavePolygonShape3D_4ecej")
 
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5315247, -0.78577095, -4.5216627)
+
+[node name="ScientistPoint2" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5315247, -0.78577095, -1.2716289)
+
+[node name="ScientistPoint3" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1381054, -0.78577095, 7.4262023)
+
 [connection signal="body_entered" from="Scp173Task" to="Scp173Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp173Task" to="Scp173Task" method="_on_body_exited"]

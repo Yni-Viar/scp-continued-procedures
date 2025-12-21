@@ -1,7 +1,9 @@
-[gd_scene load_steps=13 format=4 uid="uid://ccwr44itsoxqa"]
+[gd_scene load_steps=14 format=4 uid="uid://ccwr44itsoxqa"]
 
 [ext_resource type="Script" uid="uid://br8l8qqliv22t" path="res://PlayerScript/PlayerClassScript/Scp023PuppetScript.gd" id="1_bw3o4"]
-[ext_resource type="Shader" uid="uid://crydejvxtf5rf" path="res://Shaders/Scp023EyeShader/simpleglowshader.gdshader" id="2_p60mr"]
+[ext_resource type="Material" uid="uid://cfs0kmujbldpu" path="res://Assets/Materials/Classes/Regular/Scp023_eyes.tres" id="2_bw3o4"]
+[ext_resource type="Material" uid="uid://b2c3hg5v8b4lx" path="res://Assets/Materials/Classes/Christmas/Scp023_eyes.tres" id="2_ffltr"]
+[ext_resource type="Material" uid="uid://ccuy3xt60u6ek" path="res://Assets/Materials/Classes/Halloween/Scp023_eyes.tres" id="3_jdqwp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ju20"]
 resource_name = "Material.001"
@@ -14,12 +16,6 @@ resource_name = "Material.002"
 cull_mode = 2
 albedo_color = Color(0, 0, 0, 1)
 roughness = 0.5
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ffltr"]
-render_priority = 0
-shader = ExtResource("2_p60mr")
-shader_parameter/color = Color(0.925053, 0.464264, 9.62615e-07, 1)
-shader_parameter/emission_strength = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axf8f"]
 
@@ -69,7 +65,7 @@ _surfaces = [{
 "index_count": 36,
 "index_data": PackedByteArray("AAAMAAIAAwAMAAAAAgAMAAQAAwABAAwAAQAEAAwAAQAFAAQABgAHAA0ACQAGAA0ABwAKAA0ACQANAAgACAANAAoACAAKAAsA"),
 "lods": [0.00191663, PackedByteArray("AAABAAIAAwABAAAAAgABAAQAAQAFAAQABgAHAAgACQAGAAgABwAKAAgACAAKAAsA")],
-"material": SubResource("ShaderMaterial_ffltr"),
+"material": ExtResource("2_bw3o4"),
 "name": "Material.003",
 "primitive": 3,
 "skin_data": PackedByteArray("BwAAAAAAAAD//wAAAAAAAAcAAAAAAAAA//8AAAAAAAAHAAAAAAAAAP//AAAAAAAABwAAAAAAAAD//wAAAAAAAAcABgAAAAAARvm4BgAAAAAHAAYAAAAAANv4IwcAAAAABwAAAAAAAAD//wAAAAAAAAcAAAAAAAAA//8AAAAAAAAHAAAAAAAAAP//AAAAAAAABwAAAAAAAAD//wAAAAAAAAcAAAAAAAAA//8AAAAAAAAHAAYAAAAAAFD5rgYAAAAABwAAAAAAAAD//wAAAAAAAAcAAAAAAAAA//8AAAAAAAA="),
@@ -1570,6 +1566,13 @@ _data = {
 [node name="Puppet" type="Node3D"]
 script = ExtResource("1_bw3o4")
 armature_name = "rig_001_deform"
+fixed_prefab = true
+christmas_suits = Dictionary[NodePath, Array]({
+NodePath("rig_001_deform/Skeleton3D/Plane"): [[2, ExtResource("2_ffltr")]]
+})
+halloween_suits = Dictionary[NodePath, Array]({
+NodePath("rig_001_deform/Skeleton3D/Plane"): [[2, ExtResource("3_jdqwp")]]
+})
 
 [node name="rig_001_deform" type="Node3D" parent="."]
 transform = Transform3D(-1.07466, 0, -9.39498e-08, 0, 1.07466, 0, 9.39498e-08, 0, -1.07466, 0, 0.321162, 0)

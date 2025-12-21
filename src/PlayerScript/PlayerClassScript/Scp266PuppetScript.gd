@@ -3,13 +3,18 @@ extends BasePuppetScript
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp266PuppetScript
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var heat_targets: Array[Node3D] = []
 var timer: float = 4.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	match Settings.current_season:
+		Settings.Season.CHRISTMAS:
+			$CPUParticles3D.mesh.material = load("res://Assets/VFX/Scp266/christmas/Scp266_active.tres")
+			$CPUParticles3D2.mesh.material = load("res://Assets/VFX/Scp266/christmas/Scp266_dormant.tres")
+		Settings.Season.HALLOWEEN:
+			$CPUParticles3D.mesh.material = load("res://Assets/VFX/Scp266/halloween/Scp266_active.tres")
+			$CPUParticles3D2.mesh.material = load("res://Assets/VFX/Scp266/halloween/Scp266_dormant.tres")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,7 +26,7 @@ func scp_262_heateater(delta: float):
 		timer -= delta
 	else:
 		if heat_targets.size() > 0:
-			get_parent().get_parent().wandering = false
+			get_parent().get_parent().wandering_system = MovableNpc.WanderingSystem.NONE
 			var counter: int = 0
 			for heat in heat_targets:
 				if is_instance_valid(heat):

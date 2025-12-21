@@ -362,3 +362,6 @@ shape = SubResource("ConcavePolygonShape3D_wmtfc")
 transform = Transform3D(5.6568546, 0, -5.6568537, 0, 8, 0, 5.6568537, 0, 5.6568546, 1.84126, 3.81702, -1.9882271)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_ned5y")
+
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.231346, -0.78577095, 1.9239516)

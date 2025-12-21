@@ -207,3 +207,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.12
 
 [node name="doc" parent="." instance=ExtResource("12_00o1j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14200258, 0.24193737, -10.913492)
+
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78577095, -7.302253)
