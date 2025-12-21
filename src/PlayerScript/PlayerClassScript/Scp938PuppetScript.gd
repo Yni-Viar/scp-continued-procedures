@@ -5,7 +5,6 @@ class_name Scp938PuppetScript
 
 enum Scp938State{DORMANT = 0, ACTIVE_WANDERING = 1, ACTIVE_ATTACKING = 2}
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var current_state: Scp938State = Scp938State.DORMANT
 var electro_targets: Array[Node3D] = []
 var timer: float = 24.0
@@ -36,15 +35,14 @@ func scp_938(delta: float):
 	match current_state:
 		1:
 			if !get_parent().get_parent().wandering:
-				get_parent().get_parent().wandering = true
+				get_parent().get_parent().wandering_system = MovableNpc.WanderingSystem.GENERIC_WANDER
 			if teleport_is_ready:
 				get_parent().get_parent().global_position = NavigationServer3D.map_get_random_point(get_parent().get_parent().get_node("NavigationAgent3D").get_navigation_map(), 1, true)
 				teleport_is_ready = false
 		2:
 			if teleport_is_ready && electro_targets.size() > 0:
 				teleport_is_ready = false
-				if get_parent().get_parent().wandering:
-					get_parent().get_parent().wandering = false
+				get_parent().get_parent().wandering_system = MovableNpc.WanderingSystem.NONE
 				# Firstly, choose random target
 				var selection: int = randi_range(0, electro_targets.size()-1)
 				# Secondly, choose should electrocute this target (0) or favourite (1)

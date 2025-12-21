@@ -294,3 +294,6 @@ mesh = SubResource("TextMesh_16ume")
 transform = Transform3D(-1.7433561, 0, 1.5240906e-07, 0, 1.7433561, 0, -1.5240906e-07, 0, -1.7433561, 5.333525, 3.322934, -1.9329495)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_43vmf")
+
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.553456, -0.78577095, -4.9618673)

@@ -16,6 +16,9 @@ footstep_sounds = {
 "walk": PackedStringArray("res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg")
 }
 apply_height_bugfix = false
+wandering_system = 2
+special_wandering_group = "ScientistPoint"
+enable_wander = false
 health = Array[float]([100.0, 50.0, 50.0, 50.0])
 team = 1
 puppet_navigation_layers = 3

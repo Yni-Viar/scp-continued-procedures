@@ -14,6 +14,7 @@ initial_amount = 1
 interacting_action = 2
 fraction = 3
 apply_height_bugfix = false
+wandering_system = 1
 health = Array[float]([1000.0])
 puppet_navigation_layers = 8
 enable_ik = false

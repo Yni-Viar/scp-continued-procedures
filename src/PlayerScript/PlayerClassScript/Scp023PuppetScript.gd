@@ -5,7 +5,6 @@ extends BasePuppetScript
 ## 
 class_name Scp023PuppetScript
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var eye_glow_strength: float = 0.25
 
 @export var glow_enabled: bool = true

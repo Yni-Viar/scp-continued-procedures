@@ -3,8 +3,6 @@ extends BasePuppetScript
 ## Made by Yni, licensed under MIT license.
 class_name HumanPuppetScript
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
-
 enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, CI_RIFLE, HAT}
 
 @export var enable_secondary_state: bool = true

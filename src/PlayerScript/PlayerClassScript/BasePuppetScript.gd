@@ -2,6 +2,8 @@ extends Node3D
 ## Made by Yni, licensed under CC0.
 class_name BasePuppetScript
 
+
+
 @export var armature_name: String = "HumanRig"
 enum States {IDLE, WALKING, RUNNING, SPECIAL1, SPECIAL2, SPECIAL3, SPECIAL4}
 @export var state: States = States.IDLE
@@ -15,6 +17,9 @@ enum States {IDLE, WALKING, RUNNING, SPECIAL1, SPECIAL2, SPECIAL3, SPECIAL4}
 ## Format: NodePath: [[material_index, material], ...]
 @export var halloween_suits: Dictionary[NodePath, Array]
 var active_puppets: Array[Node3D] = []
+
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+
 
 func _ready() -> void:
 	if enable_vision_scan:

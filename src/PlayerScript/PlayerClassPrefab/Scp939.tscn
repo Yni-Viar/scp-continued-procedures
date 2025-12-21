@@ -21467,6 +21467,7 @@ radius = 5.046292
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_3sjst")
 armature_name = "939_Rig"
+special_wandering_group = "Scp939Point"
 fixed_prefab = true
 christmas_suits = Dictionary[NodePath, Array]({
 NodePath("939_Rig/Skeleton3D/939Ob"): [[0, ExtResource("2_1n0ln")]]

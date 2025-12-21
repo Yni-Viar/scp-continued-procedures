@@ -8,8 +8,8 @@
 [ext_resource type="Shader" uid="uid://db216jx0bk1fi" path="res://Shaders/AmnesiaShader/amnesia.gdshader" id="6_7jsl5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j77eh"]
-radius = 24.0
-height = 80.0
+radius = 32.0
+height = 96.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j77eh"]
 render_priority = 0
@@ -80,7 +80,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Optimizator"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.9775, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30, 0)
 shape = SubResource("CapsuleShape3D_j77eh")
 
 [node name="Overlays" type="Node3D" parent="Head/Camera3D"]

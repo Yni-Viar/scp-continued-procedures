@@ -9,6 +9,12 @@ class_name MovableNpc
 ## ------------------------------------------
 ## Interactable NPC.
 
+## Generic wander is MovableNpc wander implementation
+## Special wander is limited wander - just moving from point to point.
+## If they leave containment chamber, wandering system will be switched to generic wander.
+enum WanderingSystem {NONE, GENERIC_WANDER, LIMITED_WANDER}
+
+
 ## Speed
 @export var character_speed: float = 10.0
 
@@ -33,6 +39,12 @@ class_name MovableNpc
 @export var current_health: Array[float] = []
 @export var movement_freeze: bool = false
 
+@export var wandering_system: WanderingSystem = WanderingSystem.NONE:
+	set(val):
+		wandering = (val != WanderingSystem.NONE)
+		wandering_system = val
+@export var special_wandering_group: String = ""
+
 ## The main wandering switch
 @export var wandering: bool = false:
 	set(val):
@@ -49,6 +61,8 @@ var wander_action: bool = false
 var wandering_destination: int
 ## Only when navigation map is ready, npc will wander
 var wandering_ready: bool = false
+## Special wandering timer
+var special_wandering_timer: float = 0.0
 ## Only when idle NPC will wander
 var idle: bool = false
 
@@ -59,13 +73,14 @@ var follow_target: String = "":
 	set(val):
 		if !val.is_empty():
 			wandering = false
-			#if get_node_or_null(val) != null:
+			if get_node_or_null(val) == null:
+				follow_target = ""
 				## New Godot 4.4 feature - the NPC will actually look at player when following them.
 				#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = NodePath(val + "/LookAtTarget")
 			#else:
 				#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
 		else:
-			wandering = puppet_class.enable_wander
+			wandering = wandering_system != WanderingSystem.NONE
 			#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
 		follow_target = val
 ## A workaround, where NPC cannot cross by NavigationLink, when something with navigation will move.
@@ -91,7 +106,8 @@ func _ready() -> void:
 	fraction = puppet_class.fraction
 	health = puppet_class.health
 	character_speed = puppet_class.speed
-	wandering = puppet_class.enable_wander
+	wandering_system = int(puppet_class.wandering_system) as WanderingSystem
+	special_wandering_group = puppet_class.special_wandering_group
 	spawn_on_start = puppet_class.spawn_on_start
 	_nav_agent.avoidance_enabled = puppet_class.enable_avoidance
 	_nav_agent.navigation_layers = puppet_class.puppet_navigation_layers
@@ -253,26 +269,37 @@ func on_moving_platform(start: bool):
 
 ## Wander implementation
 func wander(delta: float):
-	# If wander_action, the npc will walk as much as possible, also generate new rotation
-	if wander_action:
-		if wandering_ready:
-			wandering_rotator = rng.randi_range(-15, 15)
-			set_target_position(NavigationServer3D.map_get_random_point(_nav_agent.get_navigation_map(), 1, true))
-			# set the destination with a new rotation degrees
-			wandering_destination = roundi(rotation_degrees.y + wandering_rotator)
-			wander_action = false
-			#wandering_rotator = rng.randi_range(150, 179)
-			#wandering_destination = roundi(wrapf(rotation_degrees.y + wandering_rotator, -180, 180))
-	elif !optimizator_paused:
-		# If the destination is reached - wander
-		if roundi(rotation_degrees.y) == wandering_destination:
-			wander_action = true
-		var rot: float
-		# If a dead end reached, rotate faster
-		if wandering_rotator > 120 || wandering_rotator < -120:
-			rotate_y(deg_to_rad(20 * delta))
-		else:
-			rotate_y(deg_to_rad(wandering_rotator * delta * 2))
+	match wandering_system:
+		WanderingSystem.GENERIC_WANDER:
+			# If wander_action, the npc will walk as much as possible, also generate new rotation
+			if wander_action:
+				if wandering_ready:
+					wandering_rotator = rng.randi_range(-15, 15)
+					set_target_position(NavigationServer3D.map_get_random_point(_nav_agent.get_navigation_map(), 1, true))
+					# set the destination with a new rotation degrees
+					wandering_destination = roundi(rotation_degrees.y + wandering_rotator)
+					wander_action = false
+					#wandering_rotator = rng.randi_range(150, 179)
+					#wandering_destination = roundi(wrapf(rotation_degrees.y + wandering_rotator, -180, 180))
+			elif !optimizator_paused:
+				# If the destination is reached - wander
+				if roundi(rotation_degrees.y) == wandering_destination:
+					wander_action = true
+				# var rot: float
+				# If a dead end reached, rotate faster
+				if wandering_rotator > 120 || wandering_rotator < -120:
+					rotate_y(deg_to_rad(20 * delta))
+				else:
+					rotate_y(deg_to_rad(wandering_rotator * delta * 2))
+		WanderingSystem.LIMITED_WANDER:
+			if wandering && idle && special_wandering_timer < 0:
+				if get_tree().get_node_count_in_group(special_wandering_group) > 0:
+					set_target_position(get_tree().get_nodes_in_group(special_wandering_group)[rng.randi_range(0, get_tree().get_node_count_in_group(special_wandering_group) - 1)].global_position)
+					special_wandering_timer = 5.0
+				else:
+					wandering_system = WanderingSystem.GENERIC_WANDER
+			elif !optimizator_paused && idle:
+				special_wandering_timer -= get_physics_process_delta_time()
 
 func on_map_updated(map: RID):
 	wandering_ready = true

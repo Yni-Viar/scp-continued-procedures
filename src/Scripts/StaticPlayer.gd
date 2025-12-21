@@ -121,8 +121,7 @@ func interact(value: String) -> void:
 									match s_result["collider"].puppet_class.interacting_action:
 										1:  # FOLLOW
 											s_result["collider"].follow_target = target_puppet_path
-											if s_result["collider"].wandering:
-												s_result["collider"].wandering = false
+											s_result["collider"].wandering_system = MovableNpc.WanderingSystem.NONE
 										2: # SPECIAL
 											if s_result["collider"].get_node_or_null("PlayerModel/Puppet") != null:
 												if s_result["collider"].get_node("PlayerModel/Puppet") is BasePuppetScript:

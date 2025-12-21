@@ -3,12 +3,17 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.6.0 (Yule 2025 update, 2025.12.21)
+## v5.6.0 (Winter solstice 2025 update, 2025.12.21)
 ### Add season spirit to current puppet classes
-- [x] Add skins to most of puppet classes (except SCP-173 (because they already have randomization and Christmas face), SCP-178-1, SCP-650 (Halloween only, not Christmas) and SCP-938)
+- Add skins to most of puppet classes (except SCP-173 (because they already have randomization and Christmas face), SCP-178-1, SCP-650 (they have only Christmas skin) and SCP-938)
 ### New features
-- [x] SCP-266 VFX overhaul.
-- [ ] Improve researcher AI to go to various SCP subjects, instead of wandering around (similar to SCP-939 AI) *Yni Viar's comment: originally, it was 6.0 feature, but I decided to do it for 5.6*
+- SCP-266 VFX overhaul.
+- Agents now have a visual flashlight on their vest.
+- Began AI rework - add SCP-939 (and Scientists since 5.6.0) style of wandering to MovableNpc *Yni Viar's comment: originally, it was 6.0 feature, but I decided to do it for 5.6*
+- Researchers no longer spawn in Entrance subzone
+- Added slight-visible doors for Research Zone (Maintenance Zone started having doors in 5.5.0)
+### Bugfixes
+- Fix CI event crash - also change CI logic.
 
 ## v5.5.1 (2025.12.16)
 

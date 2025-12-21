@@ -3,7 +3,6 @@ extends BasePuppetScript
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp266PuppetScript
 
-var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var heat_targets: Array[Node3D] = []
 var timer: float = 4.0
 
@@ -27,7 +26,7 @@ func scp_262_heateater(delta: float):
 		timer -= delta
 	else:
 		if heat_targets.size() > 0:
-			get_parent().get_parent().wandering = false
+			get_parent().get_parent().wandering_system = MovableNpc.WanderingSystem.NONE
 			var counter: int = 0
 			for heat in heat_targets:
 				if is_instance_valid(heat):

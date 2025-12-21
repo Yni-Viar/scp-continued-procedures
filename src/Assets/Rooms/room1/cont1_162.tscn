@@ -420,6 +420,9 @@ current_season = 5
 [node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("18_3x5tu")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.38102385, -1.7638257, 0.8278222)
 
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78577095, 9.286441)
+
 [connection signal="body_entered" from="Scp162Task" to="Scp162Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp162Task" to="Scp162Task" method="_on_body_exited"]
 [connection signal="body_entered" from="Scp162OuterSpace" to="Scp162Task" method="_on_scp_162_outer_space_body_entered"]
