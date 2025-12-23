@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.6.0"
+const DATA_COMPATIBILITY: String = "5.6.1"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -89,7 +89,7 @@ func season_checker():
 		12:
 			current_season = Season.CHRISTMAS
 		_:
-			print("Did you ever set a date?")
+			print("Date not available")
 			current_season = Season.NONE
 
 func is_legal_req() -> bool:
