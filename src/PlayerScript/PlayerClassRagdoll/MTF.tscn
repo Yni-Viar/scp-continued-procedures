@@ -1,8 +1,10 @@
-[gd_scene load_steps=44 format=4 uid="uid://dtphgs8i61fd5"]
+[gd_scene load_steps=46 format=4 uid="uid://dtphgs8i61fd5"]
 
 [ext_resource type="Script" uid="uid://bhf85wkhfm536" path="res://PlayerScript/PlayerClassRagdoll/RagdollManager.gd" id="1_bigxh"]
+[ext_resource type="Material" uid="uid://cs3tcik10utcc" path="res://Assets/Materials/Classes/Christmas/MTF_body.tres" id="2_21ey4"]
 [ext_resource type="Texture2D" uid="uid://dogcyqeae0ani" path="res://Assets/ExternalModels/SCP/mtf/NTF_albedo.png" id="2_c2sw5"]
 [ext_resource type="Texture2D" uid="uid://bdngfjhjl250m" path="res://Assets/ExternalModels/SCP/mtf/NTF_metal-test2-NTF_Roughness.png" id="3_21ey4"]
+[ext_resource type="Material" uid="uid://bf57eel0hp6mn" path="res://Assets/Materials/Classes/Halloween/MTF_body.tres" id="3_tk4a8"]
 [ext_resource type="Texture2D" uid="uid://bvfohdrdv50hu" path="res://Assets/ExternalModels/SCP/mtf/NTF_normal.png" id="4_tk4a8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hulvn"]
@@ -705,6 +707,13 @@ height = 0.15788388
 script = ExtResource("1_bigxh")
 type = 2
 armature_name = "HumanRig"
+fixed_prefab = true
+christmas_suits = Dictionary[NodePath, Array]({
+NodePath("HumanRig/Skeleton3D/NTF_body_LOD0"): [[0, ExtResource("2_21ey4")]]
+})
+halloween_suits = Dictionary[NodePath, Array]({
+NodePath("HumanRig/Skeleton3D/NTF_body_LOD0"): [[0, ExtResource("3_tk4a8")]]
+})
 
 [node name="HumanRig" type="Node3D" parent="."]
 transform = Transform3D(-0.75, 0, -1.13246855e-07, 0, 0.75, 0, 1.13246855e-07, 0, -0.75, 0, 0, 0)
@@ -1756,10 +1765,10 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_xsj4n")
 
 [node name="Physical Bone Heel_L" type="PhysicalBone3D" parent="HumanRig/Skeleton3D/PhysicalBoneSimulator3D"]
-transform = Transform3D(-1.3014522, -8.69697e-09, -0.28982767, 1.4357378e-12, 1.3333334, -4.00163e-08, 0.28982767, -3.9059785e-08, -1.3014522, 0.27803612, 0.058579013, 0.09598202)
+transform = Transform3D(-1.3014522, -8.69697e-09, -0.28982767, 1.4359961e-12, 1.3333334, -4.00163e-08, 0.28982767, -3.9059785e-08, -1.3014522, 0.27803612, 0.058579013, 0.09598202)
 joint_type = 1
 joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4969367e-09, -7.823174e-09, 0.11171105)
-body_offset = Transform3D(1.3333333, -1.2487789e-12, -2.9802322e-08, -5.9604645e-08, -4.0016293e-08, -1.3333331, 1.2462596e-12, 1.3333334, -4.00163e-08, 0, 0.14894804, 1.4901161e-08)
+body_offset = Transform3D(1.3333333, -1.2487789e-12, -2.9802322e-08, -5.9604645e-08, -4.0016293e-08, -1.3333331, 1.2465178e-12, 1.3333334, -4.00163e-08, 0, 0.14894804, 1.4901161e-08)
 bone_name = "Heel.L"
 joint_constraints/bias = 0.3
 joint_constraints/damping = 1.0
