@@ -40,6 +40,10 @@ window/stretch/mode="canvas_items"
 
 movie_writer/movie_file="D:/Data/DeveloperData/Repositories/scp-containmentprocedures/builds/output.avi"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lua-gdextension/plugin.cfg")
+
 [file_customization]
 
 folder_colors={
