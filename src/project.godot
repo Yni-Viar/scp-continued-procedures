@@ -42,7 +42,7 @@ movie_writer/movie_file="D:/Data/DeveloperData/Repositories/scp-containmentproce
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/lua-gdextension/plugin.cfg")
 
 [file_customization]
 
