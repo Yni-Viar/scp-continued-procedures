@@ -3,6 +3,11 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.6.1 (2025.12.23)
+- \[Clutter system\] Use clutter system for Class-D pumpkin, instead of using specific script for handling that.
+- Reduced scale of humans due to being too large (all human classes except of Agent and SCP-347)
+- Added HLOD to Agent.
+
 ## v5.6.0 (Winter solstice 2025 update, 2025.12.21)
 ### Add season spirit to current puppet classes
 - Add skins to most of puppet classes (except SCP-173 (because they already have randomization and Christmas face), SCP-178-1, SCP-650 (they have only Christmas skin) and SCP-938)

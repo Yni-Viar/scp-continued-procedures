@@ -185,7 +185,7 @@ msgstr ""
 "Electric hazard"
 
 msgid "GAME_WIN"
-msgstr "TASK DONE!"
+msgstr "TASK FINISHED!"
 
 msgid "GAME_OVER"
 msgstr "FAILED!"
