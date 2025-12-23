@@ -5,6 +5,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.6.2 (2025.12.23)
 - \[Clutter system\] Ragdolls are now affected to Clutter System.
+- Reduced scale of SCP-347.
 
 ## v5.6.1 (2025.12.23)
 - \[Clutter system\] Use clutter system for Class-D pumpkin, instead of using specific script for handling that.
