@@ -3,6 +3,9 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.6.3 (2025.12.25)
+- Fixed Gate B Christmas decorations
+
 ## v5.6.2 (2025.12.23)
 - \[Clutter system\] Ragdolls are now affected to Clutter System.
 - Reduced scale of SCP-347.
