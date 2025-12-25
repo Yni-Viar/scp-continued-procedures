@@ -23,6 +23,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 #### Misc changes
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
+- [x] \[Map Generator\] Updated to 10.0.0
 
 ## v5.6.1 (2025.12.23)
 - \[Clutter system\] Use clutter system for Class-D pumpkin, instead of using specific script for handling that.
