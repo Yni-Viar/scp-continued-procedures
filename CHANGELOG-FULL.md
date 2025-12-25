@@ -25,6 +25,13 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
 - [x] \[Map Generator\] Updated to 10.0.0
 
+## v5.6.3 (2025.12.25)
+- Fixed Gate B Christmas decorations
+
+## v5.6.2 (2025.12.23)
+- \[Clutter system\] Ragdolls are now affected to Clutter System.
+- Reduced scale of SCP-347.
+
 ## v5.6.1 (2025.12.23)
 - \[Clutter system\] Use clutter system for Class-D pumpkin, instead of using specific script for handling that.
 - Reduced scale of humans due to being too large (all human classes except of Agent and SCP-347)
