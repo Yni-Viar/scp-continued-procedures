@@ -3825,7 +3825,7 @@ enable_vision_scan = true
 vision_class_detect = Array[int]([2, 3])
 
 [node name="Woman_body_rig" type="Node3D" parent="."]
-transform = Transform3D(-1.625, 0, -2.4536817e-07, 0, 1.625, 0, 2.4536817e-07, 0, -1.625, 0, 0, 0)
+transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Woman_body_rig"]
 bones/0/name = "mixamorig_Hips"
