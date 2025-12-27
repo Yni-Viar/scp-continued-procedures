@@ -1,6 +1,6 @@
-extends Node3D
+extends GameModeBasis
 class_name GameCore
-## Game system.
+## Classic game system (from v5 and earlier)
 ## Made by Yni, licensed under MIT license.
 
 
@@ -51,7 +51,7 @@ func _ready() -> void:
 				node.hide()
 			else:
 				node.show()
-	
+	super._ready()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -68,6 +68,7 @@ func _process(delta: float) -> void:
 			# Disable Chaos wave if they were already spawned (5.5.0 feature)
 			ci_probability = 0
 		mtf_cooldown -= delta
+	super._process(delta)
 
 
 func _on_facility_generator_generated() -> void:

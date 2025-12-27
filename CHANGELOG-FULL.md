@@ -9,6 +9,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ### Facility Builder mode
 - [ ] Facility Builder mode - facility building simulator.
+- [x] Implement GameMode base with GameCore (v5 default game) on top of it.
 
 ### New living sub-zone
 - [ ] New living sub-zone with own Map Generator instance

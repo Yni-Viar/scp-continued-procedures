@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://by5c7g15ljuta" path="res://PlayerScript/StaticPlayer.tscn" id="3_bf53h"]
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="4_bf53h"]
 [ext_resource type="Resource" uid="uid://7prvjngodfs1" path="res://MapGen/ResearchZone.tres" id="5_71axn"]
-[ext_resource type="Script" uid="uid://brnmrs6xlpyic" path="res://Scripts/UI.gd" id="6_dahhg"]
+[ext_resource type="Script" uid="uid://brnmrs6xlpyic" path="res://Scripts/UI/ClassicGameUI.gd" id="6_dahhg"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="7_fgofq"]
 [ext_resource type="Script" uid="uid://h8d12qstq0k3" path="res://Scripts/TaskSystem/GameTaskManager.gd" id="7_wxwew"]
 [ext_resource type="Resource" uid="uid://dtd6pwanbhy7j" path="res://MapGen/MaintenanceZone.tres" id="8_356ba"]

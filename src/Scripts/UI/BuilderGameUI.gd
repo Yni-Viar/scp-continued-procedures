@@ -1,0 +1,143 @@
+extends Control
+## Made by Yni, licensed under MIT License.
+## Uses third-party code. See code comment.
+
+var exiting: bool = false
+var current_elevator: ElevatorSystem = null
+var input_amount: Dictionary[int, Vector2] = {}
+var dragged: bool = false
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	if !Settings.touchscreen:
+		$HBoxContainer/InventoryButton.hide()
+		$HBoxContainer/SwitchCameraButton.hide()
+
+#
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _physics_process(delta):
+	#if input_time_record:
+		#input_timer += delta
+		#if Input.is_action_pressed("click"):
+			#
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_released("debug_console"):
+		$InGameConsole.visible = !$InGameConsole.visible
+	if event.is_action_released("inventory"):
+		_on_inventory_button_pressed()
+
+#func _on_seed_text_changed(new_text):
+	#if new_text != "":
+		#get_parent().get_node("FacilityGenerator").rng_seed = hash(new_text)
+	#else:
+		#get_parent().get_node("FacilityGenerator").rng_seed = -1
+#
+#
+#func _on_generate_pressed():
+	#get_parent().get_node("FacilityGenerator").clear()
+	#get_parent().get_node("FacilityGenerator").prepare_generation()
+
+func end_screen_show():
+	$Condition.show()
+
+func _on_back_pressed() -> void:
+	var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
+	get_tree().root.add_child(menu)
+	Settings.call_deferred("override_main_scene", menu)
+	get_tree().root.get_node("Game").queue_free()
+
+
+func _on_inventory_button_pressed() -> void:
+	$ElevatorMode.hide()
+	$Scp914Panel.hide()
+
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible = !get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").visible
+
+
+func _on_playing_area_gui_input(event: InputEvent) -> void:
+	if Settings.touchscreen:
+# BEGIN https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+# Copyright (c) 2014-present Godot Engine contributors.
+# Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+# Licensed under MIT license
+		var finger_count := input_amount.size()
+
+		if finger_count == 0:
+			# No fingers => Accept press.
+			if event is InputEventScreenTouch:
+				if event.pressed:
+					# A finger started touching.
+
+					input_amount[event.index] = event.position
+
+		elif finger_count == 1:
+			# One finger => For rotating around X and Y.
+			# Accept one more press, unpress or drag.
+			if event is InputEventScreenTouch:
+				if event.pressed:
+					# One more finger started touching.
+
+					# Reset the base state to the only current and the new fingers.
+					var temp: Array = [input_amount.keys()[0], input_amount.values()[0]]
+					input_amount = {
+						temp[0]: temp[1],
+						event.index: event.position
+					}
+				else:
+					if input_amount.has(event.index):
+						# Only touching finger released.
+# END https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+						if dragged:
+							dragged = false
+						else:
+							get_tree().root.get_node("Game/StaticPlayer").interact("Point")
+# BEGIN https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+# Copyright (c) 2014-present Godot Engine contributors.
+# Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+# Licensed under MIT license
+						input_amount.clear()
+
+			elif event is InputEventScreenDrag:
+				if input_amount.has(event.index):
+					# Touching finger dragged.
+# END https://github.com/godotengine/godot-demo-projects/blob/master/mobile/multitouch_cubes/GestureArea.gd
+					dragged = true
+					get_tree().root.get_node("Game/StaticPlayer").rotate_player(event)
+	elif Input.is_action_just_pressed("click"):
+		get_tree().root.get_node("Game/StaticPlayer").interact("Point")
+
+
+func _on_call_mtf_button_pressed() -> void:
+	get_parent().call_mtf()
+
+
+func _on_scp_914_mode_drag_ended(value_changed: bool) -> void:
+	if value_changed:
+		get_tree().get_first_node_in_group("Scp914").mode = int($Scp914Panel/Scp914Mode.value)
+
+
+func _on_refine_pressed() -> void:
+	get_tree().get_first_node_in_group("Scp914").call("refine")
+
+
+func _on_scp_914_button_pressed() -> void:
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").hide()
+	$ElevatorMode.hide()
+	$Scp914Panel.visible = !$Scp914Panel.visible
+
+
+func _on_elevator_call_pressed() -> void:
+	if current_elevator == null:
+		return
+	current_elevator.call_elevator(int($ElevatorMode/Floor.value))
+
+
+func _on_elevator_button_pressed() -> void:
+	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory").hide()
+	$Scp914Panel.hide()
+	$ElevatorMode.visible = !$ElevatorMode.visible
+
+
+func _on_switch_camera_button_pressed() -> void:
+	get_tree().root.get_node("Game/StaticPlayer").toggle_switcher()

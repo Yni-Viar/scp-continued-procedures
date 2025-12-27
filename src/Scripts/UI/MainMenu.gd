@@ -38,7 +38,7 @@ func _on_credits_pressed() -> void:
 func play():
 	$FakeLoadingScreen.show()
 	await get_tree().create_timer(0.5).timeout
-	var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
+	var game: GameCore = load("res://Scenes/ClassicGame.tscn").instantiate()
 	if !$GameSettings/Seed.text.is_empty():
 		game.map_seed = hash($GameSettings/Seed.text)
 	game.time_limited = $GameSettings/TimeLimited.button_pressed
@@ -77,11 +77,11 @@ func _on_enable_sound_toggled(toggled_on: bool) -> void:
 
 
 func _on_story_mode_pressed() -> void:
-	$StoryUI.show()
+	$GameModesUI.show()
 
 
 func _on_story_back_pressed() -> void:
-	$StoryUI.hide()
+	$GameModesUI.hide()
 
 
 func _on_settings_button_pressed() -> void:
