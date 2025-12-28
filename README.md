@@ -34,7 +34,8 @@ Included SCPs:
 - It is a recursive acronym - **S**CP: **C**ontainment **P**rocedures
 
 ### Notice about Android version
-[How to install Android version after 2026 guide](https://github.com/Yni-Viar/Yni-Viar/blob/main/google-android-2026-foss.md)
+**The game will be incompatible with Google Android 16 QPR2 and later since 2026-2027!** (Xiaomi, Android forks and VR devices are *probably not affected*)
+Tutorial to install apps without Google verification coming soon
 
 ## License:
 The game is based on SCP Foundation community.
