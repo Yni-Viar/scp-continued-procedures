@@ -27,7 +27,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 #### Misc changes
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
-- [x] \[Map Generator\] Updated to 10.1.3
+- [x] \[Map Generator\] Updated to 10.3.0
 
 ## v5.6.3 (2025.12.25)
 - Fixed Gate B Christmas decorations
