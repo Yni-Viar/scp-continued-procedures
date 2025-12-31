@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_cf2e0"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_olia3"]
-vertices = PackedVector3Array(-9.74, -0.7504, -1.24, -9.74, -0.7504, 1.26, -3.24, -0.7504, 1.26, -2.74, -0.7504, -1.49, -1.24, -0.7504, -3.24, 1.51, -0.7504, -2.74, 1.26, -0.7504, -9.74, -1.24, -0.7504, -9.74, -1.49, -0.7504, 2.76, 3.26, -0.7504, 1.26, 1.26, -0.7504, 3.26, -1.24, -0.7504, 9.76, 1.26, -0.7504, 9.76, 9.76, -0.7504, 1.26, 9.76, -0.7504, -1.24, 3.26, -0.7504, -1.24)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(2, 3, 8), PackedInt32Array(4, 5, 3), PackedInt32Array(3, 5, 8), PackedInt32Array(8, 5, 10), PackedInt32Array(10, 5, 9), PackedInt32Array(12, 11, 10), PackedInt32Array(10, 11, 8), PackedInt32Array(15, 14, 9), PackedInt32Array(9, 14, 13), PackedInt32Array(5, 15, 9)]
+vertices = PackedVector3Array(-1.2399998, -0.77760994, -1.7399998, -2.4899998, -0.77760994, -1.7399998, -2.7399998, -0.77760994, -1.2399998, -2.7399998, -0.77760994, 1.2600002, -9.74, -0.77760994, -1.2399998, -9.74, -0.77760994, 1.2600002, -1.2399998, -0.77760994, -9.74, 1.2600002, -0.77760994, -2.7399998, 1.2600002, -0.77760994, -9.74, 2.7600002, -0.77760994, 1.2600002, 9.76, -0.77760994, 1.2600002, 9.76, -0.77760994, -1.2399998, 2.7600002, -0.77760994, -1.2399998, -1.2399998, -0.77760994, 2.7600002, 1.2600002, -0.77760994, 2.7600002, -1.2399998, -0.77760994, 9.76, 1.2600002, -0.77760994, 9.76)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(2, 3, 4), PackedInt32Array(4, 3, 5), PackedInt32Array(8, 7, 6), PackedInt32Array(6, 7, 0), PackedInt32Array(12, 11, 9), PackedInt32Array(9, 11, 10), PackedInt32Array(14, 13, 9), PackedInt32Array(9, 13, 3), PackedInt32Array(9, 3, 0), PackedInt32Array(9, 0, 12), PackedInt32Array(14, 16, 13), PackedInt32Array(13, 16, 15), PackedInt32Array(7, 12, 0)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_p4axq"]
 _surfaces = [{

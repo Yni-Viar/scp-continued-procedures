@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="10_1fsrq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
-vertices = PackedVector3Array(-3.25364, -0.769568, 7.50435, -3.25364, -0.769568, 9.75435, 3.24636, -0.769568, 9.75435, 3.24636, -0.769568, 7.00435, 6.74636, -0.769568, 3.50435, 7.49636, -0.769568, -3.24565, 9.74636, -0.769568, 3.50435, 9.74636, -0.769568, -3.24565)
+vertices = PackedVector3Array(-3.5036402, -0.76956797, 7.75435, -3.5036402, -0.76956797, 9.754351, 3.2463598, -0.76956797, 9.754351, 3.2463598, -0.76956797, 7.00435, 6.74636, -0.76956797, 3.5043502, 7.74636, -0.76956797, -3.4956498, 9.74636, -0.76956797, 3.5043502, 9.74636, -0.76956797, -3.4956498)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(7, 6, 5), PackedInt32Array(5, 6, 4)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1vaaq"]

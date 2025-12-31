@@ -290,10 +290,10 @@ script = ExtResource("13_skdfc")
 current_season = 5
 
 [node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("16_skdfc")]
-transform = Transform3D(0.74572027, 0, -0.66625917, 0, 1, 0, 0.66625917, 0, 0.74572027, -2.1626985, -1.776686, -3.6668873)
+transform = Transform3D(0.8178686, 0, -0.575405, 0, 1, 0, 0.575405, 0, 0.8178686, -2.1816602, -1.776686, -3.181491)
 
 [node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("16_skdfc")]
-transform = Transform3D(0.74572027, 0, -0.66625917, 0, 1, 0, 0.66625917, 0, 0.74572027, -0.31674224, -1.776686, -3.2819529)
+transform = Transform3D(0.8227199, 0, -0.568447, 0, 1, 0, 0.568447, 0, 0.8227199, 0.28954715, -1.776686, -3.2144065)
 
 [connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
 [connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]

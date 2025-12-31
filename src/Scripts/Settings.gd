@@ -73,7 +73,12 @@ func save_resource(res):
 
 func season_checker():
 	match Time.get_datetime_dict_from_system()["month"]:
-		1, 2:
+		1:
+			if Time.get_datetime_dict_from_system()["day"] <= 3:
+				current_season = Season.CHRISTMAS
+			else:
+				current_season = Season.WINTER
+		2:
 			current_season = Season.WINTER
 		3, 4, 5:
 			current_season = Season.SPRING
