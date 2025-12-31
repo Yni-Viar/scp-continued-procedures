@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="11_tsku5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
-vertices = PackedVector3Array(-3.32542, -0.769568, 6.99822, -3.32542, -0.769568, 9.74822, 3.42458, -0.769568, 9.74822, 3.42458, -0.769568, 6.74822, 6.67458, -0.769568, -5.00178, -4.07542, -0.769568, -5.00178, -4.82542, -0.769568, -4.00178, -4.82542, -0.769568, 6.74822, 6.67458, -0.769568, 3.49822, 9.67458, -0.769568, 3.49822, 9.67458, -0.769568, -3.25178, 6.92458, -0.769568, -3.25178)
+vertices = PackedVector3Array(-3.31599, -0.76956797, 6.9982176, -3.31599, -0.76956797, 9.748218, 3.43401, -0.76956797, 9.748218, 3.43401, -0.76956797, 6.7482176, 6.68401, -0.76956797, -5.0017824, -4.06599, -0.76956797, -5.0017824, -4.81599, -0.76956797, -4.0017824, -4.81599, -0.76956797, 6.7482176, 6.68401, -0.76956797, 3.4982176, 9.68401, -0.76956797, 3.4982176, 9.68401, -0.76956797, -3.2517824, 6.93401, -0.76956797, -3.2517824)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 8), PackedInt32Array(6, 8, 3), PackedInt32Array(6, 3, 7), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 8), PackedInt32Array(4, 11, 8), PackedInt32Array(3, 0, 7)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ks38x"]

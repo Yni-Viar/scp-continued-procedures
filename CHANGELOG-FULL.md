@@ -28,6 +28,10 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
 - [x] \[Map Generator\] Updated to 10.4.1
 
+## v5.6.5 (2025.12.31)
+- Updated NavMeshes - fixing noclip bugs.
+- Extended Christmas season to January 3rd.
+
 ## v5.6.4 (2025.12.31)
 - Fixed Entrance Subzone unloading, when player moves to the end of personnel offices.
 
