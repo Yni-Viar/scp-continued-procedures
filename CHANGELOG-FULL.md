@@ -3,6 +3,9 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.6.4 (2025.12.31)
+- Fixed Entrance Subzone unloading, when player moves to the end of personnel offices.
+
 ## v5.6.3 (2025.12.25)
 - Fixed Gate B Christmas decorations
 
