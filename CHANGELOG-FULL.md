@@ -26,7 +26,14 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 #### Misc changes
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
-- [x] \[Map Generator\] Updated to 10.3.0
+- [x] \[Map Generator\] Updated to 10.4.1
+
+## v5.6.5 (2025.12.31)
+- Updated NavMeshes - fixing noclip bugs.
+- Extended Christmas season to January 3rd.
+
+## v5.6.4 (2025.12.31)
+- Fixed Entrance Subzone unloading, when player moves to the end of personnel offices.
 
 ## v5.6.3 (2025.12.25)
 - Fixed Gate B Christmas decorations

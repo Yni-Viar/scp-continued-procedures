@@ -12,7 +12,7 @@
 [ext_resource type="LightmapGIData" uid="uid://7pn4ysyxw4j7" path="res://Assets/Rooms/room2/Lm/rz_room_2_wc.lmbake" id="9_yajlf"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d8u2j"]
-vertices = PackedVector3Array(-3.5718, -0.769568, -9.77885, -3.5718, -0.769568, -7.52885, -3.0718, -0.769568, -7.27885, 3.4282, -0.769568, -7.27885, 3.4282, -0.769568, -9.77885, -3.0718, -0.769568, 9.97115, 3.1782, -0.769568, 9.97115)
+vertices = PackedVector3Array(-3.5718002, -0.8041183, -9.77885, -3.5718002, -0.8041183, -7.5288496, -3.0718002, -0.8041183, -7.2788496, 3.4281998, -0.8041183, -7.2788496, 3.4281998, -0.8041183, -9.77885, -3.0718002, -0.8041183, 9.97115, 3.1781998, -0.8041183, 9.97115)
 polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(5, 2, 6), PackedInt32Array(6, 2, 3)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_sgjnx"]

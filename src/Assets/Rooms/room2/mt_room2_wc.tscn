@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="7_gsowd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(-1.34413, -0.732907, -9.74, -1.34413, -0.732907, 9.76, 0.905867, -0.732907, 9.76, 0.905867, -0.732907, -9.74)
+vertices = PackedVector3Array(-1.3441331, -0.7329072, -9.74, -1.3441331, -0.7329072, 9.76, 0.90586686, -0.7329072, 9.76, 0.90586686, -0.7329072, -9.74)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t1blp"]

@@ -20,8 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_xsx68"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
-vertices = PackedVector3Array(2.0897, -0.769567, 0.97853, 2.0897, -0.769567, -6.27147, -6.6603, -0.769567, -6.27147, -6.6603, -0.769567, 1.22853, 4.0897, -0.769567, 0.97853, 8.3397, -0.769567, 1.22853, 8.3397, -0.769567, -6.27147, 4.0897, -0.769567, -6.27147, 2.5897, -0.769567, 9.72853, 2.5897, -0.769567, 2.72853, 2.0897, -0.769567, 2.47853, -6.6603, -0.769567, 9.72853, 4.0897, -0.769567, 2.47853, 8.3397, -0.769567, 9.47853)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(10, 11, 3), PackedInt32Array(3, 0, 10), PackedInt32Array(12, 4, 5), PackedInt32Array(8, 9, 12), PackedInt32Array(5, 13, 12), PackedInt32Array(12, 13, 8)]
+vertices = PackedVector3Array(-0.91030407, -0.7695668, -5.0214696, -1.1603041, -0.7695668, -6.2714696, -3.660304, -0.7695668, -6.2714696, -3.910304, -0.7695668, -5.0214696, 2.089696, -0.7695668, 0.9785304, 2.089696, -0.7695668, -5.0214696, -6.910304, -0.7695668, -4.5214696, -6.660304, -0.7695668, 1.2285304, -6.660304, -0.7695668, -5.0214696, 4.589696, -0.7695668, -5.0214696, 4.339696, -0.7695668, -6.2714696, 4.089696, -0.7695668, 0.9785304, 8.339696, -0.7695668, 1.2285304, 8.339696, -0.7695668, -5.2714696, -6.660304, -0.7695668, 6.4785304, -5.410304, -0.7695668, 6.7285304, 2.089696, -0.7695668, 2.4785304, 2.589696, -0.7695668, 9.728531, 2.589696, -0.7695668, 2.7285304, -5.410304, -0.7695668, 9.728531, 4.089696, -0.7695668, 2.4785304, 8.339696, -0.7695668, 9.478531)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 0), PackedInt32Array(0, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(6, 8, 3), PackedInt32Array(6, 3, 0), PackedInt32Array(11, 10, 9), PackedInt32Array(9, 13, 11), PackedInt32Array(11, 13, 12), PackedInt32Array(14, 7, 15), PackedInt32Array(15, 7, 16), PackedInt32Array(16, 7, 4), PackedInt32Array(18, 17, 16), PackedInt32Array(16, 17, 15), PackedInt32Array(15, 17, 19), PackedInt32Array(20, 11, 12), PackedInt32Array(17, 18, 20), PackedInt32Array(12, 21, 20), PackedInt32Array(20, 21, 17)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vshcb"]
 _surfaces = [{
@@ -652,6 +652,18 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_6sixt")
 skeleton = NodePath("")
 
+[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("14_4rq04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931922, -1.25183, -6.38039)
+
+[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("14_4rq04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31475, -1.25183, -6.38039)
+
+[node name="steel_frame_shelves_01_2k4" parent="NavigationRegion3D/Props" instance=ExtResource("14_4rq04")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.7462, -1.25183, 8.43108)
+
+[node name="steel_frame_shelves_01_2k2" parent="NavigationRegion3D/Props" instance=ExtResource("14_4rq04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64548, -1.25183, -6.38039)
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_ccqsl")
@@ -703,18 +715,6 @@ max_distance = 64.0
 size = Vector3(16.9332, 7.24658, 17.0479)
 box_projection = true
 interior = true
-
-[node name="steel_frame_shelves_01_2k" parent="." instance=ExtResource("14_4rq04")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.931922, -1.25183, -6.38039)
-
-[node name="steel_frame_shelves_01_2k3" parent="." instance=ExtResource("14_4rq04")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31475, -1.25183, -6.38039)
-
-[node name="steel_frame_shelves_01_2k4" parent="." instance=ExtResource("14_4rq04")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.7462, -1.25183, 8.43108)
-
-[node name="steel_frame_shelves_01_2k2" parent="." instance=ExtResource("14_4rq04")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64548, -1.25183, -6.38039)
 
 [node name="Seasonal" type="Node3D" parent="."]
 
