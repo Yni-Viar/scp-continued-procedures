@@ -3,12 +3,24 @@ extends VisionScpPuppetScript
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp650PuppetScript
 
+@export var scp_650_variations_default: Dictionary[String, Dictionary] = {
+		"res://Assets/ExternalModels/SCP/scp650/Scp650.gltf": {
+			"CHRISTMAS": {
+				"Scp650/Armature/Skeleton3D/650": [
+					[0, "albedo_texture", "res://Assets/ExternalModels/SCP/scp650/christmas/650_Base_Color.png"]
+				]
+			}
+		}
+	}
 @export var wait_seconds: float = 5
+@export_group("PluginAPI")
+@export var scp_650_variations: Dictionary[String, Dictionary]
 var timer = 0
 
 # Called when the node enters the scene tree for the first time.
 func on_start() -> void:
-	pass # Replace with function body.
+	set_scp650_variations({})
+	spawn_scp_variation()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,11 +43,36 @@ func _physics_process(delta: float) -> void:
 		# reset timer
 		timer = 0
 
-
+func apply_festive_skin():
+	pass
 
 ## Animation state
 func set_state(s):
-	# if animation is the same, do nothing, else play new animation
-	if $AnimationPlayer.current_animation == s:
-		return
-	$AnimationPlayer.play(s, 0.3)
+	if get_child_count() > 0:
+		if get_child(0).get_node_or_null("AnimationPlayer") != null:
+			# if animation is the same, do nothing, else play new animation
+			if get_child(0).get_node("AnimationPlayer").current_animation == s:
+				return
+			get_child(0).get_node("AnimationPlayer").play(s, 0.3)
+
+func set_scp650_variations(path_array: Dictionary[String, Dictionary]):
+	scp_650_variations.clear()
+	# Add default variations gltf
+	for path in scp_650_variations_default:
+		if path.begins_with("res://") || path.begins_with("user://"):
+			scp_650_variations[path] = scp_650_variations_default[path]
+	# Add external variations
+	for path in path_array:
+		if path.begins_with("res://") || path.begins_with("user://"):
+			scp_650_variations[path] = path_array[path]
+
+func spawn_scp_variation():
+	if get_child_count() > 0:
+		for node in get_children():
+			node.queue_free()
+	var scp_650_current_id = rng.randi_range(0, scp_650_variations.size() - 1)
+	var scp_650: Node3D = load_gltf(scp_650_variations.keys()[scp_650_current_id])
+	add_child(scp_650, true)
+	scp_650.rotation = rotation - Vector3(0.0, PI, 0.0)
+	skins = scp_650_variations[scp_650_variations.keys()[scp_650_current_id]]
+	apply_skin()

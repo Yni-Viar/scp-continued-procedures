@@ -43,3 +43,32 @@ If enabled, puppet will stop following someone.
 
 ### `get_parent_path() -> String`
 Gets MovableNpcs path.
+
+### `set_effect(effect_name: String, amount: float, duration: float)`
+Sets effect with amount and duration
+`amount = 0.0` removes the effect
+`duration <= 0.375` makes effect permanent until turned off by `amount = 0.0`
+
+### `call_puppet_model_func(method: String, args: Array)`
+Calls puppet model function (only exposed ones)
+If there are no args, please, write [] as args variable.
+
+#### Available functions:
+**SCP-650:**
+
+`set_scp650_variations(path_array: Dictionary[String, Dictionary])` - Sets SCP-650 skins
+
+Skin format:
+```
+{
+    "path_to_your_gltf, begins with res:// or user://": {
+        "CHRISTMAS" / "HALLOWEEN" : {
+        	"relative_node_path_string": [
+        		[0, "ALBEDO", "path_to_your_retexture, begins with res:// or user://"]
+        	]
+        }
+    }
+}
+```
+
+`spawn_scp_variation()` - Spawns random SCP variation

@@ -3,6 +3,14 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v6.0.0 (release is NOT soon.)
+### Addon support
+- [ ] Addon support:
+    - [x] MovableNpc API
+    - [ ] Generic API (in progress)
+    - [ ] Map Generator API
+- [x] Make SCP-650 moddable
+
 ## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile
 - Add Lite build profile
