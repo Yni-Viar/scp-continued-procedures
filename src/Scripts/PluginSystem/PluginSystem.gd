@@ -14,12 +14,11 @@ func _ready() -> void:
 		LuaState.LUA_TABLE | \
 		LuaState.LUA_DEBUG | \
 		LuaState.LUA_UTF8 | \
-		LuaState.GODOT_CLASSES | \
+		#LuaState.GODOT_CLASSES | \
 		LuaState.GODOT_LOCAL_PATHS)
+	#lua_state.globals = {
+		#"plugin_api_generic"
+	#}
 
 func _execute_plugin_script(file_path: String):
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	lua_state.do_file(file_path)

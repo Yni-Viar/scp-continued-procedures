@@ -2,7 +2,7 @@ extends BasePuppetScript
 ## SCP-023 puppet script.
 ## It is like a delayed timeb0mb with warning.
 ## It appears in late round, you need to come to repair eyes. Won't do it - catch gameover.
-## 
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp023PuppetScript
 
 var eye_glow_strength: float = 0.25
