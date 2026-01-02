@@ -50,8 +50,11 @@ enum WanderingSystem {NONE, GENERIC_WANDER, LIMITED_WANDER}
 	set(val):
 		if val:
 			idle = true
+			enable_wander_on_stop_following = false
+			follow_target = ""
 		else:
 			idle = false
+			enable_wander_on_stop_following = true
 		wandering = val
 ## How many npc will rotate
 var wandering_rotator: int
@@ -68,6 +71,8 @@ var idle: bool = false
 
 ## Interval between re-calling target follow (only when they follow)
 var follow_update_timer: float = 1.0
+## Enable wander on stop following target
+var enable_wander_on_stop_following: bool = true
 ## Follow target. If is valid path (BEGINNING WITH /root/ !), they will look at target and follow.
 var follow_target: String = "":
 	set(val):
@@ -79,7 +84,7 @@ var follow_target: String = "":
 				#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = NodePath(val + "/LookAtTarget")
 			#else:
 				#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
-		else:
+		elif enable_wander_on_stop_following:
 			wandering = wandering_system != WanderingSystem.NONE
 			#get_node(str(skeleton_path) + "/LookAtModifier3D").target_node = ""
 		follow_target = val
@@ -246,7 +251,7 @@ func _call_function(node_path: String, method_caller: String, amount: Array):
 				callv(method_caller, amount)
 
 func action_take(index: int):
-	if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null:
+	if puppet_class.fraction == 0 && get_node_or_null("PlayerModel/Puppet") != null && get_node("UI/Inventory/Inventory").has_item(index):
 		var prefab: Node3D = get_node("PlayerModel/Puppet")
 		if prefab is HumanPuppetScript:
 			prefab.hold_item(index)

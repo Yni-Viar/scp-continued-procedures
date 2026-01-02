@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://rj65na3myb3i"]
+[gd_scene load_steps=8 format=3 uid="uid://rj65na3myb3i"]
 
 [ext_resource type="Script" uid="uid://b8pkv7v2qmc5c" path="res://PlayerScript/MovableNpc.gd" id="1_3jgrj"]
 [ext_resource type="Script" uid="uid://caoa6u8nk71m7" path="res://Scripts/StatusEffects/StatusEffectManager.gd" id="2_2vyji"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="2_m1isr"]
+[ext_resource type="Script" uid="uid://keblqd8hii8c" path="res://Scripts/PluginSystem/PluginApiMovableNpc.gd" id="2_yax7y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvonu"]
 radius = 0.371158
@@ -21,6 +22,9 @@ collision_layer = 11
 collision_mask = 3
 script = ExtResource("1_3jgrj")
 footstep_sounds = Array[String](["res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"])
+
+[node name="PluginSystem" type="Node" parent="."]
+script = ExtResource("2_yax7y")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.5

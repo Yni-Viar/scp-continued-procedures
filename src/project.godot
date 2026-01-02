@@ -31,6 +31,7 @@ buses/default_bus_layout="uid://b5q6nyv2tmgde"
 ResourceStorage="*res://Scripts/ResourceStorage.gd"
 GDsh="*res://GDsh/GDsh.gd"
 Settings="*res://Scripts/Settings.gd"
+PluginSystem="*res://Scripts/PluginSystem/PluginSystem.gd"
 
 [display]
 
@@ -58,7 +59,8 @@ folder_colors={
 "res://Sounds/": "purple",
 "res://Test/": "gray",
 "res://Translations/": "gray",
-"res://UI/": "orange"
+"res://UI/": "orange",
+"res://addons/": "pink"
 }
 
 [global_group]
