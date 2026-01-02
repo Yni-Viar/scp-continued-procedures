@@ -5,7 +5,11 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v6.0.0 (release is NOT soon.)
 ### Addon support
-- [ ] Addon support.
+- [ ] Addon support:
+    - [x] MovableNpc API
+    - [ ] Generic API (in progress)
+    - [ ] Map Generator API
+- [x] Make SCP-650 moddable
 
 ### Facility Builder mode
 - [ ] Facility Builder mode - facility building simulator.

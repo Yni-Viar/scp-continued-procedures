@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfl6x3okysmgd"
+uid="uid://djqg67cof65uj"
 path.s3tc="res://.godot/imported/650_Normal_OpenGL.png-493b2b7c9efd0bd36a2c532f4d860e34.s3tc.ctex"
 path.etc2="res://.godot/imported/650_Normal_OpenGL.png-493b2b7c9efd0bd36a2c532f4d860e34.etc2.ctex"
 metadata={
@@ -27,8 +27,8 @@ compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Assets/ExternalModels/SCP/scp650/650_Normal_OpenGL.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

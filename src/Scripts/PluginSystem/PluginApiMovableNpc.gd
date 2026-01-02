@@ -3,12 +3,12 @@ extends Node
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name PluginApiMovableNpc
 
-## Get puppet model
-func get_puppet_model() -> BasePuppetScript:
+## Calls puppet model function (only exposed ones)
+## If there are no args, please, write [] as args variable.
+func call_puppet_model_func(method: String, args: Array):
 	if get_parent().get_node("PlayerModel").get_child_or_null(0) != null:
-		return get_parent().get_node("PlayerModel").get_child(0)
-	else:
-		return null
+		if get_child(0) is BasePuppetScript:
+			get_parent().get_node("PlayerModel").get_child(0).pluginapi_call_method(method, args)
 
 ## Adds item to puppet's inventory.
 ## Requires item index
@@ -61,3 +61,9 @@ func set_wandering(enabled: bool):
 ## Gets MovableNpcs path
 func get_parent_path() -> String:
 	return get_parent().get_path()
+
+## Sets effect with amount
+## amount = 0.0 removes the effect
+## duration = 0.0 makes effect permanent until turned off by amount = 0.0
+func set_effect(effect_name: String, amount: float, duration: float):
+	get_parent().get_node("StatusEffects").apply_status_effect(effect_name, amount, duration)
