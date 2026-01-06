@@ -171,7 +171,7 @@ func effect_manager_start(effect: String, strength: float):
 				get_node(torso_node_path).mesh.surface_set_material(0, get_node(torso_node_path).mesh.surface_get_material(0).duplicate())
 		"Scp178":
 			if !resistance_scp178:
-				if get_tree().get_node_count_in_group("Scp178-1") == 0:
+				if get_tree().get_node_count_in_group("Scp178-1") == 0 && !OS.has_feature("Lite"):
 					for i in range(64):
 						var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
 						npc.puppet_class = load("res://PlayerScript/PlayerClassResources/Scp178-1.tres")

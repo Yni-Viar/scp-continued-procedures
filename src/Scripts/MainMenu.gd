@@ -4,7 +4,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _enter_tree() -> void:
-	
+	if OS.has_feature("Lite"):
+		$LiteWarning.show()
 	#var index: int = 0
 	#for node in $LorePanel/ScrollContainer/VBoxContainer.get_children():
 		# Easy bit-field checking

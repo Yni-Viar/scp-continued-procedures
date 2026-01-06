@@ -6,8 +6,7 @@ var rng: RandomNumberGenerator
 
 enum RoomTypes {EMPTY, ROOM1, ROOM2, ROOM2C, ROOM3, ROOM4}
 
-## Room 2C and room 3 are not implemented.
-enum DoubleRoomTypes {NONE, ROOM2D, ROOM4D}
+enum DoubleRoomTypes {NONE, ROOM2D = 2, ROOM2CD = 3, ROOM3D = 4, ROOM4D = 5}
 
 ## Works only if there are large endrooms, to prevent endless loop if cannot spawn
 const NUMBER_OF_TRIES_TO_SPAWN: int = 4
@@ -34,6 +33,8 @@ const MAX_ROOMS_SPAWN: int = 512
 ## Better zone generation.
 ## Sometimes, the generation will return "dull" path(e.g where there are only 3 ways to go)
 ## This fixes these generations, at a little cost of generation time
+## If infinite generator is used, this option also
+## places random "disabled points", so Room2C can spawn
 @export var better_zone_generation: bool = true
 ## How many additional rooms should spawn map generator
 ## /!\ WARNING! Higher value may hang the game.
@@ -46,6 +47,10 @@ const MAX_ROOMS_SPAWN: int = 512
 @export var debug_print: bool = false
 ## Enable double rooms support (single rooms only). Available since mapgen v9.
 @export var double_room_support: bool = false
+
+## Infinite generation is actually limited only by Godot's floating point errors
+## DO NOT SET THIS PROPERTY MANUALLY, IT IS AUTOMATIC.
+var infinite_generation: bool = false
 
 var mapgen: Array[Array] = []
 ## Cells, where a room will never spawn due to large room overriden
@@ -70,6 +75,10 @@ var size_x: int
 var size_y: int
 
 var endroom_amount: int = 0
+
+## First array is actually a container, second is zone, third is type container.
+## Structure is like: [[[DoubleRoomTypes, DoubleRoomTypes]]] (since enum is actually named int)
+var double_room_shapes: Array[Array]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -99,6 +108,11 @@ func start_generation() -> Array[Array]:
 func prepare_generation() -> void:
 	if debug_print:
 		print("Preparing generation...")
+	if infinite_generation && better_zone_generation:
+		for i in range(zone_size / 2):
+			var random_point: Vector2i = Vector2i(rng.randi_range(2, zone_size - 3), rng.randi_range(2, zone_size - 3))
+			if random_point.x != zone_size / 2 && random_point.y != zone_size / 2:
+				disabled_points.append(random_point)
 	size_x = zone_size * (map_size_x + 1)
 	size_y = zone_size * (map_size_y + 1)
 	if rng_seed != -1:
@@ -118,6 +132,7 @@ func prepare_generation() -> void:
 			mapgen[g][h].large = false
 			mapgen[g][h].checkpoint = false
 			mapgen[g][h].double_room = DoubleRoomTypes.NONE
+	
 
 ## Main function, that generate the zones. Rewritten in 7.0
 func generate_zone_astar() -> void:
@@ -181,14 +196,21 @@ func generate_zone_astar() -> void:
 					continue
 				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), random_room)
 				number_of_rooms -= 1
-				
-			## Connect two zones
-			if zone_counter.x < map_size_x:
-				var zone_center_x: int = roundi(zone_center + (zone_size * (zone_counter.x + 1)))
-				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(zone_center_x, roundi(current_zone_center.y)))
-			if zone_counter.y < map_size_y:
-				var zone_center_y: int = roundi(zone_center + (zone_size * (zone_counter.y + 1)))
-				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(roundi(current_zone_center.x), zone_center_y))
+			
+			## If infinite generation, go for all 4 directions
+			if infinite_generation && map_size_x == 0 && map_size_y == 0:
+				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(current_zone_center.x, zone_size - 1), true)
+				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(current_zone_center.x, 0), true)
+				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(zone_size - 1, current_zone_center.y), true)
+				walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(0, current_zone_center.y), true)
+			else:
+				## Connect two zones
+				if zone_counter.x < map_size_x:
+					var zone_center_x: int = roundi(zone_center + (zone_size * (zone_counter.x + 1)))
+					walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(zone_center_x, roundi(current_zone_center.y)))
+				if zone_counter.y < map_size_y:
+					var zone_center_y: int = roundi(zone_center + (zone_size * (zone_counter.y + 1)))
+					walk_astar(Vector2(roundi(current_zone_center.x), roundi(current_zone_center.y)), Vector2(roundi(current_zone_center.x), zone_center_y))
 			zone_index += 1
 		zone_index_default += map_size_y
 		zone_counter.y = 0
@@ -470,7 +492,8 @@ func check_room_dimensions(x: int, y: int, type: int) -> bool:
 			return false
 
 ## Main walker function, using AStarGrid2D
-func walk_astar(from: Vector2, to: Vector2) -> void:
+## infinite_gen "continues" generation at the end of chunk
+func walk_astar(from: Vector2, to: Vector2, infinite_gen: bool = false) -> void:
 	# Initialization
 	var astar_grid: AStarGrid2D = AStarGrid2D.new()
 	astar_grid.region = Rect2i(0, 0, size_x, size_y)
@@ -507,6 +530,16 @@ func walk_astar(from: Vector2, to: Vector2) -> void:
 				if mapgen[map.x][map.y + 1].exist:
 					mapgen[map.x][map.y + 1].south = true
 					mapgen[map.x][map.y].north = true
+			
+		if infinite_gen:
+			if map.x == to.x && map.y == to.y && map.x == zone_size - 1:
+				mapgen[map.x][map.y].east = true
+			elif map.x == to.x && map.y == to.y && map.x == 0:
+				mapgen[map.x][map.y].west = true
+			if map.x == to.x && map.y == to.y && map.y == zone_size - 1:
+				mapgen[map.x][map.y].north = true
+			elif map.x == to.x && map.y == to.y && map.y == 0:
+				mapgen[map.x][map.y].south = true
 	endroom_amount += 1
 ## Places information about rooms
 func place_room_positions() -> void:
@@ -533,16 +566,10 @@ func place_room_positions() -> void:
 	
 	# Double hallway
 	var room2d_amount: Array[int] = []
-	# S shape
-	var room2cds_amount: Array[int] = []
-	# Reversed S shape
-	var room2cdz_amount: Array[int] = []
-	# ├┤ shape
-	var room3dh_amount: Array[int] = []
-	# ├┬ shape
-	var room3dc_amount: Array[int] = []
-	# ┬┤ shape
-	var room3drc_amount: Array[int] = []
+	# Double curve room
+	var room2cd_amount: Array[int] = []
+	# Double T-shape room
+	var room3d_amount: Array[int] = []
 	# Double crossrooms
 	var room4d_amount: Array[int] = []
 	
@@ -562,11 +589,8 @@ func place_room_positions() -> void:
 	
 	if double_room_support:
 		room2d_amount.append(0)
-		room2cds_amount.append(0)
-		room2cdz_amount.append(0)
-		room3dh_amount.append(0)
-		room3dc_amount.append(0)
-		room3drc_amount.append(0)
+		room2cd_amount.append(0)
+		room3d_amount.append(0)
 		room4d_amount.append(0)
 	
 	for l in range(size_x):
@@ -585,11 +609,8 @@ func place_room_positions() -> void:
 			
 			if double_room_support:
 				room2d_amount.append(0)
-				room2cds_amount.append(0)
-				room2cdz_amount.append(0)
-				room3dh_amount.append(0)
-				room3dc_amount.append(0)
-				room3drc_amount.append(0)
+				room2cd_amount.append(0)
+				room3d_amount.append(0)
 				room4d_amount.append(0)
 			room_index_default += 1
 		for m in range(size_y):
@@ -608,11 +629,8 @@ func place_room_positions() -> void:
 				
 				if double_room_support:
 					room2d_amount.append(0)
-					room2cds_amount.append(0)
-					room2cdz_amount.append(0)
-					room3dh_amount.append(0)
-					room3dc_amount.append(0)
-					room3drc_amount.append(0)
+					room2cd_amount.append(0)
+					room3d_amount.append(0)
 					room4d_amount.append(0)
 				room_index += 1
 			var north: bool
@@ -662,6 +680,14 @@ func place_room_positions() -> void:
 							else: #generic vertical room2
 								var room_angle: Array[float] = [0, 180]
 								mapgen[l][m].angle = room_angle[rng.randi_range(0, 1)]
+						#upper checkpoint room2
+						elif m == 0 && infinite_generation && checkpoints_enabled:
+							mapgen[l][m].checkpoint = true
+							mapgen[l][m].angle = 180
+						#lower checkpoint room2
+						elif m == zone_size - 1 && infinite_generation && checkpoints_enabled:
+							mapgen[l][m].checkpoint = true
+							mapgen[l][m].angle = 0
 						else: #generic vertical room2
 							var room_angle: Array[float] = [0, 180]
 							mapgen[l][m].angle = room_angle[rng.randi_range(0, 1)]
@@ -693,16 +719,24 @@ func place_room_positions() -> void:
 					else:#room2
 						if l < size_x - 1 && l > 0:
 							#right checkpoint room2
-							if l == size_x / (map_size_x + 1) * zone_counter.x && mapgen[l-1][m].exist:
+							if l == size_x / (map_size_x + 1) * zone_counter.x && mapgen[l-1][m].exist && checkpoints_enabled:
 								mapgen[l][m].checkpoint = true
 								mapgen[l][m].angle = 270
 							#left checkpoint room2
-							elif l == size_x / (map_size_x + 1) * (zone_counter.x + 1) - 1 && mapgen[l+1][m].exist:
+							elif l == size_x / (map_size_x + 1) * (zone_counter.x + 1) - 1 && mapgen[l+1][m].exist && checkpoints_enabled:
 								mapgen[l][m].checkpoint = true
 								mapgen[l][m].angle = 90
 							else: #generic horizontal room2
 								var room_angle: Array[float] = [90, 270]
 								mapgen[l][m].angle = room_angle[rng.randi_range(0, 1)]
+						#right checkpoint room2
+						elif l == 0 && infinite_generation && checkpoints_enabled:
+							mapgen[l][m].checkpoint = true
+							mapgen[l][m].angle = 270
+						#left checkpoint room2
+						elif l == zone_size - 1 && infinite_generation && checkpoints_enabled:
+							mapgen[l][m].checkpoint = true
+							mapgen[l][m].angle = 90
 						else: #generic horizontal room2
 							var room_angle: Array[float] = [90, 270]
 							mapgen[l][m].angle = room_angle[rng.randi_range(0, 1)]
@@ -773,36 +807,32 @@ func place_room_positions() -> void:
 					mapgen[l][m].angle = 270
 					room1_amount[room_index] += 1
 			if double_room_support:
-				# If both rooms exist, same type and not double - then they can be double
+				# If both rooms exist and not double - then they can be double
 				if l > 0:
 					if mapgen[l][m].exist && mapgen[l-1][m].exist &&\
-					 mapgen[l][m].room_type == mapgen[l-1][m].room_type &&\
 					 !mapgen[l][m].double_room && !mapgen[l-1][m].double_room &&\
 					 !mapgen[l][m].checkpoint && !mapgen[l-1][m].checkpoint:
-						detect_double_room(Vector2i(l, m), Vector2i(l-1, m))
+						detect_double_room(Vector2i(l, m), Vector2i(l-1, m), room_index)
 				if l < size_x - 1:
 					if mapgen[l][m].exist && mapgen[l+1][m].exist &&\
-					 mapgen[l][m].room_type == mapgen[l+1][m].room_type &&\
 					 !mapgen[l][m].double_room && !mapgen[l+1][m].double_room &&\
 					 !mapgen[l][m].checkpoint && !mapgen[l+1][m].checkpoint:
-						detect_double_room(Vector2i(l, m), Vector2i(l+1, m))
+						detect_double_room(Vector2i(l, m), Vector2i(l+1, m), room_index)
 				if m > 0:
 					if mapgen[l][m].exist && mapgen[l][m-1].exist &&\
-					 mapgen[l][m].room_type == mapgen[l][m-1].room_type &&\
 					 !mapgen[l][m].double_room && !mapgen[l][m-1].double_room &&\
 					 !mapgen[l][m].checkpoint && !mapgen[l][m-1].checkpoint:
-						detect_double_room(Vector2i(l, m), Vector2i(l, m-1))
+						detect_double_room(Vector2i(l, m), Vector2i(l, m-1), room_index)
 				if m < size_y - 1:
 					if mapgen[l][m].exist && mapgen[l][m+1].exist &&\
-					 mapgen[l][m].room_type == mapgen[l][m+1].room_type &&\
 					 !mapgen[l][m].double_room && !mapgen[l][m+1].double_room &&\
 					 !mapgen[l][m].checkpoint && !mapgen[l][m+1].checkpoint:
-						detect_double_room(Vector2i(l, m), Vector2i(l, m+1))
+						detect_double_room(Vector2i(l, m), Vector2i(l, m+1), room_index)
 		zone_counter.y = 0
 		room_index = room_index_default
 	#if better_zone_generation:
 		#for j in range(room_index + 1):
-			## Stop better zone geneartion if there is 2x2 zone and higher
+			## Stop better zone generation if there is 2x2 zone and higher
 			#if room1_amount[j] < better_zone_generation_min_amount && (map_size_x + 1) * (map_size_y + 1) < 4:
 				#rng_seed = -1
 				#rng.randomize()
@@ -810,35 +840,51 @@ func place_room_positions() -> void:
 				#return
 
 ## Detects double room (if Double room support is enabled)
-func detect_double_room(first: Vector2i, second: Vector2i) -> void:
-	if mapgen[first.x][first.y].room_type == RoomTypes.ROOM2:
-		mapgen[first.x][first.y].double_room = DoubleRoomTypes.ROOM2D
-		match mapgen[first.x][first.y].angle:
-			0.0:
-				mapgen[first.x][first.y].angle = 180.0
-				mapgen[second.x][second.y].angle = 0.0
-			90.0:
-				mapgen[first.x][first.y].angle = 270.0
-				mapgen[second.x][second.y].angle = 90.0
-			180.0:
-				mapgen[second.x][second.y].angle = 0.0
-			270.0:
-				mapgen[second.x][second.y].angle = 90.0
-		mapgen[second.x][second.y].double_room = DoubleRoomTypes.ROOM2D
-	elif mapgen[first.x][first.y].room_type == RoomTypes.ROOM4:
-		mapgen[first.x][first.y].double_room = DoubleRoomTypes.ROOM4D
-		match mapgen[first.x][first.y].angle:
-			0.0:
-				mapgen[first.x][first.y].angle = 180.0
-				mapgen[second.x][second.y].angle = 0.0
-			90.0:
-				mapgen[first.x][first.y].angle = 270.0
-				mapgen[second.x][second.y].angle = 90.0
-			180.0:
-				mapgen[second.x][second.y].angle = 0.0
-			270.0:
-				mapgen[second.x][second.y].angle = 90.0
-		mapgen[second.x][second.y].double_room = DoubleRoomTypes.ROOM4D
+func detect_double_room(first: Vector2i, second: Vector2i, zone: int) -> void:
+	for shape in double_room_shapes[zone]:
+		if mapgen[first.x][first.y].room_type == mapgen[second.x][second.y].room_type && \
+		  shape[0].double_room_shape == shape[1].double_room_shape:
+			if mapgen[first.x][first.y].room_type == RoomTypes.ROOM2:
+				mapgen[first.x][first.y].double_room = DoubleRoomTypes.ROOM2D
+				match mapgen[first.x][first.y].angle:
+					0.0:
+						mapgen[first.x][first.y].angle = 180.0
+						mapgen[second.x][second.y].angle = 180.0
+					90.0:
+						mapgen[first.x][first.y].angle = 270.0
+						mapgen[second.x][second.y].angle = 270.0
+					180.0:
+						mapgen[first.x][first.y].angle = 180.0
+						mapgen[second.x][second.y].angle = 180.0
+					270.0:
+						mapgen[first.x][first.y].angle = 270.0
+						mapgen[second.x][second.y].angle = 270.0
+				mapgen[second.x][second.y].double_room = DoubleRoomTypes.ROOM2D
+			#elif mapgen[first.x][first.y].room_type == RoomTypes.ROOM4:
+				#mapgen[first.x][first.y].double_room = DoubleRoomTypes.ROOM4D
+				#match mapgen[first.x][first.y].angle:
+					#0.0:
+						#mapgen[first.x][first.y].angle = 180.0
+						#mapgen[second.x][second.y].angle = 0.0
+					#90.0:
+						#mapgen[first.x][first.y].angle = 270.0
+						#mapgen[second.x][second.y].angle = 90.0
+					#180.0:
+						#mapgen[second.x][second.y].angle = 0.0
+					#270.0:
+						#mapgen[second.x][second.y].angle = 90.0
+				#mapgen[second.x][second.y].double_room = DoubleRoomTypes.ROOM4D
+		if mapgen[first.x][first.y].room_type == shape[0].double_room_shape && \
+		  mapgen[second.x][second.y].room_type == shape[1].double_room_shape:
+			if shape[0].double_room_position == MapGenRoom.DoubleRoomPosition.LEFT && shape[1].double_room_position == MapGenRoom.DoubleRoomPosition.RIGHT && \
+			  mapgen[first.x][first.y].west && mapgen[second.x][second.y].east:
+				mapgen[first.x][first.y].double_room = shape[0].double_room_shape
+				mapgen[second.x][second.y].double_room = shape[1].double_room_shape
+			elif shape[0].double_room_position == MapGenRoom.DoubleRoomPosition.UP && shape[1].double_room_position == MapGenRoom.DoubleRoomPosition.DOWN && \
+			  mapgen[first.x][first.y].north && mapgen[second.x][second.y].south:
+				mapgen[first.x][first.y].double_room = shape[0].double_room_shape
+				mapgen[second.x][second.y].double_room = shape[1].double_room_shape
+	
 
 ## Clears the map generation
 func clear():

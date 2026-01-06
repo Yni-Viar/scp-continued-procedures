@@ -19,9 +19,9 @@ func _physics_process(delta: float) -> void:
 		timer += delta
 		if timer >= wait_seconds:
 			var players = get_tree().get_nodes_in_group("Players")
-			var random_human: Node3D = players[rng.randi_range(0, players.size() - 1)].get_parent()
+			var random_human: Node3D = players[rng.randi_range(0, players.size() - 1)]
 			#Action. We move SCP-650 to player's global position - offset (which is transform.basis.z) * how far SCP-650 will be from player
-			global_position = random_human.global_position - random_human.global_transform.basis.z * 2
+			get_parent().get_parent().global_position = random_human.global_position - random_human.global_transform.basis.z * 2
 			set_state("Pose " + str(rng.randi_range(4, 10)))
 			# Look at player
 			look_at(random_human.global_position)

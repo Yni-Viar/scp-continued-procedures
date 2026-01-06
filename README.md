@@ -4,6 +4,19 @@
 
 **It is strongly recommended to use [custom build of Godot engine 4.5.1](https://github.com/Yni-Viar/godot/releases/tag/4.5.1-stable-patch), because of various security issues**, but it is possible to build with regular Godot 4.5.1.
 
+### Building regular version
+
+1. Project->Export
+2. Choose your platform (e.g. Windows/Linux/Android)
+3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin`
+
+### Building lite version (for Web)
+
+1. Project->Export
+2. Choose your platform (e.g. Web)
+3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*`
+4. Navigate to Features tab and type in "Custom (comma separated)": `Lite`
+
 ## About
 
 Do your daily job at Site-[REDACTED].

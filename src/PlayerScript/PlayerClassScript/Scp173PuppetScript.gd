@@ -74,16 +74,6 @@ func spawn_scp_variation() -> void:
 func set_face():
 	match scp_173_current_id:
 		0:
-			var tex: ShaderMaterial = load("res://Assets/Materials/Scp173Unity.tres")
-			match Settings.current_season:
-				Settings.Season.CHRISTMAS:
-					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_F1.png"))
-				Settings.Season.HALLOWEEN:
-					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_H1.png"))
-				_:
-					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_" + str(rng.randi_range(1, scp_173_variations.values()[scp_173_current_id])) + ".png"))
-			get_node("Scp173Entity/SCP173_Rig/Skeleton3D/scp173_MESH").set_surface_override_material(0, tex)
-		1:
 			var tex: ShaderMaterial = load("res://Assets/Materials/Scp173Our.tres")
 			match Settings.current_season:
 				Settings.Season.CHRISTMAS:
@@ -93,6 +83,17 @@ func set_face():
 				_:
 					tex.set_shader_parameter("albedo_b", load("res://Assets/OriginalModels/Scp173/Faces/Face" + str(rng.randi_range(1, scp_173_variations.values()[scp_173_current_id])) + ".png"))
 			get_node("Scp173Entity/Cube").set_surface_override_material(0, tex)
+		1:
+			var tex: ShaderMaterial = load("res://Assets/Materials/Scp173Unity.tres")
+			match Settings.current_season:
+				Settings.Season.CHRISTMAS:
+					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_F1.png"))
+				Settings.Season.HALLOWEEN:
+					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_H1.png"))
+				_:
+					tex.set_shader_parameter("albedo_b", load("res://Assets/ExternalModels/SCP/scp173/Faces/face_" + str(rng.randi_range(1, scp_173_variations.values()[scp_173_current_id])) + ".png"))
+			get_node("Scp173Entity/SCP173_Rig/Skeleton3D/scp173_MESH").set_surface_override_material(0, tex)
+		
 
 #func on_action_area_body_exited(body: Node3D):
 	#pass

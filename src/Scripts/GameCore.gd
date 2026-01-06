@@ -33,9 +33,18 @@ var showable_res: String = ""
 func _ready() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
+	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
 	ci_timer = rng.randf_range(20.0, 22.5)
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
+	if OS.has_feature("Lite"):
+		gamedata = load("res://Scripts/GameData/LiteGame.tres")
+		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZoneLite.tres"), load("res://MapGen/ResearchZoneLite.tres")]
+		$FacilityGenerator.rooms = rooms
+	else:
+		gamedata = load("res://Scripts/GameData/Optional/DefaultGame.tres")
+		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZone.tres"), load("res://MapGen/ResearchZone.tres")]
+		$FacilityGenerator.rooms = rooms
 	# Choose seed
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
@@ -74,10 +83,11 @@ func _on_facility_generator_generated() -> void:
 	var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
 	sz.position.y = 256.0
 	add_child(sz, true)
-	var ez: Node3D = load("res://Assets/Rooms/sublevels/subl_Entrance.tscn").instantiate()
-	# avoid elevator collision
-	ez.position = Vector3(64.0, 128.0, 128.0)
-	add_child(ez, true)
+	if !OS.has_feature("Lite"):
+		var ez: Node3D = load("res://Assets/Rooms/sublevels/Optional/subl_Entrance.tscn").instantiate()
+		# avoid elevator collision
+		ez.position = Vector3(64.0, 128.0, 128.0)
+		add_child(ez, true)
 	
 	spawn_player()
 	spawn_puppets()
@@ -216,3 +226,11 @@ func _on_game_over_timer_timeout() -> void:
 
 func add_item(args: Array):
 	get_node($StaticPlayer.target_puppet_path).call("_call_function", "UI/Inventory/Inventory", "add_item", [int(args[0])])
+
+func spawn_npc(args: Array):
+	if args.size() > 0:
+		if args[0] is int && args[0] < gamedata.puppet_classes.size():
+			var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
+			npc.puppet_class = gamedata.puppet_classes[args[0]]
+			npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
+			$NPCs.add_child(npc)

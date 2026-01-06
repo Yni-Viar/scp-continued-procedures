@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://de2va2wbsvopy"]
+
+[ext_resource type="Texture2D" uid="uid://ttw8c15u0if6" path="res://Assets/Materials/Optional/Elevator/Metal009_2K-PNG_Color.png" id="1_467bd"]
+[ext_resource type="Texture2D" uid="uid://c7v1ma1sf0n5h" path="res://Assets/Materials/Optional/Elevator/Metal009_2K-PNG_NormalGL.png" id="2_3r677"]
+[ext_resource type="Texture2D" uid="uid://bf414e28ipiii" path="res://Assets/Materials/Optional/Elevator/Metal009_2K-PNG_Roughness.png" id="3_vyuf4"]
+
+[resource]
+resource_name = "Wall"
+albedo_texture = ExtResource("1_467bd")
+roughness_texture = ExtResource("3_vyuf4")
+normal_enabled = true
+normal_texture = ExtResource("2_3r677")
