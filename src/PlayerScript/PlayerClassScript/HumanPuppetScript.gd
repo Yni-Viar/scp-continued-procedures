@@ -147,9 +147,8 @@ func set_state(animation_name: String, action_name: String, amount):
 
 ## Playing footsteps
 func footstep(key: String):
-	if OS.get_name() != "Web":
-		get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
-		get_parent().get_parent().get_node("WalkSounds").play()
+	get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
+	get_parent().get_parent().get_node("WalkSounds").play()
 
 func hold_item(idx: int):
 	if get_node_or_null(armature_name + "/Skeleton3D/ItemAttachment/Marker3D") != null:

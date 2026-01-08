@@ -7,8 +7,6 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### Minified build profile
 - Add Lite build profile
 - Add Web support using Lite profile.
-### Update to Godot 4.6
-- Update to Godot 4.6 to fix bug with Web backend.
 ### Other changes
 - port SCP-650 bugfix from 6.0
 - Update map generator to 11.0.4
