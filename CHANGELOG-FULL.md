@@ -3,7 +3,17 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.6.5 (2025.12.31)
+## v5.7.0 ("Mini update")
+### Minified build profile
+- Add Lite build profile
+- Add Web support using Lite profile.
+### Update to Godot 4.6
+- Update to Godot 4.6 to fix bug with Web backend.
+### Other changes
+- port SCP-650 bugfix from 6.0
+- Update map generator to 11.0.4
+
+## v5.6.5 (2025.12.31) (last version to support Windows 8.1 unofficially)
 - Updated NavMeshes - fixing noclip bugs.
 - Extended Christmas season to January 3rd.
 

@@ -30,7 +30,7 @@ func on_start():
 	if get_node_or_null(armature_name + "/Skeleton3D/LookAtModifier3D") != null && get_parent().get_parent().puppet_class.enable_ik:
 		has_lookat_ik = true
 	#get_parent().get_node("NpcSelection").set_collision_mask_value(3, true)
-	if get_node(torso_node_path) == null:
+	if get_node_or_null(torso_node_path) == null:
 		resistance_scp686 = true
 	
 	on_start_human()
@@ -147,8 +147,9 @@ func set_state(animation_name: String, action_name: String, amount):
 
 ## Playing footsteps
 func footstep(key: String):
-	get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
-	get_parent().get_parent().get_node("WalkSounds").play()
+	if OS.get_name() != "Web":
+		get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
+		get_parent().get_parent().get_node("WalkSounds").play()
 
 func hold_item(idx: int):
 	if get_node_or_null(armature_name + "/Skeleton3D/ItemAttachment/Marker3D") != null:
