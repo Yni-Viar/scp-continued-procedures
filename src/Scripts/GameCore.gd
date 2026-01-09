@@ -34,7 +34,7 @@ func _ready() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
-	ci_timer = rng.randf_range(20.0, 22.5)
+	ci_timer = rng.randf_range(25.0, 27.5)
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	if OS.has_feature("Lite"):
@@ -104,6 +104,7 @@ func _on_facility_generator_generated() -> void:
 	if ci_probability < 0:
 		ci_probability = rng.randi_range(0, 1)
 	ci_ready = true
+	call_deferred("load_complete")
 
 func spawn_player():
 	# Player and allies
@@ -229,8 +230,11 @@ func add_item(args: Array):
 
 func spawn_npc(args: Array):
 	if args.size() > 0:
-		if args[0] is int && args[0] < gamedata.puppet_classes.size():
+		if args[0].is_valid_int() && int(args[0]) < gamedata.puppet_classes.size():
 			var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
-			npc.puppet_class = gamedata.puppet_classes[args[0]]
+			npc.puppet_class = gamedata.puppet_classes[int(args[0])]
 			npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
 			$NPCs.add_child(npc)
+
+func load_complete():
+	$FakeLoadingScreen.hide()

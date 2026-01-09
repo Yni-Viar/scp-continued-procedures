@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.6.1"
+const DATA_COMPATIBILITY: String = "5.7.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -55,15 +55,15 @@ func load_resource():
 		load_default_settings()
 
 func load_default_settings():
-	#if OS.get_name() != "Web" || OS.get_name() != "Android":
-	var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
-	save_resource(res)
-	setting_res = res
+	if OS.get_name() != "Web" || OS.get_name() != "Android":
+		var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
+		save_resource(res)
+		setting_res = res
+	else:
+		var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Lowest.tres")
+		save_resource(res)
+		setting_res = res
 	set_default_keybinds()
-	#else:
-		#var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Lowest.tres")
-		#save_resource(res)
-		#setting_res = res
 
 ## Sometimes ago it was a great function. Now it is just a stub, that calls ResourceStorage and saves settings
 func save_resource(res):

@@ -1,7 +1,13 @@
-[gd_resource type="Environment" format=3 uid="uid://mkrxfq7uvngm"]
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://mkrxfq7uvngm"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dxvmn"]
+
+[sub_resource type="Sky" id="Sky_iaqo8"]
+sky_material = SubResource("PanoramaSkyMaterial_dxvmn")
 
 [resource]
 background_mode = 1
+sky = SubResource("Sky_iaqo8")
 glow_enabled = true
 fog_enabled = true
 fog_mode = 1

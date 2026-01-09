@@ -251,3 +251,6 @@ msgstr ""
 
 msgid "SUBL_939_SIGN"
 msgstr ""
+
+msgid "LITE_VERSION_WARNING"
+msgstr ""

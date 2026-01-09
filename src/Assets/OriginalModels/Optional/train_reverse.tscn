@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://btt0acpotcfk4" path="res://Scripts/PathWalker.gd" id="1_mfaov"]
 [ext_resource type="Texture2D" uid="uid://c21rhinbjogl7" path="res://Assets/OriginalModels/Optional/Train/Leather033A_2K-PNG_Color.png" id="2_vprbb"]
-[ext_resource type="Texture2D" uid="uid://y8aku83klihj" path="res://Assets/OriginalModels/Optional/Train/Leather033A_2K-PNG_Roughness.png" id="3_clebf"]
+[ext_resource type="Texture2D" uid="uid://dyi5wag5aqtiu" path="res://Assets/OriginalModels/Optional/Train/Leather033A_2K-PNG_Roughness.png" id="3_clebf"]
 [ext_resource type="Texture2D" uid="uid://cixbdinnfythh" path="res://Assets/OriginalModels/Optional/Train/Leather033A_1K-PNG_NormalGL.png" id="4_mcmwn"]
 [ext_resource type="Texture2D" uid="uid://bo72kyiwpqtmn" path="res://Assets/OriginalModels/Optional/Train/Metal024_2K-PNG_Color.png" id="5_7brsj"]
 [ext_resource type="Texture2D" uid="uid://cv5fcx5641hif" path="res://Assets/OriginalModels/Optional/Train/Metal024_2K-PNG_Metalness-Metal024_2K-PNG_Roughness.png" id="6_6nvbi"]

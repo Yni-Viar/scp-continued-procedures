@@ -506,7 +506,7 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Lite/Demo version. Please, download full game for accessing more content"
+text = "LITE_VERSION_WARNING"
 
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/StoryMode" to="." method="_on_story_mode_pressed"]

@@ -168,6 +168,11 @@ func elevator_move(p_pass_floor: bool, first : bool):
 		
 		current_floor = floor
 	if OS.get_name() == "Web":
+		global_position = get_node(floors[floor].up_helper_point).global_position
+		global_rotation = get_node(floors[floor].up_helper_point).global_rotation
+		for node_path in objects_to_teleport:
+			get_node(node_path).global_position = get_node(floors[floor].up_helper_point).global_position
+			get_node(node_path).global_rotation = get_node(floors[floor].up_helper_point).global_rotation
 		await get_tree().create_timer(10.0).timeout
 		global_position = get_node(floors[floor].destination_point).global_position
 		global_rotation = get_node(floors[floor].destination_point).global_rotation

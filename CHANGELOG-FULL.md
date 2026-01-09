@@ -3,13 +3,16 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.7.0 ("Mini update")
+## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile
 - Add Lite build profile
 - Add Web support using Lite profile.
+### New features
+- Now you can safely disable Reflection probe setting if there is not much performance - implemented fallback mechanism.
 ### Other changes
 - port SCP-650 bugfix from 6.0
 - Update map generator to 11.0.4
+- Fix Surface Zone not having fog.
 
 ## v5.6.5 (2025.12.31) (last version to support Windows 8.1 unofficially)
 - Updated NavMeshes - fixing noclip bugs.
