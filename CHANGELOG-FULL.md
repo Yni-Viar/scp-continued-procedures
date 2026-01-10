@@ -11,6 +11,29 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
     - [ ] Map Generator API
 - [x] Make SCP-650 moddable
 
+### Facility Builder mode
+- [ ] Facility Builder mode - facility building simulator.
+
+### New living sub-zone
+- [ ] New living sub-zone with own Map Generator instance
+
+### Human classes rework (may be moved to 7.0)
+- [ ] Class-D and researchers will be randomized, based on GD-Human-Framework. (Scientist from Classic mode will remain unchanged, since this scientist is from *SCP:SL*)
+- [ ] Improve gameplay AI to call and ride elevators
+
+### New SCPs
+- [ ] SCP-007 *Yni Viar's Comment: human classes rework is required before integrating 007.*
+- [ ] SCP-261 *May be moved to 7.0*
+- [ ] SCP-522
+
+### More changes
+#### New Godot version (may be moved to 7.0)
+- [ ] Update to Godot 4.6 and enable SSAO setting. *Yni Viar's Comment: current Godot 4.6 beta has issues, task will be delayed.*
+- [ ] Remove item shader in favor of 4.5 stencil feature.
+#### Misc changes
+- [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
+- [x] \[Map Generator\] Updated to 11.4.1
+
 ## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile
 - Add Lite build profile
@@ -19,7 +42,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Now you can safely disable Reflection probe setting if there is not much performance - implemented fallback mechanism.
 ### Other changes
 - port SCP-650 bugfix from 6.0
-- Update map generator to 11.0.4
+- Update map generator to 11.1.0
 - Fix Surface Zone not having fog.
 
 ## v5.6.5 (2025.12.31) (last version to support Windows 8.1 unofficially)
