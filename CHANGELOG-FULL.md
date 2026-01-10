@@ -11,7 +11,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Now you can safely disable Reflection probe setting if there is not much performance - implemented fallback mechanism.
 ### Other changes
 - port SCP-650 bugfix from 6.0
-- Update map generator to 11.0.4
+- Update map generator to 11.1.0
 - Fix Surface Zone not having fog.
 
 ## v5.6.5 (2025.12.31) (last version to support Windows 8.1 unofficially)
