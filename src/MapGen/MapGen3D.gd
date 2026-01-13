@@ -40,6 +40,11 @@ enum RoomTypes {EMPTY, ROOM1, ROOM2, ROOM2C, ROOM3, ROOM4}
 @export var debug_print: bool = false
 ## Enable double rooms support (single rooms only). Available since mapgen v9.
 @export var double_room_support: bool = false
+@export_group("External loading settings")
+## Setting to optimize GLTF loading. Is not necessary for map generation
+@export var use_gltf_optimizator = false
+## Range, after which room will be hidden.
+@export_range(8.0, 256.0) var gltf_visibility_radius: float = 64.0
 
 var mapgen: Array[Array] = []
 
@@ -67,7 +72,7 @@ var room4d_count: Array[int] = [0]
 var room2cd_count: Array[int] = [0]
 var room3d_count: Array[int] = [0]
 
-var cached_scenes: Dictionary[String, Node3D]
+var cached_scenes: Dictionary[String, PackedScene]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -75,6 +80,10 @@ func _ready() -> void:
 
 func generate_rooms():
 	clear()
+	if OS.get_memory_info()["physical"] - OS.get_memory_info()["free"] > OS.get_memory_info()["free"]:
+		await get_tree().create_timer(0.375).timeout
+	if rng_seed != -1:
+		rng.seed = rng_seed
 	if rooms == null || rooms.size() == 0:
 		printerr("There are no zones, cannot spawn.")
 		return
@@ -104,6 +113,7 @@ func generate_rooms():
 	mapgen_core.mapgen = mapgen
 	add_child(mapgen_core)
 	mapgen = mapgen_core.start_generation()
+	rng.seed = mapgen_core.rng.seed
 	spawn_rooms()
 
 ## Spawns room prefab on the grid
@@ -579,6 +589,7 @@ func spawn_rooms() -> void:
 		zone_counter.y = 0
 	if enable_door_generation:
 		spawn_doors()
+	cached_scenes.clear()
 	generated.emit()
 
 func room_select(type: RoomTypes, ready_to_spawn_rooms: Array[MapGenZone], zone_index: int, n: int, o: int) -> PackedScene:
@@ -801,15 +812,30 @@ func clear():
 		node.queue_free()
 
 func load_gltf(path: String) -> Node3D:
+	var result: Node3D
+	if use_gltf_optimizator:
+		result = GLTFRoomOptimizator.new()
+		result.distance_between_camera_and_self = gltf_visibility_radius
+	else:
+		result = Node3D.new()
 	if cached_scenes.has(path):
-		return cached_scenes[path].duplicate()
+		result.add_child(cached_scenes[path].instantiate())
+		return result
 	var gltf_document_load = GLTFDocument.new()
 	var gltf_state_load = GLTFState.new()
 	var error = gltf_document_load.append_from_file(path, gltf_state_load)
 	if error == OK:
 		var gltf_scene_root_node = gltf_document_load.generate_scene(gltf_state_load)
-		cached_scenes[path] = gltf_scene_root_node.duplicate()
-		return gltf_scene_root_node
+		
+		var packed_scene:PackedScene = PackedScene.new()
+		packed_scene.pack(gltf_scene_root_node)
+		#if !DirAccess.dir_exists_absolute("user://temporary_scenes/"):
+			#DirAccess.make_dir_absolute("user://temporary_scenes/")
+		#ResourceSaver.save(packed_scene, "user://temporary_scenes/" + path.get_file().split(".")[0] + ".tscn")
+		if !path.containsn("single"):
+			cached_scenes[path] = packed_scene
+		result.add_child(gltf_scene_root_node)
+		return result
 	else:
 		return null
 
@@ -817,4 +843,4 @@ func _notification(what: int) -> void:
 	match what:
 		NOTIFICATION_WM_CLOSE_REQUEST, NOTIFICATION_WM_GO_BACK_REQUEST:
 			for key in cached_scenes:
-				cached_scenes[key].queue_free()
+				cached_scenes.clear()
