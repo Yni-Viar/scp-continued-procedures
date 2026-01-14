@@ -14,11 +14,8 @@ func _ready() -> void:
 		LuaState.LUA_TABLE | \
 		LuaState.LUA_DEBUG | \
 		LuaState.LUA_UTF8 | \
-		#LuaState.GODOT_CLASSES | \
+		LuaState.GODOT_CLASSES | \
 		LuaState.GODOT_LOCAL_PATHS)
-	#lua_state.globals = {
-		#"plugin_api_generic"
-	#}
 
-func _execute_plugin_script(file_path: String):
+func execute_plugin_script(file_path: String):
 	lua_state.do_file(file_path)

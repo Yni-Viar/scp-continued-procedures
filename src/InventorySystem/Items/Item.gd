@@ -27,3 +27,6 @@ enum Usage {NORMAL, ONE_TIME, ONE_TIME_DROP}
 @export var upgrade_one_to_one: Array[int] = []
 @export var upgrade_fine: Array[int] = []
 @export var upgrade_very_fine: Array[int] = []
+@export_group("PluginSystem")
+@export var gltf_path: String = ""
+@export var collider_size: Vector3 = Vector3.ONE

@@ -5,11 +5,11 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v6.0.0 (release is NOT soon.)
 ### Addon support
-- [ ] Addon support:
+- [ ] Addon support (need testing)
     - [x] MovableNpc API
-    - [ ] Generic API (in progress)
-    - [ ] Map Generator API
+    - [x] Generic API
 - [x] Make SCP-650 moddable
+- [x] \[Foundation task\] Amount of tasks no longer limited to 2 (through addons)
 
 ### Facility Builder mode
 - [ ] Facility Builder mode - facility building simulator.
@@ -24,15 +24,15 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### New SCPs
 - [ ] SCP-007 *Yni Viar's Comment: human classes rework is required before integrating 007.*
 - [ ] SCP-261 *May be moved to 7.0*
-- [ ] SCP-522
+- [ ] SCP-522 + task
 
 ### More changes
 #### New Godot version (may be moved to 7.0)
-- [ ] Update to Godot 4.6 and enable SSAO setting. *Yni Viar's Comment: current Godot 4.6 beta has issues, task will be delayed.*
+- [ ] Update to Godot 4.6 and enable SSAO setting.
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 #### Misc changes
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
-- [x] \[Map Generator\] Updated to 11.4.1
+- [x] \[Map Generator\] Updated to 11.2.0
 
 ## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile

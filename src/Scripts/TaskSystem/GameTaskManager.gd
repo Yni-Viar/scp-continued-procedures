@@ -6,16 +6,17 @@ enum SpecialEvent {NONE, POSITIVE, NEGATIVE}
 
 signal task_done
 
-var tasks_left: int = 2
+var tasks_left: int
 var all_tasks: Array[GameTaskResource]
 var all_tasks_bkp: Array[GameTaskResource]
 var special_event: SpecialEvent = SpecialEvent.NONE
 
 # Called when the node enters the scene tree for the first time.
-func initialize() -> void:
+func initialize(amount: int = 2) -> void:
 	all_tasks.clear()
 	var used_index: Array[int] = []
-	for i in range(tasks_left):
+	tasks_left = amount
+	for i in range(amount):
 		if get_parent().gamedata.tasks.size() - 1 < i:
 			break
 		var task_index: int
@@ -31,6 +32,7 @@ func initialize() -> void:
 				return
 		used_index.append(task_index)
 		all_tasks.append(get_parent().gamedata.tasks[task_index])
+	task_done.emit()
 
 
 func do_task(task_name: String):

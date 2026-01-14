@@ -1,15 +1,21 @@
-[gd_scene load_steps=48 format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=54 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
+[ext_resource type="Resource" uid="uid://kakqpi6wi07u" path="res://Scripts/GameData/DefaultGame.tres" id="2_khy6b"]
 [ext_resource type="Script" uid="uid://bu7shnqhd7um8" path="res://MapGen/MapGen3D.gd" id="3_2irst"]
 [ext_resource type="PackedScene" uid="uid://by5c7g15ljuta" path="res://PlayerScript/StaticPlayer.tscn" id="3_bf53h"]
+[ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="5_pti6k"]
 [ext_resource type="Script" uid="uid://brnmrs6xlpyic" path="res://Scripts/UI.gd" id="6_dahhg"]
+[ext_resource type="Resource" uid="uid://dtd6pwanbhy7j" path="res://MapGen/MaintenanceZone.tres" id="6_lmarx"]
+[ext_resource type="Resource" uid="uid://7prvjngodfs1" path="res://MapGen/ResearchZone.tres" id="7_7av8l"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="7_fgofq"]
 [ext_resource type="Script" uid="uid://h8d12qstq0k3" path="res://Scripts/TaskSystem/GameTaskManager.gd" id="7_wxwew"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="9_bf53h"]
+[ext_resource type="Script" uid="uid://cq0cnn5xknly4" path="res://Scripts/PluginSystem/PluginApiGeneric.gd" id="9_pti6k"]
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="10_3so38"]
 [ext_resource type="Texture2D" uid="uid://dkgyet63cgaaa" path="res://Assets/HUD/healthbar.png" id="10_71axn"]
 [ext_resource type="Environment" uid="uid://mkrxfq7uvngm" path="res://Assets/Environment/Default.tres" id="10_khs3t"]
+[ext_resource type="Script" uid="uid://dcjhnxeeudn8f" path="res://Scripts/PluginSystem/PluginSystemCallback.gd" id="10_lmarx"]
 [ext_resource type="AudioStream" uid="uid://0gapate5fity" path="res://Sounds/Music/Third_party/lcz_ambient.ogg" id="11_dahhg"]
 [ext_resource type="Texture2D" uid="uid://c7425hilhemru" path="res://Assets/HUD/waterbar.png" id="13_4eqlp"]
 [ext_resource type="Script" uid="uid://dxam3jgydqblf" path="res://Scripts/FPSCounter.gd" id="13_acvyw"]
@@ -123,11 +129,13 @@ color = Color(1, 1, 1, 1)
 [node name="Game" type="Node3D"]
 process_mode = 1
 script = ExtResource("1_7lihs")
+gamedata = ExtResource("2_khy6b")
 
 [node name="StaticPlayer" parent="." instance=ExtResource("3_bf53h")]
 
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
+rooms = Array[ExtResource("5_pti6k")]([ExtResource("6_lmarx"), ExtResource("7_7av8l")])
 zone_size = 10
 map_size_y = 1
 large_rooms = true
@@ -136,6 +144,12 @@ checkpoints_enabled = true
 
 [node name="FoundationTask" type="Node" parent="."]
 script = ExtResource("7_wxwew")
+
+[node name="PluginSystemAPI" type="Node" parent="."]
+script = ExtResource("9_pti6k")
+
+[node name="PluginSystemCallback" type="Node" parent="."]
+script = ExtResource("10_lmarx")
 
 [node name="NPCs" type="Node3D" parent="."]
 
@@ -747,6 +761,8 @@ theme_override_font_sizes/font_size = 32
 text = "PLEASE_WAIT"
 horizontal_alignment = 1
 
+[connection signal="on_finish_load" from="." to="PluginSystemCallback" method="_on_game_on_finish_load"]
+[connection signal="on_launch" from="." to="PluginSystemCallback" method="_on_game_on_launch"]
 [connection signal="generated" from="FacilityGenerator" to="." method="_on_facility_generator_generated"]
 [connection signal="task_done" from="FoundationTask" to="UI" method="_on_foundation_task_task_done"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]

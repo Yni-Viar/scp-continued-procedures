@@ -17,12 +17,4 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-2028
 - [ ] SCP-2471 (3d model borrowed from AmbientCG)
 - [ ] Add female models for D-Class, Scientists and Guards
-
-## v6.0.0 plan
-### Addon support
-- [ ] Addon support.
-### Story mode (unfinished)
-- [ ] Move Casual mode as story, rename Story mode button as Play.
-- [ ] Story mode: Pre-configured round mechanic
-- [ ] Story mode: Custom "escape" scenario - finish task.
-- [ ] Story mode: lore (in progress)
+- [ ] Add different language-based SCPs

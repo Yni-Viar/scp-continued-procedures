@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.7.0"
+const DATA_COMPATIBILITY: String = "6.0.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -31,6 +31,8 @@ var region: String = "":
 		legal_req = is_legal_req()
 var legal_req: bool = false
 var current_season: Season = Season.NONE
+
+#var cached_scenes: Dictionary[String, PackedScene]
 
 func _init():
 	load_resource()
@@ -140,3 +142,18 @@ func season_feature_checker(season_check: Season) -> bool:
 		return true
 	else:
 		return false
+
+func load_gltf(path: String) -> Node3D:
+	#if cached_scenes.has(path):
+		#return cached_scenes[path].instantiate()
+	var gltf_document_load = GLTFDocument.new()
+	var gltf_state_load = GLTFState.new()
+	var error = gltf_document_load.append_from_file(path, gltf_state_load)
+	if error == OK:
+		var gltf_scene_root_node = gltf_document_load.generate_scene(gltf_state_load)
+		#var packed_scene:PackedScene = PackedScene.new()
+		#packed_scene.pack(gltf_scene_root_node)
+		#cached_scenes[path] = packed_scene
+		return gltf_scene_root_node
+	else:
+		return null

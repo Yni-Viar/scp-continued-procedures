@@ -3,6 +3,8 @@ class_name GameCore
 ## Game system.
 ## Made by Yni, licensed under MIT license.
 
+signal on_launch
+signal on_finish_load
 
 @export var gamedata: GameData
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
@@ -29,25 +31,26 @@ var protagonist: MovableNpc
 
 var showable_res: String = ""
 
+var map_generator_generated: bool = false
+var initialized_game: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	PluginSystem.lua_state.globals = {
+		"plugin_api_generic": get_node("PluginSystemAPI")
+	}
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
 	ci_timer = rng.randf_range(25.0, 27.5)
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
-	if OS.has_feature("Lite"):
-		gamedata = load("res://Scripts/GameData/LiteGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZoneLite.tres"), load("res://MapGen/ResearchZoneLite.tres")]
-		$FacilityGenerator.rooms = rooms
-	else:
-		gamedata = load("res://Scripts/GameData/Optional/DefaultGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZone.tres"), load("res://MapGen/ResearchZone.tres")]
-		$FacilityGenerator.rooms = rooms
 	# Choose seed
 	if map_seed >= 0:
 		$FacilityGenerator.rng_seed = map_seed
+	# Process custom logic here
+	on_launch.emit()
+	# Generate rooms
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings
@@ -80,14 +83,14 @@ func _process(delta: float) -> void:
 
 
 func _on_facility_generator_generated() -> void:
+	map_generator_generated = true
 	var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
 	sz.position.y = 256.0
 	add_child(sz, true)
-	if !OS.has_feature("Lite"):
-		var ez: Node3D = load("res://Assets/Rooms/sublevels/Optional/subl_Entrance.tscn").instantiate()
-		# avoid elevator collision
-		ez.position = Vector3(64.0, 128.0, 128.0)
-		add_child(ez, true)
+	var ez: Node3D = load("res://Assets/Rooms/sublevels/Optional/subl_Entrance.tscn").instantiate()
+	# avoid elevator collision
+	ez.position = Vector3(64.0, 128.0, 128.0)
+	add_child(ez, true)
 	
 	spawn_player()
 	spawn_puppets()
@@ -231,10 +234,20 @@ func add_item(args: Array):
 func spawn_npc(args: Array):
 	if args.size() > 0:
 		if args[0].is_valid_int() && int(args[0]) < gamedata.puppet_classes.size():
-			var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
-			npc.puppet_class = gamedata.puppet_classes[int(args[0])]
-			npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
-			$NPCs.add_child(npc)
+			spawn_npc_call(int(args[0]))
+
+func spawn_npc_call(index: int):
+	var npc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()
+	npc.puppet_class = gamedata.puppet_classes[index]
+	npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
+	$NPCs.add_child(npc)
 
 func load_complete():
 	$FakeLoadingScreen.hide()
+	initialized_game = true
+	on_finish_load.emit()
+
+func _notification(what: int) -> void:
+	match what:
+		NOTIFICATION_WM_CLOSE_REQUEST, NOTIFICATION_WM_GO_BACK_REQUEST, NOTIFICATION_PREDELETE:
+			PluginSystem.lua_state.globals.clear()

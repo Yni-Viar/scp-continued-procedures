@@ -506,13 +506,6 @@ theme_override_font_sizes/font_size = 32
 text = "PLEASE_WAIT"
 horizontal_alignment = 1
 
-[node name="LiteWarning" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "LITE_VERSION_WARNING"
-
 [connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="HBoxContainer/StoryMode" to="." method="_on_story_mode_pressed"]
 [connection signal="pressed" from="HBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
