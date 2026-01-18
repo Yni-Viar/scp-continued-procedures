@@ -4,7 +4,7 @@ This list contains all features, added in the game, or will be added in upcoming
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.8.0
-- [x] \[Map Generator\] Updated to 11.3.0
+- [x] \[Map Generator\] Updated to 11.3.1
 - [x] Re-branded to SCP: Continued Procedures
 - [x] Updated 3D model of SCP-458
 - [x] Fixed "elevator escape" long-standing bug.
