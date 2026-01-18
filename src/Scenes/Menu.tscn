@@ -223,7 +223,7 @@ theme = ExtResource("2_syfuq")
 
 [node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2"]
 layout_mode = 2
-text = "SCP: Containment Procedures
+text = "SCP: Continued Procedures
 -------------------------
 Made by Yni Viar at 2025.
 License: GPL3 / MIT License / CC-BY-SA 3.0-4.0
