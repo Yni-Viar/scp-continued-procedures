@@ -32,7 +32,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [ ] Remove item shader in favor of 4.5 stencil feature.
 #### Misc changes
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
-- [x] \[Map Generator\] Updated to 11.3.0
+- [x] \[Map Generator\] Updated to 11.3.1
 - [x] Re-branded to SCP: Continued Procedures
 - [x] Updated 3D model of SCP-458
 - [x] Fixed "elevator escape" long-standing bug.
