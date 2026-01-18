@@ -3,9 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.7.1
-
-- [ ] Update map generator to 11.2.0
+## v5.8.0
+- [x] \[Map Generator\] Updated to 11.3.0
+- [x] Re-branded to SCP: Continued Procedures
+- [x] Updated 3D model of SCP-458
 
 ## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile
