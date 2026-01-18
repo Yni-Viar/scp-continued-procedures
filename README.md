@@ -1,4 +1,4 @@
-# SCP: Containment Procedures (Reborn)
+# SCP: Continued Procedures
 
 ## Requirements to build
 

@@ -1,4 +1,4 @@
-# SCP: Containment Procedures long-term plan
+# SCP: Continued Procedures long-term plan
 
 This list contains features, that will be probably added in next or undetermined versions.
 For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
