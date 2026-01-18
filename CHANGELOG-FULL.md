@@ -3,13 +3,14 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.8.0
-- [x] \[Map Generator\] Updated to 11.3.1
-- [x] Re-branded to SCP: Continued Procedures
-- [x] Updated 3D model of SCP-458
-- [x] Fixed "elevator escape" long-standing bug.
+## v5.7.1 (2026.01.18)
+- \[Map Generator\] Updated to 11.3.1
+- Re-branded to SCP: Continued Procedures
+- Updated 3D model of SCP-458
+- Fixed "elevator escape" long-standing bug.
+- \[Web only\] Fixed elevator working only to 1 direction
 
-## v5.7.0 ("Mini update", 2026.01.09)
+## v5.7.0 ("Mini update", 2026.01.09, last version under name SCP: Containment Procedures)
 ### Minified build profile
 - Add Lite build profile
 - Add Web support using Lite profile.
@@ -20,7 +21,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Update map generator to 11.1.0
 - Fix Surface Zone not having fog.
 
-## v5.6.5 (2025.12.31) (last version to support Windows 8.1 unofficially)
+## v5.6.5 (2025.12.31)
 - Updated NavMeshes - fixing noclip bugs.
 - Extended Christmas season to January 3rd.
 

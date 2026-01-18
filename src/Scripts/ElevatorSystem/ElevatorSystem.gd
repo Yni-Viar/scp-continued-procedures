@@ -151,8 +151,25 @@ func elevator_move(p_pass_floor: bool, first : bool):
 			#check if lower point of next floor exist
 			if (floors[floor].down_helper_point != ""):
 				waypoints.append([get_node(floors[floor].down_helper_point).global_position, get_node(floors[floor].down_helper_point).global_rotation])
-			
 			waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
+		else:
+			global_position = get_node(floors[floor].down_helper_point).global_position
+			global_rotation = get_node(floors[floor].down_helper_point).global_rotation
+			for node_path in objects_to_teleport:
+				get_node(node_path).global_position = get_node(floors[floor].down_helper_point).global_position
+				get_node(node_path).global_rotation = get_node(floors[floor].down_helper_point).global_rotation
+			await get_tree().create_timer(10.0).timeout
+			global_position = get_node(floors[floor].destination_point).global_position
+			global_rotation = get_node(floors[floor].destination_point).global_rotation
+			for node_path in objects_to_teleport:
+				get_node(node_path).global_position = get_node(floors[floor].destination_point).global_position
+				get_node(node_path).global_rotation = get_node(floors[floor].destination_point).global_rotation
+			is_moving = false
+			changed_launch_state.emit(false)
+			get_node("Move").stop()
+			call("open_dest_doors")
+			current_floor = floor
+			return
 		current_floor = floor
 	elif (target_floor > current_floor):
 		last_move = LastMove.DOWN
@@ -165,25 +182,25 @@ func elevator_move(p_pass_floor: bool, first : bool):
 			if (floors[floor].up_helper_point != ""):
 				waypoints.append([get_node(floors[floor].up_helper_point).global_position, get_node(floors[floor].up_helper_point).global_rotation])
 			waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
-		
-		current_floor = floor
-	if OS.get_name() == "Web":
-		global_position = get_node(floors[floor].up_helper_point).global_position
-		global_rotation = get_node(floors[floor].up_helper_point).global_rotation
-		for node_path in objects_to_teleport:
-			get_node(node_path).global_position = get_node(floors[floor].up_helper_point).global_position
-			get_node(node_path).global_rotation = get_node(floors[floor].up_helper_point).global_rotation
-		await get_tree().create_timer(10.0).timeout
-		global_position = get_node(floors[floor].destination_point).global_position
-		global_rotation = get_node(floors[floor].destination_point).global_rotation
-		for node_path in objects_to_teleport:
-			get_node(node_path).global_position = get_node(floors[floor].destination_point).global_position
-			get_node(node_path).global_rotation = get_node(floors[floor].destination_point).global_rotation
-		is_moving = false
-		changed_launch_state.emit(false)
-		get_node("Move").stop()
-		call("open_dest_doors")
-	else:
+		else:
+			global_position = get_node(floors[floor].up_helper_point).global_position
+			global_rotation = get_node(floors[floor].up_helper_point).global_rotation
+			for node_path in objects_to_teleport:
+				get_node(node_path).global_position = get_node(floors[floor].up_helper_point).global_position
+				get_node(node_path).global_rotation = get_node(floors[floor].up_helper_point).global_rotation
+			await get_tree().create_timer(10.0).timeout
+			global_position = get_node(floors[floor].destination_point).global_position
+			global_rotation = get_node(floors[floor].destination_point).global_rotation
+			for node_path in objects_to_teleport:
+				get_node(node_path).global_position = get_node(floors[floor].destination_point).global_position
+				get_node(node_path).global_rotation = get_node(floors[floor].destination_point).global_rotation
+			is_moving = false
+			changed_launch_state.emit(false)
+			get_node("Move").stop()
+			call("open_dest_doors")
+			current_floor = floor
+			return
+	if OS.get_name() != "Web":
 		is_moving = true
 	if !$Move.playing:
 		$Move.play()

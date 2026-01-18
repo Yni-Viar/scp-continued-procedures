@@ -497,7 +497,7 @@ func add_room_to_the_map(x: int, y: int) -> void:
 	
 	room.position = Vector3(x * grid_size, 0, y * grid_size)
 	room.rotation_degrees = Vector3(room.rotation_degrees.x, mapgen[x][y].angle, room.rotation_degrees.z)
-	add_child(room)
+	add_child(room, true)
 	mapgen[x][y].room_name = mapgen[x][y].resource.name
 
 func room_select(type: RoomTypes, zone_index: int, n: int, o: int) -> void:
