@@ -34,6 +34,8 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Clutter system\] Ragdolls are now affected to Clutter System.
 - [x] \[Map Generator\] Updated to 11.3.0
 - [x] Re-branded to SCP: Continued Procedures
+- [x] Updated 3D model of SCP-458
+- [x] Fixed "elevator escape" long-standing bug.
 
 ## v5.7.0 ("Mini update", 2026.01.09)
 ### Minified build profile
