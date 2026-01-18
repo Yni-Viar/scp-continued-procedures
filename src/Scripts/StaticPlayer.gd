@@ -100,7 +100,7 @@ func interact(value: String) -> void:
 		match value:
 			"Point":
 				var result: Dictionary = intersect()
-				if result.keys().size() > 0 && !get_node(target_puppet_path).movement_freeze:
+				if result.keys().size() > 0 && !(get_node(target_puppet_path).movement_freeze || get_node(target_puppet_path).platform_moving):
 					# Shape cast for items
 					var shape_result: Array[Dictionary] = intersect_shape(result["position"])
 					for s_result in shape_result:
