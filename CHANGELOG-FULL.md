@@ -3,7 +3,11 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.7.2 (2026.01.22)
+## v5.7.3 (2026.01.23)
+
+- \[Emergency fix\] Fix map generator unable to generate random layouts - updated to v11.3.3
+
+## v5.7.2 (2026.01.23)
 
 - Fixed (again) uselessness of specific seed.
 - Fixed *SCP: Unity* variation of SCP-173 not spawning in generic mode.
