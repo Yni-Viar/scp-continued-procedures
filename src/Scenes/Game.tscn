@@ -147,7 +147,7 @@ script = ExtResource("7_wxwew")
 environment = ExtResource("10_khs3t")
 
 [node name="GameOverTimer" type="Timer" parent="."]
-wait_time = 240.0
+wait_time = 300.0
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

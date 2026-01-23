@@ -12,7 +12,7 @@ config_version=5
 
 config/name="SCP: Continued Procedures"
 config/description="A Facility simulator"
-config/version="5.7.1"
+config/version="5.7.2"
 config/tags=PackedStringArray("game", "scp_foundation", "singleplayer")
 run/main_scene="uid://b25hrjnoos5me"
 config/use_custom_user_dir=true
@@ -148,7 +148,7 @@ locale/translations=PackedStringArray("res://Translations/en.po", "res://Transla
 
 [navigation]
 
-3d/default_edge_connection_margin=1.5
+3d/default_edge_connection_margin=1.675
 
 [physics]
 

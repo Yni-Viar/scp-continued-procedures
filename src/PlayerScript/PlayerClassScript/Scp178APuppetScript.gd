@@ -1,5 +1,8 @@
 extends BasePuppetScript
 
+## SCP-178-1 puppet script
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
+
 static var target_players: Array[MovableNpc]
 
 var targeted: bool = false:

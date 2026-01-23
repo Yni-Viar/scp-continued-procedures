@@ -3,6 +3,12 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.7.2 (2026.01.22)
+
+- Fixed (again) uselessness of specific seed.
+- Fixed *SCP: Unity* variation of SCP-173 not spawning in generic mode.
+- Increased edge connection margin because of rare scenarios, where rooms were not connected.
+
 ## v5.7.1 (2026.01.18)
 - \[Map Generator\] Updated to 11.3.1
 - Re-branded to SCP: Continued Procedures

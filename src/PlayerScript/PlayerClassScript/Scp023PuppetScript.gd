@@ -2,7 +2,7 @@ extends BasePuppetScript
 ## SCP-023 puppet script.
 ## It is like a delayed timeb0mb with warning.
 ## It appears in late round, you need to come to repair eyes. Won't do it - catch gameover.
-## 
+## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 class_name Scp023PuppetScript
 
 var eye_glow_strength: float = 0.25
@@ -14,7 +14,7 @@ func on_start():
 	if Settings.setting_res.zen_mode:
 		glow_enabled = false
 	if glow_enabled:
-		timer.wait_time = rng.randf_range(155, 192)
+		timer.wait_time = rng.randf_range(224, 256)
 		timer.start()
 
 func _physics_process(delta: float) -> void:

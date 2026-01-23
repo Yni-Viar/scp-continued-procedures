@@ -34,7 +34,7 @@ func _ready() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
-	ci_timer = rng.randf_range(25.0, 27.5)
+	ci_timer = rng.randf_range(30.0, 32.0)
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	if OS.has_feature("Lite"):
@@ -46,7 +46,9 @@ func _ready() -> void:
 		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZone.tres"), load("res://MapGen/ResearchZone.tres")]
 		$FacilityGenerator.rooms = rooms
 	# Choose seed
-	if map_seed >= 0:
+	$FacilityGenerator.rng = rng
+	if map_seed != -1:
+		rng.seed = map_seed
 		$FacilityGenerator.rng_seed = map_seed
 	$FacilityGenerator.generate_rooms()
 	
