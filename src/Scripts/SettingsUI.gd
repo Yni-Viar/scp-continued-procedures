@@ -5,6 +5,7 @@ extends VBoxContainer
 func _ready() -> void:
 	$Glow.button_pressed = Settings.setting_res.glow
 	$BasicReflection.button_pressed = Settings.setting_res.reflection_probe
+	$SSAO.button_pressed = Settings.setting_res.ssao
 	$Music/MusicVolume.value = Settings.setting_res.music_volume
 
 
@@ -24,4 +25,8 @@ func _on_basic_reflection_toggled(toggled_on: bool) -> void:
 
 func _on_glow_toggled(toggled_on: bool) -> void:
 	Settings.setting_res.glow = toggled_on
+	Settings.save_resource(Settings.setting_res)
+
+func _on_ssao_toggled(toggled_on: bool) -> void:
+	Settings.setting_res.ssao = toggled_on
 	Settings.save_resource(Settings.setting_res)

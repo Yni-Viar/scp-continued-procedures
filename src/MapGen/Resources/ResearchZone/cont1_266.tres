@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MapGenRoom" load_steps=7 format=3 uid="uid://7cqlqpchllp6"]
+[gd_resource type="Resource" script_class="MapGenRoom" format=3 uid="uid://7cqlqpchllp6"]
 
 [ext_resource type="Texture2D" uid="uid://js7y3logs2g8" path="res://Assets/HUD/room1_90.png" id="1_u78jj"]
 [ext_resource type="Texture2D" uid="uid://b8nf0gvd62sem" path="res://Assets/HUD/room1_270.png" id="2_sbd21"]
@@ -15,4 +15,4 @@ icon_0_degrees = ExtResource("1_u78jj")
 icon_90_degrees = ExtResource("4_qsmib")
 icon_180_degrees = ExtResource("2_sbd21")
 icon_270_degrees = ExtResource("3_875ea")
-spawn_chance = 80.0
+spawn_chance = 75.0

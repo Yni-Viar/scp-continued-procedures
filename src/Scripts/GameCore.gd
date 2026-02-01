@@ -106,7 +106,6 @@ func _on_facility_generator_generated() -> void:
 	if ci_probability < 0:
 		ci_probability = rng.randi_range(0, 1)
 	ci_ready = true
-	call_deferred("load_complete")
 
 func spawn_player():
 	# Player and allies
@@ -237,6 +236,3 @@ func spawn_npc(args: Array):
 			npc.puppet_class = gamedata.puppet_classes[int(args[0])]
 			npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
 			$NPCs.add_child(npc)
-
-func load_complete():
-	$FakeLoadingScreen.hide()

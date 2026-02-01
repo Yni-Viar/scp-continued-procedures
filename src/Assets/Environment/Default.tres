@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=3 format=3 uid="uid://mkrxfq7uvngm"]
+[gd_resource type="Environment" format=3 uid="uid://mkrxfq7uvngm"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_dxvmn"]
 
@@ -13,4 +13,4 @@ fog_enabled = true
 fog_mode = 1
 fog_light_color = Color(0, 0, 0, 1)
 fog_density = 1.0
-fog_depth_end = 60.0
+fog_depth_end = 56.0

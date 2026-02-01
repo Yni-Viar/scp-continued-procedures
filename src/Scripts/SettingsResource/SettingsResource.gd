@@ -32,3 +32,5 @@ enum InputMethod {KB, MB, JP}
 	"toggle_mode": [InputMethod.KB, KEY_SPACE],
 	"inventory": [InputMethod.KB, KEY_TAB]
 }
+## SSAO
+@export var ssao: bool = false

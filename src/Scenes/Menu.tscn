@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -14,7 +14,6 @@
 [ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
 [ext_resource type="Texture2D" uid="uid://c7yat1lfp8emn" path="res://icon.png" id="15_t8p2w"]
-[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="15_x0ao6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8p2w"]
 content_margin_left = 2.0
@@ -43,7 +42,7 @@ corner_radius_bottom_left = 16
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dd46u"]
 noise = SubResource("FastNoiseLite_krje8")
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=681531353]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -52,7 +51,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3kf3n")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1449831181]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,7 +61,7 @@ grow_vertical = 2
 texture = ExtResource("2_idohh")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=681567043]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.181
@@ -78,7 +77,7 @@ theme_override_font_sizes/font_size = 64
 text = "SCP: Continued
 Procedures"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=840126762]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 264.0
@@ -86,7 +85,7 @@ offset_right = 564.0
 offset_bottom = 442.0
 theme_override_constants/separation = 64
 
-[node name="Play" type="Button" parent="HBoxContainer"]
+[node name="Play" type="Button" parent="HBoxContainer" unique_id=1891488613]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -98,7 +97,7 @@ icon = ExtResource("5_3jcrr")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="StoryMode" type="Button" parent="HBoxContainer"]
+[node name="StoryMode" type="Button" parent="HBoxContainer" unique_id=711719616]
 visible = false
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
@@ -111,7 +110,7 @@ icon = ExtResource("7_a8aa6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="SettingsButton" type="Button" parent="HBoxContainer"]
+[node name="SettingsButton" type="Button" parent="HBoxContainer" unique_id=779023843]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -123,7 +122,7 @@ icon = ExtResource("7_x0ao6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="HelpButton" type="Button" parent="HBoxContainer"]
+[node name="HelpButton" type="Button" parent="HBoxContainer" unique_id=1027277021]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -135,7 +134,7 @@ icon = ExtResource("6_aobxe")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="GameSettings" type="VBoxContainer" parent="."]
+[node name="GameSettings" type="VBoxContainer" parent="." unique_id=511685991]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.382
@@ -148,28 +147,28 @@ offset_right = -112.064
 offset_bottom = 76.648
 alignment = 1
 
-[node name="Info" type="Label" parent="GameSettings"]
+[node name="Info" type="Label" parent="GameSettings" unique_id=697258963]
 visible = false
 layout_mode = 2
 text = "GAME_SETTINGS_INFO"
 
-[node name="Seed" type="LineEdit" parent="GameSettings"]
+[node name="Seed" type="LineEdit" parent="GameSettings" unique_id=766563912]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 placeholder_text = "CUSTOM_SEED"
 
-[node name="TimeLimited" type="CheckBox" parent="GameSettings"]
+[node name="TimeLimited" type="CheckBox" parent="GameSettings" unique_id=966727141]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 text = "TIME_LIMITED"
 
-[node name="ZenMode" type="CheckBox" parent="GameSettings"]
+[node name="ZenMode" type="CheckBox" parent="GameSettings" unique_id=18668931]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 text = "ZEN_MODE"
 
-[node name="Credits" type="Button" parent="."]
+[node name="Credits" type="Button" parent="." unique_id=862521428]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -183,7 +182,7 @@ theme = ExtResource("2_syfuq")
 toggle_mode = true
 text = "CREDITS"
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="." unique_id=827662144]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.09
@@ -198,7 +197,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_sjh0l")
 
-[node name="CreditsContainer" type="Panel" parent="."]
+[node name="CreditsContainer" type="Panel" parent="." unique_id=11492006]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -209,7 +208,7 @@ offset_top = 0.271999
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CreditsContainer2" type="ScrollContainer" parent="CreditsContainer"]
+[node name="CreditsContainer2" type="ScrollContainer" parent="CreditsContainer" unique_id=823073721]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.611
@@ -221,7 +220,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("2_syfuq")
 
-[node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2"]
+[node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2" unique_id=2113723931]
 layout_mode = 2
 text = "SCP: Continued Procedures
 -------------------------
@@ -297,6 +296,10 @@ victory_mirosya (https://sketchfab.com/victory_mirosya)
 License: CC-BY 4.0
 (http://creativecommons.org/licenses/by/4.0/)
 ------------------------
+SCP-522 texture is based on \"1950s chair fabric\"
+Author: Mr ThinkTank
+License: CC-BY 2.0
+------------------------
 Couch 3D model is made by J-Toastie
 License: CC-BY 3.0
 (https://creativecommons.org/licenses/by/3.0/)
@@ -345,6 +348,7 @@ SCP-266 by Dr Kondraki
 SCP-347 by yellowdrakex
 SCP-446 by Rehevkor
 SCP-458 by Palhinuk
+SCP-522 by Felgraf
 SCP-649 by AsmodeusDark, Roget, Sirslash47
 SCP-650 by Dr Talson
 SCP-686 by BeeDee
@@ -365,7 +369,7 @@ Lomzz
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tutorial" type="Window" parent="."]
+[node name="Tutorial" type="Window" parent="." unique_id=1876622282]
 title = "Tutorial"
 initial_position = 2
 size = Vector2i(800, 480)
@@ -373,32 +377,32 @@ visible = false
 theme = ExtResource("2_syfuq")
 script = ExtResource("7_wfhf6")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial" unique_id=456710155]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/ScrollContainer" unique_id=869790037]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1410342589]
 layout_mode = 2
 text = "HELP_TITLE"
 
-[node name="Label2" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=5770654]
 layout_mode = 2
 text = "HELP_TASKS"
 
-[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1393582343]
 layout_mode = 2
 text = "HELP_EVENTS"
 
-[node name="Settings" parent="." instance=ExtResource("11_a8aa6")]
+[node name="Settings" parent="." unique_id=1153436787 instance=ExtResource("11_a8aa6")]
 visible = false
 
-[node name="StoryUI" type="Control" parent="."]
+[node name="StoryUI" type="Control" parent="." unique_id=679641389]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -407,7 +411,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="StoryUI"]
+[node name="TextureRect" type="TextureRect" parent="StoryUI" unique_id=1515950304]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -417,7 +421,7 @@ grow_vertical = 2
 texture = SubResource("NoiseTexture2D_dd46u")
 expand_mode = 1
 
-[node name="ItemList" type="ItemList" parent="StoryUI"]
+[node name="ItemList" type="ItemList" parent="StoryUI" unique_id=1970593360]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -434,74 +438,19 @@ icon_mode = 0
 item_0/text = "STORY_MAIN"
 item_0/icon = ExtResource("15_t8p2w")
 
-[node name="Back" type="TextureButton" parent="StoryUI"]
+[node name="Back" type="TextureButton" parent="StoryUI" unique_id=1957784972]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 texture_normal = ExtResource("14_dsmso")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1006724869]
 stream = ExtResource("12_qki4b")
 volume_db = -8.226
 autoplay = true
 bus = &"Music"
 
-[node name="FakeLoadingScreen" type="Control" parent="."]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="FakeLoadingScreen"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="FakeLoadingScreen"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.34600002
-anchor_right = 0.5
-anchor_bottom = 0.34600002
-offset_left = -192.0
-offset_top = 7.791992
-offset_right = 192.0
-offset_bottom = 72.79199
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("5_idohh")
-theme_override_font_sizes/font_size = 64
-text = "LOADING"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Label2" type="Label" parent="FakeLoadingScreen"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.59300005
-anchor_right = 0.5
-anchor_bottom = 0.59300005
-offset_left = -192.0
-offset_top = -56.264038
-offset_right = 192.0
-offset_bottom = 135.73596
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("15_x0ao6")
-theme_override_font_sizes/font_size = 32
-text = "PLEASE_WAIT"
-horizontal_alignment = 1
-
-[node name="LiteWarning" type="Label" parent="."]
+[node name="LiteWarning" type="Label" parent="." unique_id=2116688490]
 visible = false
 layout_mode = 0
 offset_right = 40.0

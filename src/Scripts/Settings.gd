@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.7.0"
+const DATA_COMPATIBILITY: String = "5.8.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -53,9 +53,10 @@ func load_resource():
 			load_default_settings()
 	else:
 		load_default_settings()
+		set_default_keybinds()
 
 func load_default_settings():
-	if OS.get_name() != "Web" || OS.get_name() != "Android":
+	if OS.get_name() != "Web" && OS.get_name() != "Android":
 		var res = load("res://Scripts/SettingsResource/Presets/OpenGL/Low.tres")
 		save_resource(res)
 		setting_res = res

@@ -42,10 +42,14 @@ func end_screen_show():
 	$Condition.show()
 
 func _on_back_pressed() -> void:
-	var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
-	get_tree().root.add_child(menu)
-	Settings.call_deferred("override_main_scene", menu)
-	get_tree().root.get_node("Game").queue_free()
+	var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
+	loading_screen.file_path_to_load = "res://Scenes/Menu.tscn"
+	add_child(loading_screen)
+	
+	#var menu: Node = load("res://Scenes/Menu.tscn").instantiate()
+	#get_tree().root.add_child(menu)
+	#Settings.call_deferred("override_main_scene", menu)
+	#get_tree().root.get_node("Game").queue_free()
 
 func _on_foundation_task_task_done() -> void:
 	for prev_task in $Tasks.get_children():

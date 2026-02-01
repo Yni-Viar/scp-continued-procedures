@@ -37,15 +37,25 @@ func _on_credits_pressed() -> void:
 
 
 func play():
-	$FakeLoadingScreen.show()
-	await get_tree().create_timer(0.5).timeout
-	var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
-	if !$GameSettings/Seed.text.is_empty():
-		game.map_seed = hash($GameSettings/Seed.text)
-	game.time_limited = $GameSettings/TimeLimited.button_pressed
-	get_tree().root.add_child(game)
-	Settings.call_deferred("override_main_scene", game)
-	queue_free()
+	
+	var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
+	loading_screen.file_path_to_load = "res://Scenes/Game.tscn"
+	loading_screen.parameters = {
+		"map_seed": hash($GameSettings/Seed.text) if !$GameSettings/Seed.text.is_empty() else -1,
+		"time_limited": $GameSettings/TimeLimited.button_pressed
+	}
+	
+	add_child(loading_screen)
+	
+	#$FakeLoadingScreen.show()
+	#
+	#var game: GameCore = load("res://Scenes/Game.tscn").instantiate()
+	#if !$GameSettings/Seed.text.is_empty():
+		#game.map_seed = hash($GameSettings/Seed.text)
+	#game.time_limited = $GameSettings/TimeLimited.button_pressed
+	#get_tree().root.add_child(game)
+	#Settings.call_deferred("override_main_scene", game)
+	#queue_free()
 
 
 func _on_time_limited_toggled(toggled_on: bool) -> void:

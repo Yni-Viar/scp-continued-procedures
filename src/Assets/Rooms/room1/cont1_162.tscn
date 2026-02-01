@@ -1,24 +1,24 @@
-[gd_scene load_steps=36 format=4 uid="uid://buwx2f5s8ms0n"]
+[gd_scene format=4 uid="uid://buwx2f5s8ms0n"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_i76g7"]
-[ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_keue3"]
-[ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_iy3yx"]
-[ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_57pa4"]
-[ext_resource type="PackedScene" uid="uid://53puk7j21cif" path="res://Assets/OriginalModels/Optional/scp_162.tscn" id="4_57pa4"]
-[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_tpifn"]
-[ext_resource type="Script" uid="uid://hur1fwih2oj7" path="res://Scripts/Triggers/Scp162TaskTrigger.gd" id="6_tpifn"]
-[ext_resource type="LightmapGIData" uid="uid://c3f1imkxxuoh8" path="res://Assets/Rooms/room1/Optional/Lm/cont1_162.lmbake" id="7_0rp3e"]
-[ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="7_6wbrc"]
-[ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="8_q2nps"]
-[ext_resource type="Texture2D" uid="uid://dpyr1p84higf0" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_arm_2k.jpg" id="9_yv4jn"]
-[ext_resource type="Texture2D" uid="uid://dm3meiue50u10" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_nor_gl_2k.jpg" id="10_b8xcb"]
-[ext_resource type="Texture2D" uid="uid://brxtgl2ekhirf" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_diff_2k.jpg" id="11_egjxc"]
-[ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="12_3x5tu"]
-[ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="13_i76g7"]
-[ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="14_q2nps"]
-[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="16_egjxc"]
-[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="17_3x5tu"]
-[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="18_3x5tu"]
+[ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_ohsvx"]
+[ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="3_b72w1"]
+[ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="4_26vda"]
+[ext_resource type="PackedScene" uid="uid://53puk7j21cif" path="res://Assets/OriginalModels/scp_162.tscn" id="5_tbpx5"]
+[ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="6_5wsgw"]
+[ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="7_yqhp3"]
+[ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="8_klnwk"]
+[ext_resource type="Texture2D" uid="uid://dpyr1p84higf0" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_arm_2k.jpg" id="9_b7w0d"]
+[ext_resource type="Texture2D" uid="uid://dm3meiue50u10" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_nor_gl_2k.jpg" id="10_bbiy7"]
+[ext_resource type="Texture2D" uid="uid://brxtgl2ekhirf" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_diff_2k.jpg" id="11_rpsvq"]
+[ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="12_2tnba"]
+[ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="13_f2c7q"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="14_dra1o"]
+[ext_resource type="Script" uid="uid://hur1fwih2oj7" path="res://Scripts/Triggers/Scp162TaskTrigger.gd" id="15_10src"]
+[ext_resource type="LightmapGIData" uid="uid://c3f1imkxxuoh8" path="res://Assets/Rooms/room1/Lm/cont1_162.lmbake" id="16_pbojt"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_hntjt"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_yf81g"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_hdfuf"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-3.9339895, -0.7695668, -5.53589, -2.9339895, -0.7695668, -5.53589, -2.9339895, -0.7695668, -6.28589, -7.9339895, -0.7695668, -6.28589, -4.9339895, -0.7695668, 4.21411, -4.9339895, -0.7695668, -4.28589, -7.9339895, -0.7695668, 9.714109, -3.9339895, -0.7695668, 9.714109, -3.6839895, -0.7695668, 5.71411, 8.31601, -0.7695668, -1.0358901, 9.31601, -0.7695668, -1.2858901, 9.31601, -0.7695668, -6.28589, 6.3160105, -0.7695668, -4.78589, 6.3160105, -0.7695668, 4.46411, 8.31601, -0.7695668, 4.46411, 5.5660105, -0.7695668, -5.53589, -3.4339895, -0.7695668, -0.2858901, -1.4339895, -0.7695668, -0.2858901, -1.4339895, -0.7695668, -1.2858901, -3.1839895, -0.7695668, -4.03589, -0.6839895, -0.7695668, -2.28589, 0.5660105, -0.7695668, -2.78589, 2.3160105, -0.7695668, -2.53589, 3.0660105, -0.7695668, -0.2858901, 4.8160105, -0.7695668, -0.035890102, 4.8160105, -0.7695668, -4.03589, 0.31601048, -0.5195668, -0.035890102, 1.0660105, -0.7695668, -0.035890102, 0.8160105, -0.7695668, -0.7858901, 0.31601048, -0.7695668, -0.7858901, 2.5660105, -0.7695668, -0.035890102, 2.5660105, -0.7695668, 1.2141099, -1.4339895, -0.7695668, 0.9641099, -3.1839895, -0.7695668, 3.71411, 0.8160105, -0.7695668, 2.21411, 4.8160105, -0.7695668, 3.71411, 1.5660105, -0.7695668, 2.21411, 4.8160105, -0.7695668, 5.96411, 8.31601, -0.7695668, 9.714109)
@@ -68,7 +68,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 66,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUADAAoAA8ADAApACgA"),
-"material": ExtResource("1_keue3"),
+"material": ExtResource("2_ohsvx"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 42,
@@ -79,7 +79,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAwABAAAAAQADAAQAAQAEAAUA"),
-"material": ExtResource("2_iy3yx"),
+"material": ExtResource("3_b72w1"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
@@ -90,7 +90,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 12,
 "index_data": PackedByteArray("AAABAAIAAQAAAAMAAwAAAAQAAQADAAUA"),
-"material": ExtResource("3_57pa4"),
+"material": ExtResource("4_26vda"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 6,
@@ -141,31 +141,31 @@ shadow_mesh = SubResource("ArrayMesh_7lp6r")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64xcy"]
 resource_name = "industrial_wall_lamp"
 cull_mode = 2
-albedo_texture = ExtResource("7_6wbrc")
-metallic_texture = ExtResource("9_yv4jn")
+albedo_texture = ExtResource("7_yqhp3")
+metallic_texture = ExtResource("9_b7w0d")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("9_yv4jn")
+roughness_texture = ExtResource("9_b7w0d")
 roughness_texture_channel = 1
 emission_enabled = true
 emission_energy_multiplier = 100.0
-emission_texture = ExtResource("8_q2nps")
+emission_texture = ExtResource("8_klnwk")
 normal_enabled = true
-normal_texture = ExtResource("10_b8xcb")
+normal_texture = ExtResource("10_bbiy7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohsvx"]
 resource_name = "industrial_wall_lamp_glass"
 transparency = 4
 cull_mode = 2
-albedo_texture = ExtResource("11_egjxc")
-metallic_texture = ExtResource("12_3x5tu")
+albedo_texture = ExtResource("11_rpsvq")
+metallic_texture = ExtResource("12_2tnba")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("12_3x5tu")
+roughness_texture = ExtResource("12_2tnba")
 roughness_texture_channel = 1
 emission_enabled = true
 emission = Color(0.176801, 0.264085, 0.325404, 1)
-emission_texture = ExtResource("11_egjxc")
+emission_texture = ExtResource("11_rpsvq")
 normal_enabled = true
-normal_texture = ExtResource("13_i76g7")
+normal_texture = ExtResource("13_f2c7q")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6n2r2"]
 _surfaces = [{
@@ -232,12 +232,13 @@ data = PackedVector3Array(-8.6605, -2.1155, -7.0076, 10.004, 5.1304, -7.0215, 10
 data = PackedVector3Array(-3.6854, -1, -5, 3.6969, 2, -5, -3.6854, 2, -5, -3.6854, -1, -5, 3.6969, -1, -5, 3.6969, 2, -5, -3.6854, 2, -5, -4.1885, -1, -4.9001, -3.6854, -1, -5, 4.1955, 2, -4.9008, 3.6969, 2, -5, 3.6969, -1, -5, -3.6854, 2, -5, -4.1885, 2, -4.9001, -4.1885, -1, -4.9001, -4.1885, 2, -4.9001, -4.615, -1, -4.615, -4.1885, -1, -4.9001, -4.1885, 2, -4.9001, -4.615, 2, -4.615, -4.615, -1, -4.615, 4.1955, 2, -4.9008, 3.6969, -1, -5, 4.1955, -1, -4.9008, 4.6182, 2, -4.6184, 4.1955, 2, -4.9008, 4.1955, -1, -4.9008, 4.6182, 2, -4.6184, 4.1955, -1, -4.9008, 4.6182, -1, -4.6184, -4.615, 2, -4.615, -4.9001, -1, -4.1885, -4.615, -1, -4.615, -4.615, 2, -4.615, -4.9001, 2, -4.1885, -4.9001, -1, -4.1885, -4.9001, 2, -4.1885, -5, -1, -3.6854, -4.9001, -1, -4.1885, -4.9001, 2, -4.1885, -5, 2, -3.6854, -5, -1, -3.6854, -5, -1, 3.6949, -5, -1, -3.6854, -5, 2, -3.6854, -5, -1, 3.6949, -5, 2, -3.6854, -5, 2, 3.6949, -4.9007, -1, 4.1943, -5, -1, 3.6949, -5, 2, 3.6949, -4.9007, -1, 4.1943, -5, 2, 3.6949, -4.9007, 2, 4.1943, -4.6179, -1, 4.6178, -4.9007, -1, 4.1943, -4.9007, 2, 4.1943, -4.6179, -1, 4.6178, -4.9007, 2, 4.1943, -4.6179, 2, 4.6178, 5, 2, -3.697, 4.9007, -1, -4.1957, 5, -1, -3.697, 5, 2, -3.697, 4.9007, 2, -4.1957, 4.9007, -1, -4.1957, 4.9007, 2, -4.1957, 4.6182, -1, -4.6184, 4.9007, -1, -4.1957, 4.9007, 2, -4.1957, 4.6182, 2, -4.6184, 4.6182, -1, -4.6184, 5, -1, -3.697, 5, 2, 3.6949, 5, 2, -3.697, 5, -1, -3.697, 5, -1, 3.6949, 5, 2, 3.6949, 4.9007, 2, 4.1943, 5, 2, 3.6949, 5, -1, 3.6949, 4.9007, 2, 4.1943, 5, -1, 3.6949, 4.9007, -1, 4.1943, 4.6178, 2, 4.6178, 4.9007, 2, 4.1943, 4.9007, -1, 4.1943, 4.6178, 2, 4.6178, 4.9007, -1, 4.1943, 4.6178, -1, 4.6178, -3.695, -1, 5, -4.1945, 2, 4.9007, -3.695, 2, 5, -3.695, -1, 5, -4.1945, -1, 4.9007, -4.1945, 2, 4.9007, -4.1945, -1, 4.9007, -4.6179, 2, 4.6178, -4.1945, 2, 4.9007, -4.1945, -1, 4.9007, -4.6179, -1, 4.6178, -4.6179, 2, 4.6178, 3.6949, 2, 5, 4.1943, -1, 4.9007, 3.6949, -1, 5, 3.6949, 2, 5, 4.1943, 2, 4.9007, 4.1943, -1, 4.9007, 4.1943, 2, 4.9007, 4.6178, -1, 4.6178, 4.1943, -1, 4.9007, 4.1943, 2, 4.9007, 4.6178, 2, 4.6178, 4.6178, -1, 4.6178, -3.6609, -1, -4.7513, 3.6723, 2, -4.7513, 3.6723, -1, -4.7513, 4.0999, 2, -4.6699, 3.6723, -1, -4.7513, 3.6723, 2, -4.7513, -3.6609, -1, -4.7513, -3.6609, 2, -4.7513, 3.6723, 2, -4.7513, 4.0999, 2, -4.6699, 4.0999, -1, -4.6699, 3.6723, -1, -4.7513, 4.4415, 2, -4.4417, 4.0999, -1, -4.6699, 4.0999, 2, -4.6699, 4.4415, 2, -4.4417, 4.4415, -1, -4.4417, 4.0999, -1, -4.6699, -3.6609, 2, -4.7513, -3.6609, -1, -4.7513, -4.0929, -1, -4.669, -3.6609, 2, -4.7513, -4.0929, -1, -4.669, -4.0929, 2, -4.669, -4.0929, 2, -4.669, -4.0929, -1, -4.669, -4.4383, -1, -4.4383, -4.0929, 2, -4.669, -4.4383, -1, -4.4383, -4.4383, 2, -4.4383, -4.4383, 2, -4.4383, -4.669, -1, -4.0929, -4.669, 2, -4.0929, -4.4383, 2, -4.4383, -4.4383, -1, -4.4383, -4.669, -1, -4.0929, -4.669, 2, -4.0929, -4.669, -1, -4.0929, -4.7513, -1, -3.6609, -4.669, 2, -4.0929, -4.7513, -1, -3.6609, -4.7513, 2, -3.6609, -4.7513, -1, 3.6705, -4.7513, 2, -3.6609, -4.7513, -1, -3.6609, -4.7513, -1, 3.6705, -4.7513, 2, 3.6705, -4.7513, 2, -3.6609, -4.6698, -1, 4.0987, -4.7513, 2, 3.6705, -4.7513, -1, 3.6705, -4.6698, -1, 4.0987, -4.6698, 2, 4.0987, -4.7513, 2, 3.6705, -4.4411, -1, 4.4409, -4.6698, 2, 4.0987, -4.6698, -1, 4.0987, -4.4411, -1, 4.4409, -4.4411, 2, 4.4409, -4.6698, 2, 4.0987, 4.7511, 2, -3.6725, 4.6698, -1, -4.1, 4.6698, 2, -4.1, 4.6698, 2, -4.1, 4.6698, -1, -4.1, 4.4415, -1, -4.4417, 4.6698, 2, -4.1, 4.4415, -1, -4.4417, 4.4415, 2, -4.4417, 4.7511, 2, -3.6725, 4.7511, -1, -3.6725, 4.6698, -1, -4.1, 4.7511, -1, -3.6725, 4.7511, 2, -3.6725, 4.7511, 2, 3.6705, 4.7511, -1, -3.6725, 4.7511, 2, 3.6705, 4.7511, -1, 3.6705, 4.6696, 2, 4.0987, 4.7511, -1, 3.6705, 4.7511, 2, 3.6705, 4.6696, 2, 4.0987, 4.6696, -1, 4.0987, 4.7511, -1, 3.6705, 4.4409, 2, 4.4409, 4.6696, -1, 4.0987, 4.6696, 2, 4.0987, 4.4409, 2, 4.4409, 4.4409, -1, 4.4409, 4.6696, -1, 4.0987, -3.6464, -1, 4.7548, -4.0988, 2, 4.6696, -4.0988, -1, 4.6696, -3.6464, -1, 4.7548, -3.6464, 2, 4.7548, -4.0988, 2, 4.6696, -4.0988, -1, 4.6696, -4.0988, 2, 4.6696, -4.4411, 2, 4.4409, -4.0988, -1, 4.6696, -4.4411, 2, 4.4409, -4.4411, -1, 4.4409, 3.6462, 2, 4.7548, 4.0987, -1, 4.6696, 4.0987, 2, 4.6696, 3.6462, 2, 4.7548, 3.6462, -1, 4.7548, 4.0987, -1, 4.6696, 4.0987, 2, 4.6696, 4.0987, -1, 4.6696, 4.4409, -1, 4.4409, 4.0987, 2, 4.6696, 4.4409, -1, 4.4409, 4.4409, 2, 4.4409, -3.6854, 2, -5, -4.0929, 2, -4.669, -4.1885, 2, -4.9001, -4.1885, 2, -4.9001, -4.0929, 2, -4.669, -4.4383, 2, -4.4383, -3.6854, 2, -5, -3.6609, 2, -4.7513, -4.0929, 2, -4.669, -4.1885, 2, -4.9001, -4.4383, 2, -4.4383, -4.615, 2, -4.615, 3.6969, 2, -5, -3.6609, 2, -4.7513, -3.6854, 2, -5, -4.615, 2, -4.615, -4.4383, 2, -4.4383, -4.669, 2, -4.0929, 3.6969, 2, -5, 3.6723, 2, -4.7513, -3.6609, 2, -4.7513, -4.615, 2, -4.615, -4.669, 2, -4.0929, -4.9001, 2, -4.1885, 4.1955, 2, -4.9008, 3.6723, 2, -4.7513, 3.6969, 2, -5, -4.9001, 2, -4.1885, -4.669, 2, -4.0929, -4.7513, 2, -3.6609, 4.1955, 2, -4.9008, 4.0999, 2, -4.6699, 3.6723, 2, -4.7513, -4.9001, 2, -4.1885, -4.7513, 2, -3.6609, -5, 2, -3.6854, 4.6182, 2, -4.6184, 4.0999, 2, -4.6699, 4.1955, 2, -4.9008, -5, 2, -3.6854, -4.7513, 2, -3.6609, -4.7513, 2, 3.6705, 4.6182, 2, -4.6184, 4.4415, 2, -4.4417, 4.0999, 2, -4.6699, -5, 2, -3.6854, -4.7513, 2, 3.6705, -5, 2, 3.6949, 4.9007, 2, -4.1957, 4.4415, 2, -4.4417, 4.6182, 2, -4.6184, -5, 2, 3.6949, -4.7513, 2, 3.6705, -4.6698, 2, 4.0987, 4.9007, 2, -4.1957, 4.6698, 2, -4.1, 4.4415, 2, -4.4417, -5, 2, 3.6949, -4.6698, 2, 4.0987, -4.9007, 2, 4.1943, 5, 2, -3.697, 4.6698, 2, -4.1, 4.9007, 2, -4.1957, -4.9007, 2, 4.1943, -4.6698, 2, 4.0987, -4.4411, 2, 4.4409, 5, 2, -3.697, 4.7511, 2, -3.6725, 4.6698, 2, -4.1, -4.9007, 2, 4.1943, -4.4411, 2, 4.4409, -4.6179, 2, 4.6178, 5, 2, 3.6949, 4.7511, 2, -3.6725, 5, 2, -3.697, -4.6179, 2, 4.6178, -4.4411, 2, 4.4409, -4.0988, 2, 4.6696, 5, 2, 3.6949, 4.7511, 2, 3.6705, 4.7511, 2, -3.6725, -4.6179, 2, 4.6178, -4.0988, 2, 4.6696, -4.1945, 2, 4.9007, -4.1945, 2, 4.9007, -4.0988, 2, 4.6696, -3.6464, 2, 4.7548, -4.1945, 2, 4.9007, -3.6464, 2, 4.7548, -3.695, 2, 5, 4.9007, 2, 4.1943, 4.7511, 2, 3.6705, 5, 2, 3.6949, 4.9007, 2, 4.1943, 4.6696, 2, 4.0987, 4.7511, 2, 3.6705, 4.6178, 2, 4.6178, 4.6696, 2, 4.0987, 4.9007, 2, 4.1943, 4.6178, 2, 4.6178, 4.4409, 2, 4.4409, 4.6696, 2, 4.0987, 4.1943, 2, 4.9007, 4.4409, 2, 4.4409, 4.6178, 2, 4.6178, 4.1943, 2, 4.9007, 4.0987, 2, 4.6696, 4.4409, 2, 4.4409, 3.6949, 2, 5, 4.0987, 2, 4.6696, 4.1943, 2, 4.9007, 3.6949, 2, 5, 3.6462, 2, 4.7548, 4.0987, 2, 4.6696, -4.1885, -1, -4.9001, -3.6609, -1, -4.7513, -3.6854, -1, -5, -3.6854, -1, -5, -3.6609, -1, -4.7513, 3.6723, -1, -4.7513, -4.1885, -1, -4.9001, -4.0929, -1, -4.669, -3.6609, -1, -4.7513, -3.6854, -1, -5, 3.6723, -1, -4.7513, 3.6969, -1, -5, -4.615, -1, -4.615, -4.0929, -1, -4.669, -4.1885, -1, -4.9001, 3.6969, -1, -5, 3.6723, -1, -4.7513, 4.0999, -1, -4.6699, -4.615, -1, -4.615, -4.4383, -1, -4.4383, -4.0929, -1, -4.669, 3.6969, -1, -5, 4.0999, -1, -4.6699, 4.1955, -1, -4.9008, -4.9001, -1, -4.1885, -4.4383, -1, -4.4383, -4.615, -1, -4.615, 4.1955, -1, -4.9008, 4.0999, -1, -4.6699, 4.4415, -1, -4.4417, -4.9001, -1, -4.1885, -4.669, -1, -4.0929, -4.4383, -1, -4.4383, 4.1955, -1, -4.9008, 4.4415, -1, -4.4417, 4.6182, -1, -4.6184, -5, -1, -3.6854, -4.669, -1, -4.0929, -4.9001, -1, -4.1885, 4.6182, -1, -4.6184, 4.4415, -1, -4.4417, 4.6698, -1, -4.1, -5, -1, -3.6854, -4.7513, -1, -3.6609, -4.669, -1, -4.0929, 4.6182, -1, -4.6184, 4.6698, -1, -4.1, 4.9007, -1, -4.1957, -5, -1, 3.6949, -4.7513, -1, -3.6609, -5, -1, -3.6854, 4.9007, -1, -4.1957, 4.6698, -1, -4.1, 4.7511, -1, -3.6725, -5, -1, 3.6949, -4.7513, -1, 3.6705, -4.7513, -1, -3.6609, 4.9007, -1, -4.1957, 4.7511, -1, -3.6725, 5, -1, -3.697, -4.9007, -1, 4.1943, -4.7513, -1, 3.6705, -5, -1, 3.6949, 5, -1, -3.697, 4.7511, -1, -3.6725, 4.7511, -1, 3.6705, -4.9007, -1, 4.1943, -4.6698, -1, 4.0987, -4.7513, -1, 3.6705, 5, -1, -3.697, 4.7511, -1, 3.6705, 5, -1, 3.6949, -4.6179, -1, 4.6178, -4.6698, -1, 4.0987, -4.9007, -1, 4.1943, 5, -1, 3.6949, 4.7511, -1, 3.6705, 4.6696, -1, 4.0987, -4.6179, -1, 4.6178, -4.4411, -1, 4.4409, -4.6698, -1, 4.0987, 5, -1, 3.6949, 4.6696, -1, 4.0987, 4.9007, -1, 4.1943, -4.1945, -1, 4.9007, -4.4411, -1, 4.4409, -4.6179, -1, 4.6178, 4.9007, -1, 4.1943, 4.6696, -1, 4.0987, 4.4409, -1, 4.4409, -4.1945, -1, 4.9007, -4.0988, -1, 4.6696, -4.4411, -1, 4.4409, -3.695, -1, 5, -4.0988, -1, 4.6696, -4.1945, -1, 4.9007, -3.695, -1, 5, -3.6464, -1, 4.7548, -4.0988, -1, 4.6696, 4.9007, -1, 4.1943, 4.4409, -1, 4.4409, 4.6178, -1, 4.6178, 4.6178, -1, 4.6178, 4.4409, -1, 4.4409, 4.0987, -1, 4.6696, 4.6178, -1, 4.6178, 4.0987, -1, 4.6696, 4.1943, -1, 4.9007, 4.1943, -1, 4.9007, 4.0987, -1, 4.6696, 3.6462, -1, 4.7548, 4.1943, -1, 4.9007, 3.6462, -1, 4.7548, 3.6949, -1, 5, -3.695, 2, 5, -3.6464, -1, 4.7548, -3.695, -1, 5, -3.695, 2, 5, -3.6464, 2, 4.7548, -3.6464, -1, 4.7548, 3.6949, -1, 5, 3.6462, 2, 4.7548, 3.6949, 2, 5, 3.6949, -1, 5, 3.6462, -1, 4.7548, 3.6462, 2, 4.7548)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57pa4"]
-albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_tpifn"]
 material = SubResource("StandardMaterial3D_57pa4")
 text = "162"
-font = ExtResource("5_tpifn")
+font = ExtResource("14_dra1o")
 font_size = 32
 depth = 0.01
 
@@ -247,141 +248,153 @@ size = Vector3(13.8098, 1, 14.902)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rvhuw"]
 size = Vector3(21.4137, 9.70383, 21.8945)
 
-[node name="cont1_162" type="StaticBody3D"]
+[node name="cont1_162" type="StaticBody3D" unique_id=869297290]
 script = ExtResource("1_i76g7")
 mesh_node_path = NodePath("NavigationRegion3D/RoomMesh")
 floor_material_index = 1
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1457416017]
 navigation_mesh = SubResource("NavigationMesh_6571d")
 
-[node name="RoomMesh" type="MeshInstance3D" parent="NavigationRegion3D"]
+[node name="RoomMesh" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=1192187084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_0rp3e")
 skeleton = NodePath("")
 
-[node name="Cube_001" type="MeshInstance3D" parent="NavigationRegion3D"]
+[node name="Cube_001" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=905273354]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.790538, -0.258573, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_rvhuw")
 skeleton = NodePath("")
 
-[node name="Scp162Prop" parent="NavigationRegion3D" instance=ExtResource("4_57pa4")]
+[node name="Scp162Prop" parent="NavigationRegion3D" unique_id=277280237 instance=ExtResource("5_tbpx5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.687075, 0.00440812, -0.330808)
 
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0101778, -0.798464, 0.424868)
-height = 8.0
-vertices = PackedVector3Array(-3.09982, 0, 4.99822, -3.09982, 0, 3.85083, 4.53033, 0, 3.85083, 4.53033, 0, 5.02691)
-affect_navigation_mesh = true
-avoidance_enabled = false
+[node name="Props" type="Node3D" parent="NavigationRegion3D" unique_id=721467713]
 
-[node name="Props" type="Node3D" parent="NavigationRegion3D"]
-
-[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("14_q2nps")]
+[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" unique_id=1921270845 instance=ExtResource("6_5wsgw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.44652, -1.26562, 4.47779)
 
-[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("14_q2nps")]
+[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" unique_id=696167219 instance=ExtResource("6_5wsgw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.44652, -1.26562, 0.661403)
 
-[node name="steel_frame_shelves_01_2k2" parent="NavigationRegion3D/Props" instance=ExtResource("14_q2nps")]
+[node name="steel_frame_shelves_01_2k2" parent="NavigationRegion3D/Props" unique_id=1551715430 instance=ExtResource("6_5wsgw")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.44652, -1.26562, 8.06145)
 
-[node name="industrial_wall_lamp" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.68399, 3.9233, 2.0687294)
+[node name="industrial_wall_lamp" type="Node3D" parent="NavigationRegion3D/Props" unique_id=172602387]
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.672005, 0.85047793, 7.6474166)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp"]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp" unique_id=1751499466]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_b72w1")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp4" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -8.74228e-08, 10.0334, 3.9233, -2.18558)
+[node name="industrial_wall_lamp2" type="Node3D" parent="NavigationRegion3D/Props" unique_id=672878023]
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.91069e-15, -8.672005, 0.85047793, -2.4029589)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp4"]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp2" unique_id=656790895]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_b72w1")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp5" type="Node3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, 0.35479, 3.9233, -7.03589)
+[node name="industrial_wall_lamp3" type="Node3D" parent="NavigationRegion3D/Props" unique_id=540486958]
+transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 10.023463, 5.930171, -2.4029586)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp5"]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp3" unique_id=2104934746]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_b72w1")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="industrial_wall_lamp4" type="Node3D" parent="NavigationRegion3D/Props" unique_id=1996261142]
+transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 10.023463, 5.930171, 7.647416)
+
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp4" unique_id=1049712318]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+visibility_range_end = 64.0
+mesh = SubResource("ArrayMesh_b72w1")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1404151983]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)
 shape = SubResource("ConcavePolygonShape3D_rvhuw")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=2081176916]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.790538, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_h7n5c")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1735597949]
 transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -8.64336, 5.78005, 6.28462)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_tpifn")
 
-[node name="Scp162Task" type="Area3D" parent="."]
+[node name="Scp162Task" type="Area3D" parent="." unique_id=1533904040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13218, 0, 0.754782)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("6_tpifn")
+script = ExtResource("15_10src")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp162Task"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp162Task" unique_id=1968066185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.233918, 0, 0.592071)
 shape = SubResource("BoxShape3D_0rp3e")
 
-[node name="Scp162OuterSpace" type="Area3D" parent="."]
+[node name="Scp162OuterSpace" type="Area3D" parent="." unique_id=225079004]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35474, 0, 0.917726)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp162OuterSpace"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp162OuterSpace" unique_id=1165993148]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.156433, 3.37117, 2.42578)
 shape = SubResource("BoxShape3D_rvhuw")
 
-[node name="DebugLights" type="Node3D" parent="."]
-
-[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7427692, 3.9232998, 2.0687294)
+[node name="DebugLights" type="Node3D" parent="." unique_id=1008010012]
 visible = false
-light_color = Color(0.722576, 0.893088, 0.996695, 1)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="DebugLights" unique_id=367661090]
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7307844, 0.8504775, 7.6474166)
+light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 18.9452
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(4.37114e-08, 8.74228e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -1, -8.74228e-08, 9.03342, 3.9233, -2.18558)
-visible = false
-light_color = Color(0.722576, 0.893088, 0.996695, 1)
+[node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights" unique_id=1598914467]
+transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7307844, 0.8504775, -2.4029589)
+light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
 omni_range = 18.9452
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights"]
-transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, 1, 0.35479, 3.9233, -6.03589)
-visible = false
-light_color = Color(0.722576, 0.893088, 0.996695, 1)
+[node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights" unique_id=559917035]
+transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 9.082243, 5.9301705, -2.4029586)
+light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
 omni_range = 18.9452
 
-[node name="LightmapGI" type="LightmapGI" parent="."]
+[node name="OmniLight3D6" type="OmniLight3D" parent="DebugLights" unique_id=978196144]
+transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 9.082243, 5.9301705, 7.647416)
+light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
+light_bake_mode = 1
+distance_fade_enabled = true
+distance_fade_begin = 24.0
+omni_range = 18.9452
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=33157257]
 quality = 0
 bounces = 1
 bounce_indirect_energy = 2.0
 directional = true
 interior = true
-texel_scale = 0.5
-light_data = ExtResource("7_0rp3e")
+texel_scale = 0.25
+light_data = ExtResource("16_pbojt")
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=1135281975 groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.29239, 3.31769, 1.47925)
 blend_distance = 0.4
 max_distance = 64.0
@@ -389,38 +402,38 @@ size = Vector3(19.9794, 9.26331, 17.0415)
 box_projection = true
 interior = true
 
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
+[node name="NavigationLink3D2" type="NavigationLink3D" parent="." unique_id=1667336850]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009, -0.766, 4.85147)
 navigation_layers = 2
 start_position = Vector3(0, 0, 1.128)
 end_position = Vector3(0, 0, -1.127)
 
-[node name="Waypoint" type="Marker3D" parent="." groups=["cont1_162"]]
+[node name="Waypoint" type="Marker3D" parent="." unique_id=954449421 groups=["cont1_162"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46704, 0, -0.773889)
 
-[node name="Seasonal" type="Node3D" parent="."]
+[node name="Seasonal" type="Node3D" parent="." unique_id=621694359]
 
-[node name="Halloween" type="Node3D" parent="Seasonal"]
+[node name="Halloween" type="Node3D" parent="Seasonal" unique_id=184363435]
 visible = false
-script = ExtResource("16_egjxc")
+script = ExtResource("17_hntjt")
 current_season = 6
 
-[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("17_3x5tu")]
+[node name="Pumpkin" parent="Seasonal/Halloween" unique_id=1981683482 instance=ExtResource("18_yf81g")]
 transform = Transform3D(1.299038, 0, -0.75, 0, 1.5, 0, 0.75, 0, 1.299038, -0.8826026, -1.2612566, 1.1413807)
 
-[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("17_3x5tu")]
+[node name="Pumpkin2" parent="Seasonal/Halloween" unique_id=489344527 instance=ExtResource("18_yf81g")]
 transform = Transform3D(1.2990382, 0, 0.7500001, 0, 1.5000002, 0, -0.7500001, 0, 1.2990382, 2.0438423, -1.2612566, 1.1413807)
 
-[node name="Christmas" type="Node3D" parent="Seasonal"]
+[node name="Christmas" type="Node3D" parent="Seasonal" unique_id=1871751000]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8323898, 9.217535)
 visible = false
-script = ExtResource("16_egjxc")
+script = ExtResource("17_hntjt")
 current_season = 5
 
-[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("18_3x5tu")]
+[node name="ChristmasLights" parent="Seasonal/Christmas" unique_id=1525205260 instance=ExtResource("19_hdfuf")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.38102385, -1.7638257, 0.8278222)
 
-[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
+[node name="ScientistPoint" type="Marker3D" parent="." unique_id=78440476 groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78577095, 9.286441)
 
 [connection signal="body_entered" from="Scp162Task" to="Scp162Task" method="_on_body_entered"]

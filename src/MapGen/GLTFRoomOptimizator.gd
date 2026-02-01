@@ -1,4 +1,3 @@
-@icon("res://MapGen/icons/GLTFRoomOptimizer.svg")
 extends Node3D
 class_name GLTFRoomOptimizator
 

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dlq8qkhn22fhr"]
+
+[ext_resource type="Script" uid="uid://cof8nhb21hnrt" path="res://Scripts/LoadingScreen.gd" id="1_m6rkq"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="1_xoop3"]
+[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="2_m6rkq"]
+
+[node name="LoadingScreen" type="Control" unique_id=385060537]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m6rkq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1046337003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1353240535]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.34600002
+anchor_right = 0.5
+anchor_bottom = 0.34600002
+offset_left = -192.0
+offset_top = 7.791992
+offset_right = 192.0
+offset_bottom = 72.79199
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_xoop3")
+theme_override_font_sizes/font_size = 64
+text = "LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=901688498]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.59300005
+anchor_right = 0.5
+anchor_bottom = 0.59300005
+offset_left = -192.0
+offset_top = -56.264038
+offset_right = 192.0
+offset_bottom = 135.73596
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_m6rkq")
+theme_override_font_sizes/font_size = 32
+text = "PLEASE_WAIT"
+horizontal_alignment = 1
+
+[node name="LoadProgress" type="ProgressBar" parent="." unique_id=1729280535]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.77400005
+anchor_right = 0.5
+anchor_bottom = 0.77400005
+offset_left = -192.0
+offset_top = -13.552032
+offset_right = 192.0
+offset_bottom = 13.447968
+grow_horizontal = 2
+grow_vertical = 2

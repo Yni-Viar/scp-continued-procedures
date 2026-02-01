@@ -3,7 +3,22 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.7.3 (2026.01.23)
+## v5.8.0 ("Carnivorous Carpet" update)
+### New SCP
+- [x] SCP-522
+- [ ] SCP-522: Task
+
+### New mechanics
+- [x] Replaced (fake) Loading screen with a proper one.
+
+### Lite version changes
+- [x] Reinstated SCP-162 to Lite version.
+- [x] Reduced visible range to 60.0 (from 64.0) and fog max distance to 56.0 (from 60.0), reducing lag on Web platform.
+
+### Misc changes
+- [x] Upgraded to Godot 4.6 + added SSAO setting.
+
+## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
 
 - \[Emergency fix\] Fix map generator unable to generate random layouts - updated to v11.3.3
 
