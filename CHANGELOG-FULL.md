@@ -5,8 +5,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.8.0 ("Carnivorous Carpet" update)
 ### New SCP
-- [x] SCP-522
-- [ ] SCP-522: Task
+- [x] SCP-522 + task
 
 ### New mechanics
 - [x] Replaced (fake) Loading screen with a proper one.
@@ -17,6 +16,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ### Misc changes
 - [x] Upgraded to Godot 4.6 + added SSAO setting.
+- [x] Fixed Web platform not using "Lowest" setting preset
 
 ## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
 

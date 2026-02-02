@@ -254,3 +254,6 @@ msgstr ""
 
 msgid "LITE_VERSION_WARNING"
 msgstr ""
+
+msgid "TASK_522_BODY"
+msgstr ""

@@ -2,7 +2,7 @@
 
 ## Requirements to build
 
-The project uses Godot 4.5.2 as a base.
+The project uses Godot 4.6 as a base.
 
 ### Building regular version
 

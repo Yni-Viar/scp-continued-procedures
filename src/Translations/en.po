@@ -326,3 +326,6 @@ msgstr ""
 
 msgid "LITE_VERSION_WARNING"
 msgstr "Lite/Demo version. Please, download full game for accessing more content"
+
+msgid "TASK_522_BODY"
+msgstr "Order Class-D to step on SCP-522."
