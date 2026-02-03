@@ -42,10 +42,7 @@
 [ext_resource type="Resource" uid="uid://gu8sp1ix4rd0" path="res://Scripts/TaskSystem/Tasks/Scp266Task.tres" id="42_frlxj"]
 [ext_resource type="Resource" uid="uid://uv6b74j6cpsr" path="res://Scripts/TaskSystem/Tasks/Scp812Task.tres" id="43_4lqm6"]
 [ext_resource type="Resource" uid="uid://bl0x4f4crcrxt" path="res://Scripts/TaskSystem/Tasks/Scp347Task.tres" id="44_xn0j0"]
-[ext_resource type="Resource" uid="uid://cx4c0e4se1waa" path="res://Scripts/TaskSystem/Tasks/Scp914Exp1.tres" id="45_nife7"]
-[ext_resource type="Resource" uid="uid://duje4a25hopru" path="res://Scripts/TaskSystem/Tasks/Scp914Exp2.tres" id="46_xfpd2"]
-[ext_resource type="Resource" uid="uid://c5u6uapjsmd6e" path="res://Scripts/TaskSystem/Tasks/Scp914Exp3.tres" id="47_1i022"]
-[ext_resource type="Resource" uid="uid://d1el55bndmsin" path="res://Scripts/TaskSystem/Tasks/Scp914Exp4.tres" id="48_2kkdo"]
+[ext_resource type="Resource" uid="uid://do5omahxr33bm" path="res://Scripts/TaskSystem/Tasks/Scp914Task.tres" id="45_md4vs"]
 [ext_resource type="Resource" uid="uid://bb74t7caf7imp" path="res://Scripts/TaskSystem/Tasks/Scp522Task.tres" id="48_8xrgr"]
 [ext_resource type="Resource" uid="uid://cdlwr1y5gkw5" path="res://Scripts/TaskSystem/Tasks/Scp173Task.tres" id="49_6v7pd"]
 [ext_resource type="Resource" uid="uid://kt10qm1d2rht" path="res://PlayerScript/PlayerClassResources/MtfNtf.tres" id="51_epo78"]
@@ -56,7 +53,7 @@
 script = ExtResource("31_83647")
 player_class = Array[ExtResource("17_wsa7g")]([ExtResource("18_ekw8c")])
 puppet_classes = Array[ExtResource("17_wsa7g")]([ExtResource("19_lbwi6"), ExtResource("20_4kh50"), ExtResource("20_vw3w0"), ExtResource("22_mo866"), ExtResource("23_fwmua"), ExtResource("24_6xl8l"), ExtResource("25_nu8hi"), ExtResource("26_68ufo"), ExtResource("27_664pd"), ExtResource("28_g8hwl"), ExtResource("29_eg4uf"), ExtResource("30_16ex4")])
-tasks = Array[ExtResource("38_3xmvy")]([ExtResource("40_87n82"), ExtResource("39_dflbg"), ExtResource("42_frlxj"), ExtResource("43_4lqm6"), ExtResource("44_xn0j0"), ExtResource("45_nife7"), ExtResource("46_xfpd2"), ExtResource("47_1i022"), ExtResource("48_2kkdo"), ExtResource("49_6v7pd"), ExtResource("48_8xrgr")])
+tasks = Array[ExtResource("38_3xmvy")]([ExtResource("40_87n82"), ExtResource("39_dflbg"), ExtResource("42_frlxj"), ExtResource("43_4lqm6"), ExtResource("44_xn0j0"), ExtResource("49_6v7pd"), ExtResource("48_8xrgr"), ExtResource("45_md4vs")])
 items = Array[ExtResource("2_hd4oy")]([ExtResource("3_ty3px"), ExtResource("4_2wd2w"), ExtResource("5_3hq41"), ExtResource("6_qpkht"), ExtResource("7_3t8y6"), ExtResource("8_jsita"), ExtResource("9_8wseb"), ExtResource("10_ckcpx"), ExtResource("11_3yr73"), ExtResource("12_kolsf"), ExtResource("13_j6ft1"), ExtResource("14_qvie4"), ExtResource("15_s4i38"), ExtResource("16_h7qmj")])
 wave_puppet_classes = Array[ExtResource("17_wsa7g")]([ExtResource("51_epo78"), ExtResource("52_8g85e"), ExtResource("53_bo7tv")])
 status_effects = Dictionary[String, ExtResource("32_12mq7")]({

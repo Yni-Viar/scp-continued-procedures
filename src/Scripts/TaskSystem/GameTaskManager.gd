@@ -30,7 +30,11 @@ func initialize() -> void:
 			if get_parent().gamedata.tasks.size() == used_index.size():
 				return
 		used_index.append(task_index)
-		all_tasks.append(get_parent().gamedata.tasks[task_index])
+		if get_parent().gamedata.tasks[task_index].sub_tasks != null && !get_parent().gamedata.tasks[task_index].sub_tasks.is_empty():
+			var sub_task_index: int = get_parent().rng.randi_range(0, get_parent().gamedata.tasks[task_index].sub_tasks.size() - 1)
+			all_tasks.append(get_parent().gamedata.tasks[task_index].sub_tasks[sub_task_index])
+		else:
+			all_tasks.append(get_parent().gamedata.tasks[task_index])
 
 
 func do_task(task_name: String):

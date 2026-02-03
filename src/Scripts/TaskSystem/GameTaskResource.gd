@@ -6,3 +6,4 @@ class_name GameTaskResource
 @export var public_name: String = ""
 @export var required_group: StringName = ""
 @export var required_groups: Array[String] = []
+@export var sub_tasks: Array[GameTaskResource] = []

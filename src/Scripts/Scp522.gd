@@ -48,16 +48,17 @@ func _physics_process(delta: float) -> void:
 			if body_to_process is MovableNpc:
 				if int(timer) % 8 == 0:
 					body_to_process.health_manage(-10.0)
-		elif timer > 10.0:
+		elif timer > 10.0 || body_to_process == null:
 			finished.emit(body_inside)
 			state = Scp522State.DORMANT
 			timer = 0.0
 
 func _on_scp_522_trigger_body_entered(body: Node3D) -> void:
-	state = Scp522State.ACTIVE
-	body_to_process = body
-	if body is MovableNpc:
-		body_inside = [body.fraction, body.puppet_class.team]
-		body.movement_freeze = true
-	else:
-		body_inside = [-1, -1]
+	if state != Scp522State.ACTIVE:
+		state = Scp522State.ACTIVE
+		body_to_process = body
+		if body is MovableNpc:
+			body_inside = [body.fraction, body.puppet_class.team]
+			body.movement_freeze = true
+		else:
+			body_inside = [-1, -1]

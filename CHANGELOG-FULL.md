@@ -17,6 +17,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### Misc changes
 - [x] Upgraded to Godot 4.6 + added SSAO setting.
 - [x] Fixed Web platform not using "Lowest" setting preset
+- [x] Now all SCP-914 tasks are treated as one (no more annoying 914-only rounds)
 
 ## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
 
