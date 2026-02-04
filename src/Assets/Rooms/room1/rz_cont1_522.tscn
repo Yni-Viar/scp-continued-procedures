@@ -377,8 +377,7 @@ environment_custom_color = Color(0, 0, 0, 1)
 light_data = ExtResource("16_e84cl")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=672467434 groups=["ReflectionProbe"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24292111, 3.3193939, -0.6913944)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7626736, 2.5397613, 0.26148897)
 blend_distance = 0.4
 max_distance = 64.0
 size = Vector3(18.526114, 9.157348, 19.644299)
