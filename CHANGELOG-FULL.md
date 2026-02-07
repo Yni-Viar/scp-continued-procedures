@@ -22,6 +22,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Now all SCP-914 tasks are treated as one (no more annoying 914-only rounds)
 - SCP-266 fire is now (partly) computed on GPU.
 - Partially fixed fall-out-from-elevator bug.
+- Returned back on-screen buttons for non-touchscreen platforms.
 
 ## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
 
