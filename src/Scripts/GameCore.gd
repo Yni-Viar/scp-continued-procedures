@@ -38,12 +38,12 @@ func _ready() -> void:
 	if time_limited && !Settings.setting_res.zen_mode:
 		$GameOverTimer.start()
 	if OS.has_feature("Lite"):
-		gamedata = load("res://Scripts/GameData/LiteGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZoneLite.tres"), load("res://MapGen/ResearchZoneLite.tres")]
+		gamedata = load("res://Scripts/GameData/Lite/LiteGame.tres")
+		var rooms: Array[MapGenZone] = [load("res://MapGen/Lite/MaintenanceZoneLite.tres"), load("res://MapGen/Lite/ResearchZoneLite.tres")]
 		$FacilityGenerator.rooms = rooms
 	else:
 		gamedata = load("res://Scripts/GameData/Optional/DefaultGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/MaintenanceZone.tres"), load("res://MapGen/ResearchZone.tres")]
+		var rooms: Array[MapGenZone] = [load("res://MapGen/Optional/MaintenanceZone.tres"), load("res://MapGen/Optional/ResearchZone.tres")]
 		$FacilityGenerator.rooms = rooms
 	# Choose seed
 	$FacilityGenerator.rng = rng
@@ -55,6 +55,7 @@ func _ready() -> void:
 	# Apply settings
 	# Enable or disable glow
 	$WorldEnvironment.environment.glow_enabled = Settings.setting_res.glow
+	$WorldEnvironment.environment.ssao_enabled = Settings.setting_res.ssao
 	## Enable/disable reflection probes (cubemap)
 	for node in get_tree().get_nodes_in_group("ReflectionProbe"):
 		if node is ReflectionProbe:
@@ -106,6 +107,7 @@ func _on_facility_generator_generated() -> void:
 	if ci_probability < 0:
 		ci_probability = rng.randi_range(0, 1)
 	ci_ready = true
+	$LoadingScreen.call_deferred("hide")
 
 func spawn_player():
 	# Player and allies
@@ -148,9 +150,10 @@ func spawn_wave_entity(wave_type: int):
 			how_much_spawn = 1
 	var spawn = get_tree().get_first_node_in_group("WaveSpawn")
 	if spawn != null:
-		for i in range(how_much_spawn):
-			var vfxspawn = load("res://Assets/VFX/spawnvfx.tscn").instantiate()
-			spawn.get_child(i).add_child(vfxspawn)
+		if OS.get_name() != "Web":
+			for i in range(how_much_spawn):
+				var vfxspawn = load("res://Assets/VFX/spawnvfx.tscn").instantiate()
+				spawn.get_child(i).add_child(vfxspawn)
 		await get_tree().create_timer(1.0).timeout
 		for i in range(how_much_spawn):
 			var wavenpc: MovableNpc = load("res://PlayerScript/NPCBase.tscn").instantiate()

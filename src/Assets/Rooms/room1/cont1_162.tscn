@@ -355,6 +355,7 @@ visible = false
 
 [node name="OmniLight3D" type="OmniLight3D" parent="DebugLights" unique_id=367661090]
 transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7307844, 0.8504775, 7.6474166)
+visible = false
 light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -363,6 +364,7 @@ omni_range = 18.9452
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="DebugLights" unique_id=1598914467]
 transform = Transform3D(-4.37114e-08, 0, 1, 1, -4.37114e-08, 4.37114e-08, 4.37114e-08, 1, 1.9106863e-15, -7.7307844, 0.8504775, -2.4029589)
+visible = false
 light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -371,6 +373,7 @@ omni_range = 18.9452
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="DebugLights" unique_id=559917035]
 transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 9.082243, 5.9301705, -2.4029586)
+visible = false
 light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -379,6 +382,7 @@ omni_range = 18.9452
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="DebugLights" unique_id=978196144]
 transform = Transform3D(4.3711402e-08, 8.742278e-08, -1, 1, -4.37114e-08, 4.37114e-08, -4.3711395e-08, -1, -8.742278e-08, 9.082243, 5.9301705, 7.647416)
+visible = false
 light_color = Color(0.30048493, 0.6128293, 0.8027924, 1)
 light_bake_mode = 1
 distance_fade_enabled = true

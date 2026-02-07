@@ -5,19 +5,23 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v5.8.0 ("Carnivorous Carpet" update)
 ### New SCP
-- [x] SCP-522 + task
+- SCP-522 + task
 
 ### New mechanics
-- [x] Replaced (fake) Loading screen with a proper one.
+- Replaced (fake) Loading screen with a proper one.
 
 ### Lite version changes
-- [x] Reinstated SCP-162 to Lite version.
-- [x] Reduced visible range to 60.0 (from 64.0) and fog max distance to 56.0 (from 60.0), reducing lag on Web platform.
+- Reinstated SCP-162 and SCP-939 to Lite version.
+- Reduced visible range to 60.0 (from 64.0) and fog max distance to 56.0 (from 60.0), reducing lag on Web platform.
+- Removed SCP-266 and SCP-914 in Lite version (Lag issue)
 
 ### Misc changes
-- [x] Upgraded to Godot 4.6 + added SSAO setting.
-- [x] Fixed Web platform not using "Lowest" setting preset
-- [x] Now all SCP-914 tasks are treated as one (no more annoying 914-only rounds)
+- Optimized game even more!
+- Upgraded to Godot 4.6 + added SSAO setting.
+- Fixed Web platform not using "Lowest" setting preset
+- Now all SCP-914 tasks are treated as one (no more annoying 914-only rounds)
+- SCP-266 fire is now (partly) computed on GPU.
+- Partially fixed fall-out-from-elevator bug.
 
 ## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
 

@@ -39,11 +39,13 @@ var pass_floor: bool = false
 #var default_rotation: Vector3
 ## For checking difference between rotation
 var rotator: Vector3
+var temp_position: Vector3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	global_rotation = get_node(floors[current_floor].destination_point).global_rotation
 	rotator = global_rotation
+	temp_position = global_position
 	if !is_moving:
 		if !elevator_doors.is_empty():
 			get_tree().root.get_node(elevator_doors[current_floor]).door_open()
@@ -69,7 +71,10 @@ func _physics_process(delta):
 			for i in range(objects_to_teleport.size()):
 				var node: Node3D = get_node(objects_to_teleport[i])
 				node.global_rotation = node.global_rotation + (global_rotation - rotator)
-				rotator = global_rotation
+				if node is MovableNpc:
+					node.global_position = node.global_position + (global_position - temp_position)
+			temp_position = global_position
+			rotator = global_rotation
 			# remember, floating numbers needs IsEqualApprox, Yni!
 			if global_position.is_equal_approx(waypoints[counter][0]):
 				if (counter < waypoints.size() - 1):
@@ -153,6 +158,7 @@ func elevator_move(p_pass_floor: bool, first : bool):
 				waypoints.append([get_node(floors[floor].down_helper_point).global_position, get_node(floors[floor].down_helper_point).global_rotation])
 			waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
 		else:
+			is_moving = true
 			global_position = get_node(floors[floor].down_helper_point).global_position
 			global_rotation = get_node(floors[floor].down_helper_point).global_rotation
 			for node_path in objects_to_teleport:
@@ -183,6 +189,7 @@ func elevator_move(p_pass_floor: bool, first : bool):
 				waypoints.append([get_node(floors[floor].up_helper_point).global_position, get_node(floors[floor].up_helper_point).global_rotation])
 			waypoints.append([get_node(floors[floor].destination_point).global_position, get_node(floors[floor].destination_point).global_rotation])
 		else:
+			is_moving = true
 			global_position = get_node(floors[floor].up_helper_point).global_position
 			global_rotation = get_node(floors[floor].up_helper_point).global_rotation
 			for node_path in objects_to_teleport:

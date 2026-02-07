@@ -246,6 +246,7 @@ skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Props/industrial_wall_lamp5" unique_id=281858345]
 transform = Transform3D(1, 0, 8.35187e-23, 0, 1, 0, 8.35187e-23, 0, 1, 0, 0, 1)
+visible = false
 light_color = Color(0.860723, 0.455807, 0.319584, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -257,6 +258,7 @@ transform = Transform3D(-4.37114e-08, -1.74846e-07, -1, 1, -4.37114e-08, -4.3711
 
 [node name="OmniLight3D" type="OmniLight3D" parent="NavigationRegion3D/Props/industrial_wall_lamp6" unique_id=1724937895]
 transform = Transform3D(1, 0, 8.35187e-23, 0, 1, 0, 8.35187e-23, 0, 1, 0, 0, 1)
+visible = false
 light_color = Color(0.860723, 0.455807, 0.319584, 1)
 light_bake_mode = 1
 distance_fade_enabled = true

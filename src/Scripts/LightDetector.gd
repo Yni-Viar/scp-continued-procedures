@@ -5,11 +5,11 @@ var time_to_update: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	enabled = !Settings.setting_res.reflection_probe
-	
-	if !enabled:
+	if Settings.setting_res.reflection_probe:
 		$LightDetector.current = false
 		set_process(false)
+	else:
+		enabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

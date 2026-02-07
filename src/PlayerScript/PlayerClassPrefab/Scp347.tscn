@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://cskradjeycmsa"]
+[gd_scene format=4 uid="uid://cskradjeycmsa"]
 
 [ext_resource type="Script" uid="uid://cl0nqk4wfplo" path="res://PlayerScript/PlayerClassScript/Scp347PuppetScript.gd" id="1_setat"]
 [ext_resource type="Material" uid="uid://doborvycad2fa" path="res://Assets/Materials/Classes/Regular/Scp347_scan_shader.tres" id="2_setat"]
@@ -3816,7 +3816,7 @@ nodes/walk_anim/node = SubResource("AnimationNodeAnimation_let05")
 nodes/walk_anim/position = Vector2(-780, 120)
 node_connections = [&"output", 0, &"items_blend", &"items_blend", 0, &"state_machine", &"items_blend", 1, &"secondary_state", &"secondary_state", 0, &"Animation", &"state_machine", 0, &"idle", &"state_machine", 1, &"walk_anim", &"state_machine", 2, &"run_anim"]
 
-[node name="Puppet" type="Node3D"]
+[node name="Puppet" type="Node3D" unique_id=1032609548]
 script = ExtResource("1_setat")
 resistance_scp178 = true
 resistance_scp686 = true
@@ -3824,10 +3824,10 @@ armature_name = "Woman_body_rig"
 enable_vision_scan = true
 vision_class_detect = Array[int]([2, 3])
 
-[node name="Woman_body_rig" type="Node3D" parent="."]
-transform = Transform3D(-1.5, 0, -2.2649371e-07, 0, 1.5, 0, 2.2649371e-07, 0, -1.5, 0, 0, 0)
+[node name="Woman_body_rig" type="Node3D" parent="." unique_id=170338335]
+transform = Transform3D(-1.375, 0, -2.0761922e-07, 0, 1.375, 0, 2.0761922e-07, 0, -1.375, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Woman_body_rig"]
+[node name="Skeleton3D" type="Skeleton3D" parent="Woman_body_rig" unique_id=1335788732]
 bones/0/name = "mixamorig_Hips"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.998899, -0.0339657, 0.0323567, 0.0328424, 0.99886, 0.0346355, -0.0334962, -0.0335347, 0.998876, 0.00413392, 0.861224, 0.0250593)
@@ -4284,32 +4284,32 @@ bones/64/position = Vector3(4.47035e-08, 0.0326332, 5.21541e-08)
 bones/64/rotation = Quaternion(1.82074e-06, 2.52388e-06, 4.65661e-08, 1)
 bones/64/scale = Vector3(1, 1, 1)
 
-[node name="Woman_body" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="Woman_body" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D" unique_id=1656041355]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_mpee2")
 skin = SubResource("Skin_7cndc")
 
-[node name="Woman_cortu_t-bar" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="Woman_cortu_t-bar" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D" unique_id=1512047495]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_gnx7y")
 skin = SubResource("Skin_7cndc")
 
-[node name="Woman_female_casualsuit01" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="Woman_female_casualsuit01" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D" unique_id=1539292570]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_nusxj")
 skin = SubResource("Skin_7cndc")
 
-[node name="Woman_low-poly" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="Woman_low-poly" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D" unique_id=1936839668]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_sx0a0")
 skin = SubResource("Skin_7cndc")
 
-[node name="Woman_short03" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="Woman_short03" type="MeshInstance3D" parent="Woman_body_rig/Skeleton3D" unique_id=1268896788]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_pi71h")
 skin = SubResource("Skin_7cndc")
 
-[node name="LookAtModifier3D" type="LookAtModifier3D" parent="Woman_body_rig/Skeleton3D"]
+[node name="LookAtModifier3D" type="LookAtModifier3D" parent="Woman_body_rig/Skeleton3D" unique_id=384263538]
 transform = Transform3D(-0.5, 0, 7.5498e-08, 0, 0.5, 0, -7.5498e-08, 0, -0.5, 0, 0, 0)
 bone_name = "mixamorig_Head"
 bone = 39
@@ -4320,12 +4320,10 @@ primary_damp_threshold = 1.0
 secondary_limit_angle = 6.28319
 secondary_damp_threshold = 1.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ltpqf")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=639033784]
+libraries/ = SubResource("AnimationLibrary_ltpqf")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=334074341]
 active = false
 tree_root = SubResource("AnimationNodeBlendTree_setat")
 anim_player = NodePath("../AnimationPlayer")

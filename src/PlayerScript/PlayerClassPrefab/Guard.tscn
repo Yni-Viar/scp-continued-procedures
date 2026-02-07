@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=4 uid="uid://cqc1hcylhqdxi"]
+[gd_scene format=4 uid="uid://cqc1hcylhqdxi"]
 
 [ext_resource type="Script" uid="uid://5x5lp57ou4s8" path="res://PlayerScript/PlayerClassScript/HumanPuppetScript.gd" id="1_ukr27"]
 [ext_resource type="Texture2D" uid="uid://b8y4n5er4bqsw" path="res://Assets/ExternalModels/SCP/Guard-fixed/Belt_guard_AlbedoTransparency_png.png" id="2_atcqh"]
@@ -396,7 +396,9 @@ blend_shape_mode = 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t35xb"]
 resource_name = "Hair"
-transparency = 4
+transparency = 2
+alpha_scissor_threshold = 0.188
+alpha_antialiasing_mode = 0
 cull_mode = 2
 albedo_texture = ExtResource("6_vakjx")
 roughness = 0.555978
@@ -954,7 +956,7 @@ nodes/mtf_rifle/node = SubResource("AnimationNodeAnimation_rpp6h")
 nodes/mtf_rifle/position = Vector2(40, 1380)
 node_connections = [&"output", 0, &"items_blend", &"items_blend", 0, &"state_machine", &"items_blend", 1, &"secondary_state", &"secondary_state", 0, &"item_anim", &"secondary_state", 1, &"cuffed_anim", &"secondary_state", 2, &"jailbird_attack_anim", &"secondary_state", 3, &"interact", &"secondary_state", 4, &"ci_rifle", &"secondary_state", 5, &"Animation", &"secondary_state", 6, &"mtf_rifle", &"state_machine", 0, &"idle", &"state_machine", 1, &"walk_anim", &"state_machine", 2, &"run_anim"]
 
-[node name="Puppet" type="Node3D"]
+[node name="Puppet" type="Node3D" unique_id=1027475192]
 script = ExtResource("1_ukr27")
 torso_node_path = NodePath("HumanRig/Skeleton3D/vest")
 enable_vision_scan = true
@@ -967,10 +969,10 @@ halloween_suits = Dictionary[NodePath, Array]({
 NodePath("HumanRig/Skeleton3D/torso"): [[0, ExtResource("3_h8cpd")]]
 })
 
-[node name="HumanRig" type="Node3D" parent="."]
+[node name="HumanRig" type="Node3D" parent="." unique_id=1014395994]
 transform = Transform3D(-0.625, 0, -9.4372375e-08, 0, 0.625, 0, 9.4372375e-08, 0, -0.625, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="HumanRig"]
+[node name="Skeleton3D" type="Skeleton3D" parent="HumanRig" unique_id=1488159245]
 bones/0/name = "IKswitch.R"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58936, 2.56086, -0.62031)
@@ -1651,37 +1653,37 @@ bones/96/position = Vector3(1.5197, 1.00691, -0.62031)
 bones/96/rotation = Quaternion(-2.98023e-08, 5.96046e-08, 0, 1)
 bones/96/scale = Vector3(1, 1, 1)
 
-[node name="Belt" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="Belt" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1639836742]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_tc77b")
 skin = SubResource("Skin_oxd73")
 
-[node name="Eye_L_LOD0_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="Eye_L_LOD0_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=695318008]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_4agjn")
 skin = SubResource("Skin_oxd73")
 
-[node name="Eye_R_LOD0_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="Eye_R_LOD0_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1111168171]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ooi85")
 skin = SubResource("Skin_oxd73")
 
-[node name="front" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="front" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1023762852]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_dl0xo")
 skin = SubResource("Skin_oxd73")
 
-[node name="hand_L" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="hand_L" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1695651908]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ymw6t")
 skin = SubResource("Skin_oxd73")
 
-[node name="hand_R" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="hand_R" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1181823820]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_8pbaw")
 skin = SubResource("Skin_oxd73")
 
-[node name="Head_001" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="Head_001" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1966393754]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_t1kea")
 skin = SubResource("Skin_oxd73")
@@ -1698,80 +1700,80 @@ blend_shapes/lips_stretch_bottom = 0.0
 blend_shapes/shrek = 0.0
 blend_shapes/chad = 0.0
 
-[node name="holster" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="holster" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=269122088]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ixou0")
 skin = SubResource("Skin_oxd73")
 
-[node name="Pockets" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="Pockets" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1848291938]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_t7fqt")
 skin = SubResource("Skin_oxd73")
 
-[node name="pouchLong" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="pouchLong" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=819648231]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_4nhlk")
 skin = SubResource("Skin_oxd73")
 
-[node name="pouchMedium" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="pouchMedium" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=134996516]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ocpfi")
 skin = SubResource("Skin_oxd73")
 
-[node name="pouchMP7" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="pouchMP7" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=916166881]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_utg3k")
 skin = SubResource("Skin_oxd73")
 
-[node name="pouchSmall1" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="pouchSmall1" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1156133605]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_ct8af")
 skin = SubResource("Skin_oxd73")
 
-[node name="pouchSmall2" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="pouchSmall2" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=249706155]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_tw8co")
 skin = SubResource("Skin_oxd73")
 
-[node name="shoes" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="shoes" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=487685735]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_rcu8i")
 skin = SubResource("Skin_oxd73")
 
-[node name="short" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="short" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=1364977080]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_i7exm")
 skin = SubResource("Skin_oxd73")
 
-[node name="short_001" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="short_001" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=413638930]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_lqjhw")
 skin = SubResource("Skin_oxd73")
 
-[node name="short_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="short_002" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=885777455]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_3u061")
 skin = SubResource("Skin_oxd73")
 
-[node name="torso" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="torso" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=177973895]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_we4cp")
 skin = SubResource("Skin_oxd73")
 
-[node name="vest" type="MeshInstance3D" parent="HumanRig/Skeleton3D"]
+[node name="vest" type="MeshInstance3D" parent="HumanRig/Skeleton3D" unique_id=814932429]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_glcvw")
 skin = SubResource("Skin_oxd73")
 
-[node name="ItemAttachment" type="BoneAttachment3D" parent="HumanRig/Skeleton3D"]
+[node name="ItemAttachment" type="BoneAttachment3D" parent="HumanRig/Skeleton3D" unique_id=1556210626]
 transform = Transform3D(0.86526084, -0.31167507, -0.39266092, -0.36629242, -0.9278096, -0.070705846, -0.34227732, 0.2050077, -0.9169614, -0.47578877, 1.5778799, -0.013332814)
 bone_name = "Hand.R"
 bone_idx = 48
 
-[node name="Marker3D" type="Marker3D" parent="HumanRig/Skeleton3D/ItemAttachment"]
+[node name="Marker3D" type="Marker3D" parent="HumanRig/Skeleton3D/ItemAttachment" unique_id=2025256787]
 transform = Transform3D(1, 6.70552e-08, -2.98023e-08, 1.49012e-08, 1, -1.49012e-08, 0, 0, 1, 0.063823, 0.15348, 0.0182759)
 
-[node name="LookAtModifier3D" type="LookAtModifier3D" parent="HumanRig/Skeleton3D"]
+[node name="LookAtModifier3D" type="LookAtModifier3D" parent="HumanRig/Skeleton3D" unique_id=1449731982]
 bone_name = "Head"
 bone = 20
 use_angle_limitation = true
@@ -1781,19 +1783,17 @@ primary_damp_threshold = 1.0
 secondary_limit_angle = 6.28319
 secondary_damp_threshold = 1.0
 
-[node name="HeadAttachment" type="BoneAttachment3D" parent="HumanRig/Skeleton3D"]
+[node name="HeadAttachment" type="BoneAttachment3D" parent="HumanRig/Skeleton3D" unique_id=1942552787]
 transform = Transform3D(1.0000002, 1.2479722e-07, 8.046627e-07, -1.8626451e-08, 0.990767, -0.13557665, -7.748604e-07, 0.13557668, 0.990767, 0.01729817, 2.7280166, 0.097111076)
 bone_name = "Head"
 bone_idx = 20
 
-[node name="Marker3D" type="Marker3D" parent="HumanRig/Skeleton3D/HeadAttachment"]
+[node name="Marker3D" type="Marker3D" parent="HumanRig/Skeleton3D/HeadAttachment" unique_id=1870008778]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": ExtResource("30_h8cpd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1545928133]
+libraries/ = ExtResource("30_h8cpd")
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1557312224]
 active = false
 tree_root = SubResource("AnimationNodeBlendTree_h8cpd")
 anim_player = NodePath("../AnimationPlayer")

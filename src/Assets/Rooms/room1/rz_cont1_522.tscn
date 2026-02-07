@@ -23,8 +23,8 @@
 [ext_resource type="Script" uid="uid://d4gmitkq2q5b2" path="res://Scripts/Triggers/Scp522TaskTrigger.gd" id="21_e84cl"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_me810"]
-vertices = PackedVector3Array(-0.919507, -1.6071994, -0.75161934, -0.669507, -1.6071994, -4.7516193, -0.669507, -1.6071994, -8.751619, -7.919507, -1.6071994, -8.751619, -7.919507, -1.6071994, -0.75161934, 1.080493, -1.6071994, -8.751619, 1.080493, -1.6071994, -0.75161934, 9.330493, -1.6071994, -0.75161934, 9.330493, -1.6071994, -8.751619, -7.919507, -1.6071994, 0.99838066, -7.919507, -1.6071994, 5.4983807, -6.669507, -1.6071994, 5.7483807, 2.080493, -1.6071994, 2.9983807, 1.830493, -1.6071994, 0.74838066, 7.830493, -1.6071994, 9.498381, 7.580493, -1.6071994, 2.9983807, -6.919507, -1.6071994, 9.498381)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(8, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(12, 9, 13), PackedInt32Array(15, 14, 12), PackedInt32Array(12, 14, 11), PackedInt32Array(11, 14, 16)]
+vertices = PackedVector3Array(-7.919507, -1.6071994, -8.751619, -7.919507, -1.6071994, -0.75161934, -0.669507, -1.6071994, -1.0016193, -0.669507, -1.6071994, -8.751619, 1.080493, -1.6071994, -8.751619, 1.080493, -1.6071994, -0.75161934, 8.580493, -1.6071994, -1.0016193, 8.580493, -1.6071994, -8.751619, -7.919507, -1.6071994, 0.74838066, -7.919507, -1.6071994, 5.4983807, -6.669507, -1.6071994, 5.7483807, 2.080493, -1.6071994, 2.9983807, 1.830493, -1.6071994, 0.74838066, 8.080493, -1.6071994, 3.4983807, 8.580493, -1.6071994, 3.2483807, 8.080493, -1.6071994, 9.498381, -6.919507, -1.6071994, 9.498381)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1), PackedInt32Array(7, 6, 4), PackedInt32Array(4, 6, 5), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 12), PackedInt32Array(11, 14, 13), PackedInt32Array(13, 15, 11), PackedInt32Array(11, 15, 10), PackedInt32Array(10, 15, 16)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vuadu"]
 _surfaces = [{
@@ -240,10 +240,10 @@ skeleton = NodePath("")
 [node name="Props" type="Node3D" parent="NavigationRegion3D" unique_id=668348221]
 
 [node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" unique_id=1309247612 instance=ExtResource("5_3v0td")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.871085, -2.0894926, 4.229593)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.306727, -2.0894926, 5.1923747)
 
 [node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" unique_id=824656544 instance=ExtResource("5_3v0td")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.800933, -2.0894926, 7.384835)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.298333, -2.0894926, 8.347616)
 
 [node name="steel_frame_shelves_01_2k4" parent="NavigationRegion3D/Props" unique_id=173902275 instance=ExtResource("5_3v0td")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.884661, -2.0894926, 7.5863466)
@@ -325,11 +325,19 @@ navigation_layers = 2
 start_position = Vector3(-1.25, 0, 0)
 end_position = Vector3(1.25, 0, 0)
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D" unique_id=402296862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.058236, 0)
+height = 9.1
+vertices = PackedVector3Array(9.851629, 0, -9.510703, 9.905108, 0, 3.4904883, 9.187685, 0, 3.551963, 9.100101, 0, -9.541917)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
 [node name="DebugLights" type="Node3D" parent="." unique_id=1766057920]
 visible = false
 
 [node name="OmniLight3D5" type="OmniLight3D" parent="DebugLights" unique_id=1381361704]
 transform = Transform3D(-4.3711385e-08, 1, -4.3711392e-08, -1, -4.371139e-08, -4.3711385e-08, -4.371139e-08, 4.371139e-08, 1, -4.113396, 4.2087, -8.47477)
+visible = false
 light_color = Color(1, 0, 0, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -338,6 +346,7 @@ omni_range = 8.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="DebugLights" unique_id=460140179]
 transform = Transform3D(0.9997129, -0.009089472, 0.022170134, 0, 0.92525613, 0.37934318, -0.023961078, -0.37923425, 0.9249905, 4.694298, 2.1858559, 0.47288013)
+visible = false
 light_color = Color(1, 0.72133213, 0.67637587, 1)
 light_energy = 7.5
 light_bake_mode = 1
@@ -346,6 +355,7 @@ spot_angle = 17.932112
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights" unique_id=1335963644]
 transform = Transform3D(-4.3711385e-08, 0, 1, -1, -4.371139e-08, -4.3711385e-08, 4.371139e-08, -1, 1.9106853e-15, -7.6298866, 4.2087, -5.10775)
+visible = false
 light_color = Color(1, 0, 0, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -354,6 +364,7 @@ omni_range = 8.0
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="DebugLights" unique_id=2050434524]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.3711385e-08, 4.371138e-08, 4.371139e-08, -1, 3.511979, -0.75040156, -1.1726981)
+visible = false
 light_color = Color(1, 0, 0, 1)
 light_bake_mode = 1
 distance_fade_enabled = true
@@ -362,6 +373,7 @@ omni_range = 8.0
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="DebugLights" unique_id=575573429]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.3711385e-08, 4.371138e-08, 4.371139e-08, -1, 8.0519, -0.75040156, -1.1726981)
+visible = false
 light_color = Color(1, 0, 0, 1)
 light_bake_mode = 1
 distance_fade_enabled = true

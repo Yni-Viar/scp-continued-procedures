@@ -115,7 +115,7 @@ render_target_update_mode = 0
 script = ExtResource("7_831vx")
 
 [node name="LightDetector" type="Camera3D" parent="SubViewport" unique_id=318990268]
-far = 64.0
+far = 48.0
 
 [connection signal="body_entered" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_entered"]
 [connection signal="body_exited" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_exited"]

@@ -3,3 +3,8 @@
 [resource]
 emission_enabled = true
 emission = Color(0.784314, 1, 1, 1)
+emission_energy_multiplier = 2.0
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false

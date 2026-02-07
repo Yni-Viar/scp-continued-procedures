@@ -38,5 +38,6 @@ func _process(delta: float) -> void:
 				call_deferred("load_complete", game)
 
 func load_complete(scene: Node):
-	get_tree().current_scene.queue_free()
+	var old_scene = get_tree().current_scene
 	Settings.override_main_scene(scene)
+	old_scene.queue_free()

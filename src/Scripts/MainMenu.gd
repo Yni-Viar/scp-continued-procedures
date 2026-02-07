@@ -97,3 +97,10 @@ func _on_story_back_pressed() -> void:
 
 func _on_settings_button_pressed() -> void:
 	$Settings.show()
+
+
+func _on_seed_text_changed(new_text: String) -> void:
+	if new_text == "Yenjeai":
+		$HBoxContainer/StoryMode.show()
+	elif $HBoxContainer/StoryMode.visible:
+		$HBoxContainer/StoryMode.hide()

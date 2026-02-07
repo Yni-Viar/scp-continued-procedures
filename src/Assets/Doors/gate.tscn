@@ -1,9 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://du0m8vl4mi4yr"]
+[gd_scene format=4 uid="uid://du0m8vl4mi4yr"]
 
 [ext_resource type="Script" uid="uid://bti7y8cq2dfm4" path="res://Scripts/DoorSystem/DoorBase.gd" id="1_6yoo2"]
-[ext_resource type="Texture2D" uid="uid://1uhlow3loxyi" path="res://Assets/Doors/GateFrame_Metal032_2K_Color.png" id="1_75igw"]
-[ext_resource type="Texture2D" uid="uid://bjv6nebll3ife" path="res://Assets/Doors/GateFrame_Metal032_2K_Roughness.png" id="2_6yoo2"]
-[ext_resource type="Texture2D" uid="uid://dua28eo4rpt8u" path="res://Assets/Doors/GateFrame_Metal032_2K_NormalGL.png" id="3_v3yu4"]
 [ext_resource type="Texture2D" uid="uid://cq340vewgw64g" path="res://Assets/Doors/Gate_Metal032_2K_Color.png" id="4_njdpb"]
 [ext_resource type="Texture2D" uid="uid://v5n8enfucd01" path="res://Assets/Doors/Gate_Metal032_2K_Roughness.png" id="5_gf310"]
 [ext_resource type="Texture2D" uid="uid://cvjh1w2mqsuy3" path="res://Assets/Doors/Gate_Metal032_2K_NormalGL.png" id="6_3dju3"]
@@ -11,14 +8,14 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgdin"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("1_75igw")
+albedo_texture = ExtResource("4_njdpb")
 metallic = 1.0
-metallic_texture = ExtResource("2_6yoo2")
+metallic_texture = ExtResource("5_gf310")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("2_6yoo2")
+roughness_texture = ExtResource("5_gf310")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("3_v3yu4")
+normal_texture = ExtResource("6_3dju3")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bwnd6"]
 _surfaces = [{
@@ -133,35 +130,33 @@ _data = {
 &"door_open": SubResource("Animation_f8wcs")
 }
 
-[node name="GateFrame" type="Node3D"]
+[node name="GateFrame" type="Node3D" unique_id=1861794633]
 script = ExtResource("1_6yoo2")
 
-[node name="Frame" type="MeshInstance3D" parent="."]
+[node name="Frame" type="MeshInstance3D" parent="." unique_id=275740185]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_t2kkd")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Frame"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Frame" unique_id=1261379928]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame/StaticBody3D" unique_id=860058164]
 shape = SubResource("ConcavePolygonShape3D_v3yu4")
 
-[node name="Cube_001" type="MeshInstance3D" parent="."]
+[node name="Cube_001" type="MeshInstance3D" parent="." unique_id=119252404]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003067013, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_w53gw")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Cube_001"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_001" unique_id=1272028829]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/StaticBody3D" unique_id=1216109247]
 shape = SubResource("ConcavePolygonShape3D_njdpb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_dhd7e")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=816569247]
+libraries/ = SubResource("AnimationLibrary_dhd7e")
 
-[node name="DoorSound" type="AudioStreamPlayer3D" parent="."]
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="." unique_id=1600322293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9390855, 0)
 max_distance = 40.0

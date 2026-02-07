@@ -690,6 +690,76 @@ stream = ExtResource("11_dahhg")
 autoplay = true
 bus = &"Music"
 
+[node name="LoadingScreen" type="Control" parent="." unique_id=385060537]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="LoadingScreen" unique_id=1046337003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="LoadingScreen" unique_id=1353240535]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.34600002
+anchor_right = 0.5
+anchor_bottom = 0.34600002
+offset_left = -192.0
+offset_top = 7.791992
+offset_right = 192.0
+offset_bottom = 72.79199
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_bf53h")
+theme_override_font_sizes/font_size = 64
+text = "LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="LoadingScreen" unique_id=901688498]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.59300005
+anchor_right = 0.5
+anchor_bottom = 0.59300005
+offset_left = -192.0
+offset_top = -64.26404
+offset_right = 192.0
+offset_bottom = 63.735962
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "PLEASE_WAIT"
+horizontal_alignment = 1
+
+[node name="LoadProgress" type="ProgressBar" parent="LoadingScreen" unique_id=1729280535]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.77400005
+anchor_right = 0.5
+anchor_bottom = 0.77400005
+offset_left = -192.0
+offset_top = -13.552032
+offset_right = 192.0
+offset_bottom = 13.447968
+grow_horizontal = 2
+grow_vertical = 2
+value = 100.0
+show_percentage = false
+
 [connection signal="generated" from="FacilityGenerator" to="." method="_on_facility_generator_generated"]
 [connection signal="task_done" from="FoundationTask" to="UI" method="_on_foundation_task_task_done"]
 [connection signal="timeout" from="GameOverTimer" to="." method="_on_game_over_timer_timeout"]

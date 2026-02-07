@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dehueffswdiuk" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_BaseMap.png" id="1_yr8t4"]
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="2_blv3b"]
-[ext_resource type="Texture2D" uid="uid://c3fvb5hg1icks" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Normal.png" id="3_yphjg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnq1"]
 resource_name = "LargeHangingCeilingLight"
@@ -14,8 +13,6 @@ emission = Color(1, 1, 1, 1)
 emission_energy_multiplier = 2.0
 emission_operator = 1
 emission_texture = ExtResource("2_blv3b")
-normal_enabled = true
-normal_texture = ExtResource("3_yphjg")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_nxsq2"]
 _surfaces = [{
@@ -99,6 +96,7 @@ skeleton = NodePath("")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2058285498]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+visible = false
 light_energy = 4.0
 light_bake_mode = 1
 spot_range = 16.0

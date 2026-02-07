@@ -12,8 +12,7 @@ The project uses Godot 4.6 as a base.
 
 ### Building lite version (for Web)
 **In Lite version, some components are missing:**
-There are no Entrance Sub-zone, SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model, SCP-938 (spawnable), SCP-939 (spawnable)
-
+There are no Entrance Sub-zone, SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model, SCP-266 (spawnable), SCP-938 (spawnable), SCP-914
 1. Project->Export
 2. Choose your platform (e.g. Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*`
@@ -32,9 +31,9 @@ Included SCPs:
 - SCP-023
 - SCP-067
 - SCP-162
-- SCP-173
-- SCP-178
-- SCP-266
+- SCP-173 (only one variation in Lite version)
+- SCP-178 (partially absent in Lite version)
+- SCP-266 (do not spawn by default in Lite version since 5.8) (Lag issue)
 - SCP-347
 - SCP-446
 - SCP-458
@@ -42,8 +41,8 @@ Included SCPs:
 - SCP-650
 - SCP-686
 - SCP-812
-- SCP-914
-- SCP-938
+- SCP-914 (absent in Lite version)
+- SCP-938 (do not spawn by default in Lite version)
 - SCP-939
 
 ## Why this name?

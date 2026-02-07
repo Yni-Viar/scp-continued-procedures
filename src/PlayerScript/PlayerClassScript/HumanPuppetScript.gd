@@ -5,6 +5,16 @@ class_name HumanPuppetScript
 
 enum SecondaryState {NONE, ITEM, CUFFED, JAILBIRD_ATTACK, INTERACT, MTF_RIFLE, CI_RIFLE, HAT}
 
+const SECONDARY_STATE_ALIAS: Dictionary[SecondaryState, String] = {
+	SecondaryState.ITEM: "item",
+	SecondaryState.CUFFED: "cuffed",
+	SecondaryState.JAILBIRD_ATTACK: "jailbird_attack",
+	SecondaryState.INTERACT: "interact",
+	SecondaryState.MTF_RIFLE: "mtf_rifle",
+	SecondaryState.CI_RIFLE: "ci_rifle",
+	SecondaryState.HAT: "hat"
+}
+
 @export var enable_secondary_state: bool = true
 @export var secondary_state: SecondaryState = SecondaryState.NONE
 @export var resistance_scp178: bool = false
@@ -57,20 +67,8 @@ func _physics_process(delta: float) -> void:
 				SecondaryState.NONE:
 					if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") - 0.00001 < 0:
 						call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 0.0, get_parent().get_parent().character_speed * delta))
-				SecondaryState.ITEM:
-					call("set_state", "secondary_state", "transition_request", "item")
-				SecondaryState.CUFFED:
-					call("set_state", "secondary_state", "transition_request", "cuffed")
-				SecondaryState.JAILBIRD_ATTACK:
-					call("set_state", "secondary_state", "transition_request", "jailbird_attack")
-				SecondaryState.INTERACT:
-					call("set_state", "secondary_state", "transition_request", "interact")
-				SecondaryState.MTF_RIFLE:
-					call("set_state", "secondary_state", "transition_request", "mtf_rifle")
-				SecondaryState.HAT:
-					call("set_state", "secondary_state", "transition_request", "hat")
-				SecondaryState.CI_RIFLE:
-					call("set_state", "secondary_state", "transition_request", "ci_rifle")
+				_:
+					call("set_state", "secondary_state", "transition_request", SECONDARY_STATE_ALIAS[secondary_state])
 			if secondary_state != SecondaryState.NONE:
 				if !get_node("AnimationTree").get("parameters/items_blend/blend_amount") + 0.00001 > 1:
 					call("set_state", "items_blend", "blend_amount", lerp(get_node("AnimationTree").get("parameters/items_blend/blend_amount"), 1.0, get_parent().get_parent().character_speed * delta))
