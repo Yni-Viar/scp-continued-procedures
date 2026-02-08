@@ -71,9 +71,6 @@ func _physics_process(delta):
 			for i in range(objects_to_teleport.size()):
 				var node: Node3D = get_node(objects_to_teleport[i])
 				node.global_rotation = node.global_rotation + (global_rotation - rotator)
-				if node is MovableNpc:
-					node.global_position = node.global_position + (global_position - temp_position)
-			temp_position = global_position
 			rotator = global_rotation
 			# remember, floating numbers needs IsEqualApprox, Yni!
 			if global_position.is_equal_approx(waypoints[counter][0]):
@@ -135,6 +132,7 @@ func call_elevator(floor):
 		elevator_move(false, true)
 	else:
 		elevator_move(true, true)
+	
 
 ## Set parameters to move elevator.
 ## For Web platform teleport the elevator to destination, since
@@ -211,6 +209,7 @@ func elevator_move(p_pass_floor: bool, first : bool):
 		is_moving = true
 	if !$Move.playing:
 		$Move.play()
+	
 # Opens destination doors.
 func open_dest_doors():
 	if !elevator_doors.is_empty():

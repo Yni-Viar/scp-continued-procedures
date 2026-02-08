@@ -3,7 +3,11 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.8.0 ("Carnivorous Carpet" update)
+## v5.8.1 (Emergency update, 2026.02.08)
+
+- Fixed elevator bug (I hope completely)
+
+## v5.8.0 ("Carnivorous Carpet" update, 2026.02.07)
 ### New SCP
 - SCP-522 + task
 

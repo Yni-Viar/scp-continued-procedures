@@ -131,9 +131,9 @@ func _physics_process(delta: float) -> void:
 	if platform_moving:
 		if puppet_mesh != null:
 			puppet_mesh.state = puppet_mesh.States.IDLE
-		#if !is_on_floor():
-			#velocity += get_gravity() * delta
-		#move_and_slide()
+		if !is_on_floor():
+			velocity += get_gravity() * delta
+		move_and_slide()
 		return
 	# Follow the target, if target is not empty.
 	if !follow_target.is_empty():
