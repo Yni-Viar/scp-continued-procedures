@@ -19,9 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://bjmlp1vq3373v" path="res://UI/slider_toggle_disabled.png" id="17_yryu7"]
 [ext_resource type="Texture2D" uid="uid://cq5n1u204g70j" path="res://UI/slider_toggle_highlight.png" id="18_8bltl"]
 [ext_resource type="StyleBox" uid="uid://bms7ema3mduoe" path="res://UI/scrollbar_toggle.tres" id="19_wlkkr"]
-[ext_resource type="Texture2D" uid="uid://c3brakccx1r80" path="res://UI/close_glass_large.png" id="20_mefmv"]
+[ext_resource type="Texture2D" uid="uid://crf7b0f7s83v6" path="res://UI/close_fa.svg" id="20_mefmv"]
 [ext_resource type="StyleBox" uid="uid://bwjl6h1n783gn" path="res://UI/Window.tres" id="21_8ee4j"]
-[ext_resource type="Texture2D" uid="uid://cqnc64vp2dl5" path="res://UI/close_glass_press_large.png" id="21_kymd0"]
+[ext_resource type="Texture2D" uid="uid://dxcu7fqqchy1y" path="res://UI/close_fa_pressed.svg" id="21_kymd0"]
 [ext_resource type="StyleBox" uid="uid://dhj513crv55v4" path="res://UI/Window_Inactive.tres" id="22_5fj3l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_25ss1"]

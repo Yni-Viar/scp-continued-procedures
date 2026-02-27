@@ -1,9 +1,11 @@
 # Godot 4+ specific ignores
 .godot/
+.nomedia
 
 # Godot-specific ignores
 .import/
 export.cfg
+export_credentials.cfg
 export_presets.cfg
 *.tmp
 *.depren
@@ -19,5 +21,4 @@ mono_crash.*.json
 # Internal resources
 builds/
 android/
-src/Demonstration/
 CHANGELOG-RELEASE-GH.md

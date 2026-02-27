@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b8pkv7v2qmc5c" path="res://PlayerScript/MovableNpc.gd" id="1_3jgrj"]
 [ext_resource type="Script" uid="uid://caoa6u8nk71m7" path="res://Scripts/StatusEffects/StatusEffectManager.gd" id="2_2vyji"]
 [ext_resource type="PackedScene" uid="uid://cjurcf2sdk1t5" path="res://InventorySystem/InventoryPanel.tscn" id="2_m1isr"]
+[ext_resource type="Script" uid="uid://v7gutpmtjp73" path="res://Scripts/PlayerUI.gd" id="3_yax7y"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kvonu"]
 radius = 0.371158
@@ -76,13 +77,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44197, 0)
 
 [node name="UI" type="Control" parent="." unique_id=1455083107]
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.056
 anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_bottom = 0.85200006
+offset_left = -0.51200104
+offset_bottom = -0.0960083
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("3_yax7y")
 
 [node name="Inventory" parent="UI" unique_id=441981924 instance=ExtResource("2_m1isr")]
 visible = false
 layout_mode = 1
+
+[connection signal="visibility_changed" from="UI/Inventory" to="UI" method="_on_children_visibility_changed"]

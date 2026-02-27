@@ -3,6 +3,16 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.8.2 ("Patched carpet" mini-update, 2026.02.27)
+### Add code improvements from [Hikkan game, a non-scp story game by Yni](https://github.com/Yni-Viar/Hikkan)
+- Loading Screen is now offloaded to Settings singleton
+- Vectorized close buttons for \(now-forgotten\) Help and Settings section.
+- Improved Hikkan easter egg, added in 5.8.0.
+### Misc changes
+- Improved UI interaction - camera now stops moving when inventory is opened.
+- Improve elevator logic and fix broken SCP-938/939 elevators.
+- Updated Map Generator to 11.3.5
+
 ## v5.8.1 (Emergency update, 2026.02.08)
 
 - Fixed elevator bug (I hope completely)

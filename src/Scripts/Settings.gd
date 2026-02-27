@@ -141,3 +141,13 @@ func season_feature_checker(season_check: Season) -> bool:
 		return true
 	else:
 		return false
+
+func loader(file_path_to_load: String, parameters: Dictionary[String, Variant]):
+	if get_child_count() > 0:
+		if get_child(0) is LoadingScreen:
+			return
+	var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
+	loading_screen.file_path_to_load = file_path_to_load
+	loading_screen.parameters = parameters
+	
+	add_child(loading_screen)

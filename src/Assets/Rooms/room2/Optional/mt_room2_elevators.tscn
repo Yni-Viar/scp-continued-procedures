@@ -262,14 +262,13 @@ light_data = ExtResource("6_qup2f")
 [node name="elevator" parent="." unique_id=385483271 instance=ExtResource("7_f6fn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 1.412107, 2.65249)
 floors = Array[ExtResource("8_nph5e")]([SubResource("Resource_30sy4"), SubResource("Resource_vbswh")])
-elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevators/Door3", "/root/Game/FacilityGenerator/mt_room2_elevators/Door1")
-speed = 24.0
+elevator_doors = PackedStringArray("Game/FacilityGenerator/mt_room2_elevators/Door3", "Game/FacilityGenerator/mt_room2_elevators/Door1")
 current_floor = 1
 
 [node name="elevator2" parent="." unique_id=713881955 instance=ExtResource("7_f6fn0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.831287, 1.412107, -2.6903172)
 floors = Array[ExtResource("8_nph5e")]([SubResource("Resource_nph5e"), SubResource("Resource_lorvw")])
-elevator_doors = PackedStringArray("/root/Game/FacilityGenerator/mt_room2_elevators/Door2", "/root/Game/FacilityGenerator/mt_room2_elevators/Door4")
+elevator_doors = PackedStringArray("Game/FacilityGenerator/mt_room2_elevators/Door2", "Game/FacilityGenerator/mt_room2_elevators/Door4")
 target_floor = 1
 
 [node name="ElevatorTrigger2" type="Area3D" parent="." unique_id=1254981073]

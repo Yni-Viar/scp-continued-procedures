@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4x7oa8dlypky"
-path="res://.godot/imported/lorebutton.png-1b0cf5811f9fdd46bf006e90383887bb.ctex"
+uid="uid://cjc2cv7hfk7of"
+path="res://.godot/imported/idle_or_waiting.PNG-bfe2b3e8a25d9bcd1bf76772b4dca907.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/lorebutton.png"
-dest_files=["res://.godot/imported/lorebutton.png-1b0cf5811f9fdd46bf006e90383887bb.ctex"]
+source_file="res://Assets/HUD/EasterEgg/idle_or_waiting.PNG"
+dest_files=["res://.godot/imported/idle_or_waiting.PNG-bfe2b3e8a25d9bcd1bf76772b4dca907.ctex"]
 
 [params]
 

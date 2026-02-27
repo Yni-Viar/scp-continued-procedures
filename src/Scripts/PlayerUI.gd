@@ -1,0 +1,20 @@
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_children_visibility_changed() -> void:
+	for node in get_children():
+		if node is Control:
+			if node.visible:
+				mouse_filter = Control.MOUSE_FILTER_STOP
+				return
+	mouse_filter = Control.MOUSE_FILTER_IGNORE

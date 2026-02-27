@@ -37,15 +37,10 @@ func _on_credits_pressed() -> void:
 
 
 func play():
-	
-	var loading_screen: LoadingScreen = load("res://Scenes/LoadingScreen.tscn").instantiate()
-	loading_screen.file_path_to_load = "res://Scenes/Game.tscn"
-	loading_screen.parameters = {
+	Settings.loader("res://Scenes/Game.tscn", {
 		"map_seed": hash($GameSettings/Seed.text) if !$GameSettings/Seed.text.is_empty() else -1,
 		"time_limited": $GameSettings/TimeLimited.button_pressed
-	}
-	
-	add_child(loading_screen)
+	})
 	
 	#$FakeLoadingScreen.show()
 	#
@@ -89,10 +84,12 @@ func _on_enable_sound_toggled(toggled_on: bool) -> void:
 
 func _on_story_mode_pressed() -> void:
 	$StoryUI.show()
+	$StoryUI/CanvasLayer.show()
 
 
 func _on_story_back_pressed() -> void:
 	$StoryUI.hide()
+	$StoryUI/CanvasLayer.hide()
 
 
 func _on_settings_button_pressed() -> void:
@@ -100,7 +97,7 @@ func _on_settings_button_pressed() -> void:
 
 
 func _on_seed_text_changed(new_text: String) -> void:
-	if new_text == "Yenjeai":
+	if new_text.to_lower() == "yenjeai":
 		$HBoxContainer/StoryMode.show()
 	elif $HBoxContainer/StoryMode.visible:
 		$HBoxContainer/StoryMode.hide()
