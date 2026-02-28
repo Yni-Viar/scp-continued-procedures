@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://dlpgutdspohq2"]
+[gd_scene load_steps=8 format=4 uid="uid://dlpgutdspohq2"]
 
 [ext_resource type="Texture2D" uid="uid://dhiekyi46uc7k" path="res://Assets/ExternalModels/Scp522/Scp522_SCP-522.png" id="1_5vxcq"]
 [ext_resource type="Script" uid="uid://dxmasty17lhgs" path="res://Scripts/Scp522.gd" id="1_l4iyc"]
@@ -56,13 +56,13 @@ bind/5/pose = Transform3D(-7.1054274e-15, 1, 7.549791e-08, 1, 7.105427e-15, 5.69
 [sub_resource type="BoxShape3D" id="BoxShape3D_l4iyc"]
 size = Vector3(3.4849854, 1.2967529, 2.6795654)
 
-[node name="Scp522" type="Node3D" unique_id=1914834007]
+[node name="Scp522" type="Node3D"]
 script = ExtResource("1_l4iyc")
 
-[node name="Armature" type="Node3D" parent="." unique_id=209652274]
+[node name="Armature" type="Node3D" parent="."]
 transform = Transform3D(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="Skeleton3D" type="Skeleton3D" parent="Armature" unique_id=2049038993]
+[node name="Skeleton3D" type="Skeleton3D" parent="Armature"]
 bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 4.919422e-08, -4.9194217e-08, -4.919422e-08, 1, 1.2100356e-15, 4.9194217e-08, 1.2100356e-15, 1, 0, 0, 0)
@@ -106,25 +106,23 @@ bones/5/position = Vector3(-3.5527137e-15, 0.5, -2.682224e-22)
 bones/5/rotation = Quaternion(2.1646358e-22, 3.5527137e-15, -3.5527137e-15, 1)
 bones/5/scale = Vector3(1, 1, 1)
 
-[node name="Plane" type="MeshInstance3D" parent="Armature/Skeleton3D" unique_id=1283710662]
+[node name="Plane" type="MeshInstance3D" parent="Armature/Skeleton3D"]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_q4b3w")
 skin = SubResource("Skin_24402")
 
-[node name="CopyTransformModifier3D" type="ConvertTransformModifier3D" parent="Armature/Skeleton3D" unique_id=1819297704]
+[node name="CopyTransformModifier3D" type="ConvertTransformModifier3D" parent="Armature/Skeleton3D"]
 active = false
 influence = 0.0
 setting_count = 2
 settings/0/amount = 1.0
 settings/0/apply_bone_name = "Bone.001"
 settings/0/apply_bone = 1
-settings/0/reference_type = 0
 settings/0/reference_bone_name = "Bone"
 settings/0/reference_bone = 0
 settings/1/amount = 1.0
 settings/1/apply_bone_name = "Bone.004"
 settings/1/apply_bone = 4
-settings/1/reference_type = 0
 settings/1/reference_bone_name = "Bone.003"
 settings/1/reference_bone = 3
 settings/0/apply/transform_mode = 1
@@ -148,11 +146,11 @@ settings/1/reference/range_max = 0.0
 settings/1/relative = true
 settings/1/additive = false
 
-[node name="Scp522Trigger" type="Area3D" parent="." unique_id=20614757]
+[node name="Scp522Trigger" type="Area3D" parent="."]
 collision_layer = 10
 collision_mask = 10
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp522Trigger" unique_id=1197745920]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp522Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00592041, 0.6436699, -6.1035156e-05)
 shape = SubResource("BoxShape3D_l4iyc")
 

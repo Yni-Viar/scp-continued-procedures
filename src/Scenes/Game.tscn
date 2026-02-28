@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://6l8r5fy0ymqt"]
+[gd_scene load_steps=47 format=3 uid="uid://6l8r5fy0ymqt"]
 
 [ext_resource type="Script" uid="uid://k3xvlffr17rf" path="res://Scripts/GameCore.gd" id="1_7lihs"]
 [ext_resource type="Script" uid="uid://bu7shnqhd7um8" path="res://MapGen/MapGen3D.gd" id="3_2irst"]
@@ -119,13 +119,13 @@ texture = ExtResource("14_8e0uq")
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_i4lct"]
 color = Color(1, 1, 1, 1)
 
-[node name="Game" type="Node3D" unique_id=1577038326]
+[node name="Game" type="Node3D"]
 process_mode = 1
 script = ExtResource("1_7lihs")
 
-[node name="StaticPlayer" parent="." unique_id=1717543444 instance=ExtResource("3_bf53h")]
+[node name="StaticPlayer" parent="." instance=ExtResource("3_bf53h")]
 
-[node name="FacilityGenerator" type="Node3D" parent="." unique_id=626633582]
+[node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
 zone_size = 10
 map_size_y = 1
@@ -133,27 +133,29 @@ large_rooms = true
 better_zone_generation_min_amount = 5
 checkpoints_enabled = true
 
-[node name="FoundationTask" type="Node" parent="." unique_id=906454797]
+[node name="FoundationTask" type="Node" parent="."]
 script = ExtResource("7_wxwew")
 
-[node name="NPCs" type="Node3D" parent="." unique_id=1472152527]
+[node name="NPCs" type="Node3D" parent="."]
 
-[node name="Items" type="Node3D" parent="." unique_id=1359915943]
+[node name="Items" type="Node3D" parent="."]
 
-[node name="Particles" type="Node3D" parent="." unique_id=667091979]
+[node name="Particles" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1799504578]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("10_khs3t")
 
-[node name="GameOverTimer" type="Timer" parent="." unique_id=1871062487]
+[node name="GameOverTimer" type="Timer" parent="."]
 wait_time = 300.0
 one_shot = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1337968186]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../UI")
-libraries/ = SubResource("AnimationLibrary_4f4ik")
+libraries = {
+&"": SubResource("AnimationLibrary_4f4ik")
+}
 
-[node name="UI" type="Control" parent="." unique_id=1630667038]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -162,7 +164,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6_dahhg")
 
-[node name="FPSCounter" type="Label" parent="UI" unique_id=1546414497]
+[node name="FPSCounter" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -175,7 +177,7 @@ grow_horizontal = 0
 grow_vertical = 0
 script = ExtResource("13_acvyw")
 
-[node name="HealthBar" type="ProgressBar" parent="UI" unique_id=1820448208]
+[node name="HealthBar" type="ProgressBar" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.167
@@ -190,7 +192,7 @@ grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_71axn")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dahhg")
 
-[node name="ThirstBar" type="ProgressBar" parent="UI" unique_id=1019489322]
+[node name="ThirstBar" type="ProgressBar" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.108
@@ -207,7 +209,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_4eqlp")
 max_value = 50.0
 show_percentage = false
 
-[node name="HungerBar" type="ProgressBar" parent="UI" unique_id=1147303532]
+[node name="HungerBar" type="ProgressBar" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -225,7 +227,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_18uti")
 max_value = 50.0
 show_percentage = false
 
-[node name="HealthIcon" type="TextureRect" parent="UI" unique_id=1792735170]
+[node name="HealthIcon" type="TextureRect" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.031
@@ -239,7 +241,7 @@ offset_bottom = 19.864
 grow_vertical = 0
 texture = ExtResource("10_71axn")
 
-[node name="ThirstIcon" type="TextureRect" parent="UI" unique_id=971064659]
+[node name="ThirstIcon" type="TextureRect" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.108
@@ -253,7 +255,7 @@ offset_bottom = 19.791992
 grow_vertical = 0
 texture = ExtResource("13_4eqlp")
 
-[node name="HungerIcon" type="TextureRect" parent="UI" unique_id=812445398]
+[node name="HungerIcon" type="TextureRect" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -268,7 +270,7 @@ offset_bottom = 19.791992
 grow_vertical = 0
 texture = ExtResource("14_18uti")
 
-[node name="Tasks" type="VBoxContainer" parent="UI" unique_id=937525217]
+[node name="Tasks" type="VBoxContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -277,7 +279,7 @@ offset_left = -512.0
 offset_bottom = 320.0
 grow_horizontal = 0
 
-[node name="TimeToLeft" type="Label" parent="UI" unique_id=1834495890]
+[node name="TimeToLeft" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.333
@@ -288,7 +290,7 @@ offset_bottom = 64.0
 theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
 
-[node name="PlayingArea" type="Panel" parent="UI" unique_id=1249724240]
+[node name="PlayingArea" type="Panel" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -296,7 +298,7 @@ anchor_bottom = 0.988
 offset_bottom = -0.223999
 theme_override_styles/panel = SubResource("StyleBoxEmpty_x3xnh")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI" unique_id=719987335]
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -309,14 +311,14 @@ offset_right = 48.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="InventoryButton" type="TextureButton" parent="UI/HBoxContainer" unique_id=32159653]
+[node name="InventoryButton" type="TextureButton" parent="UI/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("15_8r6kd")
 texture_pressed = ExtResource("16_tfod6")
 texture_hover = ExtResource("15_8r6kd")
 texture_disabled = ExtResource("17_rajel")
 
-[node name="SwitchCameraButton" type="TextureButton" parent="UI/HBoxContainer" unique_id=307381555]
+[node name="SwitchCameraButton" type="TextureButton" parent="UI/HBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("16_jn8rg")
 texture_pressed = ExtResource("17_umnjm")
@@ -324,7 +326,7 @@ texture_hover = ExtResource("16_jn8rg")
 texture_disabled = ExtResource("18_4eqlp")
 texture_focused = ExtResource("16_jn8rg")
 
-[node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer" unique_id=868566382]
+[node name="CallMtfButton" type="TextureButton" parent="UI/HBoxContainer"]
 visible = false
 layout_mode = 2
 texture_normal = ExtResource("18_rajel")
@@ -332,7 +334,7 @@ texture_pressed = ExtResource("19_vvhu1")
 texture_hover = ExtResource("18_rajel")
 texture_disabled = ExtResource("20_lbihj")
 
-[node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer" unique_id=1247375854]
+[node name="Scp914Button" type="TextureButton" parent="UI/HBoxContainer"]
 visible = false
 layout_mode = 2
 texture_normal = ExtResource("22_i0vto")
@@ -340,7 +342,7 @@ texture_pressed = ExtResource("23_3jf1l")
 texture_hover = ExtResource("22_i0vto")
 texture_disabled = ExtResource("24_356ba")
 
-[node name="ElevatorButton" type="TextureButton" parent="UI/HBoxContainer" unique_id=285485733]
+[node name="ElevatorButton" type="TextureButton" parent="UI/HBoxContainer"]
 visible = false
 layout_mode = 2
 texture_normal = ExtResource("26_356ba")
@@ -348,7 +350,7 @@ texture_pressed = ExtResource("27_i4lct")
 texture_hover = ExtResource("26_356ba")
 texture_disabled = ExtResource("20_lbihj")
 
-[node name="ConditionFadeIn" type="ColorRect" parent="UI" unique_id=1370168593]
+[node name="ConditionFadeIn" type="ColorRect" parent="UI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -358,7 +360,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
-[node name="Showable" type="TextureRect" parent="UI" unique_id=354431444]
+[node name="Showable" type="TextureRect" parent="UI"]
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = -1
@@ -376,7 +378,7 @@ mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Dialogue" type="Label" parent="UI" unique_id=149820793]
+[node name="Dialogue" type="Label" parent="UI"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.528
@@ -392,7 +394,7 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("29_18uti")
 theme_override_font_sizes/font_size = 24
 
-[node name="Condition" type="Panel" parent="UI" unique_id=1512753561]
+[node name="Condition" type="Panel" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -408,7 +410,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_iyesh")
 
-[node name="ConditionLabel" type="Label" parent="UI/Condition" unique_id=724719005]
+[node name="ConditionLabel" type="Label" parent="UI/Condition"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -426,7 +428,7 @@ theme_override_font_sizes/font_size = 128
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ReasonLabel" type="Label" parent="UI/Condition" unique_id=1256324816]
+[node name="ReasonLabel" type="Label" parent="UI/Condition"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -442,7 +444,7 @@ grow_vertical = 2
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Back" type="Button" parent="UI/Condition" unique_id=963309856]
+[node name="Back" type="Button" parent="UI/Condition"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -459,7 +461,7 @@ localize_numeral_system = false
 theme = ExtResource("10_3so38")
 text = "BACK_TO_MENU"
 
-[node name="TextureRect" type="TextureRect" parent="UI/Condition" unique_id=1455487417]
+[node name="TextureRect" type="TextureRect" parent="UI/Condition"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 3
@@ -475,13 +477,13 @@ grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("26_iyesh")
 
-[node name="Back" type="TextureButton" parent="UI" unique_id=227943042]
+[node name="Back" type="TextureButton" parent="UI"]
 layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 texture_normal = ExtResource("7_fgofq")
 
-[node name="Scp914Panel" type="Panel" parent="UI" unique_id=1045787653]
+[node name="Scp914Panel" type="Panel" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -497,7 +499,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_i1pr2")
 
-[node name="Scp914Mode" type="HSlider" parent="UI/Scp914Panel" unique_id=1822224259]
+[node name="Scp914Mode" type="HSlider" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -513,7 +515,7 @@ theme_override_styles/slider = SubResource("StyleBoxLine_i4lct")
 max_value = 4.0
 value = 2.0
 
-[node name="Label" type="Label" parent="UI/Scp914Panel" unique_id=717647053]
+[node name="Label" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.267
@@ -527,7 +529,7 @@ offset_bottom = 11.48
 text = "ROUGH"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="UI/Scp914Panel" unique_id=952652352]
+[node name="Label2" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.379
@@ -541,7 +543,7 @@ offset_bottom = 11.48
 text = "COARSE"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="UI/Scp914Panel" unique_id=613491032]
+[node name="Label3" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.504
@@ -555,7 +557,7 @@ offset_bottom = 11.48
 text = "1:1"
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="UI/Scp914Panel" unique_id=1944108215]
+[node name="Label4" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.614
@@ -569,7 +571,7 @@ offset_bottom = 11.48
 text = "FINE"
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="UI/Scp914Panel" unique_id=410978150]
+[node name="Label5" type="Label" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.265
@@ -583,7 +585,7 @@ offset_bottom = 19.64
 text = "VERYFINE"
 horizontal_alignment = 1
 
-[node name="Refine" type="Button" parent="UI/Scp914Panel" unique_id=1105328223]
+[node name="Refine" type="Button" parent="UI/Scp914Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -599,7 +601,7 @@ grow_vertical = 2
 theme = ExtResource("10_3so38")
 text = "SCP914_REFINE"
 
-[node name="ElevatorMode" type="Panel" parent="UI" unique_id=317107349]
+[node name="ElevatorMode" type="Panel" parent="UI"]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -614,7 +616,7 @@ offset_bottom = 240.288
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ElevatorCall" type="Button" parent="UI/ElevatorMode" unique_id=762492631]
+[node name="ElevatorCall" type="Button" parent="UI/ElevatorMode"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -630,7 +632,7 @@ grow_vertical = 2
 theme = ExtResource("10_3so38")
 text = "ELEVATOR_CALL"
 
-[node name="Label" type="Label" parent="UI/ElevatorMode" unique_id=1350282906]
+[node name="Label" type="Label" parent="UI/ElevatorMode"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -647,7 +649,7 @@ text = "ELEVATOR_MGMT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Floor" type="SpinBox" parent="UI/ElevatorMode" unique_id=1672394082]
+[node name="Floor" type="SpinBox" parent="UI/ElevatorMode"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -666,7 +668,7 @@ max_value = 1.0
 rounded = true
 alignment = 1
 
-[node name="Label2" type="Label" parent="UI/ElevatorMode" unique_id=1855471385]
+[node name="Label2" type="Label" parent="UI/ElevatorMode"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -681,16 +683,16 @@ text = "ELEVATOR_WHAT_FLOOR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InGameConsole" parent="UI" unique_id=1995255656 instance=ExtResource("30_i1pr2")]
+[node name="InGameConsole" parent="UI" instance=ExtResource("30_i1pr2")]
 visible = false
 layout_mode = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1746343494]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_dahhg")
 autoplay = true
 bus = &"Music"
 
-[node name="LoadingScreen" type="Control" parent="." unique_id=385060537]
+[node name="LoadingScreen" type="Control" parent="."]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -699,7 +701,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="LoadingScreen" unique_id=1046337003]
+[node name="ColorRect" type="ColorRect" parent="LoadingScreen"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -708,7 +710,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="LoadingScreen" unique_id=1353240535]
+[node name="Label" type="Label" parent="LoadingScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -727,7 +729,7 @@ text = "LOADING"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="LoadingScreen" unique_id=901688498]
+[node name="Label2" type="Label" parent="LoadingScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -744,7 +746,7 @@ theme_override_font_sizes/font_size = 32
 text = "PLEASE_WAIT"
 horizontal_alignment = 1
 
-[node name="LoadProgress" type="ProgressBar" parent="LoadingScreen" unique_id=1729280535]
+[node name="LoadProgress" type="ProgressBar" parent="LoadingScreen"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

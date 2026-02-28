@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dyo4u3ig5wr1p"]
+[gd_scene load_steps=6 format=3 uid="uid://dyo4u3ig5wr1p"]
 
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="1_yrknh"]
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="2_w1nw0"]
@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="4_w1nw0"]
 [ext_resource type="Script" uid="uid://burwwqf7eqpi5" path="res://Scripts/KeybindSetter.gd" id="5_mjqtt"]
 
-[node name="Settings" type="Window" unique_id=790209184]
+[node name="Settings" type="Window"]
 auto_translate_mode = 1
 oversampling_override = 1.0
 title = "Settings"
@@ -15,19 +15,19 @@ size = Vector2i(800, 480)
 theme = ExtResource("1_yrknh")
 script = ExtResource("2_w1nw0")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=234629448]
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SettingsUI" type="VBoxContainer" parent="ScrollContainer" unique_id=462634609]
+[node name="SettingsUI" type="VBoxContainer" parent="ScrollContainer"]
 custom_minimum_size = Vector2(768, 0)
 layout_mode = 2
 script = ExtResource("3_mjqtt")
 
-[node name="GraphicsLabel" type="Label" parent="ScrollContainer/SettingsUI" unique_id=1856685906]
+[node name="GraphicsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_w1nw0")
 theme_override_font_sizes/font_size = 32
@@ -35,25 +35,26 @@ text = "GRAPHICS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Glow" type="CheckButton" parent="ScrollContainer/SettingsUI" unique_id=1575877594]
+[node name="Glow" type="CheckButton" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 button_pressed = true
 text = "GLOW"
 
-[node name="BasicReflection" type="CheckButton" parent="ScrollContainer/SettingsUI" unique_id=396133476]
+[node name="BasicReflection" type="CheckButton" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 button_pressed = true
 text = "REFLECTION_PROBE"
 
-[node name="SSAO" type="CheckButton" parent="ScrollContainer/SettingsUI" unique_id=1402985063]
+[node name="SSAO" type="CheckButton" parent="ScrollContainer/SettingsUI"]
+visible = false
 layout_mode = 2
 text = "SSAO"
 
-[node name="Label" type="Label" parent="ScrollContainer/SettingsUI" unique_id=1259150371]
+[node name="Label" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 text = "REFLECTION_PROBE_WARNING"
 
-[node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI" unique_id=711617746]
+[node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_w1nw0")
 theme_override_font_sizes/font_size = 32
@@ -61,23 +62,23 @@ text = "SOUNDS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Music" type="HBoxContainer" parent="ScrollContainer/SettingsUI" unique_id=425509489]
+[node name="Music" type="HBoxContainer" parent="ScrollContainer/SettingsUI"]
 custom_minimum_size = Vector2(768, 0)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ScrollContainer/SettingsUI/Music" unique_id=1329054464]
+[node name="Label" type="Label" parent="ScrollContainer/SettingsUI/Music"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 text = "MUSIC_VOLUME"
 
-[node name="MusicVolume" type="HSlider" parent="ScrollContainer/SettingsUI/Music" unique_id=655892378]
+[node name="MusicVolume" type="HSlider" parent="ScrollContainer/SettingsUI/Music"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 max_value = 1.0
 step = 0.1
 value = 1.0
 
-[node name="KeybindingLabel" type="Label" parent="ScrollContainer/SettingsUI" unique_id=153134614]
+[node name="KeybindingLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_w1nw0")
 theme_override_font_sizes/font_size = 32
@@ -85,59 +86,59 @@ text = "KEYBINDING"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="ScrollContainer/SettingsUI" unique_id=1569500051]
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/SettingsUI"]
 custom_minimum_size = Vector2(768, 0)
 layout_mode = 2
 columns = 2
 script = ExtResource("5_mjqtt")
 
-[node name="CLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1090667644]
+[node name="CLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 layout_mode = 2
 text = "CAMERA_LOOK"
 
-[node name="CLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=207022714]
+[node name="CLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="CLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1261335044]
+[node name="CLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 layout_mode = 2
 text = "CLICK"
 
-[node name="CButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1343134312]
+[node name="CButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="CRLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1891170467]
+[node name="CRLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 text = "CAMERA_ROTATE_LEFT"
 
-[node name="CRLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1557833056]
+[node name="CRLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="CRRLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=2041844324]
+[node name="CRRLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(512, 0)
 layout_mode = 2
 text = "CAMERA_ROTATE_RIGHT"
 
-[node name="CRRButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=757255089]
+[node name="CRRButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="TVMLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1855417617]
+[node name="TVMLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 layout_mode = 2
 text = "TOGGLE_VIEW_MODE"
 
-[node name="TVMButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1056627082]
+[node name="TVMButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
-[node name="ILabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1977248969]
+[node name="ILabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
 layout_mode = 2
 text = "INVENTORY"
 
-[node name="IButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer" unique_id=1348518120]
+[node name="IButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 

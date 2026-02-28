@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cqhhycwdvhaq6"]
+[gd_scene load_steps=8 format=4 uid="uid://cqhhycwdvhaq6"]
 
 [ext_resource type="Texture2D" uid="uid://dehueffswdiuk" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_BaseMap.png" id="1_yr8t4"]
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="2_blv3b"]
@@ -82,19 +82,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_0qi7h")
 
-[node name="Light" type="Node3D" unique_id=94117659]
+[node name="Light" type="Node3D"]
 
-[node name="Cube_176" type="MeshInstance3D" parent="." unique_id=601175447]
+[node name="Cube_176" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 mesh = SubResource("ArrayMesh_gwq73")
 skeleton = NodePath("")
 
-[node name="Cube_177" type="MeshInstance3D" parent="." unique_id=11970354]
+[node name="Cube_177" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.19999999, 0, 0, 0, 0.19999999, 0, 0, 0, 0.19999999, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ytsya")
 skeleton = NodePath("")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=2058285498]
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 visible = false
 light_energy = 4.0

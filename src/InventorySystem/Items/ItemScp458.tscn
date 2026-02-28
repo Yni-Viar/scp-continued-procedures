@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cfndj31p6k1c0"]
+[gd_scene load_steps=17 format=4 uid="uid://cfndj31p6k1c0"]
 
 [ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_5u8kb"]
 [ext_resource type="Texture2D" uid="uid://be5wsldjulfc6" path="res://Assets/OriginalModels/Scp458/Scp458_Scp458Box_base.png" id="2_m271i"]
@@ -108,22 +108,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ln4xi")
 
-[node name="Scp458" type="RigidBody3D" unique_id=1204680669]
+[node name="Scp458" type="RigidBody3D"]
 collision_layer = 8
 mass = 4.0
 script = ExtResource("1_5u8kb")
 item_id = 9
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=373817537]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0052460954, 0)
 shape = SubResource("BoxShape3D_80k1r")
 
-[node name="Cube" type="MeshInstance3D" parent="." unique_id=1776066775]
+[node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7245165, 0, 0, 0, 0.7245165, 0, 0, 0, 0.7245165, 0, -0.011738544, 0)
 mesh = SubResource("ArrayMesh_yjfns")
 skeleton = NodePath("")
 
-[node name="Plane" type="MeshInstance3D" parent="." unique_id=411386281]
+[node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.7245165, 0, 0, 0, 0.7245165, 0, 0, 0, 0.7245165, 0, -0.07348285, 0)
 mesh = SubResource("ArrayMesh_x8yu3")
 skeleton = NodePath("")

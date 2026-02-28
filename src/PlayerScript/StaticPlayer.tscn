@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://by5c7g15ljuta"]
+[gd_scene load_steps=19 format=3 uid="uid://by5c7g15ljuta"]
 
 [ext_resource type="Script" uid="uid://coqykxns1k055" path="res://Scripts/StaticPlayer.gd" id="1_cfg1l"]
 [ext_resource type="Shader" uid="uid://d24wera2yb2tv" path="res://Shaders/Tint3DShader/tint.gdshader" id="2_1a04n"]
@@ -57,64 +57,64 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_e2rmt")
 material = SubResource("ShaderMaterial_og4yi")
 size = Vector2(2, 2)
 
-[node name="StaticPlayer" type="Node3D" unique_id=1106021035]
+[node name="StaticPlayer" type="Node3D"]
 script = ExtResource("1_cfg1l")
 
-[node name="Head" type="Node3D" parent="." unique_id=1307751005]
+[node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
-[node name="UpperLook" type="Marker3D" parent="Head" unique_id=948185513]
+[node name="UpperLook" type="Marker3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 
-[node name="ThirdPerson" type="Marker3D" parent="Head" unique_id=761783399]
+[node name="ThirdPerson" type="Marker3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.875)
 
-[node name="Camera3D" type="Camera3D" parent="Head" unique_id=2103139256]
+[node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
 cull_mask = 524287
 near = 0.031
 far = 60.0
 
-[node name="Optimizator" type="Area3D" parent="Head/Camera3D" unique_id=1250378331]
+[node name="Optimizator" type="Area3D" parent="Head/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -16)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Optimizator" unique_id=491757045]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/Optimizator"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -30, 0)
 shape = SubResource("CapsuleShape3D_j77eh")
 
-[node name="Overlays" type="Node3D" parent="Head/Camera3D" unique_id=2081338206]
+[node name="Overlays" type="Node3D" parent="Head/Camera3D"]
 
-[node name="ColdOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays" unique_id=1590098435]
+[node name="ColdOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0016798973, -0.043239594)
 visible = false
 mesh = SubResource("QuadMesh_cfg1l")
 skeleton = NodePath("../..")
 
-[node name="EgdeDetectOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays" unique_id=1881505835]
+[node name="EgdeDetectOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0016798973, -0.036518097)
 visible = false
 mesh = SubResource("QuadMesh_og4yi")
 skeleton = NodePath("../..")
 
-[node name="StereoGlassesOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays" unique_id=1349936689]
+[node name="StereoGlassesOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.05500126)
 visible = false
 mesh = SubResource("QuadMesh_e2rmt")
 skeleton = NodePath("../..")
 
-[node name="AmnesiaVisionOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays" unique_id=214132358]
+[node name="AmnesiaVisionOverlay" type="MeshInstance3D" parent="Head/Camera3D/Overlays"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.061725616)
 visible = false
 mesh = SubResource("QuadMesh_vgv1g")
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1453234534]
+[node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(256, 256)
 render_target_update_mode = 0
 script = ExtResource("7_831vx")
 
-[node name="LightDetector" type="Camera3D" parent="SubViewport" unique_id=318990268]
+[node name="LightDetector" type="Camera3D" parent="SubViewport"]
 far = 48.0
 
 [connection signal="body_entered" from="Head/Camera3D/Optimizator" to="." method="_on_optimizator_body_entered"]

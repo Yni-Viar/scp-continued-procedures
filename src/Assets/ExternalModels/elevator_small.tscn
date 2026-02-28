@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cqset7w3gmd5"]
+[gd_scene load_steps=47 format=4 uid="uid://cqset7w3gmd5"]
 
 [ext_resource type="Script" uid="uid://blproyl2vump2" path="res://Scripts/ElevatorSystem/ElevatorSystem.gd" id="1_cs2rt"]
 [ext_resource type="Texture2D" uid="uid://dymcum0c1ufle" path="res://Assets/ExternalModels/SCP/PopPopIcard/Elevator_1-0_ExitWall_unbake_BaseColor.png" id="2_g6v4j"]
@@ -341,73 +341,73 @@ _data = {
 &"door_open": SubResource("Animation_f8wcs")
 }
 
-[node name="elevator" type="Node3D" unique_id=1866152740]
+[node name="elevator" type="Node3D"]
 script = ExtResource("1_cs2rt")
 speed = 12.0
 navigation_link = NodePath("NavigationLink3D")
 
-[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=298236123]
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="."]
 sync_to_physics = false
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="AnimatableBody3D" unique_id=1332913839]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="AnimatableBody3D"]
 navigation_mesh = SubResource("NavigationMesh_3erjc")
 
-[node name="Cube" type="MeshInstance3D" parent="AnimatableBody3D/NavigationRegion3D" unique_id=62052635]
+[node name="Cube" type="MeshInstance3D" parent="AnimatableBody3D/NavigationRegion3D"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5759001, -1.3120033, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_cff2g")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=369290569]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.033783, 0)
 visibility_range_end = 64.0
 mesh = SubResource("PlaneMesh_guu0a")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=741183137]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5759001, -1.3120033, 0)
 shape = SubResource("ConcavePolygonShape3D_2rkvl")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=2041125411]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9129775, -0.31323242, -1.7389331)
 shape = SubResource("BoxShape3D_np1vv")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1350039787]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9129775, -0.31323242, 1.7406065)
 shape = SubResource("BoxShape3D_np1vv")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1906782790]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007659912, -0.31687474, 2.2568665)
 shape = SubResource("BoxShape3D_jpt57")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=2035975525]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007659912, -0.3041687, -2.2297587)
 shape = SubResource("BoxShape3D_jpt57")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=513465569]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="AnimatableBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9162598, -0.31111145, 0.0021362305)
 shape = SubResource("BoxShape3D_w1psn")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="." unique_id=667897842]
+[node name="NavigationLink3D" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.973238, -2.1565657, 0)
 enabled = false
 end_position = Vector3(2, 0, 0)
 
-[node name="DoorSound" type="AudioStreamPlayer3D" parent="." unique_id=864029092]
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9016125, 0, 0)
 max_distance = 40.0
 
-[node name="Move" type="AudioStreamPlayer3D" parent="." unique_id=1835871248]
+[node name="Move" type="AudioStreamPlayer3D" parent="."]
 max_distance = 48.0
 
-[node name="PlayerArea" type="Area3D" parent="." unique_id=2127670480]
+[node name="PlayerArea" type="Area3D" parent="."]
 collision_layer = 11
 collision_mask = 11
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerArea" unique_id=1100970319]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08729422, 0.0229888, -0.006750345)
 shape = SubResource("BoxShape3D_olfai")
 
-[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1032246526]
+[node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
 bounce_indirect_energy = 2.0
@@ -417,51 +417,53 @@ texel_scale = 0.5
 generate_probes_subdiv = 1
 light_data = ExtResource("4_mc2j4")
 
-[node name="LczDoor" type="Node3D" parent="." unique_id=1275218825]
+[node name="LczDoor" type="Node3D" parent="."]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.9130875, -2.6523993, 0.005761683)
 script = ExtResource("12_np1vv")
 
-[node name="Cube_003" type="MeshInstance3D" parent="LczDoor" unique_id=1116710126]
+[node name="Cube_003" type="MeshInstance3D" parent="LczDoor"]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_gdd3j")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_003" unique_id=1021472448]
+[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_003"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_003/StaticBody3D" unique_id=1100429345]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_003/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_f8wcs")
 
-[node name="Cube_001" type="MeshInstance3D" parent="LczDoor" unique_id=60753197]
+[node name="Cube_001" type="MeshInstance3D" parent="LczDoor"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.003067013, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_fal7a")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_001" unique_id=1744356493]
+[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_001"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_001/StaticBody3D" unique_id=1458334295]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_001/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48974568, 1.6488402, 0.0014650822)
 shape = SubResource("BoxShape3D_2sqeg")
 
-[node name="Cube_002" type="MeshInstance3D" parent="LczDoor" unique_id=329752382]
+[node name="Cube_002" type="MeshInstance3D" parent="LczDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003067013, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_1670q")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_002" unique_id=87340505]
+[node name="StaticBody3D" type="StaticBody3D" parent="LczDoor/Cube_002"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_002/StaticBody3D" unique_id=404284806]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LczDoor/Cube_002/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48974586, 1.6502984, 0.0014650822)
 shape = SubResource("BoxShape3D_2sqeg")
 
-[node name="DoorSound" type="AudioStreamPlayer3D" parent="LczDoor" unique_id=408664088]
+[node name="DoorSound" type="AudioStreamPlayer3D" parent="LczDoor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9390855, 0)
 max_distance = 40.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=610635855]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../LczDoor")
-libraries/ = SubResource("AnimationLibrary_dhd7e")
+libraries = {
+&"": SubResource("AnimationLibrary_dhd7e")
+}
 
 [connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
 [connection signal="body_exited" from="PlayerArea" to="." method="_on_player_area_body_exited"]

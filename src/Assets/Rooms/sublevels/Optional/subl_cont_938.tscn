@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cmg1lea3osal"]
+[gd_scene load_steps=23 format=4 uid="uid://cmg1lea3osal"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_cngcp"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_qy6ff"]
@@ -174,57 +174,57 @@ font = ExtResource("5_pkqvl")
 [sub_resource type="BoxShape3D" id="BoxShape3D_qy6ff"]
 size = Vector3(53.475723, 17.192139, 41.3338)
 
-[node name="subl_cont938" type="StaticBody3D" unique_id=1491031549]
+[node name="subl_cont938" type="StaticBody3D"]
 script = ExtResource("1_qy6ff")
 mesh_node_path = NodePath("NavigationRegion3D/Cube_003")
 floor_material_index = 1
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1477626172]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_4dl2j")
 
-[node name="Scp938Cage" type="Node3D" parent="NavigationRegion3D" unique_id=2024590990]
+[node name="Scp938Cage" type="Node3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9041, 7.5321, -97.194)
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Scp938Cage" unique_id=853286384]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D/Scp938Cage"]
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_bi31u")
 skeleton = NodePath("")
 
-[node name="Cube_003" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=2086034620]
+[node name="Cube_003" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1.7881393e-07, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 1.7881393e-07, 0.07, 0.17536032, -0.36)
 visibility_range_end = 96.0
 mesh = SubResource("ArrayMesh_pkqvl")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1358124466]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.78814e-07, 0, 1, 0, 1, 0, -1, 0, 1.78814e-07, 0.07, 0.17536, -0.36)
 shape = SubResource("ConcavePolygonShape3D_j7axh")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=72270483]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-4, 0, 1.74846e-07, 0, 4, 0, -3.49692e-07, 0, -2, 0.652544, 3.84165, 5.29327)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_xja3e")
 skeleton = NodePath("../../../../../../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=921262485]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.74846e-07, 0, -2, 0, 4, 0, 4, 0, -8.74228e-08, 4.0328, 3.67137, 1.97931)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_7tfy1")
 skeleton = NodePath("../../../../../../..")
 
-[node name="wooden_lantern" parent="." unique_id=1693296984 instance=ExtResource("5_cngcp")]
+[node name="wooden_lantern" parent="." instance=ExtResource("5_cngcp")]
 transform = Transform3D(-1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0, 1, 2.93724, 0.536744, 3.76281)
 
-[node name="entityspawn" type="Marker3D" parent="." unique_id=1265974494 groups=["Scp938Spawn"]]
+[node name="entityspawn" type="Marker3D" parent="." groups=["Scp938Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.616, 0.110269, -90.9367)
 
-[node name="Scp938Task" type="Area3D" parent="." unique_id=74527310]
+[node name="Scp938Task" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.688627, -84.22472)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("10_pkqvl")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp938Task" unique_id=21833852]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp938Task"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7490158, -1.163208, -1.0440369)
 shape = SubResource("BoxShape3D_qy6ff")
 

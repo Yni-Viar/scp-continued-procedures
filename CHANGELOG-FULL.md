@@ -3,6 +3,15 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.8.3 ("Downgraded carpet")
+
+- [x] Downgrade to Godot 4.5 for more stability. (need to test) \*
+- [x] \[Technical\] Move SCP-522 model only to OriginalModels folder.\*\*
+
+\*There are plenty issues for 4.6 on Godot Github, so SSAO in GLES3, which is 4.6 feature, should wait for a while, until 4.6 became more stable...
+
+\*\* Since I made SCP-522 model, but not the textures (taken directly from SCP-Wiki), textures will be in External folder and model in Original folder.
+
 ## v5.8.2 ("Patched carpet" mini-update, 2026.02.27)
 ### Add code improvements from [Hikkan game, a non-scp story game by Yni](https://github.com/Yni-Viar/Hikkan)
 - Loading Screen is now offloaded to Settings singleton

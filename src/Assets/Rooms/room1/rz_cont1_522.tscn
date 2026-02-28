@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://ch2it7880i81w"]
+[gd_scene load_steps=33 format=4 uid="uid://ch2it7880i81w"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_78d0j"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_5m812"]
@@ -19,7 +19,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="15_3v0td"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_8lkkk"]
 [ext_resource type="LightmapGIData" uid="uid://cb3moca1e68wq" path="res://Assets/Rooms/room1/Lm/rz_cont1_522.lmbake" id="16_e84cl"]
-[ext_resource type="PackedScene" uid="uid://dlpgutdspohq2" path="res://Assets/ExternalModels/scp_522.tscn" id="20_3v0td"]
+[ext_resource type="PackedScene" uid="uid://dlpgutdspohq2" path="res://Assets/OriginalModels/scp_522.tscn" id="20_3v0td"]
 [ext_resource type="Script" uid="uid://d4gmitkq2q5b2" path="res://Scripts/Triggers/Scp522TaskTrigger.gd" id="21_e84cl"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_me810"]
@@ -227,115 +227,115 @@ data = PackedVector3Array(-8.658299, -2.1302, 10.241, -4.0039, 5.1301, 10.235499
 [sub_resource type="BoxShape3D" id="BoxShape3D_4f2nv"]
 size = Vector3(9.80249, 9.146423, 9.306152)
 
-[node name="rz_cont1_522" type="StaticBody3D" unique_id=124540106]
+[node name="rz_cont1_522" type="StaticBody3D"]
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=487632170]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_me810")
 
-[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D" unique_id=967869293]
+[node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 0.014313042, 0)
 mesh = SubResource("ArrayMesh_5m812")
 skeleton = NodePath("")
 
-[node name="Props" type="Node3D" parent="NavigationRegion3D" unique_id=668348221]
+[node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" unique_id=1309247612 instance=ExtResource("5_3v0td")]
+[node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.306727, -2.0894926, 5.1923747)
 
-[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" unique_id=824656544 instance=ExtResource("5_3v0td")]
+[node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.298333, -2.0894926, 8.347616)
 
-[node name="steel_frame_shelves_01_2k4" parent="NavigationRegion3D/Props" unique_id=173902275 instance=ExtResource("5_3v0td")]
+[node name="steel_frame_shelves_01_2k4" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.884661, -2.0894926, 7.5863466)
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" unique_id=1195475946 instance=ExtResource("6_e84cl")]
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("6_e84cl")]
 transform = Transform3D(-4.371139e-08, 0, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 1.9106855e-15, -8.669507, 5.6060243, 7.4070373)
 
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" unique_id=576343387 instance=ExtResource("6_e84cl")]
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("6_e84cl")]
 transform = Transform3D(-4.371139e-08, 0, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 1.9106855e-15, -8.669507, 5.6060243, 3.0863485)
 
-[node name="industrial_wall_lamp13" type="Node3D" parent="NavigationRegion3D/Props" unique_id=909767393]
+[node name="industrial_wall_lamp13" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-4.371139e-08, 0, 1, -1, -4.371139e-08, -4.371139e-08, 4.371139e-08, -1, 3.5527137e-15, -8.629887, 4.2086997, -5.1077504)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp13" unique_id=1530006859]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp13"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_a7dtb")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp15" type="Node3D" parent="NavigationRegion3D/Props" unique_id=1569403794]
+[node name="industrial_wall_lamp15" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.371139e-08, 4.3711385e-08, 4.371139e-08, -1, 3.5119786, -0.750402, -0.17269814)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp15" unique_id=1477371792]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp15"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_a7dtb")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp16" type="Node3D" parent="NavigationRegion3D/Props" unique_id=525220305]
+[node name="industrial_wall_lamp16" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.371139e-08, 4.3711385e-08, 4.371139e-08, -1, 8.0519, -0.750402, -0.17269814)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp16" unique_id=1041914359]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp16"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_a7dtb")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp14" type="Node3D" parent="NavigationRegion3D/Props" unique_id=571493157]
+[node name="industrial_wall_lamp14" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-4.3711385e-08, 1, -4.3711392e-08, -1, -4.371139e-08, -4.371139e-08, -4.3711392e-08, 4.371139e-08, 1, -4.1133957, 4.2086997, -9.47477)
 
-[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp14" unique_id=461232022]
+[node name="industrial_wall_lamp" type="MeshInstance3D" parent="NavigationRegion3D/Props/industrial_wall_lamp14"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_a7dtb")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" unique_id=916099638 instance=ExtResource("6_e84cl")]
+[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("6_e84cl")]
 transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 4.371139e-08, 1, 7.375922, 5.562163, 0.18456972)
 
-[node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" unique_id=1502064931 instance=ExtResource("6_e84cl")]
+[node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" instance=ExtResource("6_e84cl")]
 transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, -1, -4.371139e-08, -4.371139e-08, -4.371139e-08, 4.371139e-08, 1, 1.3117251, 5.562163, 0.18456972)
 
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" unique_id=1028771634 instance=ExtResource("6_e84cl")]
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("6_e84cl")]
 transform = Transform3D(4.3711392e-08, -8.742278e-08, -1, -1, -4.371139e-08, -4.371139e-08, -4.3711385e-08, 1, -8.742278e-08, 9.565682, 5.6060243, 5.697487)
 
-[node name="Table" parent="NavigationRegion3D/Props" unique_id=54108350 instance=ExtResource("14_evikk")]
+[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("14_evikk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.438169, -1.0753676, 1.3633754)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props" unique_id=1585911792]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(8, 0, -1.1368684e-13, 0, 8, 0, 1.1368684e-13, 0, 8, 4.400732, 5.382459, 0.25856447)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_qo2rk")
 
-[node name="NavigationLink3D" type="NavigationLink3D" parent="NavigationRegion3D" unique_id=880070874]
+[node name="NavigationLink3D" type="NavigationLink3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.957655, -1.6154296, -0.024023533)
 navigation_layers = 2
 start_position = Vector3(0, 0, -1)
 end_position = Vector3(0, 0, 1)
 
-[node name="NavigationLink3D2" type="NavigationLink3D" parent="NavigationRegion3D" unique_id=409579388]
+[node name="NavigationLink3D2" type="NavigationLink3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02973175, -1.6061816, -7.968533)
 navigation_layers = 2
 start_position = Vector3(-1.25, 0, 0)
 end_position = Vector3(1.25, 0, 0)
 
-[node name="NavigationLink3D3" type="NavigationLink3D" parent="NavigationRegion3D" unique_id=1521959213]
+[node name="NavigationLink3D3" type="NavigationLink3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02973175, -1.6061816, -2.6307263)
 navigation_layers = 2
 start_position = Vector3(-1.25, 0, 0)
 end_position = Vector3(1.25, 0, 0)
 
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D" unique_id=402296862]
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.058236, 0)
 height = 9.1
 vertices = PackedVector3Array(9.851629, 0, -9.510703, 9.905108, 0, 3.4904883, 9.187685, 0, 3.551963, 9.100101, 0, -9.541917)
 affect_navigation_mesh = true
 avoidance_enabled = false
 
-[node name="DebugLights" type="Node3D" parent="." unique_id=1766057920]
+[node name="DebugLights" type="Node3D" parent="."]
 visible = false
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="DebugLights" unique_id=1381361704]
+[node name="OmniLight3D5" type="OmniLight3D" parent="DebugLights"]
 transform = Transform3D(-4.3711385e-08, 1, -4.3711392e-08, -1, -4.371139e-08, -4.3711385e-08, -4.371139e-08, 4.371139e-08, 1, -4.113396, 4.2087, -8.47477)
 visible = false
 light_color = Color(1, 0, 0, 1)
@@ -344,7 +344,7 @@ distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 8.0
 
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights" unique_id=460140179]
+[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
 transform = Transform3D(0.9997129, -0.009089472, 0.022170134, 0, 0.92525613, 0.37934318, -0.023961078, -0.37923425, 0.9249905, 4.694298, 2.1858559, 0.47288013)
 visible = false
 light_color = Color(1, 0.72133213, 0.67637587, 1)
@@ -353,7 +353,7 @@ light_bake_mode = 1
 spot_range = 27.08519
 spot_angle = 17.932112
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights" unique_id=1335963644]
+[node name="OmniLight3D4" type="OmniLight3D" parent="DebugLights"]
 transform = Transform3D(-4.3711385e-08, 0, 1, -1, -4.371139e-08, -4.3711385e-08, 4.371139e-08, -1, 1.9106853e-15, -7.6298866, 4.2087, -5.10775)
 visible = false
 light_color = Color(1, 0, 0, 1)
@@ -362,7 +362,7 @@ distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 8.0
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="DebugLights" unique_id=2050434524]
+[node name="OmniLight3D6" type="OmniLight3D" parent="DebugLights"]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.3711385e-08, 4.371138e-08, 4.371139e-08, -1, 3.511979, -0.75040156, -1.1726981)
 visible = false
 light_color = Color(1, 0, 0, 1)
@@ -371,7 +371,7 @@ distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 8.0
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="DebugLights" unique_id=575573429]
+[node name="OmniLight3D7" type="OmniLight3D" parent="DebugLights"]
 transform = Transform3D(4.3711392e-08, -1, -4.3711385e-08, -1, -4.371139e-08, -4.3711385e-08, 4.371138e-08, 4.371139e-08, -1, 8.0519, -0.75040156, -1.1726981)
 visible = false
 light_color = Color(1, 0, 0, 1)
@@ -380,7 +380,7 @@ distance_fade_enabled = true
 distance_fade_begin = 24.0
 omni_range = 8.0
 
-[node name="LightmapGI" type="LightmapGI" parent="." unique_id=325353623]
+[node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 interior = true
 texel_scale = 4.0
@@ -388,7 +388,7 @@ environment_mode = 3
 environment_custom_color = Color(0, 0, 0, 1)
 light_data = ExtResource("16_e84cl")
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="." unique_id=672467434 groups=["ReflectionProbe"]]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7626736, 2.5397613, 0.26148897)
 blend_distance = 0.4
 max_distance = 64.0
@@ -397,50 +397,50 @@ origin_offset = Vector3(0, 0, 4.985)
 box_projection = true
 interior = true
 
-[node name="Seasonal" type="Node3D" parent="." unique_id=198062473]
+[node name="Seasonal" type="Node3D" parent="."]
 
-[node name="Halloween" type="Node3D" parent="Seasonal" unique_id=733393344]
+[node name="Halloween" type="Node3D" parent="Seasonal"]
 visible = false
 script = ExtResource("14_8j3m0")
 current_season = 6
 
-[node name="Pumpkin" parent="Seasonal/Halloween" unique_id=1856161724 instance=ExtResource("15_02gbi")]
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("15_02gbi")]
 transform = Transform3D(-1.2500001, 0, -2.1650634, 0, 2.5, 0, 2.1650634, 0, -1.2500001, 7.8508167, -1.9716258, -2.4034858)
 
-[node name="Pumpkin2" parent="Seasonal/Halloween" unique_id=240779630 instance=ExtResource("15_02gbi")]
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("15_02gbi")]
 transform = Transform3D(2.5, 0, -3.5762787e-07, 0, 2.5000002, 0, 3.5762787e-07, 0, 2.5, 1.4585066, -1.9716258, -8.080646)
 
-[node name="Pumpkin3" parent="Seasonal/Halloween" unique_id=82525746 instance=ExtResource("15_02gbi")]
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("15_02gbi")]
 transform = Transform3D(0.64607066, 0, 0.7632776, 0, 1, 0, -0.7632776, 0, 0.64607066, -7.367354, -1.9447423, -8.692281)
 
-[node name="Christmas" type="Node3D" parent="Seasonal" unique_id=2018059973]
+[node name="Christmas" type="Node3D" parent="Seasonal"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8323898, 9.217535)
 visible = false
 script = ExtResource("14_8j3m0")
 current_season = 5
 
-[node name="ChristmasLights" parent="Seasonal/Christmas" unique_id=411334873 instance=ExtResource("16_8lkkk")]
+[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("16_8lkkk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7921705, -2.711957, -2.3950424)
 
-[node name="ChristmasLights2" parent="Seasonal/Christmas" unique_id=938874569 instance=ExtResource("16_8lkkk")]
+[node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("16_8lkkk")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7921705, -2.711957, -5.4515004)
 
-[node name="Scp522" parent="." unique_id=1625952813 groups=["Scp522"] instance=ExtResource("20_3v0td")]
+[node name="Scp522" parent="." groups=["Scp522"] instance=ExtResource("20_3v0td")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5336413, -2.0652966, -8.02657)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1913033137]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_3v0td")
 
-[node name="ScientistPoint" type="Marker3D" parent="." unique_id=1003208482 groups=["ScientistPoint"]]
+[node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.405243, -1.6194451, 5.6987667)
 
-[node name="Scp522Trigger" type="Area3D" parent="." unique_id=1256860448]
+[node name="Scp522Trigger" type="Area3D" parent="."]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("21_e84cl")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp522Trigger" unique_id=735288099]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Scp522Trigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.021118, 2.4706116, -4.8259277)
 shape = SubResource("BoxShape3D_4f2nv")
 

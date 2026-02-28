@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=23 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -66,7 +66,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Menu" type="Control" unique_id=1011622195]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -75,7 +75,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3kf3n")
 
-[node name="Background" type="TextureRect" parent="." unique_id=2006404578]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,7 +85,7 @@ grow_vertical = 2
 texture = ExtResource("2_idohh")
 expand_mode = 1
 
-[node name="Label" type="Label" parent="." unique_id=1032924580]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.181
@@ -101,7 +101,7 @@ theme_override_font_sizes/font_size = 64
 text = "SCP: Continued
 Procedures"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=887445170]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 264.0
@@ -109,7 +109,7 @@ offset_right = 564.0
 offset_bottom = 442.0
 theme_override_constants/separation = 64
 
-[node name="Play" type="Button" parent="HBoxContainer" unique_id=234182352]
+[node name="Play" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -121,7 +121,7 @@ icon = ExtResource("5_3jcrr")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="StoryMode" type="Button" parent="HBoxContainer" unique_id=1520875055]
+[node name="StoryMode" type="Button" parent="HBoxContainer"]
 visible = false
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
@@ -134,7 +134,7 @@ icon = ExtResource("7_a8aa6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="SettingsButton" type="Button" parent="HBoxContainer" unique_id=564660708]
+[node name="SettingsButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -146,7 +146,7 @@ icon = ExtResource("7_x0ao6")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="HelpButton" type="Button" parent="HBoxContainer" unique_id=1498245428]
+[node name="HelpButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8p2w")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_t8p2w")
@@ -158,7 +158,7 @@ icon = ExtResource("6_aobxe")
 icon_alignment = 1
 vertical_icon_alignment = 0
 
-[node name="GameSettings" type="VBoxContainer" parent="." unique_id=940105071]
+[node name="GameSettings" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.382
@@ -171,28 +171,28 @@ offset_right = -112.064
 offset_bottom = 76.648
 alignment = 1
 
-[node name="Info" type="Label" parent="GameSettings" unique_id=330474832]
+[node name="Info" type="Label" parent="GameSettings"]
 visible = false
 layout_mode = 2
 text = "GAME_SETTINGS_INFO"
 
-[node name="Seed" type="LineEdit" parent="GameSettings" unique_id=629011625]
+[node name="Seed" type="LineEdit" parent="GameSettings"]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 placeholder_text = "CUSTOM_SEED"
 
-[node name="TimeLimited" type="CheckBox" parent="GameSettings" unique_id=1343474899]
+[node name="TimeLimited" type="CheckBox" parent="GameSettings"]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 text = "TIME_LIMITED"
 
-[node name="ZenMode" type="CheckBox" parent="GameSettings" unique_id=212584207]
+[node name="ZenMode" type="CheckBox" parent="GameSettings"]
 layout_mode = 2
 theme = ExtResource("2_syfuq")
 text = "ZEN_MODE"
 
-[node name="Credits" type="Button" parent="." unique_id=385452122]
+[node name="Credits" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -206,7 +206,7 @@ theme = ExtResource("2_syfuq")
 toggle_mode = true
 text = "CREDITS"
 
-[node name="Logo" type="TextureRect" parent="." unique_id=758816982]
+[node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.09
@@ -221,7 +221,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_sjh0l")
 
-[node name="CreditsContainer" type="Panel" parent="." unique_id=1880790256]
+[node name="CreditsContainer" type="Panel" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -232,7 +232,7 @@ offset_top = 0.271999
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CreditsContainer2" type="ScrollContainer" parent="CreditsContainer" unique_id=265073676]
+[node name="CreditsContainer2" type="ScrollContainer" parent="CreditsContainer"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.611
@@ -244,7 +244,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("2_syfuq")
 
-[node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2" unique_id=2300469]
+[node name="CreditsLabel" type="Label" parent="CreditsContainer/CreditsContainer2"]
 layout_mode = 2
 text = "SCP: Continued Procedures
 -------------------------
@@ -398,7 +398,7 @@ Lomzz
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tutorial" type="Window" parent="." unique_id=53345018]
+[node name="Tutorial" type="Window" parent="."]
 title = "Tutorial"
 initial_position = 2
 size = Vector2i(800, 480)
@@ -406,32 +406,32 @@ visible = false
 theme = ExtResource("2_syfuq")
 script = ExtResource("7_wfhf6")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial" unique_id=1991006165]
+[node name="ScrollContainer" type="ScrollContainer" parent="Tutorial"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/ScrollContainer" unique_id=25618597]
+[node name="VBoxContainer" type="VBoxContainer" parent="Tutorial/ScrollContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1997824839]
+[node name="Label" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "HELP_TITLE"
 
-[node name="Label2" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1981632724]
+[node name="Label2" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "HELP_TASKS"
 
-[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer" unique_id=1531377296]
+[node name="Label3" type="Label" parent="Tutorial/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 text = "HELP_EVENTS"
 
-[node name="Settings" parent="." unique_id=847924018 instance=ExtResource("11_a8aa6")]
+[node name="Settings" parent="." instance=ExtResource("11_a8aa6")]
 visible = false
 
-[node name="StoryUI" type="Control" parent="." unique_id=593441246]
+[node name="StoryUI" type="Control" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -440,7 +440,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="StoryUI" unique_id=1367586232]
+[node name="TextureRect" type="TextureRect" parent="StoryUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -450,23 +450,23 @@ grow_vertical = 2
 texture = SubResource("NoiseTexture2D_dd46u")
 expand_mode = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="StoryUI" unique_id=432808909]
+[node name="CanvasLayer" type="CanvasLayer" parent="StoryUI"]
 visible = false
 
-[node name="Node2D" type="Node2D" parent="StoryUI/CanvasLayer" unique_id=212253567]
+[node name="Node2D" type="Node2D" parent="StoryUI/CanvasLayer"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StoryUI/CanvasLayer/Node2D" unique_id=643032903]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StoryUI/CanvasLayer/Node2D"]
 position = Vector2(528, 192)
 sprite_frames = SubResource("SpriteFrames_dd46u")
 autoplay = "default"
 
-[node name="Panel" type="Panel" parent="StoryUI" unique_id=1268839045]
+[node name="Panel" type="Panel" parent="StoryUI"]
 layout_mode = 0
 offset_top = 320.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="Label" type="RichTextLabel" parent="StoryUI/Panel" unique_id=333547537]
+[node name="Label" type="RichTextLabel" parent="StoryUI/Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -483,7 +483,7 @@ text = "[center][font_size=32]Welcome to Yni Viar's dimension![/font_size][/cent
 [hr]
 Currently, this place is too... empty?"
 
-[node name="Back" type="TextureButton" parent="StoryUI" unique_id=341567749]
+[node name="Back" type="TextureButton" parent="StoryUI"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -493,13 +493,13 @@ offset_right = 64.0
 grow_vertical = 0
 texture_normal = ExtResource("14_dsmso")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=87732818]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_qki4b")
 volume_db = -8.226
 autoplay = true
 bus = &"Music"
 
-[node name="LiteWarning" type="Label" parent="." unique_id=792191831]
+[node name="LiteWarning" type="Label" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 40.0

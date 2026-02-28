@@ -1024,7 +1024,9 @@ mesh = ExtResource("6_q222s")
 skin = SubResource("Skin_icxd2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2030653869]
-libraries/ = SubResource("AnimationLibrary_12tmf")
+libraries = {
+&"": SubResource("AnimationLibrary_12tmf")
+}
 
 [node name="AddItemsArea" type="Area3D" parent="." unique_id=46471350]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12802, 2.00749, -6.32919)
