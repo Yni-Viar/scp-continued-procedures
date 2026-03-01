@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="3_c5cvh"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="4_qnwxj"]
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="5_qfwom"]
-[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="6_c5cvh"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="6_c026s"]
 [ext_resource type="LightmapGIData" uid="uid://c4wm3xlg4j1yx" path="res://Assets/Rooms/room3/Lm/room3_redux.lmbake" id="6_gk07h"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_qfwom"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_875mv"]
@@ -372,17 +372,14 @@ skeleton = NodePath("")
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("6_c5cvh")]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -5.02621, 3.87832, -3.81464)
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("6_c026s")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 4.038, 0)
 
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("6_c5cvh")]
-transform = Transform3D(6.18173e-08, -0.707107, 0.707107, -1, -4.37114e-08, 4.37114e-08, -7.10543e-15, -0.707107, -0.707107, -5.65706, 3.87832, 5.77367)
+[node name="Light5" parent="NavigationRegion3D/Props" instance=ExtResource("6_c026s")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 4.038, 0)
 
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("6_c5cvh")]
-transform = Transform3D(-6.25483e-15, -0.707107, -0.707107, -1, -4.37114e-08, 4.37114e-08, -6.18173e-08, 0.707107, -0.707107, 5.66995, 3.87832, 5.77367)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("6_c5cvh")]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 5.16531, 3.87832, -3.81464)
+[node name="Light6" parent="NavigationRegion3D/Props" instance=ExtResource("6_c026s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, 5)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)

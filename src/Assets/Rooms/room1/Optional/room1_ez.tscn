@@ -1,15 +1,14 @@
-[gd_scene load_steps=40 format=4 uid="uid://c4kjg8vj7euky"]
+[gd_scene load_steps=39 format=4 uid="uid://c4kjg8vj7euky"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ig11j"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_srtgi"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_rk2gv"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="3_d1xwx"]
 [ext_resource type="Material" uid="uid://emi0dvvkx1lb" path="res://Assets/Materials/ResearchZone/Redux/Ventilation_Wall.tres" id="3_druik"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="4_2815l"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="5_auprv"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="6_druik"]
 [ext_resource type="LightmapGIData" uid="uid://chc2qomjklune" path="res://Assets/Rooms/room1/Optional/Lm/room1_ez.lmbake" id="8_2815l"]
-[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="9_kygly"]
-[ext_resource type="PackedScene" uid="uid://l6v51fn3hbsv" path="res://Assets/ExternalModels/industrial_wall_lamp_light.tscn" id="10_guktx"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="10_mcmt4"]
 [ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="11_gcdxs"]
 [ext_resource type="Texture2D" uid="uid://ttw8c15u0if6" path="res://Assets/Materials/Optional/Elevator/Metal009_2K-PNG_Color.png" id="12_gkoav"]
@@ -368,14 +367,11 @@ navigation_mesh = SubResource("NavigationMesh_auprv")
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("6_druik")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.9986439, -0.242162, 3.8751078)
 
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("9_kygly")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 6.8472, 2.29378, 5.0206)
+[node name="Light" parent="NavigationRegion3D/Props" instance=ExtResource("3_d1xwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.073967, 4.057064, 7.085038)
 
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("9_kygly")]
-transform = Transform3D(4.37114e-08, 8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, 8.74228e-08, -4.39061, 3.966551, 5.0206)
-
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("10_guktx")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 4.460704, 3.1354012, -3.6853013)
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("3_d1xwx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.055664, 4.057064, 1.955409)
 
 [node name="site19_wall_cb_modern" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.1650767, -1.1937386, 7.656159)

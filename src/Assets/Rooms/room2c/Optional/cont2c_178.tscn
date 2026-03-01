@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dpyr1p84higf0" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_arm_2k.jpg" id="4_ned5y"]
 [ext_resource type="Texture2D" uid="uid://dm3meiue50u10" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_nor_gl_2k.jpg" id="5_cxq0v"]
 [ext_resource type="Texture2D" uid="uid://brxtgl2ekhirf" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_diff_2k.jpg" id="6_bc8ab"]
-[ext_resource type="PackedScene" uid="uid://l6v51fn3hbsv" path="res://Assets/ExternalModels/industrial_wall_lamp_light.tscn" id="6_dxxfm"]
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="7_2a2d4"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="8_q01xb"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_wmtfc"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="9_bejmg"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_mrost"]
 [ext_resource type="LightmapGIData" uid="uid://bwb3mkncdtbhm" path="res://Assets/Rooms/room2c/Optional/Lm/cont2c_178.lmbake" id="12_m3lx6"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="15_r5gbw"]
@@ -236,21 +236,6 @@ navigation_mesh = SubResource("NavigationMesh_o7u4x")
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("6_dxxfm")]
-transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3.09086e-08, 0.707107, 0.707107, 5.5192304, 2.64704, -2.1415682)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("6_dxxfm")]
-transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3.09086e-08, 0.707107, 0.707107, -7.6121583, 3.573583, -0.47075367)
-
-[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("6_dxxfm")]
-transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3.09086e-08, 0.707107, 0.707107, -2.8554091, 3.573583, -5.319255)
-
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("6_dxxfm")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 4.00352, 3.24667, 8.78498)
-
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("6_dxxfm")]
-transform = Transform3D(4.37114e-08, -1, 4.37114e-08, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 8.45656, 3.24667, 4.03393)
-
 [node name="industrial_wall_lamp5" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(0.7071067, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071067, -3.4893162, 3.5019298, 6.818715)
 
@@ -302,9 +287,17 @@ light_bake_mode = 1
 distance_fade_enabled = true
 distance_fade_begin = 24.0
 
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("9_bejmg")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 0.34824038, 4.038, 7.134976)
+
+[node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("9_bejmg")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -2.664867, 4.038, 0.00873518)
+
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("9_bejmg")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 6.8684726, 4.038, 0.6147437)
+
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
-visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_61k58")
 skeleton = NodePath("")
 

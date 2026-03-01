@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://djsvlp6wwwcpl"]
+[gd_scene load_steps=26 format=4 uid="uid://djsvlp6wwwcpl"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_epfj1"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_wkxox"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="7_0avt3"]
 [ext_resource type="Shader" uid="uid://dn5865upl6f7h" path="res://Shaders/BlurShader/blur.gdshader" id="8_55dyc"]
 [ext_resource type="LightmapGIData" uid="uid://7pn4ysyxw4j7" path="res://Assets/Rooms/room2/Lm/rz_room_2_wc.lmbake" id="9_yajlf"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="10_stn5d"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_d8u2j"]
 vertices = PackedVector3Array(-3.5718002, -0.8041183, -9.77885, -3.5718002, -0.8041183, -7.5288496, -3.0718002, -0.8041183, -7.2788496, 3.4281998, -0.8041183, -7.2788496, 3.4281998, -0.8041183, -9.77885, -3.0718002, -0.8041183, 9.97115, 3.1781998, -0.8041183, 9.97115)
@@ -692,12 +693,6 @@ avoidance_enabled = false
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("6_5qicx")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 3.83579, 4.52267, 5.00113)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("6_5qicx")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 3.83579, 4.52267, -1.44622)
-
 [node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("6_5qicx")]
 transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.898, 4.52267, -0.00490475)
 visible = false
@@ -730,12 +725,6 @@ visible = false
 transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -9.83132, 4.52267, -5.19144)
 visible = false
 
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("6_5qicx")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -3.75445, 4.52267, -1.44622)
-
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("6_5qicx")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -3.75445, 4.52267, 5.00113)
-
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-3.49691e-07, 0, -4, 0, 8, 0, 8, 0, -1.74846e-07, 3.77923, 4.86147, -3.8245)
 visibility_range_end = 64.0
@@ -757,6 +746,12 @@ mesh = SubResource("BoxMesh_wkxox")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.87032, 2.3313, 0.112917)
 visibility_range_end = 64.0
 mesh = SubResource("BoxMesh_wkxox")
+
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("10_stn5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, 4.836)
+
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("10_stn5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, -4.385)
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

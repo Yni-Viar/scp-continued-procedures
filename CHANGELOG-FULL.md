@@ -3,6 +3,11 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v5.9.0 ("Cleanlight update")
+### Research Zone lighting update
+- [x] Revamped (again) Research Zone lighting.
+
+
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)
 
 - Downgrade to Godot 4.5 for more stability.\*

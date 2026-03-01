@@ -1,7 +1,6 @@
 [gd_scene load_steps=33 format=4 uid="uid://bsf6uo5b8l2jm"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_v6vjl"]
-[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_sjxj1"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="2_takvg"]
 [ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="3_tphe8"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="4_0oerq"]
@@ -15,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://l6v51fn3hbsv" path="res://Assets/ExternalModels/industrial_wall_lamp_light.tscn" id="9_tphe8"]
 [ext_resource type="LightmapGIData" uid="uid://bhntwei1yeqb8" path="res://Assets/Rooms/room2/Lm/rz_exit2_gatec.lmbake" id="13_a7c55"]
 [ext_resource type="PackedScene" uid="uid://dn45mk02tkui1" path="res://Assets/Doors/lcz_door.tscn" id="13_f67qm"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="13_v6vjl"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="14_f028w"]
 [ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="16_2wnpn"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_06tn7"]
@@ -226,12 +226,6 @@ skeleton = NodePath("")
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("2_sjxj1")]
-transform = Transform3D(-4.3711392e-08, 0, -1, 1.0000001, -4.371139e-08, -4.371139e-08, -4.3711392e-08, -1, 1.9106855e-15, 4.4531837, 4.0155997, 6.071795)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("2_sjxj1")]
-transform = Transform3D(-4.3711392e-08, 0, -1, 1.0000001, -4.371139e-08, -4.371139e-08, -4.3711392e-08, -1, 1.9106855e-15, 4.4531837, 4.0155997, -2.8301597)
-
 [node name="industrial_wall_lamp3" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.7367163, 4.1110063, 4.5850825)
 
@@ -322,6 +316,12 @@ transform = Transform3D(-4.371139e-08, 0, 1, 1, -4.371139e-08, 4.371139e-08, 4.3
 
 [node name="industrial_wall_lamp9" parent="NavigationRegion3D/Props" instance=ExtResource("9_tphe8")]
 transform = Transform3D(-4.371139e-08, 0, 1, 1, -4.371139e-08, 4.371139e-08, 4.371139e-08, 1, 1.9106855e-15, -4.495511, -5.8456545, -1.6225924)
+
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("13_v6vjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05692005, 4.037821, 4.8362575)
+
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("13_v6vjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05692005, 4.037821, -4.385369)
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.56411743, -1.2318656, 0.3437767)

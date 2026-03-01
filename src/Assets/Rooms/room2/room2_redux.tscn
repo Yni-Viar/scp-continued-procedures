@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_cg23l"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_g4gw2"]
-[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="2_cl1d2"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_qfl03"]
 [ext_resource type="Material" uid="uid://drdixxgiv4gv4" path="res://Assets/Materials/ResearchZone/Ceiling.tres" id="3_nl0fw"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="3_whu3x"]
@@ -13,6 +12,7 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="9_whu3x"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="11_g4gw2"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="13_36gh2"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="13_g4gw2"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
 vertices = PackedVector3Array(-3.7904997, -0.7787669, -8.2586, -8.7905, -0.7787669, -8.2586, -8.7905, -0.7787669, -7.0086, -3.0404997, -0.7787669, -7.0086, -2.7904997, -0.7787669, -5.5086, 2.9595003, -0.7787669, -5.5086, -3.5404997, -0.7787669, -9.7586, 3.2095003, -0.7787669, -7.0086, 3.4595003, -0.7787669, -9.7586, 8.9595, -0.7787669, -7.0086, 8.9595, -0.7787669, -8.5086, 3.7095003, -0.7787669, -8.5086, -3.0404997, -0.7787669, -1.0086002, -2.7904997, -0.7787669, 0.74139977, 2.9595003, -0.7787669, 0.74139977, 3.2095003, -0.7787669, -1.0086002, 3.2095003, -0.7787669, -3.5086002, -3.0404997, -0.7787669, -3.5086002, -8.7905, -0.7787669, -3.5086002, -8.7905, -0.7787669, -1.0086002, 8.9595, -0.7787669, -1.0086002, 8.9595, -0.7787669, -3.5086002, 3.4595003, -0.7787669, 9.7414, 3.4595003, -0.7787669, 8.7414, 2.9595003, -0.7787669, 8.4914, -2.7904997, -0.7787669, 8.4914, -3.5404997, -0.7787669, 8.7414, -3.5404997, -0.7787669, 9.7414, -2.7904997, -0.7787669, 5.4914, 3.2095003, -0.7787669, 2.4913998, -3.0404997, -0.7787669, 2.4913998, 3.2095003, -0.7787669, 5.2414, -8.7905, -0.7787669, 2.4913998, -8.7905, -0.7787669, 5.2414, 8.9595, -0.7787669, 5.2414, 8.9595, -0.7787669, 2.4913998)
@@ -649,23 +649,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.573772, -0.246935, 0.67024)
 [node name="Table6" parent="NavigationRegion3D/Props" instance=ExtResource("1_cg23l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.573772, -0.246935, -5.26122)
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("2_cl1d2")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.84542, 3.84897, -5.17092)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("2_cl1d2")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 1.91069e-15, 9.84542, 3.84897, 5.0206)
-
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("2_cl1d2")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -9.77963, 3.84897, 5.0206)
-
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("2_cl1d2")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -9.77963, 3.84897, -5.17092)
-
 [node name="laptop" parent="NavigationRegion3D/Props" instance=ExtResource("3_whu3x")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.34198, 0.17038262, -5.63673)
 
 [node name="laptop2" parent="NavigationRegion3D/Props" instance=ExtResource("3_whu3x")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.82518, 0.19498557, 0.791468)
+
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("13_g4gw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0863442, 4.037821, 4.8362575)
+
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("13_g4gw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0863442, 4.037821, -4.385369)
+
+[node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("13_g4gw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1292872, 4.037821, 4.8362575)
+
+[node name="Light5" parent="NavigationRegion3D/Props" instance=ExtResource("13_g4gw2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1292872, 4.037821, -4.385369)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

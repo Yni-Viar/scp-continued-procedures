@@ -8,7 +8,7 @@
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="5_jpowq"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="6_1vd86"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="7_5gale"]
-[ext_resource type="PackedScene" uid="uid://dtuvos03l8w06" path="res://Assets/ExternalModels/industrial_wall_lamp_lighter.tscn" id="7_83ssb"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="8_ndh3u"]
 [ext_resource type="LightmapGIData" uid="uid://bfxk33pu40ede" path="res://Assets/Rooms/room2/Lm/cont2_650.lmbake" id="8_uv1va"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="10_43rjr"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="10_rism5"]
@@ -668,20 +668,17 @@ skeleton = NodePath("")
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("6_1vd86")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.38003, -0.247156, 2.47762)
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -4.32091, 3.67728, 5.0206)
+[node name="Light" parent="NavigationRegion3D/Props" instance=ExtResource("8_ndh3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044808865, 4.039316, -6.01278)
 
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, -4.37114e-08, 4.37114e-08, 4.37114e-08, -1, -8.74228e-08, -4.32091, 3.67728, -5.17092)
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("8_ndh3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044808865, 4.039316, 4.91546)
 
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 9.85118, 3.77737, -5.17092)
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("8_ndh3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.104646, 4.039316, -6.01278)
 
-[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 4.03071, 3.77737, -5.17092)
-
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("7_83ssb")]
-transform = Transform3D(-4.37114e-08, 0, -1, -1, -4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 0, 9.85118, 3.77737, 5.0206)
+[node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("8_ndh3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.104646, 4.039316, 4.91546)
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26622, 0.363186)

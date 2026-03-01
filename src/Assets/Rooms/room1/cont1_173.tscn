@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://br4y13klj1rn1" path="res://Scripts/Triggers/Scp173TaskTrigger.gd" id="5_cajk8"]
 [ext_resource type="Texture2D" uid="uid://d20f2cnlootqj" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_diff_2k.jpg" id="6_1xans"]
 [ext_resource type="LightmapGIData" uid="uid://bxhgv5h6atle6" path="res://Assets/Rooms/room1/Lm/cont1_173.lmbake" id="6_bh5mh"]
-[ext_resource type="PackedScene" uid="uid://l6v51fn3hbsv" path="res://Assets/ExternalModels/industrial_wall_lamp_light.tscn" id="7_3fkii"]
 [ext_resource type="Texture2D" uid="uid://clamhl4keqtms" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_emissive_2k.jpg" id="7_whtaw"]
 [ext_resource type="Texture2D" uid="uid://dpyr1p84higf0" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_arm_2k.jpg" id="8_2ovmx"]
 [ext_resource type="Texture2D" uid="uid://dm3meiue50u10" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_nor_gl_2k.jpg" id="9_4ecej"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dtltp2a8q46ak" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_arm_2k.jpg" id="11_hjkh1"]
 [ext_resource type="Texture2D" uid="uid://qxf6be3nv334" path="res://Assets/ExternalModels/Industrial_wall_lamp_CC0_Kuutti_Siitonen/textures/industrial_wall_lamp_glass_nor_gl_2k.jpg" id="12_3cn68"]
 [ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="13_hpied"]
+[ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="14_sggw7"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_2ovmx"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_4ecej"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_4ecej"]
@@ -221,12 +221,6 @@ skeleton = NodePath("")
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("4_bj2f8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.90513, -0.242404, -2.91669)
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("7_3fkii")]
-transform = Transform3D(-4.37114e-08, 0, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 1.91069e-15, -7.68736, 0.257013, 8.47168)
-
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("7_3fkii")]
-transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 4.37114e-08, 1, -0.0269699, 4.96849, 1.98633)
-
 [node name="industrial_wall_lamp3" type="Node3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(-4.37114e-08, 0, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 1.91069e-15, -7.68736, 4.12256, -2.55862)
 
@@ -263,12 +257,6 @@ visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_xfneq")
 skeleton = NodePath("")
 
-[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("7_3fkii")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, -1, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -8.74228e-08, 9.32701, 4.06828, 2.44472)
-
-[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("7_3fkii")]
-transform = Transform3D(4.37114e-08, -8.74228e-08, -1, -1, -4.37114e-08, -4.37114e-08, -4.37114e-08, 1, -8.74228e-08, 9.32701, 4.06828, -4.22333)
-
 [node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("13_hpied")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84674, -1.26767, 2.90194)
 
@@ -277,6 +265,18 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 8.41906,
 
 [node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("13_hpied")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 8.41906, -1.2664, 5.38325)
+
+[node name="Light" parent="NavigationRegion3D/Props" instance=ExtResource("14_sggw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.467413, 4.057064, 6.1380315)
+
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("14_sggw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3279953, 4.057064, 6.1380315)
+
+[node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("14_sggw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.502754, 4.057064, 0.19585657)
+
+[node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("14_sggw7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.502754, 4.057064, -4.5578823)
 
 [node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.10735, -0.0570238)
