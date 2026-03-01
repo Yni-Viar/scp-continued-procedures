@@ -481,7 +481,9 @@ theme_override_font_sizes/mono_font_size = 20
 bbcode_enabled = true
 text = "[center][font_size=32]Welcome to Yni Viar's dimension![/font_size][/center]
 [hr]
-Currently, this place is too... empty?"
+Some hikkikomori decided to get out from home.
+But can they actually do it?
+Interesting question..."
 
 [node name="Back" type="TextureButton" parent="StoryUI"]
 layout_mode = 1

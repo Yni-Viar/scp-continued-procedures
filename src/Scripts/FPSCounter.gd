@@ -22,8 +22,9 @@ func _process(delta):
 		gpu_time += fps_history[i]
 	gpu_time /= 20
 	gpu_time = max(0.01, gpu_time)
+	var gpu_fps: float = snapped(1000.0 / gpu_time, 1)
 	#end Godot Engine code
-	text = "Real FPS: " + str(Engine.get_frames_per_second()) + "\nGPU FPS: " + str(snapped(1000.0 / gpu_time, 1))
+	text = "Real FPS: " + str(Engine.get_frames_per_second()) + "\nGPU FPS: " + (str(gpu_fps) if gpu_fps < 100000 else "unavailable")
 	#begin Godot Engine code
 	gpu_time = 0.0
 	#end Godot Engine code

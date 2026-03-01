@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://rj65na3myb3i"]
+[gd_scene load_steps=8 format=3 uid="uid://rj65na3myb3i"]
 
 [ext_resource type="Script" uid="uid://b8pkv7v2qmc5c" path="res://PlayerScript/MovableNpc.gd" id="1_3jgrj"]
 [ext_resource type="Script" uid="uid://caoa6u8nk71m7" path="res://Scripts/StatusEffects/StatusEffectManager.gd" id="2_2vyji"]
@@ -17,65 +17,66 @@ height = 24.5533
 height = 3.24065
 radius = 1.50717
 
-[node name="NPCBase" type="CharacterBody3D" unique_id=251310024 groups=["Players"]]
+[node name="NPCBase" type="CharacterBody3D" groups=["Players"]]
 collision_layer = 11
 collision_mask = 3
 script = ExtResource("1_3jgrj")
 footstep_sounds = Array[String](["res://Sounds/Character/Human/Step/step_1.ogg", "res://Sounds/Character/Human/Step/step_2.ogg", "res://Sounds/Character/Human/Step/step_3.ogg", "res://Sounds/Character/Human/Step/step_4.ogg", "res://Sounds/Character/Human/Step/step_5.ogg", "res://Sounds/Character/Human/Step/step_6.ogg", "res://Sounds/Character/Human/Step/step_7.ogg", "res://Sounds/Character/Human/Step/step_8.ogg", "res://Sounds/Character/Human/Step/step_9.ogg"])
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=2096386655]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.5
+path_height_offset = 0.5
 neighbor_distance = 2.5
 max_speed = 15.0
 
-[node name="PlayerModel" type="Node3D" parent="." unique_id=1994199462]
+[node name="PlayerModel" type="Node3D" parent="."]
 transform = Transform3D(1.50046, 0, 0, 0, 1.50046, 0, 0, 0, 1.50046, 0, 0, 0)
 
-[node name="StatusEffects" type="Node" parent="." unique_id=1006484708]
+[node name="StatusEffects" type="Node" parent="."]
 script = ExtResource("2_2vyji")
 
-[node name="CollisionBodyCapsule" type="CollisionShape3D" parent="." unique_id=2087513393]
+[node name="CollisionBodyCapsule" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10079, 0)
 shape = SubResource("CapsuleShape3D_kvonu")
 
-[node name="WalkSounds" type="AudioStreamPlayer3D" parent="." unique_id=1559343062]
+[node name="WalkSounds" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.242917, 0)
 max_distance = 16.0
 
-[node name="InteractSound" type="AudioStreamPlayer3D" parent="." unique_id=2030886999]
+[node name="InteractSound" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1602, 0)
 max_distance = 32.0
 
-[node name="RayCast3D" type="RayCast3D" parent="." unique_id=538860685]
+[node name="RayCast3D" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86335, 0)
 target_position = Vector3(0, 0, -32)
 collision_mask = 7
 
-[node name="RayCastLow" type="RayCast3D" parent="." unique_id=1887578141]
+[node name="RayCastLow" type="RayCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.86353, 0)
 target_position = Vector3(0, 0, -2)
 collision_mask = 7
 
-[node name="VisionArea" type="Area3D" parent="." unique_id=1093533801]
+[node name="VisionArea" type="Area3D" parent="."]
 collision_layer = 2
 collision_mask = 7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VisionArea" unique_id=1897977420]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VisionArea"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.39744, 0)
 shape = SubResource("CapsuleShape3D_fbqsr")
 
-[node name="ActionArea" type="Area3D" parent="." unique_id=532271491]
+[node name="ActionArea" type="Area3D" parent="."]
 collision_layer = 2
 collision_mask = 7
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionArea" unique_id=486454936]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ActionArea"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.30394, 0)
 shape = SubResource("CylinderShape3D_m1isr")
 
-[node name="ItemSpawn" type="Marker3D" parent="." unique_id=1444950607]
+[node name="ItemSpawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44197, 0)
 
-[node name="UI" type="Control" parent="." unique_id=1455083107]
+[node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchor_left = 0.056
 anchor_right = 1.0
@@ -87,7 +88,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("3_yax7y")
 
-[node name="Inventory" parent="UI" unique_id=441981924 instance=ExtResource("2_m1isr")]
+[node name="Inventory" parent="UI" instance=ExtResource("2_m1isr")]
 visible = false
 layout_mode = 1
 

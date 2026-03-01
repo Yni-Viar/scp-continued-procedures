@@ -3,10 +3,15 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.8.3 ("Downgraded carpet")
+## v5.8.3 ("Downgraded carpet", 2026.03.01)
 
-- [x] Downgrade to Godot 4.5 for more stability. (need to test) \*
-- [x] \[Technical\] Move SCP-522 model only to OriginalModels folder.\*\*
+- Downgrade to Godot 4.5 for more stability.\*
+- Apply navigation map offset.
+- Fixed GPU FPS being max value for platforms, where GPU FPS is not available.
+- Fixed SCP-522 chamber position.
+- Fixed SCP-938/939 hallway lightmap.
+- Fixed ability to move inside shelves in SCP-939 sublevel.
+- \[Technical\] Move SCP-522 model only to OriginalModels folder.\*\*
 
 \*There are plenty issues for 4.6 on Godot Github, so SSAO in GLES3, which is 4.6 feature, should wait for a while, until 4.6 became more stable...
 
