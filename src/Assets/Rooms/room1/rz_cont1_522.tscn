@@ -242,10 +242,10 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9874576, 0)
 
 [node name="steel_frame_shelves_01_2k" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.306727, 0.82, 5.1923747)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.306727, -0.27454442, 5.1923747)
 
 [node name="steel_frame_shelves_01_2k3" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.298333, 0.82, 8.347616)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.298333, -0.28260726, 8.347616)
 
 [node name="steel_frame_shelves_01_2k4" parent="NavigationRegion3D/Props" instance=ExtResource("5_3v0td")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.884661, -0.28227454, 7.5863466)
@@ -302,7 +302,7 @@ transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, -1, -4.371139e-08, -4.
 transform = Transform3D(4.3711392e-08, -8.742278e-08, -1, -1, -4.371139e-08, -4.371139e-08, -4.3711385e-08, 1, -8.742278e-08, 9.565682, 7.0908923, 5.697487)
 
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("14_evikk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.438169, 0.82, 1.3633754)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.438169, 0.76083535, 1.3633754)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(8, 0, -1.1368684e-13, 0, 8, 0, 1.1368684e-13, 0, 8, 4.400732, 7.052877, 0.25856447)
