@@ -20,6 +20,7 @@ const SECONDARY_STATE_ALIAS: Dictionary[SecondaryState, String] = {
 @export var resistance_scp178: bool = false
 @export var resistance_scp686: bool = false
 @export var torso_node_path: NodePath
+@export var current_item: int
 
 var scp_067_affected: bool = false
 
@@ -155,11 +156,13 @@ func hold_item(idx: int):
 				for node in get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").get_children():
 					node.queue_free()
 				secondary_state = SecondaryState.NONE
+				current_item = -1
 			else:
 				secondary_state = SecondaryState.ITEM
 				var item_prefab: Pickable = load(get_tree().root.get_node("Game").gamedata.items[idx].pickable_path).instantiate()
 				item_prefab.freeze = true
 				get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").add_child(item_prefab)
+				current_item = idx
 			
 
 func effect_manager_start(effect: String, strength: float):

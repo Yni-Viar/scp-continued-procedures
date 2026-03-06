@@ -1,25 +1,27 @@
-[gd_scene load_steps=46 format=4 uid="uid://xfomg41qsbnq"]
+[gd_scene load_steps=48 format=4 uid="uid://xfomg41qsbnq"]
 
-[ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_bodni"]
-[ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="6_lcccv"]
-[ext_resource type="Texture2D" uid="uid://daxkwbdgyi8i" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_rough.png" id="7_rthwg"]
-[ext_resource type="Texture2D" uid="uid://d2p7yr80f2c4h" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_nor.png" id="8_bodni"]
-[ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="8_ecwye"]
-[ext_resource type="Texture2D" uid="uid://c77dxgkqenfly" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_Color_Dark_Red.png" id="9_86xce"]
-[ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="9_kevxb"]
-[ext_resource type="Texture2D" uid="uid://cahwarpha15xl" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_Roughness.png" id="10_qhhuf"]
-[ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="10_wndha"]
-[ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="11_4fuhk"]
-[ext_resource type="Texture2D" uid="uid://c1kn4d5w17yv0" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_NormalGL.png" id="11_a4q3s"]
-[ext_resource type="LightmapGIData" uid="uid://brgo6g7kslogv" path="res://Assets/Rooms/room1/Lm/mt_cont1_812.lmbake" id="11_idhtc"]
-[ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="11_kevxb"]
-[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="12_4fuhk"]
-[ext_resource type="Shader" uid="uid://cgw46w7ss62uv" path="res://Shaders/WaterShader/water.gdshader" id="12_ms4c5"]
-[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="16_eaxjk"]
-[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="17_lcccv"]
-[ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="18_lcccv"]
-[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_bodni"]
-[ext_resource type="PackedScene" uid="uid://3htvhayjbon0" path="res://Assets/ExternalModels/beetle_bot_fused.tscn" id="20_bodni"]
+[ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_b1yng"]
+[ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="2_lfmvw"]
+[ext_resource type="Texture2D" uid="uid://daxkwbdgyi8i" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_rough.png" id="3_nu54h"]
+[ext_resource type="Texture2D" uid="uid://d2p7yr80f2c4h" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_nor.png" id="4_3j8ej"]
+[ext_resource type="Texture2D" uid="uid://c77dxgkqenfly" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_Color_Dark_Red.png" id="5_5xtp6"]
+[ext_resource type="Texture2D" uid="uid://cahwarpha15xl" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_Roughness.png" id="6_v5pfr"]
+[ext_resource type="Texture2D" uid="uid://c1kn4d5w17yv0" path="res://Assets/OriginalModels/Scp812/Metal053C_2K-PNG_NormalGL.png" id="7_kicqg"]
+[ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="8_vj4xl"]
+[ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="9_j0ue4"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="9_nu54h"]
+[ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="10_53pin"]
+[ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="11_0wrga"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="12_h406k"]
+[ext_resource type="PackedScene" uid="uid://cqhhycwdvhaq6" path="res://Assets/ExternalModels/hanging_light.tscn" id="13_lfmvw"]
+[ext_resource type="Shader" uid="uid://cgw46w7ss62uv" path="res://Shaders/WaterShader/water.gdshader" id="13_wjb61"]
+[ext_resource type="Material" uid="uid://drmghtc6gtff8" path="res://Assets/Materials/WaterfallMaterial.tres" id="14_drm2v"]
+[ext_resource type="LightmapGIData" uid="uid://brgo6g7kslogv" path="res://Assets/Rooms/room1/Lite/Lm/mt_cont1_812.lmbake" id="15_se668"]
+[ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="16_le8uv"]
+[ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="17_vl7ip"]
+[ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="18_x37se"]
+[ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_agof4"]
+[ext_resource type="PackedScene" uid="uid://3htvhayjbon0" path="res://Assets/ExternalModels/beetle_bot_fused.tscn" id="20_2ufro"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(0.394783, -0.760336, -14.8718, 1.39478, -0.760336, -15.3718, 1.39478, -0.760336, -15.8718, -13.8552, -0.760336, -14.1218, 0.394783, -0.760336, -14.1218, -13.8552, -0.760336, -22.1218, 7.64478, -0.760336, -21.8718, 6.14478, 2.73966, -18.6218, 5.39478, 2.73966, -18.3718, 5.14478, 2.73966, -17.6218, 3.64478, 2.73966, -12.1218, 11.3948, 2.73966, -19.8718, 4.39478, 2.73966, -17.3718, 4.14478, 2.73966, -16.6218, 3.39478, 2.73966, -16.3718, 3.14478, 2.73966, -15.6218, 2.39478, 2.73966, -15.3718, 1.89478, 2.73966, -14.3718, 1.39478, 2.73966, -14.3718, 11.3948, 2.73966, -20.3718, 9.39478, 2.73966, -22.1218, 6.39478, 2.73966, -19.3718, 14.3948, -0.760336, -22.1218, 11.1448, -0.760336, -22.1218, 12.6448, -0.760336, -20.6218, 12.6448, -0.760336, -19.6218, 14.3948, -0.760336, -14.1218, 7.14478, -0.760336, -14.3718, 10.6448, -0.760336, -19.8718, 9.64478, -0.760336, -21.3718, 9.14478, -0.760336, -21.3718, 2.14478, -0.760336, -14.3718, 3.64478, -0.760336, -12.8718, 4.14478, -0.760336, -10.8718, 3.39478, -0.760336, -10.8718, 3.39478, -0.760336, 2.37819, 6.39478, -0.760336, 2.37819, 6.14478, -0.760336, -13.3718, -13.8552, -8.76034, -13.1218, -13.8552, -8.76034, -10.1218, 14.3948, -8.76034, -10.1218, 14.3948, -8.76034, -13.1218, 14.6448, -20.7603, 3.62819, 14.6448, -20.7603, 3.12819, 13.8948, -20.7603, 2.87819, -13.8552, -20.7603, 3.62819, 13.8948, -20.7603, 0.128187, 14.6448, -20.7603, -0.121813, 14.6448, -20.7603, -0.621813, 13.8948, -20.7603, -0.871813, 14.1448, -20.7603, -8.62181, 14.6448, -20.7603, -9.12181, -13.8552, -20.7603, -9.12181, 14.6448, -20.7603, -5.37181, 14.6448, -20.7603, -6.12181, 14.1448, -20.7603, -6.37181, 13.8948, -20.7603, -5.12181, 15.8948, -28.7603, -9.12181, 15.8948, -28.7603, 3.62819, 25.8948, -28.7603, 3.62819, 25.8948, -28.7603, -9.12181, 6.39478, -0.760336, 4.37819, 3.39478, -0.760336, 4.37819, 2.89478, -0.760336, 4.62819, 2.89478, -0.760336, 9.62819, 8.64478, -0.760336, 9.62819, 8.64478, -0.760336, 4.62819, -13.8552, -0.760336, 4.62819, -13.8552, -0.760336, 9.62819, 14.3948, -0.760336, 9.62819, 14.3948, -0.760336, 4.62819)
@@ -28,13 +30,13 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Arr
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jiocx"]
 resource_name = "Container"
 cull_mode = 2
-albedo_texture = ExtResource("6_lcccv")
-metallic_texture = ExtResource("7_rthwg")
+albedo_texture = ExtResource("2_lfmvw")
+metallic_texture = ExtResource("3_nu54h")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("7_rthwg")
+roughness_texture = ExtResource("3_nu54h")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("8_bodni")
+normal_texture = ExtResource("4_3j8ej")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_obi2n"]
 _surfaces = [{
@@ -74,13 +76,13 @@ data = PackedVector3Array(-5.9998, 1.6645, 1.6645, 5.8173, 1.6645, -1.6646, -5.9
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c6a6k"]
 resource_name = "Door"
 cull_mode = 2
-albedo_texture = ExtResource("9_86xce")
-metallic_texture = ExtResource("10_qhhuf")
+albedo_texture = ExtResource("5_5xtp6")
+metallic_texture = ExtResource("6_v5pfr")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("10_qhhuf")
+roughness_texture = ExtResource("6_v5pfr")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("11_a4q3s")
+normal_texture = ExtResource("7_kicqg")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qlauk"]
 _surfaces = [{
@@ -207,7 +209,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 111,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUABwAIAAUABwAJAAgACgALAAwACgANAAsADgAPABAADgARAA8AEgATABQAEgAVABMAFgAXABgAFgAZABcAGgAbABwAGgAdABsAHgAfACAAHgAhAB8AIgAjACQAJQAmACcAJQAoACYAKQAqACsAKQAsACoAKgAsAC0ALgAsACkALwAsAC4ALAAvADAALAAwADEALAAxADIAMQAwADMAMQAzADQAMQA0ADUAMQA1ADYANwA4ADkANwA6ADgAOwA6ADcAOgA7ADwA"),
-"material": ExtResource("8_ecwye"),
+"material": ExtResource("8_vj4xl"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 61,
@@ -218,7 +220,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 6,
 "index_data": PackedByteArray("AAABAAIAAAADAAEA"),
-"material": ExtResource("9_kevxb"),
+"material": ExtResource("9_nu54h"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 4,
@@ -229,7 +231,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 54,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAADAAAABAAFAAMABgAFAAQABgAHAAUABAAAAAgABAAIAAkACQAKAAsACQAMAAoACAAMAAkACAANAAwADgANAAgADgAPAA0AEAARABIAEQAQABMAEQATABQAFQAWABcA"),
-"material": ExtResource("9_kevxb"),
+"material": ExtResource("9_j0ue4"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 24,
@@ -240,7 +242,7 @@ _surfaces = [{
 "format": 34359742519,
 "index_count": 369,
 "index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIABAACAAUABgADAAAABgAHAAMACAAHAAYACAAJAAcACgAIAAYACgAGAAsADAANAA4ADAAPAA0AEAAPAAwAEAARAA8AEgARABAAEgATABEAFAAVABYAFAAXABUAGAAXABQAGAAZABcAGgAZABgAGgAbABkAHAAdAB4AHAAfAB0AIAAfABwAIAAhAB8AIgAhACAAIgAjACEAJAAlACYAJAAnACUAKAAkACYAKAAmACkAKgAkACgAKgArACQALAArACoALAAtACsALQAuACsALQAvAC4AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0AQABBAEIAQABDAEEARABFAEYARABHAEUASABEAEYASABGAEkASgBIAEkASgBJAEsATABNAE4ATABPAE0AUABRAFIAUwBUAFUAVgBXAFgAVgBZAFcAWQBaAFcAWQBbAFoAXABWAFgAXABYAF0AXgBWAFwAXgBfAFYAYABhAGIAYABjAGEAZABlAGYAZABnAGUAaABpAGoAaABrAGkAawBoAGwAbQBuAG8AbgBwAG8AbQBxAG4AcgBzAHQAcgB1AHMAdgB3AHgAdgB5AHcAegB7AHwAegB9AHsAfgB/AIAAfgCBAH8AggCDAIQAggCFAIMAhgCFAIIAhwCIAIkAhwCKAIgAigCLAIgAigCMAIsAjQCOAI8AjQCQAI4AkQCSAJMAlACTAJIAkQCVAJIAlgCXAJgAlgCZAJcAmgCbAJwAnQCcAJsAmgCeAJsAnwCgAKEAnwCiAKAAowCkAKUAowCmAKQApwCoAKkApwCqAKgAqwCsAK0AqwCuAKwArwCwALEAsgCzALQAtQC2ALcAuAC5ALoAuAC7ALkAvAC9AL4AvwDAAMEAvwDCAMAAwwDEAMUAwwDGAMQAxwDIAMkAygDLAMwAygDNAMsAzgDPANAA"),
-"material": ExtResource("8_ecwye"),
+"material": ExtResource("8_vj4xl"),
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
 "vertex_count": 209,
@@ -256,7 +258,7 @@ emission = Color(1, 1, 1, 1)
 [sub_resource type="TextMesh" id="TextMesh_eaxjk"]
 material = SubResource("StandardMaterial3D_hr71w")
 text = "812"
-font = ExtResource("12_4fuhk")
+font = ExtResource("12_h406k")
 font_size = 32
 depth = 0.01
 
@@ -268,7 +270,7 @@ noise = SubResource("FastNoiseLite_gijfy")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g8e6c"]
 render_priority = 0
-shader = ExtResource("12_ms4c5")
+shader = ExtResource("13_wjb61")
 shader_parameter/Noise = SubResource("NoiseTexture3D_5fb48")
 shader_parameter/Color = Color(0.117, 0.509473, 0.708215, 1)
 
@@ -279,7 +281,7 @@ subdivide_width = 8
 subdivide_depth = 8
 
 [sub_resource type="SphereMesh" id="SphereMesh_gijfy"]
-material = ExtResource("11_kevxb")
+material = ExtResource("14_drm2v")
 radius = 0.031
 height = 0.5
 radial_segments = 8
@@ -347,7 +349,7 @@ size = Vector3(5.97742, 3.82202, 2.7720947)
 data = PackedVector3Array(15.0857, -22.1853, -9.9252, 15.0862, -11.6164, -22.6896, 15.0862, -11.6164, -9.9252, 15.0857, -22.1853, -9.9252, 15.0857, -22.1853, -22.6896, 15.0862, -11.6164, -22.6896, 15.0862, -9.435, -1.1726, 15.0862, 10.8147, -2.9335, 15.0862, 10.8147, -1.1726, 15.0862, -9.435, -1.1726, 15.0862, -9.1586, -2.9335, 15.0862, 10.8147, -2.9335, 15.0862, -9.1586, -2.9335, 15.0862, 10.8147, -4.8248, 15.0862, 10.8147, -2.9335, 15.0862, -9.1586, -2.9335, 15.0862, -9.3806, -4.8248, 15.0862, 10.8147, -4.8248, 15.0862, -10.4456, 2.4067, 15.0862, 10.8147, 0.5879, 15.0862, 10.8147, 2.4067, 15.0862, -10.4456, 2.4067, 15.0862, -9.9159, 0.5879, 15.0862, 10.8147, 0.5879, 15.0862, -9.435, -1.1726, 14.6177, -9.1586, -2.9335, 15.0862, -9.1586, -2.9335, 15.0862, -9.435, -1.1726, 14.6177, -9.435, -1.1726, 14.6177, -9.1586, -2.9335, 15.0862, -9.9542, -6.7166, 15.0862, 10.8147, -8.2086, 15.0862, 10.8147, -6.7166, 15.0862, -9.9542, -6.7166, 15.0862, -10.5982, -8.2086, 15.0862, 10.8147, -8.2086, 15.0862, -9.9542, -6.7166, 14.6458, -10.5982, -8.2086, 15.0862, -10.5982, -8.2086, 15.0862, -9.9542, -6.7166, 14.6458, -9.9542, -6.7166, 14.6458, -10.5982, -8.2086, 15.0862, -9.1586, -2.9335, 14.6177, -9.3806, -4.8248, 15.0862, -9.3806, -4.8248, 15.0862, -9.1586, -2.9335, 14.6177, -9.1586, -2.9335, 14.6177, -9.3806, -4.8248, 15.0862, -10.4456, 2.4067, 14.5946, -9.9159, 0.5879, 15.0862, -9.9159, 0.5879, 15.0862, -10.4456, 2.4067, 14.5946, -10.4456, 2.4067, 14.5946, -9.9159, 0.5879, 14.6177, -9.3806, -4.8248, 15.0862, -9.3806, -4.8248, 15.0862, 10.8147, -4.8248, 15.0862, 10.8147, -22.6896, -14.5749, -22.1853, -22.6896, -14.5749, 10.8147, -22.6896, 15.0862, 10.8147, -22.6896, 15.0857, -22.1853, -22.6896, -14.5749, -22.1853, -22.6896, -2.8243, -0.356, 10.2449, -4.0235, -2.1305, 10.2353, -2.7105, -0.5081, 10.2439, -2.8243, -0.356, 10.2449, -14.5749, 10.8147, 10.3104, -4.0235, -2.1305, 10.2353, -4.0235, -2.1305, 10.2353, -14.5749, 10.8147, 10.3104, -14.6052, -2.1356, 10.2283, -2.8243, 1.5383, 10.2555, -14.5749, 10.8147, 10.3104, -2.8243, -0.356, 10.2449, -1.6572, 3.2443, 10.2731, -14.5749, 10.8147, 10.3104, -2.8243, 1.5383, 10.2555, -14.5749, 10.8147, 10.3104, -1.6572, 3.2443, 10.2731, 1.657, 3.2443, 10.2736, -14.5749, 10.8147, 10.3104, 1.657, 3.2443, 10.2736, 15.0812, -2.1356, 10.2283, -14.5749, 10.8147, 10.3104, 15.0812, -2.1356, 10.2283, 15.0862, 10.8147, 10.3104, 15.0812, -2.1356, 10.2283, 1.657, 3.2443, 10.2736, 2.8567, 1.489, 10.2585, 15.0812, -2.1356, 10.2283, 2.8567, 1.489, 10.2585, 2.8567, -0.3727, 10.2393, 15.0812, -2.1356, 10.2283, 2.8567, -0.3727, 10.2393, 2.3882, -1.0258, 10.2288, 15.0812, -2.1356, 10.2283, 2.3882, -1.0258, 10.2288, 4.0605, -2.1305, 10.2212, -4.0235, -2.1305, 10.2353, -1.6572, -2.1114, 10.2313, -2.7105, -0.5081, 10.2439, -4.0235, -2.1305, 10.2353, 1.657, -2.1114, 10.2258, -1.6572, -2.1114, 10.2313, 4.0605, -2.1305, 10.2212, 1.657, -2.1114, 10.2258, -4.0235, -2.1305, 10.2353, 1.657, -2.1114, 10.2258, 4.0605, -2.1305, 10.2212, 2.3882, -1.0258, 10.2288, -14.5746, 10.8147, 10.3104, 15.0862, 10.8147, -22.6896, -14.5746, 10.8147, -22.6896, -14.5746, 10.8147, 10.3104, 15.0862, 10.8147, 10.3104, 15.0862, 10.8147, -22.6896, 2.8956, -2.1353, 4.3125, -14.6052, -2.1353, 10.2284, -14.6052, -2.1353, 4.3125, 2.8956, -2.1353, 4.3125, 2.8956, -2.1353, 10.2284, -14.6052, -2.1353, 10.2284, 6.8724, -2.1353, 4.3125, 2.8956, -2.1353, 10.2284, 2.8956, -2.1353, 4.3125, 6.8724, -2.1353, 4.3125, 6.8724, -2.1353, 10.2284, 2.8956, -2.1353, 10.2284, 15.0815, -2.1353, 4.3125, 6.8724, -2.1353, 10.2284, 6.8724, -2.1353, 4.3125, 15.0815, -2.1353, 4.3125, 15.0815, -2.1353, 10.2284, 6.8724, -2.1353, 10.2284, 6.8724, -2.1353, 4.3125, 2.8956, -2.1353, 4.3125, 2.8956, -2.1353, -13.6875, 6.8724, -2.1353, 4.3125, 2.8956, -2.1353, -13.6875, 6.8724, -2.1353, -13.6875, 6.8724, -2.1353, -13.6875, 15.0815, -2.1353, -23.6218, 15.0815, -2.1353, -13.6875, 6.8724, -2.1353, -13.6875, 6.8724, -2.1353, -23.6218, 15.0815, -2.1353, -23.6218, 2.8956, -2.1353, -13.6875, 6.8724, -2.1353, -23.6218, 6.8724, -2.1353, -13.6875, 2.8956, -2.1353, -13.6875, 2.8956, -2.1353, -23.6218, 6.8724, -2.1353, -23.6218, -14.6052, -2.1353, -13.6875, 2.8956, -2.1353, -23.6218, 2.8956, -2.1353, -13.6875, -14.6052, -2.1353, -13.6875, -14.6052, -2.1353, -23.6218, 2.8956, -2.1353, -23.6218, 2.8956, -2.1353, 10.2284, 4.0603, -2.1302, 10.2217, -4.0234, -2.1302, 10.2356, 4.0603, -2.1302, 10.2217, 2.8956, -2.1353, 10.2284, 6.8724, -2.1353, 10.2284, 4.0603, -2.1302, 10.2217, 6.8724, -2.1353, 10.2284, 15.0815, -2.1353, 10.2284, -4.0234, -2.1302, 10.2356, -14.6052, -2.1353, 10.2284, 2.8956, -2.1353, 10.2284, 6.8726, -3.1213, 4.3128, 15.0815, -22.1353, 4.3128, 15.0815, -3.1213, 4.3128, 6.8726, -3.1213, 4.3128, 6.8726, -22.1353, 4.3128, 15.0815, -22.1353, 4.3128, 6.8726, -2.1353, 4.3128, 6.8726, -3.1213, 4.3128, 15.0815, -3.1213, 4.3128, 6.8726, -2.1353, 4.3128, 15.0815, -3.1213, 4.3128, 15.0815, -2.1353, 4.3128, 2.8958, -3.1213, 4.3128, 6.8726, -22.1353, 4.3128, 6.8726, -3.1213, 4.3128, 2.8958, -3.1213, 4.3128, 2.8958, -22.1353, 4.3128, 6.8726, -22.1353, 4.3128, -14.6052, -3.1213, 4.3128, 2.8958, -22.1353, 4.3128, 2.8958, -3.1213, 4.3128, -14.6052, -3.1213, 4.3128, -14.6052, -22.1353, 4.3128, 2.8958, -22.1353, 4.3128, -14.6052, -2.1353, 4.3128, -14.6052, -3.1213, 4.3128, 2.8958, -3.1213, 4.3128, -14.6052, -2.1353, 4.3128, 2.8958, -3.1213, 4.3128, 2.8958, -2.1353, 4.3128, 6.8726, -22.1353, 4.3128, 15.0815, -22.1353, -9.6872, 15.0815, -22.1353, 4.3128, 6.8726, -22.1353, 4.3128, 6.8726, -22.1353, -9.6872, 15.0815, -22.1353, -9.6872, 2.8958, -22.1353, 4.3128, 6.8726, -22.1353, -9.6872, 6.8726, -22.1353, 4.3128, 2.8958, -22.1353, 4.3128, 2.8958, -22.1353, -9.6872, 6.8726, -22.1353, -9.6872, -14.6052, -22.1353, 4.3128, 2.8958, -22.1353, -9.6872, 2.8958, -22.1353, 4.3128, -14.6052, -22.1353, 4.3128, -14.6052, -22.1353, -9.6872, 2.8958, -22.1353, -9.6872, 6.8726, -22.1353, -9.6872, 15.0815, -10.1353, -9.6872, 15.0815, -22.1353, -9.6872, 6.8726, -22.1353, -9.6872, 6.8726, -10.1353, -9.6872, 15.0815, -10.1353, -9.6872, 2.8958, -22.1353, -9.6872, 6.8726, -10.1353, -9.6872, 6.8726, -22.1353, -9.6872, 2.8958, -22.1353, -9.6872, 2.8958, -10.1353, -9.6872, 6.8726, -10.1353, -9.6872, -14.6052, -22.1353, -9.6872, 2.8958, -10.1353, -9.6872, 2.8958, -22.1353, -9.6872, -14.6052, -22.1353, -9.6872, -14.6052, -10.1353, -9.6872, 2.8958, -10.1353, -9.6872, 6.8726, -10.1353, -9.6872, 15.0815, -10.1353, -13.6872, 15.0815, -10.1353, -9.6872, 6.8726, -10.1353, -9.6872, 6.8726, -10.1353, -13.6872, 15.0815, -10.1353, -13.6872, 2.8958, -10.1353, -9.6872, 6.8726, -10.1353, -13.6872, 6.8726, -10.1353, -9.6872, 2.8958, -10.1353, -9.6872, 2.8958, -10.1353, -13.6872, 6.8726, -10.1353, -13.6872, -14.6052, -10.1353, -9.6872, 2.8958, -10.1353, -13.6872, 2.8958, -10.1353, -9.6872, -14.6052, -10.1353, -9.6872, -14.6052, -10.1353, -13.6872, 2.8958, -10.1353, -13.6872, 6.8726, -3.1302, -13.6872, 15.0815, -2.1353, -13.6872, 15.0815, -3.1302, -13.6872, 6.8726, -3.1302, -13.6872, 6.8726, -2.1353, -13.6872, 15.0815, -2.1353, -13.6872, 6.8726, -10.1353, -13.6872, 6.8726, -3.1302, -13.6872, 15.0815, -3.1302, -13.6872, 6.8726, -10.1353, -13.6872, 15.0815, -3.1302, -13.6872, 15.0815, -10.1353, -13.6872, 2.8958, -10.1353, -13.6872, 6.8726, -3.1302, -13.6872, 6.8726, -10.1353, -13.6872, 2.8958, -10.1353, -13.6872, 2.8958, -3.1302, -13.6872, 6.8726, -3.1302, -13.6872, -14.6052, -10.1353, -13.6872, 2.8958, -3.1302, -13.6872, 2.8958, -10.1353, -13.6872, -14.6052, -10.1353, -13.6872, -14.6052, -3.1302, -13.6872, 2.8958, -3.1302, -13.6872, -14.6052, -3.1302, -13.6872, 2.8958, -2.1353, -13.6872, 2.8958, -3.1302, -13.6872, -14.6052, -3.1302, -13.6872, -14.6052, -2.1353, -13.6872, 2.8958, -2.1353, -13.6872, 2.8958, -3.1302, -13.6872, 2.8958, -2.1353, 4.3128, 2.8958, -3.1213, 4.3128, 2.8958, -3.1302, -13.6872, 2.8958, -2.1353, -13.6872, 2.8958, -2.1353, 4.3128, 2.8958, -3.1302, -13.6872, 6.8726, -3.1213, 4.3128, 6.8726, -3.1302, -13.6872, 2.8958, -3.1302, -13.6872, 2.8958, -3.1213, 4.3128, 6.8726, -3.1213, 4.3128, 6.8726, -2.1353, -13.6872, 6.8726, -3.1213, 4.3128, 6.8726, -2.1353, 4.3128, 6.8726, -2.1353, -13.6872, 6.8726, -3.1302, -13.6872, 6.8726, -3.1213, 4.3128, 15.0815, -22.1353, -9.6872, 15.2712, -30.1353, 4.3128, 15.0815, -22.1353, 4.3128, 15.0815, -22.1353, -9.6872, 15.2712, -30.1353, -9.6872, 15.2712, -30.1353, 4.3128, 15.2712, -30.1353, -9.6872, 26.4875, -30.1353, 4.3128, 15.2712, -30.1353, 4.3128, 15.2712, -30.1353, -9.6872, 26.4875, -30.1353, -9.6872, 26.4875, -30.1353, 4.3128, 15.0862, -11.6159, -9.925, 15.0862, 10.8147, -22.6896, 15.0862, 10.8147, -9.925, 15.0862, -11.6159, -9.925, 15.0862, -11.6159, -22.6896, 15.0862, 10.8147, -22.6896, 15.0862, -11.6159, -9.7003, 15.0862, -11.6159, -9.925, 15.0862, 10.8147, -9.925, 15.0862, -11.6159, -9.7003, 15.0862, 10.8147, -9.925, 15.0862, 10.8147, -9.7003, 15.0862, -10.5978, -8.2083, 15.0862, -11.6159, -9.7003, 15.0862, 10.8147, -9.7003, 15.0862, -10.5978, -8.2083, 15.0862, 10.8147, -9.7003, 15.0862, 10.8147, -8.2083, 21.3673, -22.1853, -8.2083, 15.0862, -11.6159, -9.7003, 15.0862, -10.5978, -8.2083, 21.3673, -22.1853, -8.2083, 21.3673, -22.1853, -9.7003, 15.0862, -11.6159, -9.7003, 15.0862, -22.1853, 4.6609, 15.0862, -11.6159, 4.2252, 15.0862, -11.6159, 4.6609, 15.0862, -22.1853, 4.6609, 21.2097, -22.1853, 4.2252, 15.0862, -11.6159, 4.2252, 15.0862, -11.6159, 4.6609, 15.0862, 10.8147, 4.2252, 15.0862, 10.8147, 4.6609, 15.0862, -11.6159, 4.6609, 15.0862, -11.6159, 4.2252, 15.0862, 10.8147, 4.2252, 15.0862, -11.6159, 4.2252, 15.0862, 10.8147, 2.4067, 15.0862, 10.8147, 4.2252, 15.0862, -11.6159, 4.2252, 15.0862, -10.4456, 2.4067, 15.0862, 10.8147, 2.4067, 15.0862, -11.6159, 10.3104, 15.0862, -11.6159, 4.6609, 15.0862, 10.8147, 4.6609, 15.0862, -11.6159, 10.3104, 15.0862, 10.8147, 4.6609, 15.0862, 10.8147, 10.3104, 15.0862, -22.1853, 10.3104, 15.0862, -11.6159, 4.6609, 15.0862, -11.6159, 10.3104, 15.0862, -22.1853, 10.3104, 15.0862, -22.1853, 4.6609, 15.0862, -11.6159, 4.6609, 21.3486, -22.1853, -4.8248, 15.0862, -9.9541, -6.7162, 15.0862, -9.3806, -4.8248, 21.3486, -22.1853, -4.8248, 21.3486, -22.1853, -6.7162, 15.0862, -9.9541, -6.7162, 15.0862, -9.3806, -4.8248, 15.0862, 10.8147, -6.7162, 15.0862, 10.8147, -4.8248, 15.0862, -9.3806, -4.8248, 15.0862, -9.9541, -6.7162, 15.0862, 10.8147, -6.7162, 15.0862, -9.9154, 0.5883, 14.5946, -22.1853, 0.5883, 21.2235, -22.1853, 0.5883, 15.0862, -9.9154, 0.5883, 14.5946, -9.9154, 0.5883, 14.5946, -22.1853, 0.5883, 14.5946, -9.9154, 0.5883, 15.0862, -9.9154, 0.5883, 15.0862, 10.8147, 0.5883, 21.3486, -22.1853, -6.7162, 14.6459, -9.9541, -6.7162, 15.0862, -9.9541, -6.7162, 14.6459, -9.9541, -6.7162, 15.0862, 10.8147, -6.7162, 15.0862, -9.9541, -6.7162, 21.3486, -22.1853, -6.7162, 14.6459, -22.1853, -6.7162, 14.6459, -9.9541, -6.7162, 21.2235, -22.1853, 0.5883, 15.0862, -9.4349, -1.1725, 15.0862, -9.9154, 0.5883, 21.2235, -22.1853, 0.5883, 21.2235, -22.1853, -1.1725, 15.0862, -9.4349, -1.1725, 15.0862, -9.9154, 0.5883, 15.0862, 10.8147, -1.1725, 15.0862, 10.8147, 0.5883, 15.0862, -9.9154, 0.5883, 15.0862, -9.4349, -1.1725, 15.0862, 10.8147, -1.1725, 21.2097, -22.1853, 4.2252, 15.0862, -10.4456, 2.4067, 15.0862, -11.6159, 4.2252, 21.2097, -22.1853, 4.2252, 21.2097, -22.1853, 2.4067, 15.0862, -10.4456, 2.4067, 14.6459, -22.1853, -6.7162, 14.6459, -10.5978, -8.2083, 14.6459, -9.9541, -6.7162, 14.6459, -22.1853, -6.7162, 14.6459, -22.1853, -8.2083, 14.6459, -10.5978, -8.2083, 15.0862, -10.5978, -8.2083, 14.6459, -22.1853, -8.2083, 21.3673, -22.1853, -8.2083, 15.0862, -10.5978, -8.2083, 14.6459, -10.5978, -8.2083, 14.6459, -22.1853, -8.2083, 15.0862, 10.8147, -8.2083, 14.6459, -10.5978, -8.2083, 15.0862, -10.5978, -8.2083, 14.6178, -22.1853, -1.1725, 14.6178, -9.1583, -2.9333, 14.6178, -9.4349, -1.1725, 14.6178, -22.1853, -1.1725, 14.6178, -22.1853, -2.9333, 14.6178, -9.1583, -2.9333, 14.6178, -22.1853, -2.9333, 14.6178, -9.3806, -4.8248, 14.6178, -9.1583, -2.9333, 14.6178, -22.1853, -2.9333, 14.6178, -22.1853, -4.8248, 14.6178, -9.3806, -4.8248, 15.0862, -9.3806, -4.8248, 14.6178, -22.1853, -4.8248, 21.3486, -22.1853, -4.8248, 15.0862, -9.3806, -4.8248, 14.6178, -9.3806, -4.8248, 14.6178, -22.1853, -4.8248, 21.2235, -22.1853, -1.1725, 14.6178, -9.4349, -1.1725, 15.0862, -9.4349, -1.1725, 15.0862, 10.8147, -1.1725, 15.0862, -9.4349, -1.1725, 14.6178, -9.4349, -1.1725, 21.2235, -22.1853, -1.1725, 14.6178, -22.1853, -1.1725, 14.6178, -9.4349, -1.1725, 14.5946, -22.1853, 2.4067, 14.5946, -9.9154, 0.5883, 14.5946, -10.4456, 2.4067, 14.5946, -22.1853, 2.4067, 14.5946, -22.1853, 0.5883, 14.5946, -9.9154, 0.5883, 21.2097, -22.1853, 2.4067, 14.5946, -10.4456, 2.4067, 15.0862, -10.4456, 2.4067, 15.0862, 10.8147, 2.4067, 15.0862, -10.4456, 2.4067, 14.5946, -10.4456, 2.4067, 21.2097, -22.1853, 2.4067, 14.5946, -22.1853, 2.4067, 14.5946, -10.4456, 2.4067, 14.6459, -10.5978, -8.2083, 15.0862, 10.8147, -6.7162, 14.6459, -9.9541, -6.7162, 14.6459, -10.5978, -8.2083, 15.0862, 10.8147, -8.2083, 15.0862, 10.8147, -6.7162, 15.0862, 10.8147, -2.9333, 14.6178, -9.3806, -4.8248, 15.0862, 10.8147, -4.8248, 15.0862, 10.8147, -2.9333, 14.6178, -9.1583, -2.9333, 14.6178, -9.3806, -4.8248, 15.0862, 10.8147, -1.1725, 14.6178, -9.1583, -2.9333, 15.0862, 10.8147, -2.9333, 15.0862, 10.8147, -1.1725, 14.6178, -9.4349, -1.1725, 14.6178, -9.1583, -2.9333, 15.0862, 10.8147, 2.4067, 14.5946, -9.9154, 0.5883, 15.0862, 10.8147, 0.5883, 15.0862, 10.8147, 2.4067, 14.5946, -10.4456, 2.4067, 14.5946, -9.9154, 0.5883, 21.3673, -22.1853, -9.7003, 15.0862, -11.6159, -9.925, 15.0862, -11.6159, -9.7003, 21.3673, -22.1853, -9.7003, 15.0862, -22.1853, -9.925, 15.0862, -11.6159, -9.925, 21.2097, -22.1853, 4.2252, 15.0862, -22.1853, 4.6609, 15.0815, -22.1353, 4.3128, 15.0815, -22.1353, 4.3128, 26.4875, -30.1353, 4.3128, 21.2097, -22.1853, 4.2252, 15.0815, -22.1353, 4.3128, 15.2712, -30.1353, 4.3128, 26.4875, -30.1353, 4.3128, 15.0815, -22.1353, -9.6872, 15.0862, -22.1853, -9.925, 21.3673, -22.1853, -9.7003, 15.0815, -22.1353, -9.6872, 26.4875, -30.1353, -9.6872, 15.2712, -30.1353, -9.6872, 15.0815, -22.1353, -9.6872, 21.3673, -22.1853, -9.7003, 26.4875, -30.1353, -9.6872, -14.5746, -22.1853, -22.6896, -14.5746, 10.8147, 10.3104, -14.5746, 10.8147, -22.6896, -14.5746, -22.1853, -22.6896, -14.5746, -22.1853, 10.3104, -14.5746, 10.8147, 10.3104, 15.0815, -22.1353, 4.3128, 15.0862, -22.1853, 4.6609, 15.0815, -3.1213, 4.3128, 15.0862, -11.6159, -9.7003, 15.0862, -22.1853, -9.925, 15.0815, -22.1353, -9.6872, 15.0862, -11.6159, -9.7003, 15.0862, -11.6159, -9.925, 15.0862, -22.1853, -9.925, 15.0815, -22.1353, -9.6872, 15.0815, -10.1353, -9.6872, 15.0862, -11.6159, -9.7003)
 
 [node name="cont1_812" type="StaticBody3D" groups=["cont1_812"]]
-script = ExtResource("1_bodni")
+script = ExtResource("1_b1yng")
 mesh_node_path = NodePath("NavigationRegion3D/Cube")
 floor_material_index = 1
 
@@ -399,97 +401,115 @@ skeleton = NodePath("")
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(-4.37114e-08, 0, -1, -1, 1.31134e-07, 4.37114e-08, 1.31134e-07, 1, -5.73206e-15, 2.90311, -1.70225, -10.0556)
 
-[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp5" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -1.02668, -1.70225, -13.7078)
 
-[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -5.70994, -1.70225, -13.7078)
 
-[node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -10.7099, -1.70225, -13.7078)
 
-[node name="industrial_wall_lamp28" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp28" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -5.70994, 3.37412, -22.7127)
 
-[node name="industrial_wall_lamp29" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp29" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, -10.7099, 3.37412, -22.7127)
 
-[node name="industrial_wall_lamp8" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp8" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(1.31134e-07, 1, 4.37114e-08, -1, 1.31134e-07, 4.37114e-08, 4.37114e-08, -4.37114e-08, 1, 11.4068, -1.70225, -13.7078)
 
-[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp2" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(-4.37114e-08, 0, -1, -1, 1.31134e-07, 4.37114e-08, 1.31134e-07, 1, -5.73206e-15, 2.90311, -1.70225, -0.996517)
 
-[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp3" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, 1.31134e-07, 4.37114e-08, -1.31134e-07, -1, -8.74228e-08, 6.82695, -1.70225, -0.996517)
 
-[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp4" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -8.74228e-08, 1, -1, 1.31134e-07, 4.37114e-08, -1.31134e-07, -1, -8.74228e-08, 6.82695, -1.70225, -10.0556)
 
-[node name="industrial_wall_lamp9" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp9" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -11.2626, -9.66931, -9.70087)
 
-[node name="industrial_wall_lamp14" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp14" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -14.6205, -9.66931, -2.81489)
 
-[node name="industrial_wall_lamp15" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp15" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -14.6205, -15.7846, -2.81489)
 
-[node name="industrial_wall_lamp16" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp16" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -14.6205, -3.6342, -2.81489)
 
-[node name="industrial_wall_lamp17" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp17" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -14.6205, 3.56493, -2.81489)
 
-[node name="industrial_wall_lamp18" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp18" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -14.6205, 9.56493, -2.81489)
 
-[node name="industrial_wall_lamp19" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp19" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 14.7402, -9.66931, -2.81489)
 
-[node name="industrial_wall_lamp20" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp20" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 14.7402, -15.7846, -2.81489)
 
-[node name="industrial_wall_lamp21" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp21" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 14.7402, -3.6342, -2.81489)
 
-[node name="industrial_wall_lamp22" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp22" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 14.7402, 3.56493, -2.81489)
 
-[node name="industrial_wall_lamp23" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp23" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, -1, 1, -4.37114e-08, 0, -4.37114e-08, -1, -4.37114e-08, 14.7402, 9.56493, -2.81489)
 
-[node name="industrial_wall_lamp10" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp10" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -5.26259, -9.66931, -9.70087)
 
-[node name="industrial_wall_lamp11" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp11" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.737406, -9.66931, -9.70087)
 
-[node name="industrial_wall_lamp12" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp12" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 7.57096, -9.66931, -9.70087)
 
-[node name="industrial_wall_lamp13" parent="NavigationRegion3D/Props" instance=ExtResource("11_4fuhk")]
+[node name="industrial_wall_lamp13" parent="NavigationRegion3D/Props" instance=ExtResource("11_0wrga")]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 13.571, -9.66931, -9.70087)
 
-[node name="industrial_wall_lamp24" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp24" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -1, 3.82137e-15, -1, -4.37114e-08, -8.74228e-08, 8.74228e-08, 0, -1, 5.15214, 5.06158, 10.2797)
 
-[node name="industrial_wall_lamp26" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp26" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -1, 3.82137e-15, -1, -4.37114e-08, -8.74228e-08, 8.74228e-08, 0, -1, -3.77487, 5.06158, 10.2797)
 
-[node name="industrial_wall_lamp27" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp27" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -1, 3.82137e-15, -1, -4.37114e-08, -8.74228e-08, 8.74228e-08, 0, -1, -9.49841, 5.06158, 10.2797)
 
-[node name="industrial_wall_lamp25" parent="NavigationRegion3D/Props" instance=ExtResource("10_wndha")]
+[node name="industrial_wall_lamp25" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
 transform = Transform3D(4.37114e-08, -1, 3.82137e-15, -1, -4.37114e-08, -8.74228e-08, 8.74228e-08, 0, -1, 11.7269, 5.06158, 10.2797)
+
+[node name="industrial_wall_lamp30" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
+transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.37114e-08, -4.371139e-08, 1.3113417e-07, -1, -5.681617, -1.70225, 4.3425865)
+
+[node name="industrial_wall_lamp33" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
+transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.37114e-08, -4.371139e-08, 1.3113417e-07, -1, -0.6209512, -1.70225, 4.342586)
+
+[node name="industrial_wall_lamp37" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
+transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.37114e-08, -4.371139e-08, 1.3113417e-07, -1, 10.848196, -1.70225, 4.342586)
+
+[node name="industrial_wall_lamp36" parent="NavigationRegion3D/Props" instance=ExtResource("10_53pin")]
+transform = Transform3D(-1.31134e-07, -1, -1.3113417e-07, -1, 1.31134e-07, 4.37114e-08, -4.371139e-08, 1.3113417e-07, -1, -11.062899, -1.70225, 4.3425875)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
 transform = Transform3D(8, 0, -1.13687e-13, 0, 8, 0, 1.13687e-13, 0, 8, -8.64336, 7.10485, -22.5862)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_eaxjk")
+
+[node name="Light" parent="NavigationRegion3D/Props" instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -9.427788)
+
+[node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("13_lfmvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -18.003769)
 
 [node name="entityspawn2" type="Marker3D" parent="." groups=["Scp347Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4306, -1.24029, 7.35588)
@@ -544,23 +564,12 @@ shape = SubResource("BoxShape3D_qfm5w")
 [node name="DebugLights" type="Node3D" parent="."]
 visible = false
 
-[node name="SpotLight3D" type="SpotLight3D" parent="DebugLights"]
-transform = Transform3D(0.941229, -0.221601, 0.254914, -0.0408302, 0.674518, 0.737129, -0.335292, -0.704215, 0.625828, 8.93787, 8.69122, -8.81313)
-visible = false
-light_energy = 16.0
-light_bake_mode = 1
-shadow_enabled = true
-shadow_bias = 3.034
-shadow_normal_bias = 4.125
-spot_range = 18.806
-spot_angle = 38.066
-
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1
-bounce_indirect_energy = 1.5
+bounce_indirect_energy = 2.0
 texel_scale = 0.13
-light_data = ExtResource("11_idhtc")
+light_data = ExtResource("15_se668")
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.271851, -4.82813, -6.26819)
@@ -579,34 +588,37 @@ shape = SubResource("ConcavePolygonShape3D_kevxb")
 
 [node name="Halloween" type="Node3D" parent="Seasonal"]
 visible = false
-script = ExtResource("16_eaxjk")
+script = ExtResource("16_le8uv")
 current_season = 6
 
-[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("17_lcccv")]
+[node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("17_vl7ip")]
 transform = Transform3D(1.4142135, 0, 1.4142135, 0, 2, 0, -1.4142135, 0, 1.4142135, -9.529006, -0.9937242, -15.036153)
 
-[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("17_lcccv")]
+[node name="Pumpkin2" parent="Seasonal/Halloween" instance=ExtResource("17_vl7ip")]
 transform = Transform3D(1.7320508, 0, -1, 0, 2, 0, 1, 0, 1.7320508, -4.6140294, -0.9937242, -15.036153)
 
-[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("18_lcccv")]
+[node name="Pumpkin3" parent="Seasonal/Halloween" instance=ExtResource("18_x37se")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.297235, -1.2603072, 8.997611)
 
-[node name="Pumpkin4" parent="Seasonal/Halloween" instance=ExtResource("18_lcccv")]
+[node name="Pumpkin4" parent="Seasonal/Halloween" instance=ExtResource("18_x37se")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.856014, -1.2603072, -14.960752)
 
 [node name="Christmas" type="Node3D" parent="Seasonal"]
 visible = false
-script = ExtResource("16_eaxjk")
+script = ExtResource("16_le8uv")
 current_season = 5
 
-[node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("19_bodni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.917355, -6.517851, -4.4822793)
+[node name="ChristmasLights3" parent="Seasonal/Christmas" instance=ExtResource("19_agof4")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -8.66906, 3.470725, 4.5577974)
 
-[node name="ChristmasLights2" parent="Seasonal/Christmas" instance=ExtResource("19_bodni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9173546, -6.517851, -4.4822793)
+[node name="ChristmasLights4" parent="Seasonal/Christmas" instance=ExtResource("19_agof4")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 9.365187, 3.470725, -17.756582)
 
-[node name="ChristmasLights3" parent="Seasonal/Christmas" instance=ExtResource("19_bodni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.219461, -6.517851, -4.4822793)
+[node name="ChristmasLights5" parent="Seasonal/Christmas" instance=ExtResource("19_agof4")]
+transform = Transform3D(0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.7071067, -8.717154, 3.470725, -17.756582)
+
+[node name="ChristmasLights6" parent="Seasonal/Christmas" instance=ExtResource("19_agof4")]
+transform = Transform3D(0.7071067, 0, -0.7071068, 0, 1, 0, 0.7071068, 0, 0.7071067, 9.455265, 3.470725, 4.4666576)
 
 [node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5090532, -0.78577095, -10.52786)
@@ -617,7 +629,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5090532, -0.78577095, 5.039
 [node name="ScientistPoint3" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.084796, -0.78577095, 5.039664)
 
-[node name="beetle_bot_fused" parent="." instance=ExtResource("20_bodni")]
+[node name="beetle_bot_fused" parent="." instance=ExtResource("20_2ufro")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 10.997881, -1.2436188, -21.845125)
 
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]

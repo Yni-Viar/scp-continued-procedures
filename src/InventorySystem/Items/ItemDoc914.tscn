@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://bm7e4jrlesjg7"]
 
-[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_2yvtg"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_2yvtg"]
 [ext_resource type="Texture2D" uid="uid://bdvkm7dxpojyi" path="res://Assets/OriginalModels/LowPolyDocument/doc914.png" id="1_x52jm"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="3_t7t3e"]
 

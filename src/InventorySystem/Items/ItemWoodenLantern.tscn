@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=4 uid="uid://daniqy18dv0gq"]
 
-[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_pwn81"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_pwn81"]
 [ext_resource type="Texture2D" uid="uid://5kdn1uexjq4c" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_diff_2k.jpg" id="2_eydpu"]
 [ext_resource type="Texture2D" uid="uid://btwkokj5no8iy" path="res://Assets/ExternalModels/WoodenLantern_JamesRayCock_CC0/textures/wooden_lantern_01_arm_2k.jpg" id="3_fe4o8"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="3_nmw3f"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dcxs3y5is6ysc"]
 
-[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_3exxu"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_3exxu"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="2_nqrj0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q3rft"]

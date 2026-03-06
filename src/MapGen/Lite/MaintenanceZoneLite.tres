@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MapGenZone" format=3 uid="uid://o7dvqel7sfbm"]
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=21 format=3 uid="uid://o7dvqel7sfbm"]
 
 [ext_resource type="PackedScene" uid="uid://dm4apurgx8m7m" path="res://Assets/Doors/mt_door.tscn" id="1_d5akv"]
 [ext_resource type="PackedScene" uid="uid://cgwv4o2dj2tp6" path="res://Assets/Doors/empty_door.tscn" id="1_sh8pc"]
@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://bgvcokfa5iie5" path="res://MapGen/Resources/MaintenanceZone/exit1_gateb.tres" id="8_vht2k"]
 [ext_resource type="Resource" uid="uid://i7dv4g0tnkdn" path="res://MapGen/Resources/MaintenanceZone/cont1_446.tres" id="9_axf4q"]
 [ext_resource type="Resource" uid="uid://bw58osyjan7h8" path="res://MapGen/Resources/MaintenanceZone/cont1_023.tres" id="10_dos3h"]
-[ext_resource type="Resource" uid="uid://0kdbhka5yv2n" path="res://MapGen/Resources/MaintenanceZone/cont1_812.tres" id="11_nnytr"]
+[ext_resource type="Resource" uid="uid://0kdbhka5yv2n" path="res://MapGen/Resources/MaintenanceZone/Lite/cont1_812.tres" id="11_nnytr"]
 [ext_resource type="Resource" uid="uid://ch0bxsompxx5d" path="res://MapGen/Resources/MaintenanceZone/room2_walkway.tres" id="12_inrd0"]
 [ext_resource type="Resource" uid="uid://c0ohfy6nbwkv3" path="res://MapGen/Resources/MaintenanceZone/room2_middle.tres" id="13_nkg10"]
 [ext_resource type="Resource" uid="uid://c28c54bngkuhi" path="res://MapGen/Resources/MaintenanceZone/room2_large.tres" id="14_pn8dw"]

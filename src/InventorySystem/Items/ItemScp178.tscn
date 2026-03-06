@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=4 uid="uid://6qt3tlm0761o"]
 
 [ext_resource type="Texture2D" uid="uid://dwse06wv7lf7b" path="res://Assets/OriginalModels/Scp178/Scp178_Paper006_2K-PNG_Color.png" id="1_6vuus"]
-[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_elnqa"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_elnqa"]
 [ext_resource type="Texture2D" uid="uid://vyrdkrakodnb" path="res://Assets/OriginalModels/Scp178/Scp178_Paper006_2K-PNG_Roughness.png" id="2_elnqa"]
 [ext_resource type="Texture2D" uid="uid://bboi2ggle5sha" path="res://Assets/OriginalModels/Scp178/Scp178_Paper006_2K-PNG_NormalGL.png" id="3_q4dto"]
 [ext_resource type="Shader" uid="uid://cyawkqumpaf1e" path="res://Shaders/ItemShader/item.gdshader" id="4_q4dto"]

@@ -7,6 +7,21 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### Research Zone lighting update
 - [x] Revamped (again) Research Zone lighting.
 
+### New SCP
+- [x] \[Full version only\] SCP-791
+
+### Optimizations
+- [x] Optimized SCP-458 model.
+- [x] Optimized light models
+
+### Misc changes
+- [x] Updated and hidden Help - if you are not afraid of spoilers, type `spoilers` into `Seed` input.
+- [x] \[Full version only\] Updated SCP-812 chamber to include SCP-791
+- [x] \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
+- [x] \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
+- [x] Update large maintenance hallway.
+- [x] \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
+
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)
 

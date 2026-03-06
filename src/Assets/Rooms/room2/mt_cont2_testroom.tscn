@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://byv6ya1m5k2eg"]
+[gd_scene load_steps=22 format=4 uid="uid://byv6ya1m5k2eg"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_bwprk"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_gwbjh"]
@@ -8,13 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="3_bwprk"]
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="3_gngsr"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="4_12hlm"]
+[ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="6_junr1"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="7_bjf0b"]
 [ext_resource type="LightmapGIData" uid="uid://c1lgeo74jbswj" path="res://Assets/Rooms/room2/Lm/mt_cont2_testroom.lmbake" id="7_bwprk"]
+[ext_resource type="PackedScene" uid="uid://ikreresria07" path="res://InventorySystem/Items/ItemBeaker.tscn" id="7_uf18g"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_eqxln"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_lckij"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="10_8r1yp"]
 [ext_resource type="Script" uid="uid://6iiqswcaatwc" path="res://Scripts/Seasonal/SeasonSpawner.gd" id="13_2twp3"]
-[ext_resource type="PackedScene" uid="uid://cva3nokarymsm" path="res://Assets/Rooms/room2/Season/scp_649_christmas.tscn" id="14_gwbjh"]
+[ext_resource type="PackedScene" uid="uid://p28858r2ococ" path="res://Assets/OriginalModels/scp_649.tscn" id="16_junr1"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
 vertices = PackedVector3Array(-1.4176483, -0.78849316, 6.01, 2.3323517, -0.78849316, 6.01, 2.5823517, -0.78849316, -9.49, -1.6676483, -0.78849316, -9.74, 7.5823517, -0.78849316, -5.74, 9.082352, -0.78849316, -5.99, 9.082352, -0.78849316, -6.74, 4.0823517, -0.78849316, -6.74, 7.5823517, -0.78849316, -0.23999977, 4.0823517, -0.78849316, 4.51, 7.5823517, -0.78849316, 4.51, 7.8323517, -0.78849316, 4.01, 9.082352, -0.78849316, 4.26, 9.082352, -0.78849316, -0.23999977, 3.8323517, -0.78849316, 8.01, 4.0823517, -0.78849316, 9.01, 7.5823517, -0.78849316, 9.01, 3.8323517, -0.78849316, 7.01, 2.8323517, -0.78849316, 7.01, -1.6676483, -0.78849316, 9.76, 2.5823517, -0.78849316, 9.51, 2.8323517, -0.78849316, 8.01)
@@ -129,16 +131,23 @@ transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, 
 transform = Transform3D(-4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 0.43212032, 4.104, -0.19781637)
 
 [node name="3D_shelf_3" parent="NavigationRegion3D/Props" instance=ExtResource("2_d8w4u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.927719, -1.2826809, -3.020477)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.927719, -1.2826809, -3.020477)
 
 [node name="3D_shelf_4" parent="NavigationRegion3D/Props" instance=ExtResource("2_d8w4u")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 8.927719, -1.2826809, 7.039584)
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 8.927719, -1.2826809, 7.039584)
 
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("3_bwprk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3584657, -0.2566613, -8.589485)
 
 [node name="laptop" parent="NavigationRegion3D/Props" instance=ExtResource("4_12hlm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9287143, 0.2115066, -8.368836)
+
+[node name="DocSpawn" type="Marker3D" parent="NavigationRegion3D/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.7190075, 0.76674426, -2.5393946)
+script = ExtResource("6_junr1")
+item = ExtResource("7_uf18g")
+chance = 1.0
+availability = 1
 
 [node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92674, -1.28297, 0)
@@ -197,8 +206,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.397079, -1.6772912, 0)
 
 [node name="Scp649Spawner" type="Marker3D" parent="Seasonal"]
 script = ExtResource("13_2twp3")
-season_prefab = ExtResource("14_gwbjh")
 current_season = 5
+item = ExtResource("16_junr1")
+chance = 1.0
 
 [node name="industrial_wall_lamp" parent="." instance=ExtResource("7_bjf0b")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 6.5482516, 3.249179, -9.761631)

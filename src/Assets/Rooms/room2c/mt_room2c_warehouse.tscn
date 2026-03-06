@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dy2kt71q27y07"]
+[gd_scene load_steps=18 format=4 uid="uid://dy2kt71q27y07"]
 
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="1_c8gp5"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_fmwk4"]
@@ -8,6 +8,7 @@
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="5_0xiyo"]
 [ext_resource type="LightmapGIData" uid="uid://cu2ip3pjyylpx" path="res://Assets/Rooms/room2c/Lm/mt_room2c_warehouse.lmbake" id="5_t5axs"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="6_5e8jo"]
+[ext_resource type="PackedScene" uid="uid://baytx1gft7sbp" path="res://Assets/OriginalModels/box_mini.tscn" id="6_vqiuj"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="7_vqiuj"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_vh74e"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="10_fmwk4"]
@@ -145,6 +146,66 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.6
 [node name="3D_shelf_6" parent="NavigationRegion3D/Props" instance=ExtResource("2_q5cqc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.62995, -1.2384884, 7.197632)
 
+[node name="industrial_wall_lamp10" parent="NavigationRegion3D/Props" instance=ExtResource("10_fmwk4")]
+transform = Transform3D(0.70710677, -0.70710677, 3.090862e-08, 0, -4.371139e-08, -1, 0.70710677, 0.70710677, -3.090862e-08, -1.823026, 4.117534, -0.60337055)
+
+[node name="OmnidotplushV2" parent="NavigationRegion3D/Props" instance=ExtResource("12_t5axs")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.67836195, 1.9686823, -8.373869)
+
+[node name="OmnidotplushV3" parent="NavigationRegion3D/Props" instance=ExtResource("12_t5axs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.614618, 1.9952514, -0.7130203)
+
+[node name="box" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.738554, -0.35038745, -0.22030473)
+
+[node name="box2" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.561569, 1.0568111, 0.8418801)
+
+[node name="box3" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.626799, -0.35038733, 2.6332378)
+
+[node name="box4" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.495023, 2.4641118, 8.46073)
+
+[node name="box5" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.590668, 1.0568112, 6.1344585)
+
+[node name="box6" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.545316, 1.0568111, 8.191475)
+
+[node name="box7" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.611881, -0.35038757, 7.0454063)
+
+[node name="box8" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.592085, -0.30699685, -7.9440136)
+
+[node name="box9" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3212466, 1.1594697, -7.9440136)
+
+[node name="box16" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3212466, 2.4813614, -7.9440136)
+
+[node name="box11" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.000015, 1.1594697, -7.9440136)
+
+[node name="box10" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3212466, -0.2593478, -7.9440136)
+
+[node name="box12" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4751449, -0.2593478, -7.9440136)
+
+[node name="box13" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18606281, 1.0759363, -7.9440136)
+
+[node name="box15" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5468428, 1.0759363, -7.9440136)
+
+[node name="box14" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64584017, 2.5144126, -7.9440136)
+
+[node name="box17" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.646583, 2.4641118, 2.09707)
+
 [node name="Cylinder2" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030813813, 0)
 visibility_range_end = 64.0
@@ -200,12 +261,3 @@ transform = Transform3D(0.16893663, 0, -0.98562706, 0, 1, 0, 0.98562706, 0, 0.16
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030813813, 0)
 shape = SubResource("ConcavePolygonShape3D_euywh")
-
-[node name="industrial_wall_lamp" parent="." instance=ExtResource("10_fmwk4")]
-transform = Transform3D(0.70710677, -0.70710677, 3.090862e-08, 0, -4.371139e-08, -1, 0.70710677, 0.70710677, -3.090862e-08, -1.823026, 4.117534, -0.60337055)
-
-[node name="OmnidotplushV2" parent="." instance=ExtResource("12_t5axs")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.1165285, -0.84374565, -7.845042)
-
-[node name="OmnidotplushV3" parent="." instance=ExtResource("12_t5axs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.614618, -0.8437455, 8.803846)

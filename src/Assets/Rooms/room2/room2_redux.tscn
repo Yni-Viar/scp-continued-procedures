@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://b8x58lkcnq726"]
+[gd_scene load_steps=24 format=4 uid="uid://b8x58lkcnq726"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_cg23l"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_g4gw2"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="11_g4gw2"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="13_36gh2"]
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="13_g4gw2"]
+[ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="13_pjghs"]
+[ext_resource type="PackedScene" uid="uid://d0ot1af7632t" path="res://InventorySystem/Items/ItemDoc.tscn" id="14_7143u"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
 vertices = PackedVector3Array(-3.7904997, -0.7787669, -8.2586, -8.7905, -0.7787669, -8.2586, -8.7905, -0.7787669, -7.0086, -3.0404997, -0.7787669, -7.0086, -2.7904997, -0.7787669, -5.5086, 2.9595003, -0.7787669, -5.5086, -3.5404997, -0.7787669, -9.7586, 3.2095003, -0.7787669, -7.0086, 3.4595003, -0.7787669, -9.7586, 8.9595, -0.7787669, -7.0086, 8.9595, -0.7787669, -8.5086, 3.7095003, -0.7787669, -8.5086, -3.0404997, -0.7787669, -1.0086002, -2.7904997, -0.7787669, 0.74139977, 2.9595003, -0.7787669, 0.74139977, 3.2095003, -0.7787669, -1.0086002, 3.2095003, -0.7787669, -3.5086002, -3.0404997, -0.7787669, -3.5086002, -8.7905, -0.7787669, -3.5086002, -8.7905, -0.7787669, -1.0086002, 8.9595, -0.7787669, -1.0086002, 8.9595, -0.7787669, -3.5086002, 3.4595003, -0.7787669, 9.7414, 3.4595003, -0.7787669, 8.7414, 2.9595003, -0.7787669, 8.4914, -2.7904997, -0.7787669, 8.4914, -3.5404997, -0.7787669, 8.7414, -3.5404997, -0.7787669, 9.7414, -2.7904997, -0.7787669, 5.4914, 3.2095003, -0.7787669, 2.4913998, -3.0404997, -0.7787669, 2.4913998, 3.2095003, -0.7787669, 5.2414, -8.7905, -0.7787669, 2.4913998, -8.7905, -0.7787669, 5.2414, 8.9595, -0.7787669, 5.2414, 8.9595, -0.7787669, 2.4913998)
@@ -731,6 +733,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.718764, 0.045432568, 0.9451
 
 [node name="ChristmasLights2" parent="NavigationRegion3D/Seasonal/Christmas" instance=ExtResource("13_36gh2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.691509, 0.18504667, 0.94512177)
+
+[node name="DocSpawn" type="Marker3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.34501, 0.33510625, -5.1008253)
+script = ExtResource("13_pjghs")
+item = ExtResource("14_7143u")
+
+[node name="DocSpawn2" type="Marker3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.597724, 0.33510625, 0.5035901)
+script = ExtResource("13_pjghs")
+item = ExtResource("14_7143u")
+
+[node name="DocSpawn3" type="Marker3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8031807, 0.33510625, 6.8605466)
+script = ExtResource("13_pjghs")
+item = ExtResource("14_7143u")
+
+[node name="DocSpawn4" type="Marker3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27775, 0.33510625, 6.8605466)
+script = ExtResource("13_pjghs")
+item = ExtResource("14_7143u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

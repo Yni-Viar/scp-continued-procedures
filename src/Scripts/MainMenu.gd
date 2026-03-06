@@ -59,7 +59,10 @@ func _on_time_limited_toggled(toggled_on: bool) -> void:
 
 
 func _on_help_button_pressed() -> void:
-	$Tutorial.show()
+	if $GameSettings/Seed.text.to_lower() == "spoilers":
+		$Tutorial.show()
+	else:
+		$SpoilersAhead.show()
 
 
 func _on_zen_mode_toggled(toggled_on: bool) -> void:

@@ -36,10 +36,11 @@ msgstr "Help (NOT for safe mode)"
 msgid "HELP_TASKS"
 msgstr ""
 "You need to do tasks.\n"
-"Some tasks require to come close to the subject of testing (eg. 812),\n"
-"some tasks require to bring Class-D (if they exist, if not - do it on your own) (for example - 162 and 266)\n"
-"and a third type of task is to bring something to special place (as for 347 amd 914).\n"
-"I recommend at first doing tasks at first zone, then the second... e.t.c."
+"Some tasks require to come close to the subject of testing (812, partly 938).\n"
+"Some tasks require to bring Class-D (162, 173, 266, 522, 939, partly 938).\n"
+"Some tasks require to bring something to special place (347, 914).\n"
+"Some tasks require to come with special item (791).\n"
+"Some tasks require to interact or use subject of testing (023, 067)."
 
 msgid "HELP_EVENTS"
 msgstr ""
@@ -197,9 +198,7 @@ msgid "GAME_OVER_1"
 msgstr "You died. What a pity..."
 
 msgid "GAME_OVER_2"
-msgstr ""
-"You let SCPs escape. You will be demoted to Class-D personnel.\n"
-"Tip: If you want to do SCP-347 task, go to Entrance Sub-zone."
+msgstr "You let SCPs escape. You will be demoted to Class-D personnel."
 
 msgid "GAME_OVER_3"
 msgstr "You did not finish all the task in a work day."
@@ -329,3 +328,6 @@ msgstr "Lite/Demo version. Please, download full game for accessing more content
 
 msgid "TASK_522_BODY"
 msgstr "Order Class-D to step on SCP-522."
+
+msgid "TASK_791_RESEARCH"
+msgstr "Take some water from SCP-791 with beaker."

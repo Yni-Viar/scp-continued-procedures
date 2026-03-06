@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7bqrcgpr32l3"]
+
+[ext_resource type="Script" uid="uid://l7knlfignhqc" path="res://Scripts/Scp791.gd" id="1_5qidp"]
+[ext_resource type="Shader" uid="uid://b2smunw6gw5ds" path="res://Shaders/Water2Shader/water_shader.gdshader" id="1_jau36"]
+[ext_resource type="Shader" uid="uid://canha4kgfhe4" path="res://Shaders/ItemShader/item_shaded.gdshader" id="1_rjwgw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5qidp"]
+render_priority = 0
+shader = ExtResource("1_rjwgw")
+shader_parameter/enable = true
+shader_parameter/outline_thickness = 0.016
+shader_parameter/color = Color(1, 1, 1, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rjwgw"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5qidp"]
+noise = SubResource("FastNoiseLite_rjwgw")
+seamless = true
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_huxj6"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vv0ym"]
+noise = SubResource("FastNoiseLite_huxj6")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qxboj"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_5qidp")
+shader = ExtResource("1_jau36")
+shader_parameter/water_color = Color(0.735357, 0.735357, 0.735357, 1)
+shader_parameter/water_noise_1 = SubResource("NoiseTexture2D_5qidp")
+shader_parameter/water_noise_2 = SubResource("NoiseTexture2D_vv0ym")
+shader_parameter/depth_distance = 10.0
+shader_parameter/water_color_ratio = 0.5
+shader_parameter/beers_law = 3.0
+shader_parameter/normal_scale = 0.5
+shader_parameter/roughness_scale = 0.2
+shader_parameter/time_scale = 5.0
+shader_parameter/uv_scale = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_aioko"]
+material = SubResource("ShaderMaterial_qxboj")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rjwgw"]
+
+[node name="Scp791" type="StaticBody3D"]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("1_5qidp")
+has_sound = null
+sound_path = null
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_aioko")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_rjwgw")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=4 uid="uid://di3qs5437vm87"]
 
-[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Pickable.gd" id="1_7v6sv"]
+[ext_resource type="Script" uid="uid://52ha8ji1d1q3" path="res://Scripts/Interactables/Pickable.gd" id="1_7v6sv"]
 [ext_resource type="Texture2D" uid="uid://dqdb35xv44gcu" path="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_base.png" id="1_of4te"]
 [ext_resource type="Texture2D" uid="uid://kyea7i8urm5v" path="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_metal-Scp067_Cylinder_rough.png" id="2_7v6sv"]
 [ext_resource type="Texture2D" uid="uid://b2sdjvtptngcs" path="res://Assets/OriginalModels/Scp067/Scp067_Scp067_Cylinder_nor.png" id="3_brdja"]

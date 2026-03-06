@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GameTaskResource" load_steps=2 format=3 uid="uid://dsrqq2wuusco8"]
+
+[ext_resource type="Script" uid="uid://2412583x8gql" path="res://Scripts/TaskSystem/GameTaskResource.gd" id="1_utgmq"]
+
+[resource]
+script = ExtResource("1_utgmq")
+internal_name = "task_791"
+public_name = "TASK_791_RESEARCH"
+required_group = &"cont1_812"
+required_groups = Array[String](["cont1_812"])
+metadata/_custom_type_script = "uid://2412583x8gql"

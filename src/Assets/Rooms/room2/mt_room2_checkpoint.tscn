@@ -298,7 +298,7 @@ transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 9.8079, 
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_54lxd")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="Waypoints" type="MeshInstance3D" parent="."]
 transform = Transform3D(-3.2584137e-07, 0, 2, 0, 2, 0, -2, 0, -3.2584137e-07, -9.890873, 3.4690726, 3.3983)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_28msk")
@@ -307,6 +307,7 @@ waypoints_and_groups = Dictionary[String, String]({
 "SCP-023": "Scp023Spawn",
 "SCP-446": "MT_cont1_446",
 "SCP-649": "Scp649",
+"SCP-791": "cont1_791",
 "SCP-812": "cont1_812",
 "SCP-938": "Scp938Spawn",
 "SCP-939": "Scp939Spawn"

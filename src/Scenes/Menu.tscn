@@ -264,6 +264,9 @@ License: MIT License.
 -------------------------
 Scanning Shader by Yui Kinomoto @arlez80 
 License: MIT License
+------------------------
+Bottle shader and script by Lexpartizan
+Licensed under MIT License
 -------------------------
 Scientist, guard, class-D, MTF and
 Chaos insurgency models are made
@@ -398,7 +401,17 @@ Lomzz
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="SpoilersAhead" type="AcceptDialog" parent="."]
+disable_3d = true
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(383, 109)
+theme = ExtResource("2_syfuq")
+dialog_text = "Help section have major spoilers!
+If you are not afraid, type in Seed label: spoilers"
+
 [node name="Tutorial" type="Window" parent="."]
+disable_3d = true
 title = "Tutorial"
 initial_position = 2
 size = Vector2i(800, 480)
