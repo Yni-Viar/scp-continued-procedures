@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dy2kt71q27y07"]
+[gd_scene load_steps=19 format=4 uid="uid://dy2kt71q27y07"]
 
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="1_c8gp5"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_fmwk4"]
@@ -9,6 +9,7 @@
 [ext_resource type="LightmapGIData" uid="uid://cu2ip3pjyylpx" path="res://Assets/Rooms/room2c/Lm/mt_room2c_warehouse.lmbake" id="5_t5axs"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="6_5e8jo"]
 [ext_resource type="PackedScene" uid="uid://baytx1gft7sbp" path="res://Assets/OriginalModels/box_mini.tscn" id="6_vqiuj"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="7_vh74e"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="7_vqiuj"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_vh74e"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="10_fmwk4"]
@@ -205,6 +206,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64584017, 2.5144126, -7.944
 
 [node name="box17" parent="NavigationRegion3D/Props" instance=ExtResource("6_vqiuj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.646583, 2.4641118, 2.09707)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("7_vh74e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.420006, -0.61931497, -2.1638098)
 
 [node name="Cylinder2" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0030813813, 0)

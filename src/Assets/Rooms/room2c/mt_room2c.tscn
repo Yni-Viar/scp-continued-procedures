@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://clnq8dtqg1j0g"]
+[gd_scene load_steps=16 format=4 uid="uid://clnq8dtqg1j0g"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_5vsbw"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_8gfa7"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c4rphn1mij8kp" path="res://Assets/ExternalModels/pipe_1.tscn" id="6_ehbp4"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="7_ag7vi"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="8_nnxw4"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="11_d38h3"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(3.336666, -0.7650399, -1.1633337, 2.336666, -0.7650399, -1.9133337, 0.8366661, -0.7650399, -1.6633337, 0.5866661, -0.7650399, -2.6633337, -1.6633339, -0.7650399, -2.6633337, -2.663334, -0.7650399, -1.6633337, -2.663334, -0.7650399, 0.83666635, -1.4133339, -0.7650399, 1.3366663, 9.836666, -0.7650399, 1.3366663, 9.836666, -0.7650399, -1.1633337, 2.586666, -0.7650399, 1.5866663, 1.3366661, -0.7650399, 3.0866663, -1.1633339, -0.7650399, 9.836666, 1.3366661, -0.7650399, 9.836666)
@@ -159,3 +160,6 @@ current_season = 5
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00011044741, 0)
 shape = SubResource("ConcavePolygonShape3D_nnxw4")
+
+[node name="FireExtinguisher" parent="." instance=ExtResource("11_d38h3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7944759, -0.6225068, -2.8122768)

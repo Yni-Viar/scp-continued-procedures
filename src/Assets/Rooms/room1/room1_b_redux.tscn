@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://b8ov0fbc5m23w"]
+[gd_scene load_steps=29 format=4 uid="uid://b8ov0fbc5m23w"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_1vekj"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_4hffe"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="9_sc5mp"]
 [ext_resource type="PackedScene" uid="uid://cqsat881jn5qo" path="res://Assets/ExternalModels/steel_frame_shelves.tscn" id="14_4rq04"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="15_g41ma"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="15_sc5mp"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="16_4hffe"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="17_xsx68"]
 
@@ -707,3 +708,6 @@ current_season = 5
 
 [node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("17_xsx68")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.7921705, -3.671036, -7.034262)
+
+[node name="FireExtinguisher" parent="." instance=ExtResource("15_sc5mp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.353971, -0.64267474, -6.107736)

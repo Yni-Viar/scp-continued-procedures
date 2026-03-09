@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://ch2it7880i81w"]
+[gd_scene load_steps=43 format=4 uid="uid://ch2it7880i81w"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_78d0j"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_5m812"]
@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="17_q74k5"]
 [ext_resource type="PackedScene" uid="uid://dlpgutdspohq2" path="res://Assets/OriginalModels/scp_522.tscn" id="20_3v0td"]
 [ext_resource type="Script" uid="uid://d4gmitkq2q5b2" path="res://Scripts/Triggers/Scp522TaskTrigger.gd" id="21_e84cl"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="24_y86k0"]
+[ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="25_hpyvh"]
+[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="26_pm83i"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_me810"]
 vertices = PackedVector3Array(-7.919507, -0.7724072, -8.751619, -7.919507, -0.7724072, -1.0016193, -0.919507, -0.7724072, -1.0016193, -0.919507, -0.7724072, -8.751619, 1.080493, -0.7724072, -8.751619, 1.080493, -0.7724072, -0.75161934, 9.330493, -0.7724072, -0.75161934, 9.330493, -0.7724072, -8.751619, 9.330493, -0.7724072, 3.2483807, 9.330493, -0.7724072, 0.74838066, 8.830493, -0.7724072, 2.9983807, 8.080493, -0.7724072, 3.4983807, 2.080493, -0.7724072, 2.9983807, -7.919507, -0.7724072, 0.74838066, -7.919507, -0.7724072, 5.4983807, -6.669507, -0.7724072, 5.7483807, 1.830493, -0.7724072, 0.74838066, 8.080493, -0.7724072, 9.498381, -6.919507, -0.7724072, 9.498381)
@@ -506,5 +509,14 @@ shape = SubResource("BoxShape3D_4f2nv")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.99, 0, 0, 0, 0.99, 0, 0, 0, 0.99, 0, 0.8467577, 0.08080673)
 shape = SubResource("ConcavePolygonShape3D_e84cl")
+
+[node name="FireExtinguisher" parent="." instance=ExtResource("24_y86k0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.114756, -0.64223725, 1.1696594)
+
+[node name="Chair" parent="." instance=ExtResource("25_hpyvh")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 5.5146217, -1.2621408, 2.8661637)
+
+[node name="laptop" parent="." instance=ExtResource("26_pm83i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.614941, 0.24154568, 1.5728531)
 
 [connection signal="finished" from="Scp522" to="Scp522Trigger" method="_on_scp_522_finished"]

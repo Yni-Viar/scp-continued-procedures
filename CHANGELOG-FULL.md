@@ -3,9 +3,13 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v5.9.0 ("Cleanlight update")
-### Research Zone lighting update
+## v6.0.0 ("Creativity update")
+### Zone-wide update
 - [x] Revamped (again) Research Zone lighting.
+- [x] Added new props to all available zones.
+
+### New gamemode - Building
+- [ ] Add new gamemode - Build.
 
 ### New SCP
 - [x] \[Full version only\] SCP-791
@@ -19,8 +23,11 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Full version only\] Updated SCP-812 chamber to include SCP-791
 - [x] \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
 - [x] \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
-- [x] Update large maintenance hallway.
+- [x] Updated lights in large maintenance hallway.
 - [x] \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
+- [x] Applied new doors for Surface Zone / Facility elevators
+- [x] Removed Entrance Zone due to poor implementation.
+- [ ] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
 
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)

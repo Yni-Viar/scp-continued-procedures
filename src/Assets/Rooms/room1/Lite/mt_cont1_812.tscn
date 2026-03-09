@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://xfomg41qsbnq"]
+[gd_scene load_steps=49 format=4 uid="uid://xfomg41qsbnq"]
 
 [ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_b1yng"]
 [ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="2_lfmvw"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="18_x37se"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="19_agof4"]
 [ext_resource type="PackedScene" uid="uid://3htvhayjbon0" path="res://Assets/ExternalModels/beetle_bot_fused.tscn" id="20_2ufro"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="23_3j8ej"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(0.394783, -0.760336, -14.8718, 1.39478, -0.760336, -15.3718, 1.39478, -0.760336, -15.8718, -13.8552, -0.760336, -14.1218, 0.394783, -0.760336, -14.1218, -13.8552, -0.760336, -22.1218, 7.64478, -0.760336, -21.8718, 6.14478, 2.73966, -18.6218, 5.39478, 2.73966, -18.3718, 5.14478, 2.73966, -17.6218, 3.64478, 2.73966, -12.1218, 11.3948, 2.73966, -19.8718, 4.39478, 2.73966, -17.3718, 4.14478, 2.73966, -16.6218, 3.39478, 2.73966, -16.3718, 3.14478, 2.73966, -15.6218, 2.39478, 2.73966, -15.3718, 1.89478, 2.73966, -14.3718, 1.39478, 2.73966, -14.3718, 11.3948, 2.73966, -20.3718, 9.39478, 2.73966, -22.1218, 6.39478, 2.73966, -19.3718, 14.3948, -0.760336, -22.1218, 11.1448, -0.760336, -22.1218, 12.6448, -0.760336, -20.6218, 12.6448, -0.760336, -19.6218, 14.3948, -0.760336, -14.1218, 7.14478, -0.760336, -14.3718, 10.6448, -0.760336, -19.8718, 9.64478, -0.760336, -21.3718, 9.14478, -0.760336, -21.3718, 2.14478, -0.760336, -14.3718, 3.64478, -0.760336, -12.8718, 4.14478, -0.760336, -10.8718, 3.39478, -0.760336, -10.8718, 3.39478, -0.760336, 2.37819, 6.39478, -0.760336, 2.37819, 6.14478, -0.760336, -13.3718, -13.8552, -8.76034, -13.1218, -13.8552, -8.76034, -10.1218, 14.3948, -8.76034, -10.1218, 14.3948, -8.76034, -13.1218, 14.6448, -20.7603, 3.62819, 14.6448, -20.7603, 3.12819, 13.8948, -20.7603, 2.87819, -13.8552, -20.7603, 3.62819, 13.8948, -20.7603, 0.128187, 14.6448, -20.7603, -0.121813, 14.6448, -20.7603, -0.621813, 13.8948, -20.7603, -0.871813, 14.1448, -20.7603, -8.62181, 14.6448, -20.7603, -9.12181, -13.8552, -20.7603, -9.12181, 14.6448, -20.7603, -5.37181, 14.6448, -20.7603, -6.12181, 14.1448, -20.7603, -6.37181, 13.8948, -20.7603, -5.12181, 15.8948, -28.7603, -9.12181, 15.8948, -28.7603, 3.62819, 25.8948, -28.7603, 3.62819, 25.8948, -28.7603, -9.12181, 6.39478, -0.760336, 4.37819, 3.39478, -0.760336, 4.37819, 2.89478, -0.760336, 4.62819, 2.89478, -0.760336, 9.62819, 8.64478, -0.760336, 9.62819, 8.64478, -0.760336, 4.62819, -13.8552, -0.760336, 4.62819, -13.8552, -0.760336, 9.62819, 14.3948, -0.760336, 9.62819, 14.3948, -0.760336, 4.62819)
@@ -511,6 +512,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -9.427788
 [node name="Light2" parent="NavigationRegion3D/Props" instance=ExtResource("13_lfmvw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.471367, 6.722679, -18.003769)
 
+[node name="beetle_bot_fused" parent="NavigationRegion3D/Props" instance=ExtResource("20_2ufro")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 10.997881, -1.2436188, -21.845125)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("23_3j8ej")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.853614, -0.64040357, 9.9475)
+
 [node name="entityspawn2" type="Marker3D" parent="." groups=["Scp347Spawn"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4306, -1.24029, 7.35588)
 
@@ -628,9 +635,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5090532, -0.78577095, 5.039
 
 [node name="ScientistPoint3" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.084796, -0.78577095, 5.039664)
-
-[node name="beetle_bot_fused" parent="." instance=ExtResource("20_2ufro")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 10.997881, -1.2436188, -21.845125)
 
 [connection signal="body_entered" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_entered"]
 [connection signal="body_exited" from="Scp812Trigger" to="." method="_on_scp_812_trigger_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://b2058uf8i0kt0"]
+[gd_scene load_steps=15 format=4 uid="uid://b2058uf8i0kt0"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_m518o"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_p6mpm"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="6_sge6t"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="7_txbq1"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_txbq1"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="10_k58wn"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_ijhca"]
 vertices = PackedVector3Array(-3.4894, -0.76956797, 9.7469, 3.2606, -0.76956797, 9.7469, 3.2606, -0.76956797, 6.9968996, -3.4894, -0.76956797, 6.7468996, 6.7606, -0.76956797, 3.4968996, 7.0106, -0.76956797, -3.2531004, 3.2606, -0.76956797, -7.0031004, -3.4894, -0.76956797, -6.7531004, -6.7394, -0.76956797, 3.4968996, 9.7606, -0.76956797, 3.4968996, 9.7606, -0.76956797, -3.2531004, -6.9894, -0.76956797, -3.2531004, 3.2606, -0.76956797, -9.7531, -3.4894, -0.76956797, -9.7531, -9.7394, -0.76956797, -3.2531004, -9.7394, -0.76956797, 3.4968996)
@@ -118,6 +119,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, 5)
 
 [node name="Light7" parent="NavigationRegion3D/Props" instance=ExtResource("5_p6mpm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, -5)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("10_k58wn")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -5.5714073, -0.6496344, 5.22099)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

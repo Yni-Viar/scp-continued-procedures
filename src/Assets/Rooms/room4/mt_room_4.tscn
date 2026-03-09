@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://4i51o046e2no"]
+[gd_scene load_steps=16 format=4 uid="uid://4i51o046e2no"]
 
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_olia3"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_u32hl"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="6_xrry7"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="7_cf2e0"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="8_cf2e0"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="11_046qp"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_olia3"]
 vertices = PackedVector3Array(-1.2399998, -0.77760994, -1.7399998, -2.4899998, -0.77760994, -1.7399998, -2.7399998, -0.77760994, -1.2399998, -2.7399998, -0.77760994, 1.2600002, -9.74, -0.77760994, -1.2399998, -9.74, -0.77760994, 1.2600002, -1.2399998, -0.77760994, -9.74, 1.2600002, -0.77760994, -2.7399998, 1.2600002, -0.77760994, -9.74, 2.7600002, -0.77760994, 1.2600002, 9.76, -0.77760994, 1.2600002, 9.76, -0.77760994, -1.2399998, 2.7600002, -0.77760994, -1.2399998, -1.2399998, -0.77760994, 2.7600002, 1.2600002, -0.77760994, 2.7600002, -1.2399998, -0.77760994, 9.76, 1.2600002, -0.77760994, 9.76)
@@ -123,6 +124,9 @@ transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -
 
 [node name="Pipe_04" parent="NavigationRegion3D/Props" instance=ExtResource("4_prqh0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90571, 1.41002, -2.43104)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("11_046qp")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.6633146, -0.6290726, 2.2204466)
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

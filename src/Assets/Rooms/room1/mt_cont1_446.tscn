@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=4 uid="uid://kb5so0w2xj5k"]
+[gd_scene load_steps=31 format=4 uid="uid://kb5so0w2xj5k"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_t50k2"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_yy1am"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="12_kymhv"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="13_u2gtq"]
 [ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="17_q14k8"]
+[ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="18_16ume"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="19_43vmf"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6571d"]
 vertices = PackedVector3Array(-4.886347, -0.7344856, -6.6345177, -5.136347, -0.7344856, -8.884518, -6.636347, -0.7344856, -8.884518, -8.886347, -0.7344856, -6.6345177, -8.886347, -0.7344856, -2.6345177, -7.136347, -0.7344856, -2.6345177, -6.886347, -0.7344856, -1.1345177, -0.13634682, -0.7344856, -1.1345177, -0.13634682, -0.7344856, -2.3845177, 0.36365318, -0.7344856, -2.6345177, 0.36365318, -0.7344856, -6.6345177, 7.863653, -0.7344856, -6.1345177, 8.113653, -0.7344856, -2.6345177, 8.863653, -0.7344856, -2.6345177, 8.863653, -0.7344856, -6.3845177, 2.1136532, -0.7344856, -6.8845177, 4.863653, -0.7344856, -2.6345177, 5.113653, -0.7344856, -6.1345177, 6.363653, -0.7344856, -8.884518, 2.1136532, -0.7344856, -8.884518, 2.6136532, -0.7344856, 1.3654823, 2.3636532, -0.7344856, -0.88451767, -1.6363468, -0.7344856, 5.8654823, -1.3863468, -0.7344856, 9.615482, 1.3636532, -0.7344856, 9.615482, 1.6136532, -0.7344856, 5.8654823, -8.886347, -0.7344856, 3.6154823, -6.636347, -0.7344856, 5.8654823, 6.363653, -0.7344856, 5.8654823, 8.863653, -0.7344856, 3.3654823, 8.863653, -0.7344856, 1.3654823, -8.886347, -0.7344856, -0.88451767)
@@ -215,6 +217,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5788295, -0.20265377, -8.4
 
 [node name="Table2" parent="NavigationRegion3D/Props" instance=ExtResource("7_yy1am")]
 transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 6.092246, -0.20265377, -0.3590331)
+
+[node name="Chair" parent="NavigationRegion3D/Props" instance=ExtResource("18_16ume")]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -3.024302, -1.234486, -6.5652914)
+
+[node name="Chair2" parent="NavigationRegion3D/Props" instance=ExtResource("18_16ume")]
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -0.16225505, -1.234486, -6.5652914)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("19_43vmf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.024896, -0.61458236, -1.111239)
 
 [node name="Cylinder" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00043988228, -0.27882367, -0.0010120869)

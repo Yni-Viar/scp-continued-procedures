@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://bxuadtl8358ia"]
+[gd_scene load_steps=54 format=4 uid="uid://bxuadtl8358ia"]
 
 [ext_resource type="Script" uid="uid://c5p5uc3tem55b" path="res://Scripts/Triggers/Scp812RoomTrigger.gd" id="1_d2mx2"]
 [ext_resource type="Texture2D" uid="uid://dicxev7kltdmq" path="res://Assets/OriginalModels/Scp812/Scp812_Cube_001_base.png" id="2_rkb2w"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b7bqrcgpr32l3" path="res://Assets/OriginalModels/scp_791.tscn" id="11_l8x3n"]
 [ext_resource type="PackedScene" uid="uid://cqhhycwdvhaq6" path="res://Assets/ExternalModels/hanging_light.tscn" id="12_pxsbx"]
 [ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Metal.tres" id="13_dxjog"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="13_vligh"]
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="14_lkbf1"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="15_qagxn"]
 [ext_resource type="Shader" uid="uid://b2smunw6gw5ds" path="res://Shaders/Water2Shader/water_shader.gdshader" id="16_dya4o"]
@@ -557,6 +558,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.627253, 6.722679, -9.4277
 [node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("12_pxsbx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.627253, 6.722679, -18.003769)
 
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("13_vligh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.853614, -0.64040357, 9.9475)
+
+[node name="beetle_bot_fused" parent="NavigationRegion3D/Props" instance=ExtResource("22_paur3")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 12.111329, -1.2436188, -21.723612)
+
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)
 mesh = SubResource("ArrayMesh_vligh")
@@ -669,9 +676,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5090532, -0.78577095, 5.039
 
 [node name="ScientistPoint3" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.084796, -0.78577095, 5.039664)
-
-[node name="beetle_bot_fused" parent="." instance=ExtResource("22_paur3")]
-transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 12.111329, -1.2436188, -21.723612)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.875, 0)

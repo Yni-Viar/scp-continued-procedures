@@ -157,7 +157,7 @@ msgid "ELEVATOR_CALL"
 msgstr "Вызвать/поехать на лифте"
 
 msgid "ENTRANCE_SUBZONE"
-msgstr "Входная подзона"
+msgstr "Закрыто на реконструкцию"
 
 msgid "GATE_A"
 msgstr "Выход А"

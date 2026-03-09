@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://cqh6tjpsub0jn"]
+[gd_scene load_steps=29 format=4 uid="uid://cqh6tjpsub0jn"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ndh3u"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_uv1va"]
@@ -11,12 +11,15 @@
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="8_ndh3u"]
 [ext_resource type="LightmapGIData" uid="uid://bfxk33pu40ede" path="res://Assets/Rooms/room2/Lm/cont2_650.lmbake" id="8_uv1va"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="10_43rjr"]
+[ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="10_e32qf"]
 [ext_resource type="PackedScene" uid="uid://0hcy8vda587t" path="res://Assets/ExternalModels/pumpkin.tscn" id="10_rism5"]
+[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="11_jjkku"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="12_jpowq"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="14_bp435"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
-vertices = PackedVector3Array(3.98563, -0.7789879, 7.7414, 3.98563, -0.7789879, 4.7414, 3.48563, -0.7789879, 4.4914, -3.76437, -0.7789879, 9.4914, 3.48563, -0.7789879, 7.9914, 3.48563, -0.7789879, -9.7586, -3.76437, -0.7789879, -9.7586, 3.48563, -0.7789879, 9.7414, 7.73563, -0.7789879, 8.2414, 9.48563, -0.7789879, 7.9914, 9.23563, -0.7789879, 5.9914, 6.73563, -0.7789879, 5.7414, 6.73563, -0.7789879, -1.0086002, 9.23563, -0.7789879, -1.2586002, 9.23563, -0.7789879, -7.5086, 4.73563, -0.7789879, -7.5086, 4.73563, -0.7789879, 4.4914)
-polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 2, 6), PackedInt32Array(6, 2, 3), PackedInt32Array(4, 7, 3), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(16, 11, 1), PackedInt32Array(1, 11, 0), PackedInt32Array(0, 11, 8), PackedInt32Array(11, 16, 12), PackedInt32Array(12, 16, 15)]
+vertices = PackedVector3Array(3.98563, -0.7789879, 7.7414, 3.98563, -0.7789879, 4.7414, 3.48563, -0.7789879, 4.4914, -3.76437, -0.7789879, 9.4914, 3.48563, -0.7789879, 7.9914, 3.48563, -0.7789879, -9.7586, -3.76437, -0.7789879, -9.7586, 3.48563, -0.7789879, 9.7414, 8.98563, -0.7789879, 7.9914, 8.98563, -0.7789879, 5.9914, 6.73563, -0.7789879, 5.7414, 4.73563, -0.7789879, 4.4914, 6.73563, -0.7789879, -1.0086002, 4.73563, -0.7789879, -7.5086, 8.98563, -0.7789879, -1.2586002, 8.98563, -0.7789879, -7.5086)
+polygons = [PackedInt32Array(0, 4, 1), PackedInt32Array(1, 4, 2), PackedInt32Array(2, 4, 3), PackedInt32Array(5, 2, 6), PackedInt32Array(6, 2, 3), PackedInt32Array(4, 7, 3), PackedInt32Array(10, 9, 8), PackedInt32Array(11, 10, 1), PackedInt32Array(1, 10, 0), PackedInt32Array(0, 10, 8), PackedInt32Array(10, 11, 12), PackedInt32Array(12, 11, 13), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 13)]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_jpowq"]
 _surfaces = [{
@@ -680,17 +683,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.104646, 4.039316, -6.01278)
 [node name="Light4" parent="NavigationRegion3D/Props" instance=ExtResource("8_ndh3u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.104646, 4.039316, 4.91546)
 
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.26622, 0.363186)
-height = 8.0
-vertices = PackedVector3Array(4.2667, 0, 9.70871, 4.20358, 0, 8.16169, 6.33883, 0, 8.19012, 9.48584, 0, 8.34767, 9.47014, 0, 9.87024)
-affect_navigation_mesh = true
-avoidance_enabled = false
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("14_bp435")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.381681, -0.64956266, 9.170495)
+
+[node name="Chair2" parent="NavigationRegion3D/Props" instance=ExtResource("10_e32qf")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.2137403, -1.2689133, 3.7925482)
+
+[node name="laptop" parent="NavigationRegion3D/Props" instance=ExtResource("11_jjkku")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.493564, 0.22101188, 4.0431247)
 
 [node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27374, 0)
 height = 8.0
-vertices = PackedVector3Array(4.05584, 0, -10.2997, 9.83525, 0, -10.3316, 9.92037, 0, -8.12703, 4.07002, 0, -8.11994)
+vertices = PackedVector3Array(4.05584, 0, -10.2997, 9.83525, 0, -10.3316, 9.92037, 0, -8.12703, 10.048049, 0, 10.149456, 4.091071, 0, 10.319654, 4.091071, 0, 8.447462, 9.579999, 0, 8.575111, 9.4371805, 0, -8.127009, 4.07002, 0, -8.11994)
 affect_navigation_mesh = true
 avoidance_enabled = false
 

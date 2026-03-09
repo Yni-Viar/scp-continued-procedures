@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://ek6uussev77v"]
+[gd_scene load_steps=34 format=4 uid="uid://ek6uussev77v"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_3udlw"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_cxq0v"]
@@ -19,6 +19,9 @@
 [ext_resource type="PackedScene" uid="uid://6qt3tlm0761o" path="res://InventorySystem/Items/ItemScp178.tscn" id="16_78hjk"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="17_mrost"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="18_ned5y"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="20_80h31"]
+[ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="21_6cg3u"]
+[ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="22_10yi5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
 vertices = PackedVector3Array(1.1233711, -0.7695668, -4.4696836, 1.3733711, -0.7695668, -3.9696836, 3.1233711, -0.7695668, -4.4696836, 1.6233711, -0.7695668, -8.719684, 4.373371, -0.7695668, -2.7196836, 5.873371, -0.7695668, -3.9696836, 5.873371, -0.7695668, -4.4696836, -4.376629, -0.7695668, 6.2803164, -3.1266289, -0.7695668, 5.7803164, -0.37662888, -0.7695668, 2.0303164, -0.37662888, -0.7695668, -3.2196836, -8.876629, -0.7695668, 1.5303164, -0.37662888, -0.7695668, -3.9696836, 2.3733711, -0.7695668, -0.71968365, 0.123371124, -0.7695668, -4.4696836, -0.37662888, -0.7695668, 2.7803164, 0.8733711, -0.7695668, 3.2803164, 3.8733711, -0.7695668, 6.2803164, 7.123371, -0.7695668, 3.2803164, 7.623371, -0.7695668, -3.4696836, 9.623371, -0.7695668, 3.2803164, 9.623371, -0.7695668, -3.4696836, 2.3733711, 1.9804332, -3.2196836, 3.1233711, 1.9804332, -2.4696836, 2.8733711, 1.9804332, -3.2196836, -2.6266289, -0.7695668, 7.2803164, -3.3766289, -0.7695668, 7.7803164, -3.3766289, -0.7695668, 9.780316, -0.12662888, -0.7695668, 3.2803164, -2.6266289, -0.7695668, 6.0303164, 3.3733711, -0.7695668, 6.7803164, 3.3733711, -0.7695668, 9.780316)
@@ -358,3 +361,12 @@ mesh = SubResource("TextMesh_ned5y")
 
 [node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.231346, -0.78577095, 1.9239516)
+
+[node name="FireExtinguisher" parent="." instance=ExtResource("20_80h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2922475, -0.647533, -0.6731573)
+
+[node name="Chair" parent="." instance=ExtResource("21_6cg3u")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, -5.955599, -1.267436, 1.2795353)
+
+[node name="laptop" parent="." instance=ExtResource("22_10yi5")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.46816874, 0.52277374)

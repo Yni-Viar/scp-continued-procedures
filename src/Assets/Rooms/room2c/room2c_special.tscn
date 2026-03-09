@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dk5tshb1f2wsi"]
+[gd_scene load_steps=19 format=4 uid="uid://dk5tshb1f2wsi"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_n8bhf"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_tsku5"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="5_tsku5"]
 [ext_resource type="LightmapGIData" uid="uid://di8iii0836774" path="res://Assets/Rooms/room2c/Lm/room2c_special.lmbake" id="6_knu6h"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_5augc"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="8_bm7kj"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_tsku5"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="11_tsku5"]
 
@@ -385,6 +386,9 @@ mesh = SubResource("ArrayMesh_5k2e4")
 skeleton = NodePath("")
 
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("8_bm7kj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3864956, -0.6471105, -4.545478)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

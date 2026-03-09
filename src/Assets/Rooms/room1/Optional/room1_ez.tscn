@@ -282,7 +282,7 @@ emission = Color(1, 1, 1, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_soiee"]
 material = SubResource("StandardMaterial3D_mcmt4")
-text = "EZ_RZ_SIGN"
+text = "ENTRANCE_SUBZONE"
 font = ExtResource("10_mcmt4")
 font_size = 32
 depth = 0.01
@@ -405,7 +405,7 @@ visibility_range_end = 64.0
 mesh = SubResource("TextMesh_m3yji")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.509958e-07, 0, -2, 0, 2, 0, 2, 0, 1.509958e-07, 6.8499603, 4.5150943, -0.5880859)
+transform = Transform3D(1.509958e-07, 0, -2, 0, 2, 0, 2, 0, 1.509958e-07, 6.8499603, 1.8440466, -0.19241786)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_soiee")
 

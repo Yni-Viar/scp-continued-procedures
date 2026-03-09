@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://b8x58lkcnq726"]
+[gd_scene load_steps=26 format=4 uid="uid://b8x58lkcnq726"]
 
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="1_cg23l"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_g4gw2"]
@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://p7fq70bvncja" path="res://Assets/ExternalModels/hanging_light_rz.tscn" id="13_g4gw2"]
 [ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="13_pjghs"]
 [ext_resource type="PackedScene" uid="uid://d0ot1af7632t" path="res://InventorySystem/Items/ItemDoc.tscn" id="14_7143u"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="15_2tjb2"]
+[ext_resource type="PackedScene" uid="uid://cjmvqohuuhvtc" path="res://Assets/OriginalModels/chair.tscn" id="16_d6nwl"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_shvc4"]
 vertices = PackedVector3Array(-3.7904997, -0.7787669, -8.2586, -8.7905, -0.7787669, -8.2586, -8.7905, -0.7787669, -7.0086, -3.0404997, -0.7787669, -7.0086, -2.7904997, -0.7787669, -5.5086, 2.9595003, -0.7787669, -5.5086, -3.5404997, -0.7787669, -9.7586, 3.2095003, -0.7787669, -7.0086, 3.4595003, -0.7787669, -9.7586, 8.9595, -0.7787669, -7.0086, 8.9595, -0.7787669, -8.5086, 3.7095003, -0.7787669, -8.5086, -3.0404997, -0.7787669, -1.0086002, -2.7904997, -0.7787669, 0.74139977, 2.9595003, -0.7787669, 0.74139977, 3.2095003, -0.7787669, -1.0086002, 3.2095003, -0.7787669, -3.5086002, -3.0404997, -0.7787669, -3.5086002, -8.7905, -0.7787669, -3.5086002, -8.7905, -0.7787669, -1.0086002, 8.9595, -0.7787669, -1.0086002, 8.9595, -0.7787669, -3.5086002, 3.4595003, -0.7787669, 9.7414, 3.4595003, -0.7787669, 8.7414, 2.9595003, -0.7787669, 8.4914, -2.7904997, -0.7787669, 8.4914, -3.5404997, -0.7787669, 8.7414, -3.5404997, -0.7787669, 9.7414, -2.7904997, -0.7787669, 5.4914, 3.2095003, -0.7787669, 2.4913998, -3.0404997, -0.7787669, 2.4913998, 3.2095003, -0.7787669, 5.2414, -8.7905, -0.7787669, 2.4913998, -8.7905, -0.7787669, 5.2414, 8.9595, -0.7787669, 5.2414, 8.9595, -0.7787669, 2.4913998)
@@ -753,6 +755,45 @@ item = ExtResource("14_7143u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.27775, 0.33510625, 6.8605466)
 script = ExtResource("13_pjghs")
 item = ExtResource("14_7143u")
+
+[node name="FireExtinguisher" parent="NavigationRegion3D" instance=ExtResource("15_2tjb2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9573, -0.63572437, -9.761382)
+
+[node name="Chair" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -6.823658)
+
+[node name="Chair2" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -6.854727)
+
+[node name="Chair3" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -0.75084686)
+
+[node name="Chair4" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -0.78191566)
+
+[node name="Chair5" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, 5.960489)
+
+[node name="Chair6" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, 5.92942)
+
+[node name="Chair7" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -6.823658)
+
+[node name="Chair8" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -6.854727)
+
+[node name="Chair9" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -0.75084686)
+
+[node name="Chair10" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -0.78191566)
+
+[node name="Chair11" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, 5.960489)
+
+[node name="Chair12" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, 5.92942)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

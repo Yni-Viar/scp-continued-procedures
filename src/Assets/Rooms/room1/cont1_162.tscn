@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://buwx2f5s8ms0n"]
+[gd_scene load_steps=33 format=4 uid="uid://buwx2f5s8ms0n"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_i76g7"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="2_ohsvx"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="8_yv4jn"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="14_dra1o"]
 [ext_resource type="Script" uid="uid://hur1fwih2oj7" path="res://Scripts/Triggers/Scp162TaskTrigger.gd" id="15_10src"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="15_yv4jn"]
 [ext_resource type="LightmapGIData" uid="uid://c3f1imkxxuoh8" path="res://Assets/Rooms/room1/Lm/cont1_162.lmbake" id="16_pbojt"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="17_hntjt"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="18_yf81g"]
@@ -356,6 +357,9 @@ light_energy = 4.0
 light_bake_mode = 1
 spot_range = 16.0
 spot_angle = 67.042114
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("15_yv4jn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8244123, -0.6354355, -6.047148)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

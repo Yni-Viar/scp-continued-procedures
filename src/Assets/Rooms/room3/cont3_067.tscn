@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cbv5koigg8s1v"]
+[gd_scene load_steps=31 format=4 uid="uid://cbv5koigg8s1v"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_t4jx0"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_vur81"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://d0ot1af7632t" path="res://InventorySystem/Items/ItemDoc.tscn" id="12_00o1j"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="12_w1v5u"]
 [ext_resource type="PackedScene" uid="uid://dwqxbf6cfdrxb" path="res://Assets/OriginalModels/OmnidotPlushProp.tscn" id="16_d5pdp"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="19_plkj3"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(-3.2394257, -0.7695668, -9.092059, -3.4894257, -0.7695668, -11.092059, -4.9894257, -0.7695668, -9.592059, -6.2394257, -0.7695668, -9.592059, -6.2394257, -0.7695668, -5.092059, 3.0105743, -0.7695668, -5.092059, 3.0105743, -0.7695668, -9.092059, 6.0105743, -0.7695668, -9.342059, 3.7605743, -0.7695668, -11.092059, 3.7605743, -0.7695668, -9.342059, 3.5105743, -0.7695668, -4.842059, 3.5105743, -0.7695668, -4.092059, 5.7605743, -0.7695668, -4.092059, 6.0105743, -0.7695668, -5.092059, 8.010574, -0.7695668, -5.092059, 8.010574, -0.7695668, -9.342059, 3.2605743, -0.7695668, -3.3420591, 6.7605743, -0.7695668, 3.4079409, 6.0105743, -0.7695668, -3.3420591, 9.760574, -0.7695668, 3.4079409, 9.760574, -0.7695668, -3.3420591, -9.739426, -0.7695668, -3.3420591, -9.739426, -0.7695668, 3.4079409, -6.9894257, -0.7695668, 3.4079409, -3.4894257, -0.7695668, 6.907941, -3.4894257, -0.7695668, 9.657941, 3.2605743, -0.7695668, 9.657941, 3.2605743, -0.7695668, 6.907941)
@@ -239,6 +240,12 @@ spot_angle = 67.042114
 [node name="Light6" parent="NavigationRegion3D/Props" instance=ExtResource("4_eywq5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, 5)
 
+[node name="OmnidotplushV2" parent="NavigationRegion3D/Props" instance=ExtResource("16_d5pdp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4459183, -1.2480954, -11.801354)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("19_plkj3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8848403, -0.6348339, -10.685433)
+
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 visibility_range_end = 64.0
@@ -305,6 +312,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14200258, 0.24193737, -10.9
 
 [node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.78577095, -7.302253)
-
-[node name="OmnidotplushV2" parent="." instance=ExtResource("16_d5pdp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4459183, -1.2480954, -11.801354)

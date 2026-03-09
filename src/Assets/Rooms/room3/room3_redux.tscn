@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://cer4f28tf2elv"]
+[gd_scene load_steps=19 format=4 uid="uid://cer4f28tf2elv"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_fxrmn"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_pat0x"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="8_qfwom"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="9_875mv"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="10_875mv"]
+[ext_resource type="PackedScene" uid="uid://c88xvl7f3pq8b" path="res://Assets/OriginalModels/FireExtinguisher.tscn" id="12_c026s"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_08alc"]
 vertices = PackedVector3Array(-9.739426, -0.77291, -3.480957, -9.739426, -0.77291, 3.269043, -6.9894257, -0.77291, 3.269043, -3.4894257, -0.77291, 9.769043, 3.2605743, -0.77291, 9.769043, 3.2605743, -0.77291, 7.019043, -3.4894257, -0.77291, 6.769043, 7.0105743, -0.77291, 3.269043, 9.760574, -0.77291, -3.480957, 9.760574, -0.77291, 3.269043)
@@ -380,6 +381,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 5, 4
 
 [node name="Light6" parent="NavigationRegion3D/Props" instance=ExtResource("6_c026s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.038, 5)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("12_c026s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5060299, -0.6403677, -3.6172984)
 
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)

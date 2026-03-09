@@ -86,11 +86,6 @@ func _on_facility_generator_generated() -> void:
 	var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
 	sz.position.y = 256.0
 	add_child(sz, true)
-	if !OS.has_feature("Lite"):
-		var ez: Node3D = load("res://Assets/Rooms/sublevels/Optional/subl_Entrance.tscn").instantiate()
-		# avoid elevator collision
-		ez.position = Vector3(64.0, 128.0, 128.0)
-		add_child(ez, true)
 	
 	spawn_player()
 	spawn_puppets()
