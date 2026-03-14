@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_uxwn0"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="2_2eaxa"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="3_imtjn"]
-[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Ceiling.tres" id="4_4g2fs"]
+[ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Vents.tres" id="4_4g2fs"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="5_y0woy"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="6_a6qm2"]
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="7_bej4u"]

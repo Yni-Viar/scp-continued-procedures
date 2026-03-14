@@ -29,23 +29,26 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 
 Included SCPs:
 
-- SCP-023
-- SCP-067
-- SCP-162
-- SCP-173 (only one variation in Lite version)
-- SCP-178 (partially absent in Lite version)
-- SCP-266 (do not spawn by default in Lite version since 5.8) (Lag issue)
-- SCP-347 (do not spawn by default in Lite version since 5.9) (Lag issue)
-- SCP-446
-- SCP-458
-- SCP-522
-- SCP-650
-- SCP-686
-- SCP-791 (absent in Lite version)
-- SCP-812
-- SCP-914 (absent in Lite version)
-- SCP-938 (do not spawn by default in Lite version)
-- SCP-939
+| SCP# | Full | Lite/Web version |
+|------|------|------------------|
+|SCP-023|✅, since 3.0.0|✅, since 5.7.0|
+|SCP-067|✅, since 5.2.0|✅, since 5.7.0|
+|SCP-162|✅, since 1.0.0|✅, since 5.8.0|
+|SCP-173|✅, since 1.0.0|Partial, since 5.7.0|
+|SCP-178|✅, since 5.2.0|❌, 3d help wanted|
+|SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
+|SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0 due to lag|
+|SCP-446|✅, since 5.3.0|✅, since 5.7.0|
+|SCP-458|✅, since 5.1.0|✅, since 5.7.0|
+|SCP-522|✅, since 5.8.0|✅, since 5.8.0|
+|SCP-649|⛄, since 5.5.0|⛄, since 5.7.0|
+|SCP-650|✅, since 1.0.0|✅, since 5.7.0|
+|SCP-686|✅, since 1.0.0|✅, since 5.7.0|
+|SCP-791|✅, since 6.0.0|❌|✅, since 6.0.0|
+|SCP-812|✅, since 1.0.0|✅, since 5.7.0|
+|SCP-914|✅, since 2.0.0|✅, 5.7.x and since 6.0.0|
+|SCP-938|✅, since 5.0.0|❌|✅, since 6.0.0|
+|SCP-939|✅, since 5.5.0|✅, since 5.8.0|
 
 ## Why this name?
 - It is a recursive acronym - **S**CP: **C**ontinued **P**rocedures

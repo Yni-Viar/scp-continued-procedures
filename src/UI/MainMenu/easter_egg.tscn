@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4tymm7axdu4r"]
+
+[ext_resource type="Texture2D" uid="uid://cjc2cv7hfk7of" path="res://Assets/HUD/EasterEgg/idle_or_waiting.PNG" id="1_e0nks"]
+[ext_resource type="Texture2D" uid="uid://d6bpy1fhmme5" path="res://Assets/HUD/EasterEgg/idle1.PNG" id="2_uwbnu"]
+[ext_resource type="Texture2D" uid="uid://cbpwnvpy1cklt" path="res://Assets/HUD/EasterEgg/idle2.PNG" id="3_dlww6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dd46u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_e0nks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uwbnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dlww6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="EasterEgg" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Node2D"]
+position = Vector2(528, 192)
+sprite_frames = SubResource("SpriteFrames_dd46u")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 320.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+theme_override_font_sizes/bold_italics_font_size = 20
+theme_override_font_sizes/italics_font_size = 20
+theme_override_font_sizes/mono_font_size = 20
+bbcode_enabled = true
+text = "[center][font_size=32]Welcome to Yni Viar's dimension![/font_size][/center]
+[hr]
+Some hikkikomori decided to get out from home.
+But can they actually do it?
+Interesting question..."

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_qy6ff"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="2_01jcx"]
 [ext_resource type="Material" uid="uid://r3xwpbwndakb" path="res://Assets/Materials/MaintenanceTunnels/Borders.tres" id="3_5mjld"]
-[ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Metal.tres" id="4_y5bn2"]
+[ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Blocks.tres" id="4_y5bn2"]
 [ext_resource type="PackedScene" uid="uid://daniqy18dv0gq" path="res://InventorySystem/Items/ItemWoodenLantern.tscn" id="5_cngcp"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_pkqvl"]
 [ext_resource type="Texture2D" uid="uid://bjt7nn1tc22tc" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_Color.png" id="5_y5bn2"]

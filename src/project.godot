@@ -65,6 +65,10 @@ folder_colors={
 "res://UI/": "orange"
 }
 
+[filesystem]
+
+import/fbx2gltf/enabled=false
+
 [global_group]
 
 ScientistSpawn=""

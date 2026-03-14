@@ -3,13 +3,11 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.0 ("Creativity update")
+## v6.0.0 ("Cleanlight update")
 ### Zone-wide update
 - [x] Revamped (again) Research Zone lighting.
+- [x] Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
 - [x] Added new props to all available zones.
-
-### New gamemode - Building
-- [ ] Add new gamemode - Build.
 
 ### New SCP
 - [x] \[Full version only\] SCP-791

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b25hrjnoos5me"]
+[gd_scene load_steps=20 format=3 uid="uid://b25hrjnoos5me"]
 
 [ext_resource type="Script" uid="uid://nuv64h1g048i" path="res://Scripts/MainMenu.gd" id="1_3kf3n"]
 [ext_resource type="Texture2D" uid="uid://calm8y36ivn5q" path="res://UI/MainMenu/mainmenubackground.png" id="2_idohh"]
@@ -11,11 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://26abh1a6pa33" path="res://UI/MainMenu/Modes/settings.png" id="7_x0ao6"]
 [ext_resource type="Texture2D" uid="uid://cjb5vwpp8o0ug" path="res://icon_192_foreground.png" id="10_sjh0l"]
 [ext_resource type="PackedScene" uid="uid://dyo4u3ig5wr1p" path="res://Scenes/Settings.tscn" id="11_a8aa6"]
-[ext_resource type="Texture2D" uid="uid://cjc2cv7hfk7of" path="res://Assets/HUD/EasterEgg/idle_or_waiting.PNG" id="12_dsmso"]
+[ext_resource type="PackedScene" uid="uid://b4tymm7axdu4r" path="res://UI/MainMenu/easter_egg.tscn" id="12_a8aa6"]
 [ext_resource type="AudioStream" uid="uid://dyjre5u8dtce6" path="res://Sounds/Music/Original/SCP_MainMenu_WIP.ogg" id="12_qki4b"]
-[ext_resource type="Texture2D" uid="uid://d6bpy1fhmme5" path="res://Assets/HUD/EasterEgg/idle1.PNG" id="13_t8p2w"]
 [ext_resource type="Texture2D" uid="uid://baspe0tu45lrg" path="res://UI/back_button.png" id="14_dsmso"]
-[ext_resource type="Texture2D" uid="uid://cbpwnvpy1cklt" path="res://Assets/HUD/EasterEgg/idle2.PNG" id="14_krje8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8p2w"]
 content_margin_left = 2.0
@@ -48,23 +46,6 @@ width = 1152
 height = 648
 noise = SubResource("FastNoiseLite_krje8")
 color_ramp = SubResource("Gradient_a8aa6")
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dd46u"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_dsmso")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_t8p2w")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_krje8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -463,40 +444,8 @@ grow_vertical = 2
 texture = SubResource("NoiseTexture2D_dd46u")
 expand_mode = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="StoryUI"]
-visible = false
-
-[node name="Node2D" type="Node2D" parent="StoryUI/CanvasLayer"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StoryUI/CanvasLayer/Node2D"]
-position = Vector2(528, 192)
-sprite_frames = SubResource("SpriteFrames_dd46u")
-autoplay = "default"
-
-[node name="Panel" type="Panel" parent="StoryUI"]
-layout_mode = 0
-offset_top = 320.0
-offset_right = 1152.0
-offset_bottom = 648.0
-
-[node name="Label" type="RichTextLabel" parent="StoryUI/Panel"]
+[node name="EasterEgg" parent="StoryUI" instance=ExtResource("12_a8aa6")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 20
-theme_override_font_sizes/bold_italics_font_size = 20
-theme_override_font_sizes/italics_font_size = 20
-theme_override_font_sizes/mono_font_size = 20
-bbcode_enabled = true
-text = "[center][font_size=32]Welcome to Yni Viar's dimension![/font_size][/center]
-[hr]
-Some hikkikomori decided to get out from home.
-But can they actually do it?
-Interesting question..."
 
 [node name="Back" type="TextureButton" parent="StoryUI"]
 layout_mode = 1
