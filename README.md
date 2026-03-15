@@ -36,6 +36,7 @@ Included SCPs:
 |SCP-162|✅, since 1.0.0|✅, since 5.8.0|
 |SCP-173|✅, since 1.0.0|Partial, since 5.7.0|
 |SCP-178|✅, since 5.2.0|❌, 3d help wanted|
+|SCP-249|✅, since 6.0.0|✅, since 6.0.0|
 |SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
 |SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0 due to lag|
 |SCP-446|✅, since 5.3.0|✅, since 5.7.0|
@@ -44,10 +45,10 @@ Included SCPs:
 |SCP-649|⛄, since 5.5.0|⛄, since 5.7.0|
 |SCP-650|✅, since 1.0.0|✅, since 5.7.0|
 |SCP-686|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-791|✅, since 6.0.0|❌|✅, since 6.0.0|
+|SCP-791|✅, since 6.0.0|❌|
 |SCP-812|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-914|✅, since 2.0.0|✅, 5.7.x and since 6.0.0|
-|SCP-938|✅, since 5.0.0|❌|✅, since 6.0.0|
+|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag, probably will return in future|
+|SCP-938|✅, since 5.0.0|❌|
 |SCP-939|✅, since 5.5.0|✅, since 5.8.0|
 
 ## Why this name?

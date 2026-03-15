@@ -1,7 +1,6 @@
-[gd_scene load_steps=16 format=4 uid="uid://nccdmmocoap4"]
+[gd_scene load_steps=15 format=4 uid="uid://nccdmmocoap4"]
 
 [ext_resource type="Texture2D" uid="uid://bfbwpjb07k06l" path="res://Assets/ExternalModels/Laptop_MobileReady/keyboard.png" id="1_yd80n"]
-[ext_resource type="Texture2D" uid="uid://cyi1pg64e8ef8" path="res://Assets/ExternalModels/Laptop_MobileReady/keycard reader.png" id="2_b363n"]
 [ext_resource type="Texture2D" uid="uid://by0tvu8lqsba1" path="res://Assets/ExternalModels/Laptop_MobileReady/blank.png" id="3_0t50w"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j3oq4"]
@@ -24,10 +23,8 @@ metallic = 1.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxhci"]
 resource_name = "Material.005"
 cull_mode = 2
-albedo_texture = ExtResource("2_b363n")
+albedo_color = Color(0, 0, 0, 1)
 roughness = 0.5
-emission_enabled = true
-emission_texture = ExtResource("2_b363n")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4rmw3"]
 _surfaces = [{

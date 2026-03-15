@@ -37,7 +37,7 @@ shadow_mesh = SubResource("ArrayMesh_lxwqf")
 
 [node name="rz_border" type="Node3D"]
 
-[node name="Cube_001" type="MeshInstance3D" parent="."]
+[node name="Cube_001" type="MeshInstance3D" parent="." groups=["Door"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32166, 0)
 mesh = SubResource("ArrayMesh_mx61b")
 skeleton = NodePath("")

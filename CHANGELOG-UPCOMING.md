@@ -27,7 +27,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-007
 - [ ] SCP-104
 - [ ] SCP-178-1 new model (needs contribution)
-- [ ] SCP-432 (with dimension)
+- [ ] SCP-432 (with dimension) (only if requested)
 - [ ] SCP-647
 - [ ] SCP-713 (probably not)
 - [ ] SCP-813

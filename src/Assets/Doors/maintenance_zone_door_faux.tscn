@@ -1,24 +1,12 @@
-[gd_scene load_steps=24 format=4 uid="uid://d206r02l87aim"]
+[gd_scene load_steps=21 format=4 uid="uid://d206r02l87aim"]
 
-[ext_resource type="Texture2D" uid="uid://eu0sfyjett1p" path="res://Assets/RoomAssets/Doors/mt_door_3_Concrete042A_2K-PNG_Color.png" id="1_ykojp"]
-[ext_resource type="Texture2D" uid="uid://bxdd87iflvim" path="res://Assets/RoomAssets/Doors/mt_door_3_Concrete042A_2K-PNG_Roughness.png" id="2_4n05c"]
-[ext_resource type="Texture2D" uid="uid://ckak0ijn4gvr0" path="res://Assets/RoomAssets/Doors/mt_door_3_Concrete042A_2K-PNG_NormalGL.png" id="3_8kgdo"]
+[ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_bf0qq"]
 [ext_resource type="Texture2D" uid="uid://vyere8aclg5n" path="res://Assets/Doors/HCZDoor_HCZDoor_base.png" id="4_7aauk"]
 [ext_resource type="Texture2D" uid="uid://btl1pvn4b5w1g" path="res://Assets/Doors/HCZDoor_HCZDoor_rough.png" id="5_0me4x"]
 [ext_resource type="Texture2D" uid="uid://mqekmgk6l73g" path="res://Assets/Doors/HCZDoor_HCZDoor_nor.png" id="6_qmsty"]
 [ext_resource type="Texture2D" uid="uid://cuodt5qwr7gtn" path="res://Assets/Doors/LczDoor_Door_Texturize_door_frame_Albedo.png" id="7_el50n"]
 [ext_resource type="Texture2D" uid="uid://bkkweuyuqhi2x" path="res://Assets/Doors/LczDoor_Door_Texturize_door_frame_Metallic-Door_Texturize_door_frame_Roughness.png" id="8_djt38"]
 [ext_resource type="Texture2D" uid="uid://bsqgqib7tq2xb" path="res://Assets/Doors/LczDoor_Door_Texturize_door_frame_Normal.png" id="9_kl2sd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xo1ra"]
-resource_name = "Walls.001"
-albedo_texture = ExtResource("1_ykojp")
-metallic_texture = ExtResource("2_4n05c")
-metallic_texture_channel = 2
-roughness_texture = ExtResource("2_4n05c")
-roughness_texture_channel = 1
-normal_enabled = true
-normal_texture = ExtResource("3_8kgdo")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_fmyay"]
 _surfaces = [{
@@ -44,7 +32,7 @@ _surfaces = [{
 "index_count": 384,
 "index_data": PackedByteArray("TAAxAE0ATQAxAE4ATABPADEATQBOADIAUABPAEwAMgBOAFEAUAAzAE8AMgBRAFIAUgBRAAEAUgABAAIAMAAzAFAAMABTADMAVABTADAAVABVAFMAAABVAFQAAAADAFUAVgBXAFgAWABXAFkAVgA1AFcAWABZAFoAWgBZAAUAWgAFAAYANAA1AFYANABbADUANAA2AFsANABcADYAXABdADYAXAA3AF0ANwBeAF0ANwBfAF4AXwAHAF4AXwAEAAcACAA4AGAACAAJADgAYAA4AGEAYABhADkAYQAKADkAYQALAAoAOgA8AGIAOgBjADwAZAA6AGIAYwBlADwAZABiAGYAYwA7AGUAZwBkAGYAOwBoAGUAZwBmAGkAOwBqAGgAagAOAGgAagANAA4AawBnAGkAawBpAGwADABrAGwADABsAA8AEAA9ABIAEABtAD0AbQBuAD0AbQBvAG4AbwATAG4AbwARABMAFABwABYAcAAVAD4AFAAVAHAAFABxABUAFQBxAHIAFABzAHEAcQBzAD8AFAB0AHMAcwB0AHUAGAB0ABQAdAAXAHYAdAB3ABcAFwB3AHgAdwB5AEIAdwB6AHkAdAB6AHcAeQB6AEEAdAB7AHoAewB0ABgAegB7ABkAegAZAHwAGQB7AH0AewB+AEAAewAYAH4AfgAYAH8AfgB/AEMAfwAYABoAfwAaAIAAGgAYAIEAgQAYABsAGgCBAEQAIwCCAEsAIwCDAIIAggCDACIAIACDACMAgwCEAEoAgwCFAIQAhACFAIYAIACHAIMAgwCHAIUAhQCIAEkAhQCHAIgAiACHACEAhwAgAIkAiQAgAB0AhwCKAIsAhwCMAIoAhwCJAIwAigCMAEgAjACNAEcAjACJAI0AjQCJAB8AiQAdAI4AjgAdAB4AjgAeAI8AiQCQAJEAiQCSAJAAiQCOAJIAkACSAEYAkgCOAJMAkwCOABwAkgCTAEUAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
 "lods": [0.13824885, PackedByteArray("MAAxADIAMgAxAAEAMgABAAIAMAAzADEAAAAzADAAAAADADMANAAFAAYANAA1AAUANAA2ADUANAA3ADYANwAHADYANwAEAAcACAA4ADkACAAJADgAOQA4AAsACwAKADkAOgA7ADwADAA6ADwADAA8AA8AOwAOADwAOwANAA4AEAA9ABIAEAARAD0AEQATAD0AFAA+ABYAFAAVAD4AFAA/ABUAFAAXAD8AGAAXABQAQAAXABgAFwBAAEEAFwBBAEIAQQBAABkAQAAYAEMAQwAYABoAGgAYABsAGgAbAEQAHAAdAB4AHwAdABwAHwAcAEUAHwBFAEYAHwAgAB0AIQAgAB8AIQAfAEcAIQBHAEgAIAAhACIAIgAhAEkAIgBJAEoAIAAiACMAIwAiAEsAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"), 1.0832605, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACgAJAAsADAANAA4ADAAOAA8AEAARABIAEQATABIAFAAVABYAFAAXABUAGAAXABQAGQAXABgAGQAYABoAGgAYABsAHAAdAB4AHwAdABwAHwAgAB0AIQAgAB8AIAAhACIAIAAiACMAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A")],
-"material": SubResource("StandardMaterial3D_xo1ra"),
+"material": ExtResource("1_bf0qq"),
 "name": "Walls.001",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),

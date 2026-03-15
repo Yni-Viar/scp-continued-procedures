@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://o6rnnciwmwvn"]
+[gd_scene load_steps=11 format=3 uid="uid://o6rnnciwmwvn"]
 
 [ext_resource type="Script" uid="uid://r1rcmij73r5c" path="res://GDsh/InGameConsole.gd" id="1_ypsq7"]
-[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="2_f3q0f"]
 [ext_resource type="FontFile" uid="uid://da5rt3wx1igqy" path="res://Assets/Fonts/Cousine/Cousine-Regular.ttf" id="2_n4o4t"]
 [ext_resource type="FontFile" uid="uid://c1ao1hpya67h1" path="res://Assets/Fonts/Cousine/Cousine-Bold.ttf" id="3_pkdmj"]
 [ext_resource type="FontFile" uid="uid://cgy3bod14xxpa" path="res://Assets/Fonts/Cousine/Cousine-BoldItalic.ttf" id="4_dsit2"]
@@ -118,7 +117,7 @@ theme_override_constants/separation = 0
 [node name="Label" type="Label" parent="VBox/HBox"]
 layout_mode = 2
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_f3q0f")
+theme_override_fonts/font = ExtResource("3_pkdmj")
 text = "> "
 vertical_alignment = 1
 

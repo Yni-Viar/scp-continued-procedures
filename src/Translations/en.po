@@ -25,7 +25,7 @@ msgid "CUSTOM_ENEMYTYPE_RAND"
 msgstr "Randomize enemy spawn"
 
 msgid "TIME_LIMITED"
-msgstr "Time limited game"
+msgstr "Hard mode"
 
 msgid "ZEN_MODE"
 msgstr "Safe mode - do what you want - no threats, no tasks"
@@ -331,3 +331,9 @@ msgstr "Order Class-D to step on SCP-522."
 
 msgid "TASK_791_RESEARCH"
 msgstr "Take some water from SCP-791 with beaker."
+
+msgid "TASK_249_YOURFAULT"
+msgstr ""
+"Go through SCP-249, since you\n"
+"allowed this SCP to be contained\n"
+"among other SCPs."

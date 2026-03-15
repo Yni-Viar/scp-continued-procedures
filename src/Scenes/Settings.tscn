@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://1c7qxp1dlx5i" path="res://UITheme.tres" id="1_yrknh"]
 [ext_resource type="Script" uid="uid://c8axhj303g8f2" path="res://Scripts/BaseWindow.gd" id="2_w1nw0"]
 [ext_resource type="Script" uid="uid://cuqie2ofws5qv" path="res://Scripts/SettingsUI.gd" id="3_mjqtt"]
-[ext_resource type="FontFile" uid="uid://j45d6xc2rd07" path="res://Assets/Fonts/Home_Video/HomeVideo-Regular.otf" id="4_w1nw0"]
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="4_mjqtt"]
 [ext_resource type="Script" uid="uid://burwwqf7eqpi5" path="res://Scripts/KeybindSetter.gd" id="5_mjqtt"]
 
 [node name="Settings" type="Window"]
@@ -29,7 +29,7 @@ script = ExtResource("3_mjqtt")
 
 [node name="GraphicsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_w1nw0")
+theme_override_fonts/font = ExtResource("4_mjqtt")
 theme_override_font_sizes/font_size = 32
 text = "GRAPHICS"
 horizontal_alignment = 1
@@ -56,7 +56,7 @@ text = "REFLECTION_PROBE_WARNING"
 
 [node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_w1nw0")
+theme_override_fonts/font = ExtResource("4_mjqtt")
 theme_override_font_sizes/font_size = 32
 text = "SOUNDS"
 horizontal_alignment = 1
@@ -80,7 +80,7 @@ value = 1.0
 
 [node name="KeybindingLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_w1nw0")
+theme_override_fonts/font = ExtResource("4_mjqtt")
 theme_override_font_sizes/font_size = 32
 text = "KEYBINDING"
 horizontal_alignment = 1

@@ -1360,6 +1360,12 @@ max_distance = 20.0
 [node name="OutputSpawner" type="Marker3D" parent="NavigationRegion3D/scp914"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.02421, 2.34813, -6.35876)
 
+[node name="DoorToTeleport" type="Marker3D" parent="NavigationRegion3D/scp914" groups=["Door"]]
+transform = Transform3D(0.9999997, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, -6.9196978, 0.35774988, -6.4126673)
+
+[node name="DoorToTeleport2" type="Marker3D" parent="NavigationRegion3D/scp914" groups=["Door"]]
+transform = Transform3D(0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 7.224789, 0.35774988, -6.4126654)
+
 [node name="Props" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("2_31pvc")]

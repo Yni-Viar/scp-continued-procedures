@@ -25,7 +25,7 @@ msgid "CUSTOM_ENEMYTYPE_RAND"
 msgstr "Случайное появление противников"
 
 msgid "TIME_LIMITED"
-msgstr "Игра ограничена по времени"
+msgstr "Сложный режим"
 
 msgid "ZEN_MODE"
 msgstr "Безопасный режим - делай, что хочешь - никаких заданий и угроз"
@@ -340,3 +340,9 @@ msgid "TASK_791_RESEARCH"
 msgstr ""
 "Заберите немного воды из SCP-791\n"
 "с помощью пробирки."
+
+msgid "TASK_249_YOURFAULT"
+msgstr ""
+"Пройдите через SCP-249, так как Вы\n"
+"разрешили данный объект держать\n"
+"среди других SCP."

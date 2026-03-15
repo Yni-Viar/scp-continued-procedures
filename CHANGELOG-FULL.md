@@ -9,8 +9,12 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
 - [x] Added new props to all available zones.
 
+### Smarter NPCs
+- [ ] NPCs can now ride elevators by themselves
+
 ### New SCP
-- [x] \[Full version only\] SCP-791
+- [x] \[Full version only\] SCP-791 (with task)
+- [x] SCP-249 (with task)
 
 ### Optimizations
 - [x] Optimized SCP-458 model.
@@ -25,6 +29,9 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
 - [x] Applied new doors for Surface Zone / Facility elevators
 - [x] Removed Entrance Zone due to poor implementation.
+- [x] \[Technical\] Organized assets and removed unused legacy ones.
+- [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
+- [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
 - [ ] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
 
 

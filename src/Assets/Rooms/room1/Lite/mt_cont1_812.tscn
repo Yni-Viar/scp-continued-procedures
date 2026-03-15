@@ -528,9 +528,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.81052, 0)
 mesh = SubResource("ArrayMesh_v5pfr")
 skeleton = NodePath("")
 
-[node name="entityspawn2" type="Marker3D" parent="." groups=["Scp347Spawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4306, -1.24029, 7.35588)
-
 [node name="WaterFlow" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.94829, -30.5718, -4.63122)
 visible = false

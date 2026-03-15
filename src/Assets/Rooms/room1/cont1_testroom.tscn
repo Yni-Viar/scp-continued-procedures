@@ -372,3 +372,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5567145, -0.78577095, -2.88
 
 [node name="ScientistPoint2" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1608548, -0.78577095, -2.8848562)
+
+[node name="DoorToTeleport" type="Marker3D" parent="." groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5367813, -0.78577095, 2.1784372)

@@ -228,5 +228,8 @@ script = ExtResource("10_pkqvl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7490158, -1.163208, -1.0440369)
 shape = SubResource("BoxShape3D_qy6ff")
 
+[node name="DoorToTeleport" type="Marker3D" parent="." groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5367813, 0.356759, -61.163025)
+
 [connection signal="body_entered" from="Scp938Task" to="Scp938Task" method="_on_body_entered"]
 [connection signal="body_exited" from="Scp938Task" to="Scp938Task" method="_on_body_exited"]

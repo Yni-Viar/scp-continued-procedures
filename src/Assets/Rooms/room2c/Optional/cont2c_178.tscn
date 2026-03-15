@@ -370,3 +370,9 @@ transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.
 
 [node name="laptop" parent="." instance=ExtResource("22_10yi5")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.46816874, 0.52277374)
+
+[node name="DoorToTeleport" type="Marker3D" parent="." groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3374639, -0.78577095, 4.521078)
+
+[node name="DoorToTeleport2" type="Marker3D" parent="." groups=["Door"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7862232, -0.78577095, -4.8781443)
