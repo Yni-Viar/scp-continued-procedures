@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://drdixxgiv4gv4"]
 
-[ext_resource type="Texture2D" uid="uid://bj27mxfnjutly" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/OfficeCeiling001_2K_Color.png" id="1_qlgtx"]
-[ext_resource type="Texture2D" uid="uid://86d13n3qhp87" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/OfficeCeiling001_2K_NormalGL.png" id="2_dr4m3"]
-[ext_resource type="Texture2D" uid="uid://cwv8uhbdmjgmu" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/OfficeCeiling001_2K_Roughness.png" id="3_hcdnn"]
+[ext_resource type="Texture2D" uid="uid://bj27mxfnjutly" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/OfficeCeiling001_2K_Color.png" id="1_qlgtx"]
+[ext_resource type="Texture2D" uid="uid://86d13n3qhp87" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/OfficeCeiling001_2K_NormalGL.png" id="2_dr4m3"]
+[ext_resource type="Texture2D" uid="uid://cwv8uhbdmjgmu" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/OfficeCeiling001_2K_Roughness.png" id="3_hcdnn"]
 
 [resource]
 resource_name = "Ceiling"

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://gwvgf40ovyi1"]
 
-[ext_resource type="Texture2D" uid="uid://bjt7nn1tc22tc" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_Color.png" id="1_k1qsw"]
-[ext_resource type="Texture2D" uid="uid://bvpg4ob2hwehi" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_NormalGL.png" id="2_vimgy"]
-[ext_resource type="Texture2D" uid="uid://cp0h60rrlhv5u" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_Roughness.png" id="3_n6rqn"]
+[ext_resource type="Texture2D" uid="uid://bjt7nn1tc22tc" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_Color.png" id="1_k1qsw"]
+[ext_resource type="Texture2D" uid="uid://bvpg4ob2hwehi" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_NormalGL.png" id="2_vimgy"]
+[ext_resource type="Texture2D" uid="uid://cp0h60rrlhv5u" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_Roughness.png" id="3_n6rqn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b77fp"]
 albedo_texture = ExtResource("1_k1qsw")

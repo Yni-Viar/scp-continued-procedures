@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MapGenZone" load_steps=0 format=3 uid="uid://7prvjngodfs1"]
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=27 format=3 uid="uid://7prvjngodfs1"]
 
 [ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="1_n7egd"]
 [ext_resource type="PackedScene" uid="uid://cksrh1gkj38dw" path="res://Assets/Doors/rz_door.tscn" id="1_v4oww"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="16_3f6g6"]
 [ext_resource type="Resource" uid="uid://clxj5wm4henr0" path="res://MapGen/Resources/ResearchZone/room3_redux.tres" id="17_e72q2"]
 [ext_resource type="Resource" uid="uid://dwy6qiei1wti0" path="res://MapGen/Resources/ResearchZone/room2_wc.tres" id="18_27xd5"]
+[ext_resource type="Resource" uid="uid://l5etyp83tec2" path="res://MapGen/Resources/ResearchZone/room2_cafeteria.tres" id="21_1so0o"]
 [ext_resource type="Resource" uid="uid://dpdlx0c3bevg" path="res://MapGen/Resources/ResearchZone/cont3_067.tres" id="22_ganj3"]
 
 [resource]
@@ -32,7 +33,7 @@ endrooms = Array[ExtResource("1_n7egd")]([ExtResource("7_ganj3")])
 endrooms_single = Array[ExtResource("1_n7egd")]([ExtResource("8_27xd5"), ExtResource("8_yy57l"), ExtResource("11_ganj3"), ExtResource("14_0picm"), ExtResource("9_27xd5"), ExtResource("13_v4oww"), ExtResource("14_lwsf4")])
 endrooms_single_large = Array[ExtResource("1_n7egd")]([ExtResource("15_v4oww")])
 hallways = Array[ExtResource("1_n7egd")]([ExtResource("13_hndsr"), ExtResource("14_ij732")])
-hallways_single = Array[ExtResource("1_n7egd")]([ExtResource("8_t7i8j"), ExtResource("15_n7egd"), ExtResource("18_27xd5")])
+hallways_single = Array[ExtResource("1_n7egd")]([ExtResource("8_t7i8j"), ExtResource("21_1so0o"), ExtResource("15_n7egd"), ExtResource("18_27xd5")])
 checkpoint_hallway = Array[ExtResource("1_n7egd")]([ExtResource("2_yy57l")])
 corners = Array[ExtResource("1_n7egd")]([ExtResource("2_rv8qh")])
 corners_single = Array[ExtResource("1_n7egd")]([ExtResource("4_yy57l"), ExtResource("4_t7i8j")])

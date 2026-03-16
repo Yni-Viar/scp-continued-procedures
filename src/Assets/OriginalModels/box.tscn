@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://cogri7pfu6a1e"]
 
-[ext_resource type="Texture2D" uid="uid://r565qw72aar6" path="res://Assets/Materials/SLMaterials/box_sl.png" id="1_gltf7"]
+[ext_resource type="Texture2D" uid="uid://r565qw72aar6" path="res://Assets/Materials/TextureLibraries/SLMaterials/box_sl.png" id="1_gltf7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv6om"]
 resource_name = "Material.001"

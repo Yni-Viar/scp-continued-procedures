@@ -34,7 +34,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Technical\] Organized assets and removed unused legacy ones.
 - [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
 - [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
-- [ ] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
+- [x] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
 
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)

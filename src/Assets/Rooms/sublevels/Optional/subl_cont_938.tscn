@@ -7,9 +7,9 @@
 [ext_resource type="Material" uid="uid://5dkh77ls84l2" path="res://Assets/Materials/MaintenanceTunnels/Blocks.tres" id="4_y5bn2"]
 [ext_resource type="PackedScene" uid="uid://daniqy18dv0gq" path="res://InventorySystem/Items/ItemWoodenLantern.tscn" id="5_cngcp"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="5_pkqvl"]
-[ext_resource type="Texture2D" uid="uid://bjt7nn1tc22tc" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_Color.png" id="5_y5bn2"]
-[ext_resource type="Texture2D" uid="uid://bvpg4ob2hwehi" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_NormalGL.png" id="6_pkqvl"]
-[ext_resource type="Texture2D" uid="uid://cp0h60rrlhv5u" path="res://Assets/Materials/PrimitiveMaterial/AmbientCG_CC0/Plastic012A_2K-PNG_Roughness.png" id="7_qy6ff"]
+[ext_resource type="Texture2D" uid="uid://bjt7nn1tc22tc" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_Color.png" id="5_y5bn2"]
+[ext_resource type="Texture2D" uid="uid://bvpg4ob2hwehi" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_NormalGL.png" id="6_pkqvl"]
+[ext_resource type="Texture2D" uid="uid://cp0h60rrlhv5u" path="res://Assets/Materials/TextureLibraries/AmbientCG_CC0/Plastic012A_2K-PNG_Roughness.png" id="7_qy6ff"]
 [ext_resource type="Script" uid="uid://cj10wvokmrckh" path="res://Scripts/Triggers/Scp938TaskTrigger.gd" id="10_pkqvl"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_4dl2j"]

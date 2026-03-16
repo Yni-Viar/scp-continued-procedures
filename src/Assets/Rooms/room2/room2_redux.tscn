@@ -654,7 +654,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.573772, -0.246935, 0.67024)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.573772, -0.246935, -5.26122)
 
 [node name="laptop" parent="NavigationRegion3D/Props" instance=ExtResource("3_whu3x")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.34198, 0.17038262, -5.63673)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.897278, 0.17038238, -5.398062)
 
 [node name="laptop2" parent="NavigationRegion3D/Props" instance=ExtResource("3_whu3x")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.82518, 0.19498557, 0.791468)
