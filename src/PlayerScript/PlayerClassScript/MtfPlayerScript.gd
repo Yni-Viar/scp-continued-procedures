@@ -1,4 +1,4 @@
-extends HumanPuppetScript
+extends AttackerPuppetScript
 
 
 ## If the player is near, attack
@@ -17,20 +17,17 @@ func on_update_human(delta: float):
 	if get_tree().get_node_count_in_group("ChaosInsurgency") > 0:
 		if near_targets:
 			attack()
-		else:
-			var collider = get_tree().get_first_node_in_group("ChaosInsurgency")
-			if collider == null && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
-				get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
-				get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
-			else:
-				if collider is MovableNpc:
-					var puppet_class = collider.puppet_class
-					if puppet_class.fraction == 0 && puppet_class.team == 3:
-						if !get_parent().get_parent().movement_freeze:
-							get_parent().get_parent().follow_target = collider.get_path()
+		elif state == States.IDLE:
+			if timer > 0.0:
+				timer -= delta
+			elif get_tree().get_first_node_in_group("ChaosInsurgency") != null:
+				go_to_target(get_tree().get_first_node_in_group("ChaosInsurgency").get_path())
+				timer = 10.0
 	elif get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 		get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
 		get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
+
+
 
 func _on_raycast_update_npc(collider_path: String):
 	var _collider_prefab: MovableNpc = get_node(collider_path)

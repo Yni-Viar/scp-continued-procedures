@@ -34,6 +34,8 @@ var last_move: LastMove = LastMove.UP
 @export var locked: bool = false
 ## Use only if you set navigation
 @export var navigation_link: NodePath
+## [NPC subsystem required] Can NPCs ride the elevator?
+@export var npc_can_ride: bool = false
 var counter: int = 0
 var pass_floor: bool = false
 #var default_rotation: Vector3
@@ -236,7 +238,12 @@ func _on_player_area_body_exited(body: Node3D) -> void:
 
 
 func add_object(body):
-	if get_node(body) is MovableNpc:
+	var unpacked_body: Node3D = get_node(body)
+	if unpacked_body is MovableNpc:
+		if unpacked_body.is_player && !$Timer.is_stopped():
+			$Timer.stop()
+		elif npc_can_ride && $Timer.is_stopped():
+			$Timer.start()
 		changed_launch_state.connect(get_node(body).on_moving_platform)
 	objects_to_teleport.append(body)
 
@@ -248,3 +255,8 @@ func remove_object(body):
 func _on_animation_finished(anim_name):
 	$AnimationPlayer.disconnect("animation_finished", _on_animation_finished)
 	set_physics_process(true)
+
+
+func _on_timer_timeout() -> void:
+	var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+	call_elevator(rng.randi_range(0, floors.size() - 1))

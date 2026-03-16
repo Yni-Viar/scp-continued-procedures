@@ -465,5 +465,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_dhd7e")
 }
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
 [connection signal="body_exited" from="PlayerArea" to="." method="_on_player_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -22,7 +22,7 @@ var ci_timer: float = 20.0
 ## Are Chaos Insurgency ready to spawn (automatically set after 15 seconds)
 var ci_ready: bool = false
 ## MTF call cooldown
-var mtf_cooldown: float = 10.0
+var mtf_cooldown: float = 50.0
 ## Protagonist tracker
 var protagonist: MovableNpc
 
@@ -94,8 +94,8 @@ func _on_facility_generator_generated() -> void:
 	$UI._on_foundation_task_task_done()
 	
 	# Spawn SCP-347 agent, if there is a task
-	if get_node("FoundationTask").has_task("task_347"):
-		spawn_wave_entity(2)
+	#if get_node("FoundationTask").has_task("task_347"):
+		#spawn_wave_entity(2)
 	
 	await get_tree().create_timer(15.0).timeout
 	
@@ -141,8 +141,8 @@ func spawn_wave_entity(wave_type: int):
 			how_much_spawn = 3
 		1: # Chaos Insurgency
 			how_much_spawn = rng.randi_range(2, 3)
-		2: # Agent for SCP-347
-			how_much_spawn = 1
+		#2: # Agent for SCP-347
+			#how_much_spawn = 1
 	var spawn = get_tree().get_first_node_in_group("WaveSpawn")
 	if spawn != null:
 		if OS.get_name() != "Web":
@@ -159,8 +159,8 @@ func spawn_wave_entity(wave_type: int):
 				1: # Chaos Insurgency
 					wavenpc.puppet_class = gamedata.wave_puppet_classes[1]
 					wavenpc.add_to_group("ChaosInsurgency")
-				2:
-					wavenpc.puppet_class = gamedata.wave_puppet_classes[2]
+				#2:
+					#wavenpc.puppet_class = gamedata.wave_puppet_classes[2]
 			spawn.get_child(i).add_child(wavenpc)
 		for i in range(how_much_spawn):
 			for node in spawn.get_child(i).get_children():
@@ -217,7 +217,7 @@ func showable(resource_path: String):
 func call_mtf():
 	if get_node("FoundationTask").has_task("task_ci") && mtf_cooldown <= 0.0:
 		spawn_wave_entity(0)
-		mtf_cooldown = 20.0
+		mtf_cooldown = 50.0
 
 
 func _on_game_over_timer_timeout() -> void:

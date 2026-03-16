@@ -1,4 +1,4 @@
-extends HumanPuppetScript
+extends AttackerPuppetScript
 ## Chaos Insurgent Trooper puppet
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
@@ -7,8 +7,7 @@ var saw_player: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func on_start_human() -> void:
-	#Retrieve protagonist node path and make it follow target
-	get_parent().get_parent().follow_target = get_tree().root.get_node("Game/StaticPlayer").target_puppet_path
+	go_to_target(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)
 
 
 func on_update_human(delta: float):
@@ -21,6 +20,12 @@ func on_update_human(delta: float):
 				saw_player = true
 				if !get_parent().get_parent().movement_freeze:
 					get_parent().get_parent().follow_target = collider.get_path()
+	elif state == States.IDLE:
+		if timer > 0.0:
+			timer -= delta
+		else:
+			go_to_target(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)
+			timer = 10.0
 
 func _on_raycast_update_npc(collider_path: String):
 	var _collider_prefab: MovableNpc = get_node(collider_path)
