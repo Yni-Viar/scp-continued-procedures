@@ -93,6 +93,7 @@ func intersect_shape(intersect_position: Vector3) -> Array[Dictionary]:
 	
 	return result
 
+## Mian interacting function.
 func interact(value: String) -> void:
 	if get_node_or_null(target_puppet_path) == null:
 		get_tree().root.get_node("Game").finish_game(false, "GAME_OVER_1")
@@ -105,6 +106,7 @@ func interact(value: String) -> void:
 					var shape_result: Array[Dictionary] = intersect_shape(result["position"])
 					for s_result in shape_result:
 						if s_result.keys().size() > 0:
+							#Item detected
 							if s_result["collider"] is Pickable && !s_result["collider"].picked &&\
 							 !s_result["collider"].freeze && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
 								get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/UI/Inventory/Inventory").add_item(s_result["collider"].item_id)
@@ -112,10 +114,12 @@ func interact(value: String) -> void:
 								s_result["collider"].queue_free()
 								#Use only one item
 								break
+							# Static interactable detected.
 							if s_result["collider"] is InteractableStatic && s_result["collider"].global_position.distance_to(get_node(target_puppet_path).global_position) < 4.0:
 								s_result["collider"].interact(get_node(target_puppet_path))
 								#Use only one interactable
 								break
+							# Player detected
 							if s_result["collider"] is MovableNpc:
 								if !s_result["collider"].is_player:
 									match s_result["collider"].puppet_class.interacting_action:
@@ -162,9 +166,11 @@ func rotate_player_by_key(direction: Vector2i):
 	$Head.rotate_object_local(Vector3.RIGHT, deg_to_rad(y_rotation))
 	$Head.rotation_degrees.x = clamp($Head.rotation_degrees.x, -90, 0)
 
+## Automatic toggle camera mode.
 func toggle_switcher():
 	toggle_mode(current_camera_mode + 1 if current_camera_mode + 1 < CameraMode.SIZE else 1)
 
+## Toggle camera mode backend.
 func toggle_mode(mode: int):
 	if mode == 0 || mode >= CameraMode.SIZE:
 		printerr("Cannot specify incompatible mode")
@@ -191,6 +197,7 @@ func _on_optimizator_body_exited(body: Node3D) -> void:
 	if body is MovableNpc:
 		body.optimizator_paused = true
 
+## Applies overlay to player.
 func apply_overlay(effect: String, strength: float):
 	match effect:
 		"Frozen":

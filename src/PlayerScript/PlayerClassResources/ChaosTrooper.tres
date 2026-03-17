@@ -18,7 +18,6 @@ apply_height_bugfix = false
 wandering_system = 1
 health = Array[float]([100.0, 50.0, 50.0, 50.0])
 team = 3
-enable_avoidance = false
 spawn_on_start = false
 puppet_navigation_layers = 3
 ragdoll_prefab = ExtResource("2_6nqxi")

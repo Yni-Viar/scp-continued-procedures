@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=52 format=3 uid="uid://kakqpi6wi07u"]
+[gd_resource type="Resource" script_class="GameData" load_steps=53 format=3 uid="uid://kakqpi6wi07u"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_teai8"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="1_uwdlv"]
@@ -30,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://p6ep1225emgw" path="res://InventorySystem/Items/ItemScp067.tres" id="15_wooqq"]
 [ext_resource type="Resource" uid="uid://xrrjhidisw1j" path="res://InventorySystem/Items/ItemDocShock.tres" id="16_kg1fs"]
 [ext_resource type="Resource" uid="uid://hs2kf7tpq7pc" path="res://InventorySystem/Items/ItemBeaker.tres" id="17_5ro56"]
+[ext_resource type="Resource" uid="uid://nncd16da37n3" path="res://InventorySystem/Items/ItemScp005.tres" id="17_ncw05"]
 [ext_resource type="Resource" uid="uid://gu8sp1ix4rd0" path="res://Scripts/TaskSystem/Tasks/Scp266Task.tres" id="17_qyy85"]
 [ext_resource type="Resource" uid="uid://kt10qm1d2rht" path="res://PlayerScript/PlayerClassResources/MtfNtf.tres" id="18_0lfxp"]
 [ext_resource type="Resource" uid="uid://br4pxad71a6v3" path="res://PlayerScript/PlayerClassResources/ChaosTrooper.tres" id="19_om1ka"]
@@ -57,7 +58,7 @@ script = ExtResource("2_2kq0r")
 player_class = Array[ExtResource("1_uwdlv")]([ExtResource("3_4lkqw")])
 puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("2_iio3u"), ExtResource("3_qajj2"), ExtResource("21_ncw05"), ExtResource("5_ujd5j"), ExtResource("6_qajj2"), ExtResource("7_ujd5j"), ExtResource("8_jbef1"), ExtResource("11_o5qps"), ExtResource("12_0coki"), ExtResource("22_5ss25"), ExtResource("25_dk13d"), ExtResource("30_khbkx")])
 tasks = Array[ExtResource("10_jbef1")]([ExtResource("39_7ipmw"), ExtResource("38_m7n8e"), ExtResource("14_r6dwf"), ExtResource("42_5ro56"), ExtResource("42_hwqmy"), ExtResource("17_qyy85"), ExtResource("45_5ro56"), ExtResource("15_0coki"), ExtResource("47_kxf2q"), ExtResource("37_bgvy5")])
-items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq"), ExtResource("6_y38bq"), ExtResource("7_hinnn"), ExtResource("8_jeue1"), ExtResource("9_pwoua"), ExtResource("10_mywb3"), ExtResource("12_fvju1"), ExtResource("13_e07no"), ExtResource("14_ebeek"), ExtResource("15_wooqq"), ExtResource("16_kg1fs"), ExtResource("17_5ro56")])
+items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3myvo"), ExtResource("4_s78ub"), ExtResource("5_y38bq"), ExtResource("6_y38bq"), ExtResource("7_hinnn"), ExtResource("8_jeue1"), ExtResource("9_pwoua"), ExtResource("10_mywb3"), ExtResource("12_fvju1"), ExtResource("13_e07no"), ExtResource("14_ebeek"), ExtResource("15_wooqq"), ExtResource("16_kg1fs"), ExtResource("17_5ro56"), ExtResource("17_ncw05")])
 wave_puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("18_0lfxp"), ExtResource("19_om1ka"), ExtResource("23_odskn")])
 status_effects = Dictionary[String, ExtResource("28_7yeqa")]({
 "Amnesia": ExtResource("36_m7n8e"),

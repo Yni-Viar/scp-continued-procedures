@@ -11,8 +11,8 @@
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="8_qa6h4"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(-2.4895992, -0.83982325, -9.602918, -2.4895992, -0.83982325, 9.647082, 1.0104008, -0.83982325, 9.647082, 1.0104008, -0.83982325, -9.852918)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3)]
+vertices = PackedVector3Array(-2.4895992, -0.83982325, 8.897082, -1.2395992, -0.83982325, 9.647082, 1.0104008, -0.83982325, 9.647082, 1.0104008, -0.83982325, -9.852918, -0.9895992, -0.83982325, -9.852918, -2.4895992, -0.83982325, -8.852918)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 5), PackedInt32Array(2, 5, 4), PackedInt32Array(2, 4, 3)]
 agent_max_climb = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvfck"]
@@ -206,6 +206,18 @@ mesh = SubResource("BoxMesh_ukw1m")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27, 0)
 mesh = SubResource("ArrayMesh_q350h")
 skeleton = NodePath("")
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.136254, 0, -10.232882, 3.1382706, 0, -10.250359, 3.1382706, 0, -9.183354)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.2233343, 0, 10.306167, 3.2450285, 0, 9.006506, 3.3894377, 0, 10.089557)
+affect_navigation_mesh = true
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

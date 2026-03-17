@@ -29,7 +29,7 @@ func on_update_human(delta: float):
 
 func _on_raycast_update_npc(collider_path: String):
 	var _collider_prefab: MovableNpc = get_node(collider_path)
-	if _collider_prefab.puppet_class.fraction == 0 && _collider_prefab.puppet_class.team == 3:
+	if _collider_prefab.puppet_class.fraction == 0 && _collider_prefab.puppet_class.team != 3:
 		attack(collider_path)
 
 func attack(collider_path: String):

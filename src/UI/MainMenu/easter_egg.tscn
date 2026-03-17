@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4tymm7axdu4r"]
 
-[ext_resource type="Texture2D" uid="uid://cjc2cv7hfk7of" path="res://Assets/HUD/EasterEgg/idle_or_waiting.PNG" id="1_e0nks"]
-[ext_resource type="Texture2D" uid="uid://d6bpy1fhmme5" path="res://Assets/HUD/EasterEgg/idle1.PNG" id="2_uwbnu"]
-[ext_resource type="Texture2D" uid="uid://cbpwnvpy1cklt" path="res://Assets/HUD/EasterEgg/idle2.PNG" id="3_dlww6"]
+[ext_resource type="Texture2D" uid="uid://cjc2cv7hfk7of" path="res://Assets/HUD/HikkanEasterEgg/idle_or_waiting.PNG" id="1_e0nks"]
+[ext_resource type="Texture2D" uid="uid://d6bpy1fhmme5" path="res://Assets/HUD/HikkanEasterEgg/idle1.PNG" id="2_uwbnu"]
+[ext_resource type="Texture2D" uid="uid://cbpwnvpy1cklt" path="res://Assets/HUD/HikkanEasterEgg/idle2.PNG" id="3_dlww6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dd46u"]
 animations = [{

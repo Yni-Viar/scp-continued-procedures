@@ -6,7 +6,6 @@ class_name GameCore
 
 @export var gamedata: GameData
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
-var player: Node3D
 ## It is actually how many generators are left
 var activated_generators: int = 0
 ## Presets for game ##
@@ -22,7 +21,11 @@ var ci_timer: float = 20.0
 ## Are Chaos Insurgency ready to spawn (automatically set after 15 seconds)
 var ci_ready: bool = false
 ## MTF call cooldown
-var mtf_cooldown: float = 50.0
+var mtf_cooldown: float = 64.0:
+	set(val):
+		mtf_cooldown = val
+		if mtf_cooldown <= 0.0:
+			$UI/HBoxContainer/CallMtfButton.disabled = false
 ## Protagonist tracker
 var protagonist: MovableNpc
 
@@ -35,8 +38,6 @@ func _ready() -> void:
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
 	ci_timer = rng.randf_range(30.0, 32.0)
-	if time_limited && !Settings.setting_res.zen_mode:
-		$GameOverTimer.start()
 	if OS.has_feature("Lite"):
 		gamedata = load("res://Scripts/GameData/Lite/LiteGame.tres")
 		var rooms: Array[MapGenZone] = [load("res://MapGen/Lite/MaintenanceZoneLite.tres"), load("res://MapGen/Lite/ResearchZoneLite.tres")]
@@ -70,19 +71,26 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if !$GameOverTimer.is_stopped():
 		$UI/TimeToLeft.text = tr("SECONDS_LEFT") + " " + str(ceili($GameOverTimer.time_left))
-	if ci_probability == 1 && ci_ready:
-		if Settings.setting_res.zen_mode:
-			# Disable Chaos waves for the Safe modes
-			ci_probability = 0
-		ci_timer -= delta
-		if ci_timer < 0:
-			spawn_wave_entity(1)
-			# Disable Chaos wave if they were already spawned (5.5.0 feature)
-			ci_probability = 0
-		mtf_cooldown -= delta
+	if ci_ready:
+		if ci_probability == 1:
+			if Settings.setting_res.zen_mode:
+				# Disable Chaos waves for the Safe modes
+				ci_probability = 0
+			ci_timer -= delta
+			if ci_timer < 0:
+				spawn_wave_entity(1)
+				# Disable Chaos wave if they were already spawned (5.5.0 feature)
+				ci_probability = 0
+		if mtf_cooldown > 0.0:
+			mtf_cooldown -= delta
+	if time_limited && protagonist != null:
+		# Hunger and thirst mechanic
+		protagonist.health_manage(-delta * 0.1, 2)
+		protagonist.health_manage(-delta * 0.05, 3)
 
 
 func _on_facility_generator_generated() -> void:
+	# Spawn surface zone
 	var sz: Node3D = load("res://Assets/Rooms/sublevels/External/subl_sz.tscn").instantiate()
 	sz.position.y = 256.0
 	add_child(sz, true)
@@ -90,20 +98,26 @@ func _on_facility_generator_generated() -> void:
 	spawn_player()
 	spawn_puppets()
 	
+	if time_limited && !Settings.setting_res.zen_mode:
+		$GameOverTimer.start()
+	
 	$FoundationTask.initialize()
 	$UI._on_foundation_task_task_done()
 	
 	# Spawn SCP-347 agent, if there is a task
 	#if get_node("FoundationTask").has_task("task_347"):
 		#spawn_wave_entity(2)
-	
+	$LoadingScreen.call_deferred("hide")
 	await get_tree().create_timer(15.0).timeout
 	
 	if ci_probability < 0:
-		ci_probability = rng.randi_range(0, 1)
+		if !OS.has_feature("Lite") && !time_limited && rng.randi_range(0, 3) == 1:
+			ci_probability = 1
+		else:
+			ci_probability = 0
 	ci_ready = true
-	$LoadingScreen.call_deferred("hide")
-
+	
+## Spawns player-protagonist
 func spawn_player():
 	# Player and allies
 	protagonist = load("res://PlayerScript/NPCBase.tscn").instantiate()
@@ -114,7 +128,7 @@ func spawn_player():
 	selected_spawn.add_child(protagonist)
 	$StaticPlayer.target_puppet_path = protagonist.get_path()
 
-
+## Start-round spawn
 func spawn_puppets():
 	for puppet_res in gamedata.puppet_classes:
 		var spawn_point_group = get_tree().get_nodes_in_group(puppet_res.spawn_point_group)
@@ -133,14 +147,14 @@ func spawn_puppets():
 			$NPCs.add_child(npc)
 			used_spawns.append(random_number)
 
-## Spawns enemy entities
+## Spawns wave entities
 func spawn_wave_entity(wave_type: int):
 	var how_much_spawn: int = -1
 	match wave_type:
 		0: # Mobile Task Force
 			how_much_spawn = 3
 		1: # Chaos Insurgency
-			how_much_spawn = rng.randi_range(2, 3)
+			how_much_spawn = rng.randi_range(1, 2)
 		#2: # Agent for SCP-347
 			#how_much_spawn = 1
 	var spawn = get_tree().get_first_node_in_group("WaveSpawn")
@@ -167,6 +181,7 @@ func spawn_wave_entity(wave_type: int):
 				if node is not MovableNpc:
 					node.queue_free()
 
+## Despawns wave VFX.
 func despawn_wave(wave_type: int):
 	match wave_type:
 		0:
@@ -187,12 +202,14 @@ func finish_game(good_end: bool, reason: String):
 	$AnimationPlayer.play("condition_open")
 	$GameOverTimer.stop()
 
+## Cutscene animation
 func cutscene_anim(reverse: bool = false):
 	if reverse:
 		$AnimationPlayer.play_backwards("cutscene")
 	else:
 		$AnimationPlayer.play("cutscene")
 
+## Dialogue system (used in 067)
 func dialogue(text: String):
 	$UI/Dialogue.text = text
 	for i in text.length():
@@ -200,6 +217,7 @@ func dialogue(text: String):
 		await get_tree().physics_frame
 	$UI/Dialogue.visible_characters = -1
 
+## Shows image (currently used for 067)
 func showable(resource_path: String):
 	if (resource_path != null && !resource_path.is_empty()) && resource_path != showable_res:
 		$UI/Showable.show()
@@ -214,6 +232,7 @@ func showable(resource_path: String):
 		$UI/Showable.hide()
 		showable_res = ""
 
+## Calls MTF.
 func call_mtf():
 	if get_node("FoundationTask").has_task("task_ci") && mtf_cooldown <= 0.0:
 		spawn_wave_entity(0)

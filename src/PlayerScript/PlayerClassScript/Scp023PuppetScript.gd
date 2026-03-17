@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 		States.WALKING:
 			call("set_state", "walk")
 	$rig_001_deform/Skeleton3D/Plane.mesh.surface_get_material(2).set_shader_parameter("emission_strength", eye_glow_strength)
+	# If eye glowing too strong, activate 023 event
 	if !timer.is_stopped():
 		eye_glow_strength = lerpf(0.25, 2.0, (timer.wait_time - timer.time_left) / timer.wait_time )
 		if eye_glow_strength > 1.75:

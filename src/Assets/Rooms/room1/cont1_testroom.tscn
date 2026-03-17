@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://bioti3gaqj0t8"]
+[gd_scene load_steps=33 format=4 uid="uid://bioti3gaqj0t8"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_lwtf3"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_r8il1"]
@@ -11,7 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="6_rfjje"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="6_vvdys"]
 [ext_resource type="PackedScene" uid="uid://bf3i3ic0mu7ks" path="res://InventorySystem/Items/ItemScp686.tscn" id="8_40a72"]
+[ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="8_42cx5"]
 [ext_resource type="PackedScene" uid="uid://d0o1eeb1xokss" path="res://InventorySystem/Items/ItemScp983.tscn" id="8_ua6hs"]
+[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="9_42cx5"]
+[ext_resource type="PackedScene" uid="uid://cpl32rqecveb3" path="res://Assets/Rooms/room1/EasterEgg/scp_005_spawner.tscn" id="9_fg4rw"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="11_je4g8"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="11_ua6hs"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_abfkj"]
@@ -265,6 +268,15 @@ spot_angle = 67.042114
 
 [node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("20_42cx5")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.4345074, -0.64942557, 9.880915)
+
+[node name="Scp005Spawner" type="Marker3D" parent="NavigationRegion3D/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.143924, 1.7019128, -6.1351323)
+script = ExtResource("8_42cx5")
+item = ExtResource("9_fg4rw")
+chance = 0.125
+
+[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("9_42cx5")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.3145914, -0.23142517, -1.7658596)
 
 [node name="Cube2" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)

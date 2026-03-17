@@ -96,6 +96,7 @@ shadow_mesh = SubResource("ArrayMesh_wr07r")
 size = Vector3(2.0944824, 3.298767, 0.42944336)
 
 [node name="Scp249" type="StaticBody3D" groups=["Scp249"]]
+collision_layer = 9
 script = ExtResource("1_6yuhc")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]

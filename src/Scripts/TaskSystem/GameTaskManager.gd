@@ -16,6 +16,7 @@ func initialize() -> void:
 	all_tasks.clear()
 	var used_index: Array[int] = []
 	for i in range(tasks_left):
+		# If there is too few tasks - stop loop.
 		if get_parent().gamedata.tasks.size() - 1 < i:
 			break
 		var task_index: int
@@ -25,18 +26,22 @@ func initialize() -> void:
 			for group in get_parent().gamedata.tasks[task_index].required_groups:
 				if get_tree().get_node_count_in_group(group) == 0:
 					used_index.append(task_index)
+			# If the task already defined - stop infinite loop.
 			if !used_index.has(task_index):
 				break
+			# If all tasks are used - finish initialize.
 			if get_parent().gamedata.tasks.size() == used_index.size():
 				return
 		used_index.append(task_index)
+		# Sub tasks logic
 		if get_parent().gamedata.tasks[task_index].sub_tasks != null && !get_parent().gamedata.tasks[task_index].sub_tasks.is_empty():
 			var sub_task_index: int = get_parent().rng.randi_range(0, get_parent().gamedata.tasks[task_index].sub_tasks.size() - 1)
 			all_tasks.append(get_parent().gamedata.tasks[task_index].sub_tasks[sub_task_index])
 		else:
+			# Regular task
 			all_tasks.append(get_parent().gamedata.tasks[task_index])
 
-
+## Do task with specified internal name
 func do_task(task_name: String):
 	for task in all_tasks:
 		if task.internal_name == task_name:
@@ -44,6 +49,7 @@ func do_task(task_name: String):
 			task_done.emit()
 			break
 
+## Trigger event - replace all tasks for a while with specific task.
 func trigger_event(event_type: SpecialEvent, res: GameTaskResource = null):
 	special_event = event_type
 	if special_event == SpecialEvent.NONE || res == null:
@@ -56,6 +62,7 @@ func trigger_event(event_type: SpecialEvent, res: GameTaskResource = null):
 		all_tasks.append(res)
 	task_done.emit()
 
+## Returns true if task exist (requires task's internal name)
 func has_task(task_name: String) -> bool:
 	for task in all_tasks:
 		if task.internal_name == task_name:

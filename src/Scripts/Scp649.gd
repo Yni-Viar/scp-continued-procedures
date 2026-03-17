@@ -2,11 +2,15 @@ extends InteractableStatic
 ## SCP-649 function
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
+## The main toggle.
 @export var is_opened: bool = false
+## Snow spreading speed.
 @export var speed: float = 0.125
+## Puppets with frozen effect.
 var frozen_puppets: Array[MovableNpc] = []
 var timer: float = 4.0
 
+## Toggle ice age.
 func interact(player: Node3D):
 	if !is_opened:
 		is_opened = true
@@ -15,8 +19,8 @@ func interact(player: Node3D):
 	speed = 0.125
 	super.interact(player)
 
-
 func _physics_process(delta: float) -> void:
+	# Creating or destructing ice age.
 	if is_opened && $ColdArea/CollisionShape3D.shape.radius < 100.0:
 		$ColdArea/CollisionShape3D.shape.radius += delta * speed
 		speed += delta * 0.125
@@ -28,6 +32,7 @@ func _physics_process(delta: float) -> void:
 		timer -= delta
 	else:
 		for puppet in frozen_puppets:
+			# Freeze...
 			puppet.health_manage(-1.25, 1)
 		timer = 4.0
 

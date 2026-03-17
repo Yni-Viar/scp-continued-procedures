@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://cvwbiyb4cbtok"]
+[gd_scene load_steps=27 format=4 uid="uid://cvwbiyb4cbtok"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ecvom"]
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_g6en1"]
@@ -9,8 +9,6 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="4_cc1sb"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="4_y4540"]
 [ext_resource type="PackedScene" uid="uid://d1nf3d62hds02" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_3.tscn" id="5_bbe2n"]
-[ext_resource type="Script" uid="uid://b8lv838ni70ad" path="res://Scripts/Triggers/FinishGameTrigger.gd" id="5_d1800"]
-[ext_resource type="Script" uid="uid://dg3hthb6jqdqg" path="res://Scripts/Triggers/IntruderCheckTrigger.gd" id="5_jpe88"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="5_olvp5"]
 [ext_resource type="PackedScene" uid="uid://c32hwf66e1ihj" path="res://Assets/OriginalModels/scp_cage.tscn" id="7_cc1sb"]
 [ext_resource type="Material" uid="uid://sx7vi58vu84" path="res://Assets/Materials/MaintenanceTunnels/Tunnels.tres" id="10_3fdra"]
@@ -135,12 +133,6 @@ font = ExtResource("4_cc1sb")
 font_size = 32
 depth = 0.01
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_cc1sb"]
-size = Vector3(15.279796, 8.40625, 8.75595)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_d1800"]
-size = Vector3(19.0413, 10.24, 41.1646)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_yw614"]
 size = Vector3(6.846161, 6.0405273, 10.31337)
 
@@ -231,25 +223,6 @@ transform = Transform3D(4, 0, 4.768375e-07, 0, 4, 0, -4.768375e-07, 0, 4, 0.1362
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_q6asg")
 
-[node name="FinishGame" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.36004)
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("5_d1800")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FinishGame"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7872062, 2.14624, -1.0298004)
-shape = SubResource("BoxShape3D_cc1sb")
-
-[node name="IntruderCheck" type="Area3D" parent="."]
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("5_jpe88")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="IntruderCheck"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0580798, 2.36169, 11.0886)
-shape = SubResource("BoxShape3D_d1800")
-
 [node name="Items" type="Node3D" parent="."]
 
 [node name="SCPCage_open" parent="Items" instance=ExtResource("7_cc1sb")]
@@ -312,9 +285,5 @@ transform = Transform3D(0.8227199, 0, -0.568447, 0, 1, 0, 0.568447, 0, 0.8227199
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.308624, 0)
 shape = SubResource("ConcavePolygonShape3D_aq7cr")
 
-[connection signal="body_entered" from="FinishGame" to="FinishGame" method="_on_body_entered"]
-[connection signal="body_exited" from="FinishGame" to="FinishGame" method="_on_body_exited"]
-[connection signal="body_entered" from="IntruderCheck" to="IntruderCheck" method="_on_body_entered"]
-[connection signal="body_exited" from="IntruderCheck" to="IntruderCheck" method="_on_body_exited"]
 [connection signal="body_entered" from="ElevatorToggle" to="ElevatorToggle" method="_on_body_entered"]
 [connection signal="body_exited" from="ElevatorToggle" to="ElevatorToggle" method="_on_body_exited"]

@@ -149,6 +149,7 @@ func footstep(key: String):
 	get_parent().get_parent().get_node("WalkSounds").stream = load(get_parent().get_parent().puppet_class.footstep_sounds[key][rng.randi_range(0, get_parent().get_parent().puppet_class.footstep_sounds[key].size() - 1)])
 	get_parent().get_parent().get_node("WalkSounds").play()
 
+## Hold item in hand
 func hold_item(idx: int):
 	if get_node_or_null(armature_name + "/Skeleton3D/ItemAttachment/Marker3D") != null:
 		if get_parent().get_parent().is_player:

@@ -34,7 +34,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+## Main SCP-914 function.
 func refine():
+	#Close doors.
 	match door_block_node_type:
 		0:
 			door_block_in.disabled = false
@@ -47,6 +49,7 @@ func refine():
 	await get_tree().create_timer(6.0).timeout
 	for item in items_to_refine:
 		var target_id: int = -1
+		# Parse items
 		match mode:
 			Scp914Mode.ROUGH:
 				if get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_rough.size() > 0:
@@ -63,12 +66,14 @@ func refine():
 			Scp914Mode.VERY_FINE:
 				if get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine.size() > 0:
 					target_id = get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine[rng.randi_range(0, get_tree().root.get_node("Game").gamedata.items[item.item_id].upgrade_very_fine.size() - 1)]
+		# If resulting index > 0 - return new item, else remove it.
 		if target_id >= 0:
 			var result_item: Pickable = load(get_tree().root.get_node("Game").gamedata.items[target_id].pickable_path).instantiate()
 			result_item.position = $OutputSpawner.global_position
 			get_tree().root.get_node("Game/Items").add_child(result_item)
 		item.queue_free()
 	await get_tree().create_timer(6.0).timeout
+	# Open doors
 	match door_block_node_type:
 		0:
 			door_block_in.disabled = true

@@ -51,7 +51,7 @@ func scp_347_mood_setter(delta: float) -> void:
 	if mood_timer > 0:
 		mood_timer -= delta
 	else:
-		mood = rng.randi_range(0, 1)
+		mood = Mood.NORMAL #rng.randi_range(0, 1)
 		match mood:
 			Mood.NORMAL:
 				# If SCP-347 follows player, her mood change do not affect following...

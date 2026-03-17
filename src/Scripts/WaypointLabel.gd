@@ -1,5 +1,5 @@
 extends MeshInstance3D
-
+## Used for available SCPs information.
 ## Created by Yni, licensed under dual license: for SCP content - GPL 3, for non-SCP - MIT License
 
 @export var waypoints_and_groups: Dictionary[String, String] = {}

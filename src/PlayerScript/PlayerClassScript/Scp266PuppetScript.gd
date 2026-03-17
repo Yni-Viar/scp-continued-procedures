@@ -19,9 +19,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	scp_262_heateater(delta)
-
-func scp_262_heateater(delta: float):
 	if timer > 0:
 		timer -= delta
 	else:

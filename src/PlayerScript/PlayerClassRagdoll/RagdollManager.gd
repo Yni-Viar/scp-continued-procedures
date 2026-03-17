@@ -2,11 +2,16 @@ extends Node3D
 ## Made by Yni, licensed under CC0.
 
 enum ObjectType {static_prefab, animated, ragdoll}
+## Animation to play (only used, when type is ObjectType.animated)
 @export var state: String
+## Ragdoll type
 @export var type: ObjectType = ObjectType.static_prefab
+## Armature name (only used, when type is ObjectType.ragdoll)
 @export var armature_name: String = "Armature"
+## Seconds, before ragdoll despawns
 @export var seconds_before_despawn: float = 30.0
 @export_group("Festive settings")
+## Set false to disable festive decorations.
 @export var fixed_prefab: bool = false
 ## Format: NodePath: [[material_index, material], ...]
 @export var christmas_suits: Dictionary[NodePath, Array]
@@ -18,6 +23,7 @@ var update_timer: float = 1.0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if fixed_prefab:
+		# Festive
 		match Settings.current_season:
 			Settings.Season.CHRISTMAS:
 				for node_path in christmas_suits:

@@ -1,4 +1,5 @@
 extends Area3D
+## Checks if 347 is escaping and detects CI invasion.
 ## Made by Yni, licensed under MIT License.
 
 @export var detect_scp347: bool = true

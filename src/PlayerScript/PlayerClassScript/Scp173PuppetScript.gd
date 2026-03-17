@@ -63,6 +63,7 @@ func scp_173_movement():
 		get_parent().get_parent().get_node("WalkSounds").play()
 		movement_reset = true
 
+## Spawn SCP-173 variation. If there no one, despawn.
 func spawn_scp_variation() -> void:
 	if scp_173_variations.is_empty():
 		get_parent().get_parent().health_manage(-16777216)

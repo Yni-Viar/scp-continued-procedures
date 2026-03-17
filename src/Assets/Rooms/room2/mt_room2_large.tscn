@@ -15,8 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_yook5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_swyoh"]
-vertices = PackedVector3Array(-1.2068815, -0.76959753, -9.740094, -3.4568815, -0.76959753, -9.490094, -3.7068815, -0.76959753, -8.240094, -4.9568815, -0.76959753, -8.240094, -4.9568815, -0.76959753, -3.9900942, 5.0431185, -0.76959753, -3.9900942, 5.0431185, -0.76959753, -8.490094, 3.7931185, -0.76959753, -8.490094, 3.5431185, -0.76959753, -9.490094, 7.2931185, -0.76959753, -0.7400942, 7.7931185, -0.76959753, -0.9900942, 7.7931185, -0.76959753, -1.7400942, 5.2931185, -0.76959753, -1.7400942, -5.2068815, -0.76959753, -1.7400942, -5.2068815, -0.76959753, 2.2599058, 5.2931185, -0.76959753, 2.2599058, 7.7931185, -0.76959753, 2.2599058, 5.0431185, -0.76959753, 4.509906, -7.7068815, -0.76959753, -1.7400942, -7.7068815, -0.76959753, 2.2599058, -4.9568815, -0.76959753, 4.509906, -3.7068815, -0.76959753, 8.009906, -3.4568815, -0.76959753, 9.509906, -1.2068815, -0.76959753, 9.759906, -4.9568815, -0.76959753, 8.009906, 3.5431185, -0.76959753, 8.259906, 5.0431185, -0.76959753, 8.009906, 3.5431185, -0.76959753, 9.509906)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 2), PackedInt32Array(7, 6, 5), PackedInt32Array(0, 8, 7), PackedInt32Array(2, 0, 4), PackedInt32Array(4, 0, 7), PackedInt32Array(4, 7, 5), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(14, 13, 4), PackedInt32Array(16, 15, 9), PackedInt32Array(9, 15, 12), PackedInt32Array(12, 15, 17), PackedInt32Array(14, 19, 13), PackedInt32Array(13, 19, 18), PackedInt32Array(12, 17, 5), PackedInt32Array(5, 17, 20), PackedInt32Array(5, 20, 14), PackedInt32Array(5, 14, 4), PackedInt32Array(23, 22, 21), PackedInt32Array(21, 24, 20), PackedInt32Array(17, 26, 25), PackedInt32Array(25, 27, 23), PackedInt32Array(21, 20, 23), PackedInt32Array(23, 20, 25), PackedInt32Array(25, 20, 17)]
+vertices = PackedVector3Array(3.7931185, -0.76959753, -8.490094, 3.5431185, -0.76959753, -8.990094, 2.5431185, -0.76959753, -8.740094, 1.0431185, -0.76959753, -9.740094, -1.2068815, -0.76959753, -9.740094, -2.7068815, -0.76959753, -8.490094, 5.0431185, -0.76959753, -3.9900942, 5.0431185, -0.76959753, -8.490094, -4.9568815, -0.76959753, -8.240094, -4.9568815, -0.76959753, -3.9900942, 7.2931185, -0.76959753, -0.7400942, 7.7931185, -0.76959753, -0.9900942, 7.7931185, -0.76959753, -1.7400942, 5.2931185, -0.76959753, -1.7400942, -5.2068815, -0.76959753, -1.7400942, -5.2068815, -0.76959753, 2.2599058, 5.2931185, -0.76959753, 2.2599058, 7.7931185, -0.76959753, 2.2599058, 5.0431185, -0.76959753, 4.509906, -7.7068815, -0.76959753, -1.7400942, -7.7068815, -0.76959753, 2.2599058, -4.9568815, -0.76959753, 4.509906, -3.7068815, -0.76959753, 8.009906, -3.4568815, -0.76959753, 8.759906, -2.4568815, -0.76959753, 8.759906, -4.9568815, -0.76959753, 8.009906, 3.7931185, -0.76959753, 8.009906, 5.0431185, -0.76959753, 8.009906, -0.9568815, -0.76959753, 9.759906, 1.2931185, -0.76959753, 9.759906)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(3, 2, 4), PackedInt32Array(4, 2, 5), PackedInt32Array(0, 7, 6), PackedInt32Array(0, 6, 2), PackedInt32Array(2, 6, 5), PackedInt32Array(5, 6, 8), PackedInt32Array(8, 6, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(15, 14, 9), PackedInt32Array(17, 16, 10), PackedInt32Array(10, 16, 13), PackedInt32Array(13, 16, 18), PackedInt32Array(15, 20, 14), PackedInt32Array(14, 20, 19), PackedInt32Array(13, 18, 6), PackedInt32Array(6, 18, 21), PackedInt32Array(6, 21, 15), PackedInt32Array(6, 15, 9), PackedInt32Array(24, 23, 22), PackedInt32Array(22, 25, 21), PackedInt32Array(18, 27, 26), PackedInt32Array(29, 28, 24), PackedInt32Array(22, 21, 24), PackedInt32Array(24, 21, 29), PackedInt32Array(29, 21, 26), PackedInt32Array(26, 21, 18)]
 agent_max_climb = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnq1"]
@@ -435,6 +435,34 @@ avoidance_enabled = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27, 0)
 mesh = SubResource("ArrayMesh_533f6")
 skeleton = NodePath("")
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.136254, 0, -10.232882, 3.1382706, 0, -10.250359, 3.1382706, 0, -9.183354)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D4" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.2233343, 0, 10.306167, 3.2450285, 0, 9.006506, 3.3894377, 0, 10.089557)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D5" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.136254, 0, -10.232882, 3.1382706, 0, -10.250359, 3.1382706, 0, -9.183354)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D6" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.2233343, 0, 10.306167, 3.2450285, 0, 9.006506, 3.3894377, 0, 10.089557)
+affect_navigation_mesh = true
+avoidance_enabled = false
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0

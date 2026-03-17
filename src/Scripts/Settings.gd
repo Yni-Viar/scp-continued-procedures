@@ -72,6 +72,7 @@ func save_resource(res):
 		ResourceStorage.save_resource("user://Settings.bin", res)
 		emit_signal("settings_saved")
 
+## Check current season, based on PC time.
 func season_checker():
 	match Time.get_datetime_dict_from_system()["month"]:
 		1:
@@ -104,6 +105,7 @@ func is_legal_req() -> bool:
 func feature_legality_checker(feature: String) -> bool:
 	return LEGAL_REQ_REGIONS[region].has(feature)
 
+## Set audio.
 func audio_settings(bus: int, val: float):
 	AudioServer.set_bus_volume_db(bus, linear_to_db(val))
 	if val < 0.01:
@@ -111,13 +113,16 @@ func audio_settings(bus: int, val: float):
 	elif val >= 0.01 && AudioServer.is_bus_mute(bus):
 		AudioServer.set_bus_mute(bus, false)	
 
+## Overrides main scene. Only used for LoadingScreen.
 func override_main_scene(scene: Node):
 	get_tree().current_scene = scene
 
+## Sets default keybinds.
 func set_default_keybinds():
 	for value in setting_res.keybinds.keys():
 		set_keybind(value, setting_res.keybinds[value][0], setting_res.keybinds[value][1])
 
+## Keybind backend.
 func set_keybind(action_name: String, key_type: int, key: int):
 	InputMap.action_erase_events(action_name)
 	match key_type:
@@ -142,6 +147,7 @@ func season_feature_checker(season_check: Season) -> bool:
 	else:
 		return false
 
+## Toggle loading screen.
 func loader(file_path_to_load: String, parameters: Dictionary[String, Variant]):
 	if get_child_count() > 0:
 		if get_child(0) is LoadingScreen:

@@ -1,5 +1,6 @@
 extends Control
-
+## Used by Inventory screen.
+## Made by Yni, licensed under MIT license.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_children_visibility_changed() -> void:
+	# If inventory is visible - stop passing mouse clicks.
 	for node in get_children():
 		if node is Control:
 			if node.visible:

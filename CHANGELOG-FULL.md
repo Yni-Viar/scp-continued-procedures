@@ -3,19 +3,24 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.0 ("Cleanlight update")
+## v6.0.0 ("Cleanlight update", 2026.03.xx)
 ### Zone-wide update
 - [x] Revamped (again) Research Zone lighting.
 - [x] Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
 - [x] Added new props to all available zones.
 
 ### Smarter NPCs
-- [x] NPCs can now ride elevators by themselves (not tested)
-- [x] Reworked CI event - now they are using new NPC functions and spawn on Surface Zone, as MTF (no longer *SCP: Unstable Dimensions* remnant) (not tested)
+- [x] NPCs can now call and ride elevators by themselves
+
+### CI vs MTF event rework
+- [x] Now both spawn in Surface Zone. *Comment: previos behgavior has deep roots down to SCP: Unstable Dimensions*
+- [x] Now have avoidance enabled by-default.
+- [x] Fixed bug, where Chaos Insurgent behaved as MTF.
 
 ### New SCP
-- [x] \[Full version only\] SCP-791 (with task) (needs more test)
-- [x] SCP-249 (with task) (not tested)
+- [x] \[Full version only\] SCP-791 (with task)
+- [x] SCP-249 (with task)
+- [x] SCP-005 (mostly useless in this game, except ███-███)
 
 ### Optimizations
 - [x] Optimized SCP-458 model.
@@ -35,6 +40,10 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
 - [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
 - [x] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
+- [x] \[Technical\] Remove historical variables (one of them is dating back to *SCP: Unstable Dimensions*) to optimize the game.
+- [x] \[Technical\] Documented code
+- [x] Fixed Surface / Facility environment transition resetting post-effects.
+- [x] Save 15 seconds of loading. (not tested)
 
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)

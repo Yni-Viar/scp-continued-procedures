@@ -3,14 +3,17 @@ extends Node3D
 class_name BasePuppetScript
 
 
-
+## Armature name
 @export var armature_name: String = "HumanRig"
 enum States {IDLE, WALKING, RUNNING, SPECIAL1, SPECIAL2, SPECIAL3, SPECIAL4}
 @export var state: States = States.IDLE
+
+## If true, NPC will scan other NPCs via Area
 @export var enable_vision_scan: bool = false
 @export var vision_class_detect: Array[int] = [0]
 
 @export_group("Festive settings")
+## Set false to disable festive decorations.
 @export var fixed_prefab: bool = false
 ## Format: NodePath: [[material_index, material], ...]
 @export var christmas_suits: Dictionary[NodePath, Array]
@@ -27,6 +30,7 @@ func _ready() -> void:
 		get_parent().get_parent().get_node("VisionArea").connect("body_exited", on_vision_area_body_exited)
 	
 	if fixed_prefab:
+		#Festive decorations
 		match Settings.current_season:
 			Settings.Season.CHRISTMAS:
 				for node_path in christmas_suits:
@@ -55,11 +59,14 @@ func on_vision_area_body_exited(body: Node3D):
 func special_action():
 	pass
 
+## Effect start callback
 func effect_manager_start(effect: String, strength: float):
 	pass
 
+## Effect process callback
 func effect_manager_update(effect: String, strength: float):
 	pass
 
+## Effect destroy callback
 func effect_manager_destroy(effect: String, strength: float):
 	pass

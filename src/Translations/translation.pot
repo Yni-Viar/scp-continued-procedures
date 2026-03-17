@@ -263,3 +263,9 @@ msgstr ""
 
 msgid "TASK_249_YOURFAULT"
 msgstr ""
+
+msgid "CAFETERIA"
+msgstr ""
+
+msgid "TRAPPED_IN_YNI_BASEMENT"
+msgstr ""

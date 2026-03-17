@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 		spike()
 		amount = 0.0
 
+## Activate SCP-162 on player.
 func activate():
 	for npc in targets:
 		if is_instance_valid(npc):
@@ -36,6 +37,7 @@ func activate():
 			npc.wandering_system = MovableNpc.WanderingSystem.NONE
 			npc.movement_freeze = true
 
+## Injure puppet, while they go deep in spikes.
 func spike():
 	if targets.size() > 0:
 		var counter: int = 0

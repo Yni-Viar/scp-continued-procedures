@@ -17,7 +17,12 @@ var last_move: LastMove = LastMove.UP
 ## Elevator rotation speed
 @export var rotation_speed: float = 0.5
 ## Check if moving, automatic
-@export var is_moving: bool = false
+@export var is_moving: bool = false:
+	set(val):
+		is_moving = val
+		if is_moving && npc_can_ride:
+			if !$Timer.is_stopped():
+				$Timer.stop()
 ## Sounds, that will played, when door is opened.
 @export var open_door_sounds : PackedStringArray
 ## Sounds, that will played, when door is closed.
@@ -236,21 +241,26 @@ func _on_player_area_body_exited(body: Node3D) -> void:
 	if body is MovableNpc || body is Pickable:
 		call("remove_object", body.get_path())
 
-
+## Add object. If npc_can_ride AND is not player-controller pawn,
+## start countdown, then puppet will ride
 func add_object(body):
 	var unpacked_body: Node3D = get_node(body)
 	if unpacked_body is MovableNpc:
-		if unpacked_body.is_player && !$Timer.is_stopped():
-			$Timer.stop()
+		if unpacked_body.is_player: 
+			if !$Timer.is_stopped():
+				$Timer.stop()
 		elif npc_can_ride && $Timer.is_stopped():
 			$Timer.start()
 		changed_launch_state.connect(get_node(body).on_moving_platform)
 	objects_to_teleport.append(body)
 
+## Removes object and stops NPC ride countdown
 func remove_object(body):
 	if get_node(body) is MovableNpc:
 		changed_launch_state.disconnect(get_node(body).on_moving_platform)
 	objects_to_teleport.erase(body)
+	if !$Timer.is_stopped() && objects_to_teleport.is_empty():
+		$Timer.stop()
 
 func _on_animation_finished(anim_name):
 	$AnimationPlayer.disconnect("animation_finished", _on_animation_finished)
@@ -259,4 +269,7 @@ func _on_animation_finished(anim_name):
 
 func _on_timer_timeout() -> void:
 	var rng: RandomNumberGenerator = RandomNumberGenerator.new()
-	call_elevator(rng.randi_range(0, floors.size() - 1))
+	var destination: int
+	while destination == current_floor:
+		destination = rng.randi_range(0, floors.size() - 1)
+	call_elevator(destination)

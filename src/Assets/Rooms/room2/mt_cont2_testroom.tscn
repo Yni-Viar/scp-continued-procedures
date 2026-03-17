@@ -195,6 +195,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.27, 0)
 mesh = SubResource("ArrayMesh_6uotv")
 skeleton = NodePath("")
 
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.136254, 0, -10.232882, 3.1382706, 0, -10.250359, 3.1382706, 0, -9.183354)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="NavigationRegion3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2, 0)
+height = 5.0
+vertices = PackedVector3Array(1.2233343, 0, 10.306167, 3.2450285, 0, 9.006506, 3.3894377, 0, 10.089557)
+affect_navigation_mesh = true
+avoidance_enabled = false
+
 [node name="LightmapGI" type="LightmapGI" parent="."]
 quality = 0
 bounces = 1

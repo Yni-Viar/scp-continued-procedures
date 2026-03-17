@@ -19,9 +19,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	scp_938(delta)
-
-func scp_938(delta: float):
+	# Countdown before containment breach, if came too close.
 	if electro_targets.size() > 0:
 		if timer > 0 || current_state != 0:
 			timer -= delta
@@ -32,6 +30,7 @@ func scp_938(delta: float):
 			$AttackArea.monitoring = true
 			teleport_is_ready = true
 			timer = 8.0
+	# What SCP-938 do if breached.
 	match current_state:
 		1:
 			if !get_parent().get_parent().wandering:

@@ -4,8 +4,11 @@ extends Node3D
 
 signal finished(has_body: PackedInt32Array)
 
+## DORMANT - the carpet do nothing.
+## ACTIVE - carpet absorbs blood.
 enum Scp522State {DORMANT, ACTIVE}
 
+## set SCP522State and apply animation.
 @export var state:Scp522State = Scp522State.DORMANT:
 	set(val):
 		if is_equal_approx(animation_timer, 1):
@@ -13,9 +16,11 @@ enum Scp522State {DORMANT, ACTIVE}
 		else:
 			animation_timer = 1
 		state = val
+## Automatic.
 @export var body_to_process: Node3D
 
 var animation_timer: int = 0.0
+## Format - [pubbet class fraction, puppet class team]
 var body_inside: PackedInt32Array = [-1, -1]
 
 var timer: float = 0.0
@@ -54,6 +59,7 @@ func _physics_process(delta: float) -> void:
 			timer = 0.0
 
 func _on_scp_522_trigger_body_entered(body: Node3D) -> void:
+	# Catch the puppet!
 	if state != Scp522State.ACTIVE:
 		state = Scp522State.ACTIVE
 		body_to_process = body

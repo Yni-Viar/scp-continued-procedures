@@ -18,6 +18,5 @@ apply_height_bugfix = false
 enable_wander = false
 health = Array[float]([100.0, 50.0, 50.0, 50.0])
 team = 1
-enable_avoidance = false
 spawn_on_start = false
 ragdoll_prefab = ExtResource("2_7qjna")

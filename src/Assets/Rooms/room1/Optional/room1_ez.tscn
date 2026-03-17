@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://c4kjg8vj7euky"]
+[gd_scene load_steps=37 format=4 uid="uid://c4kjg8vj7euky"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_ig11j"]
 [ext_resource type="Material" uid="uid://cn06h7ro4lomm" path="res://Assets/Materials/ResearchZone/Redux/Ventilation.tres" id="1_srtgi"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="6_druik"]
 [ext_resource type="LightmapGIData" uid="uid://chc2qomjklune" path="res://Assets/Rooms/room1/Optional/Lm/room1_ez.lmbake" id="8_2815l"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="10_mcmt4"]
-[ext_resource type="Script" uid="uid://bufye8a550ay6" path="res://Scripts/Triggers/ElevatorTrigger.gd" id="11_gcdxs"]
 [ext_resource type="Texture2D" uid="uid://ttw8c15u0if6" path="res://Assets/Materials/Optional/Elevator/Metal009_2K-PNG_Color.png" id="12_gkoav"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="13_drp0l"]
 [ext_resource type="Script" uid="uid://bti7y8cq2dfm4" path="res://Scripts/DoorSystem/DoorBase.gd" id="13_gcdxs"]
@@ -287,9 +286,6 @@ font = ExtResource("10_mcmt4")
 font_size = 32
 depth = 0.01
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ig11j"]
-size = Vector3(18.6207, 6.99567, 20.3601)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b1r8"]
 resource_name = "Wall"
 albedo_texture = ExtResource("12_gkoav")
@@ -409,17 +405,6 @@ transform = Transform3D(1.509958e-07, 0, -2, 0, 2, 0, 2, 0, 1.509958e-07, 6.8499
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_soiee")
 
-[node name="ElevatorTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.87951, 2.33381, -0.0206722)
-collision_layer = 3
-collision_mask = 3
-script = ExtResource("11_gcdxs")
-elevator_path_global = "/root/Game/EZ/elevator"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.63234, -0.0104065, 0.00109851)
-shape = SubResource("BoxShape3D_ig11j")
-
 [node name="RzElevPoint1" type="Marker3D" parent="."]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, -3.1850963, 2.2422402, -2.4237483)
 
@@ -494,6 +479,3 @@ current_season = 6
 
 [node name="Pumpkin" parent="Seasonal/Halloween" instance=ExtResource("14_gkoav")]
 transform = Transform3D(0.49999997, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.49999997, 3.1620102, 0.2292887, 3.90938)
-
-[connection signal="body_entered" from="ElevatorTrigger" to="ElevatorTrigger" method="_on_body_entered"]
-[connection signal="body_exited" from="ElevatorTrigger" to="ElevatorTrigger" method="_on_body_exited"]

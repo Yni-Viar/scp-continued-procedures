@@ -35,6 +35,8 @@ func _on_raycast_update_npc(collider_path: String):
 		attack()
 
 func attack():
+	if get_node(get_parent().get_parent().follow_target) is not MovableNpc:
+		return
 	if attack_update_timer > 0:
 		attack_update_timer -= get_physics_process_delta_time()
 	else:

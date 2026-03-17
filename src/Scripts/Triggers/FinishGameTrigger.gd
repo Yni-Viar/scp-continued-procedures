@@ -1,4 +1,5 @@
 extends Area3D
+## Unused, as of 6.0
 ## Made by Yni, licensed under MIT License.
 
 @export var detect_scp347_with_mtf: bool = true

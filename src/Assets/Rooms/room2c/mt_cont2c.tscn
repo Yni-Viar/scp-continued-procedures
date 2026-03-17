@@ -250,10 +250,10 @@ light_data = ExtResource("12_osq5b")
 visible = false
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="." groups=["ReflectionProbe"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40246964, 2.34369, 0.4769206)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07811737, 2.34369, 0.18156767)
 blend_distance = 0.4
 max_distance = 64.0
-size = Vector3(19.59502, 7.266, 19.843979)
+size = Vector3(20.243725, 7.266, 20.434685)
 origin_offset = Vector3(0.35, 0, 0.35)
 interior = true
 

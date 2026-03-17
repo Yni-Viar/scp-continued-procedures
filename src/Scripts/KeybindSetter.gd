@@ -1,4 +1,5 @@
 extends GridContainer
+## Keybinds frontend.
 ## Made by Yni, licensed under MIT License.
 
 var settings_key: Dictionary[String, String] = {

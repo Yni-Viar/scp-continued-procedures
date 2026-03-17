@@ -45,6 +45,7 @@ func end_screen_show():
 func _on_back_pressed() -> void:
 	Settings.loader("res://Scenes/Menu.tscn", {})
 
+# Check new task if task done, else finish game.
 func _on_foundation_task_task_done() -> void:
 	for prev_task in $Tasks.get_children():
 		prev_task.queue_free()
