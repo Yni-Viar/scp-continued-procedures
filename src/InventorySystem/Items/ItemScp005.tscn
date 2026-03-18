@@ -63,6 +63,8 @@ shadow_mesh = SubResource("ArrayMesh_uakm1")
 size = Vector3(0.048828125, 0.026611328, 0.15917969)
 
 [node name="Scp005" type="RigidBody3D"]
+collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_1v408")
 item_id = 15

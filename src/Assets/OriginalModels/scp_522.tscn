@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=4 uid="uid://dlpgutdspohq2"]
 
 [ext_resource type="Texture2D" uid="uid://dhiekyi46uc7k" path="res://Assets/ExternalModels/Scp522/Scp522_SCP-522.png" id="1_5vxcq"]
-[ext_resource type="Script" uid="uid://dxmasty17lhgs" path="res://Scripts/Scp522.gd" id="1_l4iyc"]
+[ext_resource type="Script" uid="uid://dxmasty17lhgs" path="res://Scripts/Scps/Scp522.gd" id="1_l4iyc"]
 [ext_resource type="Texture2D" uid="uid://dnw66xjpdhue6" path="res://Assets/ExternalModels/Scp522/Scp522_SCP-522-Normal.png" id="2_l4iyc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22d8d"]

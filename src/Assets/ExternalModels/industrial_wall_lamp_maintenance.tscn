@@ -98,6 +98,7 @@ shadow_mesh = SubResource("ArrayMesh_6n2r2")
 
 [node name="industrial_wall_lamp" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+lod_bias = 0.75
 visibility_range_end = 64.0
 mesh = SubResource("ArrayMesh_6sixt")
 skeleton = NodePath("")

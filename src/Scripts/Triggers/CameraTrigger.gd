@@ -1,5 +1,5 @@
 extends Area3D
-## Switch camera mode to StaticPlayer.CameraMode
+## Switch camera mode to StaticPlayer.CameraMode (unused as of 6.0)
 ## Created by Yni, licensed under MIT License
 
 @export var camera_mode: StaticPlayer.CameraMode

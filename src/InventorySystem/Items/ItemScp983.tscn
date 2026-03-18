@@ -340,6 +340,7 @@ radius = 0.247559
 
 [node name="scp983" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 script = ExtResource("1_0wg1b")
 item_id = 2
 

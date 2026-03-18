@@ -110,6 +110,7 @@ shadow_mesh = SubResource("ArrayMesh_ln4xi")
 [node name="Scp458" type="RigidBody3D"]
 collision_layer = 8
 mass = 4.0
+freeze = true
 script = ExtResource("1_5u8kb")
 item_id = 9
 

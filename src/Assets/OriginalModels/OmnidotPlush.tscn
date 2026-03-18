@@ -169,6 +169,7 @@ radius = 0.101789
 
 [node name="OmnidotplushV2" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 
 [node name="Cylinder" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.100122, 0, 0, 0, 0.100122, 0, 0, 0, 0.100122, 0.00648898, -0.0141233, -0.001058)

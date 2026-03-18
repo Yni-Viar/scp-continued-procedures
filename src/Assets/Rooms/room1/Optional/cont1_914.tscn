@@ -1,7 +1,7 @@
 [gd_scene load_steps=54 format=4 uid="uid://cryliu61nwkac"]
 
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_0ffxi"]
-[ext_resource type="Script" uid="uid://crbiqf8o03ge1" path="res://Scripts/Scp914.gd" id="1_0mc4a"]
+[ext_resource type="Script" uid="uid://crbiqf8o03ge1" path="res://Scripts/Scps/Scp914.gd" id="1_0mc4a"]
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_rooy2"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="2_31pvc"]
 [ext_resource type="Material" uid="uid://cghjsdm6328ko" path="res://Assets/Materials/ResearchZone/Floor.tres" id="2_c0br2"]

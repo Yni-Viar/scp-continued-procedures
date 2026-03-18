@@ -12,6 +12,4 @@ pickable_path = "res://InventorySystem/Items/ItemScp005.tscn"
 size = Vector2i(1, 1)
 action_method_name = "action_take"
 action_args = [15]
-status_effect = "Scp067"
-status_effect_destroyable = false
 upgrade_one_to_one = Array[int]([15])

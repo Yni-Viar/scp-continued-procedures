@@ -111,14 +111,14 @@ border_color = Color(1, 0.6199727, 0.572891, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x3xnh"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyesh"]
-texture = ExtResource("23_i4lct")
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1pr2"]
 texture = ExtResource("14_8e0uq")
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_i4lct"]
 color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iyesh"]
+texture = ExtResource("23_i4lct")
 
 [node name="Game" type="Node3D"]
 process_mode = 1
@@ -397,89 +397,6 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("29_18uti")
 theme_override_font_sizes/font_size = 24
 
-[node name="Condition" type="Panel" parent="UI"]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -324.0
-offset_right = 576.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_iyesh")
-
-[node name="ConditionLabel" type="Label" parent="UI/Condition"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.251
-anchor_right = 0.5
-anchor_bottom = 0.251
-offset_left = -448.0
-offset_top = -64.648
-offset_right = 448.0
-offset_bottom = 64.352
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("9_bf53h")
-theme_override_font_sizes/font_size = 128
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ReasonLabel" type="Label" parent="UI/Condition"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.569
-anchor_right = 0.5
-anchor_bottom = 0.569
-offset_left = -320.0
-offset_top = -112.712
-offset_right = 320.0
-offset_bottom = 143.288
-grow_horizontal = 2
-grow_vertical = 2
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Back" type="Button" parent="UI/Condition"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -256.0
-offset_top = -96.0
-offset_right = 256.0
-offset_bottom = -32.0
-grow_horizontal = 2
-grow_vertical = 0
-localize_numeral_system = false
-theme = ExtResource("10_3so38")
-text = "BACK_TO_MENU"
-
-[node name="TextureRect" type="TextureRect" parent="UI/Condition"]
-modulate = Color(1, 1, 1, 0)
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -216.0
-offset_top = -200.0
-offset_right = -24.0
-offset_bottom = -8.0
-grow_horizontal = 0
-grow_vertical = 0
-texture = ExtResource("26_iyesh")
-
 [node name="Back" type="TextureButton" parent="UI"]
 layout_mode = 0
 offset_right = 64.0
@@ -686,6 +603,89 @@ text = "ELEVATOR_WHAT_FLOOR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Condition" type="Panel" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_iyesh")
+
+[node name="ConditionLabel" type="Label" parent="UI/Condition"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.251
+anchor_right = 0.5
+anchor_bottom = 0.251
+offset_left = -448.0
+offset_top = -64.648
+offset_right = 448.0
+offset_bottom = 64.352
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_bf53h")
+theme_override_font_sizes/font_size = 128
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ReasonLabel" type="Label" parent="UI/Condition"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.569
+anchor_right = 0.5
+anchor_bottom = 0.569
+offset_left = -320.0
+offset_top = -112.712
+offset_right = 320.0
+offset_bottom = 143.288
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="UI/Condition"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_top = -96.0
+offset_right = 256.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+localize_numeral_system = false
+theme = ExtResource("10_3so38")
+text = "BACK_TO_MENU"
+
+[node name="TextureRect" type="TextureRect" parent="UI/Condition"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -200.0
+offset_right = -24.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("26_iyesh")
+
 [node name="InGameConsole" parent="UI" instance=ExtResource("30_i1pr2")]
 visible = false
 layout_mode = 1
@@ -774,8 +774,8 @@ show_percentage = false
 [connection signal="pressed" from="UI/HBoxContainer/CallMtfButton" to="UI" method="_on_call_mtf_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/Scp914Button" to="UI" method="_on_scp_914_button_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/ElevatorButton" to="UI" method="_on_elevator_button_pressed"]
-[connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]
 [connection signal="pressed" from="UI/Back" to="UI" method="_on_back_pressed"]
 [connection signal="drag_ended" from="UI/Scp914Panel/Scp914Mode" to="UI" method="_on_scp_914_mode_drag_ended"]
 [connection signal="pressed" from="UI/Scp914Panel/Refine" to="UI" method="_on_refine_pressed"]
 [connection signal="pressed" from="UI/ElevatorMode/ElevatorCall" to="UI" method="_on_elevator_call_pressed"]
+[connection signal="pressed" from="UI/Condition/Back" to="UI" method="_on_back_pressed"]

@@ -31,10 +31,11 @@ Included SCPs:
 
 | SCP# | Full | Lite/Web version |
 |------|------|------------------|
+|SCP-005|⁉️, since 6.0.0|⁉️, since 6.0.0|
 |SCP-023|✅, since 3.0.0|✅, since 5.7.0|
 |SCP-067|✅, since 5.2.0|✅, since 5.7.0|
 |SCP-162|✅, since 1.0.0|✅, since 5.8.0|
-|SCP-173|✅, since 1.0.0|Partial, since 5.7.0|
+|SCP-173|✅, since 1.0.0|❓, since 5.7.0|
 |SCP-178|✅, since 5.2.0|❌, 3d help wanted|
 |SCP-249|✅, since 6.0.0|✅, since 6.0.0|
 |SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
@@ -47,9 +48,16 @@ Included SCPs:
 |SCP-686|✅, since 1.0.0|✅, since 5.7.0|
 |SCP-791|✅, since 6.0.0|❌|
 |SCP-812|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag, probably will return in future|
+|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
 |SCP-938|✅, since 5.0.0|❌|
 |SCP-939|✅, since 5.5.0|✅, since 5.8.0|
+
+⁉️ - Hidden - not always spawn.
+✅ - Available.
+❓ - Partial availability.
+❌ - Unavailable.
+<!-- 🎃 - Spawns only at October -->
+⛄ - Spawns only in December.
 
 ## Why this name?
 - It is a recursive acronym - **S**CP: **C**ontinued **P**rocedures
@@ -65,11 +73,15 @@ The game is based on SCP Foundation community.
 
 The game is made in 2025 by Yni Viar.
 
-This project is dual-licensed.
+This project, as a whole is dual-licensed.
 
 If you are using code for non-SCP usage, feel free to use under [MIT License](/LICENSE.MIT)
 
-If you are using code for SCP Foundation usage or the project, which includes CC-BY-SA assets, use them under [GNU GPL 3 License](/LICENSE.GPL), as it is required by SCP Foundation / CC-BY-SA content usage.
+If you are using code for SCP Foundation usage or the project, which includes CC-BY-SA assets,
+use them under [GNU GPL 3 License](/LICENSE.GPL), as it is required by SCP Foundation / CC-BY-SA content usage.
+
+The parts of the project can be used under license, mentioned in header (as of code and shaders),
+as for assets, check corresponding to assets `readme.*`, `license.*` or check the folder naming for CC license.
 
 ## Contributing
 

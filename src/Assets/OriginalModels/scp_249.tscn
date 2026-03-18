@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=4 uid="uid://bl4a2vhnoklia"]
 
-[ext_resource type="Script" uid="uid://d2upepdap1mja" path="res://Scripts/Scp249.gd" id="1_6yuhc"]
+[ext_resource type="Script" uid="uid://d2upepdap1mja" path="res://Scripts/Scps/Scp249.gd" id="1_6yuhc"]
 [ext_resource type="Texture2D" uid="uid://djb7pj3nwna64" path="res://Assets/OriginalModels/Scp249/Scp249_Scp249_Cube.001_base.png" id="2_qsmb6"]
 [ext_resource type="Texture2D" uid="uid://b6b7o4g22gj3f" path="res://Assets/OriginalModels/Scp249/Scp249_Scp249_Cube.001_nor.png" id="4_jitsk"]
 [ext_resource type="Texture2D" uid="uid://dr8nh26y6assy" path="res://Assets/OriginalModels/Scp249/Scp249_Scp249_Cube.002_base.png" id="5_w2ymj"]

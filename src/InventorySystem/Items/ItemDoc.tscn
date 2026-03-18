@@ -54,6 +54,7 @@ size = Vector3(0.363037, 0.0301514, 0.533447)
 
 [node name="doc" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_bul0b")
 item_id = 7

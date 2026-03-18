@@ -227,7 +227,6 @@ emission = Color(1, 1, 1, 1)
 material = SubResource("StandardMaterial3D_57pa4")
 text = "162"
 font = ExtResource("14_dra1o")
-font_size = 32
 depth = 0.01
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0rp3e"]
@@ -370,7 +369,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.790538, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_h7n5c")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -8.64336, 5.78005, 6.28462)
+transform = Transform3D(-6.993822e-07, 0, 16, 0, 16, 0, -16, 0, -6.993822e-07, -8.64336, 5.78005, 6.28462)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_tpifn")
 

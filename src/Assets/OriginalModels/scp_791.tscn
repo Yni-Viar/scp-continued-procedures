@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b7bqrcgpr32l3"]
 
-[ext_resource type="Script" uid="uid://l7knlfignhqc" path="res://Scripts/Scp791.gd" id="1_5qidp"]
+[ext_resource type="Script" uid="uid://l7knlfignhqc" path="res://Scripts/Scps/Scp791.gd" id="1_5qidp"]
 [ext_resource type="Shader" uid="uid://b2smunw6gw5ds" path="res://Shaders/Water2Shader/water_shader.gdshader" id="1_jau36"]
 [ext_resource type="Shader" uid="uid://canha4kgfhe4" path="res://Shaders/ItemShader/item_shaded.gdshader" id="1_rjwgw"]
 

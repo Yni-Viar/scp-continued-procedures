@@ -103,7 +103,6 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_0mrdf")
 text = "173"
 font = ExtResource("4_0mrdf")
-font_size = 32
 depth = 0.01
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bh5mh"]
@@ -181,7 +180,7 @@ start_position = Vector3(0.964633, 2.20508, 1.58786)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38526, -3.2832, -5.72607)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -7.26412, 3.81702, 6.28462)
+transform = Transform3D(-6.993822e-07, 0, 16, 0, 16, 0, -16, 0, -6.993822e-07, -7.26412, 3.81702, 6.28462)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_cajk8")
 

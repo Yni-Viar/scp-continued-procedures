@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bioti3gaqj0t8"]
+[gd_scene load_steps=32 format=4 uid="uid://bioti3gaqj0t8"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_lwtf3"]
 [ext_resource type="Material" uid="uid://bx6svntie8yke" path="res://Assets/Materials/ResearchZone/Walls.tres" id="1_r8il1"]
@@ -12,9 +12,9 @@
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="6_vvdys"]
 [ext_resource type="PackedScene" uid="uid://bf3i3ic0mu7ks" path="res://InventorySystem/Items/ItemScp686.tscn" id="8_40a72"]
 [ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="8_42cx5"]
-[ext_resource type="PackedScene" uid="uid://d0o1eeb1xokss" path="res://InventorySystem/Items/ItemScp983.tscn" id="8_ua6hs"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="9_42cx5"]
-[ext_resource type="PackedScene" uid="uid://cpl32rqecveb3" path="res://Assets/Rooms/room1/EasterEgg/scp_005_spawner.tscn" id="9_fg4rw"]
+[ext_resource type="PackedScene" uid="uid://cpl32rqecveb3" path="res://Assets/Rooms/room1/Spawners/scp_005_spawner.tscn" id="9_fg4rw"]
+[ext_resource type="PackedScene" uid="uid://de3qn4wt4xrhb" path="res://Assets/Rooms/room1/Spawners/Optional/scp_983_spawner.tscn" id="11_42cx5"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="11_je4g8"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="11_ua6hs"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_abfkj"]
@@ -28,18 +28,10 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Arr
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57pa4"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="TextMesh" id="TextMesh_40a72"]
-material = SubResource("StandardMaterial3D_57pa4")
-text = "983"
-font = ExtResource("6_vvdys")
-font_size = 32
-depth = 0.01
-
 [sub_resource type="TextMesh" id="TextMesh_lwtf3"]
 material = SubResource("StandardMaterial3D_57pa4")
 text = "686"
 font = ExtResource("6_vvdys")
-font_size = 32
 depth = 0.01
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnq1"]
@@ -225,13 +217,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.4424
 [node name="steel_frame_shelves_01_2k6" parent="NavigationRegion3D/Props" instance=ExtResource("5_eiihm")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.44249, -1.26767, 8.64859)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.45167, 2.11155, -7.0062)
-visibility_range_end = 64.0
-mesh = SubResource("TextMesh_40a72")
-
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.45167, 0.746768, -7.0062)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -1.45167, 0.746768, -7.0062)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_lwtf3")
 
@@ -273,10 +260,15 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.43
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.143924, 1.7019128, -6.1351323)
 script = ExtResource("8_42cx5")
 item = ExtResource("9_fg4rw")
-chance = 0.125
 
 [node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("9_42cx5")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.3145914, -0.23142517, -1.7658596)
+
+[node name="Scp983Spawner" type="Marker3D" parent="NavigationRegion3D/Props"]
+script = ExtResource("8_42cx5")
+item = ExtResource("11_42cx5")
+chance = 1.0
+availability = 1
 
 [node name="Cube2" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
@@ -295,9 +287,6 @@ texel_scale = 0.5
 light_data = ExtResource("4_uuvbx")
 
 [node name="Items" type="Node3D" parent="."]
-
-[node name="scp983" parent="Items" instance=ExtResource("8_ua6hs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44563, 1.97539, -6.45515)
 
 [node name="Scp686" parent="Items" instance=ExtResource("8_40a72")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3394163, 0.56100726, -6.227706)

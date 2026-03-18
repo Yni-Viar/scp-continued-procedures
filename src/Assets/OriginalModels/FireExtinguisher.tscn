@@ -49,6 +49,6 @@ shadow_mesh = SubResource("ArrayMesh_s7apk")
 [node name="FireExtinguisher" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-lod_bias = 0.5
+lod_bias = 0.125
 mesh = SubResource("ArrayMesh_8dvn6")
 skeleton = NodePath("")

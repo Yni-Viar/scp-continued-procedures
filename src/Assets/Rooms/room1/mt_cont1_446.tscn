@@ -256,7 +256,6 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_0mrdf")
 text = "446"
 font = ExtResource("10_u2gtq")
-font_size = 32
 depth = 0.01
 
 [sub_resource type="TextMesh" id="TextMesh_43vmf"]
@@ -484,7 +483,7 @@ transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.2588
 transform = Transform3D(-0.41346997, 0, -0.91051775, 0, 1, 0, 0.91051775, 0, -0.41346997, 0.075865746, -1.7819049, -6.2482333)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(8, 0, -1.1368684e-13, 0, 8, 0, 1.1368684e-13, 0, 8, 4.3435125, 2.500237, -1.5965304)
+transform = Transform3D(16, 0, -2.2737368e-13, 0, 16, 0, 2.2737368e-13, 0, 16, 4.3435125, 2.500237, -1.5965304)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_16ume")
 

@@ -73,6 +73,7 @@ height = 0.45059204
 [node name="ItemBeaker" type="RigidBody3D" node_paths=PackedStringArray("mesh_with_liquid")]
 transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_xxq87")
 liquid_mobility = 0.063

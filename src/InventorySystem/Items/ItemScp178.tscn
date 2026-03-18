@@ -145,6 +145,7 @@ size = Vector3(0.046539307, 0.13632202, 0.3300476)
 
 [node name="Scp178" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_elnqa")
 item_id = 11

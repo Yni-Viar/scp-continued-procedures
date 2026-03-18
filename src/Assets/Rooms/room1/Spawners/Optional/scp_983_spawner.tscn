@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://de3qn4wt4xrhb"]
+
+[ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="1_rfmb2"]
+[ext_resource type="PackedScene" uid="uid://d0o1eeb1xokss" path="res://InventorySystem/Items/ItemScp983.tscn" id="2_nlduo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57pa4"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_pq5xe"]
+material = SubResource("StandardMaterial3D_57pa4")
+text = "983"
+font = ExtResource("1_rfmb2")
+font_size = 32
+depth = 0.01
+
+[node name="Scp983Spawner" type="Node3D"]
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.45167, 2.0021727, -7.0062)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_pq5xe")
+skeleton = NodePath("../../..")
+
+[node name="scp983" parent="." instance=ExtResource("2_nlduo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8085903, 1.9613116, -6.257831)

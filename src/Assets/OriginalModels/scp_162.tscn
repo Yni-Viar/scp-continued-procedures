@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=4 uid="uid://53puk7j21cif"]
 
-[ext_resource type="Script" uid="uid://db5hg5cuewafg" path="res://Scripts/Scp162.gd" id="1_bsoxi"]
+[ext_resource type="Script" uid="uid://db5hg5cuewafg" path="res://Scripts/Scps/Scp162.gd" id="1_bsoxi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8m453"]
 resource_name = "Material.001"

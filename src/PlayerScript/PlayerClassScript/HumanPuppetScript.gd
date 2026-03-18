@@ -158,9 +158,10 @@ func hold_item(idx: int):
 					node.queue_free()
 				secondary_state = SecondaryState.NONE
 				current_item = -1
-			else:
+			elif idx > 0 && idx < get_tree().root.get_node("Game").gamedata.items.size():
 				secondary_state = SecondaryState.ITEM
 				var item_prefab: Pickable = load(get_tree().root.get_node("Game").gamedata.items[idx].pickable_path).instantiate()
+				item_prefab.picked = true
 				item_prefab.freeze = true
 				get_node(armature_name + "/Skeleton3D/ItemAttachment/Marker3D").add_child(item_prefab)
 				current_item = idx

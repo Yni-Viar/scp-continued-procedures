@@ -3,7 +3,7 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.0 ("Cleanlight update", 2026.03.xx)
+## v6.0.0 ("Cleanlight update", 2026.03.19)
 ### Zone-wide update
 - [x] Revamped (again) Research Zone lighting.
 - [x] Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
@@ -13,9 +13,14 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - [x] NPCs can now call and ride elevators by themselves
 
 ### CI vs MTF event rework
-- [x] Now both spawn in Surface Zone. *Comment: previos behgavior has deep roots down to SCP: Unstable Dimensions*
+- [x] Now both spawn in Surface Zone. *Comment: previous behavior has deep roots down to SCP: Unstable Dimensions*
 - [x] Now have avoidance enabled by-default.
 - [x] Fixed bug, where Chaos Insurgent behaved as MTF.
+- [x] CI event will never activate on Hard Mode, because such event can make round impassable.
+
+### Hard mode
+- [x] Time limited game became Hard Mode.
+- [x] Properly introduced hunger mechanic to Hard Mode.
 
 ### New SCP
 - [x] \[Full version only\] SCP-791 (with task)
@@ -25,26 +30,33 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### Optimizations
 - [x] Optimized SCP-458 model.
 - [x] Optimized light models
+- [x] Optimized some meshes' LOD, which means lesser polygons on screen.
+- [x] Rigid bodies and items now will freeze, when they are outside of vision capsule.
+- [x] \[Lite version only\] Removed SCP-983 item from Research Zone testroom due to high poly amount in a few pixels. (can still be spawned)
+- [x] Replaced shelf prop in Maintenace Zone due to high poly amount.
 
 ### Misc changes
+- [x] \[Task system\] Fixed rare bug, where one rejected task counts as two or more.
+- [x] Fixed possibility to hold invalid item.
+- [x] Fixed "ghost item in hand" bug, where item remains in hand after removing item.
+- [x] Replaced blur shader in WC room with noise shader.
 - [x] Updated and hidden Help - if you are not afraid of spoilers, type `spoilers` into `Seed` input.
+- [x] Updated lights in large maintenance hallway.
+- [x] Applied new doors for Surface Zone / Facility elevators
+- [x] Removed Entrance Zone due to poor implementation.
+- [x] Removed SCP-347 task and event.
+- [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
+- [x] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
+- [x] Fixed Surface / Facility environment transition resetting post-effects.
+- [x] Save 10 seconds of loading.
 - [x] \[Full version only\] Updated SCP-812 chamber to include SCP-791
 - [x] \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
 - [x] \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
-- [x] Updated lights in large maintenance hallway.
 - [x] \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
-- [x] Applied new doors for Surface Zone / Facility elevators
-- [x] Removed Entrance Zone due to poor implementation.
-- [x] Removed SCP-347 task.
 - [x] \[Technical\] Organized assets and removed unused legacy ones.
-- [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
-- [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
-- [x] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
 - [x] \[Technical\] Remove historical variables (one of them is dating back to *SCP: Unstable Dimensions*) to optimize the game.
 - [x] \[Technical\] Documented code
-- [x] Fixed Surface / Facility environment transition resetting post-effects.
-- [x] Save 15 seconds of loading. (not tested)
-
+- [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)
 

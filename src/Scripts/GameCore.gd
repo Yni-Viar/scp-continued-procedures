@@ -50,7 +50,11 @@ func _ready() -> void:
 	$FacilityGenerator.rng = rng
 	if map_seed != -1:
 		rng.seed = map_seed
+		seed(map_seed)
 		$FacilityGenerator.rng_seed = map_seed
+	else:
+		rng.randomize()
+		randomize()
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings
@@ -107,11 +111,11 @@ func _on_facility_generator_generated() -> void:
 	# Spawn SCP-347 agent, if there is a task
 	#if get_node("FoundationTask").has_task("task_347"):
 		#spawn_wave_entity(2)
-	$LoadingScreen.call_deferred("hide")
-	await get_tree().create_timer(15.0).timeout
 	
+	await get_tree().create_timer(5.0).timeout
+	$LoadingScreen.call_deferred("hide")
 	if ci_probability < 0:
-		if !OS.has_feature("Lite") && !time_limited && rng.randi_range(0, 3) == 1:
+		if !time_limited && rng.randi_range(0, 3) == 1:
 			ci_probability = 1
 		else:
 			ci_probability = 0

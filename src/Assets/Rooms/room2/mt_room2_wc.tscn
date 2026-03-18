@@ -4,7 +4,7 @@
 [ext_resource type="Material" uid="uid://vg6s0ft4srsj" path="res://Assets/Materials/MaintenanceTunnels/Generic.tres" id="1_qom4j"]
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Vents.tres" id="2_qom4j"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="4_4bu8b"]
-[ext_resource type="Shader" uid="uid://dn5865upl6f7h" path="res://Shaders/BlurShader/blur.gdshader" id="5_qom4j"]
+[ext_resource type="Shader" uid="uid://c1hpglwywqlnh" path="res://Shaders/NoiseShader/noise.gdshader" id="4_qa6h4"]
 [ext_resource type="LightmapGIData" uid="uid://ca3lc7gvsjj0f" path="res://Assets/Rooms/room2/Lm/mt_room2_wc.lmbake" id="6_4bu8b"]
 [ext_resource type="Material" uid="uid://sx7vi58vu84" path="res://Assets/Materials/MaintenanceTunnels/Tunnels.tres" id="7_glu1g"]
 [ext_resource type="PackedScene" uid="uid://div1sqhrlu8et" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance_2.tscn" id="7_gsowd"]
@@ -35,15 +35,12 @@ material = SubResource("StandardMaterial3D_ac1mp")
 text = "WC"
 font = ExtResource("4_4bu8b")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_yajlf"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q350h"]
 render_priority = 0
-shader = ExtResource("5_qom4j")
-shader_parameter/lod_level = 3
-shader_parameter/brightness = 1.0
-shader_parameter/distortion_intensity = 0.02
+shader = ExtResource("4_qa6h4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_ukw1m"]
-material = SubResource("ShaderMaterial_yajlf")
+material = SubResource("ShaderMaterial_q350h")
 size = Vector3(8, 5.44, 20.48)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7p1q7"]

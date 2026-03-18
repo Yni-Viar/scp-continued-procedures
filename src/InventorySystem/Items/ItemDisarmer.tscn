@@ -63,6 +63,7 @@ size = Vector3(0.19519, 1, 0.239624)
 
 [node name="disarmer" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_7v7wk")
 item_id = 1

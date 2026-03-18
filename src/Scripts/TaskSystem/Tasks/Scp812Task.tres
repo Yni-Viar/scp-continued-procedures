@@ -6,6 +6,6 @@
 script = ExtResource("1_nw4wk")
 internal_name = "task_812"
 public_name = "TASK_812_RESEARCH"
-required_group = &"cont1_812"
 required_groups = Array[String](["cont1_812"])
+priority = 2
 metadata/_custom_type_script = "uid://2412583x8gql"

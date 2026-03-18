@@ -110,7 +110,6 @@ emission = Color(1, 1, 1, 1)
 material = SubResource("StandardMaterial3D_0mrdf")
 text = "249"
 font = ExtResource("14_yvkhy")
-font_size = 32
 depth = 0.01
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_5eyys"]
@@ -373,7 +372,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.7
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5.862608, -1.2447386, -7.256581)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(-3.49691e-07, 0, 8, 0, 8, 0, -8, 0, -3.49691e-07, -9.425183, 2.0862153, -2.7822485)
+transform = Transform3D(-6.993822e-07, 0, 16, 0, 16, 0, -16, 0, -6.993822e-07, -9.425183, 2.0862153, -2.7822485)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_2s3gw")
 skeleton = NodePath("../../..")

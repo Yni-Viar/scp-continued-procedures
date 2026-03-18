@@ -760,40 +760,40 @@ item = ExtResource("14_7143u")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.9573, -0.63572437, -9.761382)
 
 [node name="Chair" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -6.823658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -7.070137)
 
 [node name="Chair2" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -6.854727)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -7.101206)
 
 [node name="Chair3" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -0.75084686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, -1.0897546)
 
 [node name="Chair4" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -0.78191566)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, -1.1208234)
 
 [node name="Chair5" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, 5.960489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8382244, -1.2572846, 4.8821435)
 
 [node name="Chair6" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, 5.92942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.28098, -1.2595811, 4.8510747)
 
 [node name="Chair7" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -6.823658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -7.224187)
 
 [node name="Chair8" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -6.854727)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -7.2552557)
 
 [node name="Chair9" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -0.75084686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, -1.1821852)
 
 [node name="Chair10" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -0.78191566)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, -1.213254)
 
 [node name="Chair11" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, 5.960489)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.2402725, -1.2572846, 5.251861)
 
 [node name="Chair12" parent="NavigationRegion3D" instance=ExtResource("16_d6nwl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, 5.92942)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.797517, -1.2595811, 5.2207923)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.860662, 0)

@@ -118,6 +118,7 @@ size = Vector3(0.640106, 0.0647736, 0.637207)
 
 [node name="doc914" type="RigidBody3D"]
 collision_layer = 8
+freeze = true
 continuous_cd = true
 script = ExtResource("1_2yvtg")
 item_id = 6
