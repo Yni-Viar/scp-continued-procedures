@@ -23,14 +23,17 @@ func initialize() -> void:
 		var task_index: int
 		while true:
 			task_index = get_parent().rng.randi_range(0, get_parent().gamedata.tasks.size() - 1)
-			# If spawn do not exist - append task as used.
-			for group in get_parent().gamedata.tasks[task_index].required_groups:
-				if get_tree().get_node_count_in_group(group) == 0:
-					used_index.append(task_index)
-					break
+			
 			# If the task already defined - stop infinite loop.
 			if !used_index.has(task_index):
-				break
+				# If spawn do not exist - append task as used.
+				for group in get_parent().gamedata.tasks[task_index].required_groups:
+					if get_tree().get_node_count_in_group(group) == 0:
+						used_index.append(task_index)
+						break
+				# If spawn exist - break infinite loop
+				if !used_index.has(task_index):
+					break
 			# If all tasks are used - finish initialize.
 			if get_parent().gamedata.tasks.size() == used_index.size():
 				return
@@ -44,13 +47,13 @@ func initialize() -> void:
 				# Regular task
 				all_tasks.append(get_parent().gamedata.tasks[task_index])
 
-## Do task with specified internal name
+## Adds task manually, if it is possible to complete.
 func add_task(task_name: String):
 	for task in get_parent().gamedata.tasks:
 		if task.internal_name == task_name:
 			for group in task.required_groups:
 				if get_tree().get_node_count_in_group(group) == 0:
-					break
+					return
 			all_tasks.append(task)
 			task_done.emit()
 			break

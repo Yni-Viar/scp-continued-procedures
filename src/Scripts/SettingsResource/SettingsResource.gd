@@ -30,7 +30,9 @@ enum InputMethod {KB, MB, JP}
 	"camera_rotate_left": [InputMethod.KB, KEY_A],
 	"camera_rotate_right": [InputMethod.KB, KEY_D],
 	"toggle_mode": [InputMethod.KB, KEY_SPACE],
-	"inventory": [InputMethod.KB, KEY_TAB]
+	"inventory": [InputMethod.KB, KEY_TAB],
+	"photomode": [InputMethod.KB, KEY_P],
+	"debug_console": [InputMethod.KB, KEY_QUOTELEFT]
 }
 ## SSAO
 @export var ssao: bool = false

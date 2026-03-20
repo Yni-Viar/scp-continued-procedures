@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameData" load_steps=53 format=3 uid="uid://kakqpi6wi07u"]
+[gd_resource type="Resource" script_class="GameData" load_steps=54 format=3 uid="uid://kakqpi6wi07u"]
 
 [ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_teai8"]
 [ext_resource type="Script" uid="uid://d08svv1nclb1r" path="res://PlayerScript/PlayerClassResources/PuppetResource.gd" id="1_uwdlv"]
@@ -48,6 +48,7 @@
 [ext_resource type="Resource" uid="uid://chrcg7ojldnxg" path="res://Scripts/TaskSystem/Tasks/Scp938Task.tres" id="37_bgvy5"]
 [ext_resource type="Resource" uid="uid://dgr8wdtbsu8ox" path="res://Scripts/TaskSystem/Tasks/Scp067Task.tres" id="38_m7n8e"]
 [ext_resource type="Resource" uid="uid://doinebm3nogkr" path="res://Scripts/TaskSystem/Tasks/Scp939Task.tres" id="39_7ipmw"]
+[ext_resource type="Resource" uid="uid://cl3tmyk8pvu75" path="res://Scripts/StatusEffects/StatusEffects/Electrocuted.tres" id="39_ncw05"]
 [ext_resource type="Resource" uid="uid://bl77rs85adm50" path="res://Scripts/TaskSystem/Tasks/Scp249Task.tres" id="42_5ro56"]
 [ext_resource type="Resource" uid="uid://bb74t7caf7imp" path="res://Scripts/TaskSystem/Tasks/Scp522Task.tres" id="42_hwqmy"]
 [ext_resource type="Resource" uid="uid://c5ljoju46fyxg" path="res://Scripts/TaskSystem/Tasks/Scp812RoomTask.tres" id="45_5ro56"]
@@ -62,6 +63,7 @@ items = Array[ExtResource("1_teai8")]([ExtResource("2_6lojy"), ExtResource("3_3m
 wave_puppet_classes = Array[ExtResource("1_uwdlv")]([ExtResource("18_0lfxp"), ExtResource("19_om1ka"), ExtResource("23_odskn")])
 status_effects = Dictionary[String, ExtResource("28_7yeqa")]({
 "Amnesia": ExtResource("36_m7n8e"),
+"Electrocuted": ExtResource("39_ncw05"),
 "Frozen": ExtResource("29_7yeqa"),
 "Scp067": ExtResource("36_kg1fs"),
 "Scp178": ExtResource("33_0bwjp"),

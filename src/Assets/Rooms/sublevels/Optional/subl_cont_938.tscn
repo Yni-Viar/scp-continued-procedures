@@ -181,6 +181,7 @@ floor_material_index = 1
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_4dl2j")
+navigation_layers = 2
 
 [node name="Scp938Cage" type="Node3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9041, 7.5321, -97.194)

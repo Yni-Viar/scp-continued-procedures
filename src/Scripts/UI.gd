@@ -27,6 +27,16 @@ func _input(event: InputEvent) -> void:
 		$InGameConsole.visible = !$InGameConsole.visible
 	if event.is_action_released("inventory"):
 		_on_inventory_button_pressed()
+	if event.is_action_pressed("photomode"):
+		$HealthBar.visible = !$HealthBar.visible
+		$ThirstBar.visible = !$ThirstBar.visible
+		$HungerBar.visible = !$HungerBar.visible
+		$HealthIcon.visible = !$HealthIcon.visible
+		$ThirstIcon.visible = !$ThirstIcon.visible
+		$HungerIcon.visible = !$HungerIcon.visible
+		$Tasks.visible = !$Tasks.visible
+		$HBoxContainer.visible = !$HBoxContainer.visible
+		$Back.visible = !$Back.visible
 
 #func _on_seed_text_changed(new_text):
 	#if new_text != "":
@@ -137,6 +147,7 @@ func _on_scp_914_mode_drag_ended(value_changed: bool) -> void:
 
 func _on_refine_pressed() -> void:
 	get_tree().get_first_node_in_group("Scp914").call("refine")
+	$Scp914Panel.hide()
 
 
 func _on_scp_914_button_pressed() -> void:
@@ -149,6 +160,7 @@ func _on_elevator_call_pressed() -> void:
 	if current_elevator == null:
 		return
 	current_elevator.call_elevator(int($ElevatorMode/Floor.value))
+	$ElevatorMode.hide()
 
 
 func _on_elevator_button_pressed() -> void:

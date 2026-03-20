@@ -21,3 +21,4 @@ team = 3
 spawn_on_start = false
 puppet_navigation_layers = 3
 ragdoll_prefab = ExtResource("2_6nqxi")
+disable_move_on_slide = true

@@ -4,10 +4,3 @@
 
 [resource]
 script = ExtResource("1_sq76f")
-keybinds = Dictionary[String, Array]({
-"camera_rotate_left": [0, 65],
-"camera_rotate_right": [0, 68],
-"click": [1, 1],
-"look": [1, 2],
-"toggle_mode": [0, 32]
-})

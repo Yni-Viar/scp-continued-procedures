@@ -21,7 +21,7 @@ var ci_timer: float = 20.0
 ## Are Chaos Insurgency ready to spawn (automatically set after 15 seconds)
 var ci_ready: bool = false
 ## MTF call cooldown
-var mtf_cooldown: float = 64.0:
+var mtf_cooldown: float = 35.0:
 	set(val):
 		mtf_cooldown = val
 		if mtf_cooldown <= 0.0:
@@ -37,6 +37,7 @@ func _ready() -> void:
 	RenderingServer.viewport_set_measure_render_time(get_tree().root.get_viewport_rid(), true)
 	GDsh.add_command("add_item", add_item, "Adds item to your inventory")
 	GDsh.add_command("spawn_npc", spawn_npc, "Spawns a NPC in front of you")
+	GDsh.add_command("add_task", add_task, "Adds task manually, if it is possible to complete.")
 	ci_timer = rng.randf_range(30.0, 32.0)
 	if OS.has_feature("Lite"):
 		gamedata = load("res://Scripts/GameData/Lite/LiteGame.tres")
@@ -50,11 +51,9 @@ func _ready() -> void:
 	$FacilityGenerator.rng = rng
 	if map_seed != -1:
 		rng.seed = map_seed
-		seed(map_seed)
 		$FacilityGenerator.rng_seed = map_seed
 	else:
 		rng.randomize()
-		randomize()
 	$FacilityGenerator.generate_rooms()
 	
 	# Apply settings
@@ -77,9 +76,6 @@ func _process(delta: float) -> void:
 		$UI/TimeToLeft.text = tr("SECONDS_LEFT") + " " + str(ceili($GameOverTimer.time_left))
 	if ci_ready:
 		if ci_probability == 1:
-			if Settings.setting_res.zen_mode:
-				# Disable Chaos waves for the Safe modes
-				ci_probability = 0
 			ci_timer -= delta
 			if ci_timer < 0:
 				spawn_wave_entity(1)
@@ -115,7 +111,8 @@ func _on_facility_generator_generated() -> void:
 	await get_tree().create_timer(5.0).timeout
 	$LoadingScreen.call_deferred("hide")
 	if ci_probability < 0:
-		if !time_limited && rng.randi_range(0, 3) == 1:
+		# Disable CI event, if hard mode, safe mode, or if you are lucky to get in 3/4
+		if !time_limited && !OS.has_feature("Lite") && !Settings.setting_res.zen_mode && rng.randi_range(0, 3) == 1:
 			ci_probability = 1
 		else:
 			ci_probability = 0
@@ -257,3 +254,7 @@ func spawn_npc(args: Array):
 			npc.puppet_class = gamedata.puppet_classes[int(args[0])]
 			npc.position = protagonist.global_position - protagonist.global_transform.basis.z * 4
 			$NPCs.add_child(npc)
+
+func add_task(args: Array):
+	if args.size() > 0:
+		$FoundationTask.add_task(args[0])

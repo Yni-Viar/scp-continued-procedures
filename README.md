@@ -2,8 +2,8 @@
 
 ## Requirements to build
 
-The project uses Godot 4.5.2-rc1 as a base.
-Earlier Godot version (such as 4.4) are not supported anymore since v5.9
+The project uses Godot 4.5.2 as a base.
+Godot 4.4 is not supported anymore since 6.0 - Cleanlight update.
 
 ### Building regular version
 
@@ -27,37 +27,43 @@ Click/Tap - move/pick items (if you tap on character, they will go with you).
 
 If Chaos Insurgency will raid your Site, call MTF using the button (in other times, the button won't work)
 
-Included SCPs:
+### Included SCPs
 
-| SCP# | Full | Lite/Web version |
-|------|------|------------------|
-|SCP-005|⁉️, since 6.0.0|⁉️, since 6.0.0|
-|SCP-023|✅, since 3.0.0|✅, since 5.7.0|
-|SCP-067|✅, since 5.2.0|✅, since 5.7.0|
-|SCP-162|✅, since 1.0.0|✅, since 5.8.0|
-|SCP-173|✅, since 1.0.0|❓, since 5.7.0|
-|SCP-178|✅, since 5.2.0|❌, 3d help wanted|
-|SCP-249|✅, since 6.0.0|✅, since 6.0.0|
-|SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
-|SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0 due to lag|
-|SCP-446|✅, since 5.3.0|✅, since 5.7.0|
-|SCP-458|✅, since 5.1.0|✅, since 5.7.0|
-|SCP-522|✅, since 5.8.0|✅, since 5.8.0|
-|SCP-649|⛄, since 5.5.0|⛄, since 5.7.0|
-|SCP-650|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-686|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-791|✅, since 6.0.0|❌|
-|SCP-812|✅, since 1.0.0|✅, since 5.7.0|
-|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|
-|SCP-938|✅, since 5.0.0|❌|
-|SCP-939|✅, since 5.5.0|✅, since 5.8.0|
+| SCP# | Full | Lite/Web version | Functionality |
+|------|------|------------------|---------------|
+|SCP-005|⁉️, since 6.0.0|⁉️, since 6.0.0|❓ Only used for specific usage, since there is no locked doors|
+|SCP-023|✅, since 3.0.0|✅, since 5.7.0|✅ Full|
+|SCP-067|✅, since 5.2.0|✅, since 5.7.0|✅ Full|
+|SCP-162|✅, since 1.0.0|✅, since 5.8.0|✅ Full|
+|SCP-173|✅, since 1.0.0|❓, since 5.7.0|✅ Full|
+|SCP-178|✅, since 5.2.0|❌, 3d help wanted|✅ Full|
+|SCP-249|✅, since 6.0.0|✅, since 6.0.0|✅ Full|
+|SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|✅ Full|
+|SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0 due to lag|❓ Partial|
+|SCP-446|✅, since 5.3.0|✅, since 5.7.0|❌ None|
+|SCP-458|✅, since 5.1.0|✅, since 5.7.0|✅ Full|
+|SCP-522|✅, since 5.8.0|✅, since 5.8.0|✅ Full|
+|SCP-649|⛄, since 5.5.0|⛄, since 5.7.0|✅ Full|
+|SCP-650|✅, since 1.0.0|✅, since 5.7.0|✅ Full (only if breached)|
+|SCP-686|✅, since 5.1.0|✅, since 5.7.0|❓ Partial (hidden NSFW parts)|
+|SCP-791|✅, since 6.0.0|❌|📃 Task only|
+|SCP-812|✅, since 1.0.0|✅, since 5.7.0|✅ Full|
+|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|❓ Process only items|
+|SCP-938|✅, since 5.0.0|❌|✅ Full|
+|SCP-939|✅, since 5.5.0|✅, since 5.8.0|✅ Full|
 
+#### Availability
 ⁉️ - Hidden - not always spawn.
 ✅ - Available.
 ❓ - Partial availability.
 ❌ - Unavailable.
 <!-- 🎃 - Spawns only at October -->
 ⛄ - Spawns only in December.
+#### Functionality
+✅ - SCP object is fully implemented
+❓ - SCP object is partly implemented
+📃 - SCP object is implemented only for a task
+❌ - SCP object is not compatible with SCP article
 
 ## Why this name?
 - It is a recursive acronym - **S**CP: **C**ontinued **P**rocedures

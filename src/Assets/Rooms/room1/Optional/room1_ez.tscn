@@ -401,7 +401,7 @@ visibility_range_end = 64.0
 mesh = SubResource("TextMesh_m3yji")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.509958e-07, 0, -2, 0, 2, 0, 2, 0, 1.509958e-07, 6.8499603, 1.8440466, -0.19241786)
+transform = Transform3D(1.509958e-07, 0, -2, 0, 2, 0, 2, 0, 1.509958e-07, 6.8499603, 1.8440466, 0.782665)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_soiee")
 

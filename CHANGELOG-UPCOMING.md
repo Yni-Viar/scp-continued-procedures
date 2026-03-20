@@ -13,6 +13,8 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 ## Undetermined 6.x.x release
 - [ ] SCP-080 + task
 - [ ] SCP-261 (possibly 6.1.0)
+- [ ] Add SCP-938 breach event (possibly 6.1.0)
+- [ ] Re-add SCP-347 breach event
 - [ ] SCP-1032
 - [ ] SCP-1223 (possibly 6.1.0)
 - [ ] SCP-2028 (possibly 6.2.0)
@@ -23,7 +25,7 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-007
 - [ ] SCP-104
 - [ ] SCP-178-1 new model (needs contribution)
-- [ ] SCP-432 (with dimension) (only if requested)
+- [ ] SCP-609
 - [ ] SCP-647
 - [ ] SCP-713 (probably not)
 - [ ] SCP-813
@@ -33,3 +35,6 @@ For actual game changes, please, refer to [game changelog](./CHANGELOG-FULL.md)
 - [ ] SCP-2471 (3d model borrowed from AmbientCG)
 - [ ] Add female models for D-Class, Scientists and Guards
 - [ ] Add different language-based SCPs
+
+## Can be implemented on request
+- [ ] SCP-432 (with dimension)

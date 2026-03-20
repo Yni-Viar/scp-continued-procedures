@@ -269,3 +269,9 @@ msgstr ""
 
 msgid "TRAPPED_IN_YNI_BASEMENT"
 msgstr ""
+
+msgid "PHOTOMODE"
+msgstr ""
+
+msgid "DEBUG_CONSOLE"
+msgstr ""

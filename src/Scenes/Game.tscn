@@ -231,6 +231,7 @@ max_value = 50.0
 show_percentage = false
 
 [node name="HealthIcon" type="TextureRect" parent="UI"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.031
@@ -245,6 +246,7 @@ grow_vertical = 0
 texture = ExtResource("10_71axn")
 
 [node name="ThirstIcon" type="TextureRect" parent="UI"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.108
@@ -259,6 +261,7 @@ grow_vertical = 0
 texture = ExtResource("13_4eqlp")
 
 [node name="HungerIcon" type="TextureRect" parent="UI"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.108

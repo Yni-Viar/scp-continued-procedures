@@ -45,3 +45,5 @@ enum WanderingSystem {NONE, GENERIC_WANDER, LIMITED_WANDER}
 ## Enables Inverse Kinematics (only for humans and SCP-347)
 @export var enable_ik: bool = true
 @export var ragdoll_prefab: PackedScene
+## If disabled, player won't be stuck at elevator, but may be stuck on walls, if stopped there.
+@export var disable_move_on_slide: bool = false

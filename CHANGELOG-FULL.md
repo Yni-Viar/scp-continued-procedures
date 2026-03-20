@@ -3,60 +3,64 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.0 ("Cleanlight update", 2026.03.19)
+## v6.0.0 ("Cleanlight update", 2026.03.2X)
 ### Zone-wide update
-- [x] Revamped (again) Research Zone lighting.
-- [x] Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
-- [x] Added new props to all available zones.
+- Revamped (again) Research Zone lighting.
+- Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
+- Added new props to all available zones.
 
 ### Smarter NPCs
-- [x] NPCs can now call and ride elevators by themselves
+- NPCs can now call and ride elevators by themselves
 
 ### CI vs MTF event rework
-- [x] Now both spawn in Surface Zone. *Comment: previous behavior has deep roots down to SCP: Unstable Dimensions*
-- [x] Now have avoidance enabled by-default.
-- [x] Fixed bug, where Chaos Insurgent behaved as MTF.
-- [x] CI event will never activate on Hard Mode, because such event can make round impassable.
+- Now both spawn in Surface Zone. *Comment: previous behavior has deep roots down to SCP: Unstable Dimensions*
+- Now have avoidance enabled by-default.
+- Fixed bug, where Chaos Insurgent behaved as MTF.
+- CI event will never activate on Hard Mode and in the Lite version, because such event can make round impassable.
 
 ### Hard mode
-- [x] Time limited game became Hard Mode.
-- [x] Properly introduced hunger mechanic to Hard Mode.
+- Time limited game became Hard Mode.
+- Properly introduced hunger mechanic to Hard Mode.
 
 ### New SCP
-- [x] \[Full version only\] SCP-791 (with task)
-- [x] SCP-249 (with task)
-- [x] SCP-005 (mostly useless in this game, except ███-███)
+- \[Full version only\] SCP-791 (with task)
+- SCP-249 (with task)
+- SCP-005 (mostly useless in this game, except ███-███)
+- Made SCP-938 more lore-compliant.
 
 ### Optimizations
-- [x] Optimized SCP-458 model.
-- [x] Optimized light models
-- [x] Optimized some meshes' LOD, which means lesser polygons on screen.
-- [x] Rigid bodies and items now will freeze, when they are outside of vision capsule.
-- [x] \[Lite version only\] Removed SCP-983 item from Research Zone testroom due to high poly amount in a few pixels. (can still be spawned)
-- [x] Replaced shelf prop in Maintenace Zone due to high poly amount.
+- Optimized SCP-458 model.
+- Optimized light models
+- Optimized some meshes' LOD, which means lesser polygons on screen.
+- Rigid bodies and items now will freeze, when they are outside of vision capsule.
+- \[Lite version only\] Removed SCP-983 item from Research Zone testroom due to high poly amount in a few pixels. (can still be spawned)
+- Replaced shelf prop in Maintenace Zone due to high poly amount.
 
 ### Misc changes
-- [x] \[Task system\] Fixed rare bug, where one rejected task counts as two or more.
-- [x] Fixed possibility to hold invalid item.
-- [x] Fixed "ghost item in hand" bug, where item remains in hand after removing item.
-- [x] Replaced blur shader in WC room with noise shader.
-- [x] Updated and hidden Help - if you are not afraid of spoilers, type `spoilers` into `Seed` input.
-- [x] Updated lights in large maintenance hallway.
-- [x] Applied new doors for Surface Zone / Facility elevators
-- [x] Removed Entrance Zone due to poor implementation.
-- [x] Removed SCP-347 task and event.
-- [x] Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
-- [x] Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
-- [x] Fixed Surface / Facility environment transition resetting post-effects.
-- [x] Save 10 seconds of loading.
-- [x] \[Full version only\] Updated SCP-812 chamber to include SCP-791
-- [x] \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
-- [x] \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
-- [x] \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
-- [x] \[Technical\] Organized assets and removed unused legacy ones.
-- [x] \[Technical\] Remove historical variables (one of them is dating back to *SCP: Unstable Dimensions*) to optimize the game.
-- [x] \[Technical\] Documented code
-- [x] \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
+- Added photomode, which just hides all UI.
+- \[UI\] SCP-914 Refine button and elevator call button now hide these dialogues.
+- Fixed possibility to get stuck in a wall (added fallback option, which is used for D-Class, CI and MTF).
+- \[Task system\] Fixed rare bug, where one rejected task counts as two or more, leading to possibility to have 1 or no tasks at all.
+- Fixed possibility to hold invalid item.
+- Fixed "ghost item in hand" bug, where item remains in hand after removing item.
+- Replaced blur shader in WC room in favor of noise shader.
+- Updated and hidden Help - if you are not afraid of spoilers, type `spoilers` into `Seed` input.
+- Updated lights in large maintenance hallway.
+- Applied new doors for Surface Zone / Facility elevators
+- Removed Entrance Zone due to poor implementation.
+- Removed SCP-347 task and event.
+- Updated SCP-686 texture: Replaced Bauhaus font with Sans Normalcy.
+- Added Cafeteria room to Research zone with non-functional SCP-261 prop (planned for future)
+- Fixed Surface / Facility environment transition resetting post-effects.
+- Save 10 seconds of loading.
+- \[Full version only\] Updated SCP-812 chamber to include SCP-791
+- \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
+- \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
+- \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
+- \[Technical\] Organized assets and removed unused legacy ones.
+- \[Technical\] Remove historical variables (one of them is dating back to *SCP: Unstable Dimensions*) to optimize the game.
+- \[Technical\] Documented code
+- \[Technical\] \[Lite version only\] Removed remains of Entrance Zone (which are kept in Full version for future reintegration)
 
 ## v5.8.3 ("Downgraded carpet", 2026.03.01)
 
@@ -107,7 +111,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Partially fixed fall-out-from-elevator bug.
 - Returned back on-screen buttons for non-touchscreen platforms.
 
-## v5.7.3 (2026.01.23, last version, that support Windows 8.1 natively)
+## v5.7.3 (2026.01.23)
 
 - \[Emergency fix\] Fix map generator unable to generate random layouts - updated to v11.3.3
 

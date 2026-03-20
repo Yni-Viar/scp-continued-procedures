@@ -135,10 +135,10 @@ metadata/_custom_type_script = "uid://7ag6n6s5rw1m"
 size = Vector3(14.6551, 5.56006, 7.25507)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nph5e"]
-size = Vector3(5.4082627, 6.99567, 5.320341)
+size = Vector3(6.5957327, 6.99567, 5.320341)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qup2f"]
-size = Vector3(6.609282, 6.99567, 5.320341)
+size = Vector3(6.6186056, 6.99567, 5.320341)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lorvw"]
 size = Vector3(13.9023, 6.99567, 5.320341)
@@ -300,9 +300,10 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("9_3b8tf")
 elevator_path = NodePath("../elevator")
+current_floor = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0817437, -0.010406494, 2.8028994)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6754785, -0.010406494, 2.8028994)
 shape = SubResource("BoxShape3D_nph5e")
 
 [node name="ElevatorTrigger3" type="Area3D" parent="."]
@@ -313,7 +314,7 @@ script = ExtResource("9_3b8tf")
 elevator_path = NodePath("../elevator2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ElevatorTrigger3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.704226, -0.010406494, 2.74185)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7088876, -0.010406494, 2.74185)
 shape = SubResource("BoxShape3D_qup2f")
 
 [node name="ElevatorTrigger4" type="Area3D" parent="."]

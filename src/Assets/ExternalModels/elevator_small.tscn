@@ -467,6 +467,7 @@ libraries = {
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
+one_shot = true
 
 [connection signal="body_entered" from="PlayerArea" to="." method="_on_player_area_body_entered"]
 [connection signal="body_exited" from="PlayerArea" to="." method="_on_player_area_body_exited"]

@@ -17,12 +17,7 @@ var last_move: LastMove = LastMove.UP
 ## Elevator rotation speed
 @export var rotation_speed: float = 0.5
 ## Check if moving, automatic
-@export var is_moving: bool = false:
-	set(val):
-		is_moving = val
-		if is_moving && npc_can_ride:
-			if !$Timer.is_stopped():
-				$Timer.stop()
+@export var is_moving: bool = false
 ## Sounds, that will played, when door is opened.
 @export var open_door_sounds : PackedStringArray
 ## Sounds, that will played, when door is closed.
@@ -132,6 +127,9 @@ func call_elevator(floor):
 	if is_moving || floor == current_floor || locked:
 		return
 	changed_launch_state.emit(true)
+	if npc_can_ride:
+		if !$Timer.is_stopped():
+			$Timer.stop()
 	target_floor = floor
 	if OS.get_name() == "Web":
 		elevator_move_web()

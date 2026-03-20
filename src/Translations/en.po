@@ -198,7 +198,9 @@ msgid "GAME_OVER_1"
 msgstr "You died. What a pity..."
 
 msgid "GAME_OVER_2"
-msgstr "You let SCPs escape. You will be demoted to Class-D personnel."
+msgstr ""
+"SCP-938 containment breach occurred.\n"
+"Unfortunately, you became victim of that creature."
 
 msgid "GAME_OVER_3"
 msgstr "You did not finish all the task in a work day."
@@ -267,7 +269,7 @@ msgstr "You need to replace SCP-023's eyes quickly."
 
 msgid "TASK_938_CHECK"
 msgstr ""
-"Order 3 Class-D personnel and 1 scientist\n"
+"Order 3 Class-D personnel to go with you\n"
 "to check SCP-938 battery integrity"
 
 msgid "EMERGENCY_EXIT"
@@ -348,4 +350,10 @@ msgstr ""
 "There may or may not be exits from this basement, which also\n"
 "can be another dimension.\n"
 "You've got secret ending.\n"
-"click ← button to return to main menu - the only way to escape."
+"Click Back button to return to main menu - the only way to escape."
+
+msgid "PHOTOMODE"
+msgstr "Photomode"
+
+msgid "DEBUG_CONSOLE"
+msgstr "Debug terminal"

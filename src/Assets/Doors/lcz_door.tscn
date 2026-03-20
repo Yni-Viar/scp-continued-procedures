@@ -172,14 +172,14 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Cube_001")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0.003, 1.612, 0, 1, 1, -0.96, 1.612, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, 0.003, 0, 0, 1, 1, -0.96, 0, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/path = NodePath("Cube_002")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -0.003, 1.612, 0, 1, 1, 0.939, 1.612, 0)
+tracks/1/keys = PackedFloat32Array(0, 1, -0.003, 0, 0, 1, 1, 0.939, 0, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dhd7e"]
 _data = {

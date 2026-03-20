@@ -93,10 +93,12 @@ columns = 2
 script = ExtResource("5_mjqtt")
 
 [node name="CLLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+visible = false
 layout_mode = 2
 text = "CAMERA_LOOK"
 
 [node name="CLButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
@@ -142,6 +144,20 @@ text = "INVENTORY"
 custom_minimum_size = Vector2(256, 0)
 layout_mode = 2
 
+[node name="PMLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "PHOTOMODE"
+
+[node name="PMButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+
+[node name="DLabel" type="Label" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+text = "DEBUG_CONSOLE"
+
+[node name="DButton" type="Button" parent="ScrollContainer/SettingsUI/GridContainer"]
+layout_mode = 2
+
 [connection signal="close_requested" from="." to="." method="_on_close_requested"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/Glow" to="ScrollContainer/SettingsUI" method="_on_glow_toggled"]
 [connection signal="toggled" from="ScrollContainer/SettingsUI/BasicReflection" to="ScrollContainer/SettingsUI" method="_on_basic_reflection_toggled"]
@@ -153,3 +169,5 @@ layout_mode = 2
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/CRRButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_crr_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/TVMButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_tvm_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/IButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_i_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/PMButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_pm_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/SettingsUI/GridContainer/DButton" to="ScrollContainer/SettingsUI/GridContainer" method="_on_d_button_pressed"]

@@ -16,5 +16,6 @@ apply_height_bugfix = false
 enable_wander = false
 health = Array[float]([2300.0])
 enable_avoidance = false
+puppet_navigation_layers = 3
 enable_ik = false
 ragdoll_prefab = ExtResource("2_6ln1i")

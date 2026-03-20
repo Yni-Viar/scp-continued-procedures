@@ -8,7 +8,9 @@ var settings_key: Dictionary[String, String] = {
 	"CRL": "camera_rotate_left",
 	"CRR": "camera_rotate_right",
 	"TVM": "toggle_mode",
-	"I": "inventory"
+	"I": "inventory",
+	"PM": "photomode",
+	"D": "debug_console"
 }
 var listen_to_keybind: bool = false
 var current_setting_to_change: int
@@ -71,3 +73,15 @@ func _on_i_button_pressed() -> void:
 	listen_to_keybind = true
 	$IButton.text = "KEY_LISTENING"
 	current_setting_to_change = 5
+
+
+func _on_pm_button_pressed() -> void:
+	listen_to_keybind = true
+	$PMButton.text = "KEY_LISTENING"
+	current_setting_to_change = 6
+
+
+func _on_d_button_pressed() -> void:
+	listen_to_keybind = true
+	$DButton.text = "KEY_LISTENING"
+	current_setting_to_change = 7

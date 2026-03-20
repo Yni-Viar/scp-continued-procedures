@@ -246,6 +246,13 @@ func apply_overlay(effect: String, strength: float):
 			else:
 				$Head/Camera3D/Overlays/AmnesiaVisionOverlay.hide()
 				current_overlays.erase(effect)
+		"Electrocuted":
+			if strength >= 0.375:
+				$Head/Camera3D/Overlays/ElectrocuteOverlay.show()
+				current_overlays.append(effect)
+			else:
+				$Head/Camera3D/Overlays/ElectrocuteOverlay.hide()
+				current_overlays.erase(effect)
 		_:
 			for node in $Head/Camera3D/Overlays.get_children():
 				node.hide()
