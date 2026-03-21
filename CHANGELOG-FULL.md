@@ -3,6 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v6.0.1 (Emergency fix, 2026.03.21)
+
+- Hid the strange message in Maintenance Zone tunnel.
+
 ## v6.0.0 ("Cleanlight update", 2026.03.21)
 ### Zone-wide update
 - Revamped (again) Research Zone lighting.
