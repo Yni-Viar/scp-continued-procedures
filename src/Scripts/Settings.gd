@@ -10,7 +10,7 @@ signal settings_saved
 
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
-const DATA_COMPATIBILITY: String = "5.8.0"
+const DATA_COMPATIBILITY: String = "6.0.0"
 ## Migrated from Globals.
 ## Game's data compatibility for modding.
 const CURRENT_STAGE: Stages = Stages.dev
@@ -32,6 +32,9 @@ var region: String = "":
 var legal_req: bool = false
 var current_season: Season = Season.NONE
 
+## Beta mode
+var beta_mode: bool = false
+
 func _init():
 	load_resource()
 	audio_settings(1, setting_res.music_volume)
@@ -41,6 +44,7 @@ func _init():
 func _ready() -> void:
 	Settings.touchscreen = DisplayServer.is_touchscreen_available()
 	season_checker()
+	GDsh.add_command("beta_mode_features", beta_mode_features, "List current beta features.")
 
 ## Sometimes ago it was a great function. Now it is just a stub, that calls ResourceStorage and loads settings
 func load_resource():
@@ -157,3 +161,11 @@ func loader(file_path_to_load: String, parameters: Dictionary[String, Variant]):
 	loading_screen.parameters = parameters
 	
 	add_child(loading_screen)
+
+## GDsh command, that describes beta features.
+func beta_mode_features(args: Array):
+	return """6.0.x Beta features
+	There are no experimental features right now.
+	To enable beta features, write in Seed input following text:
+	[b]feature_beta[/b]
+	"""

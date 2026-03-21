@@ -100,6 +100,9 @@ func _on_settings_button_pressed() -> void:
 
 
 func _on_seed_text_changed(new_text: String) -> void:
+	if new_text.to_lower() == "feature_beta":
+		Settings.beta_mode = true
+		$GameSettings/Seed.text = ""
 	if new_text.to_lower() == "yenjeai":
 		$HBoxContainer/StoryMode.show()
 	elif $HBoxContainer/StoryMode.visible:

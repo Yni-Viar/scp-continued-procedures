@@ -10,7 +10,8 @@ var attack_update_timer: float = 0.0
 
 # Called when the node enters the scene tree for the first time.
 func on_start_human() -> void:
-	pass
+	if get_tree().get_node_count_in_group("ChaosInsurgency") > 0:
+		go_to_target(get_tree().get_first_node_in_group("ChaosInsurgency").get_path())
 
 
 func on_update_human(delta: float):
@@ -22,8 +23,8 @@ func on_update_human(delta: float):
 				timer -= delta
 			elif get_tree().get_first_node_in_group("ChaosInsurgency") != null:
 				go_to_target(get_tree().get_first_node_in_group("ChaosInsurgency").get_path())
-				timer = 10.0
-	elif get_tree().get_node_count_in_group("ChaosInsurgency") == 0 && get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
+				timer = 2.5
+	elif get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
 		get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
 		get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()
 
@@ -43,3 +44,8 @@ func attack():
 		var test = get_parent().get_parent().follow_target
 		get_node(test).health_manage(-75.0)
 		attack_update_timer = 0.5
+		if get_tree().get_node_count_in_group("ChaosInsurgency") > 0:
+			go_to_target(get_tree().get_first_node_in_group("ChaosInsurgency").get_path())
+		elif get_tree().root.get_node("Game/FoundationTask").has_task("task_ci"):
+			get_tree().root.get_node("Game/FoundationTask").trigger_event(0)
+			get_tree().root.get_node("Game/UI/HBoxContainer/CallMtfButton").hide()

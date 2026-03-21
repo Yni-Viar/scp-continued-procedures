@@ -112,7 +112,7 @@ func _on_facility_generator_generated() -> void:
 	$LoadingScreen.call_deferred("hide")
 	if ci_probability < 0:
 		# Disable CI event, if hard mode, safe mode, or if you are lucky to get in 3/4
-		if !time_limited && !OS.has_feature("Lite") && !Settings.setting_res.zen_mode && rng.randi_range(0, 3) == 1:
+		if !time_limited && !Settings.setting_res.zen_mode && rng.randi_range(0, 3) == 1:
 			ci_probability = 1
 		else:
 			ci_probability = 0
@@ -154,8 +154,8 @@ func spawn_wave_entity(wave_type: int):
 	match wave_type:
 		0: # Mobile Task Force
 			how_much_spawn = 3
-		1: # Chaos Insurgency
-			how_much_spawn = rng.randi_range(1, 2)
+		1: # Chaos Insurgency Agent
+			how_much_spawn = 1
 		#2: # Agent for SCP-347
 			#how_much_spawn = 1
 	var spawn = get_tree().get_first_node_in_group("WaveSpawn")

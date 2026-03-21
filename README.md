@@ -13,7 +13,7 @@ Godot 4.4 is not supported anymore since 6.0 - Cleanlight update.
 
 ### Building lite version (for Web)
 **In Lite version, some components are missing:**
-There are no Entrance Sub-zone, SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model, SCP-266 (spawnable), SCP-347 (spawnable), SCP-791, SCP-938 (spawnable), SCP-914 (may be reinstated in later update)
+There are no SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model (may be reinstated in later update), SCP-266 (spawnable), SCP-347 (spawnable), SCP-791, SCP-938 (spawnable), SCP-914.
 1. Project->Export
 2. Choose your platform (e.g. Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*`
@@ -44,12 +44,12 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 |SCP-458|✅, since 5.1.0|✅, since 5.7.0|✅ Full|
 |SCP-522|✅, since 5.8.0|✅, since 5.8.0|✅ Full|
 |SCP-649|⛄, since 5.5.0|⛄, since 5.7.0|✅ Full|
-|SCP-650|✅, since 1.0.0|✅, since 5.7.0|✅ Full (only if breached)|
-|SCP-686|✅, since 5.1.0|✅, since 5.7.0|❓ Partial (hidden NSFW parts)|
+|SCP-650|✅, since 1.0.0|✅, since 5.7.0|✅ Full \(only if breached\)|
+|SCP-686|✅, since 5.1.0|✅, since 5.7.0|❓ Partial \(hidden NSFW parts\)|
 |SCP-791|✅, since 6.0.0|❌|📃 Task only|
 |SCP-812|✅, since 1.0.0|✅, since 5.7.0|✅ Full|
 |SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|❓ Process only items|
-|SCP-938|✅, since 5.0.0|❌|✅ Full|
+|SCP-938|✅, since 5.0.0|❌|✅ Full \(since 6.0.0\)|
 |SCP-939|✅, since 5.5.0|✅, since 5.8.0|✅ Full|
 
 #### Availability
@@ -68,9 +68,10 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 ## Why this name?
 - It is a recursive acronym - **S**CP: **C**ontinued **P**rocedures
 
-### Notice about Android version
-**The game will be incompatible with Google Android since 2026-2027, unless Google provides method for disabling verification for developers!** (*Xiaomi, Android forks and VR devices are probably not affected*)
-Tutorial to install apps without Google verification coming soon
+## Note to Google Android users:
+Please, check [tutorial to install apps without Google verification (effective since Sep 2026)](https://android-developers.googleblog.com/2026/03/android-developer-verification.html), since I don't plan to give all data and pay a fee to Google.
+
+We **do not** distribute dangerous things in this app!
 
 ## License:
 The game is based on SCP Foundation community.

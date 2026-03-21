@@ -3,7 +3,7 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.0 ("Cleanlight update", 2026.03.2X)
+## v6.0.0 ("Cleanlight update", 2026.03.21)
 ### Zone-wide update
 - Revamped (again) Research Zone lighting.
 - Fully reworked Maintenance Zone (all room models were made in 3 days🙂)
@@ -16,7 +16,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - Now both spawn in Surface Zone. *Comment: previous behavior has deep roots down to SCP: Unstable Dimensions*
 - Now have avoidance enabled by-default.
 - Fixed bug, where Chaos Insurgent behaved as MTF.
-- CI event will never activate on Hard Mode and in the Lite version, because such event can make round impassable.
+- CI event will never activate on Hard Mode, because such event can make round impassable.
 
 ### Hard mode
 - Time limited game became Hard Mode.
@@ -56,6 +56,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 - \[Full version only\] Updated SCP-812 chamber to include SCP-791
 - \[Lite version only\] Updated legacy SCP-812 chamber to include new lights.
 - \[Lite version only\] SCP-347 is not available by-default, but still spawnable.
+- \[Technical\] Added beta function API.
 - \[Technical\] Item spawner rework (previously was *SCP: Unstable Dimensions* remnant, and spawned only in Maintenance Zone endroom) - Season spawner is based on this spawner now.
 - \[Technical\] Organized assets and removed unused legacy ones.
 - \[Technical\] Remove historical variables (one of them is dating back to *SCP: Unstable Dimensions*) to optimize the game.
