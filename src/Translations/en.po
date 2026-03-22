@@ -209,14 +209,10 @@ msgid "GAME_OVER_4"
 msgstr "You didn't change SCP-023's eyes in time."
 
 msgid "TASK_162_TOUCH"
-msgstr ""
-"Order Class-D to go to SCP-162\n"
-"If there are no Class-D, do it yourself."
+msgstr "Order Class-D to go to SCP-162."
 
 msgid "TASK_173_CLEAN"
-msgstr ""
-"Order Class-D to clean SCP-173 room\n"
-"If there are no Class-D, do it yourself."
+msgstr "Order Class-D to clean SCP-173 room."
 
 msgid "TASK_812_RESEARCH"
 msgstr "Test water composition, taken from SCP-812"
@@ -227,9 +223,7 @@ msgstr ""
 "Take SCP-347 from the exit."
 
 msgid "TASK_266_TEST"
-msgstr ""
-"Order Class-D to test SCP-266 temperature.\n"
-"If there are no Class-D, do it yourself."
+msgstr "Order Class-D to test SCP-266 temperature."
 
 msgid "TASK_347_PASS"
 msgstr ""
