@@ -3,9 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.0.2
+## v6.0.2 (2026.03.22)
 
-- [x] Remove the mention of "missing Class-D" in English translation
+- Corrected translations to the current state of the game.
+- Remove the strange message in Maintenance Zone tunnel. (it was useless)
 
 ## v6.0.1 (Emergency fix, 2026.03.21)
 

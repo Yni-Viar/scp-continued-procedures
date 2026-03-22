@@ -9,7 +9,7 @@ Godot 4.4 is not supported anymore since 6.0 - Cleanlight update.
 
 1. Project->Export
 2. Choose your platform (e.g. Windows/Linux/Android)
-3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin`
+3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Lite/*`
 
 ### Building lite version (for Web)
 **In Lite version, some components are missing:**
@@ -38,8 +38,8 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 |SCP-173|✅, since 1.0.0|❓, since 5.7.0|✅ Full|
 |SCP-178|✅, since 5.2.0|❌, 3d help wanted|✅ Full|
 |SCP-249|✅, since 6.0.0|✅, since 6.0.0|✅ Full|
-|SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|✅ Full|
-|SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0 due to lag|❓ Partial|
+|SCP-266|✅, since 1.0.0|❌, 5.7.x only, removed in 5.8.0|✅ Full|
+|SCP-347|✅, since 1.0.0|❌, 5.7.x-5.8.x only, removed in 6.0.0|❓ Partial|
 |SCP-446|✅, since 5.3.0|✅, since 5.7.0|❌ None|
 |SCP-458|✅, since 5.1.0|✅, since 5.7.0|✅ Full|
 |SCP-522|✅, since 5.8.0|✅, since 5.8.0|✅ Full|
@@ -48,7 +48,7 @@ If Chaos Insurgency will raid your Site, call MTF using the button (in other tim
 |SCP-686|✅, since 5.1.0|✅, since 5.7.0|❓ Partial \(hidden NSFW parts\)|
 |SCP-791|✅, since 6.0.0|❌|📃 Task only|
 |SCP-812|✅, since 1.0.0|✅, since 5.7.0|✅ Full|
-|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0 due to lag|❓ Process only items|
+|SCP-914|✅, since 2.0.0|❌, 5.7.x only, removed in 5.8.0|❓ Process only items|
 |SCP-938|✅, since 5.0.0|❌|✅ Full \(since 6.0.0\)|
 |SCP-939|✅, since 5.5.0|✅, since 5.8.0|✅ Full|
 

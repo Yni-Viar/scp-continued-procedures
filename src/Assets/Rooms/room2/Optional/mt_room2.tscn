@@ -135,9 +135,3 @@ interior = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, 1.28336, 0)
 shape = SubResource("ConcavePolygonShape3D_278vt")
-
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1.9106855e-15, -1, 4.371139e-08, -4.371139e-08, -4.371139e-08, -1, 1, 0, -4.371139e-08, 0, -2.4316902, 0)
-double_sided = false
-text = "I cannot include this room in Web version,
-because of weird Godot bug with lightmaps..."

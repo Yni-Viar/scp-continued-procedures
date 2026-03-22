@@ -28,10 +28,10 @@ msgid "TIME_LIMITED"
 msgstr "Hard mode"
 
 msgid "ZEN_MODE"
-msgstr "Safe mode - do what you want - no threats, no tasks"
+msgstr "Safe mode"
 
 msgid "HELP_TITLE"
-msgstr "Help (NOT for safe mode)"
+msgstr "Hints"
 
 msgid "HELP_TASKS"
 msgstr ""
@@ -40,16 +40,14 @@ msgstr ""
 "Some tasks require to bring Class-D (162, 173, 266, 522, 939, partly 938).\n"
 "Some tasks require to bring something to special place (347, 914).\n"
 "Some tasks require to come with special item (791).\n"
-"Some tasks require to interact or use subject of testing (023, 067)."
+"Some tasks require to interact or use subject of testing (023, 067, 249)."
 
 msgid "HELP_EVENTS"
 msgstr ""
 "Also the game has events.\n"
-"There are only three events implemented right now - Chaos Insurgency invasion, SCP-023 critical state and SCP-347 containment breach.\n"
+"There are only three events implemented right now - Chaos Insurgency invasion and SCP-023 critical stateю\n"
 "For the first one, you need to call MTF (maybe more then one time), just when they appear.\n"
-"For SCP-023 - if you round took long (> 2 minutes), you need to go to Maintenance Zone and go to SCP-023, replacing his \"eyes\" as soon, as possible.\n"
-"For the later one you need to catch SCP-347 (which was not detected before) as soon as possible\n"
-"(She is marked by the red radar, because this woman is invisible)."
+"For SCP-023 - if you round took long (> 2 minutes), you need to go to Maintenance Zone and go to SCP-023, replacing his \"eyes\" as soon, as possible."
 
 msgid "CASUAL_MODE"
 msgstr "Play"
@@ -58,7 +56,7 @@ msgid "STORY_MODE"
 msgstr "???"
 
 msgid "HELP_BUTTON"
-msgstr "Help"
+msgstr "Hint"
 
 msgid "GAME_SETTINGS_INFO"
 msgstr "These settings only work in \"casual mode\""
@@ -199,7 +197,7 @@ msgstr "You died. What a pity..."
 
 msgid "GAME_OVER_2"
 msgstr ""
-"SCP-938 containment breach occurred.\n"
+"SCP-938 containment breach occured.\n"
 "Unfortunately, you became victim of that creature."
 
 msgid "GAME_OVER_3"
@@ -215,7 +213,7 @@ msgid "TASK_173_CLEAN"
 msgstr "Order Class-D to clean SCP-173 room."
 
 msgid "TASK_812_RESEARCH"
-msgstr "Test water composition, taken from SCP-812"
+msgstr "Test water composition, taken from SCP-812."
 
 msgid "TASK_347_CATCH"
 msgstr ""
@@ -259,7 +257,7 @@ msgstr ""
 "on Very fine."
 
 msgid "TASK_023_EYES"
-msgstr "You need to replace SCP-023's eyes quickly."
+msgstr "You need to replace SCP-023's eyes quickly!"
 
 msgid "TASK_938_CHECK"
 msgstr ""
