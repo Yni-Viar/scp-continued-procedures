@@ -26,7 +26,7 @@ footstep_sounds = Array[String](["res://Sounds/Character/Human/Step/step_1.ogg",
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 0.5
-path_height_offset = 0.5
+path_height_offset = 0.25
 neighbor_distance = 2.5
 max_speed = 15.0
 

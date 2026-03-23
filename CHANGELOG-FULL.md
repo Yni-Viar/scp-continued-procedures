@@ -3,6 +3,10 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v6.0.3 (2026.03.23)
+
+- Tried to fix rare issue, where player cannot move in SCP-914 contaiment chamber.
+
 ## v6.0.2 (2026.03.22)
 
 - Corrected translations to the current state of the game.

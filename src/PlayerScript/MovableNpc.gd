@@ -155,6 +155,10 @@ func _physics_process(delta: float) -> void:
 	
 	var next_position: Vector3 = _nav_agent.get_next_path_position()
 	var offset: Vector3 = next_position - global_position
+	if _nav_agent.avoidance_enabled:
+		_nav_agent.set_velocity(offset)
+	else:
+		move_pawn(offset)
 	if stop_check(offset):
 		if character_speed > 15:
 			if puppet_mesh != null:
@@ -162,10 +166,6 @@ func _physics_process(delta: float) -> void:
 		else:
 			if puppet_mesh != null:
 				puppet_mesh.state = puppet_mesh.States.WALKING
-		if _nav_agent.avoidance_enabled:
-			_nav_agent.set_velocity(offset)
-		else:
-			move_pawn(offset)
 		look_at(global_position + Vector3(offset.x, 0, offset.z), Vector3.UP)
 	else:
 		if puppet_mesh != null:
