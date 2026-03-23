@@ -5,7 +5,7 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
 ## v6.0.3 (2026.03.23)
 
-- Tried to fix rare issue, where player cannot move in SCP-914 contaiment chamber.
+- \[Touchscreen / Android\] Fixed long-standing rare issue, when double tapping lead to soft lock.
 
 ## v6.0.2 (2026.03.22)
 
