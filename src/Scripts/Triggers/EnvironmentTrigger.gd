@@ -12,6 +12,7 @@ func _on_body_entered(body: Node3D) -> void:
 			get_tree().root.get_node("Game/WorldEnvironment").environment = env
 			get_tree().root.get_node("Game/WorldEnvironment").environment.glow_enabled = Settings.setting_res.glow
 			get_tree().root.get_node("Game/WorldEnvironment").environment.ssao_enabled = Settings.setting_res.ssao
+			get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_mode = Settings.setting_res.tonemapper
 
 
 func _on_body_exited(body: Node3D) -> void:
@@ -20,3 +21,4 @@ func _on_body_exited(body: Node3D) -> void:
 			get_tree().root.get_node("Game/WorldEnvironment").environment = load("res://Assets/Environment/Default.tres")
 			get_tree().root.get_node("Game/WorldEnvironment").environment.glow_enabled = Settings.setting_res.glow
 			get_tree().root.get_node("Game/WorldEnvironment").environment.ssao_enabled = Settings.setting_res.ssao
+			get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_mode = Settings.setting_res.tonemapper

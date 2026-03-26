@@ -13,7 +13,7 @@ Godot 4.4 is not supported anymore since 6.0 - Cleanlight update.
 
 ### Building lite version (for Web)
 **In Lite version, some components are missing:**
-There are no SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model (may be reinstated in later update), SCP-266 (spawnable), SCP-347 (spawnable), SCP-791, SCP-938 (spawnable), SCP-914.
+There are no SCP-178 (may be reinstated in later update), *SCP: Unity* SCP-173 model, SCP-266 (spawnable), SCP-347 (spawnable), SCP-791, SCP-938 (spawnable), SCP-914.
 1. Project->Export
 2. Choose your platform (e.g. Web)
 3. Navigate to Resource tab and type in "Filter to exclude files/folders": `*.glb, *.gltf, Assets/*.bin, */Optional/*`

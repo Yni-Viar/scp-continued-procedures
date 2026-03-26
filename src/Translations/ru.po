@@ -216,8 +216,8 @@ msgstr "Прикажите Классу-Д идти к SCP-162."
 
 msgid "TASK_173_CLEAN"
 msgstr ""
-"Прикажите Классу-Д очищать комнату\n"
-"SCP-173."
+"Прикажите Классу-Д очищать\n"
+"камеру содержания SCP-173."
 
 msgid "TASK_812_RESEARCH"
 msgstr "Проверьте состав воды из SCP-812."
@@ -366,3 +366,18 @@ msgstr "Фоторежим"
 
 msgid "DEBUG_CONSOLE"
 msgstr "Отладочный терминал"
+
+msgid "TONEMAPPER_LINEAR"
+msgstr "Линейное тонирование (Производительность)"
+
+msgid "TONEMAPPER_REINHARDT"
+msgstr "Тонирование по Рейнхардту"
+
+msgid "TONEMAPPER_FILMIC"
+msgstr "Фильмовое тонирование"
+
+msgid "TONEMAPPER_ACES"
+msgstr "Тонирование ACES (Parabellum)"
+
+msgid "TONEMAPPER_AGX"
+msgstr "Тонирование AGX (Качество)"

@@ -3,6 +3,16 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v6.1.0 ("Forgotten memories" update)
+### New SCP
+
+- [ ] SCP-1223 - first non-Series-1 SCP in the game.
+
+### Misc changes
+
+- [x] \[Settings\] Add tonemap setting.
+- [x] Fixed collision in Maintenance Tunnel shelf.
+
 ## v6.0.3 (2026.03.23)
 
 - \[Touchscreen / Android\] Fixed long-standing rare issue, when double tapping lead to soft lock.

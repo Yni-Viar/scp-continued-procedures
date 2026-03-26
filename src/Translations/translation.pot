@@ -275,3 +275,18 @@ msgstr ""
 
 msgid "DEBUG_CONSOLE"
 msgstr ""
+
+msgid "TONEMAPPER_LINEAR"
+msgstr ""
+
+msgid "TONEMAPPER_REINHARDT"
+msgstr ""
+
+msgid "TONEMAPPER_FILMIC"
+msgstr ""
+
+msgid "TONEMAPPER_ACES"
+msgstr ""
+
+msgid "TONEMAPPER_AGX"
+msgstr ""
