@@ -8,6 +8,7 @@ var game_data: GameData
 @export var max_tiles: Vector2i = Vector2i(4, 4)
 
 var _items: Array[InventorySlot]
+var hold_on_status_effect: Array[String]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -88,12 +89,19 @@ func item_remove_by_id(id: int, drop: bool):
 func use_item(item: InventorySlot):
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)._call_function(game_data.items[item.item_id].action_node_path, game_data.items[item.item_id].action_method_name, game_data.items[item.item_id].action_args)
 	if !game_data.items[item.item_id].status_effect.is_empty():
+		if game_data.items[item.item_id].status_effect_timer > 0.325:
+			await get_tree().create_timer(game_data.items[item.item_id].status_effect_timer).timeout
 		var status_effect: StatusEffectManager = get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/StatusEffects")
-		# If the staus effect is destroyable, turn off it, or effect will be turned on.
-		if game_data.items[item.item_id].status_effect_destroyable && status_effect.get_status_effect_index(game_data.items[item.item_id].status_effect) != -1:
+		# If the status effect is destroyable or is queued, turn off it, else effect will be turned on.
+		if game_data.items[item.item_id].status_effect_destroyable && (status_effect.get_status_effect_index(game_data.items[item.item_id].status_effect) != -1 || hold_on_status_effect.has(game_data.items[item.item_id].status_effect)):
+			if hold_on_status_effect.has(game_data.items[item.item_id].status_effect):
+				hold_on_status_effect.erase(game_data.items[item.item_id].status_effect)
 			status_effect.apply_status_effect(game_data.items[item.item_id].status_effect, 0.0, 0.0)
 		else:
 			status_effect.apply_status_effect(game_data.items[item.item_id].status_effect, game_data.items[item.item_id].status_effect_strength, game_data.items[item.item_id].status_effect_duration)
+			# If effect is timed, put into hold_on_status_effect array, release after effect duration
+			if game_data.items[item.item_id].status_effect_destroyable && game_data.items[item.item_id].status_effect_duration > 0.325:
+				hold_on_status_effect.append(game_data.items[item.item_id].status_effect)
 	if game_data.items[item.item_id].usage != 0:
 		item_remove(item, game_data.items[item.item_id].usage == 2)
 

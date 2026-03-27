@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://kgfkhypsvlyr"]
+
+[ext_resource type="Script" uid="uid://dl2oay33sw2ih" path="res://InventorySystem/Items/Item.gd" id="1_mfaqw"]
+[ext_resource type="Texture2D" uid="uid://cfxgttiak4j17" path="res://InventorySystem/Items/Res/scp1223.png" id="2_mfaqw"]
+
+[resource]
+script = ExtResource("1_mfaqw")
+id = 16
+name = "SCP-1223"
+texture_tiled = ExtResource("2_mfaqw")
+pickable_path = "res://InventorySystem/Items/ItemScp1223.tscn"
+size = Vector2i(2, 1)
+action_node_path = "Game"
+action_method_name = "show_image"
+action_args = [["res://Assets/HUD/HikkanEasterEgg/idle_or_waiting.PNG", "res://Assets/HUD/HikkanEasterEgg/idle1.PNG", "res://Assets/HUD/HikkanEasterEgg/idle2.PNG"]]
+status_effect = "Amnesia"
+status_effect_duration = 1.0
+status_effect_timer = 1.0
+upgrade_rough = Array[int]([3])
+upgrade_coarse = Array[int]([7, 3])
+upgrade_one_to_one = Array[int]([16])
+upgrade_fine = Array[int]([16, 12])
+upgrade_very_fine = Array[int]([16])

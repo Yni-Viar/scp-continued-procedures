@@ -219,15 +219,22 @@ func dialogue(text: String):
 		await get_tree().physics_frame
 	$UI/Dialogue.visible_characters = -1
 
-## Shows image (currently used for 067)
+## Shows image (6.0 version)
+## @deprecated Use show_image function
 func showable(resource_path: String):
-	if (resource_path != null && !resource_path.is_empty()) && resource_path != showable_res:
+	show_image([resource_path])
+
+## Shows random images (currently used for 067 and 1223)
+func show_image(images: Array):
+	if (images != null && images.size() > 0):
 		$UI/Showable.show()
-		var res = load(resource_path)
-		if res is Texture2D:
-			$UI/Showable.texture = res
-			showable_res = resource_path
-		else:
+		var resource_path: String = images[rng.randi_range(0, images.size() - 1)]
+		if resource_path != showable_res && (resource_path.begins_with("res://") || resource_path.begins_with("user://")):
+			var res = load(resource_path)
+			if res is Texture2D:
+				$UI/Showable.texture = res
+				showable_res = resource_path
+		elif $UI/Showable.visible:
 			$UI/Showable.hide()
 			showable_res = ""
 	else:

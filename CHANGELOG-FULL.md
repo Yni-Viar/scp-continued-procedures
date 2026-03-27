@@ -6,12 +6,17 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ## v6.1.0 ("Forgotten memories" update)
 ### New SCP
 
-- [ ] SCP-1223 - first non-Series-1 SCP in the game.
+- [x] SCP-1223 - first non-Series-1 SCP in the game.
+- [ ] Add images for SCP-1223
 
 ### Misc changes
 
+- [x] Added queue for item status effects (used by SCP-1223)
+- [x] Added timer for item status effects
 - [x] \[Settings\] Add tonemap setting.
 - [x] Fixed collision in Maintenance Tunnel shelf.
+- [x] Fixed collision in Cafeteria room.
+- [x] Fixed WC noise shader go out of bounds.
 
 ## v6.0.3 (2026.03.23)
 
