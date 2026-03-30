@@ -247,7 +247,7 @@ func add_object(body):
 		if unpacked_body.is_player: 
 			if !$Timer.is_stopped():
 				$Timer.stop()
-		elif npc_can_ride && $Timer.is_stopped():
+		elif npc_can_ride && $Timer.is_stopped() && unpacked_body.puppet_class.can_ride:
 			$Timer.start()
 		changed_launch_state.connect(get_node(body).on_moving_platform)
 	objects_to_teleport.append(body)

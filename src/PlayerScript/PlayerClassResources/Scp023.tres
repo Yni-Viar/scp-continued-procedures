@@ -19,3 +19,4 @@ health = Array[float]([1000.0])
 puppet_navigation_layers = 8
 enable_ik = false
 ragdoll_prefab = ExtResource("2_8ocws")
+can_ride = false

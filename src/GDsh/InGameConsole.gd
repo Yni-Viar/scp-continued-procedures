@@ -16,7 +16,8 @@ var current_command = 0
 @onready var prompt = $VBox/HBox/Prompt
 
 func _ready():
-	prompt.grab_focus()
+	if OS.get_name() != "Android":
+		prompt.grab_focus()
 
 
 func send_command(text: String):

@@ -89,7 +89,7 @@ func item_remove_by_id(id: int, drop: bool):
 func use_item(item: InventorySlot):
 	get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path)._call_function(game_data.items[item.item_id].action_node_path, game_data.items[item.item_id].action_method_name, game_data.items[item.item_id].action_args)
 	if !game_data.items[item.item_id].status_effect.is_empty():
-		if game_data.items[item.item_id].status_effect_timer > 0.325:
+		if game_data.items[item.item_id].status_effect_timer > 0.375:
 			await get_tree().create_timer(game_data.items[item.item_id].status_effect_timer).timeout
 		var status_effect: StatusEffectManager = get_node(get_tree().root.get_node("Game/StaticPlayer").target_puppet_path + "/StatusEffects")
 		# If the status effect is destroyable or is queued, turn off it, else effect will be turned on.

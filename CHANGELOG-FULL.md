@@ -3,20 +3,23 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
-## v6.1.0 ("Forgotten memories" update)
+## v6.1.0 ("Forgotten memories" update, 2026.03.30)
 ### New SCP
 
-- [x] SCP-1223 - first non-Series-1 SCP in the game.
-- [ ] Add images for SCP-1223
+- SCP-1223 - first non-Series-1 SCP in the game.
 
 ### Misc changes
 
-- [x] Added queue for item status effects (used by SCP-1223)
-- [x] Added timer for item status effects
-- [x] \[Settings\] Add tonemap setting.
-- [x] Fixed collision in Maintenance Tunnel shelf.
-- [x] Fixed collision in Cafeteria room.
-- [x] Fixed WC noise shader go out of bounds.
+- \[Android\] Fix annoying keyboard bug.
+- \[Full version only\] New better-quality SCP-914 room.
+- SCP-939 cannot call elevator now (as well, as other NPC SCPs, except 178-1 and 347)🙂.
+- Added queue for item status effects (used by SCP-1223)
+- Added timer for item status effects
+- \[Settings\] Add tonemap setting.
+- Fixed collision in Maintenance Tunnel shelf.
+- Fixed collision in Cafeteria room.
+- Fixed WC noise shader go out of bounds in both zones.
+- \[Technical\] Dialogues text will disappear automatically after 2 seconds.
 
 ## v6.0.3 (2026.03.23)
 

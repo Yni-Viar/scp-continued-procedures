@@ -241,7 +241,6 @@ func effect_manager_destroy(effect: String, strength: float):
 				get_tree().root.get_node("Game").cutscene_anim(true)
 				get_tree().root.get_node("Game/FoundationTask").do_task("task_067")
 			scp_067_affected = false
-			get_tree().root.get_node("Game").dialogue("")
 	effect_manager_destroy_custom(effect, strength)
 
 func effect_manager_destroy_custom(effect: String, strength: float):

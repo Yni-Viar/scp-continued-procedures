@@ -364,3 +364,6 @@ msgstr "ACES/Parabellum tonemapper"
 
 msgid "TONEMAPPER_AGX"
 msgstr "AGX tonemapper (Quality)"
+
+msgid "FORGOTTEN_BY_1223"
+msgstr "I don't remember this!"

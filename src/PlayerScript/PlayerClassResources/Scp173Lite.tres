@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PuppetClass" format=3 uid="uid://c3reuvbpiwm0r"]
+[gd_resource type="Resource" script_class="PuppetClass" load_steps=4 format=3 uid="uid://c3reuvbpiwm0r"]
 
 [ext_resource type="PackedScene" uid="uid://pf6ytpy6babc" path="res://PlayerScript/PlayerClassPrefab/Scp173_Lite.tscn" id="1_qdbe8"]
 [ext_resource type="PackedScene" uid="uid://djohnqatfc8ec" path="res://PlayerScript/PlayerClassRagdoll/Default.tscn" id="2_irqro"]
@@ -22,3 +22,4 @@ health = Array[float]([10000.0])
 enable_avoidance = false
 enable_ik = false
 ragdoll_prefab = ExtResource("2_irqro")
+can_ride = false

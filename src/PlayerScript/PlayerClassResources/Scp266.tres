@@ -19,3 +19,4 @@ enable_avoidance = false
 spawn_on_start = false
 enable_ik = false
 ragdoll_prefab = ExtResource("2_gfjpe")
+can_ride = false

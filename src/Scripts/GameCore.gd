@@ -211,13 +211,15 @@ func cutscene_anim(reverse: bool = false):
 	else:
 		$AnimationPlayer.play("cutscene")
 
-## Dialogue system (used in 067)
+## Dialogue system (used in 067 and 1223)
 func dialogue(text: String):
 	$UI/Dialogue.text = text
 	for i in text.length():
 		$UI/Dialogue.visible_characters = i
 		await get_tree().physics_frame
 	$UI/Dialogue.visible_characters = -1
+	await get_tree().create_timer(2.0).timeout
+	$UI/Dialogue.text = ""
 
 ## Shows image (6.0 version)
 ## @deprecated Use show_image function
@@ -225,18 +227,23 @@ func showable(resource_path: String):
 	show_image([resource_path])
 
 ## Shows random images (currently used for 067 and 1223)
-func show_image(images: Array):
+## If specified, a command will be done after some seconds (if showed)
+func show_image(images: Array, command_after: CommandResource = null, timer: float = 0.0):
 	if (images != null && images.size() > 0):
-		$UI/Showable.show()
 		var resource_path: String = images[rng.randi_range(0, images.size() - 1)]
-		if resource_path != showable_res && (resource_path.begins_with("res://") || resource_path.begins_with("user://")):
+		if $UI/Showable.visible:
+			$UI/Showable.hide()
+			showable_res = ""
+		elif resource_path != showable_res && (resource_path.begins_with("res://") || resource_path.begins_with("user://")):
+			$UI/Showable.show()
 			var res = load(resource_path)
 			if res is Texture2D:
 				$UI/Showable.texture = res
 				showable_res = resource_path
-		elif $UI/Showable.visible:
-			$UI/Showable.hide()
-			showable_res = ""
+				if command_after != null:
+					if timer > 0.375:
+						await get_tree().create_timer(timer).timeout
+					protagonist._call_function(command_after.action_node_path, command_after.action_method_name, command_after.action_args)
 	else:
 		$UI/Showable.hide()
 		showable_res = ""

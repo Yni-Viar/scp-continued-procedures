@@ -17,3 +17,4 @@ enable_wander = false
 health = Array[float]([1000.0])
 enable_ik = false
 ragdoll_prefab = ExtResource("2_7wy52")
+can_ride = false

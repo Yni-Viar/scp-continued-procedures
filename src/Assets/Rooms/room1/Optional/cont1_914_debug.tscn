@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cpbofi5ng2360"]
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.3257937, 0)
 height = 5.1
-vertices = PackedVector3Array(-10.5482, 0, -15.2951, 11.052, 0, -15.1068, 10.9505, 0, -16.8022, -10.5229, 0, -16.4466)
+vertices = PackedVector3Array(-10.442908, 0, -16.138563, 11.53693, 0, -16.115265, 11.53693, 0, -16.833275, -10.49458, 0, -16.810286)
 affect_navigation_mesh = true

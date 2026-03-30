@@ -381,3 +381,6 @@ msgstr "Тонирование ACES (Parabellum)"
 
 msgid "TONEMAPPER_AGX"
 msgstr "Тонирование AGX (Качество)"
+
+msgid "FORGOTTEN_BY_1223"
+msgstr "Я не помню этого!"

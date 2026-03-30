@@ -19,3 +19,4 @@ enable_avoidance = false
 puppet_navigation_layers = 3
 enable_ik = false
 ragdoll_prefab = ExtResource("2_6ln1i")
+can_ride = false

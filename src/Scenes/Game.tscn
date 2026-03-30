@@ -367,6 +367,7 @@ mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [node name="Showable" type="TextureRect" parent="UI"]
+visible = false
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 1
 anchors_preset = -1

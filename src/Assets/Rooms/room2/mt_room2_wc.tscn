@@ -41,7 +41,7 @@ shader = ExtResource("4_qa6h4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_ukw1m"]
 material = SubResource("ShaderMaterial_q350h")
-size = Vector3(8, 5.44, 20.48)
+size = Vector3(6.25, 4, 20.48)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7p1q7"]
 _surfaces = [{
@@ -155,7 +155,7 @@ navigation_mesh = SubResource("NavigationMesh_swyoh")
 [node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.651811, -1.28297, 0)
 height = 8.0
-vertices = PackedVector3Array(3.77193, 0, -10.1808, 3.55159, 0, 10.2555, 11.6492, 0, 10.1318, 11.7592, 0, -10.1257)
+vertices = PackedVector3Array(5.1972036, 0, -10.136261, 5.1201906, 0, 10.283939, 11.6492, 0, 10.1318, 11.7592, 0, -10.1257)
 affect_navigation_mesh = true
 avoidance_enabled = false
 
@@ -195,7 +195,7 @@ mesh = SubResource("TextMesh_q350h")
 skeleton = NodePath("../../../../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="NavigationRegion3D/Props"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.239598, 1.3801768, 0.11291686)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.311847, 0.7579119, 0.11291694)
 visibility_range_end = 64.0
 mesh = SubResource("BoxMesh_ukw1m")
 
