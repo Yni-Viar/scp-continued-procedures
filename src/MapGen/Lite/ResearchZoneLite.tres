@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="MapGenZone" load_steps=23 format=3 uid="uid://5i615ov2u3o1"]
+[gd_resource type="Resource" script_class="MapGenZone" load_steps=22 format=3 uid="uid://5i615ov2u3o1"]
 
 [ext_resource type="PackedScene" uid="uid://cgwv4o2dj2tp6" path="res://Assets/Doors/empty_door.tscn" id="1_4wncd"]
 [ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="2_r1mwm"]
@@ -21,7 +21,6 @@
 [ext_resource type="Resource" uid="uid://dwy6qiei1wti0" path="res://MapGen/Resources/ResearchZone/room2_wc.tres" id="19_kfsji"]
 [ext_resource type="Script" uid="uid://d0tlgr0c6w7gq" path="res://MapGen/MapGenZone.gd" id="20_25ogj"]
 [ext_resource type="Resource" uid="uid://clxj5wm4henr0" path="res://MapGen/Resources/ResearchZone/room3_redux.tres" id="21_8ysx0"]
-[ext_resource type="Resource" uid="uid://dpdlx0c3bevg" path="res://MapGen/Resources/ResearchZone/cont3_067.tres" id="22_11g33"]
 
 [resource]
 script = ExtResource("20_25ogj")
@@ -33,7 +32,6 @@ checkpoint_hallway = Array[ExtResource("2_r1mwm")]([ExtResource("3_0r8dp")])
 corners = Array[ExtResource("2_r1mwm")]([ExtResource("4_l2hhr")])
 corners_single = Array[ExtResource("2_r1mwm")]([ExtResource("5_o283s")])
 trooms = Array[ExtResource("2_r1mwm")]([ExtResource("21_8ysx0")])
-trooms_single_large = Array[ExtResource("2_r1mwm")]([ExtResource("22_11g33")])
 crossrooms = Array[ExtResource("2_r1mwm")]([ExtResource("6_o76kf")])
 door_frames = Array[PackedScene]([ExtResource("7_5qg0d")])
 checkpoint_door_frames = Array[PackedScene]([ExtResource("1_4wncd")])

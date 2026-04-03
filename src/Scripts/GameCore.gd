@@ -41,11 +41,11 @@ func _ready() -> void:
 	ci_timer = rng.randf_range(30.0, 32.0)
 	if OS.has_feature("Lite"):
 		gamedata = load("res://Scripts/GameData/Lite/LiteGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/Lite/MaintenanceZoneLite.tres"), load("res://MapGen/Lite/ResearchZoneLite.tres")]
+		var rooms: Array[MapGenZone] = [load("res://MapGen/Lite/MaintenanceZoneLite.tres"), load("res://MapGen/Lite/ResearchZoneLite.tres"), load("res://MapGen/Lite/PersonnelZoneLite.tres")]
 		$FacilityGenerator.rooms = rooms
 	else:
 		gamedata = load("res://Scripts/GameData/Optional/DefaultGame.tres")
-		var rooms: Array[MapGenZone] = [load("res://MapGen/Optional/MaintenanceZone.tres"), load("res://MapGen/Optional/ResearchZone.tres")]
+		var rooms: Array[MapGenZone] = [load("res://MapGen/Optional/MaintenanceZone.tres"), load("res://MapGen/Optional/ResearchZone.tres"), load("res://MapGen/Optional/PersonnelZone.tres")]
 		$FacilityGenerator.rooms = rooms
 	# Choose seed
 	$FacilityGenerator.rng = rng
@@ -96,6 +96,8 @@ func _on_facility_generator_generated() -> void:
 	sz.position.y = 256.0
 	add_child(sz, true)
 	
+	spawn_offices("res://Assets/Rooms/ScientistsRooms/Default.tscn", "OfficeSpawn")
+	
 	spawn_player()
 	spawn_puppets()
 	
@@ -125,9 +127,11 @@ func spawn_player():
 	protagonist = load("res://PlayerScript/NPCBase.tscn").instantiate()
 	protagonist.puppet_class = gamedata.player_class[0]
 	protagonist.is_player = true
+	
 	var spawns = get_tree().get_nodes_in_group("PlayerSpawn")
 	var selected_spawn: Marker3D = spawns[rng.randi_range(0, spawns.size() - 1)]
-	selected_spawn.add_child(protagonist)
+	protagonist.global_position = selected_spawn.global_position
+	$NPCs.add_child(protagonist)
 	$StaticPlayer.target_puppet_path = protagonist.get_path()
 
 ## Start-round spawn
@@ -196,6 +200,18 @@ func despawn_wave(wave_type: int):
 				var vfxspawn = load("res://Assets/VFX/spawnvfx.tscn").instantiate()
 				node.add_child(vfxspawn)
 				node.queue_free()
+
+## Personal office spawner
+func spawn_offices(default_office_path: String, spawn_group: String):
+	var all_available_offices: Array[Node] = get_tree().get_nodes_in_group(spawn_group)
+	all_available_offices.shuffle()
+	for i in range(get_tree().get_node_count_in_group(spawn_group)):
+		if i < gamedata.custom_scientists_offices.size():
+			var office: Node3D = gamedata.custom_scientists_offices[i].instantiate()
+			all_available_offices[i].add_child(office)
+		else:
+			var office: Node3D = load(default_office_path).instantiate()
+			all_available_offices[i].add_child(office)
 
 ## Game end
 func finish_game(good_end: bool, reason: String):

@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ck2ntu1xc4242"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_4tpld"]
-flip_faces = true
-size = Vector3(20, 7.1, 16.5)
-
-[node name="MeshInstance3D" type="MeshInstance3D"]
-mesh = SubResource("BoxMesh_4tpld")

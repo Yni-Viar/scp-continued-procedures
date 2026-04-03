@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MapGenRoom" load_steps=4 format=3 uid="uid://doc72gxtl6efq"]
+
+[ext_resource type="Texture2D" uid="uid://xim1lq7oov63" path="res://Assets/HUD/room4.png" id="1_540xy"]
+[ext_resource type="PackedScene" uid="uid://c4akxkw3hi36x" path="res://Assets/Rooms/room4/pz_room4.tscn" id="2_540xy"]
+[ext_resource type="Script" uid="uid://b15b7mhits7ot" path="res://MapGen/MapGenRoom.gd" id="3_60ckg"]
+
+[resource]
+script = ExtResource("3_60ckg")
+name = "room4"
+prefab = ExtResource("2_540xy")
+icon_0_degrees = ExtResource("1_540xy")
+icon_90_degrees = ExtResource("1_540xy")
+icon_180_degrees = ExtResource("1_540xy")
+icon_270_degrees = ExtResource("1_540xy")

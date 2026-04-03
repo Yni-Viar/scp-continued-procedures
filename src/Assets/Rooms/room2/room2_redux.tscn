@@ -703,12 +703,6 @@ vertices = PackedVector3Array(3.98014, 0, 8.51607, 3.98303, 0, 10.1904, 10.0189,
 affect_navigation_mesh = true
 avoidance_enabled = false
 
-[node name="Marker3D" type="Marker3D" parent="NavigationRegion3D" groups=["ScientistSpawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.200295, -1.1663, -4.801782)
-
-[node name="Marker3D2" type="Marker3D" parent="NavigationRegion3D" groups=["ScientistSpawn"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.408956, -1.166301, 3.74227)
-
 [node name="Seasonal" type="Node3D" parent="NavigationRegion3D"]
 
 [node name="Halloween" type="Node3D" parent="NavigationRegion3D/Seasonal"]

@@ -129,15 +129,13 @@ script = ExtResource("1_7lihs")
 [node name="FacilityGenerator" type="Node3D" parent="."]
 script = ExtResource("3_2irst")
 zone_size = 10
-map_size_y = 1
+map_size_y = 2
 large_rooms = true
 better_zone_generation_min_amount = 5
 checkpoints_enabled = true
 
 [node name="FoundationTask" type="Node" parent="."]
 script = ExtResource("7_wxwew")
-
-[node name="NPCs" type="Node3D" parent="."]
 
 [node name="Items" type="Node3D" parent="."]
 
@@ -698,6 +696,8 @@ layout_mode = 1
 stream = ExtResource("11_dahhg")
 autoplay = true
 bus = &"Music"
+
+[node name="NPCs" type="Node3D" parent="."]
 
 [node name="LoadingScreen" type="Control" parent="."]
 process_mode = 3

@@ -3,6 +3,18 @@
 This list contains all features, added in the game, or will be added in upcoming version, that is in development.
 For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 
+## v7.0.0 ("Expansion update part 3", WIP)
+### New zone
+- [x] New Personnel Zone - SCP-067 and SCP-1223 will spawn now here!
+- [x] Re-introduce custom Scientist's offices.
+
+### New SCP
+- [ ] SCP-244
+- [ ] SCP-261
+
+### Misc
+- [x] \[Technical\] Player now spawns in NPC node - fixed inventory not working, whilke spawned outside Surface Zone.
+
 ## v6.1.0 ("Forgotten memories" update, 2026.03.30)
 ### New SCP
 

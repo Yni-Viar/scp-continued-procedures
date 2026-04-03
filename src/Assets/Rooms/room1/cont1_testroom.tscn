@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://dxacesn4a1lyf" path="res://Scripts/ItemSpawner.gd" id="8_42cx5"]
 [ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="9_42cx5"]
 [ext_resource type="PackedScene" uid="uid://cpl32rqecveb3" path="res://Assets/Rooms/room1/Spawners/scp_005_spawner.tscn" id="9_fg4rw"]
-[ext_resource type="PackedScene" uid="uid://de3qn4wt4xrhb" path="res://Assets/Rooms/room1/Spawners/Optional/scp_983_spawner.tscn" id="11_42cx5"]
+[ext_resource type="PackedScene" uid="uid://de3qn4wt4xrhb" path="res://Assets/Rooms/room1/Spawners/scp_983_spawner.tscn" id="11_42cx5"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="11_je4g8"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="11_ua6hs"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="16_abfkj"]
