@@ -13,4 +13,4 @@ COMING SOON. You cannot donate money to the Author at right moment.
 ## Rules for room creation.
 
 1. Your nickname may not contain political and unacceptable stuff.
-2. Author may decline the offer at any moment before introducing the room.>
+2. Author may decline the offer at any moment before introducing the room.
