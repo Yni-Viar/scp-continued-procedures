@@ -24,8 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://nccdmmocoap4" path="res://Assets/ExternalModels/laptop.tscn" id="22_10yi5"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
-vertices = PackedVector3Array(1.1233711, -0.7695668, -4.4696836, 1.3733711, -0.7695668, -3.9696836, 3.1233711, -0.7695668, -4.4696836, 1.6233711, -0.7695668, -8.719684, 4.373371, -0.7695668, -2.7196836, 5.873371, -0.7695668, -3.9696836, 5.873371, -0.7695668, -4.4696836, -4.376629, -0.7695668, 6.2803164, -3.1266289, -0.7695668, 5.7803164, -0.37662888, -0.7695668, 2.0303164, -0.37662888, -0.7695668, -3.2196836, -8.876629, -0.7695668, 1.5303164, -0.37662888, -0.7695668, -3.9696836, 2.3733711, -0.7695668, -0.71968365, 0.123371124, -0.7695668, -4.4696836, -0.37662888, -0.7695668, 2.7803164, 0.8733711, -0.7695668, 3.2803164, 3.8733711, -0.7695668, 6.2803164, 7.123371, -0.7695668, 3.2803164, 7.623371, -0.7695668, -3.4696836, 9.623371, -0.7695668, 3.2803164, 9.623371, -0.7695668, -3.4696836, 2.3733711, 1.9804332, -3.2196836, 3.1233711, 1.9804332, -2.4696836, 2.8733711, 1.9804332, -3.2196836, -2.6266289, -0.7695668, 7.2803164, -3.3766289, -0.7695668, 7.7803164, -3.3766289, -0.7695668, 9.780316, -0.12662888, -0.7695668, 3.2803164, -2.6266289, -0.7695668, 6.0303164, 3.3733711, -0.7695668, 6.7803164, 3.3733711, -0.7695668, 9.780316)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 2), PackedInt32Array(6, 2, 3), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 11), PackedInt32Array(9, 11, 10), PackedInt32Array(11, 12, 10), PackedInt32Array(10, 13, 9), PackedInt32Array(3, 0, 14), PackedInt32Array(9, 15, 8), PackedInt32Array(14, 12, 3), PackedInt32Array(3, 12, 11), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 19), PackedInt32Array(19, 20, 18), PackedInt32Array(24, 23, 22), PackedInt32Array(26, 25, 27), PackedInt32Array(29, 8, 28), PackedInt32Array(28, 8, 15), PackedInt32Array(30, 31, 16), PackedInt32Array(16, 31, 25), PackedInt32Array(25, 31, 27), PackedInt32Array(16, 17, 30), PackedInt32Array(28, 16, 29), PackedInt32Array(29, 16, 25)]
+vertices = PackedVector3Array(1.1233711, -0.7695668, -4.4696836, 1.3733711, -0.7695668, -3.9696836, 3.1233711, -0.7695668, -4.4696836, 1.6233711, -0.7695668, -8.719684, 4.373371, -0.7695668, -2.7196836, 5.873371, -0.7695668, -3.9696836, 5.873371, -0.7695668, -4.4696836, 0.123371124, -0.7695668, -4.4696836, -2.8766289, -0.7695668, 5.7803164, -2.6266289, -0.7695668, 6.2803164, 0.123371124, -0.7695668, 3.2803164, -0.37662888, -0.7695668, 3.0303164, -3.1266289, -0.7695668, -1.2196836, -0.37662888, -0.7695668, -3.2196836, -0.37662888, -0.7695668, -3.9696836, -4.626629, -0.7695668, -2.7196836, -3.1266289, -0.7695668, -0.46968365, -0.37662888, -0.7695668, 2.0303164, 1.3733711, -0.7695668, 0.53031635, 1.6233711, -0.7695668, -1.4696836, -7.126629, -0.7695668, 3.2803164, -4.376629, -0.7695668, 6.2803164, -3.8766289, -0.7695668, 5.7803164, 0.8733711, -0.7695668, 3.2803164, 3.8733711, -0.7695668, 6.2803164, 7.123371, -0.7695668, 3.2803164, 7.623371, -0.7695668, -3.4696836, 9.623371, -0.7695668, 3.2803164, 9.623371, -0.7695668, -3.4696836, 2.3733711, 1.9804332, -3.2196836, 3.1233711, 1.9804332, -2.4696836, 2.8733711, 1.9804332, -3.2196836, -2.6266289, -0.7695668, 7.2803164, -3.3766289, -0.7695668, 7.7803164, -3.3766289, -0.7695668, 9.780316, 3.3733711, -0.7695668, 6.7803164, 3.3733711, -0.7695668, 9.780316)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 2), PackedInt32Array(6, 2, 3), PackedInt32Array(3, 0, 7), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(12, 13, 16), PackedInt32Array(16, 13, 19), PackedInt32Array(16, 19, 18), PackedInt32Array(16, 18, 17), PackedInt32Array(20, 22, 21), PackedInt32Array(17, 11, 16), PackedInt32Array(16, 11, 8), PackedInt32Array(16, 8, 22), PackedInt32Array(16, 22, 20), PackedInt32Array(14, 15, 7), PackedInt32Array(7, 15, 3), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 26), PackedInt32Array(28, 27, 26), PackedInt32Array(26, 27, 25), PackedInt32Array(31, 30, 29), PackedInt32Array(33, 32, 34), PackedInt32Array(23, 24, 35), PackedInt32Array(10, 23, 9), PackedInt32Array(9, 23, 32), PackedInt32Array(35, 36, 23), PackedInt32Array(23, 36, 32), PackedInt32Array(32, 36, 34)]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64xcy"]
 resource_name = "industrial_wall_lamp"
@@ -299,6 +299,15 @@ transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70
 [node name="Light3" parent="NavigationRegion3D/Props" instance=ExtResource("9_bejmg")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 6.8684726, 4.038, 0.6147437)
 
+[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("15_r5gbw")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.772891, 0, 0.49040914)
+
+[node name="FireExtinguisher" parent="NavigationRegion3D/Props" instance=ExtResource("20_80h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2922475, -0.647533, -0.6731573)
+
+[node name="laptop" parent="NavigationRegion3D/Props" instance=ExtResource("22_10yi5")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.46816874, 0.52277374)
+
 [node name="Cube" type="MeshInstance3D" parent="NavigationRegion3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86066204, 0)
 mesh = SubResource("ArrayMesh_61k58")
@@ -344,9 +353,6 @@ current_season = 5
 [node name="ChristmasLights" parent="Seasonal/Christmas" instance=ExtResource("18_ned5y")]
 transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 1.6218638, -0.08734143, 2.21102)
 
-[node name="Table" parent="." instance=ExtResource("15_r5gbw")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.772891, 0, 0.49040914)
-
 [node name="Scp178" parent="." instance=ExtResource("16_78hjk")]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 2.6470456, 1.598583, -2.734996)
 
@@ -362,14 +368,8 @@ mesh = SubResource("TextMesh_ned5y")
 [node name="ScientistPoint" type="Marker3D" parent="." groups=["ScientistPoint"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.231346, -0.78577095, 1.9239516)
 
-[node name="FireExtinguisher" parent="." instance=ExtResource("20_80h31")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2922475, -0.647533, -0.6731573)
-
 [node name="Chair" parent="." instance=ExtResource("21_6cg3u")]
 transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, -5.955599, -1.267436, 1.2795353)
-
-[node name="laptop" parent="." instance=ExtResource("22_10yi5")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.7948275, 0.46816874, 0.52277374)
 
 [node name="DoorToTeleport" type="Marker3D" parent="." groups=["Door"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3374639, -0.78577095, 4.521078)

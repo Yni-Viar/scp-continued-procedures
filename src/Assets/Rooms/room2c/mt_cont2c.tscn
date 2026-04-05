@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://dy2kt71q27y07"]
+[gd_scene load_steps=34 format=4 uid="uid://dy2kt71q27y07"]
 
 [ext_resource type="Script" uid="uid://mgkymeey0jda" path="res://Scripts/RoomPrefab.gd" id="1_pikur"]
 [ext_resource type="PackedScene" uid="uid://c4b3u0mx3bmb" path="res://Assets/ExternalModels/industrial_wall_lamp_maintenance.tscn" id="2_dyihh"]
@@ -13,17 +13,18 @@
 [ext_resource type="Material" uid="uid://dlet6oq8ddpub" path="res://Assets/Materials/MaintenanceTunnels/Vents.tres" id="10_31vim"]
 [ext_resource type="Texture2D" uid="uid://blt4sp0nvls3t" path="res://Assets/ExternalModels/SCP/PopPopIcard/Light_VirtLargeLight_LargeHanhingCeilingLight_Emissive.png" id="10_ou37c"]
 [ext_resource type="Material" uid="uid://sx7vi58vu84" path="res://Assets/Materials/MaintenanceTunnels/Tunnels.tres" id="11_kdrpr"]
+[ext_resource type="PackedScene" uid="uid://cogri7pfu6a1e" path="res://Assets/OriginalModels/box.tscn" id="11_rihgk"]
 [ext_resource type="Material" uid="uid://b686gnhaieath" path="res://Assets/Materials/MaintenanceTunnels/Floor.tres" id="12_dyihh"]
 [ext_resource type="LightmapGIData" uid="uid://cu2ip3pjyylpx" path="res://Assets/Rooms/room2c/Lm/mt_room2c_warehouse.lmbake" id="12_osq5b"]
+[ext_resource type="PackedScene" uid="uid://b68acriovgnad" path="res://Assets/OriginalModels/scp_018_box.tscn" id="12_ou37c"]
 [ext_resource type="Script" uid="uid://b0s17mch0hh6s" path="res://Scripts/Seasonal/SeasonSwitcher.gd" id="13_tpnjp"]
 [ext_resource type="PackedScene" uid="uid://wgwkw8qa0ag8" path="res://Assets/ExternalModels/jackolantern.tscn" id="14_7v7vy"]
 [ext_resource type="PackedScene" uid="uid://bnekaaeua7gso" path="res://Assets/OriginalModels/christmas_lights.tscn" id="15_c0h8d"]
-[ext_resource type="PackedScene" uid="uid://d2lho474tfbe4" path="res://Assets/OriginalModels/table.tscn" id="19_iuukv"]
 [ext_resource type="FontFile" uid="uid://c5notad62nmgy" path="res://Assets/Fonts/SansNormalcy/Normalcy-v0.1.7.otf" id="20_31vim"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_o7u4x"]
-vertices = PackedVector3Array(1.2938204, -0.7423196, -3.9561796, 2.7938204, -0.7423196, -3.9561796, 2.5438204, -0.7423196, -7.7061796, -0.9561796, -0.7423196, -7.7061796, -1.4561796, -0.7423196, -9.20618, -7.9561796, -0.7423196, -2.7061796, 1.0438204, -0.7423196, -2.9561796, -8.20618, -0.7423196, -1.2061796, -3.4561796, -0.7423196, 1.0438204, -3.2061796, -0.7423196, 1.0438204, 5.0438204, -0.7423196, -7.7061796, 4.5438204, -0.7423196, -9.20618, 4.2938204, -0.7423196, -7.7061796, 9.29382, -0.7423196, -3.9561796, 9.29382, -0.7423196, -7.7061796, 3.0438204, -0.7423196, 0.7938204, 3.0438204, -0.7423196, -0.7061796, -0.7061796, -0.7423196, 3.0438204, 0.7938204, -0.7423196, 3.0438204, 9.79382, -0.7423196, -0.9561796, 9.79382, -0.7423196, 1.0438204, -0.9561796, -0.7423196, 9.79382, 1.0438204, -0.7423196, 9.79382, -3.9561796, -0.7423196, 1.2938204, -8.45618, -0.7423196, -0.7061796, -9.20618, -0.7423196, -0.7061796, -9.20618, -0.7423196, 6.7938204, -3.9561796, -0.7423196, 6.7938204)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 3), PackedInt32Array(3, 0, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 5), PackedInt32Array(9, 5, 6), PackedInt32Array(6, 5, 3), PackedInt32Array(12, 11, 10), PackedInt32Array(1, 2, 12), PackedInt32Array(1, 12, 10), PackedInt32Array(14, 13, 10), PackedInt32Array(10, 13, 1), PackedInt32Array(16, 15, 6), PackedInt32Array(6, 15, 18), PackedInt32Array(6, 18, 17), PackedInt32Array(6, 17, 9), PackedInt32Array(16, 19, 15), PackedInt32Array(15, 19, 20), PackedInt32Array(18, 22, 17), PackedInt32Array(17, 22, 21), PackedInt32Array(24, 7, 23), PackedInt32Array(23, 7, 8), PackedInt32Array(24, 23, 25), PackedInt32Array(25, 23, 27), PackedInt32Array(25, 27, 26)]
+vertices = PackedVector3Array(-7.4561796, -0.7423196, 3.2938204, -7.4561796, -0.7423196, 6.0438204, -6.7061796, -0.7423196, 5.7938204, -6.9561796, -0.7423196, 2.7938204, -7.2061796, -0.7423196, 1.7938204, -7.9561796, -0.7423196, -2.7061796, -8.20618, -0.7423196, -1.2061796, -4.9561796, -0.7423196, -1.2061796, -0.9561796, -0.7423196, -7.7061796, -1.4561796, -0.7423196, -9.20618, -3.9561796, -0.7423196, 2.5438204, -3.9561796, -0.7423196, 1.2938204, -4.9561796, -0.7423196, 1.5438204, -9.20618, -0.7423196, 9.04382, -7.4561796, -0.7423196, 9.04382, -9.20618, -0.7423196, 3.2938204, -3.2061796, -0.7423196, 1.0438204, 1.5438204, -0.7423196, -2.4561796, 1.0438204, -0.7423196, -3.7061796, 2.7938204, -0.7423196, -3.9561796, 2.5438204, -0.7423196, -7.7061796, 5.0438204, -0.7423196, -7.7061796, 4.5438204, -0.7423196, -9.20618, 4.2938204, -0.7423196, -7.7061796, 9.29382, -0.7423196, -3.9561796, 9.29382, -0.7423196, -7.7061796, 3.0438204, -0.7423196, 0.7938204, 3.0438204, -0.7423196, -0.7061796, -0.7061796, -0.7423196, 3.0438204, 0.7938204, -0.7423196, 3.0438204, 9.79382, -0.7423196, -0.9561796, 9.79382, -0.7423196, 1.0438204, -0.9561796, -0.7423196, 9.79382, 1.0438204, -0.7423196, 9.79382, -9.20618, -0.7423196, -0.7061796, -9.20618, -0.7423196, 0.04382038, -8.20618, -0.7423196, 0.04382038, -8.20618, -0.7423196, -0.9561796, -6.4561796, 2.2576804, 6.7938204, -6.4561796, 2.2576804, 9.04382, -4.2061796, 2.2576804, 9.04382, -4.2061796, 2.2576804, 6.7938204)
+polygons = [PackedInt32Array(4, 3, 0), PackedInt32Array(0, 3, 2), PackedInt32Array(0, 2, 1), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 8), PackedInt32Array(8, 5, 9), PackedInt32Array(11, 10, 12), PackedInt32Array(12, 10, 3), PackedInt32Array(14, 13, 1), PackedInt32Array(1, 13, 15), PackedInt32Array(12, 7, 16), PackedInt32Array(16, 7, 17), PackedInt32Array(17, 7, 18), PackedInt32Array(18, 7, 8), PackedInt32Array(1, 15, 0), PackedInt32Array(16, 11, 12), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 8), PackedInt32Array(3, 4, 12), PackedInt32Array(23, 22, 21), PackedInt32Array(19, 20, 23), PackedInt32Array(19, 23, 21), PackedInt32Array(25, 24, 21), PackedInt32Array(21, 24, 19), PackedInt32Array(27, 26, 17), PackedInt32Array(17, 26, 29), PackedInt32Array(17, 29, 28), PackedInt32Array(17, 28, 16), PackedInt32Array(27, 30, 26), PackedInt32Array(26, 30, 31), PackedInt32Array(29, 33, 28), PackedInt32Array(28, 33, 32), PackedInt32Array(35, 34, 36), PackedInt32Array(36, 34, 37), PackedInt32Array(41, 40, 38), PackedInt32Array(38, 40, 39)]
 agent_max_climb = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3mnq1"]
@@ -209,7 +210,14 @@ emission = Color(1, 1, 1, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_c0h8d"]
 material = SubResource("StandardMaterial3D_rgnme")
-text = "???"
+text = "018"
+font = ExtResource("20_31vim")
+font_size = 32
+depth = 0.01
+
+[sub_resource type="TextMesh" id="TextMesh_iuukv"]
+material = SubResource("StandardMaterial3D_rgnme")
+text = "← SCP-018"
 font = ExtResource("20_31vim")
 depth = 0.01
 
@@ -233,7 +241,7 @@ transform = Transform3D(-4.37114e-08, -1, -2.98023e-08, 0, 2.98023e-08, -1, 1, -
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -9.1826935, 2.6337686, -2.449008)
 
 [node name="industrial_wall_lamp6" parent="NavigationRegion3D/Props" instance=ExtResource("2_dyihh")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -5.971597, 2.6337686, -5.7066135)
+transform = Transform3D(-3.090862e-08, -0.7071067, 0.7071067, 1, -4.3711385e-08, 0, 3.090862e-08, 0.7071067, 0.7071067, -5.4751353, 3.2063117, -6.103783)
 
 [node name="industrial_wall_lamp7" parent="NavigationRegion3D/Props" instance=ExtResource("2_dyihh")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.3650162, 2.6337686, -9.319252)
@@ -307,8 +315,26 @@ light_bake_mode = 1
 spot_range = 16.0
 spot_angle = 72.74222
 
-[node name="Table" parent="NavigationRegion3D/Props" instance=ExtResource("19_iuukv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.575671, -0.21046817, 8.419325)
+[node name="box" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74898, -0.24230099, 1.6449485)
+
+[node name="box2" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2073126, -0.24230099, 4.121126)
+
+[node name="box3" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2426176, 1.7577, 4.21011)
+
+[node name="box4" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.654743, 1.7577, 1.4491096)
+
+[node name="box5" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.47818, -0.24230099, 0.17058921)
+
+[node name="box6" parent="NavigationRegion3D/Props" instance=ExtResource("11_rihgk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.44931, 1.757699, 0.25490332)
+
+[node name="Scp018Box" parent="NavigationRegion3D/Props" instance=ExtResource("12_ou37c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2644596, 0.25769997, 7.8664646)
 
 [node name="Cylinder2" type="MeshInstance3D" parent="NavigationRegion3D"]
 mesh = SubResource("ArrayMesh_pikur")
@@ -367,7 +393,12 @@ shape = SubResource("ConcavePolygonShape3D_iqmr1")
 [node name="DoorToTeleport" type="Marker3D" parent="." groups=["Door"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46328306, -0.78577095, -0.37057018)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Scp1223"]]
-transform = Transform3D(-5.2453663e-07, 0, 12, 0, 12, 0, -12, 0, -5.2453663e-07, -9.908241, 2.500237, 5.073258)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." groups=["Scp018Spawn"]]
+transform = Transform3D(-3.496911e-07, 0, 8, 0, 8, 0, -8, 0, -3.496911e-07, -9.908241, 2.500237, 5.073258)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_c0h8d")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." groups=["Scp018Spawn"]]
+transform = Transform3D(2.8284268, 0, 2.8284273, 0, 4, 0, -2.8284273, 0, 2.8284268, -5.57222, 2.500237, -5.9615808)
+visibility_range_end = 64.0
+mesh = SubResource("TextMesh_iuukv")

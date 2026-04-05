@@ -9,16 +9,20 @@ extends Area3D
 func _on_body_entered(body: Node3D) -> void:
 	if body is MovableNpc:
 		if body.is_player:
-			get_tree().root.get_node("Game/WorldEnvironment").environment = env
-			get_tree().root.get_node("Game/WorldEnvironment").environment.glow_enabled = Settings.setting_res.glow
-			get_tree().root.get_node("Game/WorldEnvironment").environment.ssao_enabled = Settings.setting_res.ssao
-			get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_mode = Settings.setting_res.tonemapper
-
+			apply_environment(env)
 
 func _on_body_exited(body: Node3D) -> void:
 	if body is MovableNpc:
 		if body.is_player:
-			get_tree().root.get_node("Game/WorldEnvironment").environment = load("res://Assets/Environment/Default.tres")
-			get_tree().root.get_node("Game/WorldEnvironment").environment.glow_enabled = Settings.setting_res.glow
-			get_tree().root.get_node("Game/WorldEnvironment").environment.ssao_enabled = Settings.setting_res.ssao
-			get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_mode = Settings.setting_res.tonemapper
+			apply_environment(load("res://Assets/Environment/Default.tres"))
+
+func apply_environment(environment: Environment):
+	get_tree().root.get_node("Game/WorldEnvironment").environment = environment
+	get_tree().root.get_node("Game/WorldEnvironment").environment.glow_enabled = Settings.setting_res.glow
+	get_tree().root.get_node("Game/WorldEnvironment").environment.ssao_enabled = Settings.setting_res.ssao
+	get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_mode = Settings.setting_res.tonemapper
+	if Settings.setting_res.tonemapper != Environment.TONE_MAPPER_LINEAR || \
+	 Settings.setting_res.tonemapper != Environment.TONE_MAPPER_AGX:
+		get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_white = 2.0
+	else:
+		get_tree().root.get_node("Game/WorldEnvironment").environment.tonemap_white = 1.0

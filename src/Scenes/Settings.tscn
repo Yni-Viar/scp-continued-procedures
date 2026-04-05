@@ -40,19 +40,35 @@ layout_mode = 2
 button_pressed = true
 text = "GLOW"
 
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+
 [node name="BasicReflection" type="CheckButton" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
 button_pressed = true
 text = "REFLECTION_PROBE"
 
-[node name="Label" type="Label" parent="ScrollContainer/SettingsUI"]
+[node name="FoldableContainer" type="FoldableContainer" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+folded = true
+title = "INFO"
+
+[node name="Label" type="Label" parent="ScrollContainer/SettingsUI/FoldableContainer"]
+visible = false
 layout_mode = 2
 text = "REFLECTION_PROBE_WARNING"
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/SettingsUI"]
+visible = false
+layout_mode = 2
 
 [node name="SSAO" type="CheckButton" parent="ScrollContainer/SettingsUI"]
 visible = false
 layout_mode = 2
 text = "SSAO"
+
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
 
 [node name="Tonemapper" type="OptionButton" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2
@@ -68,6 +84,19 @@ popup/item_3/text = "TONEMAPPER_ACES"
 popup/item_3/id = 3
 popup/item_4/text = "TONEMAPPER_AGX"
 popup/item_4/id = 4
+
+[node name="FoldableContainer2" type="FoldableContainer" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
+folded = true
+title = "INFO"
+
+[node name="Label2" type="Label" parent="ScrollContainer/SettingsUI/FoldableContainer2"]
+visible = false
+layout_mode = 2
+text = "TONEMAPPER_INFO"
+
+[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/SettingsUI"]
+layout_mode = 2
 
 [node name="SoundsLabel" type="Label" parent="ScrollContainer/SettingsUI"]
 layout_mode = 2

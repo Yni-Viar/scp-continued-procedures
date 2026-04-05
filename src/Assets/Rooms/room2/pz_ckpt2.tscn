@@ -172,7 +172,7 @@ texel_scale = 0.5
 light_data = ExtResource("8_s8obg")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 10.0068, 4.15162, 0.0379491)
+transform = Transform3D(3.01992e-07, 0, -4, 0, 4, 0, 4, 0, 3.01992e-07, 10.0068, 3.7228975, 0.0379491)
 visibility_range_end = 64.0
 mesh = SubResource("TextMesh_54lxd")
 

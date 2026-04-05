@@ -351,7 +351,7 @@ msgid "DEBUG_CONSOLE"
 msgstr "Debug terminal"
 
 msgid "TONEMAPPER_LINEAR"
-msgstr "Linear tonemapper (Performance)"
+msgstr "Linear tonemapper"
 
 msgid "TONEMAPPER_REINHARDT"
 msgstr "Reinhardt tonemapper"
@@ -360,10 +360,32 @@ msgid "TONEMAPPER_FILMIC"
 msgstr "Filmic tonemapper"
 
 msgid "TONEMAPPER_ACES"
-msgstr "ACES/Parabellum tonemapper"
+msgstr "ACES tonemapper"
 
 msgid "TONEMAPPER_AGX"
-msgstr "AGX tonemapper (Quality)"
+msgstr "AGX tonemapper"
 
 msgid "FORGOTTEN_BY_1223"
 msgstr "I don't remember this!"
+
+msgid "PERSONNEL_ZONE"
+msgstr ""
+"Personnel\n"
+"Zone"
+
+msgid "TONEMAPPER_INFO"
+msgstr ""
+"Tonemappers change game appearance.\n"
+"Linear does no postprocessing and is fastest to use.\n"
+"Reinhardt tonemapper is slower, than linear one,\n"
+"used to partly replicate SL Mimicry look.\n"
+"Filmic tonemapper is slower, than Reinhardt one.\n"
+"ACES tonemapper is slower, than Filmic one,\n"
+"this is the tonemapper, used in SL Parabellum.\n"
+"AGX tonemapper is relatively new, and is the slowest one."
+
+msgid "INFO"
+msgstr "[i] NOTE"
+
+msgid "GAME_OVER_5"
+msgstr "You started SCP-018 containment breach. You will be demoted to Class-D personnel."

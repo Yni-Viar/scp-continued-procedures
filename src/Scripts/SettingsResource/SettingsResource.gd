@@ -17,7 +17,7 @@ enum InputMethod {KB, MB, JP}
 @export var reflection_probe: bool = true
 ## Current enemy spawn value
 @export var ci_spawn: int = 0
-## Time limited value
+## Hard mode
 @export var time_limited: bool = false
 ## Zen mode
 @export var zen_mode: bool = false

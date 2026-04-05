@@ -164,7 +164,7 @@ func loader(file_path_to_load: String, parameters: Dictionary[String, Variant]):
 
 ## GDsh command, that describes beta features.
 func beta_mode_features(args: Array):
-	return """6.0.x Beta features
+	return """Beta features
 	There are no experimental features right now.
 	To enable beta features, write in Seed input following text:
 	[b]feature_beta[/b]

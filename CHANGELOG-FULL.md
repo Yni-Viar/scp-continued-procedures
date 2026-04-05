@@ -7,12 +7,14 @@ For plan, check [features changelog](./CHANGELOG-UPCOMING.md)
 ### New zone
 - [x] New Personnel Zone - SCP-067 and SCP-1223 will spawn now here!
 - [x] Re-introduce custom Scientist's offices.
+- [x] Increase max Reflection Probes amount (since there can be more than 64 rooms)
 
 ### New SCP
-- [ ] SCP-244
+- [x] SCP-018 (fun fact: it's item ID is 18th)
 - [ ] SCP-261
 
 ### Misc
+- [x] Reworked Settings subwindow - now long infomation is hidden in foldable containers.
 - [x] \[Technical\] Player now spawns in NPC node - fixed inventory not working, whilke spawned outside Surface Zone.
 
 ## v6.1.0 ("Forgotten memories" update, 2026.03.30)

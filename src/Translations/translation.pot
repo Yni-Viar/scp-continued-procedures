@@ -293,3 +293,15 @@ msgstr ""
 
 msgid "FORGOTTEN_BY_1223"
 msgstr ""
+
+msgid "PERSONNEL_ZONE"
+msgstr ""
+
+msgid "TONEMAPPER_INFO"
+msgstr ""
+
+msgid "INFO"
+msgstr ""
+
+msgid "GAME_OVER_5"
+msgstr ""
