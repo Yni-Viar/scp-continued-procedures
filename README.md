@@ -1,6 +1,6 @@
 # SCP: Continued Procedures
 
-[Available on GameJolt](https://gamejolt.com/games/scpcontpr/998566)
+Available on [GameJolt](https://gamejolt.com/games/scpcontpr/998566), [itch.io](https://yniviar.itch.io/scp-continued-procedures)
 
 ## About
 
